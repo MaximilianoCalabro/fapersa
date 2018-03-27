@@ -1,0 +1,558 @@
+Return-Path: <martinbtk@gmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id OZXXI2WrwlgsVgAATLP0zA
+	for <jpruata@fapersa.com>; Fri, 10 Mar 2017 10:34:29 -0300
+Return-path: <martinbtk@gmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Fri, 10 Mar 2017 10:34:29 -0300
+Received: from mail-qk0-f174.google.com ([209.85.220.174]:35801)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128)
+	(Exim 4.88)
+	(envelope-from <martinbtk@gmail.com>)
+	id 1cmKgU-0006Jq-Ct
+	for jpruata@fapersa.com; Fri, 10 Mar 2017 10:34:29 -0300
+Received: by mail-qk0-f174.google.com with SMTP id v125so163564926qkh.2
+        for <jpruata@fapersa.com>; Fri, 10 Mar 2017 05:33:58 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:reply-to:in-reply-to:references:from:date:message-id
+         :subject:to:cc;
+        bh=/5ZuLWWVcFOJkgOjPWDEiyisWd6z9bk1LlYt9ht58ZA=;
+        b=HbdGjQvFaibPH2QlS8y3zIjVEbg4IAV4NaEKDAZcdsksTKE+AW4xdPvoEGj3fquCw8
+         4Q2gwNxhzGa7RegwEZq63Hz+YHb9qec2XnxwTqlbuAigKJ5ccqGy2IuU0YSfCrG1CxtR
+         IGMChBD28/XOgL06tC7q/dmuqEm2u/adpn5IjoCaD9kVqBYjOmd0ce+wXop3NlBhpco0
+         4vpZGyVzoTbzL14K55aSqB/kqRncT7w9u+oswvBywseQ9mYoF/5Yt3NbZ0mtwVzPL45F
+         j8RcHfqqEGghnRwbX/uFIz07WXVg9Vzc47ZHw+9NxnvBJlC50kzvO4aoVX/EsN/BwGGU
+         UUBA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:reply-to:in-reply-to:references
+         :from:date:message-id:subject:to:cc;
+        bh=/5ZuLWWVcFOJkgOjPWDEiyisWd6z9bk1LlYt9ht58ZA=;
+        b=MfPUiXKtCDjoMa4xJRthikB5FDTtU9o7vFdEIjngCvPfJ0ZnKqTSNscfSaRV4Ozc7o
+         p9NyN2k0J8utElAotald27YaCm3KY1X8M2xt9jhlfL8c3cm1JY0wQ+xNiWc/TpsnkNZJ
+         yUnxF5X59JKIg/cuI4hOhmn5uP1+YmzXRBY6bztjZPwDX9+n0cb2PpjCCaMZ+GKTPqWP
+         cfStzdNWl+eo9z5xf54tycXfgfkgcXf5V1r0dDAhsm9RsVl6FL7qbTUUVZSWUETzJVej
+         4Fw3Kxh1UB4lP3D+Fgl13znynoe34x2cmRuAAMuK/0QUfosO64KWWoCur8tQBo9M3UmJ
+         Ue/g==
+X-Gm-Message-State: AMke39lE9mqVoIGlSokuLmgZTIXlI2j9a4yPe9khF7Ac8am38OeTJgSn/xmk2WgWzRP4rwB6bF4Vd6fXcteZVg==
+X-Received: by 10.55.144.4 with SMTP id s4mr18634721qkd.101.1489152817522;
+ Fri, 10 Mar 2017 05:33:37 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.12.168.206 with HTTP; Fri, 10 Mar 2017 05:33:36 -0800 (PST)
+Reply-To: martinbtk@gmail.com
+In-Reply-To: <027B9758-DE43-461F-952D-EC4715600FDF@fapersa.com>
+References: <CADYYT6Zf2yeAcfmgMNrDc0CKAMWqmx66dphPaxxN2oKrLVuzeA@mail.gmail.com>
+ <CADYYT6ZOmykUTur-SwRnS_tCeqMWfGihPehnT=jW9gfPe2mipg@mail.gmail.com>
+ <952F35D7-858D-4C29-8113-7838BAB59F2A@amiun.com.ar> <CADYYT6bHiHJS8eJ6_+vXuotyNuFOEEs8MpWUm6iHZv_P8w7NDQ@mail.gmail.com>
+ <624BD159AC4E4F088CD122894D949529@MartinPC> <CADYYT6YEWyg4Pe-_N9YzAK+ebwZJsvX4PdKWwkgBCM8_xS8JGA@mail.gmail.com>
+ <ACB86648-56A5-4C11-AC3A-48187B6778EC@fapersa.com> <CADYYT6aO5JD620XngkeatbdUYtzAQYEfRJVSCxPp-Qu6yZNzqA@mail.gmail.com>
+ <6902C774-CEC2-4971-8DD0-7B802022B1B7@fapersa.com> <CADYYT6YtqK9oWWREv_NMeNCbEAeEbjLkoPdVSsqHdddb-2RjGw@mail.gmail.com>
+ <027B9758-DE43-461F-952D-EC4715600FDF@fapersa.com>
+From: Martin Bortnik <martinbtk@gmail.com>
+Date: Fri, 10 Mar 2017 10:33:36 -0300
+Message-ID: <CADYYT6aFt8jJaMjF8h0NT+fjvJ1FL7hzSCFg66M3ak0uXZExOQ@mail.gmail.com>
+Subject: Re: Gira Orc
+To: FAPERSA <jpruata@fapersa.com>
+Cc: Luis Szczyrba <lszczyrb@ta.telecom.com.ar>, Rauli Freyre <raf@freyre-iturraspe.com.ar>, 
+	Martin Frutero <mfruttero@amiun.com.ar>, Martin Mostaza <jmostaza@3arroyos.com>
+Content-Type: multipart/alternative; boundary=94eb2c057a70b4a319054a60681c
+X-Spam-Status: No, score=-2.0
+X-Spam-Score: -19
+X-Spam-Bar: --
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  de la 9 para arriba , normalmente la 9 se aloja en el regimiento
+    , *Martin BortnikGRUPO BTK S.APomona - Rio Negro - ARGENTINA011-15-53360278
+    Pilar02984 673025 Pomona* El 10 de marzo de 2017, 10:30, FAPERSA escribió:
+    [...] 
+ 
+ Content analysis details:   (-2.0 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: fapersa.com]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (martinbtk[at]gmail.com)
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+X-Spam-Flag: NO
+
+--94eb2c057a70b4a319054a60681c
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+de la 9 para arriba , normalmente la 9 se aloja en el regimiento ,
+
+
+
+
+
+*Martin BortnikGRUPO BTK S.APomona - Rio Negro -  ARGENTINA011-15-53360278
+Pilar02984 673025  Pomona*
+
+El 10 de marzo de 2017, 10:30, FAPERSA <jpruata@fapersa.com> escribi=C3=B3:
+
+> Martin como andas=E2=80=A6
+> Volviendo al tema los esperamos el 28 de octubre y tambien los alojamos
+> con gusto.
+> Te consulto solo vienen desde la 10 para arriba?
+>
+> Saludos,
+>
+>
+> Juampi
+>
+> El 22 feb. 2017, a las 18:40, Martin Bortnik <martinbtk@gmail.com>
+> escribi=C3=B3:
+>
+> Tomamos el 28oct para participar el encuentro .
+> Conf=C3=ADrmame a quienes pueden alojar de M10 a M14 .
+>
+> Y que m=C3=A1s hace falta coordinar
+>
+> Les mando un abrazo y buen a=C3=B1o de rugby
+>
+> El 10 feb. 2017 5:33 PM, "FAPERSA" <jpruata@fapersa.com> escribi=C3=B3:
+>
+>> Martin, capaz que me exprese mal la idea era de matar dos p=C3=A1jaros d=
+e un
+>> tiro o sea lo ideal seria que vengan para el finde del 28 de octubre que
+>> justo coincide con el encuentro en ese caso lo estar=C3=ADamos alojando.
+>>
+>> Fijate y av=C3=ADsame
+>>
+>> Abrazos.
+>>
+>> El 10 feb. 2017, a las 12:32, Martin Bortnik <martinbtk@gmail.com>
+>> escribi=C3=B3:
+>>
+>> Juampi , gracias por las dos invitaciones . dejame que lo charlemos con
+>> los otros miembros y te confirmo , en el caso de ser el encuentro , no
+>> pueden alojar en casas o vamos al regimiento ??? contame mas o menos com=
+o
+>> seria el tema del hospedaje , ya que tienen muchos chicos ??
+>>
+>> y el caso del 30 set es como siempre no ??? o prefieren que vayamos a
+>> hotel o regimiento ?
+>>
+>> espero tus comentarios
+>>
+>>
+>>
+>>
+>>
+>>
+>> *Martin BortnikGRUPO BTK S.APomona - Rio Negro -
+>> ARGENTINA011-15-53360278 Pilar02984 673025  Pomona*
+>>
+>> El 10 de febrero de 2017, 10:11, FAPERSA <jpruata@fapersa.com> escribi=
+=C3=B3:
+>>
+>>> Martin buenos d=C3=ADas.
+>>>
+>>> Te cuento que el s=C3=A1bado 28 de octubre hacemos un encuentro de rugb=
+y
+>>> infantil en el club.
+>>>
+>>> Este encuentro lo empezamos hacer el a=C3=B1o pasado por primera vez, l=
+a
+>>> modalidad del mismo es que invitamos solo a 4 clubes de Bs As, Cordoba =
+o
+>>> Tucuman (eso lo vamos viendo)
+>>> Es sin costo alguno,  el s=C3=A1bado jugamos en el club desde escuelita=
+ a M13
+>>> y la M14 juega en el Crai. Ya despu=C3=A9s el Domingo jugamos todos en =
+el club.
+>>> Como experiencia el a=C3=B1o pasado fue hermosa, es mas todos quieren v=
+olver
+>>> pero nuestra idea es de ir rotando.
+>>>
+>>> En definitiva fijate si te sirve esa fecha, de todas formas no tenemos
+>>> problemas de recibirlos el 30 de Septiembre.
+>>>
+>>> Aguardo tus comentarios.
+>>>
+>>>
+>>>
+>>> Juampi.
+>>>
+>>> El 9 feb. 2017, a las 11:14, Martin Bortnik <martinbtk@gmail.com>
+>>> escribi=C3=B3:
+>>>
+>>> Muchachos como va les parece bien la fecha del 30 set para recibirnos ?
+>>>
+>>> Espero sus comentarios asi , puedo comunicarlo a los padres en la
+>>> planificacion del 2017 .
+>>>
+>>> abrazo
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> *Martin BortnikGRUPO BTK S.APomona - Rio Negro -
+>>> ARGENTINA011-15-53360278 Pilar02984 673025  Pomona*
+>>>
+>>> El 8 de febrero de 2017, 19:29, Martin Fruttero <mfruttero@amiun.com.ar=
+>
+>>> escribi=C3=B3:
+>>>
+>>>> Martin como estas??, pongo en copia a Juan Pablo Ruata y Raul Freyre
+>>>> que son los coordinadores de infantiles, para que confirmen con ustede=
+s la
+>>>> fecha y quede agendado
+>>>>
+>>>> abrazo gande
+>>>>
+>>>> Martin Fruttero
+>>>>
+>>>> *From:* Martin Bortnik <martinbtk@gmail.com>
+>>>> *Sent:* Wednesday, February 08, 2017 4:25 PM
+>>>> *To:* Martin Fruttero <mfruttero@amiun.com.ar>
+>>>> *Cc:* Luis Szczyrba Santa Fe Rugby Papa De Mateo
+>>>> <lszczyrb@ta.telecom.com.ar>
+>>>> *Subject:* Re: Gira Orc
+>>>>
+>>>> Buenas muchachos , comenzamos el a=C3=B1o , y estamo programando las f=
+echas
+>>>> . podremos viajar el 30 set , diganme si es posible o tenemos que ver =
+otra
+>>>> fecha .
+>>>>
+>>>> saludos
+>>>>
+>>>> Martin
+>>>>
+>>>>
+>>>>
+>>>>
+>>>>
+>>>> *Martin BortnikGRUPO BTK S.APomona - Rio Negro -
+>>>> ARGENTINA011-15-53360278 Pilar02984 673025  Pomona*
+>>>>
+>>>> El 25 de noviembre de 2016, 15:23, Martin Fruttero <
+>>>> mfruttero@amiun.com.ar> escribi=C3=B3:
+>>>>
+>>>>> Mart=C3=ADn
+>>>>>
+>>>>> Pase tu mail a los coordinadores de rugby infantil, est=C3=A1n diagra=
+mando
+>>>>> el a=C3=B1o 2017, en principio no hay drama de recibirlos, al contrar=
+io un
+>>>>> gusto, sobre la fecha te pido si podes esperar a la pr=C3=B3xima sema=
+na que
+>>>>> definimos fecha de nuestras giras
+>>>>>
+>>>>> Arte
+>>>>>
+>>>>> Mart=C3=ADn Fruttero
+>>>>>
+>>>>> Enviado desde mi iPhone
+>>>>>
+>>>>> El 25 nov. 2016, a las 11:57, Martin Bortnik <martinbtk@gmail.com>
+>>>>> escribi=C3=B3:
+>>>>>
+>>>>> Buenas , no quiero romper las bolas pero tienen alguna novedad con
+>>>>> respecto a la fecha del 28 - octubre . ??
+>>>>>
+>>>>>
+>>>>>
+>>>>>
+>>>>>
+>>>>> *Martin BortnikGRUPO BTK S.APomona - Rio Negro -
+>>>>> ARGENTINA011-15-53360278 Pilar02984 673025  Pomona*
+>>>>>
+>>>>> El 14 de noviembre de 2016, 15:10, Martin Bortnik <martinbtk@gmail.co=
+m
+>>>>> > escribi=C3=B3:
+>>>>>
+>>>>>> Muchachos , como les va ??? Les cuento que estamos planificando el
+>>>>>> 2017 , y teniamos ganas de ir para alla el 28-oct , como lo ven????
+>>>>>>
+>>>>>> Espero sus comentarios .
+>>>>>>
+>>>>>> saludos
+>>>>>>
+>>>>>>
+>>>>>>
+>>>>>>
+>>>>>>
+>>>>>>
+>>>>>>
+>>>>>> *Martin BortnikGRUPO BTK S.APomona - Rio Negro -
+>>>>>> ARGENTINA011-15-53360278 Pilar02984 673025  Pomona*
+>>>>>>
+>>>>>
+>>>>>
+>>>>
+>>>
+>>>
+>>
+>>
+>
+
+--94eb2c057a70b4a319054a60681c
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">de la 9 para arriba , normalmente la 9 se aloja en el regi=
+miento ,=C2=A0</div><div class=3D"gmail_extra"><br clear=3D"all"><div><div =
+class=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"lt=
+r"><div><div dir=3D"ltr"><b><i><font face=3D"garamond, serif">Martin Bortni=
+k<br><font color=3D"#6aa84f" style=3D"background-color:rgb(255,255,255)">GR=
+UPO BTK S.A<br>Pomona - Rio Negro -=C2=A0 ARGENTINA</font><br>011-15-533602=
+78 Pilar<br>02984 673025=C2=A0 Pomona</font></i></b></div></div></div></div=
+></div>
+<br><div class=3D"gmail_quote">El 10 de marzo de 2017, 10:30, FAPERSA <span=
+ dir=3D"ltr">&lt;<a href=3D"mailto:jpruata@fapersa.com" target=3D"_blank">j=
+pruata@fapersa.com</a>&gt;</span> escribi=C3=B3:<br><blockquote class=3D"gm=
+ail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-le=
+ft:1ex"><div style=3D"word-wrap:break-word">Martin como andas=E2=80=A6<div>=
+Volviendo al tema los esperamos el 28 de octubre y tambien los alojamos con=
+ gusto.</div><div>Te consulto solo vienen desde la 10 para arriba?</div><di=
+v><br></div><div>Saludos, =C2=A0</div><div><br></div><div><br></div><div>Ju=
+ampi<div><div class=3D"h5"><br><div><blockquote type=3D"cite"><div>El 22 fe=
+b. 2017, a las 18:40, Martin Bortnik &lt;<a href=3D"mailto:martinbtk@gmail.=
+com" target=3D"_blank">martinbtk@gmail.com</a>&gt; escribi=C3=B3:</div><br =
+class=3D"m_-3746522109502419498Apple-interchange-newline"><div><div dir=3D"=
+auto">Tomamos el 28oct para participar el encuentro .<div dir=3D"auto">Conf=
+=C3=ADrmame a quienes pueden alojar de M10 a M14 .</div><div dir=3D"auto"><=
+br></div><div dir=3D"auto">Y que m=C3=A1s hace falta coordinar=C2=A0</div><=
+div dir=3D"auto"><br></div><div dir=3D"auto">Les mando un abrazo y buen a=
+=C3=B1o de rugby=C2=A0</div></div><div class=3D"gmail_extra"><br><div class=
+=3D"gmail_quote">El 10 feb. 2017 5:33 PM, &quot;FAPERSA&quot; &lt;<a href=
+=3D"mailto:jpruata@fapersa.com" target=3D"_blank">jpruata@fapersa.com</a>&g=
+t; escribi=C3=B3:<br type=3D"attribution"><blockquote class=3D"gmail_quote"=
+ style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><d=
+iv style=3D"word-wrap:break-word">Martin, capaz que me exprese mal la idea =
+era de matar dos p=C3=A1jaros de un tiro o sea lo ideal seria que vengan pa=
+ra el finde del 28 de octubre que justo coincide con el encuentro en ese ca=
+so lo estar=C3=ADamos alojando.<div><br></div><div>Fijate y av=C3=ADsame</d=
+iv><div><br></div><div>Abrazos.<br><div><blockquote type=3D"cite"><div>El 1=
+0 feb. 2017, a las 12:32, Martin Bortnik &lt;<a href=3D"mailto:martinbtk@gm=
+ail.com" target=3D"_blank">martinbtk@gmail.com</a>&gt; escribi=C3=B3:</div>=
+<br class=3D"m_-3746522109502419498m_-2454994991297149373Apple-interchange-=
+newline"><div><div dir=3D"ltr">Juampi , gracias por las dos invitaciones . =
+dejame que lo charlemos con los otros miembros y te confirmo , en el caso d=
+e ser el encuentro , no pueden alojar en casas o vamos al regimiento ??? co=
+ntame mas o menos como seria el tema del hospedaje , ya que tienen muchos c=
+hicos ??<div><br></div><div>y el caso del 30 set es como siempre no ??? o p=
+refieren que vayamos a hotel o regimiento ?=C2=A0</div><div><br></div><div>=
+espero tus comentarios=C2=A0</div><div><br></div></div><div class=3D"gmail_=
+extra"><br clear=3D"all"><div><div class=3D"m_-3746522109502419498m_-245499=
+4991297149373gmail_signature" data-smartmail=3D"gmail_signature"><div dir=
+=3D"ltr"><div><div dir=3D"ltr"><b><i><font face=3D"garamond, serif">Martin =
+Bortnik<br><font color=3D"#6aa84f" style=3D"background-color:rgb(255,255,25=
+5)">GRUPO BTK S.A<br>Pomona - Rio Negro -=C2=A0 ARGENTINA</font><br>011-15-=
+53360278 Pilar<br>02984 673025=C2=A0 Pomona</font></i></b></div></div></div=
+></div></div>
+<br><div class=3D"gmail_quote">El 10 de febrero de 2017, 10:11, FAPERSA <sp=
+an dir=3D"ltr">&lt;<a href=3D"mailto:jpruata@fapersa.com" target=3D"_blank"=
+>jpruata@fapersa.com</a>&gt;</span> escribi=C3=B3:<br><blockquote class=3D"=
+gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-=
+left:1ex"><div style=3D"word-wrap:break-word">Martin buenos d=C3=ADas.<div>=
+<br></div><div>Te cuento que el s=C3=A1bado 28 de octubre hacemos un encuen=
+tro de rugby infantil en el club.</div><div><br></div><div>Este encuentro l=
+o empezamos hacer el a=C3=B1o pasado por primera vez, la modalidad del mism=
+o es que invitamos solo a 4 clubes de Bs As, Cordoba o Tucuman (eso lo vamo=
+s viendo)</div><div>Es sin costo alguno, =C2=A0el s=C3=A1bado jugamos en el=
+ club desde escuelita a M13 y la M14 juega en el Crai. Ya despu=C3=A9s el D=
+omingo jugamos todos en el club.</div><div>Como experiencia el a=C3=B1o pas=
+ado fue hermosa, es mas todos quieren volver pero nuestra idea es de ir rot=
+ando.</div><div><br></div><div>En definitiva fijate si te sirve esa fecha, =
+de todas formas no tenemos problemas de recibirlos el 30 de Septiembre.</di=
+v><div><br></div><div>Aguardo tus comentarios.</div><div><br></div><div><br=
+></div><div><br></div><div>Juampi.<div><div class=3D"m_-3746522109502419498=
+m_-2454994991297149373h5"><br><div><blockquote type=3D"cite"><div>El 9 feb.=
+ 2017, a las 11:14, Martin Bortnik &lt;<a href=3D"mailto:martinbtk@gmail.co=
+m" target=3D"_blank">martinbtk@gmail.com</a>&gt; escribi=C3=B3:</div><br cl=
+ass=3D"m_-3746522109502419498m_-2454994991297149373m_1707291068114487679App=
+le-interchange-newline"><div><div dir=3D"ltr">Muchachos como va les parece =
+bien la fecha del 30 set para recibirnos ?=C2=A0<div><br></div><div>Espero =
+sus comentarios asi , puedo comunicarlo a los padres en la planificacion de=
+l 2017 .=C2=A0</div><div><br></div><div>abrazo=C2=A0</div><div><br><div cla=
+ss=3D"gmail_extra"><br clear=3D"all"><div><div class=3D"m_-3746522109502419=
+498m_-2454994991297149373m_1707291068114487679m_-2456013651933155985gmail_s=
+ignature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=
+=3D"ltr"><b><i><font face=3D"garamond, serif">Martin Bortnik<br><font color=
+=3D"#6aa84f" style=3D"background-color:rgb(255,255,255)">GRUPO BTK S.A<br>P=
+omona - Rio Negro -=C2=A0 ARGENTINA</font><br>011-15-53360278 Pilar<br>0298=
+4 673025=C2=A0 Pomona</font></i></b></div></div></div></div></div>
+<br><div class=3D"gmail_quote">El 8 de febrero de 2017, 19:29, Martin Frutt=
+ero <span dir=3D"ltr">&lt;<a href=3D"mailto:mfruttero@amiun.com.ar" target=
+=3D"_blank">mfruttero@amiun.com.ar</a>&gt;</span> escribi=C3=B3:<br><blockq=
+uote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc =
+solid;padding-left:1ex"><u></u>
+
+
+
+<div id=3D"m_-3746522109502419498m_-2454994991297149373m_170729106811448767=
+9m_-2456013651933155985m_-8070034764874768391MailContainerBody" style=3D"PA=
+DDING-TOP:15px;PADDING-LEFT:10px;PADDING-RIGHT:10px" name=3D"Compose messag=
+e area">
+<div><font face=3D"Calibri">Martin como estas??, pongo en copia a Juan Pabl=
+o Ruata y=20
+Raul Freyre que son los coordinadores de infantiles, para que confirmen con=
+=20
+ustedes la fecha y quede agendado</font></div>
+<div><font face=3D"Calibri"></font>=C2=A0</div>
+<div><font face=3D"Calibri">abrazo gande</font></div>
+<div><font face=3D"Calibri"></font>=C2=A0</div>
+<div><font face=3D"Calibri">Martin Fruttero</font></div>
+<div style=3D"FONT:10pt Tahoma">
+<div><br></div>
+<div style=3D"BACKGROUND:#f5f5f5">
+<div><b>From:</b> <a title=3D"martinbtk@gmail.com" href=3D"mailto:martinbtk=
+@gmail.com" target=3D"_blank">Martin Bortnik</a> </div>
+<div><b>Sent:</b> Wednesday, February 08, 2017 4:25 PM</div>
+<div><b>To:</b> <a title=3D"mfruttero@amiun.com.ar" href=3D"mailto:mfrutter=
+o@amiun.com.ar" target=3D"_blank">Martin Fruttero</a> </div>
+<div><b>Cc:</b> <a title=3D"lszczyrb@ta.telecom.com.ar" href=3D"mailto:lszc=
+zyrb@ta.telecom.com.ar" target=3D"_blank">Luis Szczyrba Santa Fe Rugby Papa=
+ De=20
+Mateo</a> </div>
+<div><b>Subject:</b> Re: Gira Orc</div></div></div><div><div class=3D"m_-37=
+46522109502419498m_-2454994991297149373m_1707291068114487679m_-245601365193=
+3155985h5">
+<div><br></div>
+<div dir=3D"ltr">Buenas muchachos , comenzamos el a=C3=B1o , y estamo progr=
+amando las=20
+fechas . podremos viajar el 30 set , diganme si es posible o tenemos que ve=
+r=20
+otra fecha .=20
+<div><br></div>
+<div>saludos=C2=A0</div>
+<div><br></div>
+<div>Martin=C2=A0</div></div>
+<div class=3D"gmail_extra"><br clear=3D"all">
+<div>
+<div class=3D"m_-3746522109502419498m_-2454994991297149373m_170729106811448=
+7679m_-2456013651933155985m_-8070034764874768391gmail_signature" data-smart=
+mail=3D"gmail_signature">
+<div dir=3D"ltr">
+<div>
+<div dir=3D"ltr"><b><i><font face=3D"garamond, serif">Martin Bortnik<br><fo=
+nt style=3D"BACKGROUND-COLOR:rgb(255,255,255)" color=3D"#6aa84f">GRUPO BTK =
+S.A<br>Pomona=20
+- Rio Negro -=C2=A0 ARGENTINA</font><br>011-15-53360278 Pilar<br>02984=20
+673025=C2=A0 Pomona</font></i></b></div></div></div></div></div><br>
+<div class=3D"gmail_quote">El 25 de noviembre de 2016, 15:23, Martin Frutte=
+ro <span dir=3D"ltr">&lt;<a href=3D"mailto:mfruttero@amiun.com.ar" target=
+=3D"_blank">mfruttero@amiun.com.ar</a>&gt;</span> escribi=C3=B3:<br>
+<blockquote class=3D"gmail_quote" style=3D"PADDING-LEFT:1ex;MARGIN:0px 0px =
+0px 0.8ex;BORDER-LEFT:#ccc 1px solid">
+  <div>
+  <div>Mart=C3=ADn</div>
+  <div id=3D"m_-3746522109502419498m_-2454994991297149373m_1707291068114487=
+679m_-2456013651933155985m_-8070034764874768391m_-2404127773939502987AppleM=
+ailSignature"><br></div>
+  <div id=3D"m_-3746522109502419498m_-2454994991297149373m_1707291068114487=
+679m_-2456013651933155985m_-8070034764874768391m_-2404127773939502987AppleM=
+ailSignature">Pase tu mail a los=20
+  coordinadores de rugby infantil, est=C3=A1n diagramando el a=C3=B1o 2017,=
+ en principio=20
+  no hay drama de recibirlos, al contrario un gusto, sobre la fecha te pido=
+ si=20
+  podes esperar a la pr=C3=B3xima semana que definimos fecha de nuestras gi=
+ras</div>
+  <div id=3D"m_-3746522109502419498m_-2454994991297149373m_1707291068114487=
+679m_-2456013651933155985m_-8070034764874768391m_-2404127773939502987AppleM=
+ailSignature"><br></div>
+  <div id=3D"m_-3746522109502419498m_-2454994991297149373m_1707291068114487=
+679m_-2456013651933155985m_-8070034764874768391m_-2404127773939502987AppleM=
+ailSignature">Arte=C2=A0</div>
+  <div id=3D"m_-3746522109502419498m_-2454994991297149373m_1707291068114487=
+679m_-2456013651933155985m_-8070034764874768391m_-2404127773939502987AppleM=
+ailSignature"><br></div>
+  <div id=3D"m_-3746522109502419498m_-2454994991297149373m_1707291068114487=
+679m_-2456013651933155985m_-8070034764874768391m_-2404127773939502987AppleM=
+ailSignature">Mart=C3=ADn Fruttero</div>
+  <div id=3D"m_-3746522109502419498m_-2454994991297149373m_1707291068114487=
+679m_-2456013651933155985m_-8070034764874768391m_-2404127773939502987AppleM=
+ailSignature"><br>Enviado desde mi=20
+  iPhone</div>
+  <div>
+  <div class=3D"m_-3746522109502419498m_-2454994991297149373m_1707291068114=
+487679m_-2456013651933155985m_-8070034764874768391h5">
+  <div><br>El 25 nov. 2016, a las 11:57, Martin Bortnik &lt;<a href=3D"mail=
+to:martinbtk@gmail.com" target=3D"_blank">martinbtk@gmail.com</a>&gt;=20
+  escribi=C3=B3:<br><br></div>
+  <blockquote type=3D"cite">
+    <div>
+    <div dir=3D"ltr">Buenas , no quiero romper las bolas pero tienen alguna=
+ novedad=20
+    con respecto a la fecha del 28 - octubre . ??</div>
+    <div class=3D"gmail_extra"><br clear=3D"all">
+    <div>
+    <div class=3D"m_-3746522109502419498m_-2454994991297149373m_17072910681=
+14487679m_-2456013651933155985m_-8070034764874768391m_-2404127773939502987g=
+mail_signature" data-smartmail=3D"gmail_signature">
+    <div dir=3D"ltr">
+    <div>
+    <div dir=3D"ltr"><b><i><font face=3D"garamond, serif">Martin Bortnik<br=
+><font style=3D"BACKGROUND-COLOR:rgb(255,255,255)" color=3D"#6aa84f">GRUPO =
+BTK=20
+    S.A<br>Pomona - Rio Negro -=C2=A0 ARGENTINA</font><br>011-15-53360278=
+=20
+    Pilar<br>02984 673025=C2=A0=20
+    Pomona</font></i></b></div></div></div></div></div><br>
+    <div class=3D"gmail_quote">El 14 de noviembre de 2016, 15:10, Martin Bo=
+rtnik=20
+    <span dir=3D"ltr">&lt;<a href=3D"mailto:martinbtk@gmail.com" target=3D"=
+_blank">martinbtk@gmail.com</a>&gt;</span> escribi=C3=B3:<br>
+    <blockquote class=3D"gmail_quote" style=3D"PADDING-LEFT:1ex;MARGIN:0px =
+0px 0px 0.8ex;BORDER-LEFT:#ccc 1px solid">
+      <div dir=3D"ltr">Muchachos , como les va ??? Les cuento que estamos=
+=20
+      planificando el 2017 , y teniamos ganas de ir para alla el 28-oct , c=
+omo=20
+      lo ven????=20
+      <div><br></div>
+      <div>Espero sus comentarios .=C2=A0</div>
+      <div><br></div>
+      <div>saludos=C2=A0</div><span class=3D"m_-3746522109502419498m_-24549=
+94991297149373m_1707291068114487679m_-2456013651933155985m_-807003476487476=
+8391m_-2404127773939502987HOEnZb"><font color=3D"#888888">
+      <div><br></div>
+      <div><br></div>
+      <div><br clear=3D"all">
+      <div>
+      <div class=3D"m_-3746522109502419498m_-2454994991297149373m_170729106=
+8114487679m_-2456013651933155985m_-8070034764874768391m_-240412777393950298=
+7m_2666525985653059294gmail_signature" data-smartmail=3D"gmail_signature">
+      <div dir=3D"ltr">
+      <div>
+      <div dir=3D"ltr"><b><i><font face=3D"garamond, serif">Martin Bortnik<=
+br><font style=3D"BACKGROUND-COLOR:rgb(255,255,255)" color=3D"#6aa84f">GRUP=
+O BTK=20
+      S.A<br>Pomona - Rio Negro -=C2=A0 ARGENTINA</font><br>011-15-53360278=
+=20
+      Pilar<br>02984 673025=C2=A0=20
+      Pomona</font></i></b></div></div></div></div></div></div></font></spa=
+n></div></blockquote></div><br></div></div></blockquote></div></div></div><=
+/blockquote></div><br></div></div></div></div>
+</blockquote></div><br></div></div></div>
+</div></blockquote></div><br></div></div></div></div></blockquote></div><br=
+></div>
+</div></blockquote></div><br></div></div></blockquote></div></div>
+</div></blockquote></div><br></div></div></div></div></blockquote></div><br=
+></div>
+
+--94eb2c057a70b4a319054a60681c--

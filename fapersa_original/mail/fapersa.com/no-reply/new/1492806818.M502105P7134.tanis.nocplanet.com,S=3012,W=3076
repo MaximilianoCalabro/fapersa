@@ -1,0 +1,64 @@
+Return-Path: <>
+Delivered-To: no-reply@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id wVzeHaJs+ljeGwAATLP0zA
+	for <no-reply@fapersa.com>; Fri, 21 Apr 2017 17:33:38 -0300
+Return-path: <>
+Envelope-to: no-reply@fapersa.com
+Delivery-date: Fri, 21 Apr 2017 17:33:38 -0300
+Received: from mailnull by tanis.nocplanet.com with local (Exim 4.89)
+	id 1d1fFK-0002sn-9d
+	for no-reply@fapersa.com; Fri, 21 Apr 2017 17:33:38 -0300
+X-Failed-Recipients: adminlcm@arnetbiz.com.ar
+Auto-Submitted: auto-replied
+From: Mail Delivery System <Mailer-Daemon@tanis.nocplanet.com>
+To: no-reply@fapersa.com
+Content-Type: multipart/report; report-type=delivery-status; boundary=1492806818-eximdsn-1173813056
+MIME-Version: 1.0
+Subject: Mail delivery failed: returning message to sender
+Message-Id: <E1d1fFK-0002sn-9d@tanis.nocplanet.com>
+Date: Fri, 21 Apr 2017 17:33:38 -0300
+
+--1492806818-eximdsn-1173813056
+Content-type: text/plain; charset=us-ascii
+
+This message was created automatically by mail delivery software.
+
+A message that you sent could not be delivered to one or more of its
+recipients. This is a permanent error. The following address(es) failed:
+
+  adminlcm@arnetbiz.com.ar
+    host mx.arnetbiz.com.ar [190.226.40.1]
+    SMTP error from remote mail server after RCPT TO:<adminlcm@arnetbiz.com.ar>:
+    550 5.1.1 User unknown
+
+--1492806818-eximdsn-1173813056
+Content-type: message/delivery-status
+
+Reporting-MTA: dns; tanis.nocplanet.com
+
+Action: failed
+Final-Recipient: rfc822;adminlcm@arnetbiz.com.ar
+Status: 5.0.0
+Remote-MTA: dns; mx.arnetbiz.com.ar
+Diagnostic-Code: smtp; 550 5.1.1 User unknown
+
+--1492806818-eximdsn-1173813056
+Content-type: message/rfc822
+
+Return-path: <no-reply@fapersa.com>
+Received: from mx1.fapersa.com ([181.14.247.181]:64819 helo=equis.fapersa.int)
+	by tanis.nocplanet.com with esmtpa (Exim 4.89)
+	(envelope-from <no-reply@fapersa.com>)
+	id 1d1fF5-0002rF-0X; Fri, 21 Apr 2017 17:33:23 -0300
+From: Equis <no-reply@fapersa.com>
+To: Corporativo <adminlcm@arnetbiz.com.ar>, Corporativo <iset12@fibertel.com.ar>
+Message-ID: <384735911.48.1492806585845.JavaMail.cmg@equis>
+Subject: Fapersa ICSA - Bonificacion por pago Semana y 3 dias
+MIME-Version: 1.0
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+<p>Estimado cliente, a continuaci&#243;n se detallan las facturas generadas en el transcurso de esta semana, recuerde que cancelando las mismas antes del mi&#233;rcoles pr&#243;ximo 26/04/2017 a trav&#233;s de dep&#243;sito bancario en las ctas. oportunamente informadas, se aplicar&#225; una bonificaci&#243;n del 5%.</p><p>Cliente: LA CASA DEL MOTOR DE COPPOLA ANGEL</p><p><br>Factura: 0013-00010183<br>Fecha: 18/04/2017<br>Importe:        81.099,29<br>Bonificaci&#243;n 5%:         4.054,96<br>Neto a Depositar::        77.044,33<br></p><p>Recuerde enviar el comprobante de pago a cobranzas@fapersa.com para hacer efectiva la bonificacion en su Cuenta Corriente.</p><p>Saludos Cordiales</p>
+
+--1492806818-eximdsn-1173813056--

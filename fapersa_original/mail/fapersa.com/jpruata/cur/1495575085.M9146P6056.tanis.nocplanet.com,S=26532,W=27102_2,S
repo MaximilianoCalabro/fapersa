@@ -1,0 +1,570 @@
+Return-Path: <v-blmfbni_gfkelpicen_docmpfcd_docmpfcd_a@bounce.mkt.bancogalicia.com.ar>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id 8X92AC2qJFmoFwAATLP0zA
+	for <jpruata@fapersa.com>; Tue, 23 May 2017 18:31:25 -0300
+Return-path: <v-blmfbni_gfkelpicen_docmpfcd_docmpfcd_a@bounce.mkt.bancogalicia.com.ar>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Tue, 23 May 2017 18:31:25 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:35254 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <v-blmfbni_gfkelpicen_docmpfcd_docmpfcd_a@bounce.mkt.bancogalicia.com.ar>)
+	id 1dDHOl-0002ua-IO
+	for jpruata@fapersa.com; Tue, 23 May 2017 18:31:24 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id B59137F21B
+	for <jpruata@fapersa.com>; Tue, 23 May 2017 18:31:23 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id cAWZwx4PN7LB for <jpruata@fapersa.com>;
+	Tue, 23 May 2017 18:31:23 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 0511A7F232; Tue, 23 May 2017 18:31:23 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id C5F357F21B
+	for <jpruata@fapersa.com>; Tue, 23 May 2017 18:31:21 -0300 (ART)
+Received-SPF: pass (bounce.mkt.bancogalicia.com.ar: 208.95.134.72 is authorized to use 'v-blmfbni_gfkelpicen_docmpfcd_docmpfcd_a@bounce.mkt.bancogalicia.com.ar' in 'mfrom' identity (mechanism 'ip4:208.95.134.72' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="v-blmfbni_gfkelpicen_docmpfcd_docmpfcd_a@bounce.mkt.bancogalicia.com.ar"; helo=mail6731.mkt.bancogalicia.com.ar; client-ip=208.95.134.72
+Received: from mail6731.mkt.bancogalicia.com.ar (mail6731.mkt.bancogalicia.com.ar [208.95.134.72])
+	by fw.fapersa.com (Postfix) with ESMTP id 727515FF5E
+	for <jpruata@fapersa.com>; Tue, 23 May 2017 18:31:20 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=spop1024; d=mkt.bancogalicia.com.ar;
+ h=Date:From:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type:List-Unsubscribe; i=Quiero@mkt.bancogalicia.com.ar;
+ bh=nwQXeozRhe5krQ9PILelZZlUhHY=;
+ b=pBAVNG3nGpahiRYe0WDbsbsipCGShmwFUSbayKzgG+gTyx4JXve40vnI4NcgDYSvyp5g4WjUfP6J
+   Kto+Xn7GcuBuhqMFI4pzVbWd4GKqcu1bIPB3dm60GkF/l+gTpsQTXsyUmGa2W9LiDxCxBIL3y8mc
+   cTQRYmT7iNWpVj4mx6I=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=spop1024; d=mkt.bancogalicia.com.ar;
+ b=jx0uHaVtj9jmlTCigpBwuSoo7Y2fJxHHxfQb4uCS6PTysRUNG6t7vTJL56K/9rh1qxP9OWvdc4EW
+   ditVmunk5kcojF6RmKTpinMbZNx++ROuVotvw/JCwu9QiG38fl/u3GVzMjjALdvEsANT8LVI0yGe
+   Hn+oCv9qwaly5VYgLFI=;
+Received: by mail6731.mkt.bancogalicia.com.ar id h4il2i19if4j for <jpruata@fapersa.com>; Tue, 23 May 2017 21:31:19 +0000 (envelope-from <v-blmfbni_gfkelpicen_docmpfcd_docmpfcd_a@bounce.mkt.bancogalicia.com.ar>)
+Date: Tue, 23 May 2017 21:31:19 +0000 (GMT)
+From: Quiero <Quiero@mkt.bancogalicia.com.ar>
+Reply-To: Quiero@mkt.bancogalicia.com.ar
+To: jpruata@fapersa.com
+Message-ID: <293184208.458118591495575079376.JavaMail.app@rbg31.atlis1>
+Subject: =?utf-8?Q?Viaj=C3=A1_en_12_cuotas_por_menos_puntos?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_172811_647872553.1495575055729"
+x-mid: 29118936
+X-CSA-Complaints: whitelist-complaints@eco.de
+x-rpcampaign: sp29118936
+Feedback-ID: pod3_34665_29118936_1043133731:pod3_34665:ibmsilverpop
+x-job: 29118936
+x-orgId: 34665
+List-Unsubscribe: <mailto:v-blmfbni_gfkelpicen_docmpfcd_docmpfcd_a@bounce.mkt.bancogalicia.com.ar?subject=Unsubscribe>
+
+------=_Part_172811_647872553.1495575055729
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html lang=3D"es">
+<head><meta charset=3D"iso-8859-1"><!-- utf-8 funciona para la mayoria de l=
+os casos --><meta name=3D"viewport" content=3D"width=3Ddevice-width"><!-- F=
+orzar initial-scale no es necesario --><meta http-equiv=3D"X-UA-Compatible"=
+ content=3D"IE=3Dedge"><!-- La ultima version de (edge) IE rendering engine=
+ -->
+=09<title>Banco Galicia</title>
+=09<!-- El title aparece en notificaciones de mail, como Android 4.4. -->
+=09<style type=3D"text/css">div, p, a, li, td {
+=09-webkit-text-size-adjust: none;
+}
+body {
+=09Margin: 0 !important;
+=09padding: 0;
+=09min-width: 100%;
+=09background-color: #ffffff;
+}
+table {
+=09border-spacing: 0;
+=09font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+=09color: #333333;
+}
+td {
+=09padding: 0;
+=09text-transform: uppercase;
+=09color: #666;
+=09font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+img {
+=09border: 0;
+}
+
+.wrapper {
+=09width: 100%;
+=09table-layout: fixed;
+=09-webkit-text-size-adjust: 100%;
+=09-ms-text-size-adjust: 100%;
+}
+.webkit {
+=09max-width: 550px;
+}
+.outer {
+=09Margin: 0 auto;
+=09width: 100%;
+=09max-width: 550px;
+}
+.full-width-image img {
+=09width: 100%;
+=09max-width: 550px;
+=09height: auto;
+}
+a {
+=09color: #ee6a56;
+=09text-decoration: underline;
+}
+.contents {
+=09width: 100%;
+}
+.multi-column {
+=09text-align: center;
+=09font-size: 0;
+}
+.multi-column .column {
+=09width: 100%;
+=09display: inline-block;
+=09vertical-align: top;
+}
+.multi-column .contents {
+=09font-size: 14px;
+=09text-align: center;
+}
+@media screen and (max-device-width: 496px), screen and (max-width: 496px) =
+{
+td[class=3D"vertical-1"] {
+=09visibility: hidden;
+}
+}
+a:link {
+=09color: #666666;
+}
+a:visited {
+=09color: #333;
+}
+a:hover {
+=09color: #333;
+}
+a:active {
+=09color: #666;
+}
+=09</style>
+</head>
+<body leftmargin=3D"0" marginheight=3D"0" marginwidth=3D"0" style=3D"margin=
+:0; padding:0; -webkit-text-size-adjust:none; -ms-text-size-adjust:none; fo=
+nt-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight:normal;=
+" topmargin=3D"0">
+<table bgcolor=3D"#ffffff" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"border-collapse:collapse;" width=3D"100%">
+=09
+=09=09<tr>
+=09=09=09<th><!-- Email wrapper : INICIO --><!--[if (gte mso 9)|(IE)]><cent=
+er><table><tr><td width=3D"550"><![endif]-->
+=09=09=09<div style=3D"max-width: 550px; margin: 0 auto;">
+=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"email-container" style=3D"width: 100% !important; max-width=
+: 550px !important; margin: auto;" width=3D"550">
+=09=09=09=09
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td><!-- Saludo : INICIO -->
+=09=09=09=09=09=09<center>
+=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" s=
+tyle=3D"width:91% !important;" width=3D"500">
+=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"left" style=3D"font-family:'Trebuch=
+et MS', Arial, Helvetica, sans-serif; font-size:11px; line-height:24px; col=
+or:#666666; font-weight:normal;" valign=3D"top" width=3D"50%">Hola JUAN PAB=
+LO RUATA</td>
+=09=09=09=09=09=09=09=09=09<td align=3D"right" style=3D"font-family:'Trebuc=
+het MS', Arial, Helvetica, sans-serif; font-size:11px; line-height:24px; pa=
+dding-bottom:30px; color:#666666; font-weight:normal;" valign=3D"top" width=
+=3D"50%">PUBLICIDAD</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td height=3D"10" style=3D"font-size:1px; line-h=
+eight:1;">&nbsp;</td>
+=09=09=09=09=09=09=09=09=09<td height=3D"10" style=3D"font-size:1px; line-h=
+eight:1;">&nbsp;</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</center>
+=09=09=09=09=09=09<!-- Saludo : FIN --><!-- Barra : INICIO -->
+
+=09=09=09=09=09=09<table bgcolor=3D"#fc6621" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" style=3D"width:100% !important;" width=3D"550">
+=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td>
+=09=09=09=09=09=09=09=09=09<center>
+=09=09=09=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" style=3D"width:91% !important;" width=3D"500">
+=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"text-align:left; height:10=
+px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#ffffff=
+; font-size:16px; font-weight:normal;">&nbsp;</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09</center>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09<!-- Barra : FIN --><!-- Imagen : INICIO -->
+
+=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" s=
+tyle=3D"width:100% !important;" width=3D"550">
+=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td><img height=3D"183"  src=3D"http://www.banco=
+galicia.com/render/get?path=3DBG-MAILING/2017_05/header2.jpg" width=3D"581"=
+ /></td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09<!-- Imagen : FIN --><!-- Fecha : INICIO -->
+
+=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" s=
+tyle=3D"width:100% !important;" width=3D"550">
+=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td height=3D"30">
+=09=09=09=09=09=09=09=09=09<center>&nbsp;</center>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center" bgcolor=3D"#FFFFFF" height=
+=3D"24" style=3D"font-size:15px; color:#666666; font-weight:100;"><span sty=
+le=3D"font-size:16px; line-height:20px; font-family:'Trebuchet MS', Arial, =
+Helvetica, sans-serif; text-align:center; color:#5f6062; background:#FFFFFF=
+;"><span style=3D"font-size:24px; line-height:33px; text-transform:uppercas=
+e;"><strong>&iexcl;aprovech=C3=81 estas ofertas!</strong></span> </span></t=
+d>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center" height=3D"24">&nbsp;</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center" height=3D"24">
+=09=09=09=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0">
+=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td width=3D"21"><img alt=3D"&gt;&gt;" =
+height=3D"16"  src=3D"http://www.bancogalicia.com/render/get?path=3DBG-MAIL=
+ING/2017_05/flecha-izq-m.gif" style=3D"display:block;" width=3D"24" /></td>
+=09=09=09=09=09=09=09=09=09=09=09=09<td>&nbsp;</td>
+=09=09=09=09=09=09=09=09=09=09=09=09<td height=3D"24" style=3D"text-align:c=
+enter; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#666=
+666; font-size:18px; line-height:24px; font-weight:normal;">23 Y 24 <span s=
+tyle=3D"color:#fc6621;"> DE MAYO</span></td>
+=09=09=09=09=09=09=09=09=09=09=09=09<td>&nbsp;</td>
+=09=09=09=09=09=09=09=09=09=09=09=09<td width=3D"21"><img alt=3D"&lt;&lt;" =
+height=3D"16"  src=3D"http://www.bancogalicia.com/render/get?path=3DBG-MAIL=
+ING/2017_05/flecha-der-m.gif" style=3D"display:block;" width=3D"24" /></td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09<!-- Fecha : FIN --><!-- Titulo : INICIO -->
+
+=09=09=09=09=09=09<center>
+=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" s=
+tyle=3D"width:94% !important; max-width:600px; background-color:#ececec;" w=
+idth=3D"81%">
+=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center" bgcolor=3D"#FFFFFF" height=
+=3D"24">&nbsp;</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center" height=3D"24">&nbsp;</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center" height=3D"24"><span style=
+=3D"font-size:14px; line-height:20px; font-family:'Trebuchet MS', Arial, He=
+lvetica, sans-serif; text-align:center; color:#5f6062; background:#ececec; =
+background-color:"><span style=3D"font-size:36px; line-height:40px; text-tr=
+ansform:uppercase; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif=
+"><strong> PAQUETE A MACEI=C3=93</strong></span><br />
+=09=09=09=09=09=09=09=09=097 noches / desayuno incluido / A=C3=A9reo + Aloj=
+amiento + Traslado<br />
+=09=09=09=09=09=09=09=09=09<br />
+=09=09=09=09=09=09=09=09=09<span style=3D"font-size:24px; line-height:28px;=
+ color:#666666"><span style=3D"text-decoration:line-through;">Antes 2.500 p=
+untos</span><br />
+=09=09=09=09=09=09=09=09=09<span style=3D"color:#ff6600"> Ahora 1.500 punto=
+s + 12 cuotas de </span></span><br />
+=09=09=09=09=09=09=09=09=09<span style=3D"font-size:24px; line-height:28px;=
+ color:#ff6600"><span style=3D"font-size:90px; line-height:100px; font-weig=
+ht:bold;">$2.375</span><br />
+=09=09=09=09=09=09=09=09=09para 2 personas</span><br />
+=09=09=09=09=09=09=09=09=09<br />
+=09=09=09=09=09=09=09=09=09Precio final para 2 personas: $28.500<br />
+=09=09=09=09=09=09=09=09=09Salidas destacadas de Agosto, Septiembre, Octubr=
+e y Noviembre.</span></td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center">
+=09=09=09=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"210">
+=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td height=3D"28">&nbsp;</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td>
+=09=09=09=09=09=09=09=09=09=09=09=09<center>
+=09=09=09=09=09=09=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" width=3D"292">
+=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"right" height=3D"=
+35" width=3D"6"><img alt=3D"" height=3D"35"  src=3D"http://newsletters.wund=
+ermanservices.com.ar/MAILS/galicia/20172203/bot1.png" style=3D"display:bloc=
+k;" width=3D"6" /></td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td bgcolor=3D"#ff6600" height=
+=3D"35" style=3D"font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; =
+font-size:15px; text-align:center;"><a  href=3D"http://links.mkt.bancogalic=
+ia.com.ar/ctt?kn=3D2&ms=3DMjkxMTg5MzYS1&r=3DNDM2NTU1NzExMDUzS0&b=3D0&j=3DMT=
+A0MzEzMzczMQS2&mt=3D2&rj=3DMTA0MzEzMzczMQS2&rt=3D0" name=3D"www_quieroviaje=
+s_avantrip_com_oport" style=3D"background-color:#FF6600;color:#ffffff;displ=
+ay:inline-block;font-family:'Trebuchet MS', Arial, Helvetica, sans-serif;fo=
+nt-size:15px; font-weight:normal; line-height:32px; text-align:center; text=
+-decoration:none; width:292px; -webkit-text-size-adjust:none;" target=3D"_b=
+lank" ><span style=3D"font-family:'Trebuchet MS', Arial, Helvetica, sans-se=
+rif; font-size:15px; text-align:center; font-weight: normal;"><strong>CANJE=
+=C3=81 AHORA</strong></span></a></td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td height=3D"35" width=3D"6">=
+<img alt=3D"" height=3D"35"  src=3D"http://newsletters.wundermanservices.co=
+m.ar/MAILS/galicia/20172203/bot2.png" style=3D"display:block;" width=3D"6" =
+/></td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09</center>
+=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td>&nbsp;</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td>&nbsp;</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</center>
+=09=09=09=09=09=09<!-- ESPACIADOR : INICIO -->
+
+=09=09=09=09=09=09<center>
+=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" w=
+idth=3D"100%">
+=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center" height=3D"26"><img height=
+=3D"24"  src=3D"http://www.bancogalicia.com/render/get?path=3DBG-MAILING/20=
+17_05/zocalo2.jpg" width=3D"545" /></td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</center>
+=09=09=09=09=09=09<!-- ESPACIADOR : FIN --><!-- M=C3=93DULO GIF BANNER HOGA=
+R MASIVO : INICIO --><!--[if mso]><center><table><tr><td width=3D"440"><![e=
+ndif]-->
+
+=09=09=09=09=09=09<center>
+=09=09=09=09=09=09<div style=3D"max-width:400px; margin: 0 auto;">&nbsp;</d=
+iv>
+=09=09=09=09=09=09</center>
+=09=09=09=09=09=09<!--[if mso]></td></tr></table></center><![endif]--><!-- =
+M=C3=93DULO GIF BANNER HOGAR MASIVO : FIN --><!-- ESPACIADOR : INICIO -->
+
+=09=09=09=09=09=09<center>
+=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" w=
+idth=3D"100%">
+=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td height=3D"26">&nbsp;</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center" height=3D"26">Conoc=C3=89 t=
+odas las ofertas <a href=3D"http://links.mkt.bancogalicia.com.ar/ctt?kn=3D5=
+&ms=3DMjkxMTg5MzYS1&r=3DNDM2NTU1NzExMDUzS0&b=3D0&j=3DMTA0MzEzMzczMQS2&mt=3D=
+1&rt=3D0" name=3D"www_quieroviajes_avantrip_com_oport_2" >aqu=C3=8D</a></td=
+>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td height=3D"26">&nbsp;</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</center>
+=09=09=09=09=09=09<!-- ESPACIADOR : FIN --><!-- FOOTER - MASIVO : INICIO --=
+>
+
+=09=09=09=09=09=09<table bgcolor=3D"#eeeeee" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" width=3D"100%">
+=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td height=3D"16" style=3D"font-size:16px; line-=
+height:1;">&nbsp;</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td>
+=09=09=09=09=09=09=09=09=09<center>
+=09=09=09=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"91%">
+=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"min-width:120px !important=
+;" width=3D"28%"><a alt=3D"Banco Galicia" href=3D"http://links.mkt.bancogal=
+icia.com.ar/ctt?kn=3D1&ms=3DMjkxMTg5MzYS1&r=3DNDM2NTU1NzExMDUzS0&b=3D0&j=3D=
+MTA0MzEzMzczMQS2&mt=3D1&rt=3D0" name=3D"www_bancogalicia_com_banca_online_w=
+" target=3D"_blank" ><img alt=3D"Banco Galicia" height=3D"39"  src=3D"http:=
+//www.bancogalicia.com/render/get?path=3DBG-MAILING/Catalogo/logo_galicia_f=
+ooter_masivo.png" style=3D"height:auto;  display:block; border:none; margin=
+:auto; font-size:14px; color:#666666;" width=3D"141" /></a></td>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"right" style=3D"font-famil=
+y:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#666666; text-align:r=
+ight; font-size:11px; line-height:1; font-weight:normal;">SEGUINOS EN:</td>
+=09=09=09=09=09=09=09=09=09=09=09=09<td width=3D"2%">&nbsp;</td>
+=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"min-width:30px !important;=
+" width=3D"7%"><a href=3D"http://links.mkt.bancogalicia.com.ar/ctt?kn=3D3&m=
+s=3DMjkxMTg5MzYS1&r=3DNDM2NTU1NzExMDUzS0&b=3D0&j=3DMTA0MzEzMzczMQS2&mt=3D1&=
+rt=3D0" name=3D"www_facebook_com_bancogalicia" target=3D"_blank" title=3D"F=
+acebook Galicia" ><img alt=3D"Facebook" height=3D"37"  src=3D"http://www.ba=
+ncogalicia.com/render/get?path=3DBG-MAILING/Catalogo/icono_footer_fb.png" s=
+tyle=3D"height:auto;  display:block; border:none; margin:auto; font-size:10=
+px;" width=3D"37" /></a></td>
+=09=09=09=09=09=09=09=09=09=09=09=09<td width=3D"2%">&nbsp;</td>
+=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"min-width:30px !important;=
+" width=3D"7%"><a href=3D"http://links.mkt.bancogalicia.com.ar/ctt?kn=3D6&m=
+s=3DMjkxMTg5MzYS1&r=3DNDM2NTU1NzExMDUzS0&b=3D0&j=3DMTA0MzEzMzczMQS2&mt=3D1&=
+rt=3D0" name=3D"twitter_com_bancogalicia" target=3D"_blank" title=3D"Twitte=
+r Galicia" ><img alt=3D"Twitter" height=3D"37"  src=3D"http://www.bancogali=
+cia.com/render/get?path=3DBG-MAILING/Catalogo/icono_footer_tw.png" style=3D=
+"height:auto;  display:block; border:none; margin:auto; font-size:10px;" wi=
+dth=3D"37" /></a></td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09</center>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td height=3D"16" style=3D"font-size:16px; line-=
+height:1;">&nbsp;</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09<!-- FOOTER - MASIVO : FIN --><!-- Legales : INICIO -->
+
+=09=09=09=09=09=09<center>
+=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" w=
+idth=3D"98%">
+=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td>&nbsp;</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td style=3D"font-family:'Trebuchet MS', Arial, =
+Helvetica, sans-serif; font-size:11px; text-align:justify; line-height:16px=
+; color:#999999; font-weight:normal;">
+=09=09=09=09=09=09=09=09=09<p><span style=3D"font-size:11px; font-family:'T=
+rebuchet MS', Arial, Helvetica, sans-serif; text-align:justify; color:#9999=
+99;"><span style=3D"font-size:68px; line-height:68px;">CFTEA: 0,00%</span><=
+br />
+=09=09=09=09=09=09=09=09=09<span style=3D"font-size:17px; line-height:17px;=
+">TNA: 0,00% TEA: 0,00%</span><br />
+=09=09=09=09=09=09=09=09=09<br />
+=09=09=09=09=09=09=09=09=09Cartera de consumo. Tasa nominal anual, en adela=
+nte tna, costo financiero total efectivo anual, en adelante CFTEA, y tasa e=
+fectiva anual, en adelante TEA. Promoci=C3=B3n v=C3=A1lida en el pa=C3=ADs =
+solo para los canjes de puntos en productos seleccionados de &ldquo;solo x =
+48 hs&rdquo;, realizados en quiero viajes que combinen puntos y pesos, en 1=
+2 cuotas sin inter=C3=A9s. CFTEA 0,00%. Incluye tasa nominal anual fija 0%.=
+ Servicios tur=C3=ADsticos operados por Avantrip srl, Banco Galicia es resp=
+onsable por los puntos y medios de pago y no da garant=C3=ADa de ning=C3=BA=
+n tipo, lo que corresponde exclusivamente al prestador y/o a los respectivo=
+s proveedores de los servicios. Promoci=C3=B3n v=C3=A1lida en el pa=C3=ADs =
+para clientes que se encuentren al d=C3=ADa en sus productos y canjeen punt=
+os a trav=C3=A9s de Quiero Viajes combinando puntos y pesos, en 12 cuotas s=
+in inter=C3=A9s del 23 de mayo de 2017 al 24 de mayo de 2017 inclusive en d=
+estinos seleccionados en el presente aviso. No incluye tasas aeroportuarias=
+. Puede requerirse pasaporte y visa. Sujeto a disponibilidad y confirmaci=
+=C3=B3n. Destinos, fechas y valores sujetos a disponibilidad. El canje no g=
+arantiza cambios en el pasaje obtenido. Solo para inscriptos a Quiero! que =
+al momento de canjear se encuentren al d=C3=ADa con sus productos y no acum=
+ulable con otras promociones vigentes. Consult=C3=A1 vigencias y condicione=
+s en bancogalicia.com, o al 0810-777-3333.<br />
+=09=09=09=09=09=09=09=09=09<br />
+=09=09=09=09=09=09=09=09=09Paquete a Macei=C3=B3 por 7 noches incluye: a=C3=
+=A9reos Buenos Aires/Macei=C3=B3/Buenos Aires, 07 noches de alojamiento en =
+hotel previsto Ritz Suites con desayuno, y traslados de entrada y salida. P=
+recio por habitaci=C3=B3n en base doble. Salidas destacadas desde agosto a =
+noviembre de 2017 o hasta agotar stock.</span><br />
+=09=09=09=09=09=09=09=09=09Si desea desuscribirse, por favor clic <a href=
+=3D"http://links.mkt.bancogalicia.com.ar/servlet/OneClickOptOutServlet?m=3D=
+29118936&r=3DNDM2NTU1NzExMDUzS0&b=3D0&j=3DMTA0MzEzMzczMQS2&mt=3D1&rt=3D0" n=
+ame=3D"Hyperlink_20170522_135334044" target=3D"_blank" >aqu=C3=AD</a>. Se d=
+eja expresa constancia que Ud. podr=C3=A1 ejercer su derecho de retiro o bl=
+oqueo total o parcial de su nombre en nuestra base de datos, mediante forma=
+l a entregar en cualquiera de nuestras sucursales. Para mejor comprensi=C3=
+=B3n, se transcriben: 1) Art=C3=ADculo 27, inc. 3ro. de la 25326: (Archivos=
+, registros o bancos de datos con fines de publicidad).3. El titular podr=
+=C3=A1 en cualquier momento solicitar el retiro bloqueo de su nombre de los=
+ bancos de datos a los que se refiere el presente art=C3=ADculo; y 2) Art=
+=C3=ADculo 27 - Anexo I - Decreto 1558/01: En toda comunicaci=C3=B3n con fi=
+nes de publicidad que se realice por correo, tel=C3=A9fono, correo electr=
+=C3=B3nico, Internet u otro medio a distancia a conocer, se deber=C3=A1 ind=
+icar, en forma expresa y destacada, la posibilidad del titular del dato de =
+solicitar el retiro o bloqueo, total o parcial, de su nombre de la base de =
+datos. A pedido del interesado, se deber=C3=A1 informar el nombre del respo=
+nsable o usuario del banco de datos que provey=C3=B3 la informaci=C3=B3n. R=
+ecordatorio de seguridad: En Banco Galicia mantenemos estrictas normas de s=
+eguridad y procedimientos para prevenir el acceso no autorizado a toda info=
+rmaci=C3=B3n relacionada con usted. Adem=C3=A1s, fuera del proceso standard=
+ de acceso a Galicia Online Banking, Banco Galicia nunca lo contactar=C3=A1=
+ (por mail, tel=C3=A9fono u otros medios) para validar informaci=C3=B3n per=
+sonal tal como: n=C3=BAmero de documento, claves de acceso, n=C3=BAmeros de=
+ la tarjeta de coordenadas o n=C3=BAmero de cuenta. Si usted recibe un requ=
+erimiento de este tipo comun=C3=ADquese de inmediato al 011-6329-6585, dond=
+e ser=C3=A1 asesorado convenientemente.</p>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td height=3D"20">&nbsp;</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</center>
+=09=09=09=09=09=09<!-- Legales : FIN --></td>
+=09=09=09=09=09</tr>
+=09=09=09=09
+=09=09=09</table>
+=09=09=09</div>
+=09=09=09<!--[if mso]></td></tr></table></center><![endif]--><!-- Email wra=
+pper : FIN --></th>
+=09=09</tr>
+=09
+</table>
+<IMG src=3D"http://links.mkt.bancogalicia.com.ar/open/log/29118936/NDM2NTU1=
+NzExMDUzS0/0/MTA0MzEzMzczMQS2/1/0"></body>
+</html>
+
+
+
+------=_Part_172811_647872553.1495575055729--
+

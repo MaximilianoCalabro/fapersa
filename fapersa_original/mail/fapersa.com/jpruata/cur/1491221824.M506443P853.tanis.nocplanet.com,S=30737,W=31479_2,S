@@ -1,0 +1,742 @@
+Return-Path: <plpaez@paez-busaniche.com.ar>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id eTLnHUA94lhVAwAATLP0zA
+	for <jpruata@fapersa.com>; Mon, 03 Apr 2017 09:17:04 -0300
+Return-path: <plpaez@paez-busaniche.com.ar>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Mon, 03 Apr 2017 09:17:04 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:56967 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.88)
+	(envelope-from <plpaez@paez-busaniche.com.ar>)
+	id 1cv0ut-0004SS-Dd
+	for jpruata@fapersa.com; Mon, 03 Apr 2017 09:17:04 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id A73B67F216
+	for <jpruata@fapersa.com>; Mon,  3 Apr 2017 09:17:02 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id H9lqpYaQDWff for <jpruata@fapersa.com>;
+	Mon,  3 Apr 2017 09:17:01 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id EE3437F233; Mon,  3 Apr 2017 09:17:01 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 6D17D7F216
+	for <jpruata@fapersa.com>; Mon,  3 Apr 2017 09:17:00 -0300 (ART)
+Received-SPF: none (paez-busaniche.com.ar: No applicable sender policy available) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="plpaez@paez-busaniche.com.ar"; helo=charcot.lineadns.com; client-ip=50.28.16.26
+Received: from charcot.lineadns.com (charcot.lineadns.com [50.28.16.26])
+	by fw.fapersa.com (Postfix) with ESMTPS id DB40C5FDCE
+	for <jpruata@fapersa.com>; Mon,  3 Apr 2017 09:16:57 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=paez-busaniche.com.ar; s=default; h=Content-Type:MIME-Version:Date:Subject:
+	References:Cc:To:From:Message-ID:Sender:Reply-To:Content-Transfer-Encoding:
+	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:List-Id:List-Help:
+	List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=lccHRLhgnCQdhGYSPz/4PJsHrOMPILueF+1NfSbIxfw=; b=17YydeJmXvknshhH82HSUc5rug
+	M3yZ22kCnqns+lFWAKwPUvqQtnEmD3gbroG5Qz1hrgfhp9REqjxFj2yjfkAFx7NIIanDPS/WSvNRc
+	zyS0+vRFCHBUUG4wa1/WSz8TZah06gzSCr5FzcH3+DKVOEuyHT6uozxDMN1yZ11Fvp0oK5YcSJ7Qo
+	TnNCynRktmm8L9QpGzI8RhfePTKcfOuTUHdahcK7AsnZebmIwl6EhrLs5GqK9c6VfBfudr/Q/27Fo
+	zwKTJ9VXxrBdMiuATgt4vBEXJOnEHuh3BI9/GSQbjuTLWWsPLSJHCuHEUyAuW+AhwdPhl3//u/pC/
+	TSr17VyQ==;
+Received: from [181.110.50.57] (port=1294 helo=PcPedrolucas)
+	by charcot.lineadns.com with esmtpsa (TLSv1:DES-CBC3-SHA:168)
+	(Exim 4.88)
+	(envelope-from <plpaez@paez-busaniche.com.ar>)
+	id 1cv0uh-0023Fw-CN; Mon, 03 Apr 2017 09:16:54 -0300
+Message-ID: <E4D9FBEEE36749258F30394A7A3A4C5C@PcPedrolucas>
+From: =?iso-8859-1?Q?Pedro_Lucas_P=E1ez?= <plpaez@paez-busaniche.com.ar>
+To: =?iso-8859-1?Q?Jos=E9_Ignacio_David?= <josedavid@contadoresdavid.com.ar>
+Cc: <raf@freyre-iturraspe.com.ar>,
+	"ruata juan pablo 1 EMPRESA" <jpruata@fapersa.com>,
+	"RUATA hotmail" <juampiruata@hotmail.com>
+References: <4A6D34B49F4649E69D417EC3A41EE9F0@PcPedrolucas> <14408f93-5651-5601-82d5-fc5e0311e5ea@nkstudios.net> <003901d2a73b$84176340$8c4629c0$@com.ar> <3CEEBEB269344AB7A87EF3504473D046@PcPedrolucas> <A5E28A03701245A29E59BFCE0AAE424E@CuiseNote>
+Subject: Re: troncoso bruno, dni 44630138
+Date: Mon, 3 Apr 2017 09:17:02 -0300
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_00ED_01D2AC5B.0E4C79A0"
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2900.5512
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5512
+X-OutGoing-Spam-Status: No, score=-1.0
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - charcot.lineadns.com
+X-AntiAbuse: Original Domain - fapersa.com
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - paez-busaniche.com.ar
+X-Get-Message-Sender-Via: charcot.lineadns.com: authenticated_id: plpaez@paez-busaniche.com.ar
+X-Authenticated-Sender: charcot.lineadns.com: plpaez@paez-busaniche.com.ar
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_00ED_01D2AC5B.0E4C79A0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Hola Jos=E9.
+    Cualquier ampliaci=F3n que necesites acerca de la situaci=F3n de =
+Troncoso avisame. Ojo que me parece que no copiaste a la gente de la =
+comisi=F3n en el mail que enviaste debajo.=20
+    Abzo.
+
+PD: recuerden que la baja de Troncoso se "compensa" con el alta de =
+Galiano (tipo premio consuelo)=20
+
+Pedro Lucas P=E1ez (h)
+Estudio Jur=EDdico P=E1ez - Busaniche
+Tel.: 0054-342-4593030 y rot.
+Juan de Garay 2855
+(S3000CRI) Santa Fe
+www.paez-busaniche.com.ar
+
+  ----- Original Message -----=20
+  From: Jos=E9 Ignacio David=20
+  To: Pedro Lucas P=E1ez=20
+  Cc: raf@freyre-iturraspe.com.ar ; obeid guillermo ; obeid diego ; =
+lartigue facundo hotmail ; LARTIGUE FACUNDO ; FAVRE PATRICIO ; carrera =
+leandro ; de la pe=F1a sebasti=E1n=20
+  Sent: Monday, April 03, 2017 9:15 AM
+  Subject: Re: troncoso bruno, dni 44630138
+
+
+  Hola Pedro,
+  Ah=ED lo busqu=E9 en el padr=F3n, est=E1 pagando por tarjeta de =
+cr=E9dito.
+  Las Becas las trata la comisi=F3n en reuni=F3n. Copio a varios de la =
+comisi=F3n para que est=E9n en tema, entre ellos a Juampi.
+  Hoy se habla en reuni=F3n y ma=F1ana te estoy confirmando como queda.
+
+  Gracias!
+
+  Un abrazo
+
+  Jos=E9
+
+
+  From: Pedro Lucas P=E1ez=20
+  Sent: Friday, March 31, 2017 4:40 PM
+  To: DAVID JOS=C9 (tesorer=EDa SFRC)=20
+  Cc: raf@freyre-iturraspe.com.ar ; obeid guillermo ; obeid diego ; =
+lartigue facundo hotmail ; LARTIGUE FACUNDO ; FAVRE PATRICIO ; carrera =
+leandro ; de la pe=F1a sebasti=E1n=20
+  Subject: Re: troncoso bruno, dni 44630138
+
+
+  Jos=E9:
+      =BFc=F3mo and=E1s...?
+      Te cuento que se vinieron la divisi=F3n m14 en lo que va del a=F1o =
+3 chicos de UNI. Est=E1n bien integrados.=20
+      Cuando habl=E9 por primera vez en febrero con Claudio Troncoso, el =
+padre de Bruno, le dije que se fijara si el chico se copaba antes de =
+hacerlo socio, que esperara un par de meses. Me contest=F3 que lo =
+hab=EDa hecho socio en enero, que si se pasaba al SFRC se pasaba del =
+todo, etc.=20
+
+      Ahora casi pasa que el chico deja de jugar por cuestiones =
+econ=F3micas, se les complic=F3 la cuesti=F3n guita.=20
+      Habl=E9 con los padres, y con ok de Rauli Freyre, copiado, les =
+dije que pod=EDan obtener una "beca", es decir, quedar exentos del pago =
+de la cuota.=20
+      Por favor, decime qu=E9 hay que hacer para efectivizar esa beca, =
+para que no le cobren m=E1s (por ahora) la cuota. No s=E9 si se meti=F3 =
+en DA o le va cobrador a la casa. =BFLO podr=E1s encontrar en sistema =
+para chequear ese dato?. =BFSab=E9s que debo o debe =E9l hacer para que =
+no le cobren por unos meses...? Es lo que yo le promet=ED con el ok de =
+Coordinadores. =BFCon qui=E9n debo ver el tema...?=20
+      Cuando puedas, contame por favor.    =20
+      Buen fds y abzo
+     =20
+  Pedro Lucas P=E1ez (h)
+  Estudio Jur=EDdico P=E1ez - Busaniche
+  Tel.: 0054-342-4593030 y rot.
+  Juan de Garay 2855
+  (S3000CRI) Santa Fe
+  www.paez-busaniche.com.ar
+
+    ----- Original Message -----=20
+    From: raf@freyre-iturraspe.com.ar=20
+    To: diego@nkstudios.net ; 'Pedro Lucas P=E1ez' ; 'HOTMAIL PROPIO' ; =
+'obeid guillermo' ; 'lartigue facundo hotmail' ; 'LARTIGUE FACUNDO' ; =
+'FAVRE PATRICIO' ; 'carrera leandro' ; 'de la pe=F1a sebasti=E1n'=20
+    Sent: Monday, March 27, 2017 5:48 PM
+    Subject: RE: troncoso
+
+
+    Perfecto Pedro!!!!!!!!!!
+
+    =20
+
+    De: Diego Obeid NKstudios SRL [mailto:diego@nkstudios.net]=20
+    Enviado el: lunes, 27 de marzo de 2017 12:56 p.m.
+    Para: Pedro Lucas P=E1ez; HOTMAIL PROPIO; obeid guillermo; lartigue =
+facundo hotmail; LARTIGUE FACUNDO; FAVRE PATRICIO; carrera leandro; de =
+la pe=F1a sebasti=E1n
+    CC: FREYRE RA=DAL
+    Asunto: Re: troncoso
+
+    =20
+
+    Estimado Pedro, me sorprende sobre manera la claridad, la =
+efectividad y la dedicaci=F3n a la gesti=F3n. Desde ya que la gorda es =
+un buen jugador y estar=EDa bueno tenerlo en las filas pero no al precio =
+de hacerle una felatio al padre o a la madre que seguramente debe ser =
+igual al padre pero con mas pelos en la vagina.=20
+
+    Si el pibe va a practica te mantenemos informado.=20
+
+    FELICITACIONES POR LA GESTION!!!!! y ADJUNTO FOTO DE TRONCOSO CON =
+"LA GORDA" tambi=E9n para el que quiera mas les paso el link de facebook =
+donde pueden ver varias fotos mas....el trencito bailando garpa mal =
+https://www.facebook.com/claudiodaniel.troncoso?fref=3Dts
+
+    ABRAZO
+
+    =20
+
+    =20
+
+    On 27/03/2017 12:40 p.m., Pedro Lucas P=E1ez wrote:
+
+      sritas: reci=E9n cort=E9 con Claudio Troncoso, padre de Bruno. De =
+entrada le dije que me hab=EDa enterado que quiz=E1s Bruno dejar=EDa de =
+ir a las pr=E1cticas y a los partidos. Por eso lo llamaba, que no =
+sab=EDa a qu=E9 pod=EDa deberse esa decisi=F3n pero que para el caso que =
+fuera por una cuesti=F3n econ=F3mica el Club tiene una pol=EDtica de =
+inclusi=F3n que contempla esas situaciones, que nadie se queda sin jugar =
+x una cuesti=F3n de $$, que para nosotros ser=EDa un gusto que Bruno =
+pueda seguir jugando en el Club si es que realmente =E9l quiere jugar en =
+SFRC, que la ayuda pod=EDa consistir en una beca en su cuota de socio, =
+y/o en la plata de viajes, de gim y/o de 3T, sea por el 50% o por un =
+porcentaje mayor.
+
+          Tambi=E9n le dej=E9 ver que si la decisi=F3n se debe a que =
+quiere retomar en UNI , que no hay problema, que no hace falta que le =
+diga que est=E1 en total libertad de acci=F3n.=20
+
+          Pero =E9l dijo (no s=E9 si es sincero o no) que la cuesti=F3n =
+viene por un tema de $$, que le da no se qu=E9 pedir ayuda siendo tan =
+nuevo, etc., a lo que repuse que es indistinto su antig=FCedad para que =
+el club lo ayude.=20
+
+          Le hice ver que advert=ED que =E9l sali=F3 de los grupos, a lo =
+que me contest=F3 que hab=EDa decidido que fuera su mujer quien se ocupe =
+de las cuestiones de rugby, x lo que =E9l se sali=F3 de los grupos... =
+(mmmmm dijo la nutria)
+
+          Termin=E9 dici=E9ndole que lo piense tranqui, q lo hablen en =
+familia. Dijo que lo hablar=EDa con su mujer, y que Bruno S=CD ir=EDa =
+hoy a pr=E1ctica.=20
+
+          Toda esta cuesti=F3n de ofrecerle beca para los gastos del =
+club la charl=E9 previamente con Rauli, copiado.
+
+          Veamos ahora si realmente esta semana vuelve a pr=E1ctica. SiN =
+llegar a chuparle las medias, "sed=FAzcanl=F3n"... al menos no le digan =
+m=E1s "gorda", jaja.
+
+          Obviamente espero que nadie me rompa los huevos ahora =
+dici=E9ndome que estuve demasiado bueno o demasiado malo. Al que no le =
+guste la gesti=F3n, que la haga =E9l: Claudio Troncoso:  3424468465, =
+jejeje.=20
+
+          Luego cu=E9ntenme por favor si vuelve o no a pr=E1ctica.=20
+
+          Abzo.=20
+
+      Pedro Lucas P=E1ez (h)
+      Estudio Jur=EDdico P=E1ez - Busaniche
+      Tel.: 0054-342-4593030 y rot.
+      Juan de Garay 2855
+      (S3000CRI) Santa Fe
+      www.paez-busaniche.com.ar
+
+    =20
+
+
+
+
+-------------------------------------------------------------------------=
+-----
+          El software de antivirus Avast ha analizado este correo =
+electr=F3nico en busca de virus.=20
+        www.avast.com=20
+      =20
+
+
+------=_NextPart_000_00ED_01D2AC5B.0E4C79A0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:v =3D "urn:schemas-microsoft-com:vml" xmlns:o =3D=20
+"urn:schemas-microsoft-com:office:office" xmlns:w =3D=20
+"urn:schemas-microsoft-com:office:word" xmlns:m =3D=20
+"http://schemas.microsoft.com/office/2004/12/omml"><HEAD>
+<META content=3Dtext/html;charset=3Diso-8859-1 =
+http-equiv=3DContent-Type>
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.18702">
+<STYLE>@font-face {
+	font-family: Cambria Math;
+}
+@font-face {
+	font-family: Calibri;
+}
+@font-face {
+	font-family: Tahoma;
+}
+@page WordSection1 {size: 8.5in 11.0in; margin: 1.0in 1.0in 1.0in 1.0in; =
+}
+P.MsoNormal {
+	MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman","serif"; COLOR: =
+black; FONT-SIZE: 12pt
+}
+LI.MsoNormal {
+	MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman","serif"; COLOR: =
+black; FONT-SIZE: 12pt
+}
+DIV.MsoNormal {
+	MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman","serif"; COLOR: =
+black; FONT-SIZE: 12pt
+}
+A:link {
+	COLOR: blue; TEXT-DECORATION: underline; mso-style-priority: 99
+}
+SPAN.MsoHyperlink {
+	COLOR: blue; TEXT-DECORATION: underline; mso-style-priority: 99
+}
+A:visited {
+	COLOR: purple; TEXT-DECORATION: underline; mso-style-priority: 99
+}
+SPAN.MsoHyperlinkFollowed {
+	COLOR: purple; TEXT-DECORATION: underline; mso-style-priority: 99
+}
+P {
+	FONT-FAMILY: "Times New Roman","serif"; COLOR: black; MARGIN-LEFT: 0in; =
+FONT-SIZE: 12pt; MARGIN-RIGHT: 0in; mso-style-priority: 99; =
+mso-margin-top-alt: auto; mso-margin-bottom-alt: auto
+}
+SPAN.EstiloCorreo18 {
+	FONT-FAMILY: "Calibri","sans-serif"; COLOR: #1f497d; mso-style-type: =
+personal-reply
+}
+.MsoChpDefault {
+	FONT-SIZE: 10pt; mso-style-type: export-only
+}
+DIV.WordSection1 {
+	page: WordSection1
+}
+</STYLE>
+</HEAD>
+<BODY style=3D"PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: =
+15px"=20
+id=3DMailContainerBody lang=3DEN-US leftMargin=3D0 link=3Dblue =
+topMargin=3D0 bgColor=3Dwhite=20
+vLink=3Dpurple name=3D"Compose message area" CanvasTabStop=3D"true">
+<DIV><FONT face=3DArial>Hola Jos=E9.</FONT></DIV>
+<DIV><FONT face=3DArial>&nbsp;&nbsp;&nbsp; Cualquier ampliaci=F3n que =
+necesites=20
+acerca de la situaci=F3n de Troncoso avisame. Ojo que me parece que no =
+copiaste a=20
+la gente de la comisi=F3n en el mail que enviaste debajo. </FONT></DIV>
+<DIV><FONT face=3DArial>&nbsp;&nbsp;&nbsp; Abzo.</FONT></DIV>
+<DIV><FONT face=3DArial></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial>PD: recuerden que la baja de Troncoso se =
+"compensa" con el=20
+alta de Galiano (tipo premio consuelo)</FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial></FONT>&nbsp;</DIV>
+<DIV>Pedro Lucas P=E1ez (h)<BR>Estudio Jur=EDdico P=E1ez - =
+Busaniche<BR>Tel.:=20
+0054-342-4593030 y rot.<BR>Juan de Garay 2855<BR>(S3000CRI) Santa =
+Fe<BR><A=20
+href=3D"http://www.paez-busaniche.com.ar">www.paez-busaniche.com.ar</A><B=
+R></DIV>
+<BLOCKQUOTE=20
+style=3D"BORDER-LEFT: #000000 2px solid; PADDING-LEFT: 5px; =
+PADDING-RIGHT: 0px; MARGIN-LEFT: 5px; MARGIN-RIGHT: 0px">
+  <DIV style=3D"FONT: 10pt arial">----- Original Message ----- </DIV>
+  <DIV=20
+  style=3D"FONT: 10pt arial; BACKGROUND: #e4e4e4; font-color: =
+black"><B>From:</B>=20
+  <A title=3Djosedavid@contadoresdavid.com.ar=20
+  href=3D"mailto:josedavid@contadoresdavid.com.ar">Jos=E9 Ignacio =
+David</A> </DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>To:</B> <A =
+title=3Dplpaez@paez-busaniche.com.ar=20
+  href=3D"mailto:plpaez@paez-busaniche.com.ar">Pedro Lucas P=E1ez</A> =
+</DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>Cc:</B> <A =
+title=3Draf@freyre-iturraspe.com.ar=20
+  =
+href=3D"mailto:raf@freyre-iturraspe.com.ar">raf@freyre-iturraspe.com.ar</=
+A> ; <A=20
+  title=3Dguilleobeid@hotmail.com =
+href=3D"mailto:guilleobeid@hotmail.com">obeid=20
+  guillermo</A> ; <A title=3Ddiego@nkstudios.net=20
+  href=3D"mailto:diego@nkstudios.net">obeid diego</A> ; <A=20
+  title=3Dfacundolartigue@hotmail.com=20
+  href=3D"mailto:facundolartigue@hotmail.com">lartigue facundo =
+hotmail</A> ; <A=20
+  title=3Dlartigue@lacaja.com.ar =
+href=3D"mailto:lartigue@lacaja.com.ar">LARTIGUE=20
+  FACUNDO</A> ; <A title=3Dfavrepatricio@gmail.com=20
+  href=3D"mailto:favrepatricio@gmail.com">FAVRE PATRICIO</A> ; <A=20
+  title=3Dljcarrera@yahoo.com.ar =
+href=3D"mailto:ljcarrera@yahoo.com.ar">carrera=20
+  leandro</A> ; <A title=3Dsebadelap@hotmail.com=20
+  href=3D"mailto:sebadelap@hotmail.com">de la pe=F1a sebasti=E1n</A> =
+</DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>Sent:</B> Monday, April 03, 2017 =
+9:15=20
+AM</DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>Subject:</B> Re: troncoso bruno, =
+dni=20
+  44630138</DIV>
+  <DIV><BR></DIV>
+  <DIV><FONT color=3D#000080 face=3DCalibri>Hola Pedro,</FONT></DIV>
+  <DIV><FONT color=3D#000080 face=3DCalibri>Ah=ED lo busqu=E9 en el =
+padr=F3n, est=E1 pagando=20
+  por tarjeta de cr=E9dito.</FONT></DIV>
+  <DIV><FONT color=3D#000080 face=3DCalibri>Las Becas las trata la =
+comisi=F3n en=20
+  reuni=F3n. Copio a varios de la comisi=F3n para que est=E9n en tema, =
+entre ellos a=20
+  Juampi.</FONT></DIV>
+  <DIV><FONT color=3D#000080 face=3DCalibri>Hoy se habla en reuni=F3n y =
+ma=F1ana te=20
+  estoy confirmando como queda.</FONT></DIV>
+  <DIV><FONT color=3D#000080 face=3DCalibri></FONT>&nbsp;</DIV>
+  <DIV><FONT color=3D#000080 face=3DCalibri>Gracias!</FONT></DIV>
+  <DIV><FONT color=3D#000080 face=3DCalibri></FONT>&nbsp;</DIV>
+  <DIV><FONT color=3D#000080 face=3DCalibri>Un abrazo</FONT></DIV>
+  <DIV><FONT color=3D#000080 face=3DCalibri></FONT>&nbsp;</DIV>
+  <DIV><FONT color=3D#000080 face=3DCalibri>Jos=E9</FONT></DIV>
+  <DIV style=3D"FONT: 10pt Tahoma">
+  <DIV><BR></DIV>
+  <DIV style=3D"BACKGROUND: #f5f5f5">
+  <DIV style=3D"font-color: black"><B>From:</B> <A=20
+  title=3Dplpaez@paez-busaniche.com.ar=20
+  href=3D"mailto:plpaez@paez-busaniche.com.ar">Pedro Lucas P=E1ez</A> =
+</DIV>
+  <DIV><B>Sent:</B> Friday, March 31, 2017 4:40 PM</DIV>
+  <DIV><B>To:</B> <A title=3Djosedavid@contadoresdavid.com.ar=20
+  href=3D"mailto:josedavid@contadoresdavid.com.ar">DAVID JOS=C9 =
+(tesorer=EDa SFRC)</A>=20
+  </DIV>
+  <DIV><B>Cc:</B> <A title=3Draf@freyre-iturraspe.com.ar=20
+  =
+href=3D"mailto:raf@freyre-iturraspe.com.ar">raf@freyre-iturraspe.com.ar</=
+A> ; <A=20
+  title=3D"mailto:guilleobeid@hotmail.com&#10;CTRL + clic para seguir el =
+v=EDnculo"=20
+  href=3D"mailto:guilleobeid@hotmail.com">obeid guillermo</A> ; <A=20
+  title=3Ddiego@nkstudios.net href=3D"mailto:diego@nkstudios.net">obeid =
+diego</A> ;=20
+  <A=20
+  title=3D"mailto:facundolartigue@hotmail.com&#10;CTRL + clic para =
+seguir el v=EDnculo"=20
+  href=3D"mailto:facundolartigue@hotmail.com">lartigue facundo =
+hotmail</A> ; <A=20
+  title=3D"mailto:lartigue@lacaja.com.ar&#10;CTRL + clic para seguir el =
+v=EDnculo"=20
+  href=3D"mailto:lartigue@lacaja.com.ar">LARTIGUE FACUNDO</A> ; <A=20
+  title=3D"mailto:favrepatricio@gmail.com&#10;CTRL + clic para seguir el =
+v=EDnculo"=20
+  href=3D"mailto:favrepatricio@gmail.com">FAVRE PATRICIO</A> ; <A=20
+  title=3D"mailto:ljcarrera@yahoo.com.ar&#10;CTRL + clic para seguir el =
+v=EDnculo"=20
+  href=3D"mailto:ljcarrera@yahoo.com.ar">carrera leandro</A> ; <A=20
+  title=3Dsebadelap@hotmail.com href=3D"mailto:sebadelap@hotmail.com">de =
+la pe=F1a=20
+  sebasti=E1n</A> </DIV>
+  <DIV><B>Subject:</B> Re: troncoso bruno, dni =
+44630138</DIV></DIV></DIV>
+  <DIV><BR></DIV>
+  <DIV><FONT face=3DArial>Jos=E9:</FONT></DIV>
+  <DIV><FONT face=3DArial>&nbsp;&nbsp;&nbsp; =BFc=F3mo =
+and=E1s...?</FONT></DIV>
+  <DIV><FONT face=3DArial>&nbsp;&nbsp;&nbsp; Te cuento que se vinieron =
+la divisi=F3n=20
+  m14 en lo que va del a=F1o 3 chicos de UNI. Est=E1n bien integrados. =
+</FONT></DIV>
+  <DIV><FONT face=3DArial>&nbsp;&nbsp;&nbsp; Cuando habl=E9 por primera =
+vez en=20
+  febrero con Claudio Troncoso, el padre de Bruno, le dije que se fijara =
+si el=20
+  chico se copaba antes de hacerlo socio, que esperara un par de meses. =
+Me=20
+  contest=F3 que lo hab=EDa hecho socio en enero, que si se pasaba al =
+SFRC se pasaba=20
+  del todo, etc. </FONT></DIV>
+  <DIV><FONT face=3DArial></FONT>&nbsp;</DIV>
+  <DIV><FONT face=3DArial>&nbsp;&nbsp;&nbsp; Ahora casi pasa que el =
+chico deja de=20
+  jugar por cuestiones econ=F3micas, se les complic=F3 la cuesti=F3n =
+guita.=20
+  </FONT></DIV>
+  <DIV><FONT face=3DArial>&nbsp;&nbsp;&nbsp; Habl=E9 con los padres, y =
+con ok de=20
+  Rauli Freyre, copiado, les dije que pod=EDan obtener una "beca", es =
+decir,=20
+  quedar exentos del pago de la cuota. </FONT></DIV>
+  <DIV><FONT face=3DArial>&nbsp;&nbsp;&nbsp; Por favor, decime qu=E9 hay =
+que hacer=20
+  para efectivizar esa beca, para que no le cobren m=E1s (por ahora) la =
+cuota. No=20
+  s=E9 si se meti=F3 en DA o le va cobrador a la casa. =BFLO podr=E1s =
+encontrar en=20
+  sistema para chequear ese dato?. =BFSab=E9s que debo o debe =E9l hacer =
+para que no=20
+  le cobren por unos meses...? Es lo que yo le promet=ED con el ok de=20
+  Coordinadores. =BFCon qui=E9n debo ver el tema...? </FONT></DIV>
+  <DIV><FONT face=3DArial>&nbsp;&nbsp;&nbsp; Cuando puedas, contame por =
+favor.=20
+  &nbsp;&nbsp;&nbsp; </FONT></DIV>
+  <DIV><FONT face=3DArial>&nbsp;&nbsp;&nbsp; Buen fds y =
+abzo</FONT></DIV>
+  <DIV><FONT face=3DArial>&nbsp;&nbsp;&nbsp; </FONT></DIV>
+  <DIV>Pedro Lucas P=E1ez (h)<BR>Estudio Jur=EDdico P=E1ez - =
+Busaniche<BR>Tel.:=20
+  0054-342-4593030 y rot.<BR>Juan de Garay 2855<BR>(S3000CRI) Santa =
+Fe<BR><A=20
+  =
+href=3D"http://www.paez-busaniche.com.ar">www.paez-busaniche.com.ar</A><B=
+R></DIV>
+  <BLOCKQUOTE=20
+  style=3D"BORDER-LEFT: #000000 2px solid; PADDING-LEFT: 5px; =
+PADDING-RIGHT: 0px; MARGIN-LEFT: 5px; MARGIN-RIGHT: 0px"=20
+  dir=3Dltr>
+    <DIV style=3D"FONT: 10pt arial">----- Original Message ----- </DIV>
+    <DIV=20
+    style=3D"FONT: 10pt arial; BACKGROUND: #e4e4e4; font-color: =
+black"><B>From:</B>=20
+    <A title=3Draf@freyre-iturraspe.com.ar=20
+    =
+href=3D"mailto:raf@freyre-iturraspe.com.ar">raf@freyre-iturraspe.com.ar</=
+A>=20
+    </DIV>
+    <DIV style=3D"FONT: 10pt arial"><B>To:</B> <A =
+title=3Ddiego@nkstudios.net=20
+    href=3D"mailto:diego@nkstudios.net">diego@nkstudios.net</A> ; <A=20
+    title=3Dplpaez@paez-busaniche.com.ar=20
+    href=3D"mailto:plpaez@paez-busaniche.com.ar">'Pedro Lucas =
+P=E1ez'</A> ; <A=20
+    title=3Dpedrolpaez@hotmail.com =
+href=3D"mailto:pedrolpaez@hotmail.com">'HOTMAIL=20
+    PROPIO'</A> ; <A title=3Dguilleobeid@hotmail.com=20
+    href=3D"mailto:guilleobeid@hotmail.com">'obeid guillermo'</A> ; <A=20
+    title=3Dfacundolartigue@hotmail.com=20
+    href=3D"mailto:facundolartigue@hotmail.com">'lartigue facundo =
+hotmail'</A> ;=20
+    <A title=3Dlartigue@lacaja.com.ar=20
+    href=3D"mailto:lartigue@lacaja.com.ar">'LARTIGUE FACUNDO'</A> ; <A=20
+    title=3Dfavrepatricio@gmail.com =
+href=3D"mailto:favrepatricio@gmail.com">'FAVRE=20
+    PATRICIO'</A> ; <A title=3Dljcarrera@yahoo.com.ar=20
+    href=3D"mailto:ljcarrera@yahoo.com.ar">'carrera leandro'</A> ; <A=20
+    title=3Dsebadelap@hotmail.com =
+href=3D"mailto:sebadelap@hotmail.com">'de la pe=F1a=20
+    sebasti=E1n'</A> </DIV>
+    <DIV style=3D"FONT: 10pt arial"><B>Sent:</B> Monday, March 27, 2017 =
+5:48=20
+    PM</DIV>
+    <DIV style=3D"FONT: 10pt arial"><B>Subject:</B> RE: troncoso</DIV>
+    <DIV><BR></DIV>
+    <DIV class=3DWordSection1>
+    <P class=3DMsoNormal><SPAN=20
+    style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; =
+FONT-SIZE: 11pt">Perfecto=20
+    Pedro!!!!!!!!!!<o:p></o:p></SPAN></P>
+    <P class=3DMsoNormal><SPAN=20
+    style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; =
+FONT-SIZE: 11pt"><o:p>&nbsp;</o:p></SPAN></P>
+    <DIV>
+    <DIV=20
+    style=3D"BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; =
+PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; BORDER-TOP: =
+#b5c4df 1pt solid; BORDER-RIGHT: medium none; PADDING-TOP: 3pt">
+    <P class=3DMsoNormal><B><SPAN=20
+    style=3D"FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: windowtext; =
+FONT-SIZE: 10pt"=20
+    lang=3DES>De:</SPAN></B><SPAN=20
+    style=3D"FONT-FAMILY: 'Tahoma','sans-serif'; COLOR: windowtext; =
+FONT-SIZE: 10pt"=20
+    lang=3DES> Diego Obeid NKstudios SRL [mailto:diego@nkstudios.net]=20
+    <BR><B>Enviado el:</B> lunes, 27 de marzo de 2017 12:56 =
+p.m.<BR><B>Para:</B>=20
+    Pedro Lucas P=E1ez; HOTMAIL PROPIO; obeid guillermo; lartigue =
+facundo hotmail;=20
+    LARTIGUE FACUNDO; FAVRE PATRICIO; carrera leandro; de la pe=F1a=20
+    sebasti=E1n<BR><B>CC:</B> FREYRE RA=DAL<BR><B>Asunto:</B> Re:=20
+    troncoso<o:p></o:p></SPAN></P></DIV></DIV>
+    <P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+    <P>Estimado Pedro, me sorprende sobre manera la claridad, la =
+efectividad y=20
+    la dedicaci=F3n a la gesti=F3n. Desde ya que la gorda es un buen =
+jugador y=20
+    estar=EDa bueno tenerlo en las filas pero no al precio de hacerle =
+una felatio=20
+    al padre o a la madre que seguramente debe ser igual al padre pero =
+con mas=20
+    pelos en la vagina. <o:p></o:p></P>
+    <P>Si el pibe va a practica te mantenemos informado. <o:p></o:p></P>
+    <P>FELICITACIONES POR LA GESTION!!!!! y ADJUNTO FOTO DE TRONCOSO CON =
+"LA=20
+    GORDA" tambi=E9n para el que quiera mas les paso el link de facebook =
+donde=20
+    pueden ver varias fotos mas....el trencito bailando garpa mal <A=20
+    =
+href=3D"https://www.facebook.com/claudiodaniel.troncoso?fref=3Dts">https:=
+//www.facebook.com/claudiodaniel.troncoso?fref=3Dts</A><o:p></o:p></P>
+    <P>ABRAZO<o:p></o:p></P>
+    <P><o:p>&nbsp;</o:p></P>
+    <P class=3DMsoNormal><o:p>&nbsp;</o:p></P>
+    <DIV>
+    <P class=3DMsoNormal>On 27/03/2017 12:40 p.m., Pedro Lucas P=E1ez=20
+    wrote:<o:p></o:p></P></DIV>
+    <BLOCKQUOTE style=3D"MARGIN-TOP: 5pt; MARGIN-BOTTOM: 5pt">
+      <DIV>
+      <P class=3DMsoNormal><SPAN style=3D"FONT-FAMILY: =
+'Arial','sans-serif'">sritas:=20
+      reci=E9n cort=E9 con Claudio Troncoso, padre de Bruno. De entrada =
+le dije que=20
+      me hab=EDa enterado que quiz=E1s Bruno dejar=EDa de ir a las =
+pr=E1cticas y a los=20
+      partidos. Por eso lo llamaba, que no sab=EDa a qu=E9 pod=EDa =
+deberse esa=20
+      decisi=F3n pero que para el caso que fuera por una cuesti=F3n =
+econ=F3mica el=20
+      Club tiene una pol=EDtica de inclusi=F3n que contempla esas =
+situaciones, que=20
+      nadie se queda sin jugar x una cuesti=F3n de $$, que para nosotros =
+ser=EDa un=20
+      gusto que Bruno pueda seguir jugando en el Club si es que =
+realmente =E9l=20
+      quiere jugar en SFRC, que la ayuda pod=EDa consistir en una beca =
+en su cuota=20
+      de socio, y/o en la plata de viajes, de gim y/o de 3T, sea por el =
+50% o=20
+      por un porcentaje mayor.</SPAN><o:p></o:p></P></DIV>
+      <DIV>
+      <P class=3DMsoNormal><SPAN=20
+      style=3D"FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp; =
+Tambi=E9n le=20
+      dej=E9 ver que si la decisi=F3n se debe a que quiere retomar en =
+UNI , que no=20
+      hay problema, que no hace falta que le diga que est=E1 en total =
+libertad de=20
+      acci=F3n. </SPAN><o:p></o:p></P></DIV>
+      <DIV>
+      <P class=3DMsoNormal><SPAN=20
+      style=3D"FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp; =
+Pero =E9l dijo=20
+      (no s=E9 si es sincero o no) que la cuesti=F3n viene por un tema =
+de $$, que le=20
+      da no se qu=E9&nbsp;pedir ayuda siendo tan nuevo, etc., a lo que =
+repuse que=20
+      es indistinto su antig=FCedad para que el club lo ayude.=20
+      </SPAN><o:p></o:p></P></DIV>
+      <DIV>
+      <P class=3DMsoNormal><SPAN=20
+      style=3D"FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp; Le =
+hice ver=20
+      que advert=ED que =E9l sali=F3 de los grupos, a lo que me =
+contest=F3 que hab=EDa=20
+      decidido que fuera su mujer quien se ocupe de las cuestiones de =
+rugby, x=20
+      lo que =E9l se sali=F3 de los grupos... (mmmmm dijo la=20
+      nutria)</SPAN><o:p></o:p></P></DIV>
+      <DIV>
+      <P class=3DMsoNormal><SPAN=20
+      style=3D"FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp; =
+Termin=E9=20
+      dici=E9ndole que lo piense tranqui, q lo hablen en familia. Dijo =
+que lo=20
+      hablar=EDa con su mujer, y que Bruno&nbsp;S=CD&nbsp;ir=EDa hoy a =
+pr=E1ctica.=20
+      </SPAN><o:p></o:p></P></DIV>
+      <DIV>
+      <P class=3DMsoNormal><SPAN=20
+      style=3D"FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp; =
+Toda esta=20
+      cuesti=F3n de ofrecerle beca para los gastos del club la charl=E9 =
+previamente=20
+      con Rauli, copiado.</SPAN><o:p></o:p></P></DIV>
+      <DIV>
+      <P class=3DMsoNormal><SPAN=20
+      style=3D"FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp; =
+Veamos ahora=20
+      si realmente esta semana vuelve a pr=E1ctica. SiN llegar a =
+chuparle las=20
+      medias, "sed=FAzcanl=F3n"... al menos no le digan m=E1s "gorda",=20
+      jaja.</SPAN><o:p></o:p></P></DIV>
+      <DIV>
+      <P class=3DMsoNormal><SPAN=20
+      style=3D"FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp; =
+Obviamente=20
+      espero que nadie me rompa los huevos ahora dici=E9ndome que estuve =
+demasiado=20
+      bueno o demasiado malo. Al que no le guste la gesti=F3n, que la =
+haga =E9l:=20
+      Claudio Troncoso: &nbsp;3424468465, jejeje. =
+</SPAN><o:p></o:p></P></DIV>
+      <DIV>
+      <P class=3DMsoNormal><SPAN=20
+      style=3D"FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;=20
+      Luego&nbsp;cu=E9ntenme por favor si vuelve o no a pr=E1ctica.=20
+      </SPAN><o:p></o:p></P></DIV>
+      <DIV>
+      <P class=3DMsoNormal><SPAN=20
+      style=3D"FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp; =
+Abzo.=20
+      </SPAN><o:p></o:p></P></DIV>
+      <DIV>
+      <P class=3DMsoNormal><SPAN style=3D"FONT-FAMILY: =
+'Arial','sans-serif'">Pedro=20
+      Lucas P=E1ez (h)<BR>Estudio Jur=EDdico P=E1ez - Busaniche<BR>Tel.: =
+
+      0054-342-4593030 y rot.<BR>Juan de Garay 2855<BR>(S3000CRI) Santa =
+Fe<BR><A=20
+      =
+href=3D"http://www.paez-busaniche.com.ar">www.paez-busaniche.com.ar</A></=
+SPAN><o:p></o:p></P></DIV></BLOCKQUOTE>
+    <P =
+class=3DMsoNormal><o:p>&nbsp;</o:p></P></DIV></BLOCKQUOTE><BR><BR>
+  <HR=20
+  style=3D"BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; =
+BACKGROUND-COLOR: #b0b0b0; WIDTH: 99%; HEIGHT: 1px; COLOR: #909090; =
+BORDER-TOP: medium none; BORDER-RIGHT: medium none">
+
+  <TABLE=20
+  style=3D"BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; =
+BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium =
+none">
+    <TBODY>
+    <TR>
+      <TD=20
+      style=3D"BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; =
+PADDING-BOTTOM: 0px; PADDING-LEFT: 8px; PADDING-RIGHT: 15px; BORDER-TOP: =
+medium none; BORDER-RIGHT: medium none; PADDING-TOP: 0px"><A=20
+        href=3D"http://www.avast.com/"><IMG border=3D0 alt=3D"Avast =
+logo"=20
+        src=3D"http://static.avast.com/emails/avast-mail-stamp.png"> =
+</A></TD>
+      <TD>
+        <P=20
+        style=3D"FONT-FAMILY: 'Calibri','Verdana','Arial','Helvetica'; =
+COLOR: #3d4d5a; FONT-SIZE: 12pt">El=20
+        software de antivirus Avast ha analizado este correo =
+electr=F3nico en=20
+        busca de virus. <BR><A =
+href=3D"http://www.avast.com/">www.avast.com</A>=20
+        </P></TD></TR></TBODY></TABLE><BR></BLOCKQUOTE></BODY></HTML>
+
+------=_NextPart_000_00ED_01D2AC5B.0E4C79A0--
+

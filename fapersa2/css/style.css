@@ -1,0 +1,629 @@
+/*
+	Author: ShapedTheme
+	Template: Cluster
+	Version: 1.0
+	URL: http://shapedtheme.com
+*/
+
+
+/* TABLE OF CONTENTS
+
+	1. Import section
+	2. Basic styles
+	3. BUTTONS
+	4. HEADER
+	5. SLIDER
+	6. empresa
+	7. OUR WORKS
+	8. PRICING
+	9. ABOUT US
+	10. OUR TEAM
+	11. TESTIMONIAL
+	12. FUN FACTS
+	13. CONTACT
+	14. BLOG
+	15. FOOTER
+	16. SCROLL TO TOP
+
+*/
+
+
+
+/* 1. IMPORT SECTION */
+
+	@import url("http://fonts.googleapis.com/css?family=Raleway:200,300,600,700&subset=latin,latin-ext");
+
+
+
+
+/* 2. BASIC STYLES */
+
+	html, body {
+		height: 100%;
+	}
+
+	body {
+		font-family: "Raleway", Helvetica, Arial, sans-serif;
+		font-size: 14px;
+		font-weight: 200;
+		line-height: 1.7857;
+		letter-spacing: 0.075em;
+		color: #333333;
+		background-color: #fff;
+	}
+
+	a { 
+		color: #000;
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		-ms-transition: all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
+
+	a:hover {
+		color: #000;
+	}
+
+	a, a:hover, a:active, a:focus, button:focus {
+		outline: 0;
+		border: 0;
+		text-decoration: none;
+	}
+
+	#st-preloader {
+		background: #FFF;
+		bottom: 0;
+		left: 0;
+		position: fixed;
+		right: 0;
+		top: 0;
+		z-index: 9999;
+	}
+
+	p {
+		line-height: 1.5;
+	}
+
+	h1{
+		font-family: 'Raleway', sans-serif;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #ED1F1F;
+	} 
+	
+	.foot h1{
+		color: #fff;
+	}
+
+	h2, h3, h4, h5, h6{
+		font-family: 'Raleway', sans-serif;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	input, textarea{
+		outline: none;
+	}
+
+	label{
+		font-weight: 300;
+	}
+
+	#pre-status,
+	.preload-placeholder {
+		background-image: url(../images/preloader.gif);
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 40px;
+		left: 50%;
+		margin: -20px 0 0 -20px;
+		position: absolute;
+		top: 50%;
+		width: 40px;
+	}
+
+	.preload-placeholder {
+		background: none;
+		left: 0;
+		margin: 0;
+		text-align: center;
+		top: 65%;
+	}
+
+	.st-border{
+		width: 34px;
+		height: 1px;
+		display: block;
+		background-color: #000;
+	}
+
+	.overlay{
+		background-color: #000;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.8;
+	}
+
+
+/* 3. BUTTONS */
+
+	.btn-send{
+		background-color: #383838;
+		border-radius: 0;
+		border: 0;
+		color: #fff;
+		padding: 8px 14px;
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		-ms-transition: all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
+
+	.btn-send:hover{
+		background-color: #000;
+		color: #fff;
+	}
+
+	.btn-readmore{
+		background-color: #383838;
+		border-radius: 0;
+		border: 0;
+		color: #fff;
+		padding: 10px 20px;
+		margin-top: 20px;
+		text-transform: uppercase;
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		-ms-transition: all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
+
+	.btn-readmore:hover{
+		background-color: #000;
+		color: #fff;	
+	}
+
+/* 3.5 IMAGEN */
+
+	.section-img{
+		padding-top: 0px;
+	}
+
+
+/* 4. HEADER */
+
+	#header{}
+
+	#header .navbar {
+		min-height: 80px;
+		margin-bottom: 0;
+		border-radius: 0;
+	}
+
+	.st-navbar{
+		
+	}
+
+	.st-navbar ul{
+		margin-top: 15px;
+	}
+
+	.st-navbar ul li a{
+		text-transform: uppercase;
+		font-weight: 600;
+		padding: 0;
+		margin: 14px;
+	}
+
+	.st-navbar ul li a:hover,
+	.st-navbar ul li a:focus {
+		background-color: transparent;
+		color: #000;
+	}
+
+	.st-navbar .navbar-header{
+		margin-top: 25px;
+	}
+
+	.st-navbar .navbar-toggle .icon-bar {
+		background-color: #000;
+	}
+
+	.st-navbar .navbar-toggle{
+		margin-top: 7px;
+		margin-right: 25px;
+		padding: 0;
+		border-radius: 0;
+	}
+
+
+/* 6. EMPRESA */
+
+	#empresa{
+		background-color: #fff;
+		padding-top: 100px;
+		padding-bottom: 110px;
+	}
+
+	.section-title{
+		margin-bottom: 50px;
+	}
+
+	.section-title h1{
+		margin-top: 0;
+	}
+
+	.st-service{
+		margin-top: 30px;
+	}
+
+	.st-service h2{
+		font-size: 16px;
+		margin-top: 0;
+		margin-bottom: 15px;
+	}
+
+	.st-service h2 i{
+		margin-right: 10px;
+	}
+
+	.st-service p{}
+
+
+/*POP-UP*/
+    .product_view .modal-dialog{max-width: 500px; width: 100%; max-height: 500px; padding-right:15px; }
+    .pre-cost{text-decoration: line-through; color: #a5a5a5;}
+	.space-ten{padding: 10px 0;}
+	#containerpop{
+		padding: 20px;
+		margin-top: 10px;
+		margin-bottom: 10px; 
+	}
+	#iso .modal-header{
+		padding-top: -5px;
+		border-bottom: none;
+		background: #919191;
+		padding-bottom: 20px;
+	}
+	#iso .modal-body {
+		border-bottom: none;
+		background: #919191;
+	}
+	.xxx {
+		color: #fff;
+	}
+
+	.isoc{
+		text-align: center;
+		width: 65%;
+	}
+
+/* 9. CALIDAD */
+	
+	#calidad{
+		background-color: #fff;
+		padding-top: 100px;
+		padding-bottom: 110px;
+	}
+
+	#calidad .calidad{
+		padding-left: 15%;
+		padding-right: 15%;
+	}
+
+	#calidad .calidad h4{
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+
+	#calidad .calidad .btn-send{
+		margin-top: 30px;
+	}
+
+	#calidad .our-office{
+		padding-right: 0px;
+	}
+
+
+/* 13. CONTACT */
+
+	#contact{
+		background-color: #fff;
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	/* form starting stylings ------------------------------- */
+	.group {
+	    position: relative;
+	    margin-bottom: 35px;
+	}
+
+	input {
+	    font-size: 18px;
+	    padding: 5px 10px 10px 5px;
+	    display: block;
+	    width: 100%;
+	    border: none;
+	    border-bottom: 1px solid #000;
+	    background: transparent;
+	}
+
+	    input:focus {
+	        outline: none;
+	    }
+
+	/* LABEL ======================================= */
+	label {
+	    color: #000;
+	    font-size: 18px;
+	    font-weight: normal;
+	    position: absolute;
+	    pointer-events: none;
+	    left: 5px;
+	    top: 10px;
+	    transition: 0.2s ease all;
+	    -moz-transition: 0.2s ease all;
+	    -webkit-transition: 0.2s ease all;
+	}
+
+	/* active state */
+	input:focus ~ label, input:valid ~ label {
+	    top: -20px;
+	    font-size: 14px;
+	    color: #000;
+	}
+
+	/* BOTTOM BARS ================================= */
+	.bar {
+	    position: relative;
+	    display: block;
+	    width: 100%;
+	}
+
+	.bar:before, .bar:after {
+	    content: '';
+	    height: 2px;
+	    width: 0;
+	    bottom: 1px;
+	    position: absolute;
+	    background: #000;
+	    transition: 0.2s ease all;
+	    -moz-transition: 0.2s ease all;
+	    -webkit-transition: 0.2s ease all;
+	}
+
+	.bar:before {
+	    left: 50%;
+	}
+
+	.bar:after {
+	    right: 50%;
+	}
+
+
+
+	/* active state */
+	input:focus ~ .bar:before, input:focus ~ .bar:after {
+	    width: 50%;
+	}
+
+	/* HIGHLIGHTER ================================== */
+	.highlight {
+	    position: absolute;
+	    height: 60%;
+	    width: 100px;
+	    top: 25%;
+	    left: 0;
+	    pointer-events: none;
+	    opacity: 0.5;
+	}
+
+	/* active state */
+	input:focus ~ .highlight {
+	    -webkit-animation: inputHighlighter 0.3s ease;
+	    -moz-animation: inputHighlighter 0.3s ease;
+	    animation: inputHighlighter 0.3s ease;
+	}
+
+	/* ANIMATIONS ================ */
+	@-webkit-keyframes inputHighlighter {
+	    from {
+	        background: #000;
+	    }
+
+	    to {
+	        width: 0;
+	        background: transparent;
+	    }
+	}
+
+	@-moz-keyframes inputHighlighter {
+	    from {
+	        background: #000;
+	    }
+
+	    to {
+	        width: 0;
+	        background: transparent;
+	    }
+	}
+
+	@keyframes inputHighlighter {
+	    from {
+	        background: #000;
+	    }
+
+	    to {
+	        width: 0;
+	        background: transparent;
+	    }
+	}
+
+
+	#panel {
+	/*	border: 1px solid rgb(200, 200, 200);
+	    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;*/
+	    border-radius: 4px;
+	}
+
+	
+/* 16. SCROLL TO TOP */
+
+	.scroll-up {
+		position: fixed;
+		display: none;
+		z-index: 999;
+		bottom: 1.8em;
+		right: 1.8em;
+	}
+
+	.scroll-up ul{
+		margin: 0;
+		padding: 0;
+	}
+
+	.scroll-up li{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.scroll-up a {
+		background-color: #fff;
+		display: block;
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		color: #000;
+		font-size: 20px;
+		line-height: 38px;
+		box-shadow: 0px 0px 6px #ccc;
+	}
+
+	.scroll-up a:hover,
+	.scroll-up a:active {
+		background-color: #f5f5f5;
+		color: #000;
+	}
+
+/* 8. FOOTER */
+
+	#footer{
+		background-color: #00126D;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		color: #fff;
+	}
+
+
+/* 9. MARCAS */
+	
+	#marc{
+		background-color: #fff;
+		padding-top: 100px;
+		padding-bottom: 160px;
+		padding-right: 50px;
+		padding-left: 50px;
+	}
+
+
+/* CARUSEL DE MARCAS*/
+
+	.clearout {
+	height:20px;
+	clear:both;
+	}
+
+	.nbs-flexisel-container {
+	    position:relative;
+	    width:100%;
+	}
+	.nbs-flexisel-ul {
+	    position:relative;
+	    width:99999px;
+	    margin:0px;
+	    padding:0px;
+	    list-style-type:none;   
+	    text-align:center;  
+	    overflow: auto;
+	}
+
+	.nbs-flexisel-inner {
+	    position: relative;
+	    overflow: hidden;
+	    float:left;
+	    width:100%;
+	    /*background:#fcfcfc;*/
+	    /*background: #fcfcfc -moz-linear-gradient(top, #fcfcfc 0%, #eee 100%); /* FF3.6+ */*/
+	    /*background: #fcfcfc -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#eee)); /* Chrome,Safari4+ */*/
+	    /*background: #fcfcfc -webkit-linear-gradient(top, #fcfcfc 0%, #eee 100%); /* Chrome10+,Safari5.1+ */*/
+	    /*background: #fcfcfc -o-linear-gradient(top, #fcfcfc 0%, #eee 100%); /* Opera11.10+ */*/
+	    /*background: #fcfcfc -ms-linear-gradient(top, #fcfcfc 0%, #eee 100%); /* IE10+ */*/
+	    /*background: #fcfcfc linear-gradient(top, #fcfcfc 0%, #eee 100%); /* W3C */*/
+	    /*border:1px solid #ccc;*/ /* Borde */
+/*	    border-radius:5px;
+	    -moz-border-radius:5px;
+	    -webkit-border-radius:5px;*/  
+	}
+
+	.nbs-flexisel-item {
+	    float:left;
+	    margin:0px;
+	    padding:0px;
+	    cursor:pointer;
+	    position:relative;
+	    line-height:0px;
+	}
+	.nbs-flexisel-item img {
+	    max-width: 100%;
+	    cursor: pointer;
+	    position: relative;
+	    margin: 20%;
+	}
+
+	/*** Navigation ***/
+
+	.nbs-flexisel-nav-left,
+	.nbs-flexisel-nav-right {
+	    padding:5px 10px;
+	    border-radius:15px;
+	    -moz-border-radius:15px;
+	    -webkit-border-radius:15px;      
+	    position: absolute;
+	    cursor: pointer;
+	    z-index: 8;
+	    top: 50%;
+	    transform: translateY(-50%);   
+	    background: rgba(0,0,0,0.15);
+	    color: #fff;     
+	}
+
+	.nbs-flexisel-nav-left {
+	    left: 5px;
+	}
+
+	.nbs-flexisel-nav-left:before {
+	    content: "<"
+	}
+
+	.nbs-flexisel-nav-left.disabled {
+	    opacity: 0.4;
+	}
+
+	.nbs-flexisel-nav-right {
+	    right: 5px;    
+	}
+
+	.nbs-flexisel-nav-right:before {
+	    content: ">"
+	}
+
+	.nbs-flexisel-nav-right.disabled {
+	    opacity: 0.4;
+	}

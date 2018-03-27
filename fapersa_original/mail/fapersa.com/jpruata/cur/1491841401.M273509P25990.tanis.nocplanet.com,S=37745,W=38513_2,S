@@ -1,0 +1,768 @@
+Return-Path: <chiquifernandez@gmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id +WH/D3mx61iGZQAATLP0zA
+	for <jpruata@fapersa.com>; Mon, 10 Apr 2017 13:23:21 -0300
+Return-path: <chiquifernandez@gmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Mon, 10 Apr 2017 13:23:21 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:51624 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.88)
+	(envelope-from <chiquifernandez@gmail.com>)
+	id 1cxc64-0008HP-ED
+	for jpruata@fapersa.com; Mon, 10 Apr 2017 13:23:21 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 705DA7F134
+	for <jpruata@fapersa.com>; Mon, 10 Apr 2017 13:23:19 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id uIBThn8UQKBB for <jpruata@fapersa.com>;
+	Mon, 10 Apr 2017 13:23:18 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id CC9B27F231; Mon, 10 Apr 2017 13:23:18 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id C99477F134
+	for <jpruata@fapersa.com>; Mon, 10 Apr 2017 13:23:17 -0300 (ART)
+Received-SPF: pass (gmail.com ... _spf.google.com: Sender is authorized to use 'chiquifernandez@gmail.com' in 'mfrom' identity (mechanism 'include:_netblocks.google.com' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="chiquifernandez@gmail.com"; helo=mail-io0-f172.google.com; client-ip=209.85.223.172
+Received: from mail-io0-f172.google.com (mail-io0-f172.google.com [209.85.223.172])
+	by fw.fapersa.com (Postfix) with ESMTPS id D40A65FF54
+	for <jpruata@fapersa.com>; Mon, 10 Apr 2017 13:23:14 -0300 (ART)
+Received: by mail-io0-f172.google.com with SMTP id l7so101136274ioe.3
+        for <jpruata@fapersa.com>; Mon, 10 Apr 2017 09:23:14 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=j6ikleeH0s9H+4vf0ucpjeOVI0Yeavrb5p6tyegm1To=;
+        b=I+WKbIqWFD3mGgddrqyHtUQPbggUFk1HiCneXk8TOJtLQ7iE8PT17WJMDekmEOrOhv
+         5qOBw9SPx6K9jygNcX2tnp7xT3zll9Bl1hnw9YRjaZaXJ5hcauV/KkHraYUoT6ZJ3t6d
+         JdHJHWkX43Mh4ubBo+pCEdWwoGSOoIPCO0PppqWxegPaeqY203oo1lIoUY8puxzec7nm
+         u8iiqQJlms5kkuqaQSpfgVgto9MKruAo5mocXxCd6Crc7WdB0dQSLgNIBcL1pYkpcv0F
+         PEyF4NlXVp6riLTdw5deYi8WlZfAaJSCqSDeMYldYTe8DtZgXMVbCoRSGAGHMOI+y0tZ
+         RZkA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=j6ikleeH0s9H+4vf0ucpjeOVI0Yeavrb5p6tyegm1To=;
+        b=ZDYmUfjz2eYljjtZZljRmcUU/osHxoESX3YBClcRx7PyUSSrFk9+W6XaXx9cTORV/j
+         kDnWHtPXyjeTzxUzKANHszUi5YSZyhHvB3vBp04aauq7EAIi0AY8/lsux92Xcz2Hty5+
+         RL1PH7I7BLFaPAfHJo7MQs1haga/2wi08U9nvSmViY/HSldmXGhviT6u/57aNG7SyY5Y
+         snoDb6vHkDQXFbhUGBvFx1nhHuY2t7wOyqeltceTWP6fnPXGyQmOJ+RGLI22I7iFs+j8
+         sxNGDfc6MTZUo+SrB/SCo0oSqpL5BFoiBFBWwaiB9B04C5rbhJewHE+2Jm7wMY1urwv/
+         a2AQ==
+X-Gm-Message-State: AN3rC/481OeeqOII860wCb87odX7sYEyMrcm0udNKGJUcLch2AwlGmpwvndct9aqlrQ8jYooOGiw1EJ/QSf8Mw==
+X-Received: by 10.36.89.200 with SMTP id p191mr4936556itb.36.1491841389518;
+ Mon, 10 Apr 2017 09:23:09 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.107.44.87 with HTTP; Mon, 10 Apr 2017 09:23:08 -0700 (PDT)
+Received: by 10.107.44.87 with HTTP; Mon, 10 Apr 2017 09:23:08 -0700 (PDT)
+In-Reply-To: <BN6PR13MB1474D5CF876AD15B1D6EDC7197010@BN6PR13MB1474.namprd13.prod.outlook.com>
+References: <BN6PR13MB147422C57D6B2AE27A0F7D7B97010@BN6PR13MB1474.namprd13.prod.outlook.com>
+ <BN6PR13MB14749A7539ACCD38F7240BE097010@BN6PR13MB1474.namprd13.prod.outlook.com>
+ <BN6PR13MB1474481DB837DCC18FCC301797010@BN6PR13MB1474.namprd13.prod.outlook.com>
+ <BN6PR13MB1474E1F4225F876845E6974D97010@BN6PR13MB1474.namprd13.prod.outlook.com>
+ <BN6PR13MB14746316F7A8AABEB522C07C97010@BN6PR13MB1474.namprd13.prod.outlook.com>
+ <BN6PR13MB1474D5CF876AD15B1D6EDC7197010@BN6PR13MB1474.namprd13.prod.outlook.com>
+From: =?UTF-8?Q?Marcelo_Fern=C3=A1ndez?= <chiquifernandez@gmail.com>
+Date: Mon, 10 Apr 2017 13:23:08 -0300
+Message-ID: <CAAcu76+uCrDO2G1+uFUjg8o+DciOvne6hZfCYb7eABot9XuF+A@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_INVITACI=C3=93N_=2D_Club_Atl=C3=A9tico_Estudiantes_=2D_30_de?=
+	=?UTF-8?Q?_Septiembre_=2D_III_Encuentro_Nacional_para_M12_=22Juan_Cruz_Mat?=
+	=?UTF-8?Q?h=C3=A9=22?=
+To: fernando fabricio fornero <fernando.fornero@hotmail.com>
+Cc: "mmiretti@gmail.com" <mmiretti@gmail.com>, "smorenoh@pluspetrol.net" <smorenoh@pluspetrol.net>, 
+	"dieguito_r59@hotmail.com" <dieguito_r59@hotmail.com>, "gadeharo@hiago.com.ar" <gadeharo@hiago.com.ar>, 
+	"wens@motorola.com" <wens@motorola.com>, 
+	"jbollea@alamoargentina.com.ar" <jbollea@alamoargentina.com.ar>, 
+	"pablomartinpoza@gmail.com" <pablomartinpoza@gmail.com>, 
+	"leopoldo.torres@scarlos.com.ar" <leopoldo.torres@scarlos.com.ar>, "dbch@arnet.com.ar" <dbch@arnet.com.ar>, 
+	"fernandooscarceratto@segnet.com.ar" <fernandooscarceratto@segnet.com.ar>, 
+	"raulgaliano@hotmail.com" <raulgaliano@hotmail.com>, 
+	"hugo.pasqueta@aguana.com" <hugo.pasqueta@aguana.com>, 
+	"hugo.pasqueta@aguana.cpm" <hugo.pasqueta@aguana.cpm>, 
+	"talocitroni@hotmail.com.ar" <talocitroni@hotmail.com.ar>, 
+	"alemccor@yahoo.com.ar" <alemccor@yahoo.com.ar>, 
+	"ricardocorazza17@hotmail.com" <ricardocorazza17@hotmail.com>, 
+	"julitejerina@yahoo.com" <julitejerina@yahoo.com>, 
+	"facundo.villanueva@prohygiene.com" <facundo.villanueva@prohygiene.com>, 
+	"mbenzi@duendesrc.com.ar" <mbenzi@duendesrc.com.ar>, "nenedefagot@yahoo.com" <nenedefagot@yahoo.com>, 
+	"sebastianfouces68@gmail.com" <sebastianfouces68@gmail.com>, 
+	"chinoscarpin@hotmail.com" <chinoscarpin@hotmail.com>, 
+	"adolfomaestre@hotmail.com" <adolfomaestre@hotmail.com>, 
+	"sebafunes73@hotmail.com" <sebafunes73@hotmail.com>, 
+	"ejbollea@alamoargentina.com.ar" <ejbollea@alamoargentina.com.ar>, 
+	"gabriel.ordiz@limerosario.com.ar" <gabriel.ordiz@limerosario.com.ar>, 
+	"martin@marathona.com.ar" <martin@marathona.com.ar>, "diegocirc@hotmail.com" <diegocirc@hotmail.com>, 
+	"martinjavs@hotmail.com" <martinjavs@hotmail.com>, 
+	"darioperalta2010@yahoo.com.ar" <darioperalta2010@yahoo.com.ar>, 
+	"chola.arce@gmail.com.ar" <chola.arce@gmail.com.ar>, "mfp714@hotmail.com" <mfp714@hotmail.com>, 
+	"inghbianchi@gmail.com" <inghbianchi@gmail.com>, 
+	"hector.romero@sancor.com.ar" <hector.romero@sancor.com.ar>, 
+	"ale_righi@hotmail.com" <ale_righi@hotmail.com>, "acevedofito@hotmail.com" <acevedofito@hotmail.com>, 
+	"negroarimany.orc@gmail.com" <negroarimany.orc@gmail.com>, 
+	"stradacarlos@hotmail.com" <stradacarlos@hotmail.com>, 
+	"gadeharo@triagro.com.ar" <gadeharo@triagro.com.ar>, "jpruata@fapersa.com" <jpruata@fapersa.com>, 
+	"dieguin77@live.com.ar" <dieguin77@live.com.ar>, "belasjorge@gmail.com" <belasjorge@gmail.com>, 
+	"jose.marchica@mpsa.com" <jose.marchica@mpsa.com>, "azilonka@yahoo.com.ar" <azilonka@yahoo.com.ar>, 
+	"ajalit@cablenettv.com.ar" <ajalit@cablenettv.com.ar>, 
+	"alejandrogrosso@agrologisticasa.com.ar" <alejandrogrosso@agrologisticasa.com.ar>, 
+	"eber.oldresian@gmail.com" <eber.oldresian@gmail.com>, "jcmujica@hotmail.com" <jcmujica@hotmail.com>, 
+	"ignacioref@hotmail.com" <ignacioref@hotmail.com>, "drirurueta@hotmail.com" <drirurueta@hotmail.com>, 
+	"info@dieguin-viajes.com" <info@dieguin-viajes.com>, "ale_allevi@hotmail.com" <ale_allevi@hotmail.com>, 
+	"fpujol@taumet.com.ar" <fpujol@taumet.com.ar>
+Content-Type: multipart/alternative; boundary=001a11453878158d0e054cd26419
+
+--001a11453878158d0e054cd26419
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Sebastian, Fernando, quer=C3=ADa comentarles que ese mismo d=C3=ADa se hace=
+ en
+Rosario los encuentros para todas las divisiones infantiles en Old Resian,
+Caranchos, Jockey, uNI y Duendes....Hace unas semanas atr=C3=A1s yo
+personalmente mand=C3=A9 invitaciones a vuestra uni=C3=B3n y tambi=C3=A9n a=
+ los clubes de
+Entre R=C3=ADos...Tendr=C3=ADamos que ver como podemos hacer para no
+superponernos.......
+Copio a Horacio Maturo y Fernando Mendoza secretario y presidente de la
+subida comisiones infantiles de la urr....saludos
+
+El abr. 10, 2017 12:21 PM, "fernando fabricio fornero" <
+fernando.fornero@hotmail.com> escribi=C3=B3:
+
+> Paran=C3=A1, Abril de 2.017.-
+>
+>
+>
+>
+>
+> *Distinguidos Coordinadores *
+>
+> *Rugby Infantil*
+>
+> *Presente*
+>
+>
+>
+> De nuestra mayor consideraci=C3=B3n:
+>
+>
+>
+> Mediante la presente nos dirigimos a Usted, con el fin de hacerle
+> extensiva la invitaci=C3=B3n al *I**II Encuentro Nacional para* *Menores =
+de 12
+> a=C3=B1os  =E2=80=9CJUAN CRUZ MATH=C3=89=E2=80=9D.*-
+>
+>
+>
+> El mencionado Encuentro se desarrollar=C3=A1 en =E2=80=9CEL PLUMAZO=E2=80=
+=9D, anexo
+> perteneciente a las instalaciones del Club Atl=C3=A9tico Estudiantes, el =
+d=C3=ADa *s=C3=A1bado
+> 30 de Septiembre* del corriente a=C3=B1o, sito en calle Ambrosetti s/n. d=
+e
+> esta ciudad de Paran=C3=A1.-
+>
+>
+>
+> El procedimiento para la participaci=C3=B3n al III Encuentro Nacional =E2=
+=80=9CJUAN
+> CRUZ MATH=C3=89=E2=80=9D requiere la confirmaci=C3=B3n de la Instituci=C3=
+=B3n, para luego y en
+> destino *la acreditaci=C3=B3n* que *incluye un costo* por cada jugador.
+> Contar=C3=A1n con el correspondiente servicio de desayuno, con el tradici=
+onal
+> 3er. Tiempo y con todas las medidas que en materia sanitaria y de segurid=
+ad
+> corresponda.-
+>
+>
+>
+> Es requisito que los *Jugadores participantes* est=C3=A9n fichados en la =
+Uni=C3=B3n
+> Argentina de Rugby.-
+>
+>
+>
+> La propuesta deportiva consiste en programar las actividades de juego
+> desde las 10:30 hs. Para tal fin, se abrir=C3=A1 la acreditaci=C3=B3n de =
+los clubes
+> desde las 08:30 hs. donde se entregar=C3=A1n los vouchers para los tercer=
+os
+> tiempos.-
+>
+>
+>
+> Para un mejor desarrollo del Encuentro, se dispondr=C3=A1n 8 canchas de m=
+edidas
+> aptas para la divisi=C3=B3n. Asimismo, y para agilizar este proceso a los=
+ fines
+> del armado del fixture y la organizaci=C3=B3n en general, se solicita a l=
+os
+> Clubes la confirmaci=C3=B3n v=C3=ADa e-mail de su participaci=C3=B3n en f=
+orma anticipada
+> (hasta el 19 de Septiembre).-
+>
+>
+>
+> Una vez confirmada vuestra participaci=C3=B3n, enviaremos informaci=C3=B3=
+n con toda
+> la Organizaci=C3=B3n del Encuentro, que tambi=C3=A9n estar=C3=A1 disponib=
+le en nuestra
+> p=C3=A1gina de facebook.-
+>
+>
+>
+> Seguinos en:  rugbyinfantilcae
+>
+>
+>
+>
+>
+>
+>
+> Desde hace tiempo, venimos trabajando los Clubes de la Regi=C3=B3n en for=
+ma
+> conjunta con la UER y la Uni=C3=B3n hermana Santafesina.-
+>
+>
+>
+> Dentro de este marco, hemos resuelto componer mini encuentros, donde
+> podr=C3=A1n participar todas las divisiones que comprenden el estamento d=
+e
+> Rugby Infantil (desde Escuelita a M14), distinguido en diferentes sedes
+> entre Paran=C3=A1 y Santa Fe, a efectos de optimizar los espacios, dispon=
+er del
+> mayor n=C3=BAmero de canchas posibles y hacerlos m=C3=A1s atractivos, pro=
+vocando una
+> mayor participaci=C3=B3n de clubes.-
+>
+>
+>
+> Con este formato ya establecido, se quiere destacar tambi=C3=A9n, que
+> coincidentemente con el *III Encuentro Nacional =E2=80=9CJUAN CRUZ MATH=
+=C3=89=E2=80=9D de M12* *en
+> =E2=80=9CEL PLUMAZO=E2=80=9D de Paran=C3=A1*, se desarrollar=C3=A1n en nu=
+estra ciudad, para M13 y
+> M14 los Encuentros en menci=C3=B3n; Y, en nuestra ciudad vecina de Santa =
+Fe, se
+> llevar=C3=A1n a cabo tambi=C3=A9n, Encuentros de Escuelita a M11.-
+>
+>
+>
+>
+> * Encuentro M13  =E2=80=9CMiguel Toto Barrios=E2=80=9D     *
+>
+> Sede: Ruta Nac. N=C2=B018 - Km 17.5              Organizado por: *CLUB TI=
+LCARA
+> *
+>
+> Contacto: Eduardo Squilaci                     Costo: $ a confirmar
+>
+> E-mail: wallysquilaci@gmail.com           Tel. m=C3=B3vil: 343 511 5731
+>
+>
+>
+>
+>
+> *Encuentro M14 =E2=80=9C Hobby Di Pretoro=E2=80=9D*
+>
+> Sede: Complejo Yarar=C3=A1                            Organizado por: *PA=
+RANA
+> ROWING CLUB*
+>
+> Contacto: Edgar Cislaghi                         Costo: $ a
+> confirmar
+>
+> E-mail: ecislaghi@aguanuestra.com.ar  Tel. m=C3=B3vil: 343 543 3558
+>
+>
+>
+> *El detalle de la organizaci=C3=B3n de cada uno de estos Encuentros, lo
+> informar=C3=A1 el contacto.-
+>
+>
+>
+>
+>
+>
+> Esperando poder contar con sus presencias en =E2=80=9CEl Plumazo=E2=80=9D=
+ de Paran=C3=A1,
+> quedamos a vuestra disposici=C3=B3n para cualquier consulta y aprovechamo=
+s a
+> dejarles un afectuoso saludo.
+>
+>
+>
+>
+>
+>
+>
+> *# Contacto:* *Sebasti=C3=A1n Fouces                        # Contacto:
+> Fernando Fabricio Fornero     *
+>
+> E-mail: sebastianfouces68@gmail.com <wally@gigared.com>        E-mail:
+> fernando.fornero@hotmail.com
+>
+> Tel. m=C3=B3vil: 343 447 8940                                 Tel. m=C3=
+=B3vil: 343
+> 468 2639
+>
+>
+>
+> *# Contacto: Hern=C3=A1n Bogado                          # Contacto:* *Fr=
+anco
+> Estamatti         *
+>
+> E-mail: bogadoservicioslimpieza@gmail.com  E-mail:
+> franco@riberaviajes.com.ar
+>
+> Tel. m=C3=B3vil: 343 473 3913                                Tel. m=C3=B3=
+vil: 343
+> 415 9213
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+> *Sebasti=C3=A1n Fouces*
+>
+> Coordinador Comisi=C3=B3n Rugby Infantil
+>
+> Club Atl=C3=A9tico Estudiantes
+>
+>
+
+--001a11453878158d0e054cd26419
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Sebastian, Fernando, quer=C3=ADa comentarles que ese mism=
+o d=C3=ADa se hace en Rosario los encuentros para todas las divisiones infa=
+ntiles en Old Resian, Caranchos, Jockey, uNI y Duendes....Hace unas semanas=
+ atr=C3=A1s yo personalmente mand=C3=A9 invitaciones a vuestra uni=C3=B3n y=
+ tambi=C3=A9n a los clubes de Entre R=C3=ADos...Tendr=C3=ADamos que ver com=
+o podemos hacer para no superponernos.......<div dir=3D"auto">Copio a Horac=
+io Maturo y Fernando Mendoza secretario y presidente de la subida comisione=
+s infantiles de la urr....saludos</div></div><div class=3D"gmail_extra"><br=
+><div class=3D"gmail_quote">El abr. 10, 2017 12:21 PM, &quot;fernando fabri=
+cio fornero&quot; &lt;<a href=3D"mailto:fernando.fornero@hotmail.com">ferna=
+ndo.fornero@hotmail.com</a>&gt; escribi=C3=B3:<br type=3D"attribution"><blo=
+ckquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #c=
+cc solid;padding-left:1ex">
+
+
+
+
+<div dir=3D"ltr">
+<div id=3D"m_-8627782991129963924divtagdefaultwrapper" style=3D"font-size:1=
+2pt;color:#000000;font-family:Calibri,Arial,Helvetica,sans-serif" dir=3D"lt=
+r">
+<div style=3D"color:rgb(0,0,0)">
+<div>
+<div id=3D"m_-8627782991129963924divtagdefaultwrapper" dir=3D"ltr" style=3D=
+"font-size:12pt;color:#000000;font-family:Calibri,Arial,Helvetica,sans-seri=
+f">
+<div style=3D"color:rgb(0,0,0)">
+<div>
+<div id=3D"m_-8627782991129963924divtagdefaultwrapper" dir=3D"ltr" style=3D=
+"font-size:12pt;color:#000000;font-family:Calibri,Arial,Helvetica,sans-seri=
+f">
+<div style=3D"color:rgb(0,0,0)">
+<div>
+<div id=3D"m_-8627782991129963924divtagdefaultwrapper" dir=3D"ltr" style=3D=
+"font-size:12pt;color:#000000;font-family:Calibri,Arial,Helvetica,sans-seri=
+f">
+<div style=3D"color:rgb(0,0,0)">
+<div>
+<div id=3D"m_-8627782991129963924divtagdefaultwrapper" dir=3D"ltr" style=3D=
+"font-size:12pt;color:#000000;font-family:Calibri,Arial,Helvetica,sans-seri=
+f">
+<div style=3D"color:rgb(0,0,0)">
+<div>
+<div id=3D"m_-8627782991129963924divtagdefaultwrapper" dir=3D"ltr" style=3D=
+"font-size:12pt;color:#000000;font-family:Calibri,Arial,Helvetica,sans-seri=
+f">
+<p class=3D"MsoNormal" align=3D"right" style=3D"text-align:right"><span lan=
+g=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">P=
+aran=C3=A1, Abril de 2.017.-</span></p>
+<p class=3D"MsoNormal" align=3D"right" style=3D"text-align:right"><span lan=
+g=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">=
+=C2=A0</span></p>
+<p class=3D"MsoNormal"><span lang=3D"ES" style=3D"font-family:&quot;Calibri=
+&quot;,&quot;sans-serif&quot;">=C2=A0</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:left"><b><span lang=3D"ES" style=
+=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">Distinguidos Co=
+ordinadores=C2=A0</span></b></p>
+<p class=3D"MsoNormal" style=3D"text-align:left"><b><span lang=3D"ES" style=
+=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">Rugby Infantil<=
+/span></b></p>
+<p class=3D"MsoNormal" style=3D"text-align:left"><b><u><span lang=3D"ES" st=
+yle=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">Presente</sp=
+an></u></b></p>
+<p class=3D"MsoNormal"><span lang=3D"ES" style=3D"font-family:&quot;Calibri=
+&quot;,&quot;sans-serif&quot;">=C2=A0</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span lang=3D"ES" style=
+=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">De nuestra mayo=
+r consideraci=C3=B3n:</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span lang=3D"ES" style=
+=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">=C2=A0</span></=
+p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.4pt"><spa=
+n lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quo=
+t;">Mediante la presente n</span><span lang=3D"ES" style=3D"font-family:Cal=
+ibri,sans-serif">os dirigimos a Usted, con el fin de hacerle extensiva
+ la invitaci=C3=B3n al</span><span lang=3D"ES" style=3D"font-family:&quot;C=
+alibri&quot;,&quot;sans-serif&quot;">
+</span><b><span lang=3D"ES" style=3D"font-family:Calibri,sans-serif">I</spa=
+n></b><b><span lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;s=
+ans-serif&quot;">II Encuentro Nacional para</span></b><span lang=3D"ES" sty=
+le=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">
+<b>Menores de 12 a=C3=B1os=C2=A0 =E2=80=9CJUAN CRUZ MATH=C3=89=E2=80=9D.</b=
+>-</span><span lang=3D"ES" style=3D"font-family:Calibri,sans-serif"></span>=
+</p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.4pt"><spa=
+n lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quo=
+t;">=C2=A0</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.4pt"><spa=
+n lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quo=
+t;">El mencionado Encuentro<b>
+</b></span><span lang=3D"ES" style=3D"font-family:Calibri,sans-serif">se de=
+sarrollar=C3=A1 en =E2=80=9CEL PLUMAZO=E2=80=9D, anexo perteneciente a las =
+instalaciones del Club Atl=C3=A9tico Estudiantes, el d=C3=ADa
+<b><u>s=C3=A1bado 30 de Septiembre</u></b> del corriente a=C3=B1o,</span><s=
+pan lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&q=
+uot;"> sito en calle Ambrosetti s/n. de esta ciudad de Paran=C3=A1</span><s=
+pan lang=3D"ES" style=3D"font-family:Calibri,sans-serif;color:rgb(34,34,34)=
+">.-</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.4pt"><spa=
+n lang=3D"ES" style=3D"font-family:Calibri,sans-serif;color:rgb(34,34,34)">=
+=C2=A0</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.45pt"><sp=
+an lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&qu=
+ot;">El procedimiento para la participaci=C3=B3n al III Encuentro Nacional =
+=E2=80=9CJUAN CRUZ MATH=C3=89=E2=80=9D requiere la confirmaci=C3=B3n de la =
+Instituci=C3=B3n, para
+ luego y en destino <u><b>la acreditaci=C3=B3n</b></u> que <u><b>incluye un=
+ costo</b></u> por cada jugador. Contar=C3=A1n con el correspondiente servi=
+cio de desayuno, con el tradicional 3er. Tiempo y con todas las medidas que=
+ en materia sanitaria y de seguridad corresponda.-</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.4pt"><spa=
+n lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quo=
+t;">=C2=A0</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.4pt"><spa=
+n lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quo=
+t;">Es requisito que los
+<u>Jugadores participantes</u> est=C3=A9n fichados en la Uni=C3=B3n Argenti=
+na de Rugby.-</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.4pt"><spa=
+n lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quo=
+t;">=C2=A0</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.45pt"><sp=
+an lang=3D"ES" style=3D"font-family:Calibri,sans-serif">La propuesta deport=
+iva consiste en programar las actividades de juego desde las 10:30 hs. Para=
+ tal fin, se abrir=C3=A1 la acreditaci=C3=B3n de
+ los clubes desde las 08:30 hs. donde se entregar=C3=A1n los vouchers para =
+los terceros tiempos.-</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.4pt"><spa=
+n lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quo=
+t;">=C2=A0</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.4pt"><spa=
+n lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quo=
+t;">Para un mejor desarrollo del Encuentro, se dispondr=C3=A1n 8 canchas de=
+ medidas aptas para la divisi=C3=B3n. Asimismo, y para agilizar este
+ proceso a los fines del armado del fixture y la organizaci=C3=B3n en gener=
+al, se solicita a los Clubes la confirmaci=C3=B3n v=C3=ADa e-mail de su par=
+ticipaci=C3=B3n en forma anticipada (hasta el 19 de Septiembre).-</span></p=
+>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.4pt"><spa=
+n lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quo=
+t;">=C2=A0</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.4pt"><spa=
+n lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quo=
+t;">Una vez confirmada vuestra participaci=C3=B3n, enviaremos informaci=C3=
+=B3n con toda la Organizaci=C3=B3n del Encuentro, que tambi=C3=A9n estar=C3=
+=A1 disponible
+ en nuestra p=C3=A1gina de facebook.- </span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.4pt"><spa=
+n lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quo=
+t;">=C2=A0</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.4pt"><spa=
+n lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quo=
+t;">Seguinos en: =C2=A0r</span><span style=3D"font-family:Calibri,sans-seri=
+f;text-align:center;font-size:12pt">ugbyinfantilcae</span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:70.9pt"><span lang=3D"ES" style=
+=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">=C2=A0=C2=A0=C2=
+=A0
+</span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:70.9pt"><span lang=3D"ES" style=
+=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">=C2=A0</span></=
+p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span lang=3D"ES" style=
+=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0
+</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.4pt"><spa=
+n lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quo=
+t;">Desde hace tiempo, venimos trabajando los Clubes de la Regi=C3=B3n en f=
+orma conjunta con la UER y la Uni=C3=B3n hermana Santafesina.-</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.4pt"><spa=
+n lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quo=
+t;">=C2=A0</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.4pt"><spa=
+n lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quo=
+t;">Dentro de este marco, hemos resuelto componer mini encuentros, donde po=
+dr=C3=A1n participar todas las
+</span><span lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;">divisiones que comprenden el estamento de Rugby Infantil
+</span><span lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;">(desde Escuelita a M14), distinguido en diferentes sedes ent=
+re Paran=C3=A1 y Santa Fe, a efectos de optimizar los espacios, disponer de=
+l mayor n=C3=BAmero de canchas posibles y hacerlos m=C3=A1s atractivos,
+ provocando una mayor participaci=C3=B3n de clubes.-</span><span lang=3D"ES=
+" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">
+</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.4pt"><spa=
+n lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quo=
+t;">=C2=A0</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.4pt"><spa=
+n lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quo=
+t;">Con este formato ya establecido, se quiere destacar tambi=C3=A9n, que c=
+oincidentemente con el
+<b>III Encuentro Nacional =E2=80=9CJUAN CRUZ MATH=C3=89=E2=80=9D de M12</b>=
+ <b>en =E2=80=9CEL PLUMAZO=E2=80=9D de Paran=C3=A1</b>, se desarrollar=C3=
+=A1n en nuestra ciudad, para M13 y M14 los Encuentros en menci=C3=B3n; Y, e=
+n nuestra ciudad vecina de Santa Fe, se llevar=C3=A1n a cabo tambi=C3=A9n, =
+Encuentros de Escuelita
+ a M11.-</span><span lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&=
+quot;sans-serif&quot;"></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.4pt"><spa=
+n lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quo=
+t;"><br>
+</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.4pt"><spa=
+n lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quo=
+t;">=C2=A0</span></p>
+<p class=3D"MsoNormal"><b></b></p>
+<b>
+<div style=3D"text-align:left"><b style=3D"font-size:12pt"><u><span lang=3D=
+"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">Encue=
+ntro M13=C2=A0 =E2=80=9CMiguel Toto Barrios=E2=80=9D</span></u></b><span la=
+ng=3D"ES" style=3D"font-size:12pt;font-family:Calibri,sans-serif">=C2=A0 =
+=C2=A0=C2=A0</span></div>
+</b>
+<p></p>
+<p class=3D"MsoNormal" style=3D"text-align:left"><span lang=3D"ES" style=3D=
+"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">Sede: Ruta Nac. N=
+=C2=B018 - Km 17.5<b><i>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 =C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0
+</i></b>Organizado por: <b>CLUB TILCARA </b></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:left"><span lang=3D"ES" style=3D=
+"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">Contacto: Eduardo =
+Squilaci=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0 =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 Costo: $ a confirmar</spa=
+n></p>
+<p class=3D"MsoNormal" style=3D"text-align:left"><span style=3D"font-family=
+:&quot;Calibri&quot;,&quot;sans-serif&quot;">E-mail:</span><span style=3D"f=
+ont-family:Calibri,sans-serif;color:rgb(34,34,34)">
+</span><span lang=3D"ES"><a href=3D"mailto:wallysquilaci@gmail.com" target=
+=3D"_blank"><span lang=3D"ES-AR" style=3D"font-family:Calibri,sans-serif">w=
+allysquilaci@gmail.com</span></a></span><span style=3D"font-family:Calibri,=
+sans-serif;color:rgb(34,34,34)">=C2=A0=C2=A0=C2=A0=C2=A0 =C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0 Tel. m=C3=B3vil:</span><span style=3D"font-family:&quot;Calibr=
+i&quot;,&quot;sans-serif&quot;">
+</span><span style=3D"font-family:Calibri,sans-serif;color:rgb(34,34,34)">3=
+43 511 5731
+</span></p>
+<p class=3D"MsoNormal"><span style=3D"font-family:Calibri,sans-serif;color:=
+rgb(34,34,34)">=C2=A0</span></p>
+<p class=3D"MsoNormal"><b><u><span style=3D"font-family:&quot;Calibri&quot;=
+,&quot;sans-serif&quot;"><span>=C2=A0</span></span></u></b></p>
+<p class=3D"MsoNormal" style=3D"text-align:left"><b><u><span lang=3D"ES" st=
+yle=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">Encuentro M1=
+4 =E2=80=9C Hobby Di Pretoro=E2=80=9D</span></u></b><span lang=3D"ES" style=
+=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"> =C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0
+</span></p>
+<p class=3D"MsoNormal"><span lang=3D"ES" style=3D"font-family:&quot;Calibri=
+&quot;,&quot;sans-serif&quot;"></span></p>
+<div style=3D"text-align:left"><span style=3D"font-family:Calibri,sans-seri=
+f;font-size:12pt">Sede: Complejo Yarar=C3=A1</span><b style=3D"font-family:=
+Calibri,sans-serif;font-size:12pt"><i>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0 =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0
+</i></b><span style=3D"font-family:Calibri,sans-serif;font-size:12pt">Organ=
+izado por:
+</span><b style=3D"font-family:Calibri,sans-serif;font-size:12pt">PARANA RO=
+WING CLUB</b></div>
+<p></p>
+<p class=3D"MsoNormal" style=3D"text-align:left"><span lang=3D"ES" style=3D=
+"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">Contacto: Edgar Ci=
+slaghi=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 Cost=
+o: $ a confirmar=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0
+<b><i></i></b></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:left"><span style=3D"font-family=
+:&quot;Calibri&quot;,&quot;sans-serif&quot;">E-mail:</span><span style=3D"f=
+ont-family:Calibri,sans-serif;color:rgb(34,34,34)">
+</span><span lang=3D"ES"><a href=3D"mailto:ecislaghi@aguanuestra.com.ar" ta=
+rget=3D"_blank"><span lang=3D"ES-AR" style=3D"font-family:Calibri,sans-seri=
+f">ecislaghi@aguanuestra.com.ar</span></a></span><span style=3D"font-family=
+:Calibri,sans-serif;color:rgb(34,34,34)">=C2=A0 Tel. m=C3=B3vil:</span><spa=
+n style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">
+</span><span style=3D"font-family:Calibri,sans-serif;color:rgb(34,34,34)">3=
+43 543 3558
+</span></p>
+<p class=3D"MsoNormal"><b><u><span style=3D"font-family:&quot;Calibri&quot;=
+,&quot;sans-serif&quot;"><span>=C2=A0</span></span></u></b></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-fam=
+ily:&quot;Calibri&quot;,&quot;sans-serif&quot;">*</span><span lang=3D"ES" s=
+tyle=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">El detalle =
+de la organizaci=C3=B3n de cada uno de estos Encuentros, lo informar=C3=A1 =
+el contacto.-</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span lang=3D"ES" style=
+=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"><br>
+</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.45pt"><sp=
+an lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&qu=
+ot;">=C2=A0</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.45pt"><sp=
+an lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&qu=
+ot;">=C2=A0</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.45pt"><sp=
+an lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&qu=
+ot;">Esperando poder contar con sus presencias en =E2=80=9CEl Plumazo=E2=80=
+=9D de Paran=C3=A1, quedamos a vuestra disposici=C3=B3n para cualquier cons=
+ulta y aprovechamos
+ a dejarles un afectuoso saludo.</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.45pt"><sp=
+an lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&qu=
+ot;">=C2=A0</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.45pt"><sp=
+an lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&qu=
+ot;">=C2=A0</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.45pt"><sp=
+an lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&qu=
+ot;">=C2=A0</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:left"><b><span lang=3D"ES" style=
+=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"># Contacto:</sp=
+an></b><span lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;san=
+s-serif&quot;">
+<b>Sebasti=C3=A1n Fouces =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0# Contacto: Fernando Fabricio Fornero=C2=
+=A0=C2=A0=C2=A0=C2=A0
+</b></span><span style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&=
+quot;"></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:left"><span style=3D"font-family=
+:&quot;Calibri&quot;,&quot;sans-serif&quot;">E-mail:</span><span style=3D"f=
+ont-family:Calibri,sans-serif;color:rgb(34,34,34)">
+</span><span lang=3D"ES"><a href=3D"mailto:wally@gigared.com" target=3D"_bl=
+ank"><span lang=3D"ES-AR" style=3D"font-family:Calibri,sans-serif">sebastia=
+nfouces68@gmail.com</span></a></span><span style=3D"font-family:&quot;Calib=
+ri&quot;,&quot;sans-serif&quot;">=C2=A0 =C2=A0 =C2=A0 =C2=A0 E-mail:</span>=
+<span style=3D"font-family:Calibri,sans-serif;color:rgb(34,34,34)">
+</span><span style=3D"font-family:Calibri,sans-serif;color:rgb(0,112,192)">=
+<a href=3D"mailto:fernando.fornero@hotmail.com" target=3D"_blank">fernando.=
+fornero@hotmail.com</a></span><span class=3D"m_-8627782991129963924MsoHyper=
+link"><span style=3D"font-family:Calibri,sans-serif"></span></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:left"><span style=3D"font-family=
+:Calibri,sans-serif;color:rgb(34,34,34)">Tel. m=C3=B3vil: 343 447 8940 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 Tel. m=C3=B3vil: 343 468 2639</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:left"><span style=3D"font-family=
+:Calibri,sans-serif;color:rgb(34,34,34)">=C2=A0</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:left"><b><span lang=3D"ES" style=
+=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"># Contacto: Her=
+n=C3=A1n Bogado =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0# Contacto:</span></b><span lang=3D"ES" styl=
+e=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">
+<b>Franco Estamatti=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 </b></s=
+pan></p>
+<p style=3D"text-align:left;margin:0cm 0cm 0.0001pt"><span style=3D"font-fa=
+mily:&quot;Calibri&quot;,&quot;sans-serif&quot;">E-mail:
+</span><span class=3D"m_-8627782991129963924ms-font-s"><span style=3D"font-=
+size:10.0pt;font-family:&quot;Segoe UI&quot;,&quot;sans-serif&quot;;color:#=
+0078d7"><a href=3D"mailto:bogadoservicioslimpieza@gmail.com" target=3D"_bla=
+nk">bogadoservicioslimpieza@gmail.<wbr>com</a></span></span><span class=3D"=
+m_-8627782991129963924MsoHyperlink"><span style=3D"font-family:Calibri,sans=
+-serif">=C2=A0=C2=A0</span></span><span style=3D"font-family:&quot;Calibri&=
+quot;,&quot;sans-serif&quot;">E-mail:
+</span><a href=3D"mailto:franco@riberaviajes.com.ar" target=3D"_blank"><spa=
+n style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">franco@r=
+iberaviajes.com.ar</span></a><span style=3D"font-family:Calibri,sans-serif"=
+></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:left"><span style=3D"font-family=
+:Calibri,sans-serif;color:rgb(34,34,34)">Tel. m=C3=B3vil: 343 473 3913 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0Tel. m=C3=B3vil: 343 415 9213</span></p>
+<p class=3D"MsoNormal"><span lang=3D"ES" style=3D"font-family:Calibri,sans-=
+serif">=C2=A0</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.45pt"><sp=
+an style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">=C2=A0<=
+/span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.45pt"><sp=
+an lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&qu=
+ot;">=C2=A0</span><span style=3D"font-family:Calibri,sans-serif;font-size:1=
+2pt">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0=C2=A0</span></p>
+<p class=3D"MsoNormal"><span lang=3D"ES" style=3D"font-family:&quot;Calibri=
+&quot;,&quot;sans-serif&quot;"></span></p>
+<p class=3D"MsoNormal"><span lang=3D"ES" style=3D"font-family:&quot;Calibri=
+&quot;,&quot;sans-serif&quot;">=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0<wbr>=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0<wbr>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0<wbr>=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0
+</span></p>
+<p class=3D"MsoNormal"><span lang=3D"ES" style=3D"font-family:&quot;Calibri=
+&quot;,&quot;sans-serif&quot;">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0=C2=A0</span><span style=3D"font-family:Calibri,sans-serif;tex=
+t-indent:35.4pt;font-size:12pt">=C2=A0</span></p>
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><b><spa=
+n lang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quo=
+t;">Sebasti=C3=A1n Fouces</span></b></p>
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span l=
+ang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"=
+>Coordinador Comisi=C3=B3n Rugby Infantil</span></p>
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span l=
+ang=3D"ES" style=3D"font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;"=
+>Club Atl=C3=A9tico Estudiantes</span></p>
+<br>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</blockquote></div></div>
+
+--001a11453878158d0e054cd26419--

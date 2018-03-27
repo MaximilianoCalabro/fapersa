@@ -1,0 +1,709 @@
+Return-Path: <josekoko2009@hotmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id +VNZMnOzGVnjMgAATLP0zA
+	for <jpruata@fapersa.com>; Mon, 15 May 2017 10:56:03 -0300
+Return-path: <josekoko2009@hotmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Mon, 15 May 2017 10:56:03 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:45856 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <josekoko2009@hotmail.com>)
+	id 1dAGTj-0003yq-0p
+	for jpruata@fapersa.com; Mon, 15 May 2017 10:56:03 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 05ED47F209
+	for <jpruata@fapersa.com>; Mon, 15 May 2017 10:56:03 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id z1p5yvIm5edQ for <jpruata@fapersa.com>;
+	Mon, 15 May 2017 10:56:02 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 77E747F232; Mon, 15 May 2017 10:56:02 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id B4D347F209
+	for <jpruata@fapersa.com>; Mon, 15 May 2017 10:56:01 -0300 (ART)
+Received-SPF: pass (hotmail.com: Sender is authorized to use 'josekoko2009@hotmail.com' in 'mfrom' identity (mechanism 'include:spf.protection.outlook.com' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="josekoko2009@hotmail.com"; helo=NAM02-CY1-obe.outbound.protection.outlook.com; client-ip=40.92.4.70
+Received: from NAM02-CY1-obe.outbound.protection.outlook.com (mail-oln040092004070.outbound.protection.outlook.com [40.92.4.70])
+	by fw.fapersa.com (Postfix) with ESMTPS id 6CB185FF6B
+	for <jpruata@fapersa.com>; Mon, 15 May 2017 10:55:58 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=NI3XisglbPuLkjrKfC4UrV5RGmZ62qPW+iKrIx6OkjU=;
+ b=dZnGmqp0fQ7wbIfQK1F5Vsi+A/hnm36BKLCJX4fVTE107MlK8QAphENmmx3imdCCCMunMyJ10UCPz8CXN6SxFHkPsBvE0GVPCpFE2s9yCNYcBPeP3Go1342aNjNt71Z1/gCOx4RgMrDm8l3FZtTXpoGckRbBKJ419+q7v6ybdGcUBl+LDDZoH5y5RlPRSG3Jy/LAKkd4RVvffdJv0Untf8Zgjrj7Zx6GxHhswFfKcQRh8BQegIPONg+Z1c2VIRmTSefhzntXG/phMjKzseA0r65eCaqoXSQN9mfwmbhjkTRZHXi4rPxcHXqBkUBOCtMLrChIWK3Z8iTT41NW30/9jA==
+Received: from CY1NAM02FT014.eop-nam02.prod.protection.outlook.com
+ (10.152.74.55) by CY1NAM02HT090.eop-nam02.prod.protection.outlook.com
+ (10.152.75.33) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.1075.5; Mon, 15
+ May 2017 13:55:56 +0000
+Received: from DM5PR13MB0923.namprd13.prod.outlook.com (10.152.74.54) by
+ CY1NAM02FT014.mail.protection.outlook.com (10.152.75.142) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id
+ 15.1.1075.5 via Frontend Transport; Mon, 15 May 2017 13:55:55 +0000
+Received: from DM5PR13MB0923.namprd13.prod.outlook.com ([10.168.239.10]) by
+ DM5PR13MB0923.namprd13.prod.outlook.com ([10.168.239.10]) with mapi id
+ 15.01.1101.011; Mon, 15 May 2017 13:55:55 +0000
+From: jose kokoyaczuk <josekoko2009@hotmail.com>
+To: Juan Pablo Ruata <jpruata@fapersa.com>
+CC: "juampiruata@hotmail.com" <juampiruata@hotmail.com>
+Subject: Presupuesto insumos siembra de trigo..
+Thread-Topic: Presupuesto insumos siembra de trigo..
+Thread-Index: AQHSzX20vX9M9jmWAEWMNADI5PHdDA==
+Date: Mon, 15 May 2017 13:55:55 +0000
+Message-ID: <DM5PR13MB0923D16847A8ACB92D86E97BD7E10@DM5PR13MB0923.namprd13.prod.outlook.com>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-slblob-mailprops: NS9Gj58uCj1/BxfuiAfutRg7o1aIVwzteVhN8Jos+vbaVIBX1uoum9cxU0WvUiniSYDd1Gdb2Hj+AOBCNLAvYcULzx+PCFRHzOGOZJcA77x452+1YCXHJPYU/715HX9XyzXX2UsGE14lBmLp+lYcKj8OQcP03JI7B1M/aTKlitC2YYxIpKiaHQrqxPIfLXf9tJfpG94ID05esN01UIcmmOBDbE0NHxQ5qZPEXtu2GJ1F9KdH2TXmtlUD1UBlUJsHDlLttOQhSb0esQsiEUsg6u1NqX85tGAq2MkjjHknbkctWjX1ybxdbQbH4UYsSkXUhGHPk7w+t9/Kk4ITbQoXck7mzBj1QVebdKNQJYhdup8Il2+GdALvat27/1lirNPv47yj0Qw+Bnsn0Y24oG/q96fJvPN9MUbDi+hbi5FE+9y8S7ZL1Hav3PPfC8Wwf+wHF0fSMdFIDu+ecgu0eXuF2rpleGG1cZKGy5oVh1ACJ7iI/Bs5NvVVZ24lqHL8aVcHLBgNQVUrhXmbSnt2gIPwKqnHuIQij0CiLoAhmjfdexme+RTVp0rfpQbjf8Jmod2uBDWcqjME+ekVXE8VkX+/MYmKk1Mi0NI4YRapz0vl8e2Nf2XBlA4B7dCuBl+iGyyR0ksXAMkUg95OMg2NXPXuBAfVsS4lsx4gsDu6VAJph9w908YKtIcAEDNou1AAVUdOrwCFImPl7ODjsDptMa99Cg==
+authentication-results: hotmail.com; dkim=none (message not signed)
+ header.d=none;hotmail.com; dmarc=none action=none header.from=hotmail.com;
+x-incomingtopheadermarker: OriginalChecksum:9DC1BEAFACD754D596579CA71110933F32667E5FD60B261C652AC4AF676F37B7;UpperCasedChecksum:50654F4F73C9C94AAF09E9F26FC813543847F18D426571BF92D2BA2CD1CA46C8;SizeAsReceived:8858;Count:45
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [yuUbGTlSY2GhK0spepN7+rOfpCgzXf0D]
+x-ms-publictraffictype: Email
+x-microsoft-exchange-diagnostics: 1;CY1NAM02HT090;5:B+AL2Dh1jdfbQStN62maKz6H2cQ/KA2MR2BcPhZWcJNaxs2dptSbAs5uD1Jp3ZkBtofgOYrZNdxMMYp4j09zeRF5al8/Pv6RPIf1wxzAwDqTdANZoY0B/tIH4gbE7VHlcCs0/Nz8o//jtaFRTWXA3Q==;24:4nU/2fbeX/Uc5cA11xXz2ZnXifNXmneO8EST2wEzFLrCNehKKvlfCb1ghmUje9rYbxRmue51AHFWtM45ihiJg1XPgO4xvDhc8scaoui9N8k=;7:ftS5OvmpH13CAv+btYg4urOQxkHElI+0f6AP1nDJjMGFp8hk5WH9mncotPdFcvPm/wstNWSIwzG6PEfnQ0Eo9BQMDPeeZfD1M6njHIqPryywhbDngqXaCOBqmqUuJ/l82nSCh0qa6BX4kJjbuYRDu8UoLdGGSoxLUuqnGgGLTHsJHN1nAnQ0RbbQuj0eDfgZJaPnQ78ipWbg+mfmN7fTVPaGtWWNvFf8ijxViJ0PQw1Gac3QB88LL37sy2vvZAsjkhrP8Fdxzq8iQmi36+Kq05fzUX4+w3XFzZv/wHqeHFasuXHOtc33Y7GkCNCT4jJL
+x-incomingheadercount: 45
+x-eopattributedmessage: 0
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(7070007)(98901004);DIR:OUT;SFP:1901;SCL:1;SRVR:CY1NAM02HT090;H:DM5PR13MB0923.namprd13.prod.outlook.com;FPR:;SPF:None;LANG:es;
+x-ms-office365-filtering-correlation-id: 8ab25ad9-4c95-4f1d-6b3b-08d49b9a1bbd
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(201702061074)(5061506573)(5061507331)(1603103135)(2017031320274)(2017031324274)(2017031323274)(201702181274)(2017031322274)(1601125374)(1603101448)(1701031045);SRVR:CY1NAM02HT090;
+x-ms-exchange-slblob-mailprops: 0RSV28T7LqQoFXRYSQ9FbH7YF93EBu6pQzRIovIfsVZPZW7kkhE1j87TK1rgU/1kFlwBIDnu9bqZCnM/+9ht7btfiwlJZIRqGgJQWYqQYgyrKvB6wNoNiHBfBAeeFlE99+EFUVzTviXq+H6zvtGjjEAx23fEqrx+OreowPx6/EkZNioPQFcMM7l1LWWOuH4szY4iUhlMrAEoCe725S2PRdpHwN6xo3fkqYK5OXAOreNlKY1FSZy4uKR923AWaJ7sizQ+s/+mk4k4wSh55wB3IX6wL8iKVZ0l3rXp5uuIVP6PXArHH3aUFixPQg1tUv5A7xnbMGMv0Exud2KgBAEU3SOdfII5ZADw2m5bn3enldvf2SXBeemwPdMKKdJ3Bf6VjVyVSgDmCEnUo7Cj3QIDiuARi/VT85H3pCA9M5Moo9xsaXZf1AJZFcRcXY5MtpzEIHZY0h9BYc6f4i/cNIvLh/yaUicGKMr3SwG8R1BFytYm6iZM0+KaHZva6T9AckA3mnvHrGV8g0mm8aw/nldjHWP3inKGKqDaaucDip5fTTjTkhO059mU5YKPUNh41+ULLgQVHW/gqa0tlpTmjaAUJESfd3mCH+R25iE9xwc6gPOMOg3m1u/i809V9DtyscRuaj1sEOwZ9Yx7h91SvZF2SvWjnq0mwTjIlQPDzx31lBXrCdnaRJBMQO+qamk2QKgh
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(444000031);SRVR:CY1NAM02HT090;BCL:0;PCL:0;RULEID:;SRVR:CY1NAM02HT090;
+x-forefront-prvs: 0308EE423E
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_DM5PR13MB0923D16847A8ACB92D86E97BD7E10DM5PR13MB0923namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: hotmail.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 15 May 2017 13:55:55.7418
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CY1NAM02HT090
+
+--_000_DM5PR13MB0923D16847A8ACB92D86E97BD7E10DM5PR13MB0923namp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+juanpi, buen dia,
+
+
+te paso el presupuesto con los insumos  para la siembra de trigo, que me pe=
+diste, y te lo estaba debiendo:
+
+
+Semilla de trigo fiscalizado, primera multiplicaci=F3n; Baguette 601 8ciclo=
+ intermedio-largo)........U$S 14.00 por bolsa 40 kg.
+
+Semilla de trigo fiscalizado, primera multiplicaci=F3n; Buck SY 330 (ciclo =
+intermedio)........U$S 14.00 por bolsa 40 kg.
+
+Semilla de trigo fiscalizado, primera multiplicaci=F3n; Klein Nutria (Ciclo=
+ corto)........U$S 14.00 por bolsa 40 kg.
+
+Semilla de trigo fiscalizado, primera multiplicaci=F3n; Klein Tauro (ciclo =
+corto)........U$S 16.90 por bolsa 40 kg.
+
+
+
+Curasemillas trigo Sumieight MT (diniconazole + metiltiofanato)..U$S 33.75 =
+por litro (dosis, 60 cc por cada 100 kg semilla).
+
+Curasemillas trigo Amigo (difenoconazole + metalaxil)..U$S 26.00 por litro =
+(dosis, 100 cc por cada 100 kg semilla).
+
+Curasemillas trigo Defensa (thiran + tebuconazole)..U$S 9.90 por litro (dos=
+is, 125 cc por cada 100 kg semilla).
+
+Curasemillas + Insecticida trigo Flight ( difenoconazole+ imidacloprid)..U$=
+S 29.00 por litro (dosis, 250 cc por cada 100 kg semilla).
+
+
+
+Glifosato Premiun LT Box (Monsanto).................U$S 5.35 por kg. ( 720 =
+grs/kg ing acido).
+
+Glifosato Premiun LT Platinum (Monsanto).......U$S 3.45 por Lt. ( 480 grs/L=
+t ing acido).
+
+Glifosato Premiun  Glifopampa (Nidera).............U$S 3.50 por Lt. ( 506 g=
+rs/Lt ing acido).
+
+24D Amina no volatil 60%.......U$S 2.85 por Lt.
+
+Dicamba.......U$S 11.65 por Lt.
+
+Tordon 24K.......U$S 15.10 por Lt.
+
+Metsulfuron 60%.......U$S 26.50 por Kg.
+
+
+
+Fungicida residual (fin de ciclo) Custodia (azoxiestrabirulina+tebuconazole=
+)........U$S 22.00 ( dosis trigo 0.7 lt/ha).
+
+Fungicida residual (fin de ciclo) Race (metoestrabirulina+tebuconazole)....=
+....U$S 40.00 ( dosis trigo 0.5 lt/ha).
+
+Fungicida curativo (fin de ciclo) Tebuco 25 (tebuconazole 25%)........U$S 1=
+0.70 ( dosis trigo 1 lt/ha).
+
+
+
+Coadyuvante AGH..........U$S 13.00 por lt. (dosis: 50 a 75 cc/ha).- recomen=
+dado para insecticidas y fungicidas-.
+
+Coadyuvante AGH Plus..........U$S 14.00 por lt. (dosis: 100 a 125 cc/ha).- =
+recomendado para herbicidas-.
+
+
+
+
+Fosfato Diamonico granel.......U$S 533.00 por Tonelada. (Puesto en el campo=
+).
+
+Fosfato Diamonico bolsa.......U$S 28.20 por bolsa 50 kg.(Puesto en el campo=
+).
+
+Urea granulada granel.......U$S 375.00 por Tonelada.(Puesto en el campo).
+
+Urea granulada bolsa.......U$S 20.25 por bolsa 50 kg.(Puesto en el campo).
+
+UAN 32 Liquido....................U$S 312.00 por Tonelada.(Puesto en el cam=
+po).
+
+
+
+Precios + IVA
+
+
+
+Alternativas de FORMAS DE PAGO:
+
+1) Con entrega de cheque a 30 y 60  pesificado y sin inter=E9s (se pesifica=
+ el d=EDa de entrega del cheque).
+
+2) Tarjetas rurales (-Agronaci=F3n: pesificado; con d=EDas libres hasta 180=
+, 270 y hasta 365 d=EDas; contasa anual del banco bonificada en un 6%. Macr=
+o: pesificado; con 180 d=EDas libres, sin inter=E9s y con 4 % de gastos. Sa=
+nta Fe,  pesificado, 360 d=EDas libres, con 4% gastos. Galicia: hasta el 30=
+/10/2017, sin gastos, y sin intereses. Frances: 180 dias, pesificado, sin g=
+astos, y sin intereses.
+
+3) Con entrega de 6  cheques, pesificado, (30-60-90-120-150-180 d=EDas),  (=
+se pesifica el d=EDa de entrega de los cheques); a los precios dados hay qu=
+e sumarle un 5.25% de financiaci=F3n total; (en pesos).
+
+4) Con entrega de 6  cheques, pesificado,con 2 meses de gracia  (Primer cuo=
+ta en Julio; =FAltima cuota en Diciembre (60-90-120-150-180-210  d=EDas),  =
+(se pesifica el d=EDa de entrega de los cheques); a los precios dados hay q=
+ue sumarle un 7.65 % de financiaci=F3n total; (en pesos).
+
+5) Con entrega de   cheque, hasta 180 dias pesificado, (se pesifica el d=ED=
+a de entrega del cheque); a los precios dados hay que sumarle un 1.5 % mens=
+ual.
+
+6) Con entrega de   cheque, mas de 180 dias pesificado, (se pesifica el d=
+=EDa de entrega del cheque); a los precios dados hay que sumarle un 2 % men=
+sual.
+
+7) Canje con trigo  a Diciembre 2017, a fijar precio,( se puede fijar preci=
+o del trigo hasta el 30/11/2017); a los precios dados hay que sumarle una f=
+inanciaci=F3n  del 0.8 % mensual.
+
+Cualquier duda, consulta, o si falta algo, por favor avisame.
+
+Saludos, Jose.
+
+
+
+
+
+
+
+
+
+
+
+--_000_DM5PR13MB0923D16847A8ACB92D86E97BD7E10DM5PR13MB0923namp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"divtagdefaultwrapper" dir=3D"ltr" style=3D"font-size: 12pt; colo=
+r: rgb(0, 0, 0); font-family: Calibri, Arial, Helvetica, sans-serif, EmojiF=
+ont, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEm=
+oji, &quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols;"=
+>
+<p></p>
+<p style=3D"font-family:Calibri,Arial,Helvetica,sans-serif,EmojiFont,&quot;=
+Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,NotoColorEmoji,&quot;Seg=
+oe UI Symbol&quot;,&quot;Android Emoji&quot;,EmojiSymbols,EmojiFont,&quot;A=
+pple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,NotoColorEmoji,&quot;Sego=
+e UI Symbol&quot;,&quot;Android Emoji&quot;,EmojiSymbols; font-size:16px">
+juanpi, buen dia,&nbsp;</p>
+<p style=3D"font-family:Calibri,Arial,Helvetica,sans-serif,EmojiFont,&quot;=
+Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,NotoColorEmoji,&quot;Seg=
+oe UI Symbol&quot;,&quot;Android Emoji&quot;,EmojiSymbols,EmojiFont,&quot;A=
+pple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,NotoColorEmoji,&quot;Sego=
+e UI Symbol&quot;,&quot;Android Emoji&quot;,EmojiSymbols; font-size:16px">
+<br>
+</p>
+<p style=3D"font-family:Calibri,Arial,Helvetica,sans-serif,EmojiFont,&quot;=
+Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,NotoColorEmoji,&quot;Seg=
+oe UI Symbol&quot;,&quot;Android Emoji&quot;,EmojiSymbols,EmojiFont,&quot;A=
+pple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,NotoColorEmoji,&quot;Sego=
+e UI Symbol&quot;,&quot;Android Emoji&quot;,EmojiSymbols; font-size:16px">
+te paso el presupuesto con los insumos &nbsp;para la siembra de trigo,&nbsp=
+;que me pediste, y te lo estaba debiendo:</p>
+<p style=3D"font-family:Calibri,Arial,Helvetica,sans-serif,EmojiFont,&quot;=
+Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,NotoColorEmoji,&quot;Seg=
+oe UI Symbol&quot;,&quot;Android Emoji&quot;,EmojiSymbols,EmojiFont,&quot;A=
+pple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,NotoColorEmoji,&quot;Sego=
+e UI Symbol&quot;,&quot;Android Emoji&quot;,EmojiSymbols; font-size:16px">
+<br>
+</p>
+<p style=3D"font-family:Calibri,Arial,Helvetica,sans-serif,EmojiFont,&quot;=
+Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,NotoColorEmoji,&quot;Seg=
+oe UI Symbol&quot;,&quot;Android Emoji&quot;,EmojiSymbols,EmojiFont,&quot;A=
+pple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,NotoColorEmoji,&quot;Sego=
+e UI Symbol&quot;,&quot;Android Emoji&quot;,EmojiSymbols; font-size:16px">
+</p>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+Semilla de trigo fiscalizado, primera multiplicaci=F3n; Baguette 601 8ciclo=
+ intermedio-largo)........U$S 14.00 por bolsa 40 kg.</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<br>
+</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+Semilla de trigo fiscalizado, primera multiplicaci=F3n; Buck SY 330&nbsp;(c=
+iclo intermedio)........U$S 14.00 por bolsa 40 kg.</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<br>
+</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+Semilla de trigo fiscalizado, primera multiplicaci=F3n; Klein Nutria (Ciclo=
+ corto)........U$S 14.00 por bolsa 40 kg.</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<br>
+</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+Semilla de trigo fiscalizado, primera multiplicaci=F3n; Klein Tauro (ciclo =
+corto)........U$S 16.90 por bolsa 40 kg.</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<br>
+</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<br>
+</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<br>
+</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+Curasemillas trigo Sumieight MT (diniconazole &#43; metiltiofanato)..U$S 33=
+.75 por litro (dosis, 60 cc por cada 100 kg semilla).</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<br>
+</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+Curasemillas trigo Amigo (difenoconazole &#43; metalaxil)..U$S 26.00 por li=
+tro (dosis, 100 cc por cada 100 kg semilla).</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<br>
+</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+Curasemillas trigo Defensa (thiran &#43; tebuconazole)..U$S 9.90 por litro =
+(dosis, 125 cc por cada 100 kg semilla).</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<br>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+Curasemillas &#43; Insecticida trigo Flight ( difenoconazole&#43; imidaclop=
+rid)..U$S 29.00 por litro (dosis, 250 cc por cada 100 kg semilla).</div>
+<div><br>
+</div>
+</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<br>
+</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<br>
+</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+Glifosato Premiun LT Box (Monsanto).................U$S 5.35 por kg. ( 720 =
+grs/kg ing acido).<br>
+</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<span style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Se=
+goe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; =
+font-size:15px"><br>
+</span></div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<span style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Se=
+goe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; =
+font-size:15px">Glifosato Premiun LT Platinum (Monsanto).......U$S 3.45 por=
+ Lt. ( 480 grs/Lt ing acido).</span></div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<span style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Se=
+goe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; =
+font-size:15px"><span style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui=
+_normal,&quot;Segoe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,s=
+erif,EmojiFont; font-size:15px"><br>
+</span></span></div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<span style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Se=
+goe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; =
+font-size:15px"><span style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui=
+_normal,&quot;Segoe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,s=
+erif,EmojiFont; font-size:15px">Glifosato
+ Premiun &nbsp;Glifopampa (Nidera)</span><span style=3D"color:rgb(33,33,33)=
+; font-family:wf_segoe-ui_normal,&quot;Segoe UI&quot;,&quot;Segoe WP&quot;,=
+Tahoma,Arial,sans-serif,serif,EmojiFont; font-size:15px">.............U$S 3=
+.50 por Lt. ( 506 grs/Lt ing acido).</span></span></div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<br>
+<span style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Se=
+goe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; =
+font-size:15px"><span style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui=
+_normal,&quot;Segoe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,s=
+erif,EmojiFont; font-size:15px">
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+24D Amina no volatil 60%.......U$S 2.85 por Lt.</div>
+<div><br>
+</div>
+</span></span></div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<span style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Se=
+goe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; =
+font-size:15px"><span style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui=
+_normal,&quot;Segoe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,s=
+erif,EmojiFont; font-size:15px">
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+Dicamba.......U$S 11.65 por Lt.</div>
+<div><br>
+</div>
+</span></span></div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<div>Tordon 24K.......U$S 15.10 por Lt.</div>
+<div><br>
+</div>
+<div>Metsulfuron 60%.......U$S 26.50 por Kg.<br>
+</div>
+<div><br>
+</div>
+<div><br>
+</div>
+<div><br>
+</div>
+<div>Fungicida residual (fin de ciclo) Custodia (azoxiestrabirulina&#43;teb=
+uconazole)........U$S 22.00 ( dosis trigo 0.7 lt/ha).</div>
+<div><br>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+Fungicida residual&nbsp;(fin de ciclo) Race (metoestrabirulina&#43;tebucona=
+zole)........U$S 40.00 ( dosis trigo 0.5 lt/ha).</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<br>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+Fungicida curativo (fin de ciclo) Tebuco 25 (tebuconazole 25%)........U$S 1=
+0.70 ( dosis trigo 1 lt/ha).</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<br>
+</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<br>
+</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<br>
+</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+Coadyuvante AGH..........U$S 13.00 por lt. (dosis: 50 a 75 cc/ha).- recomen=
+dado para insecticidas y fungicidas-.</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<br>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+Coadyuvante AGH Plus..........U$S 14.00 por lt. (dosis: 100 a 125 cc/ha).- =
+recomendado para herbicidas-.</div>
+<div><br>
+</div>
+</div>
+<div><br>
+</div>
+</div>
+<div><br>
+</div>
+</div>
+<div><br>
+</div>
+<div>Fosfato Diamonico granel.......U$S 533.00 por Tonelada. (Puesto en el =
+campo).<br>
+</div>
+<div><br>
+<div>
+<div>Fosfato Diamonico bolsa.......U$S 28.20 por bolsa 50 kg.<span style=3D=
+"color: rgb(33, 33, 33); font-family: wf_segoe-ui_normal, &quot;Segoe UI&qu=
+ot;, &quot;Segoe WP&quot;, Tahoma, Arial, sans-serif, serif, EmojiFont; fon=
+t-size: 15px;">(Puesto en el campo).</span></div>
+<div><br>
+<div>
+<div>Urea granulada granel.......U$S 375.00 por Tonelada.<span style=3D"col=
+or: rgb(33, 33, 33); font-family: wf_segoe-ui_normal, &quot;Segoe UI&quot;,=
+ &quot;Segoe WP&quot;, Tahoma, Arial, sans-serif, serif, EmojiFont; font-si=
+ze: 15px;">(Puesto en el campo).</span></div>
+<div><br>
+<div>Urea granulada bolsa.......U$S 20.25&nbsp;por bolsa 50 kg.<span style=
+=3D"color: rgb(33, 33, 33); font-family: wf_segoe-ui_normal, &quot;Segoe UI=
+&quot;, &quot;Segoe WP&quot;, Tahoma, Arial, sans-serif, serif, EmojiFont; =
+font-size: 15px;">(Puesto en el campo).</span></div>
+<div><br>
+<div>UAN 32 Liquido....................U$S 312.00 por Tonelada.<span style=
+=3D"color: rgb(33, 33, 33); font-family: wf_segoe-ui_normal, &quot;Segoe UI=
+&quot;, &quot;Segoe WP&quot;, Tahoma, Arial, sans-serif, serif, EmojiFont; =
+font-size: 15px;">(Puesto en el campo).</span></div>
+<div><br>
+</div>
+<div><br>
+</div>
+<div><br>
+</div>
+<div>Precios &#43; IVA</div>
+<div><br>
+</div>
+</div>
+<div><br>
+</div>
+<div><br>
+</div>
+<div>
+<div style=3D"font-size:16px; margin-top:0px; margin-bottom:0px; font-famil=
+y:calibri,arial,helvetica,sans-serif,serif,EmojiFont">
+<span style=3D"font-size:12pt; color:rgb(68,68,68); line-height:22.72px"><b=
+ style=3D"line-height:22.72px"><u style=3D"line-height:22.72px">Alternativa=
+s de&nbsp;F</u></b></span><strong style=3D"color:rgb(68,68,68); font-size:1=
+5px; line-height:21.3px"><u style=3D"line-height:21.3px">ORMAS
+ DE PAGO</u></strong><span style=3D"color:rgb(68,68,68); font-size:15px; li=
+ne-height:21.3px">:</span></div>
+<div style=3D"font-size:16px; margin-top:0px; margin-bottom:0px; font-famil=
+y:calibri,arial,helvetica,sans-serif,serif,EmojiFont">
+<font color=3D"#444444"><span style=3D"font-size:15px; line-height:21.3px">=
+<br>
+</span></font><span style=3D"color:rgb(68,68,68); font-size:15px; line-heig=
+ht:21.3px"></span></div>
+<div dir=3D"ltr" style=3D"color:rgb(68,68,68); font-family:calibri,arial,he=
+lvetica,sans-serif,serif,EmojiFont; line-height:21.3px">
+1) Con entrega de cheque a 30 y 60&nbsp; pesificado y sin inter=E9s&nbsp;(s=
+e pesifica el d=EDa de entrega del cheque).</div>
+<div dir=3D"ltr" style=3D"color:rgb(68,68,68); font-family:calibri,arial,he=
+lvetica,sans-serif,serif,EmojiFont; line-height:21.3px">
+<br>
+</div>
+<div dir=3D"ltr" style=3D"color:rgb(68,68,68); font-family:calibri,arial,he=
+lvetica,sans-serif,serif,EmojiFont; line-height:21.3px">
+<span style=3D"line-height:21.3px">2)&nbsp;</span><strong style=3D"line-hei=
+ght:21.3px">Tarjetas rurales&nbsp;</strong><span style=3D"line-height:21.3p=
+x">(-</span><b style=3D"line-height:21.3px"><span style=3D"font-size: 14pt;=
+">Agronaci=F3n</span>:</b><span style=3D"line-height:21.3px">&nbsp;</span><=
+span style=3D"line-height:21.3px">pesificado;
+ con d=EDas libres hasta 180, 270 y hasta&nbsp;</span><span style=3D"line-h=
+eight:21.3px">365 d=EDas; con<u>tasa anual del banco bonificada en un&nbsp;=
+6%</u>.<b>&nbsp;Macro</b>:&nbsp;<span style=3D"line-height:21.3px">pesifica=
+do; con&nbsp;</span>180 d=EDas libres, sin inter=E9s y con 4 % de gastos.<s=
+pan style=3D"font-size: 14pt;">&nbsp;</span><b><span style=3D"font-size: 14=
+pt;">Santa
+ Fe,&nbsp;</span></b><span style=3D"font-size: 14pt;">&nbsp;</span></span><=
+u><span style=3D"font-size: 14pt;">pesificado, 360 d=EDas libres, con 4% ga=
+stos.</span></u><span style=3D"font-size: 12pt;">&nbsp;</span><b><span styl=
+e=3D"font-size: 14pt;">Galicia</span>:</b>&nbsp;<u><b>hasta el
+ 30/10/2017, sin gastos, y sin intereses. <span style=3D"font-size: 14pt;">=
+Frances</span>: 180 dias, pesificado, sin gastos, y sin intereses.</b></u><=
+/div>
+<div dir=3D"ltr" style=3D"color:rgb(68,68,68); font-family:calibri,arial,he=
+lvetica,sans-serif,serif,EmojiFont; line-height:21.3px">
+<span style=3D"line-height:21.3px"><br>
+</span></div>
+<div dir=3D"ltr" style=3D"color:rgb(68,68,68); font-family:calibri,arial,he=
+lvetica,sans-serif,serif,EmojiFont; line-height:21.3px">
+<div dir=3D"ltr" style=3D"line-height:21.3px">
+<div dir=3D"ltr" style=3D"line-height:21.3px">
+<div dir=3D"ltr" style=3D"line-height:21.3px"><span style=3D"line-height:21=
+.3px">3) Con entrega de 6</span><b style=3D"line-height:21.3px">&nbsp; cheq=
+ues,&nbsp;pesificado, (30-60-90-120-150-180 d=EDas),</b><span style=3D"line=
+-height:21.3px">&nbsp;&nbsp;(se pesifica el d=EDa de entrega de los
+ cheques); a los precios dados hay que&nbsp;</span><b style=3D"line-height:=
+21.3px">sumarle un 5.25% de financiaci=F3n total; (en pesos).</b></div>
+<div dir=3D"ltr" style=3D"line-height:21.3px"><span style=3D"line-height:21=
+.3px"><br style=3D"line-height:21.3px">
+</span></div>
+<div dir=3D"ltr" style=3D"line-height:21.3px"><span style=3D"line-height:21=
+.3px">4) Con entrega de 6</span><b style=3D"line-height:21.3px">&nbsp; cheq=
+ues,&nbsp;pesificado,<u style=3D"line-height:21.3px">con 2 meses de gracia<=
+/u>&nbsp; (Primer cuota en Julio; =FAltima cuota en Diciembre
+ (60-90-120-150-180-210 &nbsp;d=EDas),</b><span style=3D"line-height:21.3px=
+">&nbsp;&nbsp;(se pesifica el d=EDa de entrega de los cheques); a los preci=
+os dados hay que&nbsp;</span><b style=3D"line-height:21.3px">sumarle un 7.6=
+5 % de financiaci=F3n total; (en pesos).</b></div>
+<div dir=3D"ltr" style=3D"line-height:21.3px"><b style=3D"line-height:21.3p=
+x"><br>
+</b></div>
+<div dir=3D"ltr" style=3D"line-height:21.3px"><b style=3D"line-height:21.3p=
+x"><span style=3D"line-height:21.3px">5) Con entrega de&nbsp;</span><b styl=
+e=3D"line-height:21.3px">&nbsp; cheque,
+<span style=3D"font-size: 14pt;">hasta 180</span> dias&nbsp;pesificado,</b>=
+<span style=3D"line-height:21.3px">&nbsp;(se pesifica el d=EDa de entrega d=
+el cheque); a los precios dados hay que&nbsp;</span><b style=3D"line-height=
+:21.3px">sumarle un 1.5 % mensual.</b></b></div>
+<div dir=3D"ltr" style=3D"line-height:21.3px"><b><br>
+</b><b style=3D"line-height:21.3px"><b style=3D"line-height:21.3px">
+<div dir=3D"ltr" style=3D"line-height:21.3px"><b style=3D"line-height:21.3p=
+x"><span style=3D"line-height:21.3px">6) Con entrega de&nbsp;</span><b styl=
+e=3D"line-height:21.3px">&nbsp; cheque,
+<span style=3D"font-size: 14pt;">mas de 180 dias</span>&nbsp;pesificado,</b=
+><span style=3D"line-height:21.3px">&nbsp;(se pesifica el d=EDa de entrega =
+del cheque); a los precios dados hay que&nbsp;</span><b style=3D"line-heigh=
+t:21.3px">sumarle un 2 % mensual.</b></b></div>
+<div><b style=3D"line-height:21.3px"><b style=3D"line-height:21.3px"><br>
+</b></b></div>
+</b></b></div>
+<div dir=3D"ltr" style=3D"line-height:21.3px">7)<span style=3D"font-size: 1=
+4pt;"><b> Canje con trigo &nbsp;a Diciembre 2017</b></span>, a fijar precio=
+,( se puede fijar precio del trigo hasta el 30/11/2017); a los precios dado=
+s hay que sumarle una financiaci=F3n &nbsp;del 0.8
+ % mensual.<br>
+</div>
+<div dir=3D"ltr" style=3D"line-height:21.3px"><br>
+</div>
+<div dir=3D"ltr" style=3D"line-height:21.3px">Cualquier duda, consulta, o s=
+i falta algo, por favor avisame.</div>
+<div dir=3D"ltr" style=3D"line-height:21.3px"><br>
+</div>
+<div dir=3D"ltr" style=3D"line-height:21.3px">Saludos, Jose.</div>
+<div><br>
+</div>
+</div>
+</div>
+</div>
+<br>
+</div>
+</div>
+<div><br>
+</div>
+</div>
+</div>
+<div><br>
+</div>
+</div>
+</div>
+<div><br>
+</div>
+</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<br>
+</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<br>
+</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<br>
+</div>
+<div style=3D"color:rgb(33,33,33); font-family:wf_segoe-ui_normal,&quot;Seg=
+oe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif,serif,EmojiFont; f=
+ont-size:15px">
+<br>
+</div>
+<br>
+<p></p>
+</div>
+</body>
+</html>
+
+--_000_DM5PR13MB0923D16847A8ACB92D86E97BD7E10DM5PR13MB0923namp_--

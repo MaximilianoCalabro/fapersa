@@ -1,0 +1,711 @@
+Return-Path: <return@comercioexterior.org.ar>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id 2QwsIf81CVlMagAATLP0zA
+	for <jpruata@fapersa.com>; Tue, 02 May 2017 22:44:31 -0300
+Return-path: <return@comercioexterior.org.ar>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Tue, 02 May 2017 22:44:31 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:46417 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <return@comercioexterior.org.ar>)
+	id 1d5jLC-0007Ey-Sb
+	for jpruata@fapersa.com; Tue, 02 May 2017 22:44:31 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 161D77F20D
+	for <jpruata@fapersa.com>; Tue,  2 May 2017 22:44:31 -0300 (ART)
+X-Quarantine-ID: <PmwI94_2PEGr>
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+X-Amavis-Alert: BAD HEADER SECTION, Non-encoded non-ASCII data (and not UTF-8)
+	(char BA hex): Subject: News CaCESFe N\x{BA} 626
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id PmwI94_2PEGr for <jpruata@fapersa.com>;
+	Tue,  2 May 2017 22:44:27 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 7B21E7F231; Tue,  2 May 2017 22:44:27 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id C762B7F20D
+	for <jpruata@fapersa.com>; Tue,  2 May 2017 22:44:23 -0300 (ART)
+Received-SPF: pass (comercioexterior.org.ar: Sender is authorized to use 'return@comercioexterior.org.ar' in 'mfrom' identity (mechanism 'include:_rng.serversur.net' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="return@comercioexterior.org.ar"; helo=rng068.serversur.net; client-ip=190.224.160.68
+Received: from rng068.serversur.net (srv068.serversur.net [190.224.160.68])
+	by fw.fapersa.com (Postfix) with SMTP id 229535FF8C
+	for <jpruata@fapersa.com>; Tue,  2 May 2017 22:44:21 -0300 (ART)
+Received: (qmail 78384 invoked by uid 1753); 3 May 2017 01:38:35 -0000
+Date: 3 May 2017 01:38:35 -0000
+Message-ID: <20170503013835.78383.qmail@comercioexterior.org.ar>
+To: jpruata@fapersa.com
+Subject: News CaCESFe Nº 626
+X-PHP-Script: www.comercioexterior.org.ar/admin/newsletters_envio.php for 181.29.251.138
+MIME-Version: 1.0
+Content-type: text/html; charset=iso-8859-1
+From: Camara de Comercio Exterior <prensa@comercioexterior.org.ar>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>News CaCESFe Nº 626</title>
+<style>
+html { /* Esta linea se agrega para dispositivos IPAD 
+			-webkit-text-size-adjust:none;
+			*/
+}
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('/fonts/fontawesome-webfont.eot?v=4.0.3');
+	src: url('/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('/fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('/fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.fa {
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #EAF2FF;
+	margin: 0px;
+	color: #333;
+}
+.fecha {
+	font-size: 11px;
+	padding-right: 22px;
+	color: #FFFFFF;
+	font-weight: bold;
+	background-color: #007FDE;
+}
+img {
+	border: none 0px;
+	background-color: transparent;
+	margin-right: 3px;
+	margin-bottom: 3px;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0px;
+}
+.detalle {
+	font-size: 11px;
+	/*	line-height:18px;*/
+	text-align: left;
+	color: #666;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+.detalle1{
+	font-size: 11px;
+	/*	line-height:18px;*/
+	text-align: left;
+	color: #666;
+}
+.detalle img{
+	float:left;
+	width: 60px;
+}
+.detallenorma {
+	font-size: 13px;
+	/*	line-height:18px;*/
+	text-align: left;
+	color: #999;
+}
+.texto-tablas {
+	font-size: 12px;/*line-height: inherit;*/
+}
+.pietop {
+	font-size: 12px;
+	font-weight: 400;
+	color: #FFFFFF;
+	padding-left: 25px;
+	background-color: #59F;
+}
+.sabias {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	height: 32px;
+	font-size: 12px;
+	font-weight: 400;
+	color: #660066;
+	margin-bottom: 0px;
+	padding-left: 8px;
+}
+.texto-chico {
+	font-size: 11px;
+	color: #333333;/*	line-height:13px;*/
+}
+
+.pie {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 10px;
+	text-align: center;
+	color: #FFFFFF;
+	height: 32px;
+}
+.separador {
+	clear: both;
+}
+.publi {
+	color: #FFFFFF;
+	background-color: #59F;
+}
+.desuscribirse {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #346392;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 10px;
+	color: #ffffff;
+	text-align: center;
+}
+.colizq {
+	background-color: #FFF;
+	font-size: 12px;
+}
+.colizq a{
+	color: #666;
+	text-decoration: none;
+	font-weight: 600;
+	text-transform: none;
+}
+	
+
+.banners {
+	background-color: #eaeaea;
+}
+.titulo {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.border {
+	border-bottom: 1px dotted #9c9c93;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+.border2 {
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+.border-top {
+	border-top: 1px dotted #9c9c93;
+	font-size: 6px;
+	padding: 5 0 0 0;
+}
+.colizq p {
+	text-align: left;
+	padding-right: 15px;/*	line-height:16px;*/
+}
+.datos {
+	background-color: #FFFFFF;
+	font-size: 10px;
+	color: #333333;
+	text-align: center;
+}
+a {
+	color: #59F;
+	text-decoration: none;
+}
+p{
+	color: #666;
+	    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;}
+	
+.titulo-agenda {
+	font-size: medium;
+	font-weight: bold;
+	color: #FFF;
+	background-color: #069;
+	padding-left: 5px;
+}
+.titulo-seccion-violeta {
+	font-size: medium;
+	font-weight: bold;
+	color: #FFF;
+	background-color: #48B1FF;
+	padding-left: 5px;
+}
+.titulo_agenda1 {
+	color: #666;
+	font-weight: 600;
+	margin-bottom: 5px;
+	padding-top: 8px;
+	text-decoration: none;
+	text-transform: none;
+	font-size: 15px;
+}
+.volanta {
+	color: #999;
+	font-weight: 600;
+	margin-bottom: 5px;
+	padding-top: 8px;
+	text-decoration: none;
+	text-transform: none;
+	font-size: 11px;
+}
+#agenda a {
+	color: #7199FF;
+	text-decoration: none;
+	font-weight: 600;
+	text-transform: none;
+}
+.titulo_norma1 {
+	font-size: 16px;
+	color: #000;
+}
+#norma a {
+	color: #7199FF;
+	text-decoration: none;
+}
+.titulo-norma {
+	font-size: x-large;
+	font-weight: bold;
+	color: #000;
+	background-color: #CCC;
+	padding-left: 5px;
+}
+.top-line {
+	padding: 12px 0;
+	border-bottom: 1px solid #e4e4e4;
+	overflow: hidden;
+	transition: all 0.17s ease-in-out;
+	-moz-transition: all 0.17s ease-in-out;
+	-webkit-transition: all 0.17s ease-in-out;
+	-o-transition: all 0.17s ease-in-out;
+	height: 10px;
+	padding: 3;
+	float: right;
+}
+.top-line span {
+	display: inline-block;
+	color: #253135;
+	font-size: 13px;
+	font-family: 'Open Sans', sans-serif;
+	border-left: 1px solid #dddddd;
+	line-height: 12px;
+	margin-right: 13px;
+}
+.top-line span i {
+	color: #0077f9;
+	font-size: 14px;
+	vertical-align: middle;
+	display: inline-block;
+	padding: 0 10px;
+}
+.top-line span i {
+	color: #0077f9;
+	font-size: 14px;
+	vertical-align: middle;
+	display: inline-block;
+	padding: 0 10px;
+}
+h4{
+	text-transform:uppercase;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	margin-bottom: 5px;
+	line-height: 22px;
+	color:#FFF;
+	background-color:#59F;
+	padding:5px;
+}
+ 
+h2{
+	text-transform:uppercase;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+                margin-bottom: 5px;
+                line-height: 22px;
+                color: #666;
+background-color:#CCC;
+                padding:5px;
+}
+
+	
+</style>
+</head>
+    <body>
+<table width="745" border="0" cellspacing="2" cellpadding="3" align="center" style="width:745px; height:auto" bgcolor="#FFFFFF" >
+      <tr>
+  
+    <td colspan="3"  class="fecha"  width="750"align="right" height="15" bgcolor="#007FDE">Martes 02 de Mayo del 2017</td>
+  </tr>
+
+      <tr>
+   
+    <td colspan="3" bgcolor="#f6f6f6" class="top-line" height="13"  width="7" align="right"  ><a href="https://www.facebook.com/CaCESFe" target="_blank"><img src="http://www.comercioexterior.org.ar/admin/nuevo_newsletters/facebook.png" width="18" height="18" align="right"></a> <a href="https://twitter.com/@CaCESFe" target="_blank"><img src="http://www.comercioexterior.org.ar/admin/nuevo_newsletters/twitter.png" width="18" height="18"></a> <a href="" target="_blank"><img src="http://www.comercioexterior.org.ar/admin/nuevo_newsletters/rss.png" width="18" height="18"></a>
+          </div>
+  </tr>
+        <tr>
+   
+    <td colspan="3" align="center"><img src="http://www.comercioexterior.org.ar/admin/nuevo_newsletters/1.jpg" width="745" height="111" align="center"></td>
+  </tr>
+      <tr>
+
+    <td colspan="3" bgcolor="#59F" class="pietop" height="30" align="center" width="745"><strong>SANTA FE AL MUNDO - trabajamos con un &uacute;nico prop&oacute;sito AVANZAR.</strong></td>
+  </tr>
+      <tr>
+
+    <td colspan="3" bgcolor="#f5f5f5" align="center" class="datos" width="745" height="13">Si su programa de correo electronico no muestra  correctamente el Newsletters haga click <a href="http://www.comercioexterior.org.ar/admin/newsletters_contenido.php?id=696&senal=si" target="_blank">aquí</a></td>
+  </tr>
+
+      <tr>
+    <td width="10" class="colizq" valign="top" bgcolor="#FFFFFF"></td>
+    <td width="410" valign="top" class="colizq" align="left" style="height:250px">
+    
+    <table width="420" border="0" cellspacing="0" cellpadding="0" BGCOLOR="#FFF" id="agenda">
+        <tr>
+          <td valign="top"></td>
+        </tr>
+        <tr>
+          <td bgcolor="#069"><h2 class="titulo-agenda">AGENDA</h2></td>
+        </tr>
+         <tr>
+          <td align="justify" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+  
+                <tr>
+          <td align="left" class="detalle" bgcolor="#FFFFFF"> <p>Institucional 22-05-2017 <br><br>
+            <img src="http://www.comercioexterior.org.ar/img/noticias/grandes/4241-1.jpg" style="width:60px" width="60" >
+             <span class="volanta"><em>Conferencia en Santa Fe, a cargo del Lic. Lucas Pussetto</em><br></span>
+            <span class="titulo_agenda1">La Era Trump y sus Efectos sobre la Economía Mundial</span><br>
+            
+            <a href="http://comercioexterior.org.ar/agenda-detalle/4241-la-era-trump-y-sus-efectos-sobre-la-economia-mundial.html"></a>
+
+<p><a href="http://comercioexterior.org.ar/agenda-detalle/4241-la-era-trump-y-sus-efectos-sobre-la-economia-mundial.html"> Leer m&aacute;s &gt;&gt;</a></p></td>
+        </tr>
+        <tr>
+          <td align="justify" class="border"></td>
+        </tr>
+        <tr>
+          <td align="justify" height="3" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+                <tr>
+          <td align="left" class="detalle" bgcolor="#FFFFFF"> <p>04-06-2017 <br><br>
+            <img src="http://www.comercioexterior.org.ar/img/noticias/grandes/4271-1.jpg" style="width:60px" width="60" >
+             <span class="volanta"><em>Sector Autopartes y Remolques</em><br></span>
+            <span class="titulo_agenda1">Misión Técnico Comercial a Ecuador y Colombia</span><br>
+            
+            <a href="http://comercioexterior.org.ar/agenda-detalle/4271-mision-tecnico-comercial-a-ecuador-y-colombia.html"></a>
+
+<p><a href="http://comercioexterior.org.ar/agenda-detalle/4271-mision-tecnico-comercial-a-ecuador-y-colombia.html"> Leer m&aacute;s &gt;&gt;</a></p></td>
+        </tr>
+        <tr>
+          <td align="justify" class="border"></td>
+        </tr>
+        <tr>
+          <td align="justify" height="3" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+                <tr>
+          <td align="left" class="detalle" bgcolor="#FFFFFF"> <p>13-06-2017 <br><br>
+            <img src="http://www.comercioexterior.org.ar/img/noticias/grandes/4270-1.jpg" style="width:60px" width="60" >
+             <span class="volanta"><em>Alimentos en General a Lima</em><br></span>
+            <span class="titulo_agenda1">Misión Comercial a Perú</span><br>
+            
+            <a href="http://comercioexterior.org.ar/agenda-detalle/4270-mision-comercial-a-peru.html"></a>
+
+<p><a href="http://comercioexterior.org.ar/agenda-detalle/4270-mision-comercial-a-peru.html"> Leer m&aacute;s &gt;&gt;</a></p></td>
+        </tr>
+        <tr>
+          <td align="justify" class="border"></td>
+        </tr>
+        <tr>
+          <td align="justify" height="3" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+                <tr>
+          <td align="left" class="detalle" bgcolor="#FFFFFF"> <p>19-06-2017 <br><br>
+            <img src="http://www.comercioexterior.org.ar/img/noticias/grandes/4282-1.jpg" style="width:60px" width="60" >
+             <span class="volanta"><em>El Sector Software visita Santa Cruz y Asunción</em><br></span>
+            <span class="titulo_agenda1">Misión Comercial a Bolivia y Paraguay</span><br>
+            
+            <a href="http://comercioexterior.org.ar/agenda-detalle/4282-mision-comercial-a-bolivia-y-paraguay.html"></a>
+
+<p><a href="http://comercioexterior.org.ar/agenda-detalle/4282-mision-comercial-a-bolivia-y-paraguay.html"> Leer m&aacute;s &gt;&gt;</a></p></td>
+        </tr>
+        <tr>
+          <td align="justify" class="border"></td>
+        </tr>
+        <tr>
+          <td align="justify" height="3" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+                <tr>
+          <td align="left" class="detalle" bgcolor="#FFFFFF"> <p>13-09-2017 <br><br>
+            <img src="http://www.comercioexterior.org.ar/img/noticias/grandes/4281-1.jpg" style="width:60px" width="60" >
+             <span class="volanta"><em>En Medellín, Colombia</em><br></span>
+            <span class="titulo_agenda1">Expo Agrofuturo 2017</span><br>
+            
+            <a href="http://comercioexterior.org.ar/agenda-detalle/4281-expo-agrofuturo-2017.html"></a>
+
+<p><a href="http://comercioexterior.org.ar/agenda-detalle/4281-expo-agrofuturo-2017.html"> Leer m&aacute;s &gt;&gt;</a></p></td>
+        </tr>
+        <tr>
+          <td align="justify" class="border"></td>
+        </tr>
+        <tr>
+          <td align="justify" height="3" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+              </table>
+        </td>
+    <td width="260" rowspan="2" valign="top" bgcolor="#CEEAF4" class="texto-tablas"><table width="260" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center" width="260"><a href="" target="_blank"><img src="http://www.comercioexterior.org.ar/admin/nuevo_newsletters/estudia.jpg" width="259" height="50"></a></td>
+        </tr>
+        
+          <td align="center"><table width="259" border="0" class="texto-tablas" cellpadding="6">
+              <tr bgcolor="#dddddd">
+                <td width="260"><p><b>MODALIDAD PRESENCIAL: </b><b>Capacitaciones institucionales y externas.</b><br>
+                    <a class="normativa" target="_blank" href="http://www.comercioexterior.org.ar/agenda/1/index.html">Todas las ofertas en Agenda</a></p></td>
+              </tr>
+              <tr bgcolor="#dddddd">
+                <td width="259"><b>MODALIDAD A DISTANCIA : www.aulacacesfe.com.ar</b><br>
+                  <a class="normativa" target="_blank" href="http://www.comercioexterior.org.ar/agenda/1/index.html">Todas las ofertas en Agenda</a></td>
+              </tr>
+            </table></td>
+        </tr>
+       
+          <td align="center"><table width="260" border="0" class="texto-tablas" cellpadding="6">
+              <tr>
+                <td align="center"><a href="http://www.tarifar.com.ar/tarifar/showNovedades.jsp" target="_blank"><img src="http://www.comercioexterior.org.ar/admin/nuevo_newsletters/normativasnews.png" width="250" height="auto"></a></td>
+              </tr>
+             
+              <tr>
+                <td align="center"><table width="260" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="10" width="260" class="border2" valign="middle">
+                      <div align="center">
+		    <div><a href='http://connectamericas.com' target='_blank'><img src='http://comercioexterior.org.ar/img/banners/chicas/129-1.jpg' alt='CONNECT AMERICAS' title='CONNECT AMERICAS' border='0' width='250' /></a></div><div><a href='http://www.ccca.cat ' target='_blank'><img src='http://comercioexterior.org.ar/img/banners/chicas/136-1.jpg' alt='CÁMARA DE COMERCIO CATALANA EN ARGENTINA' title='CÁMARA DE COMERCIO CATALANA EN ARGENTINA' border='0' width='250' /></a></div><div><a href='http://www.fecacera.com.ar' target='_blank'><img src='http://comercioexterior.org.ar/img/banners/chicas/94-1.jpg' alt='Fecacera' title='Fecacera' border='0' width='250' /></a></div><div><a href='http://www.tarifar.com' target='_blank'><img src='http://comercioexterior.org.ar/img/banners/chicas/101-1.jpg' alt='Tarifar' title='Tarifar' border='0' width='250' /></a></div><div><a href='http://www.revistaforexport.com' target='_blank'><img src='http://comercioexterior.org.ar/img/banners/chicas/102-1.jpg' alt='Re
+ vista For Export' title='Revista For Export' border='0' width='250' /></a></div><div><a href='http://www.crislicn.com' target='_blank'><img src='http://comercioexterior.org.ar/img/banners/chicas/109-1.jpg' alt='CRISLI' title='CRISLI' border='0' width='250' /></a></div>		
+	      </div>
+          
+                      </td>
+                    </tr>
+                  </table> </td>
+              </tr>
+            </table></td>
+       
+      </table></td>
+  </tr>
+    
+    <td bgcolor="#EAF2FF" valign="top" class="colizq">&nbsp;</td>
+    <td valign="top" bgcolor="#FFF" align="left" class="colizq">
+    
+    <table width="410" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFF">
+        <tr>
+        <tr>
+          <td bgcolor="#48B1FF" height="10"><h2 class="titulo-seccion-violeta">NOTICIAS</h2></td>
+        </tr>
+      
+        <tr>
+          <td align="justify" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+                <tr>
+          <td bgcolor="#FFFFFF"><b>
+		  <h4>institucional</h4>          <font color="#666"  size= "1pt"><b>02-05-2017</B></font> </b><br>
+         <span class="volanta"> <em>Nota publicada en Punto Biz</em><br></span>
+          <a href="http://comercioexterior.org.ar/nota/4283-el-negocio-avicola-se-transforma.html">El negocio av&iacute;cola se transforma</a> <br/>
+            
+            
+            <img src="http://www.comercioexterior.org.ar/img/noticias/grandes/4283-1.jpg" style="width:60px; float: left; height: auto;" width="60" >
+            
+<p><span class="detalle1">Como el mercado est&aacute; deprimido, invierten fuerte para ganar competitividad. Desembolsan $ 40 M para tecnolog&iacute;a europea. No pueden exportar y se eyectaron costos de energ&iacute;a y laborales. As&iacute; lo manifest&oacute; Marcelo Perassi, Gerente de Compa&ntilde;&iacute;a Av&iacute;cola, empresa socia de nuestra Entidad<br />
+</span></p>
+ <span class="detalle">
+            <p><a href="http://comercioexterior.org.ar/nota/4283-el-negocio-avicola-se-transforma.html"> Leer m&aacute;s &gt;&gt;</a></p>
+            </span></td>
+        </tr>
+        <tr>
+          <td align="justify" class="border" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+        <tr>
+          <td align="justify" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+                <tr>
+          <td bgcolor="#FFFFFF"><b>
+		            <font color="#666"  size= "1pt"><b>29-04-2017</B></font> </b><br>
+         <span class="volanta"> <em>En el marco del IX Encuentro Nacional de Cámaras de Comercio Exterior</em><br></span>
+          <a href="http://comercioexterior.org.ar/nota/4278-seminario-y-debate-de-temas-de-actualidad.html">Seminario y Debate de temas de actualidad</a> <br/>
+            
+            
+            <img src="http://www.comercioexterior.org.ar/img/noticias/grandes/4278-1.jpg" style="width:60px; float: left; height: auto;" width="60" >
+            
+<p><span class="detalle1">Estuvimos presentes el pasado 26 de Abril, en el IX Encuentro Nacional de C&aacute;maras organizado por la C&aacute;mara Argentina de Comercio y Servicios.</span></p>
+ <span class="detalle">
+            <p><a href="http://comercioexterior.org.ar/nota/4278-seminario-y-debate-de-temas-de-actualidad.html"> Leer m&aacute;s &gt;&gt;</a></p>
+            </span></td>
+        </tr>
+        <tr>
+          <td align="justify" class="border" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+        <tr>
+          <td align="justify" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+                <tr>
+          <td bgcolor="#FFFFFF"><b>
+		            <font color="#666"  size= "1pt"><b>29-04-2017</B></font> </b><br>
+         <span class="volanta"> <em>Las Cámaras de Comercio Exterior del Interior del País debatiendo</em><br></span>
+          <a href="http://comercioexterior.org.ar/nota/4279-reunion-de-fecacera.html">Reuni&oacute;n de FECACERA</a> <br/>
+            
+            
+            <img src="http://www.comercioexterior.org.ar/img/noticias/grandes/4279-1.jpg" style="width:60px; float: left; height: auto;" width="60" >
+            
+<p><span class="detalle1">Participamos el d&iacute;a 27/04 de la Reuni&oacute;n de FECACERA (Federaci&oacute;n de C&aacute;maras de Comercio Exterior de la Rep&uacute;blica Argentina) para debatir temas institucionales y de gesti&oacute;n para la Entidad de 2do Grado que nos nuclea.</span></p>
+ <span class="detalle">
+            <p><a href="http://comercioexterior.org.ar/nota/4279-reunion-de-fecacera.html"> Leer m&aacute;s &gt;&gt;</a></p>
+            </span></td>
+        </tr>
+        <tr>
+          <td align="justify" class="border" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+        <tr>
+          <td align="justify" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+                <tr>
+          <td bgcolor="#FFFFFF"><b>
+		            <font color="#666"  size= "1pt"><b>28-04-2017</B></font> </b><br>
+         <span class="volanta"> <em>Conferencia de Juan Cruz Dieguez</em><br></span>
+          <a href="http://comercioexterior.org.ar/nota/4272-excelente-convocatoria-para-el-encuentro-con-banco-macro.html">Excelente Convocatoria para el Encuentro con Banco Macro</a> <br/>
+            
+            
+            <img src="http://www.comercioexterior.org.ar/img/noticias/grandes/4272-1.jpg" style="width:60px; float: left; height: auto;" width="60" >
+            
+<p><span class="detalle1">EL pasado 25 de Abril se llev&oacute; a cabo la Conferencia de Juan Cruz Dieguez, Responsable de Productos Comex de nuestro socio Banco Macro, ante una nutrida concurrencia de Empresarios de nuestra Regi&oacute;n.</span></p>
+ <span class="detalle">
+            <p><a href="http://comercioexterior.org.ar/nota/4272-excelente-convocatoria-para-el-encuentro-con-banco-macro.html"> Leer m&aacute;s &gt;&gt;</a></p>
+            </span></td>
+        </tr>
+        <tr>
+          <td align="justify" class="border" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+        <tr>
+          <td align="justify" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+                <tr>
+          <td bgcolor="#FFFFFF"><b>
+		            <font color="#666"  size= "1pt"><b>28-04-2017</B></font> </b><br>
+         <span class="volanta"> <em>Acuerdo institucional con CaCESFe</em><br></span>
+          <a href="http://comercioexterior.org.ar/nota/4273-corresponsalia-del-cda-en-santa-fe.html">Corresponsal&iacute;a del CDA en Santa Fe </a> <br/>
+            
+            
+            <img src="http://www.comercioexterior.org.ar/img/noticias/grandes/4273-1.jpg" style="width:60px; float: left; height: auto;" width="60" >
+            
+<p><span class="detalle1">El pasado 25, en un evento que reuni&oacute; a representantes de Instituciones de la ciudad y funcionarios, se lanz&oacute; formalmente la Corresponsal&iacute;a del Centro de Despachantes de Aduana en nuestra ciudad. La misma abarca las ciudades de Rafaela, Santa Fe y Paran&aacute;.</span></p>
+ <span class="detalle">
+            <p><a href="http://comercioexterior.org.ar/nota/4273-corresponsalia-del-cda-en-santa-fe.html"> Leer m&aacute;s &gt;&gt;</a></p>
+            </span></td>
+        </tr>
+        <tr>
+          <td align="justify" class="border" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+        <tr>
+          <td align="justify" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+                <tr>
+          <td bgcolor="#FFFFFF"><b>
+		            <font color="#666"  size= "1pt"><b>28-04-2017</B></font> </b><br>
+         <span class="volanta"> <em>Presentación en Sociedad de esta iniciativa solidaria</em><br></span>
+          <a href="http://comercioexterior.org.ar/nota/4274-banco-de-alimentos-en-santa-fe.html">Banco de Alimentos en Santa Fe</a> <br/>
+            
+            
+            <img src="http://www.comercioexterior.org.ar/img/noticias/grandes/4274-1.jpg" style="width:60px; float: left; height: auto;" width="60" >
+            
+<p><span class="detalle1">El d&iacute;a jueves 27 de Abril participamos de la presentaci&oacute;n del Banco de Alimentos de Santa Fe, iniciativa solidaria dedicada al rescate, de manera trazable y eficiente, de alimentos aptos para el consumo que -por distintos motivos- no pueden ser comercializados. Esta tarea tiene como fin facilitarlos a organizaciones y entidades sociales, comedores y asociaciones encargadas de brindar alimentos a personas de bajos recursos econ&oacute;micos con el objetivo de reducir la inseguridad alimentaria. Tambi&eacute;n buscamos promover la alimentaci&oacute;n saludable en la poblaci&oacute;n y fomentar el consumo responsable desde propuestas innovadoras y generadoras de cambios culturales. A sumarse!!!</span></p>
+ <span class="detalle">
+            <p><a href="http://comercioexterior.org.ar/nota/4274-banco-de-alimentos-en-santa-fe.html"> Leer m&aacute;s &gt;&gt;</a></p>
+            </span></td>
+        </tr>
+        <tr>
+          <td align="justify" class="border" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+        <tr>
+          <td align="justify" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+                <tr>
+          <td bgcolor="#FFFFFF"><b>
+		            <font color="#666"  size= "1pt"><b>28-04-2017</B></font> </b><br>
+         <span class="volanta"> <em>Una buena noticia que se repite!!!</em><br></span>
+          <a href="http://comercioexterior.org.ar/nota/4275-nuevos-socios-se-suman-a-cacesfe.html">Nuevos Socios se suman a CaCESFe</a> <br/>
+            
+            
+            <img src="http://www.comercioexterior.org.ar/img/noticias/grandes/4275-1.jpg" style="width:60px; float: left; height: auto;" width="60" >
+            
+<p><span class="detalle1">Una vez m&aacute;s debemos decir gracias a las Empresas que se suman a CaCESFe!. En el &uacute;ltimo tiempo, ya se nos ha hecho una sana costumbre! Todav&iacute;a falt&aacute;s vos!!!</span></p>
+ <span class="detalle">
+            <p><a href="http://comercioexterior.org.ar/nota/4275-nuevos-socios-se-suman-a-cacesfe.html"> Leer m&aacute;s &gt;&gt;</a></p>
+            </span></td>
+        </tr>
+        <tr>
+          <td align="justify" class="border" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+        <tr>
+          <td align="justify" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+                <tr>
+          <td bgcolor="#FFFFFF"><b>
+		  <h2>general</h2>          <font color="#666"  size= "1pt"><b>02-05-2017</B></font> </b><br>
+         <span class="volanta"> <em>Elaborado por el Departamento de Comercio Exterior de CACyS</em><br></span>
+          <a href="http://comercioexterior.org.ar/nota/4284-informe-de-actualizacion-de-comercio-exterior-de-marzo-2017.html">Informe de Actualizaci&oacute;n de Comercio Exterior de Marzo 2017</a> <br/>
+            
+            
+            <img src="http://www.comercioexterior.org.ar/img/noticias/grandes/4284-1.jpg" style="width:60px; float: left; height: auto;" width="60" >
+            
+<p><span class="detalle1">El relevamiento se refiere al intercambio comercial con los principales socios de Argentina durante el mes de febrero, en el que se detect&oacute; un retroceso en relaci&oacute;n al mes anterior e interanualmente.</span></p>
+ <span class="detalle">
+            <p><a href="http://comercioexterior.org.ar/nota/4284-informe-de-actualizacion-de-comercio-exterior-de-marzo-2017.html"> Leer m&aacute;s &gt;&gt;</a></p>
+            </span></td>
+        </tr>
+        <tr>
+          <td align="justify" class="border" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+        <tr>
+          <td align="justify" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+                <tr>
+          <td bgcolor="#FFFFFF"><b>
+		            <font color="#666"  size= "1pt"><b>29-04-2017</B></font> </b><br>
+         <span class="volanta"> <em>Entrada en vigencia del nuevo Protocolo</em><br></span>
+          <a href="http://comercioexterior.org.ar/nota/4280-lii-protocolo-adicional-al-ace-35.html">LII Protocolo Adicional al ACE 35.</a> <br/>
+            
+            
+            <img src="http://www.comercioexterior.org.ar/img/noticias/grandes/4280-1.jpg" style="width:60px; float: left; height: auto;" width="60" >
+            
+<p><span class="detalle1">La Direcci&oacute;n de Origen de Mercader&iacute;a del Ministerio de Producci&oacute;n ha informado que desde el 13/04 ha entrado en vigencia el LII Protocolo Adicional al ACE 35.</span></p>
+ <span class="detalle">
+            <p><a href="http://comercioexterior.org.ar/nota/4280-lii-protocolo-adicional-al-ace-35.html"> Leer m&aacute;s &gt;&gt;</a></p>
+            </span></td>
+        </tr>
+        <tr>
+          <td align="justify" class="border" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+        <tr>
+          <td align="justify" bgcolor="#FFFFFF">&#160;</td>
+        </tr>
+              </table>
+    
+    </td>
+  </tr>
+        <tr>
+        </tr>
+      
+      <tr>
+   
+    <td colspan="3" align="center" class="datos" height="25" bgcolor="#FFFFFF" width="745">San Mart&iacute;n 2231 (Edif. Bolsa de Comercio de Santa Fe ) - Tel 54-342-4554511 Fax: 54-342-4553366 - - S3000FRW - Santa Fe - Argentina - <a href="mailto:prensa@comercioexterior.org.ar"> info@comercioexterior.org.ar </a></td>
+  </tr>
+      <tr>
+ 
+    <td colspan="3" bgcolor="#CCE0FF" height="5"></td>
+  </tr>
+      <tr>
+   
+    <td colspan="3" align="center" class="desuscribirse" bgcolor="#346392" height="10">:: Si no desea recibir nuestro newsletter haga click <a href="mailto:prensa@comercioexterior.org.ar" >aqu&#237;</a> ::</td>
+  </tr>
+    </table>
+</body>
+</html>
+

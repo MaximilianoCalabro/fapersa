@@ -1,0 +1,578 @@
+Return-Path: <efernandez@redsurcos.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id eQMcE8mUOFg6CAAATLP0zA
+	for <jpruata@fapersa.com>; Fri, 25 Nov 2016 16:45:13 -0300
+Return-path: <efernandez@redsurcos.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Fri, 25 Nov 2016 16:45:13 -0300
+Received: from mail-qk0-f177.google.com ([209.85.220.177]:32819)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128)
+	(Exim 4.87)
+	(envelope-from <efernandez@redsurcos.com>)
+	id 1cAMQf-0001qA-TB
+	for jpruata@fapersa.com; Fri, 25 Nov 2016 16:45:13 -0300
+Received: by mail-qk0-f177.google.com with SMTP id x190so87046328qkb.0
+        for <jpruata@fapersa.com>; Fri, 25 Nov 2016 11:44:42 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=redsurcos-com.20150623.gappssmtp.com; s=20150623;
+        h=message-id:from:to:cc:references:subject:date:mime-version;
+        bh=LDukskqSjMJe0exFVMMy68JG+fbHbtD3p7D7rcyLpLo=;
+        b=RRhPxHyXgprX/9krpXSzOSD2Fsd6FVk56OkgeUb4DU6fzCxa5XyVS96fBDdyU0os7A
+         3xLvMsGyalOalChrbHCcnAZPR+ZggYbLhQOCu8Df/O5y/RSD5sLxT1wJxTKaOj/fK0oD
+         +LU02zQ4m75EkFXWM6g2Cf/Jjmaiwfa1fiYEAAWFyVoYoPPMPfiZhXUfPamaOjF3BRx7
+         dXsQNJY6kBPumFv0jQj9Gc1AAuXstGbtdL4IWsI4wf5ztDVTU8kjhsSNjZqsf2+pf0le
+         igkXe0Lv7FIQVR2eT6wKfLil8YFFeL+4wGlp2xEJt6qlbJx8JCzVC7tQAAoO2hDq7iL4
+         /jLw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:message-id:from:to:cc:references:subject:date
+         :mime-version;
+        bh=LDukskqSjMJe0exFVMMy68JG+fbHbtD3p7D7rcyLpLo=;
+        b=MA4Bw89xL/4VcTdpFbj71EWdVZL7LH1OvxiVPQPqw3CZ5vbh0uaLTnJcxPhcREtbPr
+         5eJarJ2yzVZaU2kzifnC1nWoJd4wum4XEjI5+jFsOUvNBWf4msMZo3trEnBmukooYUO9
+         bq9BLYFHOGm2twhIOBShK3KZSLqN80UJe7uy/fTrG+lRN4qci8XI4O+Ja20jRqKqsXp6
+         8vep0J60Bj/CAlS9jY9ddd513gqa0HxfCyKoWxNVYzWZkE0iFtLLliYf62C2IPznT4bx
+         z+1yL0QCNdaFloH5vjJ8eyjcaK9wbq5c4JiQ6w5Bsvod3UImA5n8iv+3sVZIj9JAL0st
+         ovCg==
+X-Gm-Message-State: AKaTC02CL+hCYkB8UfMtDvg4u8DfdegCPmMa8eNbd/nbWWlWB4Hr76r9TI6Kc6vNXfcQQHGz
+X-Received: by 10.55.164.209 with SMTP id n200mr8146746qke.299.1480103061086;
+        Fri, 25 Nov 2016 11:44:21 -0800 (PST)
+Received: from 34Efernandez (host129.190-136-183.telecom.net.ar. [190.136.183.129])
+        by smtp.gmail.com with ESMTPSA id i19sm22207334qte.8.2016.11.25.11.44.19
+        (version=TLS1 cipher=DES-CBC3-SHA bits=112/168);
+        Fri, 25 Nov 2016 11:44:20 -0800 (PST)
+Message-ID: <C065378B6BF24E4C9DC61EC8410538D0@34Efernandez>
+From: =?UTF-8?Q?Enrique_Fern=C3=A1ndez?= <efernandez@redsurcos.com>
+To: "FAPERSA" <jpruata@fapersa.com>
+Cc: "Rodrigo Ferrero" <rferrero@redsurcos.com>
+References: <0788C298-C0D5-44A4-8F74-0FCD25B1419C@fapersa.com> <CAMXZJOZUaXGfzbgVdZk5kMfvgFtYZia=+ani+bQrL+WwqFZFRA@mail.gmail.com> <3E535E8A71244074AB7A3B900192D0A8@34Efernandez> <8B87D9EB-C742-4948-A906-912516061B81@fapersa.com>
+Subject: Re: Santa Fe Rugby Club
+Date: Fri, 25 Nov 2016 16:44:39 -0300
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0280_01D2473B.36C4DEC0"
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2900.5512
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5512
+X-Spam-Status: No, score=-0.9
+X-Spam-Score: -8
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Hola Juan Pablo, Con los comentarios de Rodrigo que me aclaro
+    el compromiso de Carlos y Seba con el club y que te tiene entre los clientes
+    con mucho compromiso con la Empresa, hacemos los 8 modulos publicitarios
+   por $ 7.000 en canje por productos. [...] 
+ 
+ Content analysis details:   (-0.9 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  1.0 KAM_HTMLNOISE          Spam containing useless HTML padding
+X-Spam-Flag: NO
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0280_01D2473B.36C4DEC0
+Content-Type: text/plain;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hola Juan Pablo,=20
+
+Con los comentarios de Rodrigo que me aclaro el compromiso de Carlos y =
+Seba con el club y=20
+que te tiene entre los clientes con mucho compromiso con la Empresa, =
+hacemos los 8 modulos=20
+publicitarios por $ 7.000 en canje por productos.=20
+
+un cordial saludo
+
+Enrique
+
+
+  ----- Original Message -----=20
+  From: FAPERSA=20
+  To: Enrique Fern=C3=A1ndez=20
+  Cc: Rodrigo Ferrero=20
+  Sent: Friday, November 25, 2016 10:44 AM
+  Subject: Re: Santa Fe Rugby Club
+
+
+  Enrique desde ya muchas gracias,=20
+
+
+  disculparme pero me veo con la obligaci=C3=B3n de preguntarte si no =
+puede ser igual al a=C3=B1o pasado que fueron 8 m=C3=B3dulos en ves de =
+los 2, ya que este a=C3=B1o cumplimos 30 a=C3=B1os.
+
+
+  No se quien manejaba la cuenta antes pero el pago se puede hacer a =
+trav=C3=A9s de canje de productos.
+
+
+  Fijate por favor y av=C3=ADsame.
+
+
+  Saludos
+
+
+
+
+  Juan Pablo Ruata
+    El 25 nov. 2016, a las 09:50, Enrique Fern=C3=A1ndez =
+<efernandez@redsurcos.com> escribi=C3=B3:
+
+
+    Rodrigo, Juampi, ok, colaboraremos=20
+    con un modulo de $ 2000 en la publicidad
+
+    saludos=20
+    Enrique
+
+      ----- Original Message -----
+      From: Rodrigo Ferrero
+      To: jpruata@fapersa.com
+      Cc: Enrique Fernandez - Ciagro SFE - Paran=C3=A1
+      Sent: Wednesday, November 16, 2016 11:43 AM
+      Subject: Fwd: Santa Fe Rugby Club
+
+
+      Hola Juampi querido!!
+
+      ah=C3=AD le reenvio el mail con la propuesta a la persona =
+encargada de marqueting y desarrollo en Red Surcos Ing.Enrique =
+Fernandez,esperamos comentarios.
+
+      saludos=20
+
+
+
+
+      ---------- Mensaje reenviado ----------
+      De: FAPERSA <jpruata@fapersa.com>
+      Fecha: 16 de noviembre de 2016, 10:37
+      Asunto: Santa Fe Rugby Club
+      Para: Rodrigo Ferrero <rferrero@redsurcos.com>
+
+
+      Rodrigo buenos d=C3=ADas,
+
+      Te consulto aver=C3=ADguame ah=C3=AD adentro quien maneja la =
+cuenta del club Santa Fe Rugby, yo pertenezco a la comisi=C3=B3n y =
+quisiera ver quien era el contacto con nosotros para hacer publicidad =
+para el Insert.
+
+      Este a=C3=B1o cumplimos 30 a=C3=B1os y hacemos un insert que sale =
+con el diario El Litoral en la tirada del s=C3=A1bado 3 de diciembre.
+
+      En el adjunto est=C3=A1n los valores de los m=C3=B3dulos.
+
+
+      Gracias.
+
+
+
+
+
+
+      --=20
+
+            Rodrigo Ferrero=20
+            Ventas Mostrador Santa Fe =20
+
+          =20
+            Av. Freyre 2363 (CP 3000)=20
+            Santa Fe
+            Tel. (0342) 455 2366
+            Cel. (0342) 156 121129
+            www.redsurcos.com=20
+             =20
+          =20
+      AVISO LEGAL:
+      El contenido del presente mensaje es privado, estrictamente =
+confidencial y exclusivo para su destinatario pudiendo contener =
+informaci=C3=B3n protegida por normas legales y de secreto profesional. =
+Bajo ninguna circunstancia, su contenido puede ser transmitido, =
+divulgado o revelado a terceros en forma alguna. En consecuencia, de =
+haber recibido por error solicitamos contactar al remitente y eliminar =
+este mensaje. La distribuci=C3=B3n o copia de este mensaje est=C3=A1 =
+estrictamente prohibida. Esta comunicaci=C3=B3n es s=C3=B3lo para =
+prop=C3=B3sitos de informaci=C3=B3n y no debe ser considerada como =
+propuesta, aceptaci=C3=B3n ni como una declaraci=C3=B3n de voluntad =
+oficial de la empresa remitente del presente. La transmisi=C3=B3n de =
+e-mails no garantiza que el correo electr=C3=B3nico sea seguro o libre =
+de error. Por consiguiente, no manifestamos que esta informaci=C3=B3n =
+sea completa o precisa. Toda informaci=C3=B3n est=C3=A1 sujeta a =
+alterarse sin previo aviso. -
+
+
+
+------=_NextPart_000_0280_01D2473B.36C4DEC0
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content=3D"text/html; charset=3Dutf-8" http-equiv=3DContent-Type>
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.18702">
+<STYLE></STYLE>
+</HEAD>
+<BODY=20
+style=3D"WORD-WRAP: break-word; -webkit-nbsp-mode: space; =
+-webkit-line-break: after-white-space"=20
+bgColor=3D#ffffff>
+<DIV><FONT size=3D2 face=3DArial>Hola Juan Pablo, </FONT></DIV>
+<DIV><FONT size=3D2 face=3DArial></FONT>&nbsp;</DIV>
+<DIV><FONT size=3D2 face=3DArial>Con los comentarios de Rodrigo que me =
+aclaro el=20
+compromiso de Carlos y Seba con el club y </FONT></DIV>
+<DIV><FONT size=3D2 face=3DArial>que te tiene entre los clientes con =
+mucho=20
+compromiso con la Empresa, hacemos los 8 modulos </FONT></DIV>
+<DIV><FONT size=3D2 face=3DArial>publicitarios por $ 7.000 en canje por =
+productos.=20
+</FONT></DIV>
+<DIV><FONT size=3D2 face=3DArial></FONT>&nbsp;</DIV>
+<DIV><FONT size=3D2 face=3DArial>un cordial saludo</FONT></DIV>
+<DIV><FONT size=3D2 face=3DArial></FONT>&nbsp;</DIV>
+<DIV><FONT size=3D2 face=3DArial>Enrique</FONT></DIV>
+<DIV><FONT size=3D2 face=3DArial></FONT>&nbsp;</DIV>
+<DIV><FONT size=3D2 face=3DArial></FONT>&nbsp;</DIV>
+<BLOCKQUOTE=20
+style=3D"BORDER-LEFT: #000000 2px solid; PADDING-LEFT: 5px; =
+PADDING-RIGHT: 0px; MARGIN-LEFT: 5px; MARGIN-RIGHT: 0px"=20
+dir=3Dltr>
+  <DIV style=3D"FONT: 10pt arial">----- Original Message ----- </DIV>
+  <DIV=20
+  style=3D"FONT: 10pt arial; BACKGROUND: #e4e4e4; font-color: =
+black"><B>From:</B>=20
+  <A title=3Djpruata@fapersa.com =
+href=3D"mailto:jpruata@fapersa.com">FAPERSA</A>=20
+  </DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>To:</B> <A =
+title=3Defernandez@redsurcos.com=20
+  href=3D"mailto:efernandez@redsurcos.com">Enrique Fern=C3=A1ndez</A> =
+</DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>Cc:</B> <A =
+title=3Drferrero@redsurcos.com=20
+  href=3D"mailto:rferrero@redsurcos.com">Rodrigo Ferrero</A> </DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>Sent:</B> Friday, November 25, 2016 =
+10:44=20
+  AM</DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>Subject:</B> Re: Santa Fe Rugby =
+Club</DIV>
+  <DIV><BR></DIV>Enrique desde ya muchas gracias,&nbsp;
+  <DIV><BR></DIV>
+  <DIV>disculparme pero me veo con la obligaci=C3=B3n de preguntarte si =
+no puede ser=20
+  igual al a=C3=B1o pasado que fueron 8 m=C3=B3dulos en ves de los 2, ya =
+que este a=C3=B1o=20
+  cumplimos 30 a=C3=B1os.
+  <DIV><BR></DIV>
+  <DIV>No se quien manejaba la cuenta antes pero el pago se puede hacer =
+a trav=C3=A9s=20
+  de canje de productos.</DIV>
+  <DIV><BR></DIV>
+  <DIV>Fijate por favor y av=C3=ADsame.</DIV>
+  <DIV><BR></DIV>
+  <DIV>Saludos</DIV>
+  <DIV><BR></DIV>
+  <DIV><BR></DIV>
+  <DIV>Juan Pablo Ruata</DIV>
+  <DIV>
+  <DIV>
+  <BLOCKQUOTE type=3D"cite">
+    <DIV>El 25 nov. 2016, a las 09:50, Enrique Fern=C3=A1ndez &lt;<A=20
+    =
+href=3D"mailto:efernandez@redsurcos.com">efernandez@redsurcos.com</A>&gt;=
+=20
+    escribi=C3=B3:</DIV><BR class=3DApple-interchange-newline>
+    <DIV>
+    <DIV=20
+    style=3D"TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); =
+FONT-STYLE: normal; TEXT-INDENT: 0px; FONT-FAMILY: Helvetica; =
+WHITE-SPACE: normal; LETTER-SPACING: normal; FONT-SIZE: 12px; =
+FONT-WEIGHT: normal; WORD-SPACING: 0px; font-variant-caps: normal; =
+-webkit-text-stroke-width: 0px"><FONT=20
+    size=3D2 face=3DArial>Rodrigo, Juampi, ok, colaboraremos<SPAN=20
+    class=3DApple-converted-space>&nbsp;</SPAN></FONT></DIV>
+    <DIV=20
+    style=3D"TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); =
+FONT-STYLE: normal; TEXT-INDENT: 0px; FONT-FAMILY: Helvetica; =
+WHITE-SPACE: normal; LETTER-SPACING: normal; FONT-SIZE: 12px; =
+FONT-WEIGHT: normal; WORD-SPACING: 0px; font-variant-caps: normal; =
+-webkit-text-stroke-width: 0px"><FONT=20
+    size=3D2 face=3DArial>con un modulo de $ 2000 en la =
+publicidad</FONT></DIV>
+    <DIV=20
+    style=3D"TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); =
+FONT-STYLE: normal; TEXT-INDENT: 0px; FONT-FAMILY: Helvetica; =
+WHITE-SPACE: normal; LETTER-SPACING: normal; FONT-SIZE: 12px; =
+FONT-WEIGHT: normal; WORD-SPACING: 0px; font-variant-caps: normal; =
+-webkit-text-stroke-width: 0px"><FONT=20
+    size=3D2 face=3DArial></FONT>&nbsp;</DIV>
+    <DIV=20
+    style=3D"TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); =
+FONT-STYLE: normal; TEXT-INDENT: 0px; FONT-FAMILY: Helvetica; =
+WHITE-SPACE: normal; LETTER-SPACING: normal; FONT-SIZE: 12px; =
+FONT-WEIGHT: normal; WORD-SPACING: 0px; font-variant-caps: normal; =
+-webkit-text-stroke-width: 0px"><FONT=20
+    size=3D2 face=3DArial>saludos<SPAN=20
+    class=3DApple-converted-space>&nbsp;</SPAN></FONT></DIV>
+    <DIV=20
+    style=3D"TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); =
+FONT-STYLE: normal; TEXT-INDENT: 0px; FONT-FAMILY: Helvetica; =
+WHITE-SPACE: normal; LETTER-SPACING: normal; FONT-SIZE: 12px; =
+FONT-WEIGHT: normal; WORD-SPACING: 0px; font-variant-caps: normal; =
+-webkit-text-stroke-width: 0px"><FONT=20
+    size=3D2 face=3DArial>Enrique</FONT></DIV>
+    <DIV=20
+    style=3D"TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); =
+FONT-STYLE: normal; TEXT-INDENT: 0px; FONT-FAMILY: Helvetica; =
+WHITE-SPACE: normal; LETTER-SPACING: normal; FONT-SIZE: 12px; =
+FONT-WEIGHT: normal; WORD-SPACING: 0px; font-variant-caps: normal; =
+-webkit-text-stroke-width: 0px"><FONT=20
+    size=3D2 face=3DArial></FONT>&nbsp;</DIV>
+    <BLOCKQUOTE=20
+    style=3D"BORDER-LEFT: rgb(0,0,0) 2px solid; TEXT-TRANSFORM: none; =
+BACKGROUND-COLOR: rgb(255,255,255); FONT-STYLE: normal; TEXT-INDENT: =
+0px; PADDING-LEFT: 5px; PADDING-RIGHT: 0px; FONT-FAMILY: Helvetica; =
+WHITE-SPACE: normal; LETTER-SPACING: normal; MARGIN-LEFT: 5px; =
+FONT-SIZE: 12px; FONT-WEIGHT: normal; MARGIN-RIGHT: 0px; WORD-SPACING: =
+0px; font-variant-caps: normal; -webkit-text-stroke-width: 0px"=20
+    dir=3Dltr type=3D"cite">
+      <DIV=20
+      style=3D"LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: =
+arial; FONT-SIZE: 10pt; FONT-WEIGHT: normal; font-variant-caps: =
+normal">-----=20
+      Original Message -----</DIV>
+      <DIV=20
+      style=3D"LINE-HEIGHT: normal; BACKGROUND-COLOR: rgb(228,228,228); =
+FONT-STYLE: normal; FONT-FAMILY: arial; FONT-SIZE: 10pt; FONT-WEIGHT: =
+normal; font-variant-caps: normal"><B>From:</B><SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN><A =
+title=3Drferrero@redsurcos.com=20
+      href=3D"mailto:rferrero@redsurcos.com">Rodrigo Ferrero</A></DIV>
+      <DIV=20
+      style=3D"LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: =
+arial; FONT-SIZE: 10pt; FONT-WEIGHT: normal; font-variant-caps: =
+normal"><B>To:</B><SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN><A =
+title=3Djpruata@fapersa.com=20
+      href=3D"mailto:jpruata@fapersa.com">jpruata@fapersa.com</A></DIV>
+      <DIV=20
+      style=3D"LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: =
+arial; FONT-SIZE: 10pt; FONT-WEIGHT: normal; font-variant-caps: =
+normal"><B>Cc:</B><SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN><A =
+title=3Defernandez@redsurcos.com=20
+      href=3D"mailto:efernandez@redsurcos.com">Enrique Fernandez - =
+Ciagro SFE -=20
+      Paran=C3=A1</A></DIV>
+      <DIV=20
+      style=3D"LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: =
+arial; FONT-SIZE: 10pt; FONT-WEIGHT: normal; font-variant-caps: =
+normal"><B>Sent:</B><SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN>Wednesday, November 16, =
+2016=20
+      11:43 AM</DIV>
+      <DIV=20
+      style=3D"LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: =
+arial; FONT-SIZE: 10pt; FONT-WEIGHT: normal; font-variant-caps: =
+normal"><B>Subject:</B><SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN>Fwd: Santa Fe Rugby =
+Club</DIV>
+      <DIV><BR></DIV>
+      <DIV dir=3Dltr>
+      <DIV style=3D"FONT-SIZE: small" class=3Dgmail_default>Hola<SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN><SPAN id=3D:1ag.1=20
+      tabIndex=3D-1>Juampi</SPAN><SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN>querido!!<BR></DIV>
+      <DIV style=3D"FONT-SIZE: small" class=3Dgmail_default>ah=C3=AD =
+le<SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN><SPAN id=3D:1ag.3=20
+      tabIndex=3D-1>reenvio</SPAN><SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN>el<SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN><SPAN id=3D:1ag.4=20
+      tabIndex=3D-1>mail</SPAN><SPAN =
+class=3DApple-converted-space>&nbsp;</SPAN>con=20
+      la propuesta a la persona encargada de<SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN><SPAN id=3D:1ag.5=20
+      tabIndex=3D-1>marqueting</SPAN><SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN>y desarrollo en Red =
+Surcos<SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN><SPAN id=3D:1ag.6=20
+      tabIndex=3D-1>Ing</SPAN>.Enrique<SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN><SPAN id=3D:1ag.7=20
+      tabIndex=3D-1>Fernandez</SPAN>,esperamos comentarios.<BR></DIV>
+      <DIV style=3D"FONT-SIZE: small" class=3Dgmail_default>saludos<SPAN =
+
+      class=3DApple-converted-space>&nbsp;</SPAN><BR></DIV>
+      <DIV style=3D"FONT-SIZE: small" =
+class=3Dgmail_default><BR><BR></DIV>
+      <DIV class=3Dgmail_quote>---------- Mensaje reenviado =
+----------<BR>De:<SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN><B =
+class=3Dgmail_sendername><SPAN=20
+      id=3D:1ag.8 tabIndex=3D-1>FAPERSA</SPAN></B><SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN><SPAN =
+dir=3Dltr>&lt;<SPAN id=3D:1ag.9=20
+      tabIndex=3D-1><A =
+href=3D"mailto:jpruata@fapersa.com">jpruata</A></SPAN><A=20
+      href=3D"mailto:jpruata@fapersa.com">@<SPAN id=3D:1ag.10=20
+      tabIndex=3D-1>fapersa</SPAN>.com</A>&gt;</SPAN><BR>Fecha: 16 de =
+noviembre de=20
+      2016, 10:37<BR>Asunto: Santa Fe<SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN><SPAN id=3D:1ag.11=20
+      tabIndex=3D-1>Rugby</SPAN><SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN>Club<BR>Para: =
+Rodrigo<SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN><SPAN id=3D:1ag.12=20
+      tabIndex=3D-1>Ferrero</SPAN><SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN>&lt;<SPAN id=3D:1ag.13=20
+      tabIndex=3D-1><A =
+href=3D"mailto:rferrero@redsurcos.com">rferrero</A></SPAN><A=20
+      href=3D"mailto:rferrero@redsurcos.com">@<SPAN id=3D:1ag.14=20
+      tabIndex=3D-1>redsurcos</SPAN>.com</A>&gt;<BR><BR><BR>Rodrigo =
+buenos=20
+      d=C3=ADas,<BR><BR>Te consulto<SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN><SPAN id=3D:1ag.15=20
+      tabIndex=3D-1>aver=C3=ADguame</SPAN><SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN>ah=C3=AD adentro quien =
+maneja la=20
+      cuenta del club Santa Fe<SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN><SPAN id=3D:1ag.16=20
+      tabIndex=3D-1>Rugby</SPAN>, yo pertenezco a la comisi=C3=B3n y =
+quisiera ver quien=20
+      era el contacto con nosotros para hacer publicidad para el<SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN><SPAN id=3D:1ag.17=20
+      tabIndex=3D-1>Insert</SPAN>.<BR><BR>Este a=C3=B1o cumplimos 30 =
+a=C3=B1os y hacemos=20
+      un<SPAN class=3DApple-converted-space>&nbsp;</SPAN><SPAN =
+id=3D:1ag.18=20
+      tabIndex=3D-1>insert</SPAN><SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN>que sale con el diario =
+El Litoral=20
+      en la tirada del s=C3=A1bado 3 de diciembre.<BR><BR>En el adjunto =
+est=C3=A1n los=20
+      valores de los =
+m=C3=B3dulos.<BR><BR><BR>Gracias.<BR><BR><BR></DIV><BR><BR=20
+      clear=3Dall><BR>--<SPAN =
+class=3DApple-converted-space>&nbsp;</SPAN><BR>
+      <DIV class=3Dgmail_signature data-smartmail=3D"gmail_signature">
+      <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 width=3D395>
+        <TBODY>
+        <TR>
+          <TD=20
+          style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: =
+rgb(0,51,0); FONT-SIZE: 12px; FONT-WEIGHT: normal"=20
+          bgColor=3D#ffffff vAlign=3Dtop width=3D144><B>Rodrigo<SPAN=20
+            class=3DApple-converted-space>&nbsp;</SPAN><SPAN =
+id=3D:1ag.19=20
+            tabIndex=3D-1>Ferrero</SPAN><SPAN></SPAN></B></TD></TR>
+        <TR>
+          <TD=20
+          style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: =
+rgb(0,51,0); FONT-SIZE: 12px; FONT-WEIGHT: normal"=20
+          bgColor=3D#ffffff vAlign=3Dtop><B><SPAN></SPAN>Ventas =
+Mostrador Santa=20
+            Fe<SPAN =
+class=3DApple-converted-space>&nbsp;</SPAN></B></TD></TR>
+        <TR>
+          <TD=20
+          style=3D"FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; =
+COLOR: rgb(102,102,102); FONT-SIZE: 11px; FONT-WEIGHT: normal"=20
+          bgColor=3D#ffffff height=3D3 vAlign=3Dtop><BR></TD></TR>
+        <TR>
+          <TD=20
+          style=3D"FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; =
+COLOR: rgb(0,51,0); FONT-SIZE: 11px; FONT-WEIGHT: normal"=20
+          bgColor=3D#ffffff height=3D3 vAlign=3Dtop><SPAN id=3D:1ag.20=20
+            tabIndex=3D-1>Av</SPAN>.<SPAN=20
+            class=3DApple-converted-space>&nbsp;</SPAN><SPAN =
+id=3D:1ag.21=20
+            tabIndex=3D-1>Freyre</SPAN><SPAN=20
+            class=3DApple-converted-space>&nbsp;</SPAN>2363 (<SPAN =
+id=3D:1ag.22=20
+            tabIndex=3D-1>CP</SPAN><SPAN=20
+            class=3DApple-converted-space>&nbsp;</SPAN>3000)<SPAN=20
+            class=3DApple-converted-space>&nbsp;</SPAN><BR>Santa =
+Fe<BR><SPAN=20
+            id=3D:1ag.23 tabIndex=3D-1>Tel</SPAN>. (0342) 455 =
+2366<BR><SPAN=20
+            id=3D:1ag.24 tabIndex=3D-1>Cel</SPAN>. (0342) 156 =
+121129<BR><A=20
+            href=3D"http://www.redsurcos.com/" target=3D_blank>www.<SPAN =
+id=3D:1ag.25=20
+            tabIndex=3D-1>redsurcos</SPAN>.com</A></TD></TR>
+        <TR>
+          <TD=20
+          style=3D"FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; =
+COLOR: rgb(0,51,0); FONT-SIZE: 11px; FONT-WEIGHT: normal"=20
+          bgColor=3D#ffffff height=3D3 =
+vAlign=3Dtop>&nbsp;</TD></TR></TBODY></TABLE>
+      <TABLE width=3D150>
+        <TBODY>
+        <TR>
+          <TD><IMG=20
+            =
+src=3D"https://2.bp.blogspot.com/_drgXskCHFuI/SgL0S_cywOI/AAAAAAAAAHg/ZW-=
+c_4sjIbg/S220/Surcos.jpg"=20
+            width=3D144 =
+height=3D56></TD></TR></TBODY></TABLE><SPAN><SPAN=20
+      style=3D"FONT-FAMILY: Arial; COLOR: gray; FONT-SIZE: 8pt">AVISO=20
+LEGAL:</SPAN>
+      <P style=3D"TEXT-ALIGN: justify"><SPAN=20
+      style=3D"FONT-FAMILY: Arial; COLOR: gray; FONT-SIZE: 8pt">El =
+contenido del=20
+      presente mensaje es privado, estrictamente<SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN><SPAN id=3D:1ag.26=20
+      tabIndex=3D-1>confidencial</SPAN><SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN>y exclusivo para su =
+destinatario=20
+      pudiendo contener informaci=C3=B3n protegida por normas legales y =
+de secreto=20
+      profesional. Bajo ninguna circunstancia, su contenido puede ser=20
+      transmitido, divulgado o revelado a terceros en forma alguna. En=20
+      consecuencia, de haber recibido por error solicitamos contactar al =
+
+      remitente y eliminar este mensaje. La distribuci=C3=B3n o copia de =
+este mensaje=20
+      est=C3=A1 estrictamente prohibida. Esta<SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN><SPAN id=3D:1ag.27=20
+      tabIndex=3D-1>comunicaci=C3=B3n</SPAN><SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN>es s=C3=B3lo para =
+prop=C3=B3sitos de=20
+      informaci=C3=B3n y no debe ser considerada como propuesta, =
+aceptaci=C3=B3n ni como=20
+      una declaraci=C3=B3n de voluntad oficial de la empresa remitente =
+del presente.=20
+      La transmisi=C3=B3n de e-<SPAN id=3D:1ag.28 =
+tabIndex=3D-1>mails</SPAN><SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN>no garantiza que el =
+correo=20
+      electr=C3=B3nico sea seguro o libre de error. Por consiguiente, no =
+manifestamos=20
+      que esta informaci=C3=B3n sea completa o precisa. Toda =
+informaci=C3=B3n est=C3=A1 sujeta=20
+      a alterarse sin previo aviso.=20
+    =
+-</SPAN></P></SPAN></DIV></DIV></BLOCKQUOTE></DIV></BLOCKQUOTE></DIV><BR>=
+</DIV></DIV></BLOCKQUOTE></BODY></HTML>
+
+------=_NextPart_000_0280_01D2473B.36C4DEC0--
+

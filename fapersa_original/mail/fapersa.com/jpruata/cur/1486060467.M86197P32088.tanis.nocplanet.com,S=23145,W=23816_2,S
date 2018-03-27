@@ -1,0 +1,671 @@
+Return-Path: <reportes-fapersa-bounces@listas.lunix.com.ar>
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id UeM2BLN7k1hYfQAATLP0zA
+	; Thu, 02 Feb 2017 15:34:27 -0300
+Return-path: <reportes-fapersa-bounces@listas.lunix.com.ar>
+Envelope-to: dottonel@fapersa.com,
+ fyori@fapersa.com,
+ jpruata@fapersa.com,
+ pcalcagno@fapersa.com,
+ rdopazo@fapersa.com
+Delivery-date: Thu, 02 Feb 2017 15:34:27 -0300
+Received: from cloud.lunix.com.ar ([207.198.115.213]:55039)
+	by tanis.nocplanet.com with esmtp (Exim 4.87)
+	(envelope-from <reportes-fapersa-bounces@listas.lunix.com.ar>)
+	id 1cZMD0-0000Ut-OC; Thu, 02 Feb 2017 15:34:26 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by cloud.lunix.com.ar (Postfix) with ESMTP id 16893C0D78;
+	Thu,  2 Feb 2017 15:32:15 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at cloud.lunix.com.ar
+Received: from cloud.lunix.com.ar ([127.0.0.1])
+	by localhost (cloud.lunix.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id rM3nv9dVDFRW; Thu,  2 Feb 2017 15:32:10 -0300 (ART)
+Received: by cloud.lunix.com.ar (Postfix, from userid 114)
+	id 4E499C0E5C; Thu,  2 Feb 2017 15:32:10 -0300 (ART)
+Received: from cloud.lunix.com.ar (localhost [127.0.0.1])
+	by cloud.lunix.com.ar (Postfix) with ESMTP id 91682C0D78;
+	Thu,  2 Feb 2017 15:32:05 -0300 (ART)
+X-Original-To: reportes-fapersa@listas.lunix.com.ar
+Delivered-To: reportes-fapersa@listas.lunix.com.ar
+Received: from localhost (localhost [127.0.0.1])
+ by cloud.lunix.com.ar (Postfix) with ESMTP id 3B5F5C0D78
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Thu,  2 Feb 2017 15:32:05 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at cloud.lunix.com.ar
+Received: from cloud.lunix.com.ar ([127.0.0.1])
+ by localhost (cloud.lunix.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+ with ESMTP id jmFhKCiMzmUP for <reportes-fapersa@listas.lunix.com.ar>;
+ Thu,  2 Feb 2017 15:32:00 -0300 (ART)
+Received: by cloud.lunix.com.ar (Postfix, from userid 114)
+ id 7646DC0D7E; Thu,  2 Feb 2017 15:32:00 -0300 (ART)
+Received: from tanis.nocplanet.com (tanis.nocplanet.com [108.170.37.10])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by cloud.lunix.com.ar (Postfix) with ESMTPS id 92147C0D78
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Thu,  2 Feb 2017 15:31:55 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=fapersa.com
+ ; s=default;
+ h=Content-Type:MIME-Version:Date:Subject:To:From:Sender:Reply-To
+ :Message-ID:Cc:Content-Transfer-Encoding:Content-ID:Content-Description:
+ Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+ In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=FebMcqaT5WJFFj1jYMwI2CvsYUxKohoGfRgRVQvVPYY=; b=D5/jy72quH8ypyVNhvyEIIKSds
+ 0efh41Y5etcjmQqxpU/9rRIClrB/iiuSsJ70vGI9eSW0AaecDHTolB8WdeExvGXc4Eb77qjvkAnGR
+ s33tZ41CDKgG73LDUCtfJcJMr9CrLYKsAxL454zjLHrRvBDyrcHQQJ+B7kkJs7dvhLoi77nQOvgvM
+ SoBDMUp/cW5uYW9Ja7WKch60f8kvXZdIXNL+D4svtPf+3m3pRSV5IqgMc1rHLP6mMJjt1Z9DPWOFH
+ 6ah1lT0J6B16PAZQMRumB38y6alSyBV/0t0bw2rIbt6YIgHQ47MYjhkgYj6lqRLx2Q7FX+ryp6Ubk
+ m+aP83tA==;
+Received: from [181.14.247.181] (port=50674 helo=ADMPCal)
+ by tanis.nocplanet.com with esmtpa (Exim 4.87)
+ (envelope-from <pcalcagno@fapersa.com>) id 1cZMAi-0000RG-DI
+ for reportes-fapersa@listas.lunix.com.ar; Thu, 02 Feb 2017 15:31:53 -0300
+From: "Paulina Calcagno" <pcalcagno@fapersa.com>
+To: <reportes-fapersa@listas.lunix.com.ar>
+Date: Thu, 2 Feb 2017 15:33:20 -0300
+MIME-Version: 1.0
+X-Mailer: Microsoft Office Outlook, Build 11.0.5510
+Thread-Index: AdJ9fVSLF0AG2u/4S4iNNMV5I7tfrAABXLww
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.23573
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - tanis.nocplanet.com
+X-AntiAbuse: Original Domain - listas.lunix.com.ar
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - fapersa.com
+X-Get-Message-Sender-Via: tanis.nocplanet.com: authenticated_id:
+ pcalcagno@fapersa.com
+X-Authenticated-Sender: tanis.nocplanet.com: pcalcagno@fapersa.com
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+Message-Id: <20170202183155.92147C0D78@cloud.lunix.com.ar>
+Subject: [Reportes-fapersa] RV: complemento
+X-BeenThere: reportes-fapersa@listas.lunix.com.ar
+X-Mailman-Version: 2.1.18
+Precedence: list
+List-Id: <reportes-fapersa.listas.lunix.com.ar>
+List-Unsubscribe: <http://listas.lunix.com.ar/cgi-bin/mailman/options/reportes-fapersa>, 
+ <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=unsubscribe>
+List-Post: <mailto:reportes-fapersa@listas.lunix.com.ar>
+List-Help: <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=help>
+List-Subscribe: <http://listas.lunix.com.ar/cgi-bin/mailman/listinfo/reportes-fapersa>, 
+ <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=subscribe>
+Reply-To: reportes-fapersa@listas.lunix.com.ar
+Content-Type: multipart/mixed; boundary="===============8658148536034470048=="
+Errors-To: reportes-fapersa-bounces@listas.lunix.com.ar
+Sender: "Reportes-fapersa" <reportes-fapersa-bounces@listas.lunix.com.ar>
+X-Spam-Status: No, score=-1.8
+X-Spam-Score: -17
+X-Spam-Bar: -
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Por favor, tratar de corregir. Gracias Paulina [...] 
+ 
+ Content analysis details:   (-1.8 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: fapersa.com]
+  0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
+                             domains are different
+  0.0 T_KAM_HTML_FONT_INVALID BODY: Test for Invalidly Named or Formatted
+                             Colors in HTML
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+  0.0 T_DKIM_INVALID         DKIM-Signature header exists but is not valid
+X-Spam-Flag: NO
+
+This is a multi-part message in MIME format.
+
+--===============8658148536034470048==
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0056_01D27D69.B05C1AF0"
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0056_01D27D69.B05C1AF0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Por favor, tratar de corregir.
+
+Gracias
+
+Paulina
+
+=20
+
+  _____ =20
+
+De: Andres Carboni [mailto:acarboni@fapersa.com]=20
+Enviado el: jueves, 02 de febrero de 2017 02:56 p.m.
+Para: Franco Grismado; Juan Ignacio Diaz; Paulina Calcagno
+Asunto: Fwd: complemento
+
+=20
+
+Estimados, buenas tardes.
+
+No puedo utilizar la firma digital del banco ITAU y aparentemente es =
+porque
+falta o esta da=F1ado este complemento. (ver link debajo).
+
+Necesitar=EDa urgente que lo puedan resolver.=20
+
+Gracias, saludos
+
+
+
+-------- Mensaje reenviado --------=20
+
+
+Asunto:=20
+
+complemento
+
+
+Fecha:=20
+
+Thu, 2 Feb 2017 16:15:13 +0000
+
+
+De:=20
+
+Hans Rios Moring  <mailto:Hans.Moring@itau.com.ar> =
+<Hans.Moring@itau.com.ar>
+
+
+A:=20
+
+acarboni@fapersa.com  <mailto:acarboni@fapersa.com> =
+<acarboni@fapersa.com>
+
+
+
+
+
+
+Si el sistema operativo est=E1 en ingles:
+
+ <https://onsite.certisur.com/download/pta_english_2.1.0.5b.zip>
+https://onsite.certisur.com/download/pta_english_2.1.0.5b.zip
+
+Si el Windows est=E1 en espa=F1ol:
+
+ <https://onsite.certisur.com/download/pta_spanish_2.1.0.5b.zip>
+https://onsite.certisur.com/download/pta_spanish_2.1.0.5b.zip
+
+=20
+
+Saludos!
+
+=20
+
+Hans Rios M=F6ring
+
+Banco Ita=FA Argentina
+
+Middle Office
+
+Tucum=E1n 1 - Piso 15=20
+
+Tel. +54 11 5277 8612 (Int. 3645) fax: 5411 5273-3563
+ <http://www.itau.com.ar/> www.itau.com.ar
+
+Antes de imprimir, pens=E1 en tu compromiso con el Medio Ambiente
+
+=20
+
+
+NOTA DE RESPONSABILIDAD: El contenido del presente mensaje es privado,=20
+estrictamente confidencial y exclusivo para su destinatario. Este=20
+mensaje puede contener informaci=F3n protegida por normas legales=20
+y/o de secreto profesional y es s=F3lo para su destinatario. El emisor=20
+no asume responsabilidad ni obligaci=F3n legal alguna por cualquier
+informaci=F3n incorrecta o alterada contenida en este mensaje. Si=20
+usted no es el destinatario de este mensaje, por favor elim=EDnelo, no
+lo copie ni lo haga conocer a terceros e informe al emisor.=20
+Muchas gracias.
+
+
+------=_NextPart_000_0056_01D27D69.B05C1AF0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Diso-8859-1">
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:st1=3D"urn:schemas-microsoft-com:office:smarttags" =
+xmlns=3D"http://www.w3.org/TR/REC-html40">
+
+<head>
+
+<meta name=3DGenerator content=3D"Microsoft Word 11 (filtered medium)">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><o:SmartTagType
+ namespaceuri=3D"urn:schemas-microsoft-com:office:smarttags" =
+name=3D"PersonName"/>
+<!--[if !mso]>
+<style>
+st1\:*{behavior:url(#default#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--a:link
+	{mso-style-priority:99;}
+span.MSOHYPERLINK
+	{mso-style-priority:99;}
+a:visited
+	{mso-style-priority:99;}
+span.MSOHYPERLINKFOLLOWED
+	{mso-style-priority:99;}
+
+ /* Font Definitions */
+ @font-face
+	{font-family:Helvetica;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:Calibri;
+	color:black;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	color:black;}
+span.EstiloCorreo18
+	{mso-style-type:personal;
+	font-family:Calibri;
+	color:windowtext;}
+span.EstiloCorreo19
+	{mso-style-type:personal-reply;
+	font-family:Calibri;
+	color:blue;
+	font-weight:normal;
+	font-style:normal;
+	text-decoration:none none;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext=3D"edit">
+  <o:idmap v:ext=3D"edit" data=3D"1" />
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor=3Dwhite lang=3DES link=3Dblue vlink=3Dpurple>
+
+<div class=3DSection1>
+
+<p class=3DMsoNormal><font size=3D2 color=3Dblue face=3DCalibri><span =
+style=3D'font-size:
+11.0pt;color:blue'>Por favor, tratar de =
+corregir.<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 color=3Dblue face=3DCalibri><span =
+style=3D'font-size:
+11.0pt;color:blue'>Gracias<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 color=3Dblue face=3DCalibri><span =
+style=3D'font-size:
+11.0pt;color:blue'>Paulina<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 color=3Dblue face=3DCalibri><span =
+style=3D'font-size:
+11.0pt;color:blue'><o:p>&nbsp;</o:p></span></font></p>
+
+<div>
+
+<div class=3DMsoNormal align=3Dcenter style=3D'text-align:center'><font =
+size=3D3
+color=3Dblack face=3D"Times New Roman"><span =
+style=3D'font-size:12.0pt;font-family:
+"Times New Roman";color:windowtext'>
+
+<hr size=3D2 width=3D"100%" align=3Dcenter tabindex=3D-1>
+
+</span></font></div>
+
+<p class=3DMsoNormal><b><font size=3D2 color=3Dblack face=3DTahoma><span
+style=3D'font-size:10.0pt;font-family:Tahoma;color:windowtext;font-weight=
+:bold'>De:</span></font></b><font
+size=3D2 color=3Dblack face=3DTahoma><span =
+style=3D'font-size:10.0pt;font-family:Tahoma;
+color:windowtext'> Andres Carboni [mailto:acarboni@fapersa.com] <br>
+<b><span style=3D'font-weight:bold'>Enviado el:</span></b> jueves, 02 de =
+febrero
+de 2017 02:56 p.m.<br>
+<b><span style=3D'font-weight:bold'>Para:</span></b> Franco Grismado; =
+Juan
+Ignacio Diaz; <st1:PersonName ProductID=3D"Paulina Calcagno" =
+w:st=3D"on">Paulina
+ Calcagno</st1:PersonName><br>
+<b><span style=3D'font-weight:bold'>Asunto:</span></b> Fwd: =
+complemento</span></font><font
+size=3D3 color=3Dblack face=3D"Times New Roman"><span =
+style=3D'font-size:12.0pt;
+font-family:"Times New =
+Roman";color:windowtext'><o:p></o:p></span></font></p>
+
+</div>
+
+<p class=3DMsoNormal><font size=3D2 color=3Dblack face=3DCalibri><span
+style=3D'font-size:11.0pt'><o:p>&nbsp;</o:p></span></font></p>
+
+<p><font size=3D3 color=3Dblack face=3D"Times New Roman"><span =
+style=3D'font-size:12.0pt'>Estimados,
+buenas tardes.<o:p></o:p></span></font></p>
+
+<p><font size=3D3 color=3Dblack face=3D"Times New Roman"><span =
+style=3D'font-size:12.0pt'>No
+puedo utilizar la firma digital del banco ITAU y aparentemente es porque =
+falta
+o esta da=F1ado este complemento. (ver link =
+debajo).<o:p></o:p></span></font></p>
+
+<p><font size=3D3 color=3Dblack face=3D"Times New Roman"><span =
+style=3D'font-size:12.0pt'>Necesitar=EDa
+urgente que lo puedan resolver. <o:p></o:p></span></font></p>
+
+<p><font size=3D3 color=3Dblack face=3D"Times New Roman"><span =
+style=3D'font-size:12.0pt'>Gracias,
+saludos<o:p></o:p></span></font></p>
+
+<div>
+
+<p class=3DMsoNormal><font size=3D2 color=3Dblack face=3DCalibri><span
+style=3D'font-size:11.0pt'><br>
+<br>
+-------- Mensaje reenviado -------- <o:p></o:p></span></font></p>
+
+<table class=3DMsoNormalTable border=3D0 cellspacing=3D0 =
+cellpadding=3D0>
+ <tr>
+  <td nowrap valign=3Dtop style=3D'padding:0cm 0cm 0cm 0cm'>
+  <p class=3DMsoNormal align=3Dright style=3D'text-align:right'><b><font =
+size=3D2
+  color=3Dblack face=3DCalibri><span =
+style=3D'font-size:11.0pt;font-weight:bold'>Asunto:
+  </span></font></b><b><font size=3D3><span =
+style=3D'font-size:12.0pt;font-weight:
+  bold'><o:p></o:p></span></font></b></p>
+  </td>
+  <td style=3D'padding:0cm 0cm 0cm 0cm'>
+  <p class=3DMsoNormal><font size=3D2 color=3Dblack face=3DCalibri><span
+  style=3D'font-size:11.0pt'>complemento</span></font><font =
+size=3D3><span
+  style=3D'font-size:12.0pt'><o:p></o:p></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td nowrap valign=3Dtop style=3D'padding:0cm 0cm 0cm 0cm'>
+  <p class=3DMsoNormal align=3Dright style=3D'text-align:right'><b><font =
+size=3D2
+  color=3Dblack face=3DCalibri><span =
+style=3D'font-size:11.0pt;font-weight:bold'>Fecha:
+  </span></font></b><b><font size=3D3><span =
+style=3D'font-size:12.0pt;font-weight:
+  bold'><o:p></o:p></span></font></b></p>
+  </td>
+  <td style=3D'padding:0cm 0cm 0cm 0cm'>
+  <p class=3DMsoNormal><font size=3D2 color=3Dblack face=3DCalibri><span
+  style=3D'font-size:11.0pt'>Thu, 2 Feb 2017 16:15:13 =
++0000</span></font><font
+  size=3D3><span =
+style=3D'font-size:12.0pt'><o:p></o:p></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td nowrap valign=3Dtop style=3D'padding:0cm 0cm 0cm 0cm'>
+  <p class=3DMsoNormal align=3Dright style=3D'text-align:right'><b><font =
+size=3D2
+  color=3Dblack face=3DCalibri><span =
+style=3D'font-size:11.0pt;font-weight:bold'>De: =
+</span></font></b><b><font
+  size=3D3><span =
+style=3D'font-size:12.0pt;font-weight:bold'><o:p></o:p></span></font></b>=
+</p>
+  </td>
+  <td style=3D'padding:0cm 0cm 0cm 0cm'>
+  <p class=3DMsoNormal><font size=3D2 color=3Dblack face=3DCalibri><span
+  style=3D'font-size:11.0pt'>Hans Rios Moring <a
+  =
+href=3D"mailto:Hans.Moring@itau.com.ar">&lt;Hans.Moring@itau.com.ar&gt;</=
+a></span></font><font
+  size=3D3><span =
+style=3D'font-size:12.0pt'><o:p></o:p></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td nowrap valign=3Dtop style=3D'padding:0cm 0cm 0cm 0cm'>
+  <p class=3DMsoNormal align=3Dright style=3D'text-align:right'><b><font =
+size=3D2
+  color=3Dblack face=3DCalibri><span =
+style=3D'font-size:11.0pt;font-weight:bold'>A: =
+</span></font></b><b><font
+  size=3D3><span =
+style=3D'font-size:12.0pt;font-weight:bold'><o:p></o:p></span></font></b>=
+</p>
+  </td>
+  <td style=3D'padding:0cm 0cm 0cm 0cm'>
+  <p class=3DMsoNormal><font size=3D2 color=3Dblack face=3DCalibri><span
+  style=3D'font-size:11.0pt'><a =
+href=3D"mailto:acarboni@fapersa.com">acarboni@fapersa.com</a>
+  <a =
+href=3D"mailto:acarboni@fapersa.com">&lt;acarboni@fapersa.com&gt;</a></sp=
+an></font><font
+  size=3D3><span =
+style=3D'font-size:12.0pt'><o:p></o:p></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=3DMsoNormal><font size=3D2 color=3Dblack face=3DCalibri><span
+style=3D'font-size:11.0pt'><br>
+<br>
+<br>
+</span></font><font size=3D3 face=3D"Times New Roman"><span =
+style=3D'font-size:12.0pt;
+font-family:"Times New Roman"'><o:p></o:p></span></font></p>
+
+<!--[if gte mso 9]><xml>
+ <u1:shapedefaults u2:ext=3D"edit" spidmax=3D"1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <u3:shapelayout u4:ext=3D"edit">
+  <u3:idmap u4:ext=3D"edit" data=3D"1"/>
+ </u3:shapelayout>
+</xml><![endif]-->
+
+<p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:35.4pt'><font size=3D1 color=3Dblack face=3DHelvetica><span
+style=3D'font-size:9.0pt;font-family:Helvetica'>Si el sistema operativo =
+est=E1 en
+ingles:</span></font><o:p></o:p></p>
+
+<u5:p></u5:p>
+
+<p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;margin-bottom:12.0pt;
+margin-left:35.4pt'><font size=3D2 color=3Dblack face=3DCalibri><span
+style=3D'font-size:11.0pt'><a
+href=3D"https://onsite.certisur.com/download/pta_english_2.1.0.5b.zip"
+target=3D"_blank" moz-do-not-send=3Dtrue><font size=3D1 =
+face=3DHelvetica><span
+style=3D'font-size:9.0pt;font-family:Helvetica'>https://onsite.certisur.c=
+om/download/pta_english_2.1.0.5b.zip</span></font></a><o:p></o:p></span><=
+/font></p>
+
+<u5:p></u5:p>
+
+<p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;margin-bottom:12.0pt;
+margin-left:35.4pt'><font size=3D1 color=3Dblack face=3DHelvetica><span
+style=3D'font-size:9.0pt;font-family:Helvetica'>Si el Windows est=E1 en =
+espa=F1ol:</span></font><o:p></o:p></p>
+
+<u5:p></u5:p>
+
+<p class=3DMsoNormal><font size=3D2 color=3Dblack face=3DCalibri><span
+style=3D'font-size:11.0pt'><a
+href=3D"https://onsite.certisur.com/download/pta_spanish_2.1.0.5b.zip"
+target=3D"_blank" moz-do-not-send=3Dtrue><font size=3D1 =
+face=3DHelvetica><span
+style=3D'font-size:9.0pt;font-family:Helvetica'>https://onsite.certisur.c=
+om/download/pta_spanish_2.1.0.5b.zip</span></font></a><o:p></o:p></span><=
+/font><u5:p></u5:p></p>
+
+<p class=3DMsoNormal><u5:p><font size=3D2 color=3Dblack =
+face=3DCalibri><span
+style=3D'font-size:11.0pt'>&nbsp;<o:p></o:p></span></font></u5:p></p>
+
+<p class=3DMsoNormal><font size=3D2 color=3Dblack face=3DCalibri><span
+style=3D'font-size:11.0pt'>Saludos!<u5:p></u5:p></span><o:p></o:p></font>=
+</p>
+
+<p class=3DMsoNormal><b><font size=3D2 color=3Dgray face=3DArial><span
+style=3D'font-size:10.0pt;font-family:Arial;color:gray;font-weight:bold'>=
+<u5:p>&nbsp;</u5:p></span></font></b><o:p></o:p></p>
+
+<p class=3DMsoNormal><b><font size=3D2 color=3Dgray face=3DArial><span
+style=3D'font-size:10.0pt;font-family:Arial;color:gray;font-weight:bold'>=
+Hans
+Rios M=F6ring<u5:p></u5:p></span></font></b><o:p></o:p></p>
+
+<p class=3DMsoNormal style=3D'text-autospace:none'><b><font size=3D2 =
+color=3Dorange
+face=3DArial><span =
+style=3D'font-size:10.0pt;font-family:Arial;color:orange;
+font-weight:bold'>Banco Ita=FA =
+Argentina</span></font></b><o:p></o:p></p>
+
+<u5:p></u5:p>
+
+<p class=3DMsoNormal style=3D'line-height:11.0pt'><font size=3D2 =
+color=3Dgray
+face=3DArial><span lang=3DEN-US =
+style=3D'font-size:10.0pt;font-family:Arial;
+color:gray'>Middle Office<u5:p></u5:p></span></font><o:p></o:p></p>
+
+<p class=3DMsoNormal><font size=3D2 color=3Dgray face=3DArial><span =
+lang=3DEN-US
+style=3D'font-size:10.0pt;font-family:Arial;color:gray'>Tucum=E1n 1 - =
+Piso 15 <u5:p></u5:p></span></font><o:p></o:p></p>
+
+<p class=3DMsoNormal><font size=3D2 color=3Dgray face=3DArial><span =
+lang=3DPT
+style=3D'font-size:10.0pt;font-family:Arial;color:gray'>Tel. +54 11 5277 =
+8612
+(Int. 3645)&nbsp;fax: 5411 5273-3563</span></font><font size=3D2 =
+color=3D"#555555"
+face=3DArial><span lang=3DPT =
+style=3D'font-size:10.0pt;font-family:Arial;color:#555555'><br>
+</span></font><u><font size=3D2 color=3Dgray face=3DArial><span =
+style=3D'font-size:
+10.0pt;font-family:Arial;color:gray'><a href=3D"http://www.itau.com.ar/"
+title=3D"http://www.itau.com.ar/" moz-do-not-send=3Dtrue><font =
+color=3Dgray><span
+lang=3DPT =
+style=3D'color:gray'>www.itau.com.ar</span></font></a></span></font></u><=
+o:p></o:p></p>
+
+<u5:p></u5:p>
+
+<p class=3DMsoNormal><b><font size=3D2 color=3Dgreen face=3DArial><span
+style=3D'font-size:10.0pt;font-family:Arial;color:green;font-weight:bold'=
+>Antes de
+imprimir, pens=E1 en tu compromiso con el Medio =
+Ambiente</span></font></b><o:p></o:p></p>
+
+<u5:p></u5:p>
+
+<p class=3DMsoNormal><u5:p><font size=3D2 color=3Dblack =
+face=3DCalibri><span
+style=3D'font-size:11.0pt'>&nbsp;<o:p></o:p></span></font></u5:p></p>
+
+<p><font size=3D3 color=3Dblack face=3D"Times New Roman"><span =
+style=3D'font-size:12.0pt'><br>
+NOTA DE RESPONSABILIDAD: El contenido del presente mensaje es privado, =
+<br>
+estrictamente confidencial y exclusivo para su destinatario. Este <br>
+mensaje puede contener informaci=F3n protegida por normas legales <br>
+y/o de secreto profesional y es s=F3lo para su destinatario. El emisor =
+<br>
+no asume responsabilidad ni obligaci=F3n legal alguna por cualquier<br>
+informaci=F3n incorrecta o alterada contenida en este mensaje. Si <br>
+usted no es el destinatario de este mensaje, por favor elim=EDnelo, =
+no<br>
+lo copie ni lo haga conocer a terceros e informe al emisor. <br>
+Muchas gracias.<o:p></o:p></span></font></p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
+
+------=_NextPart_000_0056_01D27D69.B05C1AF0--
+
+
+--===============8658148536034470048==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+Content-Disposition: inline
+
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KUmVwb3J0ZXMt
+ZmFwZXJzYSBtYWlsaW5nIGxpc3QKUmVwb3J0ZXMtZmFwZXJzYUBsaXN0YXMubHVuaXguY29tLmFy
+Cmh0dHA6Ly9saXN0YXMubHVuaXguY29tLmFyL2NnaS1iaW4vbWFpbG1hbi9saXN0aW5mby9yZXBv
+cnRlcy1mYXBlcnNhCg==
+
+--===============8658148536034470048==--
+

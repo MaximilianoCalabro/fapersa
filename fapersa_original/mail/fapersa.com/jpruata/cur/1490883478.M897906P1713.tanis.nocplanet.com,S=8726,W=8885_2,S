@@ -1,0 +1,159 @@
+Return-Path: <reportes-fapersa-bounces@listas.lunix.com.ar>
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id cUBNNJYT3VixBgAATLP0zA
+	; Thu, 30 Mar 2017 11:17:58 -0300
+Return-path: <reportes-fapersa-bounces@listas.lunix.com.ar>
+Envelope-to: dottonel@fapersa.com,
+ fyori@fapersa.com,
+ jpruata@fapersa.com,
+ pcalcagno@fapersa.com,
+ rdopazo@fapersa.com
+Delivery-date: Thu, 30 Mar 2017 11:17:58 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:40895 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.88)
+	(envelope-from <reportes-fapersa-bounces@listas.lunix.com.ar>)
+	id 1ctati-0002pb-9X; Thu, 30 Mar 2017 11:17:58 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 3E9E57F217;
+	Thu, 30 Mar 2017 11:17:58 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id N_xWNilkOkmJ; Thu, 30 Mar 2017 11:17:54 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 3A6177F230; Thu, 30 Mar 2017 11:17:54 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 8EAF37F217;
+	Thu, 30 Mar 2017 11:17:49 -0300 (ART)
+Received: from cloud.lunix.com.ar (cloud.lunix.com.ar [207.198.115.213])
+	by fw.fapersa.com (Postfix) with ESMTP id 88FA05FDC9;
+	Thu, 30 Mar 2017 11:17:49 -0300 (ART)
+Received: from localhost (localhost [127.0.0.1])
+	by cloud.lunix.com.ar (Postfix) with ESMTP id A7838C1D56;
+	Thu, 30 Mar 2017 11:17:48 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at cloud.lunix.com.ar
+Received: from cloud.lunix.com.ar ([127.0.0.1])
+	by localhost (cloud.lunix.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id XsS-EYp8EMSG; Thu, 30 Mar 2017 11:17:44 -0300 (ART)
+Received: by cloud.lunix.com.ar (Postfix, from userid 114)
+	id 2383BC1D55; Thu, 30 Mar 2017 11:17:44 -0300 (ART)
+Received: from cloud.lunix.com.ar (localhost [127.0.0.1])
+	by cloud.lunix.com.ar (Postfix) with ESMTP id 67A62C1D55;
+	Thu, 30 Mar 2017 11:17:39 -0300 (ART)
+X-Original-To: reportes-fapersa@listas.lunix.com.ar
+Delivered-To: reportes-fapersa@listas.lunix.com.ar
+Received: from localhost (localhost [127.0.0.1])
+ by cloud.lunix.com.ar (Postfix) with ESMTP id 6495CC1D55
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Thu, 30 Mar 2017 11:17:38 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at cloud.lunix.com.ar
+Received: from cloud.lunix.com.ar ([127.0.0.1])
+ by localhost (cloud.lunix.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+ with ESMTP id vsLUALmCpszp for <reportes-fapersa@listas.lunix.com.ar>;
+ Thu, 30 Mar 2017 11:17:33 -0300 (ART)
+Received: by cloud.lunix.com.ar (Postfix, from userid 114)
+ id E1A5DC1D5B; Thu, 30 Mar 2017 11:17:33 -0300 (ART)
+Received: from fenix.lunix.com.ar (fenix.lunix.com.ar [172.20.12.14])
+ by cloud.lunix.com.ar (Postfix) with ESMTP id 29634C1D56
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Thu, 30 Mar 2017 11:17:29 -0300 (ART)
+Received: from localhost (localhost [127.0.0.1])
+ by fenix.lunix.com.ar (Postfix) with ESMTP id 11D36275B5
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Thu, 30 Mar 2017 11:17:29 -0300 (ART)
+MIME-Version: 1.0
+From: "Helpdesk Lunix SRL" <tickets@lunix.com.ar>
+To: "Reportes_Fapersa" <reportes-fapersa@listas.lunix.com.ar>
+Date: Thu, 30 Mar 2017 11:17:29 -0300
+Message-ID: <A0bKtQa-RQVCqGhaZ-BgAAADkSAABV-@3d2dc64a1c>
+X-Mailer: osTicket Mailer
+Subject: [Reportes-fapersa] Inventario de hardware y software [#00895]
+X-BeenThere: reportes-fapersa@listas.lunix.com.ar
+X-Mailman-Version: 2.1.18
+Precedence: list
+List-Id: <reportes-fapersa.listas.lunix.com.ar>
+List-Unsubscribe: <http://listas.lunix.com.ar/cgi-bin/mailman/options/reportes-fapersa>, 
+ <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=unsubscribe>
+List-Post: <mailto:reportes-fapersa@listas.lunix.com.ar>
+List-Help: <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=help>
+List-Subscribe: <http://listas.lunix.com.ar/cgi-bin/mailman/listinfo/reportes-fapersa>, 
+ <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=subscribe>
+Reply-To: reportes-fapersa@listas.lunix.com.ar
+Content-Type: multipart/mixed; boundary="===============6855546221737116591=="
+Errors-To: reportes-fapersa-bounces@listas.lunix.com.ar
+Sender: "Reportes-fapersa" <reportes-fapersa-bounces@listas.lunix.com.ar>
+
+--===============6855546221737116591==
+Content-Type: multipart/alternative;
+ boundary="=_7ee0ea5f426ffcf6dc1f053093916e2f"
+
+--=_7ee0ea5f426ffcf6dc1f053093916e2f
+Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset=utf-8
+
+LS1yZXNwb25kZXIgcG9yIGVuY2ltYSBkZSBlc3RhIGzDrW5lYS0tKkNsaWVudGU6KiBSZXBvcnRl
+c19GYXBlcnNhCipUaWNrZXQ6KiBbICMwMDg5NV1bMV0KKkZlY2hhIGRlIGNyZWFjacOzbjoqwqAz
+MC8wMy8xNyAxMTowMyAKKkRlcGFydGFtZW50bzoqIEFyZWEtU29wb3J0ZQoqQWdlbnRlOiAqSm9z
+ZSBJZ25hY2lvIERpYXoKCioqRGVzY3JpcGNpw7NuIGRlbCBwcm9ibGVtYSoqCi0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tKgoqU2UgcmVsZXZhcsOhbiB0b2RvcyBsb3MgZXF1aXBvcyBkZSBGQVBF
+UlNBIFNBIHBhcmEgYWN0dWFsaXphciBlbCBpbnZlbnRhcmlvIGRlIGxvcyBtaXNtb3MuClNlIGlu
+c3RhbGFyw6EgZW4gY2FkYSBlcXVpcG8gdW4gc29mdHdhcmUgcXVlIGFnaWxpemEgbGEgb2J0ZW5j
+aW9uIGRlIGxvcyBkYXRvcyByZXF1ZXJpZG9zIAoKCi0tCkpvc2UgSWduYWNpbyBEaWF6LgpEZXBh
+cnRhbWVuZG8gZGUgU29wb3J0ZQpMVU5JWCBTLlIuTC4KU29sdWNpb25lcyBlbiBHTlUvTGludXgK
+VGVsOiAoNTQpIDM0MiA0ODgxMjIyCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQoK
+c2kgZGVzZWEgcHJvcG9yY2lvbmFyIGluZm9ybWFjacOzbiByZXNwZWN0byBhbCB0ZW1hIG8gY29t
+ZW50YXJpb3MgYWRpY2lvbmFsZXMsIHBvciBmYXZvciwKcmVzcG9uZGEgYSBlc3RlIGNvcnJlbyBl
+bGVjdHLDs25pY28gbyBbICBhY2NlZGEgYSBzdSBjdWVudGFdWzFdIHBhcmEgdW4gYXJjaGl2byBj
+b21wbGV0byBkZQpzdXMgc29saWNpdHVkZXMgZGUgc29wb3J0ZS4KCi0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpbMV0gaHR0cHM6Ly9zb3BvcnRlLmx1bml4LmNv
+bS5hci92aWV3LnBocD9hdXRoPW8xeGF5YWFhYWViYW1hYWE1Wll3c1VhenNGY28ydyUzRCUzRApS
+ZWYtTWlkOiAkT1JJQUFBPT0kYmE1YmUyMjQxZUAyMGQxZjVlZTdiCg==
+--=_7ee0ea5f426ffcf6dc1f053093916e2f
+Content-Transfer-Encoding: base64
+Content-Type: text/html; charset=utf-8
+
+PGRpdiBzdHlsZT0iZGlzcGxheTpub25lIgogICAgICAgICAgICAgICAgICAgIGNsYXNzPSJtaWQt
+JE9SSUFBQT09JGJhNWJlMjI0MWVAMjBkMWY1ZWU3YiI+LS1yZXNwb25kZXIgcG9yIGVuY2ltYSBk
+ZSBlc3RhIGzDrW5lYS0tPGJyLz48YnIvPjwvZGl2PiA8c3Ryb25nPkNsaWVudGU6PC9zdHJvbmc+
+IFJlcG9ydGVzX0ZhcGVyc2E8YnIgLz48c3Ryb25nPlRpY2tldDo8L3N0cm9uZz4gPGEgaHJlZj0i
+aHR0cHM6Ly9zb3BvcnRlLmx1bml4LmNvbS5hci92aWV3LnBocD9hdXRoPW8xeGF5YWFhYWViYW1h
+YWE1Wll3c1VhenNGY28ydyUzRCUzRCI+ICMwMDg5NTwvYT48YnIgLz48c3Ryb25nPkZlY2hhIGRl
+IGNyZWFjacOzbjo8L3N0cm9uZz7CoDMwLzAzLzE3IDExOjAzIDxiciAvPjxzdHJvbmc+RGVwYXJ0
+YW1lbnRvOjwvc3Ryb25nPiBBcmVhLVNvcG9ydGU8YnIgLz48c3Ryb25nPkFnZW50ZTogPC9zdHJv
+bmc+Sm9zZSBJZ25hY2lvIERpYXo8YnIgLz48YnIgLz48c3Ryb25nPjxzcGFuPjxzcGFuIHN0eWxl
+PSJjb2xvcjpyZ2IoMCwgMCwgMCkiPipEZXNjcmlwY2nDs24gZGVsIHByb2JsZW1hKjwvc3Bhbj48
+L3NwYW4+PC9zdHJvbmc+PGJyIC8+PHNwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigwLCAwLCAw
+KSI+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS08L3NwYW4+PC9zcGFuPjxzdHJvbmc+PHNwYW4+
+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigwLCAwLCAwKSI+PGJyIC8+PC9zcGFuPjwvc3Bhbj48L3N0
+cm9uZz5TZSByZWxldmFyw6FuIHRvZG9zIGxvcyBlcXVpcG9zIGRlIEZBUEVSU0EgU0EgcGFyYSBh
+Y3R1YWxpemFyIGVsIGludmVudGFyaW8gZGUgbG9zIG1pc21vcy48YnIgLz5TZSBpbnN0YWxhcsOh
+IGVuIGNhZGEgZXF1aXBvIHVuIHNvZnR3YXJlIHF1ZSBhZ2lsaXphIGxhIG9idGVuY2lvbiBkZSBs
+b3MgZGF0b3MgcmVxdWVyaWRvcyA8YnIgLz48YnIgLz48ZGl2IHN0eWxlPSJjb2xvcjpyZ2IoMTI3
+LCAxMjcsIDEyNykiPi0tPGJyIC8+Sm9zZSBJZ25hY2lvIERpYXouPGJyIC8+RGVwYXJ0YW1lbmRv
+IGRlIFNvcG9ydGU8YnIgLz5MVU5JWCBTLlIuTC48YnIgLz5Tb2x1Y2lvbmVzIGVuIEdOVS9MaW51
+eDxiciAvPlRlbDogKDU0KSAzNDIgNDg4MTIyMjwvZGl2PiA8aHIgLz4gPGRpdiBzdHlsZT0iY29s
+b3I6cmdiKDEyNywgMTI3LCAxMjcpO2ZvbnQtc2l6ZTpzbWFsbCI+IDxlbT5zaSBkZXNlYSBwcm9w
+b3JjaW9uYXIgaW5mb3JtYWNpw7NuIHJlc3BlY3RvIGFsIHRlbWEgbyBjb21lbnRhcmlvcyBhZGlj
+aW9uYWxlcywgcG9yIGZhdm9yLCByZXNwb25kYSBhIGVzdGUgY29ycmVvIGVsZWN0csOzbmljbyBv
+IDxhIGhyZWY9Imh0dHBzOi8vc29wb3J0ZS5sdW5peC5jb20uYXIvdmlldy5waHA/YXV0aD1vMXhh
+eWFhYWFlYmFtYWFhNVpZd3NVYXpzRmNvMnclM0QlM0QiPiA8c3BhbiBzdHlsZT0iY29sb3I6cmdi
+KDg0LCAxNDEsIDIxMikiPiBhY2NlZGEgYSBzdSBjdWVudGE8L3NwYW4+PC9hPiBwYXJhIHVuIGFy
+Y2hpdm8gY29tcGxldG8gZGUgc3VzIHNvbGljaXR1ZGVzIGRlIHNvcG9ydGUuPC9lbT4gPC9kaXY+
+IA==
+--=_7ee0ea5f426ffcf6dc1f053093916e2f--
+
+
+--===============6855546221737116591==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+Content-Disposition: inline
+
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KUmVwb3J0ZXMt
+ZmFwZXJzYSBtYWlsaW5nIGxpc3QKUmVwb3J0ZXMtZmFwZXJzYUBsaXN0YXMubHVuaXguY29tLmFy
+Cmh0dHA6Ly9saXN0YXMubHVuaXguY29tLmFyL2NnaS1iaW4vbWFpbG1hbi9saXN0aW5mby9yZXBv
+cnRlcy1mYXBlcnNhCg==
+
+--===============6855546221737116591==--
+

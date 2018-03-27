@@ -1,0 +1,424 @@
+Return-Path: <Diego.Medori@bunge.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id 4b6eNc23JFirNAAATLP0zA
+	for <jpruata@fapersa.com>; Thu, 10 Nov 2016 15:09:17 -0300
+Return-path: <Diego.Medori@bunge.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Thu, 10 Nov 2016 15:09:17 -0300
+Received: from mail-qt0-f225.google.com ([209.85.216.225]:34870)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128)
+	(Exim 4.87)
+	(envelope-from <Diego.Medori@bunge.com>)
+	id 1c4tmZ-0003dp-Kn
+	for jpruata@fapersa.com; Thu, 10 Nov 2016 15:09:17 -0300
+Received: by mail-qt0-f225.google.com with SMTP id l20so25704768qta.2
+        for <jpruata@fapersa.com>; Thu, 10 Nov 2016 10:08:43 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=bunge-com.20150623.gappssmtp.com; s=20150623;
+        h=in-reply-to:references:to:cc:mime-version:subject:message-id:from
+         :date;
+        bh=KGGsRpYDANwvfuFffYEEtLdMqF41j92ga6Uu3cpS0pk=;
+        b=y01ZtbR1l+feOoENU00fSBGxxLfUm/1RhjCAuOtPPJDV2cDAw1iQdvGs4m4QIBw+Jf
+         6E1VmUK4ugOTNNoabxnZg4APgsqlsULXzMoMbFx7knPqKJFodvHgXPzjOkQO7gak3JhT
+         nxyMIxV8chED1ALrTGQ/cbYas3URErZXRK1vfMErNmkrFs9Izbq7pmZgfGcFF1C0TdOi
+         m9iWwAAjH580+Y2tWMR5LIaOMXjyliCLsEFAk4u0sUY+WpnPOAM+Brg9GO3lvVmJMG28
+         NKQ3cVY6nnh0kGf9AxkX+rHWhGhCph2vpQ8mxB9DIEtkB9LLVnkrg9BXanCfvkhv5yg4
+         KMjA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:in-reply-to:references:to:cc:mime-version
+         :subject:message-id:from:date;
+        bh=KGGsRpYDANwvfuFffYEEtLdMqF41j92ga6Uu3cpS0pk=;
+        b=UYh/ve2v9VqEKxM/RomfMIdFybTTC841NGozskhXkIH6MMzkd1shWMb27f7J7hHNgS
+         BZkkbdyzwLq4fa1wDsZq9xf1agYBKn3LrzCO27viRkQhXLgek7NoTO/E7A9UcRdebihW
+         YWlnFJO1CC1DYoCvSZAYS5wNTcTrO/aSRzgx2kBf1wWTtoSsQDcNQsRrigZX/Cyk4cdz
+         dHriUZAXIjbRZbrtPDstCW4ffqNakcOHJOBOtMLbNXNclIDM459ym6Sz7lpKNEdz+bog
+         PzufJNn/PaLUM7wm9xsVPCgoNaLu/2vx0mKwnl9XvARRR9hd42S6lRXY16ML2rRMfjyn
+         0MyQ==
+X-Gm-Message-State: ABUngvcM3NNJ3lsfJeuwZTq5JyhxCIbs7rj2s8oMOntKh/ZAGQPh6A+73R0yZ7kZKW2GEZtkcpQcVv5Q0lxfMy0uGrsKFM9lEkGgYQ4qIq3MfPs/c+PCHfWdeSox9/itI9NhSYWW2AuRurrPt5jU1Qbg
+X-Received: by 10.107.190.131 with SMTP id o125mr8570410iof.21.1478801302717;
+        Thu, 10 Nov 2016 10:08:22 -0800 (PST)
+Received: from bnastlg02.na.dir.bunge.com (smtp2.bunge.com. [63.240.146.143])
+        by smtp-relay.gmail.com with ESMTPS id u130sm3610577ith.0.2016.11.10.10.08.22
+        (version=TLS1_2 cipher=AES128-GCM-SHA256 bits=128/128);
+        Thu, 10 Nov 2016 10:08:22 -0800 (PST)
+X-Relaying-Domain: bunge.com
+Received: from bue-lx-smtp.bar.sa.dir.bunge.com ([10.1.4.63])
+          by bnastlg05.na.dir.bunge.com (IBM Domino Release 9.0.1FP4)
+          with ESMTP id 2016111012081795-213433 ;
+          Thu, 10 Nov 2016 12:08:17 -0600 
+Received: from BUE-2K8-LN2.bar.sa.dir.bunge.com (bue-2k8-ln2.bar.sa.dir.bunge.com [10.1.6.24])
+	by bue-lx-smtp.bar.sa.dir.bunge.com (Postfix) with ESMTP id 8333E2FF4A1;
+	Thu, 10 Nov 2016 15:10:27 -0300 (ART)
+In-Reply-To: <WEB1gO2cZn9pI7QHQRv0002386c@relay.bcr.com.ar>
+References: <WEB1gO2cZn9pI7QHQRv0002386c@relay.bcr.com.ar>
+X-Disclaimed: 8414
+To: firmadigital@confirma.com.ar
+Cc: control@tacuaritas.com.ar, gsieber@fapersa.com, hernan.wust@bunge.com, jpruata@fapersa.com, pablo.bardes@bunge.com
+MIME-Version: 1.0
+Subject: =?ISO-8859-1?Q?Re=3A_Anulaci=F3n_de_documentoBCR_cto=2E31=2F93239?=
+X-KeepSent: 6A67D6F4:15EF27C5-03258067:00637BB4;
+ type=4; flags=0; name=$KeepSent
+X-Mailer: IBM Notes Release 9.0.1FP3 SHF227 March 23, 2015
+Message-ID: <OF6A67D6F4.15EF27C5-ON03258067.00637BB4-03258067.0063A2AB@bunge.com>
+From: Diego Medori <Diego.Medori@bunge.com>
+Date: Thu, 10 Nov 2016 15:08:16 -0300
+X-TNEFEvaluated: 1
+Content-Type: multipart/alternative; boundary="=_alternative 0063A2AA03258067_="
+X-Spam-Status: No, score=-1.9
+X-Spam-Score: -18
+X-Spam-Bar: -
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Buenas tardes Faltaría el ajuste de cantidad de mercadería
+    como detallamos y la aclaración del destino: Pto San Martin Sldos [...] 
+ 
+ Content analysis details:   (-1.9 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 T_SPF_TEMPERROR        SPF: test of record failed (temperror)
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+X-Spam-Flag: NO
+
+Este es un mensaje de varios componentes en formato MIME.
+--=_alternative 0063A2AA03258067_=
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+Buenas tardes
+
+=20
+Faltar=C3=ADa el ajuste de cantidad de mercader=C3=ADa como detallamos y la=
+=20
+aclaraci=C3=B3n del destino: Pto San Martin
+
+Sldos
+
+  Diego Medori
+  Administracion Comercial
+  Bunge Argentina S.A.
+  (0341) 5123302
+=20
+=20
+
+
+
+From:   www.confirma.com.ar <firmadigital@confirma.com.ar>
+To:     <diego.medori@bunge.com>, <pablo.bardes@bunge.com>,=20
+<hernan.wust@bunge.com>, <control@tacuaritas.com.ar>,=20
+<gsieber@fapersa.com>, <jpruata@fapersa.com>
+Date:   10/11/2016 15:05
+Subject:        Anulaci=C3=B3n de documentoBCR
+
+
+
+
+
+
+
+Jueves, 10 de Noviembre de 2016=20
+
+
+
+
+Servicio Confirma [Bolsa de Comercio de Rosario]=20
+
+
+
+
+Por medio de la presente le comunicamos que el documento formado por las=20
+partes:=20
+
+LA TURQUINA S A
+N=C3=BAmero interno: 44558
+
+
+
+LAS TACUARITAS MANDATARIA S.R.L.=20
+N=C3=BAmero interno: 44558
+
+
+
+BUNGE ARGENTINA S A
+N=C3=BAmero interno: 31/93239
+
+
+
+
+
+
+
+ha sido anulado por la empresa BUNGE ARGENTINA S A por el siguiente=20
+motivo:=20
+
+
+
+
+falta ajuste de cantidad de mercader=C3=ADa: mas 2 tn / menos 3 tn
+
+
+
+
+
+P Antes de imprimir este mensaje por favor piense en su responsabilidad=20
+con el medio ambiente.
+-----------------------------------------
+Este correo electr=C3=B3nico es confidencial. La informaci=C3=B3n contenida=
+ en el=20
+presente mensaje y sus adjuntos son de uso exclusivo del titular de la=20
+direcci=C3=B3n de correo electr=C3=B3nico a la que est=C3=A1 dirigido. Si U=
+sted no es el=20
+destinatario de este mensaje, tenga la amabilidad de informarlo al=20
+remitente y eliminarlo de su sistema.
+El emisor no es responsable por eventuales errores, omisiones o contenido=
+=20
+inexacto de este mensaje o sus adjuntos, ni garantiza su seguridad e=20
+integridad en raz=C3=B3n de que lo transmitido por este medio puede ser obj=
+eto=20
+de alteraci=C3=B3n, obstrucci=C3=B3n y otras irregularidades por parte de t=
+erceros=20
+ajenos al remitente. Muchas gracias.
+
+
+
+Este e-mail es confidencial y solamente para uso del destinatario. En caso=
+=20
+de ser recibido indebidamente, por favor elim=C3=ADnelo inmediatamente y=20
+comun=C3=ADqueselo al remitente.
+
+This email is confidential and intended solely for the use of the=20
+addressee. If you have received this email in error, please delete it=20
+immediately and notify the sender.
+--=20
+Este e-mail es confidencial y solamente para uso del destinatario. En caso=
+=20
+de ser recibido indebidamente, por favor elim=EF=BF=BDnelo inmediatamente y=
+=20
+comun=EF=BF=BDqueselo al remitente.
+This email is confidential and intended solely for the use of the=20
+addressee. If you have received this email in error, please delete it=20
+inmediately and notify to the sender.
+
+--=_alternative 0063A2AA03258067_=
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<font size=3D2 face=3D"sans-serif">Buenas tardes</font>
+<br>
+<br><font size=3D2 face=3D"sans-serif">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</font>
+<br><font size=3D2 face=3D"sans-serif">Faltar=C3=ADa el ajuste de cantidad =
+de mercader=C3=ADa
+como detallamos y la aclaraci=C3=B3n del destino: Pto San Martin</font>
+<br>
+<br><font size=3D2 face=3D"sans-serif">Sldos</font>
+<br>
+<br><font size=3D2 face=3D"sans-serif">&nbsp; Diego Medori<br>
+ &nbsp;Administracion Comercial<br>
+ &nbsp;Bunge Argentina S.A.<br>
+ &nbsp;(0341) 5123302<br>
+ <br>
+ &nbsp;</font>
+<br>
+<br>
+<br>
+<br><font size=3D1 color=3D#5f5f5f face=3D"sans-serif">From: &nbsp; &nbsp; =
+&nbsp;
+&nbsp;</font><a href=3Dwww.confirma.com.ar><font size=3D1 face=3D"sans-seri=
+f">www.confirma.com.ar</font></a><font size=3D1 face=3D"sans-serif">
+&lt;firmadigital@confirma.com.ar&gt;</font>
+<br><font size=3D1 color=3D#5f5f5f face=3D"sans-serif">To: &nbsp; &nbsp; &n=
+bsp;
+&nbsp;</font><font size=3D1 face=3D"sans-serif">&lt;diego.medori@bunge.com&=
+gt;,
+&lt;pablo.bardes@bunge.com&gt;, &lt;hernan.wust@bunge.com&gt;, &lt;control@=
+tacuaritas.com.ar&gt;,
+&lt;gsieber@fapersa.com&gt;, &lt;jpruata@fapersa.com&gt;</font>
+<br><font size=3D1 color=3D#5f5f5f face=3D"sans-serif">Date: &nbsp; &nbsp; =
+&nbsp;
+&nbsp;</font><font size=3D1 face=3D"sans-serif">10/11/2016 15:05</font>
+<br><font size=3D1 color=3D#5f5f5f face=3D"sans-serif">Subject: &nbsp; &nbs=
+p;
+&nbsp; &nbsp;</font><font size=3D1 face=3D"sans-serif">Anulaci=C3=B3n de
+documentoBCR</font>
+<br>
+<hr noshade>
+<br>
+<br>
+<table width=3D100% style=3D"border-collapse:collapse;">
+<tr height=3D8>
+<td width=3D31% bgcolor=3Dwhite style=3D"border-style:none none none none;b=
+order-color:#000000;border-width:0px 0px 0px 0px;padding:0px 0px;">
+<td width=3D68% bgcolor=3Dwhite style=3D"border-style:none none none none;b=
+order-color:#000000;border-width:0px 0px 0px 0px;padding:0px 0px;">
+<div align=3Dright></div>
+<tr height=3D8>
+<td colspan=3D2 style=3D"border-style:none none none none;border-color:#000=
+000;border-width:0px 0px 0px 0px;padding:0px 0px;"></table>
+<br>
+<table width=3D100% style=3D"border-collapse:collapse;">
+<tr height=3D8>
+<td width=3D73% style=3D"border-style:none none none none;border-color:#000=
+000;border-width:0px 0px 0px 0px;padding:1px 1px;"><font size=3D1 face=3D"A=
+rial"><b>Jueves,
+10 de Noviembre de 2016 </b></font>
+<td width=3D22% style=3D"border-style:none none none none;border-color:#000=
+000;border-width:0px 0px 0px 0px;padding:1px 1px;">
+<td width=3D1% valign=3Dtop style=3D"border-style:none none none none;borde=
+r-color:#000000;border-width:0px 0px 0px 0px;padding:1px 1px;">
+<td width=3D1% valign=3Dtop style=3D"border-style:none none none none;borde=
+r-color:#000000;border-width:0px 0px 0px 0px;padding:1px 1px;">
+<td width=3D1% valign=3Dtop style=3D"border-style:none none none none;borde=
+r-color:#000000;border-width:0px 0px 0px 0px;padding:1px 1px;">
+<tr height=3D8>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;"><font size=3D1 face=3D"Arial"><b>Ser=
+vicio
+Confirma [Bolsa de Comercio de Rosario] </b></font>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td valign=3Dtop style=3D"border-style:none none none none;border-color:#00=
+0000;border-width:0px 0px 0px 0px;padding:1px 1px;">
+<td valign=3Dtop style=3D"border-style:none none none none;border-color:#00=
+0000;border-width:0px 0px 0px 0px;padding:1px 1px;">
+<td valign=3Dtop style=3D"border-style:none none none none;border-color:#00=
+0000;border-width:0px 0px 0px 0px;padding:1px 1px;">
+<tr height=3D8>
+<td colspan=3D4 style=3D"border-style:none none none none;border-color:#000=
+000;border-width:0px 0px 0px 0px;padding:1px 1px;"><font size=3D1 face=3D"A=
+rial">Por
+medio de la presente le comunicamos que el documento formado por las partes=
+:
+</font>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<tr height=3D8>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;"><font size=3D1 face=3D"Arial"><b>LA
+TURQUINA S A</b></font>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;"><font size=3D1 face=3D"Arial">N=C3=
+=BAmero
+interno: <b>44558</b></font>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<tr height=3D8>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;"><font size=3D1 face=3D"Arial"><b>LAS
+TACUARITAS MANDATARIA S.R.L. </b></font>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;"><font size=3D1 face=3D"Arial">N=C3=
+=BAmero
+interno: <b>44558</b></font>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<tr height=3D8>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;"><font size=3D1 face=3D"Arial"><b>BUN=
+GE
+ARGENTINA S A</b></font>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;"><font size=3D1 face=3D"Arial">N=C3=
+=BAmero
+interno: <b>31/93239</b></font>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<tr height=3D8>
+<td colspan=3D2 style=3D"border-style:none none none none;border-color:#000=
+000;border-width:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<tr height=3D8>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;"><font size=3D1 face=3D"Arial"><b>ha
+sido anulado por la empresa BUNGE ARGENTINA S A por el siguiente motivo:
+</b></font>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<tr height=3D8>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;"><font size=3D1 face=3D"Arial">falta
+ajuste de cantidad de mercader=C3=ADa: mas 2 tn / menos 3 tn</font>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;"></table>
+<br>
+<hr><font size=3D3 color=3D#008000 face=3D"Webdings"><br>
+P </font><font size=3D3 color=3D#008000>Antes de imprimir este mensaje por
+favor piense en <b>su responsabilidad</b> con el medio ambiente.</font><fon=
+t size=3D3 color=3D#000080 face=3D"Arial"><br>
+-----------------------------------------</font><font size=3D3 color=3D#004=
+080 face=3D"Arial"><br>
+Este correo electr=C3=B3nico es confidencial. La informaci=C3=B3n contenida=
+ en el
+presente mensaje y sus adjuntos son de uso exclusivo del titular de la
+direcci=C3=B3n de correo electr=C3=B3nico a la que est=C3=A1 dirigido. Si U=
+sted no es
+el destinatario de este mensaje, tenga la amabilidad de informarlo al remit=
+ente
+y eliminarlo de su sistema.<br>
+El emisor no es responsable por eventuales errores, omisiones o contenido
+inexacto de este mensaje o sus adjuntos, ni garantiza su seguridad e integr=
+idad
+en raz=C3=B3n de que lo transmitido por este medio puede ser objeto de alte=
+raci=C3=B3n,
+obstrucci=C3=B3n y otras irregularidades por parte de terceros ajenos al re=
+mitente.
+Muchas gracias.</font>
+<br>
+<br><font size=3D2 face=3D"sans-serif"><br>
+<br>
+Este e-mail es confidencial y solamente para uso del destinatario. En caso
+de ser recibido indebidamente, por favor elim=C3=ADnelo inmediatamente y co=
+mun=C3=ADqueselo
+al remitente.<br>
+<br>
+This email is confidential and intended solely for the use of the addressee=
+.
+If you have received this email in error, please delete it immediately
+and notify the sender.</font>
+<br>
+Este e-mail es confidencial y solamente para uso del destinatario. En caso =
+de ser recibido indebidamente, por favor elim=EF=BF=BDnelo inmediatamente y=
+ comun=EF=BF=BDqueselo al remitente.<br/>This email is confidential and int=
+ended solely for the use of the addressee. If you have received this email =
+in error, please delete it inmediately and notify to the sender.<br/>
+--=_alternative 0063A2AA03258067_=--

@@ -1,0 +1,1594 @@
+Return-Path: <0100015b87e216c4-60dad80c-ddce-48ae-9cf6-cf1d6d90e752-000000@mailer.netflix.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id wbGdIjrH91hIAwAATLP0zA
+	for <jpruata@fapersa.com>; Wed, 19 Apr 2017 17:23:22 -0300
+Return-path: <0100015b87e216c4-60dad80c-ddce-48ae-9cf6-cf1d6d90e752-000000@mailer.netflix.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Wed, 19 Apr 2017 17:23:22 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:40640 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.88)
+	(envelope-from <0100015b87e216c4-60dad80c-ddce-48ae-9cf6-cf1d6d90e752-000000@mailer.netflix.com>)
+	id 1d0w8H-0000IB-Ai
+	for jpruata@fapersa.com; Wed, 19 Apr 2017 17:23:22 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id BD4FA7F21B
+	for <jpruata@fapersa.com>; Wed, 19 Apr 2017 17:23:20 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id J2tmk-hViytk for <jpruata@fapersa.com>;
+	Wed, 19 Apr 2017 17:23:20 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 06B6D7F231; Wed, 19 Apr 2017 17:23:20 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 2BD617F21B
+	for <jpruata@fapersa.com>; Wed, 19 Apr 2017 17:23:18 -0300 (ART)
+Received-SPF: pass (mailer.netflix.com: Sender is authorized to use '0100015b87e216c4-60dad80c-ddce-48ae-9cf6-cf1d6d90e752-000000@mailer.netflix.com' in 'mfrom' identity (mechanism 'include:amazonses.com' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="0100015b87e216c4-60dad80c-ddce-48ae-9cf6-cf1d6d90e752-000000@mailer.netflix.com"; helo=a14-193.smtp-out.amazonses.com; client-ip=54.240.14.193
+Received: from a14-193.smtp-out.amazonses.com (a14-193.smtp-out.amazonses.com [54.240.14.193])
+	by fw.fapersa.com (Postfix) with ESMTPS id 6D4015FE81
+	for <jpruata@fapersa.com>; Wed, 19 Apr 2017 17:23:15 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ptae7r3cteoroapfxx6bgqeoezjtpshp; d=netflix.com; t=1492633392;
+	i=@mailer.netflix.com;
+	h=Date:From:Sender:To:Message-ID:Subject:MIME-Version:Content-Type:List-Unsubscribe;
+	bh=wkgpKUQTIjb7aqGF2VnwPNM5Zjw/NRjZY+KEW0nHdwM=;
+	b=QhKvdKqnPNgIiWptE89v2TWLb86Fh6KVvj1cxxny6EYvSoQFf0Fo2GnFVAygFrFa
+	fZUP1YUgCW3XcY97quER29/QAJ2rzjC6JiJ9OJpndAYZxqWpZv3eL+c5UfvXuK9/4tA
+	YPrskOOmU1s9MaOkL2KXJAyYoLWGrwky8oa4lemg=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=224i4yxa5dv7c2xz3womw6peuasteono; d=amazonses.com; t=1492633392;
+	h=Date:From:Sender:To:Message-ID:Subject:MIME-Version:Content-Type:List-Unsubscribe:Feedback-ID;
+	bh=wkgpKUQTIjb7aqGF2VnwPNM5Zjw/NRjZY+KEW0nHdwM=;
+	b=li3BFgx4eZ/D1Oqy8OxHZLyStxpnvCg0jz616mygSvo5LU+Dhs5v0f3VnzWeazCX
+	+QNapnM5OJP9aODVh6DE1Ci5CrslAT6DMUjgWBFwRbAbS0891RIxBCu4vpoM/xgnAlS
+	M2zVaPFsY/zVJHM67MFJlWQOsJjkbBVnTzmKOtm0=
+Date: Wed, 19 Apr 2017 20:23:12 +0000
+From: Netflix <info@mailer.netflix.com>
+Sender: Netflix <info@mailer.netflix.com>
+To: jpruata@fapersa.com
+Message-ID: <0100015b87e216c4-60dad80c-ddce-48ae-9cf6-cf1d6d90e752-000000@email.amazonses.com>
+Subject: =?utf-8?Q?Juan_Pablo,_creemos_que_te_gustar=C3=A1...?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_13483_1784994879.1492633392820"
+X-To: jpruata@fapersa.com
+Precedence: bulk
+X-AppInfo: Netflix Mercury s.bdd67da.2198
+X-ProcEnc: BQAtAAEBEDtNtCYVMdN5VbQ4kt6deA0gsC+bzg11+e++2fGIT6xpNNN1akDIU4ASECe1eixhnFI=
+X-MailingID: mercury::MR::00605::594D784C81B8C1185BFC7C4D86EDB8E164520CCF::<15B87E216B4@netflix.com>
+X-GroupId: 4
+X-localeCountry: es::AR
+X-ProcInfo: mercurymailman::9c40a7f6cf6e::eventconsumer::eventconsumer-batch-i-0cc466c523697098b::mercurymp-throttled-i-022491046a4e17c1a::00:00:21:18.079
+X-EvCacheKey: 00605.EMAIL.WELCOME_DAY75.-0005.-5.es.AR
+X-Version: 4785
+List-Unsubscribe: <mailto:RTJQTjQ0N0FTUkhFTkVEU1EyQk9PU0FCUlU5RDEy@unsubscribe.netflix.com>, <http://signup.netflix.com/EmailUnsubscribe?id=BQE0AAEBEGqDZc3sJDJsaT75%2B%2FGo%2BGaAkJcOGPef891UYWJ8IIHLbk2MU5tE5bwrVA0j33KRMYjxWREH3yJ%2Bw5jHt%2BJmR%2FAN%2B8xvexUq8jm%2FCBGCgmpDVOYWMwTx5tM3P%2F3T7%2B2boEoc4McDI%2FW%2Fzp%2Fy6jYTHpgyZzucbQUyXUQHZdOsCUpZPPHOubvkhxg8l8SCiztWy0yWN57s2OH6tA7xLEslfN%2F%2BQA%3D%3D&mid=null&lnktrk=EMP&g=594D784C81B8C1185BFC7C4D86EDB8E164520CCF&lkid=unsubscribe_link>
+X-SES-Outgoing: 2017.04.19-54.240.14.193
+Feedback-ID: 1.us-east-1.e/1JYhpKv/dBWKAQgARyQ1DQa1Z9EXFU4w7Gpx+7ZbQ=:AmazonSES
+
+------=_Part_13483_1784994879.1492633392820
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+NETFLIX
+
+Para: Juan Pablo
+
+Better Call Saul
+=20
+2015&nbsp;&nbsp;3 temporadas=20
+
+Una serie nominada al Emmy que deriva de "Breaking Bad" y sigue la metamorf=
+osis del abogado Jimmy McGill en Saul Goodman, el asesor inescrupuloso de W=
+alter White.
+
+M=C3=A1s=C2=A0info
+https://www.netflix.com/title/80021955?trkid=3D13710079&lnktrk=3DEMP&g=3D59=
+4D784C81B8C1185BFC7C4D86EDB8E164520CCF&lkid=3DTITLE_1_PERSO_MDP
+
+REPRODUCIR
+https://www.netflix.com/watch/80021955?trkid=3D13710079&lnktrk=3DEMP&g=3D59=
+4D784C81B8C1185BFC7C4D86EDB8E164520CCF&lkid=3DTITLE_1_PERSO_WATCH
+=20
++ Mi lista
+https://www.netflix.com/add/80021955?msg_token=3DEQIAmQABAYEAb28G7I3elmtDaD=
+Rg8cYfe%2FqucED8EaPvNhTofPx1HoO7caFhyZCL2XQcVa2z7099Aer6PAUhGbY4OXpBvbQkgic=
+1F3wiwOtsv9Gldui2yzyFltMfc8jWMTRmmNgRVR4b0wfJvVNur8mIDvt4c89sPOsO7%2BdvmfI9=
+9YfkqiFZ6RpBqQ%2BIERhZgEelFynspqP8ciX%2B8faG1XPqvLHV6e0FJKGtiasn0y6IFgKcoty=
+yqpLwPg7BWPqmkKmNSCo0msT5pLW0MTzLd%2BGQ52JWZqyNdVO9ss6TrIewrts53eeO6pkA3c%2=
+FQoUarlu2ax5FsW6EoZSoO7UoJr%2FoHAfxgHjs3ebXVYjM%3D&trkid=3D13710079&lnktrk=
+=3DEMP&g=3D594D784C81B8C1185BFC7C4D86EDB8E164520CCF&lkid=3DTITLE_1_PERSO_AD=
+D
+El marginal
+=20
+2016&nbsp;&nbsp;13 episodios=20
+
+Un expolic=C3=ADa infiltrado intenta desbaratar una banda que opera desde l=
+a c=C3=A1rcel, pero antes deber=C3=A1 manejar los c=C3=B3digos del inframun=
+do para sobrevivir.
+
+M=C3=A1s=C2=A0info
+https://www.netflix.com/title/80115297?trkid=3D13710079&lnktrk=3DEMP&g=3D59=
+4D784C81B8C1185BFC7C4D86EDB8E164520CCF&lkid=3DTITLE_2_PERSO_MDP
+
+REPRODUCIR
+https://www.netflix.com/watch/80115297?trkid=3D13710079&lnktrk=3DEMP&g=3D59=
+4D784C81B8C1185BFC7C4D86EDB8E164520CCF&lkid=3DTITLE_2_PERSO_WATCH
+=20
++ Mi lista
+https://www.netflix.com/add/80115297?msg_token=3DEQIAmQABAYEApZ92pKdoeCm3aO=
+nz3LW2MP8JHSuq9fFy36WANcCSes4vbvYNDrRRdJ9cAteU5Dg1yDIlfvz8L4Clj1PGrOmWCDrEu=
+PV0c%2FKJAYF3wU9PU7u%2BUCleR1pysFoUHTUHObQ4%2Bz%2BAxUVMZc1CgfHOhqDHX9J61Csz=
+t4p9dzHkinUSANzsT1jecnzySEd6IEwsbmOg%2BgCcIse%2FSAfn4Usp4aHvvLj4AfRYYuocjam=
+9dSxtDlozUt9IimlbdzXwzNzHDIT5h9L020t91%2BeCbLcNPhd6OT6uCrew%2FU7ZIx5I8LJP9T=
+PHMMHWvre2yHIyKE15ADsgWVpKp%2BLUboGW%2B7%2F9Gk%2B9xcpushc%3D&trkid=3D137100=
+79&lnktrk=3DEMP&g=3D594D784C81B8C1185BFC7C4D86EDB8E164520CCF&lkid=3DTITLE_2=
+_PERSO_ADD
+Pablo Escobar, el patr=C3=B3n del mal
+=20
+2012&nbsp;&nbsp;74 episodios=20
+
+Esta fascinante serie narra la vida del infame Pablo Escobar, desde sus d=
+=C3=ADas como ratero hasta convertirse en el jefe de un imperio del narcotr=
+=C3=A1fico.
+
+M=C3=A1s=C2=A0info
+https://www.netflix.com/title/80035684?trkid=3D13710079&lnktrk=3DEMP&g=3D59=
+4D784C81B8C1185BFC7C4D86EDB8E164520CCF&lkid=3DTITLE_3_PERSO_MDP
+
+REPRODUCIR
+https://www.netflix.com/watch/80035684?trkid=3D13710079&lnktrk=3DEMP&g=3D59=
+4D784C81B8C1185BFC7C4D86EDB8E164520CCF&lkid=3DTITLE_3_PERSO_WATCH
+=20
++ Mi lista
+https://www.netflix.com/add/80035684?msg_token=3DEQIAmQABAYEAW2c4MuAsmtREjL=
+0nv%2BbP%2B5Mw3LP4wyJIrxJTdCAgSeeLkVWVEqp4KocUi5llChwX4ilPWIU8E4ZrLCKaRhAzl=
+U%2FLdG5Gtz6eRikD2I5%2BxDa2uhFOUuorQPoDoZUzsg0XWUgelNSnaJF65BmQJWiemKazlOO4=
+OSQIvE8bRfhNehP%2FJdAYizjKR7gXakeqqta05YkjVb6XhSIuzusZispfib9bS3ZurGYcsTWb3=
+ILv%2BxF89EeFLegJkFiEGuCS0j2w2L289grwwReLFUqj5U9%2FDzMhupaBSCzLYq7eHIMBOXKN=
+fCKf1v7qsU6q0mwyRukfLWbeEEBxl7GeFcdUt2QHycySAz0%3D&trkid=3D13710079&lnktrk=
+=3DEMP&g=3D594D784C81B8C1185BFC7C4D86EDB8E164520CCF&lkid=3DTITLE_3_PERSO_AD=
+D
+
+
+
+Tambi=C3=A9n en Agregados recientemente
+
+13 Reasons Why
+https://www.netflix.com/title/80117470?trkid=3D13710079&lnktrk=3DEMP&g=3D59=
+4D784C81B8C1185BFC7C4D86EDB8E164520CCF&lkid=3DTITLE_1_REC_ADDED_MDP
+
+Marvel - Iron Fist
+https://www.netflix.com/title/80002612?trkid=3D13710079&lnktrk=3DEMP&g=3D59=
+4D784C81B8C1185BFC7C4D86EDB8E164520CCF&lkid=3DTITLE_2_REC_ADDED_MDP
+
+The 100
+https://www.netflix.com/title/70283264?trkid=3D13710079&lnktrk=3DEMP&g=3D59=
+4D784C81B8C1185BFC7C4D86EDB8E164520CCF&lkid=3DTITLE_3_REC_ADDED_MDP
+
+
+
+Ver todos los programas y las pel=C3=ADculas
+
+=C2=BFPreguntas? Llama al 0-800-800-1300.
+
+
+*************************
+Te enviamos este email informativo como parte de tu membres=C3=ADa de Netfl=
+ix. Si deseas dejar de recibir estos emails, haz clic aqu=C3=AD para cancel=
+ar (http://www.netflix.com/ManageSubscriptions?id=3DBQE0AAEBEGqDZc3sJDJsaT7=
+5%2B%2FGo%2BGaAkJcOGPef891UYWJ8IIHLbk2MU5tE5bwrVA0j33KRMYjxWREH3yJ%2Bw5jHt%=
+2BJmR%2FAN%2B8xvexUq8jm%2FCBGCgmpDVOYWMwTx5tM3P%2F3T7%2B2boEoc4McDI%2FW%2Fz=
+p%2Fy6jYTHpgyZzucbQUyXUQHZdOsCUpZPPHOubvkhxg8l8SCiztWy0yWN57s2OH6tA7xLEslfN=
+%2F%2BQA%3D%3D&mid=3D20792311&lnktrk=3DEMP&g=3D594D784C81B8C1185BFC7C4D86ED=
+B8E164520CCF&lkid=3Dunsubscribe_link), o visita la p=C3=A1gina Configuraci=
+=C3=B3n de comunicaciones (https://www.netflix.com/EmailPreferences?lnktrk=
+=3DEMP&g=3D594D784C81B8C1185BFC7C4D86EDB8E164520CCF&lkid=3Demail_settings),=
+ desmarca el cuadro "Ahora en Netflix" y haz clic en "Actualizar". No respo=
+ndas a este email, ya que no podemos contestarte desde esta direcci=C3=B3n.=
+ Si necesitas asistencia o deseas=C2=A0contactarnos, visita nuestro Centro =
+de ayuda=C2=A0(http://help.netflix.com/help?lnktrk=3DEMP&g=3D594D784C81B8C1=
+185BFC7C4D86EDB8E164520CCF&lkid=3Dhelp_center).
+   =20
+Netflix envi=C3=B3 este mensaje a [jpruata@fapersa.com].
+       =20
+SRC: 00605_es_AR
+       =20
+El uso del servicio y del sitio web de Netflix est=C3=A1 sujeto a nuestros =
+T=C3=A9rminos de uso (http://www.netflix.com/TermsOfUse?lnktrk=3DEMP&g=3D59=
+4D784C81B8C1185BFC7C4D86EDB8E164520CCF&lkid=3DURL_TERMS) y a nuestra Declar=
+aci=C3=B3n de privacidad (http://www.netflix.com/PrivacyPolicy?lnktrk=3DEMP=
+&g=3D594D784C81B8C1185BFC7C4D86EDB8E164520CCF&lkid=3DURL_PRIVACY).
+       =20
+=E2=80=AANetflix International B.V.=E2=80=AC
+
+
+------=_Part_13483_1784994879.1492633392820
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+ <head>=20
+  <title></title>=20
+  <style type=3D"text/css">
+      #outlook a {padding:0;} body{width:100% !important; -webkit-text-size=
+-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;} .ExternalCla=
+ss {width:100%;} .ExternalClass, .ExternalClass p, .ExternalClass span, .Ex=
+ternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;=
+} #backgroundTable {margin:0; padding:0; width:100% !important; line-height=
+: 100% !important;}
+      span[class"iOSlinks"] a { color:#666666 !important; text-decoration:n=
+one !important; }
+    </style>=20
+  <style>
+       =20
+    =09
+    </style>=20
+  <!--[if !mso]><!-->=20
+  <style type=3D"text/css">
+
+      @media only screen and (max-width: 480px) {
+
+        *[class=3D"off"] { display:none; }
+        *[class*=3D"show"], *[class*"show"] img { display: block !important=
+; margin:0 !important; padding:0 !important; overflow: visible !important; =
+width: auto !important; max-height:inherit !important; height:auto !importa=
+nt; }
+        td[class=3D"block"] { display:block !important; width:100% !importa=
+nt; padding:0 !important; }
+        table[id=3D"backgroundTable"] { padding:0px !important; }
+        table[id=3D"wrapper"] { min-width:100% !important; width:100% !impo=
+rtant; }
+        td[class=3D"bodyWrap"] { padding:21px 0 0 0 !important }
+        td[class=3D"contentWrap"] { padding:0 15px 24px 15px !important }
+        td[class=3D"width100"] img { width:100% !important; height:auto !im=
+portant; }
+        td[class=3D"width70"] img { width:70% !important; height:auto !impo=
+rtant; }
+        td[class=3D"textQuestions"] { font-size:13px !important; }
+        td[class=3D"footerPadding"] { padding: 0 10px !important;  }
+        body { background-color:#dfdfdf !important;  }
+      }
+    </style>=20
+  <!--<![endif]-->=20
+ </head>=20
+ <body bgcolor=3D"#dfdfdf" style=3D"margin:0; padding:0;width:100%;-webkit-=
+text-size-adjust:100%;-ms-text-size-adjust:100%;margin:0;padding:0;">=20
+  <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=
+=3D"backgroundTable" bgcolor=3D"#dfdfdf" align=3D"center" style=3D"margin:0=
+;padding:0;width:100%;line-height:100%;">=20
+   <tbody>
+    <tr>=20
+     <td>=20
+      <table id=3D"wrapper" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"520" style=3D"min-width:520px" bgcolor=3D"#dfdfdf" align=3D"cent=
+er">=20
+       <tbody>
+        <tr>=20
+         <td class=3D"bodyWrap" style=3D"padding:28px 15px 0 15px;">=20
+          <!--[if !mso]><!--> <style type=3D"text/css">
+  @media only screen and (max-width: 480px) {
+    td[class=3D"logo"] img { width:36% !important; height: auto !important;=
+ }
+    td[class=3D"nowOnN"] { padding-top:8px !important; padding-bottom:0 !im=
+portant; }
+    td[class=3D"forImg"] img { height: auto !important; }
+    td[class=3D"profName"] { font-size:16px !important;}
+    td[class=3D"noprofName"] { padding-top:5px !important; }
+
+  }
+</style>=20
+          <!--<![endif]-->=20
+          <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"=
+100%">=20
+           <tbody>
+            <tr>=20
+             <td align=3D"center" valign=3D"top" class=3D"logo"><a href=3D"=
+https://www.netflix.com/browse?lnktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4=
+D86EDB8E164520CCF&amp;lkid=3DURL_HOME" target=3D"_blank" style=3D"text-deco=
+ration: none;"><img alt=3D"NETFLIX" src=3D"http://cdn.nflximg.com/us/email/=
+logo/newDesign/logo_v2.png" width=3D"164" height=3D"45" border=3D"0" style=
+=3D"display:block;color:#e50914;font-size:22px;font-family: Helvetica, Aria=
+l, sans-serif;-webkit-text-size-adjust: none;"></a></td>=20
+            </tr>=20
+            <tr>=20
+             <td class=3D"nowOnN" align=3D"center" valign=3D"top" style=3D"=
+padding-top:12px;">=20
+              <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" b=
+order=3D"0">=20
+               <tbody>
+                <tr>=20
+                 <td class=3D"profName" align=3D"left" valign=3D"top" style=
+=3D"display:block;font-family: Georgia, Helvetica, Arial, sans-serif;-webki=
+t-text-size-adjust: none;font-size:18px;font-style:italic;line-height:100%;=
+color:#454545;font-weight:normal;padding:0px 0px 15px 0px;">Para: <span sty=
+le=3D"font-style:normal">Juan Pablo</span></td>=20
+                </tr>=20
+               </tbody>
+              </table> </td>=20
+            </tr>=20
+           </tbody>
+          </table>=20
+          <!--[if !mso]><!--> <style type=3D"text/css">
+  @media only screen and (max-width: 480px) {
+    table[class=3D"content"] { width:100% !important }
+  }
+</style>=20
+          <!--<![endif]-->=20
+          <table class=3D"content" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"520" align=3D"center" border=3D"0">=20
+           <tbody>
+            <tr>=20
+             <td style=3D"padding:0px 0px 0px 0px;">=20
+              <!--[if !mso]><!--> <style type=3D"text/css">
+  @media only screen and (max-width: 480px) {
+    table[class=3D'pod'] { width:94% !important }
+
+  }
+</style>=20
+              <!--<![endif]-->=20
+              <table class=3D"pod" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"570" align=3D"center" border=3D"0">=20
+               <tbody>
+                <tr>=20
+                 <td valign=3D"top" width=3D"50%" class=3D"width57">=20
+                  <!--[if !mso]><!--> <style type=3D"text/css">
+        @media only screen and (max-width: 480px) {
+          td[class=3D'width57'] { width:57% !important; height:auto !import=
+ant; }
+          td[class=3D'width57'] img { width:100% !important; height:auto !i=
+mportant; }
+
+
+
+        }
+      </style>=20
+                  <!--<![endif]-->=20
+                  <table class=3D"hero" cellpadding=3D"0" cellspacing=3D"0"=
+ width=3D"100%" align=3D"center" border=3D"0">=20
+                   <tbody>
+                    <tr>=20
+                     <td class=3D"width57" align=3D"left" valign=3D"top"> <=
+a href=3D"https://www.netflix.com/title/80021955?trkid=3D13710079&amp;MSG_T=
+ITLE=3D80021955&amp;lnktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86EDB8E164=
+520CCF&amp;lkid=3DTITLE_1_PERSO_MDP"> <img style=3D"display:block;color:#45=
+4545;font-size:16px;border-top-left-radius:4px;border-bottom-left-radius:4p=
+x;" src=3D"http://art-0.nflximg.net/5fa5f/c70ac415726c942a97f71e65694da46f8=
+635fa5f.jpg" border=3D"0" alt=3D"Better Call Saul" width=3D"285" height=3D"=
+405"> </a> </td>=20
+                    </tr>=20
+                   </tbody>
+                  </table> </td>=20
+                 <td width=3D"50%" valign=3D"top" align=3D"left" bgcolor=3D=
+"#ffffff" style=3D"border-top-right-radius:4px;border-bottom-right-radius:4=
+px;">=20
+                  <!--[if !mso]><!--> <style type=3D"text/css">
+        @media only screen and (max-width: 480px) {
+
+          td[class=3D'width43'] { width:43% !important; height:auto !import=
+ant; font-size:16px !important;padding:15px 10px 10px 10px !important;}
+          td[class=3D'frInfo'] { font-size:12px !important;padding:0px 10px=
+ 5px 10px !important; }
+          td[class=3D'frSyn'] { font-size:13px !important;padding:0px 10px =
+0px 10px !important;line-height:16px !important; display: -webkit-box;
+            -webkit-line-clamp: 9; -webkit-box-orient: vertical; overflow:h=
+idden; }
+        }
+
+        @media only screen and (max-width: 380px) {
+
+          td[class=3D'width43'] { width:43% !important; height:auto !import=
+ant; font-size:14px !important;padding:10px 10px 5px 10px !important;line-h=
+eight:16px !important;}
+          td[class=3D'frInfo'] { font-size:12px !important;padding:0px 10px=
+ 5px 10px !important; }
+          td[class=3D'frSyn'] { font-size:13px !important;padding:0px 10px =
+0px 10px !important;line-height:15px !important; display: -webkit-box;
+            -webkit-line-clamp: 9; -webkit-box-orient: vertical; overflow:h=
+idden; }
+        }
+      </style>=20
+                  <!--<![endif]-->=20
+                  <table class=3D"content" cellpadding=3D"0" cellspacing=3D=
+"0" width=3D"100%" border=3D"0">=20
+                   <tbody>
+                    <tr>=20
+                     <td class=3D"width43" style=3D"font-family: Helvetica,=
+ Arial, sans-serif;-webkit-text-size-adjust: none;font-size:26px;padding:20=
+px 20px 15px 15px;font-weight:bold;color:#454545;line-height:100%;"><a href=
+=3D"https://www.netflix.com/title/80021955?trkid=3D13710079&amp;MSG_TITLE=
+=3D80021955&amp;lnktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86EDB8E164520C=
+CF&amp;lkid=3DTITLE_1_PERSO_MDP_2" style=3D"color:#333333;text-decoration:n=
+one;">Better Call Saul</a></td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td class=3D"frInfo" style=3D"font-family: Helvetica, =
+Arial, sans-serif;-webkit-text-size-adjust: none;font-size:14px;padding:0px=
+ 20px 10px 15px;color:#454545;font-weight:bold;"> 2015&nbsp;&nbsp;3 tempora=
+das </td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td class=3D"frSyn" style=3D"font-family: Helvetica, A=
+rial, sans-serif;-webkit-text-size-adjust: none;font-size:14px;padding:0px =
+15px 20px 15px;color:#454545;line-height:22px;">Una serie nominada al Emmy =
+que deriva de "Breaking Bad" y sigue la metamorfosis del abogado Jimmy McGi=
+ll en Saul Goodman, el asesor inescrupuloso de Walter White. <a href=3D"htt=
+ps://www.netflix.com/title/80021955?trkid=3D13710079&amp;MSG_TITLE=3D800219=
+55&amp;lnktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86EDB8E164520CCF&amp;lk=
+id=3DTITLE_1_PERSO_MDP_3" style=3D"color:#333333;">M=C3=A1s&nbsp;info</a></=
+td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td valign=3D"top" align=3D"center">=20
+                      <!--[if !mso]><!--> <style type=3D"text/css">
+              @media only screen and (max-width: 480px) {
+
+                table[class=3D'button'] { display:none !important; }
+
+              }
+
+
+            </style>=20
+                      <!--<![endif]-->=20
+                      <table class=3D"button" cellspacing=3D"0" align=3D"ce=
+nter" cellpadding=3D"0" border=3D"0" width=3D"86%" style=3D"table-layout: f=
+ixed;">=20
+                       <tbody>
+                        <tr>=20
+                         <td align=3D"center" width=3D"100%" class=3D"butto=
+nPad" style=3D"padding:0px 0px 20px 0px;">=20
+                          <table width=3D"100%" cellspacing=3D"0" border=3D=
+"0" align=3D"center" cellpadding=3D"0" style=3D"table-layout: fixed;">=20
+                           <tbody>
+                            <tr>=20
+                             <td class=3D"buttonFont" height=3D"38" align=
+=3D"center" style=3D"font-family: Helvetica, Arial, sans-serif;-webkit-text=
+-size-adjust: none;font-size:16px;font-weight: bold;color:#fefefe;letter-sp=
+acing:1px;padding: 0px 0px 0px 0px;background-color: #c20002;text-decoratio=
+n: none;text-align: center;=20
+                                                                           =
+     border: 1px solid #e50914;=20
+                                                                           =
+     border-radius: 5px;
+                                                                           =
+     -webkit-border-radius: 5px;=20
+                                                                           =
+     -moz-border-radius: 5px;
+                                                                           =
+     -webkit-text-shadow:#666 0 1px 0px;
+                                                                           =
+     -text-shadow:#666 0 1px 0px;
+                                                                           =
+     -moz-text-shadow:#666 0 1px 0px;
+                                                                           =
+     -o-text-shadow:#666 0 1px 0px;=20
+                                                                           =
+     -ms-text-shadow:#666 0 1px 0px;
+                                                                           =
+     background-image: linear-gradient(top, rgb(224,9,19), rgb(163,3,11));
+                                                                           =
+     background-image: -o-linear-gradient(top, rgb(224,9,19), rgb(163,3,11)=
+);
+                                                                           =
+     background-image: -moz-linear-gradient(top, rgb(224,9,19), rgb(163,3,1=
+1));
+                                                                           =
+     background-image: -webkit-linear-gradient(top, rgb(224,9,19), rgb(163,=
+3,11));
+                                                                           =
+     background-image: -ms-linear-gradient(top, rgb(224,9,19), rgb(163,3,11=
+));"> <a href=3D"https://www.netflix.com/watch/80021955?trkid=3D13710079&am=
+p;MSG_TITLE=3D80021955&amp;lnktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86E=
+DB8E164520CCF&amp;lkid=3DTITLE_1_PERSO_WATCH" style=3D"text-decoration:none=
+;color:#fefefe;display:block;">REPRODUCIR</a> </td>=20
+                            </tr>=20
+                           </tbody>
+                          </table> </td>=20
+                        </tr>=20
+                        <tr>=20
+                         <td valign=3D"top">=20
+                          <table class=3D"button" cellspacing=3D"0" align=
+=3D"center" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"table-la=
+yout: fixed;">=20
+                           <tbody>
+                            <tr>=20
+                             <td align=3D"center" class=3D"button_increase"=
+ width=3D"100%">=20
+                              <table class=3D"button" cellspacing=3D"0" ali=
+gn=3D"center" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"table-=
+layout: fixed;">=20
+                               <tbody>
+                                <tr>=20
+                                 <td class=3D"buttonFont" height=3D"38" ali=
+gn=3D"center" style=3D"font-family: Helvetica, Arial, sans-serif;-webkit-te=
+xt-size-adjust: none;font-size:16px;color:#454545;text-decoration: none;pad=
+ding: 0px 0px 0px 5px;background-color: #dbdbdb;padding: 0px 0px 0px 0px;
+                                                                           =
+          border: 1px solid #6e6e6e;=20
+                                                                           =
+          border-radius: 5px;
+                                                                           =
+          -webkit-border-radius: 5px;=20
+                                                                           =
+          -moz-border-radius: 5px;
+                                                                           =
+          -webkit-text-shadow:#666 0 1px 0px;
+                                                                           =
+          -text-shadow:#666 0 1px 0px;
+                                                                           =
+          -moz-text-shadow:#666 0 1px 0px;
+                                                                           =
+          -o-text-shadow:#666 0 1px 0px;=20
+                                                                           =
+          -ms-text-shadow:#666 0 1px 0px;
+                                                                           =
+          background-image: linear-gradient(top, rgb(240,240,240), rgb(192,=
+192,192));
+                                                                           =
+          background-image: -o-linear-gradient(top, rgb(240,240,240), rgb(1=
+92,192,192));
+                                                                           =
+          background-image: -moz-linear-gradient(top, rgb(240,240,240), rgb=
+(192,192,192));
+                                                                           =
+          background-image: -webkit-linear-gradient(top, rgb(240,240,240), =
+rgb(192,192,192));
+                                                                           =
+          background-image: -ms-linear-gradient(top, rgb(240,240,240), rgb(=
+192,192,192));"> <a href=3D"https://www.netflix.com/add/80021955?msg_token=
+=3DEQIAmQABAYEAb28G7I3elmtDaDRg8cYfe%2FqucED8EaPvNhTofPx1HoO7caFhyZCL2XQcVa=
+2z7099Aer6PAUhGbY4OXpBvbQkgic1F3wiwOtsv9Gldui2yzyFltMfc8jWMTRmmNgRVR4b0wfJv=
+VNur8mIDvt4c89sPOsO7%2BdvmfI99YfkqiFZ6RpBqQ%2BIERhZgEelFynspqP8ciX%2B8faG1X=
+PqvLHV6e0FJKGtiasn0y6IFgKcotyyqpLwPg7BWPqmkKmNSCo0msT5pLW0MTzLd%2BGQ52JWZqy=
+NdVO9ss6TrIewrts53eeO6pkA3c%2FQoUarlu2ax5FsW6EoZSoO7UoJr%2FoHAfxgHjs3ebXVYj=
+M%3D&amp;trkid=3D13710079&amp;MSG_TITLE=3D80021955&amp;lnktrk=3DEMP&amp;g=
+=3D594D784C81B8C1185BFC7C4D86EDB8E164520CCF&amp;lkid=3DTITLE_1_PERSO_ADD" s=
+tyle=3D"text-decoration:none;color:#454545;display:block;">+ Mi lista</a> <=
+/td>=20
+                                </tr>=20
+                               </tbody>
+                              </table> </td>=20
+                            </tr>=20
+                           </tbody>
+                          </table> </td>=20
+                        </tr>=20
+                       </tbody>
+                      </table>=20
+                      <!--[if !mso]><!--> <style type=3D"text/css">
+              @media only screen and (max-width: 480px) {
+
+                table[class=3D'mobileButtons'] { display:block !important; =
+height: auto !important;  }
+                table[class=3D'mobileButtons'] td a { display:block; width:=
+45px; height:45px; background-repeat:no-repeat; background-size:100% 100%; =
+margin-left:5px; margin-top:10px;  }
+                td[class=3D'mobilePlay'] a { background:url(http://cdn.nflx=
+img.com/us/email/welcome/day75/playIcon.png);  }
+              td[class=3D'mobileAddto'] a { background:url(http://cdn.nflxi=
+mg.com/us/email/welcome/day75/addIcon.png);  }
+
+              }
+
+            </style>=20
+                      <!--<![endif]-->=20
+                      <table height=3D"0" class=3D"mobileButtons" cellpaddi=
+ng=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" style=3D"mso-hide: a=
+ll; display:none; height:0px;">=20
+                       <tbody>
+                        <tr>=20
+                         <td class=3D"mobilePlay" align=3D"left" valign=3D"=
+top"><a href=3D"https://www.netflix.com/watch/80021955?trkid=3D13710079&amp=
+;MSG_TITLE=3D80021955&amp;lnktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86ED=
+B8E164520CCF&amp;lkid=3DTITLE_1_PERSO_WATCH_2" target=3D"_blank" style=3D"t=
+ext-decoration: none;"></a></td>=20
+                         <td class=3D"mobileAddto" align=3D"left" valign=3D=
+"top"><a href=3D"https://www.netflix.com/add/80021955?msg_token=3DEQIAmQABA=
+YEAb28G7I3elmtDaDRg8cYfe%2FqucED8EaPvNhTofPx1HoO7caFhyZCL2XQcVa2z7099Aer6PA=
+UhGbY4OXpBvbQkgic1F3wiwOtsv9Gldui2yzyFltMfc8jWMTRmmNgRVR4b0wfJvVNur8mIDvt4c=
+89sPOsO7%2BdvmfI99YfkqiFZ6RpBqQ%2BIERhZgEelFynspqP8ciX%2B8faG1XPqvLHV6e0FJK=
+Gtiasn0y6IFgKcotyyqpLwPg7BWPqmkKmNSCo0msT5pLW0MTzLd%2BGQ52JWZqyNdVO9ss6TrIe=
+wrts53eeO6pkA3c%2FQoUarlu2ax5FsW6EoZSoO7UoJr%2FoHAfxgHjs3ebXVYjM%3D&amp;trk=
+id=3D13710079&amp;MSG_TITLE=3D80021955&amp;lnktrk=3DEMP&amp;g=3D594D784C81B=
+8C1185BFC7C4D86EDB8E164520CCF&amp;lkid=3DTITLE_1_PERSO_ADD_2" target=3D"_bl=
+ank" style=3D"text-decoration: none;"></a></td>=20
+                        </tr>=20
+                       </tbody>
+                      </table> </td>=20
+                    </tr>=20
+                   </tbody>
+                  </table> </td>=20
+                </tr>=20
+                <tr>
+                 <td colspan=3D"2"><img style=3D"display:block;" border=3D"=
+0" src=3D"http://cdn.nflximg.com/us/email/1px_transparent.gif" width=3D"0" =
+height=3D"15"></td>
+                </tr>=20
+               </tbody>
+              </table>=20
+              <!--[if !mso]><!--> <style type=3D"text/css">
+  @media only screen and (max-width: 480px) {
+    table[class=3D'pod'] { width:94% !important }
+
+  }
+</style>=20
+              <!--<![endif]-->=20
+              <table class=3D"pod" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"570" align=3D"center" border=3D"0">=20
+               <tbody>
+                <tr>=20
+                 <td valign=3D"top" width=3D"50%" class=3D"width57">=20
+                  <!--[if !mso]><!--> <style type=3D"text/css">
+        @media only screen and (max-width: 480px) {
+          td[class=3D'width57'] { width:57% !important; height:auto !import=
+ant; }
+          td[class=3D'width57'] img { width:100% !important; height:auto !i=
+mportant; }
+
+
+
+        }
+      </style>=20
+                  <!--<![endif]-->=20
+                  <table class=3D"hero" cellpadding=3D"0" cellspacing=3D"0"=
+ width=3D"100%" align=3D"center" border=3D"0">=20
+                   <tbody>
+                    <tr>=20
+                     <td class=3D"width57" align=3D"left" valign=3D"top"> <=
+a href=3D"https://www.netflix.com/title/80115297?trkid=3D13710079&amp;MSG_T=
+ITLE=3D80115297&amp;lnktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86EDB8E164=
+520CCF&amp;lkid=3DTITLE_2_PERSO_MDP"> <img style=3D"display:block;color:#45=
+4545;font-size:16px;border-top-left-radius:4px;border-bottom-left-radius:4p=
+x;" src=3D"http://art-0.nflximg.net/4f67d/b42ec9904120bfa57dc464c1cc393164f=
+ef4f67d.jpg" border=3D"0" alt=3D"El marginal" width=3D"285" height=3D"405">=
+ </a> </td>=20
+                    </tr>=20
+                   </tbody>
+                  </table> </td>=20
+                 <td width=3D"50%" valign=3D"top" align=3D"left" bgcolor=3D=
+"#ffffff" style=3D"border-top-right-radius:4px;border-bottom-right-radius:4=
+px;">=20
+                  <!--[if !mso]><!--> <style type=3D"text/css">
+        @media only screen and (max-width: 480px) {
+
+          td[class=3D'width43'] { width:43% !important; height:auto !import=
+ant; font-size:16px !important;padding:15px 10px 10px 10px !important;}
+          td[class=3D'frInfo'] { font-size:12px !important;padding:0px 10px=
+ 5px 10px !important; }
+          td[class=3D'frSyn'] { font-size:13px !important;padding:0px 10px =
+0px 10px !important;line-height:16px !important; display: -webkit-box;
+            -webkit-line-clamp: 9; -webkit-box-orient: vertical; overflow:h=
+idden; }
+        }
+
+        @media only screen and (max-width: 380px) {
+
+          td[class=3D'width43'] { width:43% !important; height:auto !import=
+ant; font-size:14px !important;padding:10px 10px 5px 10px !important;line-h=
+eight:16px !important;}
+          td[class=3D'frInfo'] { font-size:12px !important;padding:0px 10px=
+ 5px 10px !important; }
+          td[class=3D'frSyn'] { font-size:13px !important;padding:0px 10px =
+0px 10px !important;line-height:15px !important; display: -webkit-box;
+            -webkit-line-clamp: 9; -webkit-box-orient: vertical; overflow:h=
+idden; }
+        }
+      </style>=20
+                  <!--<![endif]-->=20
+                  <table class=3D"content" cellpadding=3D"0" cellspacing=3D=
+"0" width=3D"100%" border=3D"0">=20
+                   <tbody>
+                    <tr>=20
+                     <td class=3D"width43" style=3D"font-family: Helvetica,=
+ Arial, sans-serif;-webkit-text-size-adjust: none;font-size:26px;padding:20=
+px 20px 15px 15px;font-weight:bold;color:#454545;line-height:100%;"><a href=
+=3D"https://www.netflix.com/title/80115297?trkid=3D13710079&amp;MSG_TITLE=
+=3D80115297&amp;lnktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86EDB8E164520C=
+CF&amp;lkid=3DTITLE_2_PERSO_MDP_2" style=3D"color:#333333;text-decoration:n=
+one;">El marginal</a></td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td class=3D"frInfo" style=3D"font-family: Helvetica, =
+Arial, sans-serif;-webkit-text-size-adjust: none;font-size:14px;padding:0px=
+ 20px 10px 15px;color:#454545;font-weight:bold;"> 2016&nbsp;&nbsp;13 episod=
+ios </td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td class=3D"frSyn" style=3D"font-family: Helvetica, A=
+rial, sans-serif;-webkit-text-size-adjust: none;font-size:14px;padding:0px =
+15px 20px 15px;color:#454545;line-height:22px;">Un expolic=C3=ADa infiltrad=
+o intenta desbaratar una banda que opera desde la c=C3=A1rcel, pero antes d=
+eber=C3=A1 manejar los c=C3=B3digos del inframundo para sobrevivir. <a href=
+=3D"https://www.netflix.com/title/80115297?trkid=3D13710079&amp;MSG_TITLE=
+=3D80115297&amp;lnktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86EDB8E164520C=
+CF&amp;lkid=3DTITLE_2_PERSO_MDP_3" style=3D"color:#333333;">M=C3=A1s&nbsp;i=
+nfo</a></td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td valign=3D"top" align=3D"center">=20
+                      <!--[if !mso]><!--> <style type=3D"text/css">
+              @media only screen and (max-width: 480px) {
+
+                table[class=3D'button'] { display:none !important; }
+
+              }
+
+
+            </style>=20
+                      <!--<![endif]-->=20
+                      <table class=3D"button" cellspacing=3D"0" align=3D"ce=
+nter" cellpadding=3D"0" border=3D"0" width=3D"86%" style=3D"table-layout: f=
+ixed;">=20
+                       <tbody>
+                        <tr>=20
+                         <td align=3D"center" width=3D"100%" class=3D"butto=
+nPad" style=3D"padding:0px 0px 20px 0px;">=20
+                          <table width=3D"100%" cellspacing=3D"0" border=3D=
+"0" align=3D"center" cellpadding=3D"0" style=3D"table-layout: fixed;">=20
+                           <tbody>
+                            <tr>=20
+                             <td class=3D"buttonFont" height=3D"38" align=
+=3D"center" style=3D"font-family: Helvetica, Arial, sans-serif;-webkit-text=
+-size-adjust: none;font-size:16px;font-weight: bold;color:#fefefe;letter-sp=
+acing:1px;padding: 0px 0px 0px 0px;background-color: #c20002;text-decoratio=
+n: none;text-align: center;=20
+                                                                           =
+     border: 1px solid #e50914;=20
+                                                                           =
+     border-radius: 5px;
+                                                                           =
+     -webkit-border-radius: 5px;=20
+                                                                           =
+     -moz-border-radius: 5px;
+                                                                           =
+     -webkit-text-shadow:#666 0 1px 0px;
+                                                                           =
+     -text-shadow:#666 0 1px 0px;
+                                                                           =
+     -moz-text-shadow:#666 0 1px 0px;
+                                                                           =
+     -o-text-shadow:#666 0 1px 0px;=20
+                                                                           =
+     -ms-text-shadow:#666 0 1px 0px;
+                                                                           =
+     background-image: linear-gradient(top, rgb(224,9,19), rgb(163,3,11));
+                                                                           =
+     background-image: -o-linear-gradient(top, rgb(224,9,19), rgb(163,3,11)=
+);
+                                                                           =
+     background-image: -moz-linear-gradient(top, rgb(224,9,19), rgb(163,3,1=
+1));
+                                                                           =
+     background-image: -webkit-linear-gradient(top, rgb(224,9,19), rgb(163,=
+3,11));
+                                                                           =
+     background-image: -ms-linear-gradient(top, rgb(224,9,19), rgb(163,3,11=
+));"> <a href=3D"https://www.netflix.com/watch/80115297?trkid=3D13710079&am=
+p;MSG_TITLE=3D80115297&amp;lnktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86E=
+DB8E164520CCF&amp;lkid=3DTITLE_2_PERSO_WATCH" style=3D"text-decoration:none=
+;color:#fefefe;display:block;">REPRODUCIR</a> </td>=20
+                            </tr>=20
+                           </tbody>
+                          </table> </td>=20
+                        </tr>=20
+                        <tr>=20
+                         <td valign=3D"top">=20
+                          <table class=3D"button" cellspacing=3D"0" align=
+=3D"center" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"table-la=
+yout: fixed;">=20
+                           <tbody>
+                            <tr>=20
+                             <td align=3D"center" class=3D"button_increase"=
+ width=3D"100%">=20
+                              <table class=3D"button" cellspacing=3D"0" ali=
+gn=3D"center" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"table-=
+layout: fixed;">=20
+                               <tbody>
+                                <tr>=20
+                                 <td class=3D"buttonFont" height=3D"38" ali=
+gn=3D"center" style=3D"font-family: Helvetica, Arial, sans-serif;-webkit-te=
+xt-size-adjust: none;font-size:16px;color:#454545;text-decoration: none;pad=
+ding: 0px 0px 0px 5px;background-color: #dbdbdb;padding: 0px 0px 0px 0px;
+                                                                           =
+          border: 1px solid #6e6e6e;=20
+                                                                           =
+          border-radius: 5px;
+                                                                           =
+          -webkit-border-radius: 5px;=20
+                                                                           =
+          -moz-border-radius: 5px;
+                                                                           =
+          -webkit-text-shadow:#666 0 1px 0px;
+                                                                           =
+          -text-shadow:#666 0 1px 0px;
+                                                                           =
+          -moz-text-shadow:#666 0 1px 0px;
+                                                                           =
+          -o-text-shadow:#666 0 1px 0px;=20
+                                                                           =
+          -ms-text-shadow:#666 0 1px 0px;
+                                                                           =
+          background-image: linear-gradient(top, rgb(240,240,240), rgb(192,=
+192,192));
+                                                                           =
+          background-image: -o-linear-gradient(top, rgb(240,240,240), rgb(1=
+92,192,192));
+                                                                           =
+          background-image: -moz-linear-gradient(top, rgb(240,240,240), rgb=
+(192,192,192));
+                                                                           =
+          background-image: -webkit-linear-gradient(top, rgb(240,240,240), =
+rgb(192,192,192));
+                                                                           =
+          background-image: -ms-linear-gradient(top, rgb(240,240,240), rgb(=
+192,192,192));"> <a href=3D"https://www.netflix.com/add/80115297?msg_token=
+=3DEQIAmQABAYEApZ92pKdoeCm3aOnz3LW2MP8JHSuq9fFy36WANcCSes4vbvYNDrRRdJ9cAteU=
+5Dg1yDIlfvz8L4Clj1PGrOmWCDrEuPV0c%2FKJAYF3wU9PU7u%2BUCleR1pysFoUHTUHObQ4%2B=
+z%2BAxUVMZc1CgfHOhqDHX9J61Cszt4p9dzHkinUSANzsT1jecnzySEd6IEwsbmOg%2BgCcIse%=
+2FSAfn4Usp4aHvvLj4AfRYYuocjam9dSxtDlozUt9IimlbdzXwzNzHDIT5h9L020t91%2BeCbLc=
+NPhd6OT6uCrew%2FU7ZIx5I8LJP9TPHMMHWvre2yHIyKE15ADsgWVpKp%2BLUboGW%2B7%2F9Gk=
+%2B9xcpushc%3D&amp;trkid=3D13710079&amp;MSG_TITLE=3D80115297&amp;lnktrk=3DE=
+MP&amp;g=3D594D784C81B8C1185BFC7C4D86EDB8E164520CCF&amp;lkid=3DTITLE_2_PERS=
+O_ADD" style=3D"text-decoration:none;color:#454545;display:block;">+ Mi lis=
+ta</a> </td>=20
+                                </tr>=20
+                               </tbody>
+                              </table> </td>=20
+                            </tr>=20
+                           </tbody>
+                          </table> </td>=20
+                        </tr>=20
+                       </tbody>
+                      </table>=20
+                      <!--[if !mso]><!--> <style type=3D"text/css">
+              @media only screen and (max-width: 480px) {
+
+                table[class=3D'mobileButtons'] { display:block !important; =
+height: auto !important;  }
+                table[class=3D'mobileButtons'] td a { display:block; width:=
+45px; height:45px; background-repeat:no-repeat; background-size:100% 100%; =
+margin-left:5px; margin-top:10px;  }
+                td[class=3D'mobilePlay'] a { background:url(http://cdn.nflx=
+img.com/us/email/welcome/day75/playIcon.png);  }
+              td[class=3D'mobileAddto'] a { background:url(http://cdn.nflxi=
+mg.com/us/email/welcome/day75/addIcon.png);  }
+
+              }
+
+            </style>=20
+                      <!--<![endif]-->=20
+                      <table height=3D"0" class=3D"mobileButtons" cellpaddi=
+ng=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" style=3D"mso-hide: a=
+ll; display:none; height:0px;">=20
+                       <tbody>
+                        <tr>=20
+                         <td class=3D"mobilePlay" align=3D"left" valign=3D"=
+top"><a href=3D"https://www.netflix.com/watch/80115297?trkid=3D13710079&amp=
+;MSG_TITLE=3D80115297&amp;lnktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86ED=
+B8E164520CCF&amp;lkid=3DTITLE_2_PERSO_WATCH_2" target=3D"_blank" style=3D"t=
+ext-decoration: none;"></a></td>=20
+                         <td class=3D"mobileAddto" align=3D"left" valign=3D=
+"top"><a href=3D"https://www.netflix.com/add/80115297?msg_token=3DEQIAmQABA=
+YEApZ92pKdoeCm3aOnz3LW2MP8JHSuq9fFy36WANcCSes4vbvYNDrRRdJ9cAteU5Dg1yDIlfvz8=
+L4Clj1PGrOmWCDrEuPV0c%2FKJAYF3wU9PU7u%2BUCleR1pysFoUHTUHObQ4%2Bz%2BAxUVMZc1=
+CgfHOhqDHX9J61Cszt4p9dzHkinUSANzsT1jecnzySEd6IEwsbmOg%2BgCcIse%2FSAfn4Usp4a=
+HvvLj4AfRYYuocjam9dSxtDlozUt9IimlbdzXwzNzHDIT5h9L020t91%2BeCbLcNPhd6OT6uCre=
+w%2FU7ZIx5I8LJP9TPHMMHWvre2yHIyKE15ADsgWVpKp%2BLUboGW%2B7%2F9Gk%2B9xcpushc%=
+3D&amp;trkid=3D13710079&amp;MSG_TITLE=3D80115297&amp;lnktrk=3DEMP&amp;g=3D5=
+94D784C81B8C1185BFC7C4D86EDB8E164520CCF&amp;lkid=3DTITLE_2_PERSO_ADD_2" tar=
+get=3D"_blank" style=3D"text-decoration: none;"></a></td>=20
+                        </tr>=20
+                       </tbody>
+                      </table> </td>=20
+                    </tr>=20
+                   </tbody>
+                  </table> </td>=20
+                </tr>=20
+                <tr>
+                 <td colspan=3D"2"><img style=3D"display:block;" border=3D"=
+0" src=3D"http://cdn.nflximg.com/us/email/1px_transparent.gif" width=3D"0" =
+height=3D"15"></td>
+                </tr>=20
+               </tbody>
+              </table>=20
+              <!--[if !mso]><!--> <style type=3D"text/css">
+  @media only screen and (max-width: 480px) {
+    table[class=3D'pod'] { width:94% !important }
+
+  }
+</style>=20
+              <!--<![endif]-->=20
+              <table class=3D"pod" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"570" align=3D"center" border=3D"0">=20
+               <tbody>
+                <tr>=20
+                 <td valign=3D"top" width=3D"50%" class=3D"width57">=20
+                  <!--[if !mso]><!--> <style type=3D"text/css">
+        @media only screen and (max-width: 480px) {
+          td[class=3D'width57'] { width:57% !important; height:auto !import=
+ant; }
+          td[class=3D'width57'] img { width:100% !important; height:auto !i=
+mportant; }
+
+
+
+        }
+      </style>=20
+                  <!--<![endif]-->=20
+                  <table class=3D"hero" cellpadding=3D"0" cellspacing=3D"0"=
+ width=3D"100%" align=3D"center" border=3D"0">=20
+                   <tbody>
+                    <tr>=20
+                     <td class=3D"width57" align=3D"left" valign=3D"top"> <=
+a href=3D"https://www.netflix.com/title/80035684?trkid=3D13710079&amp;MSG_T=
+ITLE=3D80035684&amp;lnktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86EDB8E164=
+520CCF&amp;lkid=3DTITLE_3_PERSO_MDP"> <img style=3D"display:block;color:#45=
+4545;font-size:16px;border-top-left-radius:4px;border-bottom-left-radius:4p=
+x;" src=3D"http://art-1.nflximg.net/2eb14/03c78f93aae05a057f5992511099b7a88=
+5b2eb14.jpg" border=3D"0" alt=3D"Pablo Escobar, el patr=C3=B3n del mal" wid=
+th=3D"285" height=3D"405"> </a> </td>=20
+                    </tr>=20
+                   </tbody>
+                  </table> </td>=20
+                 <td width=3D"50%" valign=3D"top" align=3D"left" bgcolor=3D=
+"#ffffff" style=3D"border-top-right-radius:4px;border-bottom-right-radius:4=
+px;">=20
+                  <!--[if !mso]><!--> <style type=3D"text/css">
+        @media only screen and (max-width: 480px) {
+
+          td[class=3D'width43'] { width:43% !important; height:auto !import=
+ant; font-size:16px !important;padding:15px 10px 10px 10px !important;}
+          td[class=3D'frInfo'] { font-size:12px !important;padding:0px 10px=
+ 5px 10px !important; }
+          td[class=3D'frSyn'] { font-size:13px !important;padding:0px 10px =
+0px 10px !important;line-height:16px !important; display: -webkit-box;
+            -webkit-line-clamp: 9; -webkit-box-orient: vertical; overflow:h=
+idden; }
+        }
+
+        @media only screen and (max-width: 380px) {
+
+          td[class=3D'width43'] { width:43% !important; height:auto !import=
+ant; font-size:14px !important;padding:10px 10px 5px 10px !important;line-h=
+eight:16px !important;}
+          td[class=3D'frInfo'] { font-size:12px !important;padding:0px 10px=
+ 5px 10px !important; }
+          td[class=3D'frSyn'] { font-size:13px !important;padding:0px 10px =
+0px 10px !important;line-height:15px !important; display: -webkit-box;
+            -webkit-line-clamp: 9; -webkit-box-orient: vertical; overflow:h=
+idden; }
+        }
+      </style>=20
+                  <!--<![endif]-->=20
+                  <table class=3D"content" cellpadding=3D"0" cellspacing=3D=
+"0" width=3D"100%" border=3D"0">=20
+                   <tbody>
+                    <tr>=20
+                     <td class=3D"width43" style=3D"font-family: Helvetica,=
+ Arial, sans-serif;-webkit-text-size-adjust: none;font-size:26px;padding:20=
+px 20px 15px 15px;font-weight:bold;color:#454545;line-height:100%;"><a href=
+=3D"https://www.netflix.com/title/80035684?trkid=3D13710079&amp;MSG_TITLE=
+=3D80035684&amp;lnktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86EDB8E164520C=
+CF&amp;lkid=3DTITLE_3_PERSO_MDP_2" style=3D"color:#333333;text-decoration:n=
+one;">Pablo Escobar, el patr=C3=B3n del mal</a></td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td class=3D"frInfo" style=3D"font-family: Helvetica, =
+Arial, sans-serif;-webkit-text-size-adjust: none;font-size:14px;padding:0px=
+ 20px 10px 15px;color:#454545;font-weight:bold;"> 2012&nbsp;&nbsp;74 episod=
+ios </td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td class=3D"frSyn" style=3D"font-family: Helvetica, A=
+rial, sans-serif;-webkit-text-size-adjust: none;font-size:14px;padding:0px =
+15px 20px 15px;color:#454545;line-height:22px;">Esta fascinante serie narra=
+ la vida del infame Pablo Escobar, desde sus d=C3=ADas como ratero hasta co=
+nvertirse en el jefe de un imperio del narcotr=C3=A1fico. <a href=3D"https:=
+//www.netflix.com/title/80035684?trkid=3D13710079&amp;MSG_TITLE=3D80035684&=
+amp;lnktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86EDB8E164520CCF&amp;lkid=
+=3DTITLE_3_PERSO_MDP_3" style=3D"color:#333333;">M=C3=A1s&nbsp;info</a></td=
+>=20
+                    </tr>=20
+                    <tr>=20
+                     <td valign=3D"top" align=3D"center">=20
+                      <!--[if !mso]><!--> <style type=3D"text/css">
+              @media only screen and (max-width: 480px) {
+
+                table[class=3D'button'] { display:none !important; }
+
+              }
+
+
+            </style>=20
+                      <!--<![endif]-->=20
+                      <table class=3D"button" cellspacing=3D"0" align=3D"ce=
+nter" cellpadding=3D"0" border=3D"0" width=3D"86%" style=3D"table-layout: f=
+ixed;">=20
+                       <tbody>
+                        <tr>=20
+                         <td align=3D"center" width=3D"100%" class=3D"butto=
+nPad" style=3D"padding:0px 0px 20px 0px;">=20
+                          <table width=3D"100%" cellspacing=3D"0" border=3D=
+"0" align=3D"center" cellpadding=3D"0" style=3D"table-layout: fixed;">=20
+                           <tbody>
+                            <tr>=20
+                             <td class=3D"buttonFont" height=3D"38" align=
+=3D"center" style=3D"font-family: Helvetica, Arial, sans-serif;-webkit-text=
+-size-adjust: none;font-size:16px;font-weight: bold;color:#fefefe;letter-sp=
+acing:1px;padding: 0px 0px 0px 0px;background-color: #c20002;text-decoratio=
+n: none;text-align: center;=20
+                                                                           =
+     border: 1px solid #e50914;=20
+                                                                           =
+     border-radius: 5px;
+                                                                           =
+     -webkit-border-radius: 5px;=20
+                                                                           =
+     -moz-border-radius: 5px;
+                                                                           =
+     -webkit-text-shadow:#666 0 1px 0px;
+                                                                           =
+     -text-shadow:#666 0 1px 0px;
+                                                                           =
+     -moz-text-shadow:#666 0 1px 0px;
+                                                                           =
+     -o-text-shadow:#666 0 1px 0px;=20
+                                                                           =
+     -ms-text-shadow:#666 0 1px 0px;
+                                                                           =
+     background-image: linear-gradient(top, rgb(224,9,19), rgb(163,3,11));
+                                                                           =
+     background-image: -o-linear-gradient(top, rgb(224,9,19), rgb(163,3,11)=
+);
+                                                                           =
+     background-image: -moz-linear-gradient(top, rgb(224,9,19), rgb(163,3,1=
+1));
+                                                                           =
+     background-image: -webkit-linear-gradient(top, rgb(224,9,19), rgb(163,=
+3,11));
+                                                                           =
+     background-image: -ms-linear-gradient(top, rgb(224,9,19), rgb(163,3,11=
+));"> <a href=3D"https://www.netflix.com/watch/80035684?trkid=3D13710079&am=
+p;MSG_TITLE=3D80035684&amp;lnktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86E=
+DB8E164520CCF&amp;lkid=3DTITLE_3_PERSO_WATCH" style=3D"text-decoration:none=
+;color:#fefefe;display:block;">REPRODUCIR</a> </td>=20
+                            </tr>=20
+                           </tbody>
+                          </table> </td>=20
+                        </tr>=20
+                        <tr>=20
+                         <td valign=3D"top">=20
+                          <table class=3D"button" cellspacing=3D"0" align=
+=3D"center" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"table-la=
+yout: fixed;">=20
+                           <tbody>
+                            <tr>=20
+                             <td align=3D"center" class=3D"button_increase"=
+ width=3D"100%">=20
+                              <table class=3D"button" cellspacing=3D"0" ali=
+gn=3D"center" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"table-=
+layout: fixed;">=20
+                               <tbody>
+                                <tr>=20
+                                 <td class=3D"buttonFont" height=3D"38" ali=
+gn=3D"center" style=3D"font-family: Helvetica, Arial, sans-serif;-webkit-te=
+xt-size-adjust: none;font-size:16px;color:#454545;text-decoration: none;pad=
+ding: 0px 0px 0px 5px;background-color: #dbdbdb;padding: 0px 0px 0px 0px;
+                                                                           =
+          border: 1px solid #6e6e6e;=20
+                                                                           =
+          border-radius: 5px;
+                                                                           =
+          -webkit-border-radius: 5px;=20
+                                                                           =
+          -moz-border-radius: 5px;
+                                                                           =
+          -webkit-text-shadow:#666 0 1px 0px;
+                                                                           =
+          -text-shadow:#666 0 1px 0px;
+                                                                           =
+          -moz-text-shadow:#666 0 1px 0px;
+                                                                           =
+          -o-text-shadow:#666 0 1px 0px;=20
+                                                                           =
+          -ms-text-shadow:#666 0 1px 0px;
+                                                                           =
+          background-image: linear-gradient(top, rgb(240,240,240), rgb(192,=
+192,192));
+                                                                           =
+          background-image: -o-linear-gradient(top, rgb(240,240,240), rgb(1=
+92,192,192));
+                                                                           =
+          background-image: -moz-linear-gradient(top, rgb(240,240,240), rgb=
+(192,192,192));
+                                                                           =
+          background-image: -webkit-linear-gradient(top, rgb(240,240,240), =
+rgb(192,192,192));
+                                                                           =
+          background-image: -ms-linear-gradient(top, rgb(240,240,240), rgb(=
+192,192,192));"> <a href=3D"https://www.netflix.com/add/80035684?msg_token=
+=3DEQIAmQABAYEAW2c4MuAsmtREjL0nv%2BbP%2B5Mw3LP4wyJIrxJTdCAgSeeLkVWVEqp4KocU=
+i5llChwX4ilPWIU8E4ZrLCKaRhAzlU%2FLdG5Gtz6eRikD2I5%2BxDa2uhFOUuorQPoDoZUzsg0=
+XWUgelNSnaJF65BmQJWiemKazlOO4OSQIvE8bRfhNehP%2FJdAYizjKR7gXakeqqta05YkjVb6X=
+hSIuzusZispfib9bS3ZurGYcsTWb3ILv%2BxF89EeFLegJkFiEGuCS0j2w2L289grwwReLFUqj5=
+U9%2FDzMhupaBSCzLYq7eHIMBOXKNfCKf1v7qsU6q0mwyRukfLWbeEEBxl7GeFcdUt2QHycySAz=
+0%3D&amp;trkid=3D13710079&amp;MSG_TITLE=3D80035684&amp;lnktrk=3DEMP&amp;g=
+=3D594D784C81B8C1185BFC7C4D86EDB8E164520CCF&amp;lkid=3DTITLE_3_PERSO_ADD" s=
+tyle=3D"text-decoration:none;color:#454545;display:block;">+ Mi lista</a> <=
+/td>=20
+                                </tr>=20
+                               </tbody>
+                              </table> </td>=20
+                            </tr>=20
+                           </tbody>
+                          </table> </td>=20
+                        </tr>=20
+                       </tbody>
+                      </table>=20
+                      <!--[if !mso]><!--> <style type=3D"text/css">
+              @media only screen and (max-width: 480px) {
+
+                table[class=3D'mobileButtons'] { display:block !important; =
+height: auto !important;  }
+                table[class=3D'mobileButtons'] td a { display:block; width:=
+45px; height:45px; background-repeat:no-repeat; background-size:100% 100%; =
+margin-left:5px; margin-top:10px;  }
+                td[class=3D'mobilePlay'] a { background:url(http://cdn.nflx=
+img.com/us/email/welcome/day75/playIcon.png);  }
+              td[class=3D'mobileAddto'] a { background:url(http://cdn.nflxi=
+mg.com/us/email/welcome/day75/addIcon.png);  }
+
+              }
+
+            </style>=20
+                      <!--<![endif]-->=20
+                      <table height=3D"0" class=3D"mobileButtons" cellpaddi=
+ng=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" style=3D"mso-hide: a=
+ll; display:none; height:0px;">=20
+                       <tbody>
+                        <tr>=20
+                         <td class=3D"mobilePlay" align=3D"left" valign=3D"=
+top"><a href=3D"https://www.netflix.com/watch/80035684?trkid=3D13710079&amp=
+;MSG_TITLE=3D80035684&amp;lnktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86ED=
+B8E164520CCF&amp;lkid=3DTITLE_3_PERSO_WATCH_2" target=3D"_blank" style=3D"t=
+ext-decoration: none;"></a></td>=20
+                         <td class=3D"mobileAddto" align=3D"left" valign=3D=
+"top"><a href=3D"https://www.netflix.com/add/80035684?msg_token=3DEQIAmQABA=
+YEAW2c4MuAsmtREjL0nv%2BbP%2B5Mw3LP4wyJIrxJTdCAgSeeLkVWVEqp4KocUi5llChwX4ilP=
+WIU8E4ZrLCKaRhAzlU%2FLdG5Gtz6eRikD2I5%2BxDa2uhFOUuorQPoDoZUzsg0XWUgelNSnaJF=
+65BmQJWiemKazlOO4OSQIvE8bRfhNehP%2FJdAYizjKR7gXakeqqta05YkjVb6XhSIuzusZispf=
+ib9bS3ZurGYcsTWb3ILv%2BxF89EeFLegJkFiEGuCS0j2w2L289grwwReLFUqj5U9%2FDzMhupa=
+BSCzLYq7eHIMBOXKNfCKf1v7qsU6q0mwyRukfLWbeEEBxl7GeFcdUt2QHycySAz0%3D&amp;trk=
+id=3D13710079&amp;MSG_TITLE=3D80035684&amp;lnktrk=3DEMP&amp;g=3D594D784C81B=
+8C1185BFC7C4D86EDB8E164520CCF&amp;lkid=3DTITLE_3_PERSO_ADD_2" target=3D"_bl=
+ank" style=3D"text-decoration: none;"></a></td>=20
+                        </tr>=20
+                       </tbody>
+                      </table> </td>=20
+                    </tr>=20
+                   </tbody>
+                  </table> </td>=20
+                </tr>=20
+                <tr>
+                 <td colspan=3D"2"><img style=3D"display:block;" border=3D"=
+0" src=3D"http://cdn.nflximg.com/us/email/1px_transparent.gif" width=3D"0" =
+height=3D"15"></td>
+                </tr>=20
+               </tbody>
+              </table>=20
+              <!--[if !mso]><!--> <style type=3D"text/css">
+  @media only screen and (max-width: 480px) {
+
+    td[class=3D"extrasWrap"] { padding:15px 0px 0px 0px !important; }
+    td[class=3D"extrasFor"] img { width:35px !important; height:auto !impor=
+tant; }
+    table[class=3D"1titleyahoofix"] { width:auto !important;  }
+    table[class=3D"mainWrapper"] { width:94% !important;  }
+    table[class=3D"mainWrapper2"] { width:100% !important;  }
+    td[class=3D"backgroundModule"] { background-size:100% 100%; width:100% =
+!important; height:100% !important; }
+    td[class=3D"1titlepaddfix"] { }
+    td[class=3D"3titlePadfixA"] { padding-right:3px !important;  }
+    td[class=3D"3titlePadfixB"] { padding-left:3px !important;  }
+    td[class=3D"4titlepaddfix"] { padding-right:3px !important; }
+    table[class=3D"widthReset"] {width:100% !important; padding-left:5px; p=
+adding-right:5px; }
+    td[class=3D"extrasHead"] { font-size:15px !important; padding-top:3px !=
+important; }
+    td[class=3D"extrasHeadB"] { font-size:15px !important; padding-top:10px=
+ !important; }
+    td[class=3D"1titleHead"] { font-size:8px !important; padding-left:5px !=
+important; padding-right:5px !important; }=20
+    td[class=3D"1titleHead"] .a { font-size:8px !important; padding-left:5p=
+x !important; padding-right:5px !important; }=20
+    td[class=3D"recaddWrap"] { padding:0 0 23px 0 !important; }
+    td[class=3D"recTD"] { padding-left:3px !important; padding-right:3px !i=
+mportant; }
+    img[class=3D"recImg"] { width:auto !important; height:190px !important;=
+ }
+
+    img[class=3D"1titleResize"], table[class=3D"1titleResize"], td[class=3D=
+"1titleResize"]  { width:206px !important;  height:116px !important; }
+    img[class=3D"2titleResize"] { width:200px !important;  height:auto !imp=
+ortant; }
+    img[class=3D"3titleResize"] { width:87px !important;  height:auto !impo=
+rtant; }
+    img[class=3D"3titleResizeb"] { width:216px !important;  height:auto !im=
+portant; }
+    img[class=3D"4titleResize"], table[class"4titleResize"]  { width:97px !=
+important;  height:auto !important; }
+
+    img[class=3D"horImg"] { width:90% !important; height:auto !important; }
+    img[class=3D"horImg"] { width:98% !important; height:auto !important; }
+    td[class=3D"horTD1"] { padding: 0px 5px 0px 0px !important; }
+    td[class=3D"horTD"] { padding: 0px 0px 0px 0px !important; }
+    td[class=3D"horWrap"] { padding:0 0 10px 0 !important; }
+
+    td[class=3D"off"] { display:none !important; width:0px !important;heigh=
+t: 0px !important;}
+    td[class=3D"commingSoon"] { padding:0 0 15px 0 !important; }
+    td[class=3D"comingSoonV2"] { padding:0 0 5px 0 !important; }
+   img[class=3D"width100"] { width:100% !important; height:auto !important;=
+ }
+   =20
+   img[class=3D"off"] { display:none !important; width:0px !important;heigh=
+t: 0px !important;}
+   =20
+    img[class=3D"recImg2"] { width:auto !important;height:200px !important;=
+ }
+  }
+
+  @media only screen and (max-width: 450px) {=20
+    img[class=3D"recImg"]  { height:180px !important; width:auto !important=
+;}
+    img[class=3D"recImg2"] { height:190px !important;width:auto !important;=
+ }
+    img[class=3D"1titleResize"], table[class=3D"1titleResize"]  { width:193=
+px !important; height:109px !important; }=20
+    img[class=3D"2titleResize"] { width:189px !important; }
+    img[class=3D"3titleResize"] { width:81px !important; }
+    img[class=3D"3titleResizeb"] { width:203px !important; }
+    img[class=3D"4titleResize"] { width:90px !important;height:auto !import=
+ant; }=20
+
+  }=20
+  @media only screen and (max-width: 420px) {=20
+    img[class=3D"recImg"]  { height:170px !important;width:auto !important;=
+ }
+    img[class=3D"recImg2"] { height:180px !important;width:auto !important;=
+ }
+    img[class=3D"1titleResize"], table[class=3D"1titleResize"]  { width:180=
+px !important; height:101px !important; }=20
+    img[class=3D"2titleResize"] { width:176px !important; }
+    img[class=3D"3titleResize"] { width:76px !important; }
+    img[class=3D"3titleResizeb"] { width:189px !important; }
+    img[class=3D"4titleResize"] { width:84px !important;height:auto !import=
+ant; }
+
+  }=20
+  @media only screen and (max-width: 400px) {
+    img[class=3D"recImg"]  { height:157px !important;width:auto !important;=
+ }
+    img[class=3D"recImg2"] { height:167px !important;width:auto !important;=
+ }
+    img[class=3D"1titleResize"], table[class=3D"1titleResize"]  { width:172=
+px !important; height:97px !important; }=20
+    img[class=3D"2titleResize"] { width:168px !important; }
+    img[class=3D"3titleResize"] { width:72px !important; }
+    img[class=3D"3titleResizeb"] { width:180px !important; }
+    img[class=3D"4titleResize"] { width:80px !important;height:auto !import=
+ant; }
+
+  }    =20
+  @media only screen and (max-width: 380px) {
+    img[class=3D"recImg"] { height:145px !important;width:auto !important; =
+}
+    img[class=3D"recImg2"] { height:155px !important;width:auto !important;=
+ }
+    img[class=3D"1titleResize"], table[class=3D"1titleResize"]  { width:163=
+px !important; height:92px !important; }=20
+    img[class=3D"2titleResize"] { width:160px !important; }
+    img[class=3D"3titleResize"] { width:68px !important; }
+    img[class=3D"3titleResizeb"] { width:171px !important; }
+    img[class=3D"4titleResize"] { width:76px !important;height:auto !import=
+ant; }
+
+  }
+  @media only screen and (max-width: 350px) {
+    img[class=3D"recImg"] { height:130px !important;width:auto !important; =
+}
+    img[class=3D"recImg2"] { height:148px !important;width:auto !important;=
+ }
+    img[class=3D"1titleResize"], table[class=3D"1titleResize"]  { width:150=
+px !important; height:84px !important; }
+    img[class=3D"2titleResize"] { width:147px !important; }
+    img[class=3D"3titleResize"] { width:63px !important; }
+    img[class=3D"3titleResizeb"] { width:158px !important; }
+    img[class=3D"4titleResize"] { width:70px !important;height:auto !import=
+ant; }=20
+
+  }
+  @media only screen and (max-width: 320px) {
+    img[class=3D"recImg"] { height:125px !important; width:auto !important;=
+}
+    img[class=3D"recImg2"] { height:135px !important;width:auto !important;=
+ }
+    img[class=3D"1titleResize"], table[class=3D"1titleResize"]  { width:139=
+px !important; height:78px !important; }
+    img[class=3D"2titleResize"] { width:134px !important; height:75px !impo=
+rtant; }
+    img[class=3D"3titleResize"] { width:59px !important; height:83px !impor=
+tant; }
+    img[class=3D"3titleResize"] { width:147px !important; height:83px !impo=
+rtant; }=20
+    img[class=3D"4titleResize"] { width:65px !important; height:auto !impor=
+tant; }
+
+  }
+  @media only screen and (max-width: 300px) {
+    img[class=3D"recImg"] { height:117px !important;width:auto !important; =
+}
+    img[class=3D"1titleResize"], table[class=3D"1titleResize"]  { width:129=
+px !important; height:73px !important; }
+    img[class=3D"2titleResize"] { width:126px !important; }
+    img[class=3D"3titleResize"] { width:54px !important; }
+    img[class=3D"3titleResizeb"] { width:135px !important; }
+    img[class=3D"4titleResize"] { width:60px !important;height:auto !import=
+ant; }
+   =20
+    img[class=3D"recImg2"] { height:127px !important;width:auto !important;=
+ }
+
+  }
+</style>=20
+              <!--<![endif]-->=20
+              <table class=3D"mainWrapper" cellpadding=3D"0" cellspacing=3D=
+"0" border=3D"0" width=3D"100%" align=3D"center">=20
+               <tbody>
+                <tr>=20
+                 <td align=3D"left" valign=3D"top" style=3D"padding-bottom:=
+15px;">=20
+                  <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" w=
+idth=3D"100%">=20
+                   <tbody>
+                    <tr>=20
+                     <td class=3D"extrasWrap" align=3D"left" valign=3D"top"=
+ bgcolor=3D"#ffffff" style=3D"padding-left:15px;padding-right:15px;padding-=
+top:25px;padding-bottom:15px;border-bottom-left-radius:4px !important; bord=
+er-bottom-right-radius:4px; border-top-left-radius:4px !important; border-t=
+op-right-radius:4px">=20
+                      <table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" width=3D"100%">=20
+                       <tbody>
+                        <tr>=20
+                         <td class=3D"extrasHead" style=3D"font-family: Hel=
+vetica, Arial, sans-serif !important;-webkit-text-size-adjust: none !import=
+ant;font-size:21px !important;line-height:100% !important;font-weight:bold =
+!important; padding-bottom:10px !important;" align=3D"center">Tambi=C3=A9n =
+en Agregados recientemente</td>=20
+                        </tr>=20
+                        <tr>=20
+                         <td align=3D"left" valign=3D"top" style=3D"padding=
+-left:8px;padding-bottom:23px;padding-right:8px;" class=3D"recaddWrap">=20
+                          <table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" width=3D"100%">=20
+                           <tbody>
+                            <tr>=20
+                            </tr>
+                            <tr>=20
+                             <td align=3D"right" valign=3D"top"><a href=3D"=
+https://www.netflix.com/title/80117470?trkid=3D13710079&amp;MSG_TITLE=3D801=
+17470&amp;lnktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86EDB8E164520CCF&amp=
+;lkid=3DTITLE_1_REC_ADDED_MDP" target=3D"_blank"><img alt=3D"13 Reasons Why=
+" src=3D"http://art-1.nflximg.net/4a4a4/b3f664b8f428df4c6708d6df0017c89570e=
+4a4a4.jpg" width=3D"171" height=3D"240" border=3D"0" style=3D"display:block=
+;color:#ffffff;font-family: Helvetica, Arial, sans-serif;-webkit-text-size-=
+adjust: none;" class=3D"recImg"></a></td>=20
+                             <td align=3D"center" valign=3D"top" style=3D"p=
+adding-right:5px; padding-left:5px;" class=3D"recTD"><a href=3D"https://www=
+.netflix.com/title/80002612?trkid=3D13710079&amp;MSG_TITLE=3D80002612&amp;l=
+nktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86EDB8E164520CCF&amp;lkid=3DTIT=
+LE_2_REC_ADDED_MDP" target=3D"_blank"><img alt=3D"Marvel - Iron Fist" src=
+=3D"http://art-1.nflximg.net/51f28/5001beb8d332bf37fccc200d6b09d7c14f151f28=
+.jpg" width=3D"171" height=3D"240" border=3D"0" style=3D"display:block;colo=
+r:#ffffff;font-family: Helvetica, Arial, sans-serif;-webkit-text-size-adjus=
+t: none;" class=3D"recImg"></a></td>=20
+                             <td align=3D"left" valign=3D"top" class=3D"rec=
+Img"><a href=3D"https://www.netflix.com/title/70283264?trkid=3D13710079&amp=
+;MSG_TITLE=3D70283264&amp;lnktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86ED=
+B8E164520CCF&amp;lkid=3DTITLE_3_REC_ADDED_MDP" target=3D"_blank"><img alt=
+=3D"The 100" src=3D"http://art-2.nflximg.net/fadc5/f7229d6911f1f6b041f1f382=
+7deeeaef249fadc5.jpg" width=3D"171" height=3D"240" border=3D"0" style=3D"di=
+splay:block;color:#ffffff;font-family: Helvetica, Arial, sans-serif;-webkit=
+-text-size-adjust: none;" class=3D"recImg"></a> </td>=20
+                            </tr>=20
+                           </tbody>
+                          </table> </td>=20
+                        </tr>=20
+                       </tbody>
+                      </table> </td>=20
+                    </tr>=20
+                   </tbody>
+                  </table> </td>=20
+                </tr>=20
+               </tbody>
+              </table> </td>=20
+            </tr>=20
+           </tbody>
+          </table>=20
+          <!--[if !mso]><!--> <style type=3D"text/css">
+                  @media only screen and (max-width: 480px) {
+
+                    table[class=3D"viewAll"] { width:95% !important; }
+                    td[class=3D"viewAlltxt"] { font-size:15px !important; p=
+adding-top:4px !important; }
+                    img[class=3D"viewAllimg"] { padding-top:10px !important=
+; }
+                    td[class=3D"viewAllimg"] img { height:36px !important; =
+width:auto !important; padding-top:4px !important; }
+                  }
+                </style>=20
+          <!--<![endif]-->=20
+          <table class=3D"viewAll" cellpadding=3D"0" cellspacing=3D"0" bord=
+er=3D"0" width=3D"570" align=3D"center">=20
+           <tbody>
+            <tr>=20
+             <td align=3D"center" valign=3D"top" bgcolor=3D"#E30B1D" style=
+=3D"border-radius:4px;">=20
+              <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=
+=3D"center">=20
+               <tbody>
+                <tr>=20
+                 <td class=3D"viewAlltxt" align=3D"right" valign=3D"middle"=
+ style=3D"font-family: Helvetica, Arial, sans-serif;-webkit-text-size-adjus=
+t: none;color:#ffffff;font-size:18px;font-weight:lighter;padding:12px 0px 1=
+2px 0px;"><a href=3D"https://www.netflix.com/browse?lnktrk=3DEMP&amp;g=3D59=
+4D784C81B8C1185BFC7C4D86EDB8E164520CCF&amp;lkid=3DURL_HOME_2" target=3D"_bl=
+ank" style=3D"text-decoration: none;color:#ffffff;line-height:100%;">Ver to=
+dos los programas y las pel=C3=ADculas</a></td>=20
+                </tr>=20
+               </tbody>
+              </table> </td>=20
+            </tr>=20
+           </tbody>
+          </table>=20
+          <!--[if !mso]><!--> <style type=3D"text/css">
+                  @media only screen and (max-width: 480px) {
+                    table[class=3D"questions"] { width:95% !important }
+                  }
+                </style>=20
+          <!--<![endif]-->=20
+          <table class=3D"questions" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"520" align=3D"center" border=3D"0">=20
+           <tbody>
+            <tr>=20
+             <td align=3D"center" valign=3D"top">=20
+              <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=
+=3D"100%" bgcolor=3D"#dfdfdf">=20
+               <tbody>
+                <tr>=20
+                 <td class=3D"width100" align=3D"center" valign=3D"top"><im=
+g alt=3D"" src=3D"http://cdn.nflximg.com/us/email/adhoc/201405/oitnb/s2comi=
+ngsoon/20140529_shdw.png" width=3D"570" height=3D"18" border=3D"0" style=3D=
+"display:block;color:#454545;font-family: Helvetica, Arial, sans-serif;-web=
+kit-text-size-adjust: none;"></td>=20
+                </tr>=20
+                <tr>=20
+                 <td class=3D"textQuestions" align=3D"center" valign=3D"top=
+" style=3D"font-family: Helvetica, Arial, sans-serif;-webkit-text-size-adju=
+st: none;font-size:14px;color:#666666;text-decoration:none;font-weight:norm=
+al; padding:5px 5px 20px 5px;"> <a href=3D"https://www.netflix.com/browse?l=
+nktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86EDB8E164520CCF&amp;lkid=3DURL=
+_HOME_3" target=3D"_blank" style=3D"text-decoration: none;color:#666666;tex=
+t-decoration:none;font-weight:normal;">=C2=BFPreguntas?<span class=3D"iOSli=
+nks" style=3D"color:#666666 !important; text-decoration:none;"> Llama al 0-=
+800-800-1300.</span></a> </td>=20
+                </tr>=20
+                <tr>=20
+                 <td class=3D"width100" align=3D"center" valign=3D"top"><im=
+g alt=3D"" src=3D"http://cdn.nflximg.com/us/email/adhoc/201405/oitnb/s2comi=
+ngsoon/20140529_rule.png" width=3D"570" height=3D"1" border=3D"0" style=3D"=
+display:block;color:#666666;font-family: Helvetica, Arial, sans-serif;-webk=
+it-text-size-adjust: none;"></td>=20
+                </tr>=20
+               </tbody>
+              </table> </td>=20
+            </tr>=20
+            <tr>=20
+             <td class=3D"footerPadding" style=3D"padding:0 34px 0 34px">
+              <!-- legal_content_footer -->=20
+              <!-- rpcampaign: netflix11492524025_302_605 --> <style type=
+=3D"text/css">
+  @media all and (max-width: 480px) {
+   =20
+    table[class=3DfooterMobile] {
+     =20
+      width:100% !important;
+   =20
+   =20
+    }
+ =20
+ =20
+  }
+</style>=20
+              <table class=3D"footerMobile" cellpadding=3D"0" cellspacing=
+=3D"0" align=3D"center" width=3D"520" bgcolor=3D"#dfdfdf">=20
+               <tbody>
+                <tr>=20
+                 <td>=20
+                  <table cellpadding=3D"0" cellspacing=3D"0" align=3D"cente=
+r" width=3D"100%" bgcolor=3D"#dfdfdf">=20
+                   <tbody>
+                    <tr>=20
+                     <td style=3D"font-family: Helvetica, Arial, sans-serif=
+;-webkit-text-size-adjust: none;font-size:11px;color:#999999;padding:20px 5=
+px 10px 5px;">=20
+                      <!--legal_content_footer-->&nbsp;Te enviamos este ema=
+il informativo como parte de tu membres=C3=ADa de Netflix. Si deseas dejar =
+de recibir estos emails, <a style=3D"color:#999999;" href=3D"http://www.net=
+flix.com/ManageSubscriptions?id=3DBQE0AAEBEGqDZc3sJDJsaT75%2B%2FGo%2BGaAkJc=
+OGPef891UYWJ8IIHLbk2MU5tE5bwrVA0j33KRMYjxWREH3yJ%2Bw5jHt%2BJmR%2FAN%2B8xvex=
+Uq8jm%2FCBGCgmpDVOYWMwTx5tM3P%2F3T7%2B2boEoc4McDI%2FW%2Fzp%2Fy6jYTHpgyZzucb=
+QUyXUQHZdOsCUpZPPHOubvkhxg8l8SCiztWy0yWN57s2OH6tA7xLEslfN%2F%2BQA%3D%3D&amp=
+;mid=3D20792311&amp;lnktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86EDB8E164=
+520CCF&amp;lkid=3Dunsubscribe_link">haz clic aqu=C3=AD para cancelar</a>, o=
+ visita la p=C3=A1gina <a style=3D"color:#999999;" href=3D"https://www.netf=
+lix.com/EmailPreferences?lnktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86EDB=
+8E164520CCF&amp;lkid=3Demail_settings">Configuraci=C3=B3n de comunicaciones=
+</a>, desmarca el cuadro <b>Ahora en Netflix</b> y haz clic en "Actualizar"=
+. No respondas a este email, ya que no podemos contestarte desde esta direc=
+ci=C3=B3n. Si necesitas asistencia o deseas&nbsp;contactarnos, visita nuest=
+ro&nbsp;<a style=3D"color:#999999;" href=3D"http://help.netflix.com/help?ln=
+ktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86EDB8E164520CCF&amp;lkid=3Dhelp=
+_center">Centro de ayuda</a>. </td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td style=3D"font-family: Helvetica, Arial, sans-serif=
+;-webkit-text-size-adjust: none;font-size:11px;color:#999999;padding:0px 5p=
+x 10px 5px;"> Netflix envi=C3=B3 este mensaje a [<a href=3D"#" style=3D"tex=
+t-decoration: none !important; color: footerFontColor;">jpruata@fapersa.com=
+</a>].<br>=20
+                      <!--legal_content_footer--> SRC: <a href=3D"https://h=
+elp.netflix.com/help?lnktrk=3DEMP&amp;g=3D594D784C81B8C1185BFC7C4D86EDB8E16=
+4520CCF&amp;lkid=3DURL_HELP_2" style=3D"color:#999999;text-decoration:none;=
+">00605_es_AR</a><br> El uso del servicio y del sitio web de Netflix est=C3=
+=A1 sujeto a nuestros <a style=3D"color:#999999;text-decoration:underline;"=
+ href=3D"http://www.netflix.com/TermsOfUse?lnktrk=3DEMP&amp;g=3D594D784C81B=
+8C1185BFC7C4D86EDB8E164520CCF&amp;lkid=3DURL_TERMS">T=C3=A9rminos de uso</a=
+> y a nuestra <a style=3D"color:#999999;text-decoration:underline;" href=3D=
+"http://www.netflix.com/PrivacyPolicy?lnktrk=3DEMP&amp;g=3D594D784C81B8C118=
+5BFC7C4D86EDB8E164520CCF&amp;lkid=3DURL_PRIVACY">Declaraci=C3=B3n de privac=
+idad</a>.<br> <span style=3D"color:#999999;"><span class=3D"iosnonlink"><a =
+href=3D"www.netflix.com" style=3D"color:#999999; text-decoration:none;">=E2=
+=80=AANetflix International B.V.=E2=80=AC</a></span></span> </td>=20
+                    </tr>=20
+                    <tr>=20
+                     <td>
+                      <!--legal_content_footer--> <img src=3D"http://beacon=
+.netflix.com/img/BAQgBEAEawAJ2THSsgosiINnMMOKPnivWKSK-WmHHLwvtmTf2TDI_GvIod=
+Q_BC3ECFW2pB4Rc0SahZo-sjjziaaCAa1c8e-cZ1OEWVSv1L6vS4Thhshznqf370WGAJkvPuC8F=
+Rz4DxwAFaP0lhe4w9Q7YNdyLgjPczQrDt2vPArfk8iEy_YtQOSt4gF_7CBYMAmExRbVi-VY_3fb=
+t4svUTtoE-u-zInDp1V27cbc6eg4mnZZt_Xh9LByBKabXUjRQ4rrjkALwjIN9FrHX03o03RZ5KP=
+tlO9wuob9btTxt7JLWytpvKgt738frOCpSmy98GC7MGwf9uebw2RS7hfn7O4nNK7rMY6ItfaCWn=
+3t0h9Ru19gESUyNJyTqA1zaLi7POTBykvBVdz-P-vdVWYl9BRdbeiftymcyq5isw_KFLDYbd-uV=
+hx6TiQ.." style=3D"display:block;" border=3D"0"></td>=20
+                    </tr>=20
+                   </tbody>
+                  </table> </td>
+                </tr>
+               </tbody>
+              </table></td>=20
+            </tr>=20
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+       </tbody>
+      </table> </td>=20
+    </tr>=20
+   </tbody>
+  </table>  =20
+ </body>
+</html>
+------=_Part_13483_1784994879.1492633392820--

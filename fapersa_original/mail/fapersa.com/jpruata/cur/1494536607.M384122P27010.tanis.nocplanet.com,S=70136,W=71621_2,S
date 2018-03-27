@@ -1,0 +1,1485 @@
+Return-Path: <hernan_sagrera@hotmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id 8drIFp/RFFmCaQAATLP0zA
+	for <jpruata@fapersa.com>; Thu, 11 May 2017 18:03:27 -0300
+Return-path: <hernan_sagrera@hotmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Thu, 11 May 2017 18:03:27 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:58981 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <hernan_sagrera@hotmail.com>)
+	id 1d8vF8-00081S-CD
+	for jpruata@fapersa.com; Thu, 11 May 2017 18:03:27 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 5BC447F20A
+	for <jpruata@fapersa.com>; Thu, 11 May 2017 18:03:26 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+X-Spam-Flag: NO
+X-Spam-Score: 3.703
+X-Spam-Level: ***
+X-Spam-Status: No, score=3.703 tagged_above=2 required=5
+	tests=[DKIM_SIGNED=0.1, DKIM_VALID=-0.1, DKIM_VALID_AU=-0.1,
+	FORGED_HOTMAIL_RCVD2=1.187, FREEMAIL_FROM=0.001, FREEMAIL_REPLY=1,
+	HTML_MESSAGE=0.001, LOTS_OF_MONEY=0.001, RCVD_IN_DNSWL_NONE=-0.0001,
+	RCVD_IN_MSPIKE_H3=-0.01, RCVD_IN_MSPIKE_WL=-0.01,
+	SPF_HELO_PASS=-0.001, SPF_PASS=-0.001, SUBJ_ALL_CAPS=1.625,
+	T_REMOTE_IMAGE=0.01] autolearn=no autolearn_force=no
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id q5r8JFHf-uiZ for <jpruata@fapersa.com>;
+	Thu, 11 May 2017 18:03:25 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id C0DD27F232; Thu, 11 May 2017 18:03:25 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 577787F20A
+	for <jpruata@fapersa.com>; Thu, 11 May 2017 18:03:23 -0300 (ART)
+Received-SPF: pass (hotmail.com: Sender is authorized to use 'hernan_sagrera@hotmail.com' in 'mfrom' identity (mechanism 'include:spf.protection.outlook.com' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="hernan_sagrera@hotmail.com"; helo=EUR01-HE1-obe.outbound.protection.outlook.com; client-ip=40.92.65.67
+Received: from EUR01-HE1-obe.outbound.protection.outlook.com (mail-oln040092065067.outbound.protection.outlook.com [40.92.65.67])
+	by fw.fapersa.com (Postfix) with ESMTPS id D54CC5FE38
+	for <jpruata@fapersa.com>; Thu, 11 May 2017 18:03:19 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=5U8dbjnMeBKSWlj1V+xA7kGNpviXRqIONgZhUdBjpFo=;
+ b=RGnJk9mtKAVqg+IafMvOwRbYdtlXXYkE4pR+6iwEgzSjLn2dJ7XA9Ru5GYVjzMweUWNoRe1CrzgiW0+m//5yEemtkwotPZ64Xoav3e09W6yWoKOfj3VFX1CrBM2+ZqOHlMZwqGSGO9Y+ymIbPzS49Ll/w8dtWs51PQAstKauczaBogChi6YzhskYlLfS2swVt+IZndGLHdlW2BXbYVBJ7pFAeLGCfAqrfCorY0hRO8wRbTFtFpzQUccXNxckZYm9ISTXhLrcn9VUpunWESxjlcfuTmz3lJ7d0QcrQXyDmiD3kYQkjpSlETERDGivPWaDYJcj8hHEoeUOkJhUwNOaEg==
+Received: from VE1EUR01FT060.eop-EUR01.prod.protection.outlook.com
+ (10.152.2.51) by VE1EUR01HT080.eop-EUR01.prod.protection.outlook.com
+ (10.152.3.220) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.1075.5; Thu, 11
+ May 2017 21:03:15 +0000
+Received: from DB5PR03MB1000.eurprd03.prod.outlook.com (10.152.2.60) by
+ VE1EUR01FT060.mail.protection.outlook.com (10.152.3.93) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id
+ 15.1.1075.5 via Frontend Transport; Thu, 11 May 2017 21:03:15 +0000
+Received: from DB5PR03MB1000.eurprd03.prod.outlook.com
+ ([fe80::5840:fd0:e8ff:88ca]) by DB5PR03MB1000.eurprd03.prod.outlook.com
+ ([fe80::5840:fd0:e8ff:88ca%14]) with mapi id 15.01.1075.020; Thu, 11 May 2017
+ 21:03:15 +0000
+From: Hernan Sagrera <hernan_sagrera@hotmail.com>
+To: "jpruata@fapersa.com" <jpruata@fapersa.com>
+Subject: RV: AMBULANCIA
+Thread-Topic: AMBULANCIA
+Thread-Index: AQHSxa2gMARxlx3z1U6ifO2U56hWBKHvqGBI
+Date: Thu, 11 May 2017 21:03:14 +0000
+Message-ID: <DB5PR03MB10009CE98755DC8BDDA98F05FFED0@DB5PR03MB1000.eurprd03.prod.outlook.com>
+References: <DM5PR03MB2809F32A4339355759BD682CA9EB0@DM5PR03MB2809.namprd03.prod.outlook.com>,<211691398DED445FA1FFF62CAFFB05CC@CuiseNote>
+In-Reply-To: <211691398DED445FA1FFF62CAFFB05CC@CuiseNote>
+Accept-Language: es-ES, en-US
+Content-Language: es-ES
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: fapersa.com; dkim=none (message not signed)
+ header.d=none;fapersa.com; dmarc=none action=none header.from=hotmail.com;
+x-incomingtopheadermarker: OriginalChecksum:310E4176A5CBC03E869BD4C61CA38302A6C12360AF93F403C22B2F18E0E71756;UpperCasedChecksum:92FC9C6B28EF0DAC7432F2F190D257F62037B8141C9F8D23C74AE0FF1B595C7A;SizeAsReceived:8226;Count:45
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [8VgEGfYv63GyK5buG6o5iB6AUFHwo5tx]
+x-ms-publictraffictype: Email
+x-microsoft-exchange-diagnostics: 1;VE1EUR01HT080;5:FaK+GXllIAae+jMKJ5hulb5Simksj6/metutyDxL43531gEy7k993PWYm+qDnJdJqW8Hm4UsMETe2SQF5J3zduYQUK5SIXikeJ3rliXBG9/hwox8wQWvGsTehjVDOZFsD80AyHdKWB4nJ9Ujk+aS5Q==;24:QNQDCT4RWFWVWzaQS6LG7VDki7XeO2rLJaAcwhuHxC4b2XGAE9Ny8k2/i9ZlFgmvmaZktU3E5mCRZYv1oRh+gy2r7TbwYOitKEYMnm0ulx4=;7:Zm/2RIoIn1EjKYWHwmFTgXTHMRWsF2Tzt+/2HslgTX1CI8wRVhvDAfu3QHcMCUZ0ktqncC8tOTpePOWJERVyQaj1R+FlbCvIk+JxWVnOBh2101fNyhw/zCXGjojEZYx+HJrnsLrc5n3whnKmUPUZ+vYDxJ5ma/TT0WAeC7teY+c+DKmRoznlcDRlqZLFSKc0ZUGF5tJLJoTd0VmJ/HcgUDHHy2zLSr/S9KMU3De5gwhlZwMOb65WXT78+dxjiYXrGIkDcQEnY7xBIQTLerLASlTN3uYdCEZQ3nRe8loxPwq/UOQ4tZw3Nfh41hwKZe84
+x-incomingheadercount: 45
+x-eopattributedmessage: 0
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(7070007)(98901004);DIR:OUT;SFP:1901;SCL:1;SRVR:VE1EUR01HT080;H:DB5PR03MB1000.eurprd03.prod.outlook.com;FPR:;SPF:None;LANG:es;
+x-ms-office365-filtering-correlation-id: 053aa43b-9f72-4d41-9e14-08d498b1244a
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(201702061074)(5061506573)(5061507331)(1603103135)(2017031320274)(2017031324274)(2017031323274)(2017031322274)(1601125374)(1603101448)(1701031045);SRVR:VE1EUR01HT080;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(444000031);SRVR:VE1EUR01HT080;BCL:0;PCL:0;RULEID:;SRVR:VE1EUR01HT080;
+x-forefront-prvs: 0304E36CA3
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_DB5PR03MB10009CE98755DC8BDDA98F05FFED0DB5PR03MB1000eurp_"
+MIME-Version: 1.0
+X-OriginatorOrg: hotmail.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 11 May 2017 21:03:14.9434
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: VE1EUR01HT080
+
+--_000_DB5PR03MB10009CE98755DC8BDDA98F05FFED0DB5PR03MB1000eurp_
+Content-Type: text/plain; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+________________________________
+De: Jos=E9 Ignacio David <josedavid@contadoresdavid.com.ar>
+Enviado: viernes, 5 de mayo de 2017 14:50:08
+Para: Fernando B=E1ez
+Cc: Hernan Sagrera
+Asunto: Re: AMBULANCIA
+
+Gracias Fernando, en estos d=EDas te cancelo la totalidad
+
+From: Fernando B=E1ez<mailto:fernandoabaez@hotmail.com>
+Sent: Friday, May 5, 2017 9:49 AM
+To: josedavid@contadoresdavid.com.ar<mailto:josedavid@contadoresdavid.com.a=
+r>
+Subject: AMBULANCIA
+
+JO =85TE paso la cuenta actualizada. Abrazo
+
+FECHA
+
+PARTIDO
+
+HORAS
+
+COSTO HORA
+
+TOTAL
+
+Infantiles
+
+Juveniles
+
+PS
+
+Saldo 2016
+
+
+
+
+
+
+
+$ 0.00
+
+$ 0.00
+
+$ 0.00
+
+$ 0.00
+
+s=E1bado, 18 de febrero de 2017
+
+13 a 18.30
+
+5.5
+
+500
+
+$ 2,750.00
+
+
+
+
+
+$ 2,750.00
+
+s=E1bado, 11 de marzo de 2017
+
+15 a 18.30
+
+3.5
+
+500
+
+$ 1,750.00
+
+
+
+$ 1,750.00
+
+
+
+jueves, 16 de marzo de 2017
+
+PS 21 a 23
+
+2
+
+500
+
+$ 1,000.00
+
+
+
+
+
+$ 1,000.00
+
+s=E1bado, 18 de marzo de 2017
+
+ps de 13.30 a 17.30
+
+4
+
+500
+
+$ 2,000.00
+
+
+
+
+
+$ 2,000.00
+
+domingo, 19 de marzo de 2017
+
+JUV de 11 a 14.30
+
+3.5
+
+500
+
+$ 1,750.00
+
+
+
+$ 1,750.00
+
+
+
+s=E1bado, 25 de marzo de 2017
+
+INF DE 10.30 A 13.30 - PS DE 14.30 A 18
+
+7.5
+
+500
+
+$ 3,750.00
+
+$ 1,500.00
+
+
+
+$ 2,250.00
+
+s=E1bado, 01 de abril de 2017
+
+M Y PS DE 11.30 A 17.30
+
+6
+
+500
+
+$ 3,000.00
+
+
+
+$ 750.00
+
+$ 2,250.00
+
+s=E1bado, 22 de abril de 2017
+
+M 12 A 15
+
+3
+
+500
+
+$ 1,500.00
+
+
+
+$ 1,500.00
+
+
+
+s=E1bado, 29 de abril de 2017
+
+INF - M - PS DE 10.30 A 17.30
+
+7
+
+500
+
+$ 3,500.00
+
+$ 1,500.00
+
+
+
+$ 2,000.00
+
+
+
+
+
+
+
+
+
+$ 0.00
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$ 0.00
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$ 0.00
+
+
+
+
+
+
+
+
+
+TOTALES
+
+42
+
+
+
+$ 21,000.00
+
+$ 3,000.00
+
+$ 5,750.00
+
+$ 12,250.00
+
+
+
+
+________________________________
+[Avast logo] <http://www.avast.com/>
+
+El software de antivirus Avast ha analizado este correo electr=F3nico en bu=
+sca de virus.
+www.avast.com<http://www.avast.com/>
+
+
+
+--_000_DB5PR03MB10009CE98755DC8BDDA98F05FFED0DB5PR03MB1000eurp_
+Content-Type: text/html; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:x=3D"urn:schemas-microsoft-com:office:excel" xmlns:m=3D"http://schema=
+s.microsoft.com/office/2004/12/omml">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DWindows-1=
+252">
+<meta name=3D"GENERATOR" content=3D"MSHTML 10.00.9200.17116">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#954F72;
+	text-decoration:underline;}
+span.EstiloCorreo17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+--></style>
+</head>
+<body lang=3D"ES-AR" id=3D"MailContainerBody" style=3D"PADDING-TOP: 15px; P=
+ADDING-LEFT: 10px; PADDING-RIGHT: 10px" leftmargin=3D"0" link=3D"#0563c1" t=
+opmargin=3D"0" vlink=3D"#954f72" CanvasTabStop=3D"true" name=3D"Compose mes=
+sage area">
+<hr style=3D"display:inline-block;width:98%" tabindex=3D"-1">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" st=
+yle=3D"font-size:11pt" color=3D"#000000"><b>De:</b> Jos=E9 Ignacio David &l=
+t;josedavid@contadoresdavid.com.ar&gt;<br>
+<b>Enviado:</b> viernes, 5 de mayo de 2017 14:50:08<br>
+<b>Para:</b> Fernando B=E1ez<br>
+<b>Cc:</b> Hernan Sagrera<br>
+<b>Asunto:</b> Re: AMBULANCIA</font>
+<div>&nbsp;</div>
+</div>
+<div>
+<div><font color=3D"#000080" face=3D"Calibri">Gracias Fernando, en estos d=
+=EDas te cancelo la totalidad</font></div>
+<div style=3D"FONT: 10pt Tahoma">
+<div><br>
+</div>
+<div style=3D"BACKGROUND: #f5f5f5">
+<div style=3D"font-color: black"><b>From:</b> <a title=3D"fernandoabaez@hot=
+mail.com" href=3D"mailto:fernandoabaez@hotmail.com">
+Fernando B=E1ez</a> </div>
+<div><b>Sent:</b> Friday, May 5, 2017 9:49 AM</div>
+<div><b>To:</b> <a title=3D"josedavid@contadoresdavid.com.ar" href=3D"mailt=
+o:josedavid@contadoresdavid.com.ar">
+josedavid@contadoresdavid.com.ar</a> </div>
+<div><b>Subject:</b> AMBULANCIA</div>
+</div>
+</div>
+<div><br>
+</div>
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal">JO =85TE paso la cuenta actualizada. Abrazo<o:p></o:=
+p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<table class=3D"MsoNormalTable" style=3D"BORDER-COLLAPSE: collapse; MARGIN-=
+LEFT: 0.1pt; WIDTH: 595pt" cellspacing=3D"0" cellpadding=3D"0" width=3D"793=
+" border=3D"0">
+<tbody>
+<tr style=3D"HEIGHT: 15.75pt">
+<td style=3D"BORDER-TOP: windowtext 1pt solid; HEIGHT: 15.75pt; BORDER-RIGH=
+T: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTO=
+M: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: windowtext 1pt =
+solid; PADDING-RIGHT: 3.5pt; WIDTH: 157pt" valign=3D"bottom" width=3D"209" =
+nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><b><sp=
+an style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">FECH=
+A<o:p></o:p></span></b></p>
+</td>
+<td style=3D"BORDER-TOP: windowtext 1pt solid; HEIGHT: 15.75pt; BORDER-RIGH=
+T: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTO=
+M: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PA=
+DDING-RIGHT: 3.5pt; WIDTH: 158pt" valign=3D"bottom" width=3D"211" nowrap=3D=
+"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><b><sp=
+an style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">PART=
+IDO<o:p></o:p></span></b></p>
+</td>
+<td style=3D"BORDER-TOP: windowtext 1pt solid; HEIGHT: 15.75pt; BORDER-RIGH=
+T: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTO=
+M: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PA=
+DDING-RIGHT: 3.5pt; WIDTH: 32pt" valign=3D"bottom" width=3D"43" nowrap=3D""=
+>
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><b><sp=
+an style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">HORA=
+S<o:p></o:p></span></b></p>
+</td>
+<td style=3D"BORDER-TOP: windowtext 1pt solid; HEIGHT: 15.75pt; BORDER-RIGH=
+T: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTO=
+M: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PA=
+DDING-RIGHT: 3.5pt; WIDTH: 48pt" valign=3D"bottom" width=3D"64" nowrap=3D""=
+>
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><b><sp=
+an style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">COST=
+O HORA<o:p></o:p></span></b></p>
+</td>
+<td style=3D"BORDER-TOP: windowtext 1pt solid; HEIGHT: 15.75pt; BORDER-RIGH=
+T: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTO=
+M: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PA=
+DDING-RIGHT: 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D""=
+>
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><b><sp=
+an style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">TOTA=
+L<o:p></o:p></span></b></p>
+</td>
+<td style=3D"BORDER-TOP: windowtext 1pt solid; HEIGHT: 15.75pt; BORDER-RIGH=
+T: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTO=
+M: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PA=
+DDING-RIGHT: 3.5pt; WIDTH: 47pt" valign=3D"bottom" width=3D"63" nowrap=3D""=
+>
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><b><sp=
+an style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">Infa=
+ntiles<o:p></o:p></span></b></p>
+</td>
+<td style=3D"BORDER-TOP: windowtext 1pt solid; HEIGHT: 15.75pt; BORDER-RIGH=
+T: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTO=
+M: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PA=
+DDING-RIGHT: 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D""=
+>
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><b><sp=
+an style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">Juve=
+niles<o:p></o:p></span></b></p>
+</td>
+<td style=3D"BORDER-TOP: windowtext 1pt solid; HEIGHT: 15.75pt; BORDER-RIGH=
+T: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTO=
+M: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PA=
+DDING-RIGHT: 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D""=
+>
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><b><sp=
+an style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">PS<o=
+:p></o:p></span></b></p>
+</td>
+</tr>
+<tr style=3D"HEIGHT: 15pt">
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: windowtext 1pt solid; PADDI=
+NG-RIGHT: 3.5pt; WIDTH: 157pt" valign=3D"bottom" width=3D"209" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: right" align=3D"right"><span st=
+yle=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">Saldo 201=
+6<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 158pt" valign=3D"bottom" width=3D"211" nowrap=3D"">
+<p class=3D"MsoNormal"><span style=3D"FONT-SIZE: 9pt; COLOR: black; mso-far=
+east-language: ES-AR">&nbsp;<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 32pt" valign=3D"bottom" width=3D"43" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">&nbsp;<=
+o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 48pt" valign=3D"bottom" width=3D"64" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">&nbsp;<=
+o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><b><sp=
+an style=3D"FONT-SIZE: 9pt; COLOR: red; mso-fareast-language: ES-AR">$ 0.00=
+<o:p></o:p></span></b></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 47pt" valign=3D"bottom" width=3D"63" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 0.00<=
+o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 0.00<=
+o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 0.00<=
+o:p></o:p></span></p>
+</td>
+</tr>
+<tr style=3D"HEIGHT: 15pt">
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: windowtext 1pt solid; PADDI=
+NG-RIGHT: 3.5pt; WIDTH: 157pt" valign=3D"bottom" width=3D"209" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: right" align=3D"right"><span st=
+yle=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">s=E1bado,=
+ 18 de febrero de 2017<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 158pt" valign=3D"bottom" width=3D"211" nowrap=3D"">
+<p class=3D"MsoNormal"><span style=3D"FONT-SIZE: 9pt; COLOR: black; mso-far=
+east-language: ES-AR">13 a 18.30<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 32pt" valign=3D"bottom" width=3D"43" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">5.5<o:p=
+></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 48pt" valign=3D"bottom" width=3D"64" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">500<o:p=
+></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 2,750=
+.00<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 47pt" valign=3D"bottom" width=3D"63" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">&nbsp;<=
+o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">&nbsp;<=
+o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 2,750=
+.00<o:p></o:p></span></p>
+</td>
+</tr>
+<tr style=3D"HEIGHT: 15pt">
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: windowtext 1pt solid; PADDI=
+NG-RIGHT: 3.5pt; WIDTH: 157pt" valign=3D"bottom" width=3D"209" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: right" align=3D"right"><span st=
+yle=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">s=E1bado, 11 de marzo d=
+e 2017<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 158pt" valign=3D"bottom" width=3D"211" nowrap=3D"">
+<p class=3D"MsoNormal"><span style=3D"FONT-SIZE: 9pt; mso-fareast-language:=
+ ES-AR">15 a 18.30<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 32pt" valign=3D"bottom" width=3D"43" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">3.5<o:p></o:p></span>=
+</p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 48pt" valign=3D"bottom" width=3D"64" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">500<o:p></o:p></span>=
+</p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 1,750=
+.00<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 47pt" valign=3D"bottom" width=3D"63" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: red; mso-fareast-language: ES-AR">&nbsp;<o:=
+p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 1,750=
+.00<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">&nbsp;<=
+o:p></o:p></span></p>
+</td>
+</tr>
+<tr style=3D"HEIGHT: 15pt">
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: windowtext 1pt solid; PADDI=
+NG-RIGHT: 3.5pt; WIDTH: 157pt" valign=3D"bottom" width=3D"209" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: right" align=3D"right"><span st=
+yle=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">jueves, 1=
+6 de marzo de 2017<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 158pt" valign=3D"bottom" width=3D"211" nowrap=3D"">
+<p class=3D"MsoNormal"><span style=3D"FONT-SIZE: 9pt; COLOR: black; mso-far=
+east-language: ES-AR">PS 21 a 23<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 32pt" valign=3D"bottom" width=3D"43" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">2<o:p><=
+/o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 48pt" valign=3D"bottom" width=3D"64" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">500<o:p=
+></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 1,000=
+.00<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 47pt" valign=3D"bottom" width=3D"63" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">&nbsp;<=
+o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">&nbsp;<=
+o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 1,000=
+.00<o:p></o:p></span></p>
+</td>
+</tr>
+<tr style=3D"HEIGHT: 15pt">
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: windowtext 1pt solid; PADDI=
+NG-RIGHT: 3.5pt; WIDTH: 157pt" valign=3D"bottom" width=3D"209" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: right" align=3D"right"><span st=
+yle=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">s=E1bado,=
+ 18 de marzo de 2017<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 158pt" valign=3D"bottom" width=3D"211" nowrap=3D"">
+<p class=3D"MsoNormal"><span style=3D"FONT-SIZE: 9pt; COLOR: black; mso-far=
+east-language: ES-AR">ps de 13.30 a 17.30<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 32pt" valign=3D"bottom" width=3D"43" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">4<o:p><=
+/o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 48pt" valign=3D"bottom" width=3D"64" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">500<o:p=
+></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 2,000=
+.00<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 47pt" valign=3D"bottom" width=3D"63" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">&nbsp;<=
+o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">&nbsp;<=
+o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 2,000=
+.00<o:p></o:p></span></p>
+</td>
+</tr>
+<tr style=3D"HEIGHT: 15pt">
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: windowtext 1pt solid; PADDI=
+NG-RIGHT: 3.5pt; WIDTH: 157pt" valign=3D"bottom" width=3D"209" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: right" align=3D"right"><span st=
+yle=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">domingo, 19 de marzo de=
+ 2017<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 158pt" valign=3D"bottom" width=3D"211" nowrap=3D"">
+<p class=3D"MsoNormal"><span style=3D"FONT-SIZE: 9pt; mso-fareast-language:=
+ ES-AR">JUV de 11 a 14.30<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 32pt" valign=3D"bottom" width=3D"43" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">3.5<o:p></o:p></span>=
+</p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 48pt" valign=3D"bottom" width=3D"64" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">500<o:p></o:p></span>=
+</p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 1,750=
+.00<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 47pt" valign=3D"bottom" width=3D"63" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">&nbsp;<=
+o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 1,750=
+.00<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">&nbsp;<=
+o:p></o:p></span></p>
+</td>
+</tr>
+<tr style=3D"HEIGHT: 15pt">
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: windowtext 1pt solid; PADDI=
+NG-RIGHT: 3.5pt; WIDTH: 157pt" valign=3D"bottom" width=3D"209" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: right" align=3D"right"><span st=
+yle=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">s=E1bado,=
+ 25 de marzo de 2017<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 158pt" valign=3D"bottom" width=3D"211" nowrap=3D"">
+<p class=3D"MsoNormal"><span style=3D"FONT-SIZE: 9pt; COLOR: black; mso-far=
+east-language: ES-AR">INF DE 10.30 A 13.30 - PS DE 14.30 A 18<o:p></o:p></s=
+pan></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 32pt" valign=3D"bottom" width=3D"43" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">7.5<o:p=
+></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 48pt" valign=3D"bottom" width=3D"64" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">500<o:p=
+></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 3,750=
+.00<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 47pt" valign=3D"bottom" width=3D"63" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 1,500=
+.00<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">&nbsp;<=
+o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 2,250=
+.00<o:p></o:p></span></p>
+</td>
+</tr>
+<tr style=3D"HEIGHT: 15pt">
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: windowtext 1pt solid; PADDI=
+NG-RIGHT: 3.5pt; WIDTH: 157pt" valign=3D"bottom" width=3D"209" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: right" align=3D"right"><span st=
+yle=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">s=E1bado, 01 de abril d=
+e 2017<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 158pt" valign=3D"bottom" width=3D"211" nowrap=3D"">
+<p class=3D"MsoNormal"><span style=3D"FONT-SIZE: 9pt; COLOR: black; mso-far=
+east-language: ES-AR">M Y PS DE 11.30 A 17.30
+<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 32pt" valign=3D"bottom" width=3D"43" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">6<o:p></o:p></span></=
+p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 48pt" valign=3D"bottom" width=3D"64" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">500<o:p></o:p></span>=
+</p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 3,000=
+.00<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 47pt" valign=3D"bottom" width=3D"63" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">&nbsp;<o:p></o:p></sp=
+an></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">$ 750.00<o:p></o:p></=
+span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">$ 2,250.00<o:p></o:p>=
+</span></p>
+</td>
+</tr>
+<tr style=3D"HEIGHT: 15pt">
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: windowtext 1pt solid; PADDI=
+NG-RIGHT: 3.5pt; WIDTH: 157pt" valign=3D"bottom" width=3D"209" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: right" align=3D"right"><span st=
+yle=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">s=E1bado, 22 de abril d=
+e 2017<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 158pt" valign=3D"bottom" width=3D"211" nowrap=3D"">
+<p class=3D"MsoNormal"><span style=3D"FONT-SIZE: 9pt; COLOR: black; mso-far=
+east-language: ES-AR">M 12 A 15<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 32pt" valign=3D"bottom" width=3D"43" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">3<o:p></o:p></span></=
+p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 48pt" valign=3D"bottom" width=3D"64" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">500<o:p></o:p></span>=
+</p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 1,500=
+.00<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 47pt" valign=3D"bottom" width=3D"63" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">&nbsp;<o:p></o:p></sp=
+an></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">$ 1,500.00<o:p></o:p>=
+</span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">&nbsp;<o:p></o:p></sp=
+an></p>
+</td>
+</tr>
+<tr style=3D"HEIGHT: 15pt">
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: windowtext 1pt solid; PADDI=
+NG-RIGHT: 3.5pt; WIDTH: 157pt" valign=3D"bottom" width=3D"209" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: right" align=3D"right"><span st=
+yle=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">s=E1bado, 29 de abril d=
+e 2017<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 158pt" valign=3D"bottom" width=3D"211" nowrap=3D"">
+<p class=3D"MsoNormal"><span style=3D"FONT-SIZE: 9pt; COLOR: black; mso-far=
+east-language: ES-AR">INF - M - PS DE 10.30 A 17.30<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 32pt" valign=3D"bottom" width=3D"43" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">7<o:p></o:p></span></=
+p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 48pt" valign=3D"bottom" width=3D"64" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">500<o:p></o:p></span>=
+</p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 3,500=
+.00<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 47pt" valign=3D"bottom" width=3D"63" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">$ 1,500.00<o:p></o:p>=
+</span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">&nbsp;<o:p></o:p></sp=
+an></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">$ 2,000.00<o:p></o:p>=
+</span></p>
+</td>
+</tr>
+<tr style=3D"HEIGHT: 15pt">
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: windowtext 1pt solid; PADDI=
+NG-RIGHT: 3.5pt; WIDTH: 157pt" valign=3D"bottom" width=3D"209" nowrap=3D"">
+<p class=3D"MsoNormal"><span style=3D"FONT-SIZE: 9pt; mso-fareast-language:=
+ ES-AR">&nbsp;<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 158pt" valign=3D"bottom" width=3D"211" nowrap=3D"">
+<p class=3D"MsoNormal"><span style=3D"FONT-SIZE: 9pt; COLOR: black; mso-far=
+east-language: ES-AR">&nbsp;<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 32pt" valign=3D"bottom" width=3D"43" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">&nbsp;<o:p></o:p></sp=
+an></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 48pt" valign=3D"bottom" width=3D"64" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">&nbsp;<o:p></o:p></sp=
+an></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 0.00<=
+o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 47pt" valign=3D"bottom" width=3D"63" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">&nbsp;<o:p></o:p></sp=
+an></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">&nbsp;<o:p></o:p></sp=
+an></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">&nbsp;<o:p></o:p></sp=
+an></p>
+</td>
+</tr>
+<tr style=3D"HEIGHT: 15pt">
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: windowtext 1pt solid; PADDI=
+NG-RIGHT: 3.5pt; WIDTH: 157pt" valign=3D"bottom" width=3D"209" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: right" align=3D"right"><span st=
+yle=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">&nbsp;<o:p></o:p></span=
+></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 158pt" valign=3D"bottom" width=3D"211" nowrap=3D"">
+<p class=3D"MsoNormal"><span style=3D"FONT-SIZE: 9pt; mso-fareast-language:=
+ ES-AR">&nbsp;<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 32pt" valign=3D"bottom" width=3D"43" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">&nbsp;<o:p></o:p></sp=
+an></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 48pt" valign=3D"bottom" width=3D"64" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">&nbsp;<o:p></o:p></sp=
+an></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 0.00<=
+o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 47pt" valign=3D"bottom" width=3D"63" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">&nbsp;<o:p></o:p></sp=
+an></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">&nbsp;<o:p></o:p></sp=
+an></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">&nbsp;<o:p></o:p></sp=
+an></p>
+</td>
+</tr>
+<tr style=3D"HEIGHT: 15pt">
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: windowtext 1pt solid; PADDI=
+NG-RIGHT: 3.5pt; WIDTH: 157pt" valign=3D"bottom" width=3D"209" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: right" align=3D"right"><span st=
+yle=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">&nbsp;<o:p></o:p></span=
+></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 158pt" valign=3D"bottom" width=3D"211" nowrap=3D"">
+<p class=3D"MsoNormal"><span style=3D"FONT-SIZE: 9pt; mso-fareast-language:=
+ ES-AR">&nbsp;<o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 32pt" valign=3D"bottom" width=3D"43" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">&nbsp;<o:p></o:p></sp=
+an></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 48pt" valign=3D"bottom" width=3D"64" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">&nbsp;<o:p></o:p></sp=
+an></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 0.00<=
+o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 47pt" valign=3D"bottom" width=3D"63" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">&nbsp;<o:p></o:p></sp=
+an></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">&nbsp;<o:p></o:p></sp=
+an></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15pt; BORDER-RIGHT: windowtex=
+t 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; PADD=
+ING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIGHT:=
+ 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; mso-fareast-language: ES-AR">&nbsp;<o:p></o:p></sp=
+an></p>
+</td>
+</tr>
+<tr style=3D"HEIGHT: 15.75pt">
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15.75pt; BORDER-RIGHT: window=
+text 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; P=
+ADDING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: windowtext 1pt solid; PA=
+DDING-RIGHT: 3.5pt; WIDTH: 157pt" valign=3D"bottom" width=3D"209" nowrap=3D=
+"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: right" align=3D"right"><span st=
+yle=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">&nbsp;<o:=
+p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15.75pt; BORDER-RIGHT: window=
+text 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; P=
+ADDING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIG=
+HT: 3.5pt; WIDTH: 158pt" valign=3D"bottom" width=3D"211" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: right" align=3D"right"><b><span=
+ style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">TOTALE=
+S<o:p></o:p></span></b></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15.75pt; BORDER-RIGHT: window=
+text 1pt solid; BACKGROUND: yellow; BORDER-BOTTOM: windowtext 1pt solid; PA=
+DDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medi=
+um none; PADDING-RIGHT: 3.5pt; WIDTH: 32pt" valign=3D"bottom" width=3D"43" =
+nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><b><sp=
+an style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">42<o=
+:p></o:p></span></b></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15.75pt; BORDER-RIGHT: window=
+text 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; PADDING-BOTTOM: 0cm; P=
+ADDING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medium none; PADDING-RIG=
+HT: 3.5pt; WIDTH: 48pt" valign=3D"bottom" width=3D"64" nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><span =
+style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">&nbsp;<=
+o:p></o:p></span></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15.75pt; BORDER-RIGHT: window=
+text 1pt solid; BACKGROUND: yellow; BORDER-BOTTOM: windowtext 1pt solid; PA=
+DDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medi=
+um none; PADDING-RIGHT: 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" =
+nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><b><sp=
+an style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 21=
+,000.00<o:p></o:p></span></b></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15.75pt; BORDER-RIGHT: window=
+text 1pt solid; BACKGROUND: yellow; BORDER-BOTTOM: windowtext 1pt solid; PA=
+DDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medi=
+um none; PADDING-RIGHT: 3.5pt; WIDTH: 47pt" valign=3D"bottom" width=3D"63" =
+nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><b><sp=
+an style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 3,=
+000.00<o:p></o:p></span></b></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15.75pt; BORDER-RIGHT: window=
+text 1pt solid; BACKGROUND: yellow; BORDER-BOTTOM: windowtext 1pt solid; PA=
+DDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medi=
+um none; PADDING-RIGHT: 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" =
+nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><b><sp=
+an style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 5,=
+750.00<o:p></o:p></span></b></p>
+</td>
+<td style=3D"BORDER-TOP: medium none; HEIGHT: 15.75pt; BORDER-RIGHT: window=
+text 1pt solid; BACKGROUND: yellow; BORDER-BOTTOM: windowtext 1pt solid; PA=
+DDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 3.5pt; BORDER-LEFT: medi=
+um none; PADDING-RIGHT: 3.5pt; WIDTH: 51pt" valign=3D"bottom" width=3D"68" =
+nowrap=3D"">
+<p class=3D"MsoNormal" style=3D"TEXT-ALIGN: center" align=3D"center"><b><sp=
+an style=3D"FONT-SIZE: 9pt; COLOR: black; mso-fareast-language: ES-AR">$ 12=
+,250.00<o:p></o:p></span></b></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+</div>
+<br>
+<br>
+<hr style=3D"border:none; color:#909090; background-color:#B0B0B0; height: =
+1px; width: 99%;">
+<table style=3D"border-collapse:collapse;border:none;">
+<tbody>
+<tr>
+<td style=3D"border:none;padding:0px 15px 0px 8px"><a href=3D"http://www.av=
+ast.com/"><img border=3D"0" alt=3D"Avast logo" src=3D"http://static.avast.c=
+om/emails/avast-mail-stamp.png">
+</a></td>
+<td>
+<p style=3D"color:#3d4d5a; font-family:&quot;Calibri&quot;,&quot;Verdana&qu=
+ot;,&quot;Arial&quot;,&quot;Helvetica&quot;; font-size:12pt;">
+El software de antivirus Avast ha analizado este correo electr=F3nico en bu=
+sca de virus.
+<br>
+<a href=3D"http://www.avast.com/">www.avast.com</a> </p>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+</div>
+</body>
+</html>
+
+--_000_DB5PR03MB10009CE98755DC8BDDA98F05FFED0DB5PR03MB1000eurp_--

@@ -1,0 +1,492 @@
+Return-Path: <oficinadiegosales@hotmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id qbfxDSwA5VjVWgAATLP0zA
+	for <jpruata@fapersa.com>; Wed, 05 Apr 2017 11:33:16 -0300
+Return-path: <oficinadiegosales@hotmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Wed, 05 Apr 2017 11:33:16 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:51719 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.88)
+	(envelope-from <oficinadiegosales@hotmail.com>)
+	id 1cvlzn-0007WY-KD
+	for jpruata@fapersa.com; Wed, 05 Apr 2017 11:33:16 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 2279A7F21F
+	for <jpruata@fapersa.com>; Wed,  5 Apr 2017 11:33:15 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+X-Spam-Flag: NO
+X-Spam-Score: 2.087
+X-Spam-Level: **
+X-Spam-Status: No, score=2.087 tagged_above=2 required=5
+	tests=[DKIM_SIGNED=0.1, DKIM_VALID=-0.1, DKIM_VALID_AU=-0.1,
+	FORGED_HOTMAIL_RCVD2=1.187, FREEMAIL_FROM=0.001, FREEMAIL_REPLY=1,
+	HTML_MESSAGE=0.001, RCVD_IN_DNSWL_NONE=-0.0001, SPF_HELO_PASS=-0.001,
+	SPF_PASS=-0.001] autolearn=no autolearn_force=no
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id IEW4oEAX5kve for <jpruata@fapersa.com>;
+	Wed,  5 Apr 2017 11:33:14 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id BDCC47F233; Wed,  5 Apr 2017 11:33:14 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 54AA47F21F
+	for <jpruata@fapersa.com>; Wed,  5 Apr 2017 11:33:14 -0300 (ART)
+Received-SPF: pass (hotmail.com: Sender is authorized to use 'oficinadiegosales@hotmail.com' in 'mfrom' identity (mechanism 'include:spf.protection.outlook.com' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="oficinadiegosales@hotmail.com"; helo=NAM02-BL2-obe.outbound.protection.outlook.com; client-ip=40.92.3.38
+Received: from NAM02-BL2-obe.outbound.protection.outlook.com (mail-oln040092003038.outbound.protection.outlook.com [40.92.3.38])
+	by fw.fapersa.com (Postfix) with ESMTPS id 31CAA5FE3D
+	for <jpruata@fapersa.com>; Wed,  5 Apr 2017 11:33:11 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=f9aapre8IoQJ0XHnwrWwktsubTy6G1ZCqQUnS7c6E9w=;
+ b=Tb3oI8W0fiiishBMvIRbqJuYkmKm5MdzP2ZgoEH3aMvX4peMRTFz4cSTgycDUbY+rghnNIbi8ZVXLowvCyYDyFSPrrBzqyxPtP2KK/YFq/VhEm8b91Uk2tk9U4w9Mh1641+MuAAt+azjhnO5wRxX0B0uleoyVpX5PsoXvd7BoHDYHAoIS6gqBtdk7RPXc4SVlUbwh/2J5b51bemvQYf3KxCDRCEy+CHGnwrvDiaOoVZ0JCQB/FBYeVD8ZqqQgAX2HxmnKealNXN4OZpIOA0GUq5fIbAhEgYTHcrKC7iG0ZuKIW8u951aHZG9+O1rpZeqa0GHel+kKVGG6b+cEO53fA==
+Received: from CY1NAM02FT046.eop-nam02.prod.protection.outlook.com
+ (10.152.74.59) by CY1NAM02HT162.eop-nam02.prod.protection.outlook.com
+ (10.152.74.87) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.1005.5; Wed, 5 Apr
+ 2017 14:33:07 +0000
+Received: from CO2PR01MB2007.prod.exchangelabs.com (10.152.74.54) by
+ CY1NAM02FT046.mail.protection.outlook.com (10.152.74.232) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id
+ 15.1.1019.14 via Frontend Transport; Wed, 5 Apr 2017 14:33:07 +0000
+Received: from CO2PR01MB2007.prod.exchangelabs.com ([10.166.90.148]) by
+ CO2PR01MB2007.prod.exchangelabs.com ([10.166.90.148]) with mapi id
+ 15.01.1005.020; Wed, 5 Apr 2017 14:33:08 +0000
+From: Oficina Sales <oficinadiegosales@hotmail.com>
+To: FAPERSA <jpruata@fapersa.com>
+Subject: Re: Stro. 2001600422
+Thread-Topic: Stro. 2001600422
+Thread-Index: AQHSrIKupLwucdmQF0eTuyC+9qWR3aG1cRcwgAFXXReAABFAAIAAADF3
+Date: Wed, 5 Apr 2017 14:33:07 +0000
+Message-ID: <CO2PR01MB200761F2A2D4672BA0D7681BA20A0@CO2PR01MB2007.prod.exchangelabs.com>
+References: <CO2PR01MB200739BD12CE2A8C21F8841DA2080@CO2PR01MB2007.prod.exchangelabs.com>
+ <452DD543EC86ED4CBD20754421E093360172DEEE9E@SS10175.sancorseguros.net>
+ <CO2PR01MB20073CC122F50D055393267AA20A0@CO2PR01MB2007.prod.exchangelabs.com>,<435ED1CF-A9DB-4782-B723-169F81A12B29@fapersa.com>
+In-Reply-To: <435ED1CF-A9DB-4782-B723-169F81A12B29@fapersa.com>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: fapersa.com; dkim=none (message not signed)
+ header.d=none;fapersa.com; dmarc=none action=none header.from=hotmail.com;
+x-incomingtopheadermarker: OriginalChecksum:A27E99E6A458516D9CE81EE8B80908DA9DE3CE9879BAFE4F2D18743CBD39387A;UpperCasedChecksum:567690DA8B9AF8E430E6A50BF5D64512CE2F9D12F24AD50DA7E4E2A1B388F17E;SizeAsReceived:8250;Count:42
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [0/1NVGAxZ8rw6FrT9CPzGeUFIP01aRmA]
+x-microsoft-exchange-diagnostics: 1;CY1NAM02HT162;5:mNjCOx3WVq+LZC8U3vukCw02VlrIG090RKk45IY6V9aYKnhcMa2W0CSdpZEzLKKKopkG9iX/+JuVIuVaet0VVW3FTYd+x73yTlsjDkfBCfaauKkZGeJpctMMVyZAzEznwvLevTBUhEpnAjJBiuCgfg==;24:VFe6emr9uNqDYIYZ6To6JObwSBkvvPnuakB7AzfQTf7BSXHB+yZBdVkRgIFcFo5dFniuHPGtmrtAY42VhCk0I1iQtes0Hzc6Szvg0pYKhJ8=;7:z5IxzW6XmWy2o6UcIcqTCkr5XGlHo8opM74q7YKs8iADmLUNjm1uwNLNpgnaCLTIkguasL/7YeASS6QQMcE9bUQYhMnlF7kfaTaeWaumoBb3OTG3kXrejzAMhYDE70sDIfqmFne5s23xR4YGuqX4x9LEhUX1Q5rgWOqabEW8O+TBK7uFiakZEzTjaIWuXYEsRbPrZOBboyI+mcWw/hvNZpqV0077pg3Pd9JLA/bNnLOPXIGn0Ny4Cv75qghcaSfcv2VsvD/upSwgRFPsxPnCZ7xAGSPJxetQK+5H74/W0m9WfaTgiM2i1/f4JFz2iJo3
+x-incomingheadercount: 42
+x-eopattributedmessage: 0
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(7070007)(98901004);DIR:OUT;SFP:1901;SCL:1;SRVR:CY1NAM02HT162;H:CO2PR01MB2007.prod.exchangelabs.com;FPR:;SPF:None;LANG:es;
+x-ms-office365-filtering-correlation-id: a0bfa281-b281-4817-58c9-08d47c30adb2
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(201702061074)(5061506573)(5061507331)(1603103135)(2017031320274)(2017031322274)(1603101448)(1601125374)(1701031045);SRVR:CY1NAM02HT162;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(444000031);SRVR:CY1NAM02HT162;BCL:0;PCL:0;RULEID:;SRVR:CY1NAM02HT162;
+x-forefront-prvs: 0268246AE7
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_CO2PR01MB200761F2A2D4672BA0D7681BA20A0CO2PR01MB2007prod_"
+MIME-Version: 1.0
+X-OriginatorOrg: hotmail.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 05 Apr 2017 14:33:07.9712
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CY1NAM02HT162
+
+--_000_CO2PR01MB200761F2A2D4672BA0D7681BA20A0CO2PR01MB2007prod_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Perfecto, ahora se los paso.
+
+
+Gracias!
+
+
+Mar=EDa Jos=E9 Paroli
+
+
+DIEGO F. SALES
+
+Secci=F3n SINIESTROS
+
+Tel: (0342) 4534182
+
+25 DE MAYO 2868 - SANTA FE
+
+diegosales@arnet.com.ar<mailto:diegosales@arnet.com.ar>
+
+oficinadiegosales@hotmail.com
+
+
+Horario de Atenci=F3n Administrativa SINIESTROS:
+
+Lunes a Viernes de 08:00 hs. a 12:00 hs.
+
+L=EDneas Rotativas para Denuncias: 0800 777 4643
+
+
+
+________________________________
+De: FAPERSA <jpruata@fapersa.com>
+Enviado: mi=E9rcoles, 05 de abril de 2017 11:31 a.m.
+Para: Oficina Sales
+Asunto: Re: Stro. 2001600422
+
+Maria Jose buenos d=EDas, por favor pastel el m=EDo que yo coordino con la =
+gente de Amiun. 156102022
+El 5 abr. 2017, a las 10:32, Oficina Sales <oficinadiegosales@hotmail.com<m=
+ailto:oficinadiegosales@hotmail.com>> escribi=F3:
+
+Buenos d=EDas Juan Pablo, desde Siniestros me solicitan un numero de contac=
+to para coordinar el retiro de los restos de la unidad siniestrada.
+
+Aguardo tu respuesta.
+
+Saludos!
+
+
+Mar=EDa Jos=E9 Paroli
+
+DIEGO F. SALES
+Secci=F3n SINIESTROS
+Tel: (0342) 4534182
+25 DE MAYO 2868 - SANTA FE
+diegosales@arnet.com.ar<mailto:diegosales@arnet.com.ar>
+oficinadiegosales@hotmail.com<mailto:oficinadiegosales@hotmail.com>
+
+Horario de Atenci=F3n Administrativa SINIESTROS:
+Lunes a Viernes de 08:00 hs. a 12:00 hs.
+L=EDneas Rotativas para Denuncias: 0800 777 4643
+
+
+
+________________________________
+
+
+
+
+
+
+
+*
+
+
+--_000_CO2PR01MB200761F2A2D4672BA0D7681BA20A0CO2PR01MB2007prod_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt;color:#000000;font=
+-family:Calibri,Arial,Helvetica,sans-serif;" dir=3D"ltr">
+<p>Perfecto, ahora se los paso.</p>
+<p><br>
+</p>
+<p>Gracias!</p>
+<p><br>
+</p>
+<div id=3D"Signature">
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:14pt; color:#000000; ba=
+ckground-color:#FFFFFF; font-family:Arial,Helvetica,sans-serif">
+<p class=3D"ecxMsoNormal"></p>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<span style=3D"font-size:10pt; color:rgb(189,19,152); font-family:Corbel,sa=
+ns-serif"><b><span style=3D"font-size:12pt; color:rgb(0,0,0)">Mar=EDa Jos=
+=E9 Paroli</span></b></span></p>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<i><span style=3D"font-size:10pt; color:rgb(189,19,152); font-family:Corbel=
+,sans-serif"><b><span style=3D"font-size:12pt"><br>
+</span></b></span></i></p>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<i><span style=3D"font-size:10pt; color:rgb(189,19,152); font-family:Corbel=
+,sans-serif"><b><span style=3D"font-size:12pt">DIEGO F. SALES&nbsp;</span><=
+/b></span></i></p>
+<span style=3D"font-size:18.6667px; font-family:Corbel,sans-serif; color:rg=
+b(189,19,152)"></span><span style=3D"font-size:18.6667px; font-family:'Fran=
+klin Gothic Medium',sans-serif"></span><span style=3D"font-size:18.6667px; =
+font-family:Corbel,sans-serif; color:rgb(189,19,152)"></span><span style=3D=
+"font-family:Arial,Helvetica,sans-serif; font-size:18.6667px"></span>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<i><span style=3D"color:rgb(189,19,152); font-family:Corbel,sans-serif; fon=
+t-size:11pt">Secci=F3n SINIESTROS&nbsp;</span></i></p>
+<span style=3D"font-family:Corbel,sans-serif; color:rgb(189,19,152); font-s=
+ize:11pt"></span><span style=3D"font-size:18.6667px; font-family:'Franklin =
+Gothic Medium',sans-serif"></span><span style=3D"font-family:Corbel,sans-se=
+rif; color:rgb(189,19,152); font-size:11pt"></span><span style=3D"font-fami=
+ly:Arial,Helvetica,sans-serif; font-size:18.6667px"></span>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<i><span style=3D"color:rgb(189,19,152); font-family:Corbel,sans-serif; fon=
+t-size:11pt">Tel: (0342) 4534182</span><span style=3D"font-family:'Franklin=
+ Gothic Medium',sans-serif"></span></i></p>
+<span style=3D"font-family:Corbel,sans-serif; color:rgb(189,19,152); font-s=
+ize:11pt"></span><span style=3D"font-size:18.6667px; font-family:'Franklin =
+Gothic Medium',sans-serif"></span><span style=3D"font-family:Corbel,sans-se=
+rif; color:rgb(189,19,152); font-size:11pt"></span><span style=3D"font-fami=
+ly:Arial,Helvetica,sans-serif; font-size:18.6667px"></span>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<i><span style=3D"color:rgb(102,0,51)"><span style=3D"font-family:Corbel,sa=
+ns-serif; color:rgb(189,19,152); font-size:11pt">25 DE MAYO 2868 -&nbsp;</s=
+pan><span style=3D"font-family:Corbel,sans-serif; color:rgb(189,19,152); fo=
+nt-size:11pt">SANTA FE</span></span></i></p>
+<span style=3D"font-family:Corbel,sans-serif; color:rgb(189,19,152); font-s=
+ize:11pt"></span><span style=3D"font-family:Arial,Helvetica,sans-serif; fon=
+t-size:18.6667px"></span>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<i><span style=3D"color:rgb(102,0,51)"><a href=3D"mailto:diegosales@arnet.c=
+om.ar" target=3D"_blank" id=3D"LPNoLP"><span style=3D"font-family:Corbel,sa=
+ns-serif; color:rgb(189,19,152); font-size:11pt">diegosales@arnet.com.ar</s=
+pan></a></span></i></p>
+<span style=3D"font-family:Corbel,sans-serif; color:rgb(189,19,152); font-s=
+ize:11pt"></span><span style=3D"font-family:Arial,Helvetica,sans-serif; fon=
+t-size:18.6667px"></span>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<i><span style=3D"color:rgb(189,19,152); font-family:Corbel,sans-serif; fon=
+t-size:11pt">oficinadiegosales@hotmail.com</span></i></p>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<br>
+</p>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<i style=3D"line-height:20.8267px; color:rgb(68,68,68); font-size:14.6667px=
+"><span style=3D"line-height:18.9333px; font-size:10pt; color:rgb(102,0,51)=
+"><font face=3D"Arial"><span style=3D"color:rgb(0,0,0)">Horario de Atenci=
+=F3n Administrativa&nbsp;SINIESTROS:&nbsp;</span></font></span></i></p>
+<span style=3D"font-family:Arial,Helvetica,sans-serif; font-size:18.6667px"=
+></span><span style=3D"font-family:Arial,Helvetica,sans-serif; font-size:18=
+.6667px"></span>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<i style=3D"line-height:20.8267px; color:rgb(68,68,68); font-size:14.6667px=
+"><span style=3D"line-height:18.9333px; font-size:10pt; color:rgb(102,0,51)=
+"><font face=3D"Arial"><span style=3D"color:rgb(0,0,0)">Lunes a Viernes de =
+08:00 hs.&nbsp;a&nbsp;12:00 hs.</span></font></span></i></p>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<i style=3D"line-height:20.8267px; color:rgb(68,68,68); font-size:14.6667px=
+"><span style=3D"line-height:18.9333px; font-size:10pt; color:rgb(102,0,51)=
+"><font face=3D"Arial"><span style=3D"color:rgb(0,0,0)">L=EDneas Rotativas =
+para Denuncias: 0800 777 4643</span></font></span></i></p>
+<br>
+<p></p>
+<p class=3D"ecxMsoNormal"><font size=3D"1"></font></p>
+<font face=3D"Times New Roman" size=3D"3"></font></div>
+</div>
+<br>
+<br>
+<div style=3D"color: rgb(0, 0, 0);">
+<hr tabindex=3D"-1" style=3D"display:inline-block; width:98%">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" co=
+lor=3D"#000000" style=3D"font-size:11pt"><b>De:</b> FAPERSA &lt;jpruata@fap=
+ersa.com&gt;<br>
+<b>Enviado:</b> mi=E9rcoles, 05 de abril de 2017 11:31 a.m.<br>
+<b>Para:</b> Oficina Sales<br>
+<b>Asunto:</b> Re: Stro. 2001600422</font>
+<div>&nbsp;</div>
+</div>
+<div>Maria Jose buenos d=EDas, por favor pastel el m=EDo que yo coordino co=
+n la gente de Amiun. 156102022<br class=3D"">
+<div>
+<blockquote type=3D"cite" class=3D"">
+<div class=3D"">El 5 abr. 2017, a las 10:32, Oficina Sales &lt;<a href=3D"m=
+ailto:oficinadiegosales@hotmail.com" class=3D"">oficinadiegosales@hotmail.c=
+om</a>&gt; escribi=F3:</div>
+<br class=3D"Apple-interchange-newline">
+<div class=3D"">
+<div id=3D"divtagdefaultwrapper" dir=3D"ltr" class=3D"" style=3D"font-style=
+:normal; font-weight:normal; letter-spacing:normal; text-align:start; text-=
+indent:0px; text-transform:none; white-space:normal; word-spacing:0px; font=
+-size:12pt; font-family:Calibri,Arial,Helvetica,sans-serif">
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px">Buenos d=EDas J=
+uan Pablo, desde Siniestros me solicitan&nbsp;un numero de contacto para&nb=
+sp;coordinar el retiro de los restos de la unidad siniestrada.</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px"><br class=3D"">
+</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px">Aguardo tu resp=
+uesta.</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px"><br class=3D"">
+</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px">Saludos!</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px"><br class=3D"">
+</div>
+<div id=3D"Signature" class=3D"">
+<div id=3D"divtagdefaultwrapper" class=3D"" style=3D"font-size:14pt; backgr=
+ound-color:rgb(255,255,255); font-family:Arial,Helvetica,sans-serif">
+<p class=3D"ecxMsoNormal" style=3D"margin-top:0px; margin-bottom:0px"></p>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<span class=3D"" style=3D"font-size:10pt; color:rgb(189,19,152); font-famil=
+y:Corbel,sans-serif"><b class=3D""><span class=3D"" style=3D"font-size:12pt=
+">Mar=EDa Jos=E9 Paroli</span></b></span></div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<i class=3D""><span class=3D"" style=3D"font-size:10pt; color:rgb(189,19,15=
+2); font-family:Corbel,sans-serif"><b class=3D""><span class=3D"" style=3D"=
+font-size:12pt"><br class=3D"">
+</span></b></span></i></div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<i class=3D""><span class=3D"" style=3D"font-size:10pt; color:rgb(189,19,15=
+2); font-family:Corbel,sans-serif"><b class=3D""><span class=3D"" style=3D"=
+font-size:12pt">DIEGO F. SALES&nbsp;</span></b></span></i></div>
+<span class=3D"" style=3D"font-size:18.6667px; font-family:Corbel,sans-seri=
+f; color:rgb(189,19,152)"></span><span class=3D"" style=3D"font-size:18.666=
+7px; font-family:'Franklin Gothic Medium',sans-serif"></span><span class=3D=
+"" style=3D"font-size:18.6667px; font-family:Corbel,sans-serif; color:rgb(1=
+89,19,152)"></span><span class=3D"" style=3D"font-family:Arial,Helvetica,sa=
+ns-serif; font-size:18.6667px"></span>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<i class=3D""><span class=3D"" style=3D"color:rgb(189,19,152); font-family:=
+Corbel,sans-serif; font-size:11pt">Secci=F3n SINIESTROS&nbsp;</span></i></d=
+iv>
+<span class=3D"" style=3D"font-family:Corbel,sans-serif; color:rgb(189,19,1=
+52); font-size:11pt"></span><span class=3D"" style=3D"font-size:18.6667px; =
+font-family:'Franklin Gothic Medium',sans-serif"></span><span class=3D"" st=
+yle=3D"font-family:Corbel,sans-serif; color:rgb(189,19,152); font-size:11pt=
+"></span><span class=3D"" style=3D"font-family:Arial,Helvetica,sans-serif; =
+font-size:18.6667px"></span>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<i class=3D""><span class=3D"" style=3D"color:rgb(189,19,152); font-family:=
+Corbel,sans-serif; font-size:11pt">Tel: (0342) 4534182</span><span class=3D=
+"" style=3D"font-family:'Franklin Gothic Medium',sans-serif"></span></i></d=
+iv>
+<span class=3D"" style=3D"font-family:Corbel,sans-serif; color:rgb(189,19,1=
+52); font-size:11pt"></span><span class=3D"" style=3D"font-size:18.6667px; =
+font-family:'Franklin Gothic Medium',sans-serif"></span><span class=3D"" st=
+yle=3D"font-family:Corbel,sans-serif; color:rgb(189,19,152); font-size:11pt=
+"></span><span class=3D"" style=3D"font-family:Arial,Helvetica,sans-serif; =
+font-size:18.6667px"></span>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<i class=3D""><span class=3D"" style=3D"color:rgb(102,0,51)"><span class=3D=
+"" style=3D"font-family:Corbel,sans-serif; color:rgb(189,19,152); font-size=
+:11pt">25 DE MAYO 2868 -&nbsp;</span><span class=3D"" style=3D"font-family:=
+Corbel,sans-serif; color:rgb(189,19,152); font-size:11pt">SANTA
+ FE</span></span></i></div>
+<span class=3D"" style=3D"font-family:Corbel,sans-serif; color:rgb(189,19,1=
+52); font-size:11pt"></span><span class=3D"" style=3D"font-family:Arial,Hel=
+vetica,sans-serif; font-size:18.6667px"></span>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<i class=3D""><span class=3D"" style=3D"color:rgb(102,0,51)"><a href=3D"mai=
+lto:diegosales@arnet.com.ar" target=3D"_blank" id=3D"LPNoLP" class=3D""><sp=
+an class=3D"" style=3D"font-family:Corbel,sans-serif; color:rgb(189,19,152)=
+; font-size:11pt">diegosales@arnet.com.ar</span></a></span></i></div>
+<span class=3D"" style=3D"font-family:Corbel,sans-serif; color:rgb(189,19,1=
+52); font-size:11pt"></span><span class=3D"" style=3D"font-family:Arial,Hel=
+vetica,sans-serif; font-size:18.6667px"></span>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<i class=3D""><span class=3D"" style=3D"color:rgb(189,19,152); font-family:=
+Corbel,sans-serif; font-size:11pt"><a href=3D"mailto:oficinadiegosales@hotm=
+ail.com" class=3D"">oficinadiegosales@hotmail.com</a></span></i></div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<br class=3D"">
+</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<i class=3D"" style=3D"line-height:20.8267px; color:rgb(68,68,68); font-siz=
+e:14.6667px"><span class=3D"" style=3D"line-height:18.9333px; font-size:10p=
+t; color:rgb(102,0,51)"><font face=3D"Arial" class=3D""><span class=3D"" st=
+yle=3D"">Horario de Atenci=F3n Administrativa&nbsp;SINIESTROS:&nbsp;</span>=
+</font></span></i></div>
+<span class=3D"" style=3D"font-family:Arial,Helvetica,sans-serif; font-size=
+:18.6667px"></span><span class=3D"" style=3D"font-family:Arial,Helvetica,sa=
+ns-serif; font-size:18.6667px"></span>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<i class=3D"" style=3D"line-height:20.8267px; color:rgb(68,68,68); font-siz=
+e:14.6667px"><span class=3D"" style=3D"line-height:18.9333px; font-size:10p=
+t; color:rgb(102,0,51)"><font face=3D"Arial" class=3D""><span class=3D"" st=
+yle=3D"">Lunes a Viernes de 08:00 hs.&nbsp;a&nbsp;12:00 hs.</span></font></=
+span></i></div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<i class=3D"" style=3D"line-height:20.8267px; color:rgb(68,68,68); font-siz=
+e:14.6667px"><span class=3D"" style=3D"line-height:18.9333px; font-size:10p=
+t; color:rgb(102,0,51)"><font face=3D"Arial" class=3D""><span class=3D"" st=
+yle=3D"">L=EDneas Rotativas para Denuncias: 0800 777
+ 4643</span></font></span></i></div>
+<br class=3D"">
+<p class=3D"" style=3D"margin-top:0px; margin-bottom:0px"></p>
+<p class=3D"ecxMsoNormal" style=3D"margin-top:0px; margin-bottom:0px"><font=
+ size=3D"1" class=3D""></font></p>
+<font face=3D"Times New Roman" size=3D"3" class=3D""></font></div>
+</div>
+<br class=3D"">
+<br class=3D"">
+<div class=3D"" style=3D"">
+<hr tabindex=3D"-1" class=3D"" style=3D"display:inline-block; width:734.015=
+625px">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr" class=3D""><br class=3D"">
+</div>
+<div class=3D"">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal" style=3D"margin-top:0px; margin-bottom:0px"><span cl=
+ass=3D"" style=3D"font-size:11pt; font-family:Calibri,sans-serif"></span></=
+p>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px"><br class=3D"">
+</div>
+<div class=3D"">
+<div class=3D"" style=3D"border-style:solid none none; border-top-width:1pt=
+; border-top-color:rgb(225,225,225); padding:3pt 0cm 0cm">
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px"><br class=3D"">
+</div>
+</div>
+</div>
+<div id=3D"divtagdefaultwrapper" class=3D"">
+<p class=3D"" style=3D"margin-top:0px; margin-bottom:0px"><span class=3D"" =
+style=3D"font-family:Calibri,sans-serif"></span></p>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px"><br class=3D"">
+</div>
+<div id=3D"Signature" class=3D"">
+<div id=3D"divtagdefaultwrapper" class=3D"">
+<p class=3D"xecxmsonormal" style=3D"margin-top:0px; margin-bottom:0px; back=
+ground-color:white">
+<span class=3D"" style=3D"font-size:14pt; font-family:Arial,sans-serif"></s=
+pan></p>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; background-colo=
+r:white"><br class=3D"">
+</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; background-colo=
+r:white"><br class=3D"">
+</div>
+</div>
+</div>
+</div>
+</div>
+<br class=3D"">
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-size:8pt; =
+color:gray; font-family:Arial,Calibri,Cambria,garamond,serif">
+*</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+<br class=3D"">
+</div>
+</div>
+</div>
+</body>
+</html>
+
+--_000_CO2PR01MB200761F2A2D4672BA0D7681BA20A0CO2PR01MB2007prod_--

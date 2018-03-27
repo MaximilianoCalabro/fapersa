@@ -1,0 +1,210 @@
+-- MySQL dump 10.11
+--
+-- Host: localhost    Database: roundcube
+-- ------------------------------------------------------
+-- Server version	5.0.95-community
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `users`
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `user_id` int(10) unsigned NOT NULL auto_increment,
+  `username` varchar(128) character set utf8 collate utf8_bin NOT NULL,
+  `mail_host` varchar(128) NOT NULL,
+  `alias` varchar(128) character set utf8 collate utf8_bin NOT NULL,
+  `created` datetime NOT NULL default '1000-01-01 00:00:00',
+  `last_login` datetime default NULL,
+  `language` varchar(5) default NULL,
+  `preferences` text,
+  PRIMARY KEY  (`user_id`),
+  UNIQUE KEY `username` (`username`,`mail_host`),
+  KEY `alias_index` (`alias`)
+) ENGINE=InnoDB AUTO_INCREMENT=309 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+-- WHERE:  user_id IN (268,112,109,183,277)
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` (`user_id`, `username`, `mail_host`, `alias`, `created`, `last_login`, `language`, `preferences`) VALUES (109,'fapersa','localhost','','2011-11-24 11:15:52','2012-03-07 15:17:43','es_ES','a:1:{s:15:\"namespace_fixed\";b:1;}'),(112,'auberto@fapersa.com','localhost','','2011-12-07 09:58:08','2011-12-07 09:58:08','es_ES','a:1:{s:15:\"namespace_fixed\";b:1;}'),(183,'fgrismado@fapersa.com','localhost','','2011-12-30 09:51:58','2011-12-30 10:06:26','es_ES','a:1:{s:15:\"namespace_fixed\";b:1;}'),(268,'abasile@fapersa.com','localhost','','2012-01-24 13:31:04','2012-03-31 14:26:20','es_ES','a:1:{s:15:\"namespace_fixed\";b:1;}'),(277,'pagos@fapersa.com','localhost','','2012-02-29 09:48:58','2012-02-29 09:48:58','es_ES','a:1:{s:15:\"namespace_fixed\";b:1;}');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `identities`
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `identities` (
+  `identity_id` int(10) unsigned NOT NULL auto_increment,
+  `user_id` int(10) unsigned NOT NULL,
+  `changed` datetime NOT NULL default '1000-01-01 00:00:00',
+  `del` tinyint(1) NOT NULL default '0',
+  `standard` tinyint(1) NOT NULL default '0',
+  `name` varchar(128) NOT NULL,
+  `organization` varchar(128) NOT NULL default '',
+  `email` varchar(128) NOT NULL,
+  `reply-to` varchar(128) NOT NULL default '',
+  `bcc` varchar(128) NOT NULL default '',
+  `signature` text,
+  `html_signature` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`identity_id`),
+  KEY `user_identities_index` (`user_id`,`del`),
+  CONSTRAINT `user_id_fk_identities` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=311 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `identities`
+--
+-- WHERE:  user_id IN (268,112,109,183,277)
+
+LOCK TABLES `identities` WRITE;
+/*!40000 ALTER TABLE `identities` DISABLE KEYS */;
+INSERT INTO `identities` (`identity_id`, `user_id`, `changed`, `del`, `standard`, `name`, `organization`, `email`, `reply-to`, `bcc`, `signature`, `html_signature`) VALUES (109,109,'2011-11-24 11:15:52',0,1,'fapersa','','fapersa@fapersa.com','','',NULL,0),(112,112,'2011-12-07 09:58:09',0,1,'','','auberto@fapersa.com','','',NULL,0),(184,183,'2011-12-30 09:51:58',0,1,'','','fgrismado@fapersa.com','','',NULL,0),(270,268,'2012-01-24 13:31:05',0,1,'','','abasile@fapersa.com','','',NULL,0),(279,277,'2012-02-29 09:48:58',0,1,'','','pagos@fapersa.com','','',NULL,0);
+/*!40000 ALTER TABLE `identities` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `contacts`
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `contacts` (
+  `contact_id` int(10) unsigned NOT NULL auto_increment,
+  `changed` datetime NOT NULL default '1000-01-01 00:00:00',
+  `del` tinyint(1) NOT NULL default '0',
+  `name` varchar(128) NOT NULL default '',
+  `email` text NOT NULL,
+  `firstname` varchar(128) NOT NULL default '',
+  `surname` varchar(128) NOT NULL default '',
+  `vcard` longtext,
+  `words` text,
+  `user_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY  (`contact_id`),
+  KEY `user_contacts_index` (`user_id`,`del`),
+  CONSTRAINT `user_id_fk_contacts` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=274 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `contacts`
+--
+-- WHERE:  user_id IN (268,112,109,183,277)
+
+LOCK TABLES `contacts` WRITE;
+/*!40000 ALTER TABLE `contacts` DISABLE KEYS */;
+/*!40000 ALTER TABLE `contacts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `contactgroups`
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `contactgroups` (
+  `contactgroup_id` int(10) unsigned NOT NULL auto_increment,
+  `user_id` int(10) unsigned NOT NULL,
+  `changed` datetime NOT NULL default '1000-01-01 00:00:00',
+  `del` tinyint(1) NOT NULL default '0',
+  `name` varchar(128) NOT NULL default '',
+  PRIMARY KEY  (`contactgroup_id`),
+  KEY `contactgroups_user_index` (`user_id`,`del`),
+  CONSTRAINT `user_id_fk_contactgroups` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `contactgroups`
+--
+-- WHERE:  user_id IN (268,112,109,183,277)
+
+LOCK TABLES `contactgroups` WRITE;
+/*!40000 ALTER TABLE `contactgroups` DISABLE KEYS */;
+/*!40000 ALTER TABLE `contactgroups` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2012-06-23 15:27:46
+-- MySQL dump 10.11
+--
+-- Host: localhost    Database: roundcube
+-- ------------------------------------------------------
+-- Server version	5.0.95-community
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `contactgroupmembers`
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `contactgroupmembers` (
+  `contactgroup_id` int(10) unsigned NOT NULL,
+  `contact_id` int(10) unsigned NOT NULL,
+  `created` datetime NOT NULL default '1000-01-01 00:00:00',
+  PRIMARY KEY  (`contactgroup_id`,`contact_id`),
+  KEY `contactgroupmembers_contact_index` (`contact_id`),
+  CONSTRAINT `contactgroup_id_fk_contactgroups` FOREIGN KEY (`contactgroup_id`) REFERENCES `contactgroups` (`contactgroup_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `contact_id_fk_contacts` FOREIGN KEY (`contact_id`) REFERENCES `contacts` (`contact_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `contactgroupmembers`
+--
+-- WHERE:  0
+
+LOCK TABLES `contactgroupmembers` WRITE;
+/*!40000 ALTER TABLE `contactgroupmembers` DISABLE KEYS */;
+/*!40000 ALTER TABLE `contactgroupmembers` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2012-06-23 15:27:46

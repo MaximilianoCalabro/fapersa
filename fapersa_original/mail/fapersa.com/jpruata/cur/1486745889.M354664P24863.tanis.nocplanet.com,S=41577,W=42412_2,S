@@ -1,0 +1,835 @@
+Return-Path: <0100015a28f51424-20ffc0c0-5ec5-44c9-9e6f-857a9b378b1a-000000@mailer.netflix.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id YebWFCHxnVgfYQAATLP0zA
+	for <jpruata@fapersa.com>; Fri, 10 Feb 2017 13:58:09 -0300
+Return-path: <0100015a28f51424-20ffc0c0-5ec5-44c9-9e6f-857a9b378b1a-000000@mailer.netflix.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Fri, 10 Feb 2017 13:58:09 -0300
+Received: from a14-178.smtp-out.amazonses.com ([54.240.14.178]:45606)
+	by tanis.nocplanet.com with esmtps (TLSv1:ECDHE-RSA-AES128-SHA:128)
+	(Exim 4.88)
+	(envelope-from <0100015a28f51424-20ffc0c0-5ec5-44c9-9e6f-857a9b378b1a-000000@mailer.netflix.com>)
+	id 1ccEWB-0007Ri-Ky
+	for jpruata@fapersa.com; Fri, 10 Feb 2017 13:58:09 -0300
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ewp7dmdc3tifc4f2l3vfmpnuaytwui7a; d=netflix.com; t=1486745834;
+	i=@mailer.netflix.com;
+	h=Date:From:Sender:To:Message-ID:Subject:MIME-Version:Content-Type:List-Unsubscribe;
+	bh=H14BP875B0BmVYckp6qsMz4Gd8mQTJuQPkWCjB/ZUQw=;
+	b=GywTIb/05e+bLoIbu7KLJX1rwucrUFs5AEoxYkhrxSB+RuVTjib29CQXphUNodu+
+	Eb0Zaim+dfa0CTDxydTWJHcRNwh7i5S4lDbexuBtQhGU8XNtRIWGS8G0tOqIWYhhsWN
+	qjY33IdNk+lYrLLunC0PNPgrOzLzOiQerAkO6Y7w=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1486745834;
+	h=Date:From:Sender:To:Message-ID:Subject:MIME-Version:Content-Type:List-Unsubscribe:Feedback-ID;
+	bh=H14BP875B0BmVYckp6qsMz4Gd8mQTJuQPkWCjB/ZUQw=;
+	b=f4UHD9HIyzDLLJkHMhptOvsfya2ea9MMqsAX4YEo75pFBvSwH/h/k8hd0fLWwhnR
+	bgWqVQCeOQXICFMA9A4LE3+lpsJAbOiKm9avM44v9BVO80qW127N7X1Y6JmQmAJbPxh
+	30N/8W+46roT3mUMlV5CmXSeHB7SQ80ZcTrHBL70=
+Date: Fri, 10 Feb 2017 16:57:14 +0000
+From: Netflix <info@mailer.netflix.com>
+Sender: Netflix <info@mailer.netflix.com>
+To: jpruata@fapersa.com
+Message-ID: <0100015a28f51424-20ffc0c0-5ec5-44c9-9e6f-857a9b378b1a-000000@email.amazonses.com>
+Subject: =?utf-8?Q?Guarda_tus_favoritos_para_despu=C3=A9s_con_Mi_lista?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_16003_964846940.1486745834503"
+X-To: jpruata@fapersa.com
+Precedence: bulk
+X-AppInfo: Netflix Mercury s.a905da6.2094
+X-ProcEnc: BQAtAAEBEGiS7jvolk86Ms7bYJkJYB8g3J/d09kzLskgwAOkjLcht0bN+t02y7dlNn4e0wVLNg8=
+X-MailingID: mercury::MR::06098::3E9DB53C9D82E8584DEC061F4AF6FC666452641E::<15A28F51407@netflix.com>
+X-GroupId: 4
+X-localeCountry: es::AR
+X-ProcInfo: mercurymailman::f15b2f95084d::eventconsumer::eventconsumer-batch-i-054ebfbc112df6e5f::mercurymp-daily-i-0c837eb23f8cda232::00:00:51:11.599
+X-EvCacheKey: 06098.EMAIL.WELCOME_DAY7_MYLIST.-0005.-5.es.AR
+X-Version: 4737
+List-Unsubscribe: <mailto:RTJQTjQ0N0FTUkhFTkVEU1EyQk9PU0FCUlVCNjEy@unsubscribe.netflix.com>, <http://signup.netflix.com/EmailUnsubscribe?id=BQE0AAEBEAeGnt6pms9pS6LPlVxw1yWAkPpnOnz0bvkafI36vI9gnTF6E46h%2FMecLyFBMFKD%2BmvQcJi0PfmBRYam7tJe4xX1%2FxoeQXuZll%2BezZ5eLQQdaWW1lsm3set7StFOsiroxZJpDvTMl0Nq5cPzgVGUANWlo5YWuKNTd2vGAgsWQBZHHHBF4W8sa1pdupbPAi27ApIE098FCVt2nY6ggOzvu6cMhA%3D%3D&mid=null&lnktrk=EMP&g=3E9DB53C9D82E8584DEC061F4AF6FC666452641E&lkid=unsubscribe_link>
+X-SES-Outgoing: 2017.02.10-54.240.14.178
+Feedback-ID: 1.us-east-1.e/1JYhpKv/dBWKAQgARyQ1DQa1Z9EXFU4w7Gpx+7ZbQ=:AmazonSES
+X-Spam-Status: No, score=-0.4
+X-Spam-Score: -3
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Netflix Haz tu propia fila en Netflix ¿Descubriste un programa
+    o una película en Netflix que te gustaría ver, pero en otro momento? Puedes
+    guardarlo para más tarde mientras navegas con la función "Agregar a Mi
+   lista". A medida que agregas títulos a tu lista, aparecerá una fila nueva
+    llamada "Mi lista", que solo tiene los programas y las películas que hayas
+    agregado. [...] 
+ 
+ Content analysis details:   (-0.4 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: amazonses.com]
+  0.0 T_SPF_TEMPERROR        SPF: test of record failed (temperror)
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  1.2 KAM_REALLYHUGEIMGSRC   RAW: Spam with image tags with ridiculously huge
+                              http urls
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  0.2 KAM_LOTSOFHASH         Emails with lots of hash-like gibberish
+X-Spam-Flag: NO
+
+------=_Part_16003_964846940.1486745834503
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+Netflix
+
+Haz tu propia fila en Netflix
+
+=C2=BFDescubriste un programa o una pel=C3=ADcula en Netflix que te gustar=
+=C3=ADa ver, pero en otro momento? Puedes guardarlo para m=C3=A1s tarde mie=
+ntras navegas con la funci=C3=B3n "Agregar a Mi lista". A medida que agrega=
+s t=C3=ADtulos a tu lista, aparecer=C3=A1 una fila nueva llamada "Mi lista"=
+, que solo tiene los programas y las pel=C3=ADculas que hayas agregado.
+
+Comenzar a crear tu lista
+https://www.netflix.com/browse?lnktrk=3DEMP&g=3D3E9DB53C9D82E8584DEC061F4AF=
+6FC666452641E&lkid=3DURL_HOME
+
+Crimenes Americanos: El Caso O.J. Simpson
+https://www.netflix.com/title/80083977?trkid=3D13710079&lnktrk=3DEMP&g=3D3E=
+9DB53C9D82E8584DEC061F4AF6FC666452641E&lkid=3DTITLE1_TV_SHOW_MDP
+
++ Mi lista
+https://www.netflix.com/add/80083977?msg_token=3DEQIAmQABAYEAl4SBbUsPkbG4so=
+QoMUpBmTV8PDtyMUrNxPYuimEppCLq8O0AGWx1b2%2FdojY5RYt%2F42J3yItEqsso%2BnO5Lhj=
+sKFQkHGBV18rU%2BjTW76718sqDJVC4dnbq9Ce%2FRrwG41w5dT%2FHoO%2FnQg8eetL%2By2uc=
+SFGtRAsxYH6UDik0PJZGiaxyhNdvcNs%2BoJYQqKm9rgnPwLP3twKvTs8g9%2F7AqT%2BOB4clL=
+LnSoclp%2BDTvDiFNnAAmkkMzeiTc9jolELZpP3mNfD2aAL3BERUETxbcHrrT54uYLJAZ4nM7C0=
+3AR3l%2B43XQZWruqwA7bO3zXDr3heXIyfyLSah3DFipawPO5hD1NohD7xQ%3D&trkid=3D1371=
+0079&lnktrk=3DEMP&g=3D3E9DB53C9D82E8584DEC061F4AF6FC666452641E&lkid=3DTITLE=
+1_TV_SHOW_ADD
+
+20 ans d'=C3=A9cart
+https://www.netflix.com/title/80057784?trkid=3D13710079&lnktrk=3DEMP&g=3D3E=
+9DB53C9D82E8584DEC061F4AF6FC666452641E&lkid=3DTITLE1_MOVIE_MDP
+
++ Mi lista
+https://www.netflix.com/add/80057784?msg_token=3DEQIAmQABAYEAej2Js8zLKa1Eo3=
+GYGXSSlbUHY%2BtcNbfLgV5kllrh%2FcZqyYF86V5qsJ65gJITwuh2qGGy8iFl2J5YW%2Fc5jmK=
+NqkSeX%2FdWqMV12IED9mb63DhbFJYHcQTyAIorPMwHv0nbndMBYoYbtT7adQbkkYUy8bvqbHi0=
+pS42a7YqwuiRlJHWnt8pRVd5oPCU7aVlh1ES7ewzOwi5hrHZk0JrfTHm9UudIZaEjB5KS5ypYcX=
+7OQoSI8N1Z3Xi1BTJHyCB9a5OvbkRfgv7yGtC9GuBM3ESu2ZGAnZXTyOXa3GtPC%2BfbmytzTeP=
+%2FiFh7CFgRNvGD5p%2FbgK6Jp%2FvxGjV1rw8Dk4fMKZpLhY%3D&trkid=3D13710079&lnktr=
+k=3DEMP&g=3D3E9DB53C9D82E8584DEC061F4AF6FC666452641E&lkid=3DTITLE1_MOVIE_AD=
+D
+
+Orange Is the New Black
+https://www.netflix.com/title/70242311?trkid=3D13710079&lnktrk=3DEMP&g=3D3E=
+9DB53C9D82E8584DEC061F4AF6FC666452641E&lkid=3DTITLE2_TV_SHOW_MDP
+
++ Mi lista
+https://www.netflix.com/add/70242311?msg_token=3DEQIAmQABAYEAIEdrhGq3e17Jay=
+E4bcmHz6FzHF1t48M5jjW3oLbihss7UEu0YTErZjA5M5MLyyd51wCxHTB4oEwCsqpK0UpvWhzE6=
+mfhjbqDovYcFQzSC1W%2FmFc3wvdnuY7H3PCCGWX%2Fl%2BbfxfsVrqxi8w6WxfSPywi0bSW1J9=
+EEt1eZjf9It0l0AzSWzhs3N0cmBTPLPLAWvPVvjPLJCfZYHSMDL4aEmQUwL5XLe0ans4GMGviz4=
+fnm4eLbYoP7P%2FQZQiiRPjOvtbcYsj%2FXyRiUFllm9fsUbYA3Shw4rUyDgYlcAbYK68%2BZov=
+4JWDNURP44HhfY0XljIEp4c2FB72s2nyKuj6Pwk6Jivls%3D&trkid=3D13710079&lnktrk=3D=
+EMP&g=3D3E9DB53C9D82E8584DEC061F4AF6FC666452641E&lkid=3DTITLE2_TV_SHOW_ADD
+
+************************
+
+Te enviamos este email informativo como parte de tu membres=C3=ADa de Netfl=
+ix. Si deseas dejar de recibir estos emails, haz clic aqu=C3=AD para cancel=
+ar, o visita la p=C3=A1gina Configuraci=C3=B3n de comunicaciones, desmarca =
+el cuadro Actualizaciones de Netflix y haz clic en "Actualizar". No respond=
+as a este email, ya que no podemos contestarte desde esta direcci=C3=B3n. S=
+i necesitas asistencia o deseas contactarnos, visita nuestro Centro de ayud=
+a.  http://www.netflix.com/ManageSubscriptions?id=3DBQE0AAEBEAeGnt6pms9pS6L=
+PlVxw1yWAkPpnOnz0bvkafI36vI9gnTF6E46h%2FMecLyFBMFKD%2BmvQcJi0PfmBRYam7tJe4x=
+X1%2FxoeQXuZll%2BezZ5eLQQdaWW1lsm3set7StFOsiroxZJpDvTMl0Nq5cPzgVGUANWlo5YWu=
+KNTd2vGAgsWQBZHHHBF4W8sa1pdupbPAi27ApIE098FCVt2nY6ggOzvu6cMhA%3D%3D&mid=3D4=
+9539556&lnktrk=3DEMP&g=3D3E9DB53C9D82E8584DEC061F4AF6FC666452641E&lkid=3DUR=
+L_UNSUB  https://www.netflix.com/EmailPreferences?lnktrk=3DEMP&g=3D3E9DB53C=
+9D82E8584DEC061F4AF6FC666452641E&lkid=3DURL_COMM_SETTINGS  https://help.net=
+flix.com/help?lnktrk=3DEMP&g=3D3E9DB53C9D82E8584DEC061F4AF6FC666452641E&lki=
+d=3DURL_HELP
+
+Netflix envi=C3=B3 este mensaje a [jpruata@fapersa.com].
+
+SRC: 06098_es_AR
+
+El uso del servicio y del sitio web de Netflix est=C3=A1 sujeto a nuestros =
+T=C3=A9rminos de uso (http://www.netflix.com/TermsOfUse?lnktrk=3DEMP&g=3D3E=
+9DB53C9D82E8584DEC061F4AF6FC666452641E&lkid=3DURL_TERMS) y a nuestra Declar=
+aci=C3=B3n de privacidad (http://www.netflix.com/PrivacyPolicy?lnktrk=3DEMP=
+&g=3D3E9DB53C9D82E8584DEC061F4AF6FC666452641E&lkid=3DURL_PRIVACY).
+
+=E2=80=AANetflix International B.V.=E2=80=AC
+
+
+
+------=_Part_16003_964846940.1486745834503
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+ <head>=20
+  <style type=3D"text/css">
+      .ReadMsgBody   { width: 100%; }
+      .ExternalClass { width:100%; }
+      .iosLinks a {color:#666666;text-decoration:none; }
+      .gmailSpacer {display: none !important;}
+    </style>=20
+  <style>
+     =20
+     =20
+    </style>=20
+ </head>=20
+ <body style=3D"margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;p=
+adding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" bgcolor=3D"#=
+e0ddd6">=20
+  <!--[if !mso]><!-->=20
+  <style type=3D"text/css">
+      @media all and (max-width: 480px) {
+        .shell { width:100% !important; }
+        .tdShell { height:10px !important; }
+        td.gutter { width:0px !important; }
+      }
+    </style>=20
+  <!--<![endif]-->=20
+  <table class=3D"shell" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"=
+ align=3D"center" bgcolor=3D"#e0ddd6" border=3D"0">=20
+   <tbody>
+    <tr>=20
+     <td class=3D"tdShell" height=3D"15"></td>=20
+    </tr>=20
+    <tr>=20
+     <td>=20
+      <!--[if !mso]><!--> <style type=3D"text/css">
+  @media all and (max-width: 480px) {
+    .container { width:100% !important; }
+    .container .leftSpace { width:3% !important; }
+    .container .rightSpace {  width:3% !important; }
+    .container .spacer {  height:9px !important; }
+
+    .mobileSectionEnd { width:100% !important; border-bottom-left-radius: 4=
+px !important; border-bottom-right-radius: 4px!important; }
+    .mobileSectionEnd_b { width:100% !important; }
+    .off { display:none !important; width:0 !important; }
+   =20
+    .container .mBg { background-image: url('http://cdn.nflximg.com/us/emai=
+l/welcome/2014/mobileIpad/mBg.png') !important;
+      background-size: 100% 100% !important;
+      background-repeat:no-repeat !important;
+      width: 300px !important;
+      height: 400px !important;
+    }
+
+  }
+</style>=20
+      <!--<![endif]-->=20
+      <table class=3D"container" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"600" align=3D"center" bgcolor=3D"#e0ddd6" border=3D"0">=20
+       <tbody>
+        <tr>=20
+         <td class=3D"leftSpace" width=3D"15"></td>=20
+         <td>=20
+          <!--[if !mso]><!--> <style type=3D"text/css">
+  @media all and (max-width: 480px) {
+    .main { width:100% !important; }
+    .logoTd { padding:24px 0px 14px 0px !important;  }
+    .logo { width: 36% !important; height: auto !important; }
+  }
+</style>=20
+          <!--<![endif]-->=20
+          <table class=3D"main" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"570" align=3D"center" border=3D"0" style=3D"border-top-left-radius: 4px=
+;border-top-right-radius: 4px;" bgcolor=3D"#ffffff">=20
+           <tbody>
+            <tr>=20
+             <td class=3D"logoTd" align=3D"center" valign=3D"middle" style=
+=3D"padding:30px 0px 20px 0px;"> <a href=3D"https://www.netflix.com/browse?=
+lnktrk=3DEMP&amp;g=3D3E9DB53C9D82E8584DEC061F4AF6FC666452641E&amp;lkid=3DUR=
+L_HOME_2"> <img class=3D"logo" style=3D"display:block;font-family: Helvetic=
+a, Arial, sans-serif;-webkit-text-size-adjust: none;font-size:13px;color:#3=
+33333;" src=3D"http://cdn.nflximg.com/us/email/logo/newDesign/logo_v2.png" =
+width=3D"140" height=3D"38" border=3D"0" alt=3D"Netflix"> </a> </td>=20
+            </tr>=20
+           </tbody>
+          </table>=20
+          <!--[if !mso]><!--> <style type=3D"text/css">
+  @media all and (max-width: 480px) {
+    table[class=3Dcopy] { width:100% !important; }
+ =20
+ =20
+ =20
+  table[class=3Dcopy] .mobileHeadline { font-size:18px !important;line-heig=
+ht:22px !important;padding:0px 20px 26px 20px !important; }
+ =20
+ =20
+ =20
+  table[class=3Dcopy] .mobileCopy { font-size:14px !important;line-height:2=
+0px !important;padding:0px 20px 26px 20px !important; }
+  table[class=3Dcopy] .mobileClosing { font-size:14px !important;line-heigh=
+t:20px !important;padding:0px 20px 36px 20px !important; }
+  table[class=3Dcopy] .mobileSubHeadline { font-size:14px !important;line-h=
+eight:20px !important;padding:0px 20px 0px 20px !important; }
+  table[class=3Dcopy] .off { display: none !important; width:0px !important=
+;}
+  table[class=3Dcopy] .mobileCopyTurnOn { font-size:14px !important;line-he=
+ight:20px !important;padding:0px 20px 26px 20px !important;color:#454545 !i=
+mportant;font-weight:lighter !important;  }
+  table[class=3Dcopy] a.link { color:#E50914 !important; }
+  table[class=3Dcopy] .mobileHeadline2 { font-size:14px !important;line-hei=
+ght:14px !important;padding:0px 20px 0px 20px !important; }
+  table[class=3Dcopy] .mobileHeadline3 { font-size:18px !important;line-hei=
+ght:15px !important;padding:0px 20px 26px 20px !important; }
+  table[class=3Dcopy] .mobileHero { padding:10px 20px 10px 20px !important;=
+ }
+  table[class=3Dcopy] img.hero { background-size: 100% 100% !important;widt=
+h: 100% !important; height: auto !important; }
+  table[class=3Dcopy] .mobileHeadline4 { font-size:18px !important;line-hei=
+ght:auto !important;padding:0px 20px 26px 20px !important; }
+  }
+</style>=20
+          <!--<![endif]-->=20
+          <!--[if !mso]><!--> <style type=3D"text/css">
+  @media all and (max-width: 480px) {
+    table[class=3Dcopy] .mobileHeadline { font-size:18px !important; paddin=
+g-left:20px !important; padding-right:20px !important; }
+ }
+</style>=20
+          <!--<![endif]-->=20
+          <table class=3D"copy" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"570" align=3D"center" border=3D"0" bgcolor=3D"#ffffff">=20
+           <tbody>
+            <tr>=20
+             <td align=3D"middle" class=3D"mobileHeadline" style=3D"font-fa=
+mily: Helvetica, Arial, sans-serif;-webkit-text-size-adjust: none;color:#2b=
+2b2b;font-size:20px;font-weight:normal;line-height: 24px;padding:0px 34px 2=
+5px 34px;color:#2b2b2b;padding-bottom:15px;"> Haz tu propia fila en Netflix=
+ </td>=20
+            </tr>=20
+            <tr>=20
+             <!--[if !mso]><!-->=20
+             <style type=3D"text/css">
+@media only screen and (max-width: 480px) {
+
+    td[class=3D"paddingfix"] { padding-left:20px !important; padding-right:=
+20px !important; }
+
+}
+</style>=20
+             <!--<![endif]-->=20
+             <td class=3D"paddingfix" style=3D"font-family: Helvetica, Aria=
+l, sans-serif;-webkit-text-size-adjust: none;color:#2b2b2b;font-size:14px;p=
+adding:0px 34px 25px 34px;line-height:20px;font-weight:lighter;padding-left=
+:76px;padding-right:72px;"> =C2=BFDescubriste un programa o una pel=C3=ADcu=
+la en Netflix que te gustar=C3=ADa ver, pero en otro momento? Puedes guarda=
+rlo para m=C3=A1s tarde mientras navegas con la funci=C3=B3n "Agregar a Mi =
+lista". A medida que agregas t=C3=ADtulos a tu lista, aparecer=C3=A1 una fi=
+la nueva llamada "Mi lista", que solo tiene los programas y las pel=C3=ADcu=
+las que hayas agregado. </td>=20
+            </tr>=20
+           </tbody>
+          </table>=20
+          <!--[if !mso]><!--> <style type=3D"text/css">
+  @media only screen and (max-width: 480px) {
+    table[class=3DmobileButton] { width:100% !important;=20
+   =20
+    }
+  }
+</style>=20
+          <!--<![endif]-->=20
+          <table class=3D"mobileButton" cellpadding=3D"0" cellspacing=3D"0"=
+ border=3D"0" align=3D"center" width=3D"570" bgcolor=3D"#ffffff">=20
+           <tbody>
+            <tr>=20
+             <td align=3D"left" valign=3D"middle" style=3D"padding:7px 0px =
+35px 0px;">=20
+              <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" b=
+order=3D"0">=20
+               <tbody>
+                <tr>=20
+                 <td align=3D"center" valign=3D"middle" style=3D"font-famil=
+y: Helvetica, Arial, sans-serif;-webkit-text-size-adjust: none;font-size:16=
+px;font-weight: bold;color:#ffffff;padding: 10px 21px 10px 21px;background-=
+color: #c20002;text-decoration: none;text-align: center;
+          border: 1px solid #a6070f;
+          border-radius: 5px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -webkit-text-shadow:#666 0 1px 0px;
+          -text-shadow:#666 0 1px 0px;
+          -moz-text-shadow:#666 0 1px 0px;
+          -o-text-shadow:#666 0 1px 0px;
+          -ms-text-shadow:#666 0 1px 0px;
+          background-image: linear-gradient(top, rgb(299,9,20), rgb(166,7,1=
+5));
+          background-image: -o-linear-gradient(top, rgb(299,9,20), rgb(166,=
+7,15));
+          background-image: -moz-linear-gradient(top, rgb(299,9,20), rgb(16=
+6,7,15));
+          background-image: -webkit-linear-gradient(top, rgb(299,9,20), rgb=
+(166,7,15));
+          background-image: -ms-linear-gradient(top, rgb(299,9,20), rgb(166=
+,7,15));"> <a href=3D"https://www.netflix.com/browse?lnktrk=3DEMP&amp;g=3D3=
+E9DB53C9D82E8584DEC061F4AF6FC666452641E&amp;lkid=3DURL_HOME" style=3D"text-=
+decoration:none;color:#fefefe;display:block;">Comenzar a crear tu lista</a>=
+ </td>=20
+                </tr>=20
+               </tbody>
+              </table> </td>=20
+            </tr>=20
+           </tbody>
+          </table>=20
+          <!--[if !mso]><!--> <style type=3D"text/css">
+  @media only screen and (max-width: 480px) {
+    td[class=3D"title"]  { padding-left:2px !important; padding-right:2px !=
+important; }
+    td[class=3D"title"] img { width:83px !important; height:116px !importan=
+t; }
+    td[class=3D"myListWrap"] { padding:5px 3px !important; }
+    td[class=3D"myListText"] { font-size:9px !important; }
+
+  }
+</style>=20
+          <!--<![endif]-->=20
+          <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"=
+100%" bgcolor=3D"#ffffff">=20
+           <tbody>
+            <tr>=20
+             <td align=3D"center" valign=3D"top" style=3D"padding-bottom:35=
+px;">=20
+              <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" b=
+order=3D"0">=20
+               <tbody>
+                <tr>=20
+                 <td class=3D"title" align=3D"center" valign=3D"top"><a hre=
+f=3D"https://www.netflix.com/title/80083977?trkid=3D13710079&amp;MSG_TITLE=
+=3D80083977&amp;lnktrk=3DEMP&amp;g=3D3E9DB53C9D82E8584DEC061F4AF6FC66645264=
+1E&amp;lkid=3DTITLE1_TV_SHOW_MDP" target=3D"_blank" style=3D"text-decoratio=
+n: none;"><img alt=3D"Crimenes Americanos: El Caso O.J. Simpson" src=3D"htt=
+p://art-0.nflximg.net/eeeb9/3efd15f968a0630ab15717070809b84f203eeeb9.jpg" w=
+idth=3D"135" height=3D"188" border=3D"0" style=3D"display:block;color:#4545=
+45;font-family: Helvetica, Arial, sans-serif;-webkit-text-size-adjust: none=
+;"></a></td>=20
+                 <td class=3D"title" align=3D"center" valign=3D"top" style=
+=3D"padding-left:3px;padding-right:3px;"><a href=3D"https://www.netflix.com=
+/title/80057784?trkid=3D13710079&amp;MSG_TITLE=3D80057784&amp;lnktrk=3DEMP&=
+amp;g=3D3E9DB53C9D82E8584DEC061F4AF6FC666452641E&amp;lkid=3DTITLE1_MOVIE_MD=
+P" target=3D"_blank" style=3D"text-decoration: none;"><img alt=3D"20 ans d'=
+=C3=A9cart" src=3D"http://art-0.nflximg.net/bb99e/2a9e0343a52cddb394881002c=
+015a338534bb99e.jpg" width=3D"135" height=3D"188" border=3D"0" style=3D"dis=
+play:block;color:#454545;font-family: Helvetica, Arial, sans-serif;-webkit-=
+text-size-adjust: none;"></a></td>=20
+                 <td class=3D"title" align=3D"center" valign=3D"top"><a hre=
+f=3D"https://www.netflix.com/title/70242311?trkid=3D13710079&amp;MSG_TITLE=
+=3D70242311&amp;lnktrk=3DEMP&amp;g=3D3E9DB53C9D82E8584DEC061F4AF6FC66645264=
+1E&amp;lkid=3DTITLE2_TV_SHOW_MDP" target=3D"_blank" style=3D"text-decoratio=
+n: none;"><img alt=3D"Orange Is the New Black" src=3D"http://art-2.nflximg.=
+net/07bc2/b1f2e3e265af26590c381043c120f083f7007bc2.jpg" width=3D"135" heigh=
+t=3D"188" border=3D"0" style=3D"display:block;color:#454545;font-family: He=
+lvetica, Arial, sans-serif;-webkit-text-size-adjust: none;"></a></td>=20
+                </tr>=20
+                <tr>=20
+                 <td align=3D"center" valign=3D"top" style=3D"padding-top:1=
+0px;">=20
+                  <table align=3D"center" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0">=20
+                   <tbody>
+                    <tr>=20
+                     <td class=3D"myListWrap" bgcolor=3D"#ededed" align=3D"=
+center" valign=3D"middle" style=3D"padding: 6px 10px 6px 10px;text-decorati=
+on: none;text-align: center;=20
+                                                                           =
+                    border: 1px solid #a3a3a3;
+                                                                           =
+                    border-radius: 4px;
+                                                                           =
+                    -webkit-border-radius: 4px;=20
+                                                                           =
+                    -moz-border-radius: 4px;">=20
+                      <table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0">=20
+                       <tbody>
+                        <tr>=20
+                         <td class=3D"myListText" align=3D"right" valign=3D=
+"top" style=3D"font-family: Helvetica, Arial, sans-serif;-webkit-text-size-=
+adjust: none;font-size:13px;color:#2b2b2b;font-weight:bold;"><a href=3D"htt=
+ps://www.netflix.com/add/80083977?msg_token=3DEQIAmQABAYEAl4SBbUsPkbG4soQoM=
+UpBmTV8PDtyMUrNxPYuimEppCLq8O0AGWx1b2%2FdojY5RYt%2F42J3yItEqsso%2BnO5LhjsKF=
+QkHGBV18rU%2BjTW76718sqDJVC4dnbq9Ce%2FRrwG41w5dT%2FHoO%2FnQg8eetL%2By2ucSFG=
+tRAsxYH6UDik0PJZGiaxyhNdvcNs%2BoJYQqKm9rgnPwLP3twKvTs8g9%2F7AqT%2BOB4clLLnS=
+oclp%2BDTvDiFNnAAmkkMzeiTc9jolELZpP3mNfD2aAL3BERUETxbcHrrT54uYLJAZ4nM7C03AR=
+3l%2B43XQZWruqwA7bO3zXDr3heXIyfyLSah3DFipawPO5hD1NohD7xQ%3D&amp;trkid=3D137=
+10079&amp;MSG_TITLE=3D80083977&amp;lnktrk=3DEMP&amp;g=3D3E9DB53C9D82E8584DE=
+C061F4AF6FC666452641E&amp;lkid=3DTITLE1_TV_SHOW_ADD" style=3D"text-decorati=
+on:none;color:#2b2b2b;display:block;">+</a></td>=20
+                         <td class=3D"myListText" align=3D"left" valign=3D"=
+top" style=3D"font-family: Helvetica, Arial, sans-serif;-webkit-text-size-a=
+djust: none;font-size:13px;color:#2b2b2b;font-weight:bold;padding-left:2px;=
+"><a href=3D"https://www.netflix.com/add/80083977?msg_token=3DEQIAmQABAYEAl=
+4SBbUsPkbG4soQoMUpBmTV8PDtyMUrNxPYuimEppCLq8O0AGWx1b2%2FdojY5RYt%2F42J3yItE=
+qsso%2BnO5LhjsKFQkHGBV18rU%2BjTW76718sqDJVC4dnbq9Ce%2FRrwG41w5dT%2FHoO%2FnQ=
+g8eetL%2By2ucSFGtRAsxYH6UDik0PJZGiaxyhNdvcNs%2BoJYQqKm9rgnPwLP3twKvTs8g9%2F=
+7AqT%2BOB4clLLnSoclp%2BDTvDiFNnAAmkkMzeiTc9jolELZpP3mNfD2aAL3BERUETxbcHrrT5=
+4uYLJAZ4nM7C03AR3l%2B43XQZWruqwA7bO3zXDr3heXIyfyLSah3DFipawPO5hD1NohD7xQ%3D=
+&amp;trkid=3D13710079&amp;MSG_TITLE=3D80083977&amp;lnktrk=3DEMP&amp;g=3D3E9=
+DB53C9D82E8584DEC061F4AF6FC666452641E&amp;lkid=3DTITLE1_TV_SHOW_ADD_2" styl=
+e=3D"text-decoration:none;color:#2b2b2b;display:block;">Mi lista</a></td>=
+=20
+                        </tr>=20
+                       </tbody>
+                      </table> </td>=20
+                    </tr>=20
+                   </tbody>
+                  </table> </td>=20
+                 <td align=3D"center" valign=3D"top" style=3D"padding-top:1=
+0px;">=20
+                  <table align=3D"center" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0">=20
+                   <tbody>
+                    <tr>=20
+                     <td class=3D"myListWrap" bgcolor=3D"#ededed" align=3D"=
+center" valign=3D"middle" style=3D"padding: 6px 10px 6px 10px;text-decorati=
+on: none;text-align: center;=20
+                                                                           =
+                    border: 1px solid #a3a3a3;
+                                                                           =
+                    border-radius: 4px;
+                                                                           =
+                    -webkit-border-radius: 4px;=20
+                                                                           =
+                    -moz-border-radius: 4px;">=20
+                      <table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0">=20
+                       <tbody>
+                        <tr>=20
+                         <td class=3D"myListText" align=3D"right" valign=3D=
+"top" style=3D"font-family: Helvetica, Arial, sans-serif;-webkit-text-size-=
+adjust: none;font-size:13px;color:#2b2b2b;font-weight:bold;"><a href=3D"htt=
+ps://www.netflix.com/add/80057784?msg_token=3DEQIAmQABAYEAej2Js8zLKa1Eo3GYG=
+XSSlbUHY%2BtcNbfLgV5kllrh%2FcZqyYF86V5qsJ65gJITwuh2qGGy8iFl2J5YW%2Fc5jmKNqk=
+SeX%2FdWqMV12IED9mb63DhbFJYHcQTyAIorPMwHv0nbndMBYoYbtT7adQbkkYUy8bvqbHi0pS4=
+2a7YqwuiRlJHWnt8pRVd5oPCU7aVlh1ES7ewzOwi5hrHZk0JrfTHm9UudIZaEjB5KS5ypYcX7OQ=
+oSI8N1Z3Xi1BTJHyCB9a5OvbkRfgv7yGtC9GuBM3ESu2ZGAnZXTyOXa3GtPC%2BfbmytzTeP%2F=
+iFh7CFgRNvGD5p%2FbgK6Jp%2FvxGjV1rw8Dk4fMKZpLhY%3D&amp;trkid=3D13710079&amp;=
+MSG_TITLE=3D80057784&amp;lnktrk=3DEMP&amp;g=3D3E9DB53C9D82E8584DEC061F4AF6F=
+C666452641E&amp;lkid=3DTITLE1_MOVIE_ADD" style=3D"text-decoration:none;colo=
+r:#2b2b2b;display:block;">+</a></td>=20
+                         <td class=3D"myListText" align=3D"left" valign=3D"=
+top" style=3D"font-family: Helvetica, Arial, sans-serif;-webkit-text-size-a=
+djust: none;font-size:13px;color:#2b2b2b;font-weight:bold;padding-left:2px;=
+"><a href=3D"https://www.netflix.com/add/80057784?msg_token=3DEQIAmQABAYEAe=
+j2Js8zLKa1Eo3GYGXSSlbUHY%2BtcNbfLgV5kllrh%2FcZqyYF86V5qsJ65gJITwuh2qGGy8iFl=
+2J5YW%2Fc5jmKNqkSeX%2FdWqMV12IED9mb63DhbFJYHcQTyAIorPMwHv0nbndMBYoYbtT7adQb=
+kkYUy8bvqbHi0pS42a7YqwuiRlJHWnt8pRVd5oPCU7aVlh1ES7ewzOwi5hrHZk0JrfTHm9UudIZ=
+aEjB5KS5ypYcX7OQoSI8N1Z3Xi1BTJHyCB9a5OvbkRfgv7yGtC9GuBM3ESu2ZGAnZXTyOXa3GtP=
+C%2BfbmytzTeP%2FiFh7CFgRNvGD5p%2FbgK6Jp%2FvxGjV1rw8Dk4fMKZpLhY%3D&amp;trkid=
+=3D13710079&amp;MSG_TITLE=3D80057784&amp;lnktrk=3DEMP&amp;g=3D3E9DB53C9D82E=
+8584DEC061F4AF6FC666452641E&amp;lkid=3DTITLE1_MOVIE_ADD_2" style=3D"text-de=
+coration:none;color:#2b2b2b;display:block;">Mi lista</a></td>=20
+                        </tr>=20
+                       </tbody>
+                      </table> </td>=20
+                    </tr>=20
+                   </tbody>
+                  </table> </td>=20
+                 <td align=3D"center" valign=3D"top" style=3D"padding-top:1=
+0px;">=20
+                  <table align=3D"center" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0">=20
+                   <tbody>
+                    <tr>=20
+                     <td class=3D"myListWrap" bgcolor=3D"#ededed" align=3D"=
+center" valign=3D"middle" style=3D"padding: 6px 10px 6px 10px;text-decorati=
+on: none;text-align: center;=20
+                                                                           =
+                    border: 1px solid #a3a3a3;
+                                                                           =
+                    border-radius: 4px;
+                                                                           =
+                    -webkit-border-radius: 4px;=20
+                                                                           =
+                    -moz-border-radius: 4px;">=20
+                      <table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0">=20
+                       <tbody>
+                        <tr>=20
+                         <td class=3D"myListText" align=3D"right" valign=3D=
+"top" style=3D"font-family: Helvetica, Arial, sans-serif;-webkit-text-size-=
+adjust: none;font-size:13px;color:#2b2b2b;font-weight:bold;"><a href=3D"htt=
+ps://www.netflix.com/add/70242311?msg_token=3DEQIAmQABAYEAIEdrhGq3e17JayE4b=
+cmHz6FzHF1t48M5jjW3oLbihss7UEu0YTErZjA5M5MLyyd51wCxHTB4oEwCsqpK0UpvWhzE6mfh=
+jbqDovYcFQzSC1W%2FmFc3wvdnuY7H3PCCGWX%2Fl%2BbfxfsVrqxi8w6WxfSPywi0bSW1J9EEt=
+1eZjf9It0l0AzSWzhs3N0cmBTPLPLAWvPVvjPLJCfZYHSMDL4aEmQUwL5XLe0ans4GMGviz4fnm=
+4eLbYoP7P%2FQZQiiRPjOvtbcYsj%2FXyRiUFllm9fsUbYA3Shw4rUyDgYlcAbYK68%2BZov4JW=
+DNURP44HhfY0XljIEp4c2FB72s2nyKuj6Pwk6Jivls%3D&amp;trkid=3D13710079&amp;MSG_=
+TITLE=3D70242311&amp;lnktrk=3DEMP&amp;g=3D3E9DB53C9D82E8584DEC061F4AF6FC666=
+452641E&amp;lkid=3DTITLE2_TV_SHOW_ADD" style=3D"text-decoration:none;color:=
+#2b2b2b;display:block;">+</a></td>=20
+                         <td class=3D"myListText" align=3D"left" valign=3D"=
+top" style=3D"font-family: Helvetica, Arial, sans-serif;-webkit-text-size-a=
+djust: none;font-size:13px;color:#2b2b2b;font-weight:bold;padding-left:2px;=
+"><a href=3D"https://www.netflix.com/add/70242311?msg_token=3DEQIAmQABAYEAI=
+EdrhGq3e17JayE4bcmHz6FzHF1t48M5jjW3oLbihss7UEu0YTErZjA5M5MLyyd51wCxHTB4oEwC=
+sqpK0UpvWhzE6mfhjbqDovYcFQzSC1W%2FmFc3wvdnuY7H3PCCGWX%2Fl%2BbfxfsVrqxi8w6Wx=
+fSPywi0bSW1J9EEt1eZjf9It0l0AzSWzhs3N0cmBTPLPLAWvPVvjPLJCfZYHSMDL4aEmQUwL5XL=
+e0ans4GMGviz4fnm4eLbYoP7P%2FQZQiiRPjOvtbcYsj%2FXyRiUFllm9fsUbYA3Shw4rUyDgYl=
+cAbYK68%2BZov4JWDNURP44HhfY0XljIEp4c2FB72s2nyKuj6Pwk6Jivls%3D&amp;trkid=3D1=
+3710079&amp;MSG_TITLE=3D70242311&amp;lnktrk=3DEMP&amp;g=3D3E9DB53C9D82E8584=
+DEC061F4AF6FC666452641E&amp;lkid=3DTITLE2_TV_SHOW_ADD_2" style=3D"text-deco=
+ration:none;color:#2b2b2b;display:block;">Mi lista</a></td>=20
+                        </tr>=20
+                       </tbody>
+                      </table> </td>=20
+                    </tr>=20
+                   </tbody>
+                  </table> </td>=20
+                </tr>=20
+               </tbody>
+              </table> </td>=20
+            </tr>=20
+           </tbody>
+          </table> </td>=20
+         <td class=3D"rightSpace" width=3D"15"></td>=20
+        </tr>=20
+       </tbody>
+      </table>=20
+      <!--[if !mso]><!--> <style type=3D"text/css">
+            @media all and (max-width: 480px) {
+              .container1 { width:100% !important;}
+              container1.leftSpace { width:3% !important; }
+              container1.rightSpace {  width:3% !important; }
+            }
+          </style>=20
+      <!--<![endif]-->=20
+      <table class=3D"container1" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"600" align=3D"center" bgcolor=3D"#e0ddd6" border=3D"0">=20
+       <tbody>
+        <tr>=20
+         <td class=3D"leftSpace" width=3D"15"></td>=20
+         <td>=20
+          <!--[if !mso]><!--> <style type=3D"text/css">
+  @media all and (max-width: 480px) {
+   =20
+   .viewAll {width:100% !important;}
+ =20
+  }                   =20
+</style>=20
+          <!--<![endif]-->=20
+          <table class=3D"viewAll" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"570" align=3D"center" bgcolor=3D"#414141" border=3D"0" style=3D"border=
+-bottom-left-radius: 4px;border-bottom-right-radius: 4px;">=20
+           <tbody>
+            <tr>=20
+             <td align=3D"center"> <a href=3D"https://www.netflix.com/brows=
+e?lnktrk=3DEMP&amp;g=3D3E9DB53C9D82E8584DEC061F4AF6FC666452641E&amp;lkid=3D=
+URL_HOME_3" style=3D"text-decoration:none;color:#ffffff;">=20
+               <!--[if !mso]><!--> <style type=3D"text/css">
+  @media all and (max-width: 480px)=20
+  {
+    .viewAll  { width:100% !important; }
+ .viewAll .tdVa { font-size:15px !important; }
+  .viewAll .tdPlayButton { width:auto !important;height:40px !important; }
+  .viewAll .playButton { width:auto !important;height:100% !important; }
+  }                   =20
+</style>=20
+               <!--<![endif]-->=20
+               <table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" =
+border=3D"0">=20
+                <tbody>
+                 <tr>=20
+                  <td class=3D"tdVa" align=3D"left" style=3D";font-family: =
+Helvetica, Arial, sans-serif;-webkit-text-size-adjust: none;font-size:18px;=
+padding:0px 1px 0px 0px;"> <a href=3D"https://www.netflix.com/browse?lnktrk=
+=3DEMP&amp;g=3D3E9DB53C9D82E8584DEC061F4AF6FC666452641E&amp;lkid=3DURL_HOME=
+_4" style=3D"text-decoration:none;color:#ffffff;"> Ver todos los programas =
+y las pel=C3=ADculas </a> </td>=20
+                  <td class=3D"tdPlayButton" align=3D"center" style=3D"padd=
+ing:0px 0px 0px 2px;"> <a href=3D"https://www.netflix.com/browse?lnktrk=3DE=
+MP&amp;g=3D3E9DB53C9D82E8584DEC061F4AF6FC666452641E&amp;lkid=3DURL_HOME_5" =
+style=3D"text-decoration:none;color:#ffffff;font-size:18px;"> <img class=3D=
+"playButton" style=3D"display:block;" src=3D"http://cdn.nflximg.com/us/emai=
+l/logo/newDesign/playArrow2x.png" height=3D"46" width=3D"31" border=3D"0" a=
+lt=3D""> </a> </td>=20
+                 </tr>=20
+                </tbody>
+               </table> </a> </td>=20
+            </tr>=20
+           </tbody>
+          </table> </td>=20
+         <td class=3D"rightSpace" width=3D"15"></td>=20
+        </tr>=20
+       </tbody>
+      </table>=20
+      <!--[if !mso]><!--> <style type=3D"text/css">
+  @media all and (max-width: 480px) {
+    .container1 { width:100% !important;}
+    .container1 .leftSpace { width:3% !important; }
+    .container1 .rightSpace {  width:3% !important; }
+  }
+</style>=20
+      <!--<![endif]-->=20
+      <table class=3D"container1" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"600" align=3D"center" bgcolor=3D"#e0ddd6" border=3D"0">=20
+       <tbody>
+        <tr>=20
+         <td class=3D"leftSpace" width=3D"15"></td>=20
+         <td>=20
+          <!--[if !mso]><!--> <style type=3D"text/css">
+        @media all and (max-width: 480px) {
+          .question {width:100% !important;}
+         .question .mShadow {
+            width:100% !important;
+            height:auto !important;
+          }
+          .question .questions {
+            font-size:15px !important;
+          }
+          .question .mDivider {
+            width:100% !important;
+            height:auto !important;
+          }
+        }
+
+      </style>=20
+          <!--<![endif]-->=20
+          <table class=3D"question" cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"570" align=3D"center" border=3D"0">=20
+           <tbody>
+            <tr>=20
+             <td> <img class=3D"mShadow" style=3D"display:block;" src=3D"ht=
+tp://cdn.nflximg.com/us/email/logo/newDesign/shadow.png" width=3D"570" heig=
+ht=3D"25" border=3D"0" alt=3D""> </td>=20
+            </tr>=20
+            <tr>=20
+             <td class=3D"questions" align=3D"center" style=3D"font-family:=
+ Helvetica, Arial, sans-serif;-webkit-text-size-adjust: none;padding:0px 10=
+px 15px 10px;font-size:16px; color:#454545;text-decoration:none;font-weight=
+:normal;"> <a href=3D"https://www.netflix.com/browse?lnktrk=3DEMP&amp;g=3D3=
+E9DB53C9D82E8584DEC061F4AF6FC666452641E&amp;lkid=3DURL_HOME_6" target=3D"_b=
+lank" style=3D"color:#454545;font-weight:normal;text-decoration:none;">=C2=
+=BFPreguntas?<span class=3D"iOSlinks"> Llama al 0-800-800-1300.</span></a> =
+</td>
+            </tr>=20
+            <tr>=20
+             <td style=3D"padding:0px 0px 0px 0px;"> <img class=3D"mDivider=
+" style=3D"display:block;" src=3D"http://cdn.nflximg.com/us/email/logo/newD=
+esign/divider.png" width=3D"570" height=3D"15" border=3D"0" alt=3D""> </td>=
+=20
+            </tr>=20
+           </tbody>
+          </table> </td>=20
+         <td class=3D"rightSpace" width=3D"15"></td>=20
+        </tr>=20
+       </tbody>
+      </table>=20
+      <!-- legal_content_footer -->=20
+      <!-- rpcampaign: netflix21486634794_302_6098 -->=20
+      <!--[if !mso]><!--> <style type=3D"text/css">
+  @media all and (max-width: 480px)=20
+  {=20
+    .mobileFooter { width:100% !important; padding:0px 10px 0px 10px !impor=
+tant;}
+    .ios-hide {display: none !important;}
+  }
+</style>=20
+      <!--<![endif]-->=20
+      <table class=3D"mobileFooter" cellpadding=3D"0" cellspacing=3D"0" ali=
+gn=3D"center" width=3D"570">=20
+       <tbody>
+        <tr>=20
+         <td align=3D"left" style=3D"font-family: Helvetica, Arial, sans-se=
+rif;-webkit-text-size-adjust: none;font-size:11px;color:#666666;padding:20p=
+x 5px 10px 5px; font-weight:lighter;"> Te enviamos este email informativo c=
+omo parte de tu membres=C3=ADa de Netflix. Si deseas dejar de recibir estos=
+ emails, <a href=3D"http://www.netflix.com/ManageSubscriptions?id=3DBQE0AAE=
+BEAeGnt6pms9pS6LPlVxw1yWAkPpnOnz0bvkafI36vI9gnTF6E46h%2FMecLyFBMFKD%2BmvQcJ=
+i0PfmBRYam7tJe4xX1%2FxoeQXuZll%2BezZ5eLQQdaWW1lsm3set7StFOsiroxZJpDvTMl0Nq5=
+cPzgVGUANWlo5YWuKNTd2vGAgsWQBZHHHBF4W8sa1pdupbPAi27ApIE098FCVt2nY6ggOzvu6cM=
+hA%3D%3D&amp;mid=3D49539556&amp;lnktrk=3DEMP&amp;g=3D3E9DB53C9D82E8584DEC06=
+1F4AF6FC666452641E&amp;lkid=3DURL_UNSUB" style=3D"color:#666666;" target=3D=
+"_blank">haz clic aqu=C3=AD para cancelar</a>, o visita la p=C3=A1gina <a h=
+ref=3D"https://www.netflix.com/EmailPreferences?lnktrk=3DEMP&amp;g=3D3E9DB5=
+3C9D82E8584DEC061F4AF6FC666452641E&amp;lkid=3DURL_COMM_SETTINGS" style=3D"c=
+olor:#666666;" target=3D"_blank">Configuraci=C3=B3n de comunicaciones</a>, =
+desmarca el cuadro <span style=3D"font-weight:bold;">Actualizaciones de Net=
+flix</span> y haz clic en "Actualizar". No respondas a este email, ya que n=
+o podemos contestarte desde esta direcci=C3=B3n. Si necesitas asistencia o =
+deseas contactarnos, visita nuestro <a href=3D"https://help.netflix.com/hel=
+p?lnktrk=3DEMP&amp;g=3D3E9DB53C9D82E8584DEC061F4AF6FC666452641E&amp;lkid=3D=
+URL_HELP_2" style=3D"color:#666666;" target=3D"_blank">Centro de ayuda.</a>=
+ </td>=20
+        </tr>=20
+        <tr>=20
+         <td align=3D"left" style=3D"font-family: Helvetica, Arial, sans-se=
+rif;-webkit-text-size-adjust: none;font-size:11px;color:#666666;padding:0px=
+ 5px 10px 5px; font-weight:lighter;">=20
+          <!--legal_content_footer-->Netflix envi=C3=B3 este mensaje a <spa=
+n class=3D"iosnonlink"><a href=3D"http://www.netflix.com" style=3D"color:#6=
+66666; text-decoration:none;">[jpruata@fapersa.com]</a></span>.<br>=20
+          <!--legal_content_footer--> SRC: <a href=3D"https://help.netflix.=
+com/help?lnktrk=3DEMP&amp;g=3D3E9DB53C9D82E8584DEC061F4AF6FC666452641E&amp;=
+lkid=3DURL_HELP_3" style=3D"color:#666666;text-decoration:none;">06098_es_A=
+R</a><br> El uso del servicio y del sitio web de Netflix est=C3=A1 sujeto a=
+ nuestros <a style=3D"color:#666666;text-decoration:underline;" href=3D"htt=
+p://www.netflix.com/TermsOfUse?lnktrk=3DEMP&amp;g=3D3E9DB53C9D82E8584DEC061=
+F4AF6FC666452641E&amp;lkid=3DURL_TERMS">T=C3=A9rminos de uso</a> y a nuestr=
+a <a style=3D"color:#666666;text-decoration:underline;" href=3D"http://www.=
+netflix.com/PrivacyPolicy?lnktrk=3DEMP&amp;g=3D3E9DB53C9D82E8584DEC061F4AF6=
+FC666452641E&amp;lkid=3DURL_PRIVACY">Declaraci=C3=B3n de privacidad</a>.<br=
+> <span class=3D"iOSlinks" style=3D"color:#666666;"><span class=3D"iosnonli=
+nk"><a href=3D"www.netflix.com" style=3D"color:#666666; text-decoration:non=
+e;color:rgb(102, 102, 102);text-decoration:none;">=E2=80=AANetflix Internat=
+ional B.V.=E2=80=AC</a></span></span> </td>=20
+        </tr>=20
+        <tr>=20
+         <td>
+          <!--legal_content_footer--> <img src=3D"http://beacon.netflix.com=
+/img/BAQgBEAEa0AJ2THSsgosiINnMMOKPnivWKSK-WmHHLwvtmTf2TDI_GvIodQ_BC3ECFW2pB=
+4Rc0SZqtX2O00nuJuQNtGSy1fj8e_CwJkZnE_S3JjIlDxN01f6ZsR4vBN89V4RWEGcQcDcFaP0l=
+he4w9Q7YNdyLgjPczQrDt2vPArfk8iEy_YtQOdomJITWsYmVceZITQocSLbhh-u-fbwcB7s5ApS=
+p8HfGw-yPl4HZrikyf6Rd98ljzpu5mkhasyjBG5WwcZ3sZ3_sUtbTfv07YiO6XkJ7Z0WK0EjwLI=
+HOJcCGFIYFowe70Cm7hTPVrn8xcA_esWDkhe4FafpoREbliMAlkSbKBFpB63RnEnFeYW8bO3c4_=
+f67jdM8dFixD9yGEUoD3MNkUESDhvkEsN1ktkZV9PHaYjkIr7-luUSeJBXFbjMl0nnGbSu8NpJ4=
+CiMmJwo3lydP63I." style=3D"display:block;" border=3D"0"></td>=20
+        </tr>=20
+       </tbody>
+      </table>=20
+      <div class=3D"ios-hide" style=3D"display:none; white-space:nowrap; fo=
+nt:15px courier; line-height:0;">
+       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp=
+; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      </div> </td>=20
+    </tr>=20
+   </tbody>
+  </table>=20
+  <table class=3D"gmailSpacer" width=3D"600" border=3D"0" align=3D"center" =
+cellpadding=3D"0" cellspacing=3D"0" style=3D"min-width:600px;display:none;"=
+>=20
+   <tbody>
+    <tr>=20
+     <td width=3D"400" style=3D"min-width:400px;"> <img style=3D"margin: 0;=
+ border: 0; padding: 0; display: block;" src=3D"http://cdn.nflximg.com/us/e=
+mail/spacer.gif" width=3D"400" height=3D"1" alt=3D""> </td>=20
+     <td width=3D"200"> <img style=3D"margin: 0; border: 0; padding: 0; dis=
+play: block;" src=3D"http://cdn.nflximg.com/us/email/spacer.gif" width=3D"7=
+0" height=3D"1" alt=3D""> </td>=20
+    </tr>=20
+   </tbody>
+  </table>  =20
+ </body>
+</html>
+------=_Part_16003_964846940.1486745834503--

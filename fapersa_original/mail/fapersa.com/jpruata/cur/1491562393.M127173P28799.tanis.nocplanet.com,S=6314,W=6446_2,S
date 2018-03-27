@@ -1,0 +1,132 @@
+Return-Path: <admlasallejobson@gmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id GQJSB5lv51h/cAAATLP0zA
+	for <jpruata@fapersa.com>; Fri, 07 Apr 2017 07:53:13 -0300
+Return-path: <admlasallejobson@gmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Fri, 07 Apr 2017 07:53:13 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:44195 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.88)
+	(envelope-from <admlasallejobson@gmail.com>)
+	id 1cwRVw-0007n9-9F
+	for jpruata@fapersa.com; Fri, 07 Apr 2017 07:53:12 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id B84C37F134
+	for <jpruata@fapersa.com>; Fri,  7 Apr 2017 07:53:11 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id MJPFjCh4tK1x for <jpruata@fapersa.com>;
+	Fri,  7 Apr 2017 07:53:11 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 4EE7E7F22B; Fri,  7 Apr 2017 07:53:11 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 665F97F134
+	for <jpruata@fapersa.com>; Fri,  7 Apr 2017 07:53:10 -0300 (ART)
+Received-SPF: pass (gmail.com ... _spf.google.com: Sender is authorized to use 'admlasallejobson@gmail.com' in 'mfrom' identity (mechanism 'include:_netblocks.google.com' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="admlasallejobson@gmail.com"; helo=mail-qt0-f193.google.com; client-ip=209.85.216.193
+Received: from mail-qt0-f193.google.com (mail-qt0-f193.google.com [209.85.216.193])
+	by fw.fapersa.com (Postfix) with ESMTPS id E918C5FD83
+	for <jpruata@fapersa.com>; Fri,  7 Apr 2017 07:53:06 -0300 (ART)
+Received: by mail-qt0-f193.google.com with SMTP id c45so1325352qtb.0
+        for <jpruata@fapersa.com>; Fri, 07 Apr 2017 03:53:06 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=Erp1EpTMnxDip66haGsSFixdihoIm6QvAWlfqZzDStY=;
+        b=YXnk0+ezdyDdk77HoVCrBsrejc3fj5IuM/iliQfIcALAlcaWquTa8HqQqUxLapSZV4
+         85Ssd6qo4X8STsmmmEHi4+VAqYsIp4qfssnzdGxkn6V31OXi1kXuTN1XKGIDUgVUyMKN
+         aMm+HubLlNyVxPidcHTm3sqgi+6AEziPBYhggWp31IqPTreQXCp1XQX4cXCk7RkSrSyU
+         pE2y/bktDmI2g0fvn6sInpSkPeUu8SQVFbU791gg9ohwMo2U8Xf4Wtpow3cMJt6Crqx/
+         xVBWUC+KEr3+QMQxMmUOSIT8n8TtFPawibGfgF3Kx3SMOrVnUOx5yClbTjk6DuRbW6OG
+         8tqQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=Erp1EpTMnxDip66haGsSFixdihoIm6QvAWlfqZzDStY=;
+        b=Dc8Gcy9R7QnUIUcqx3e9hO3bA9pT+RjAM7G5tNCBpYGXw9aWFeLcNwwJUbIp6t++mg
+         9GG6zXPdF4YRflCHUsCDjJglpf6kIlal6uHhbecETyWXnKaiUAakFM/hVSMhw+VxS6Ob
+         +a58huD074fQ2mTSBdwr57vZ+XSr+S+XJUuxOjuBjJ9Wm37pIwZpmroFByW9KlnGsXiD
+         nTOdX435a77hYfhvRyiRzpRtyDFgtrbfXvrTMLGLwRYEDXvR/pQNVooX5z4bycKVnZFX
+         JIBH+f2IyqgEpYqwaOdfOP5roNFPMIfq3vnEwcgGn0pePwc+Vnt00DmcK8grWEspX38O
+         m4Ug==
+X-Gm-Message-State: AFeK/H2/kMK0JV9Ft9EZLUylzxEL82Q//nAJoT5+eXjycKWdabUP21GZFr2mTpTo4LgIVtXN8ocWnKecnKNOxw==
+X-Received: by 10.200.41.75 with SMTP id z11mr39201883qtz.183.1491562384597;
+ Fri, 07 Apr 2017 03:53:04 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.12.183.161 with HTTP; Fri, 7 Apr 2017 03:53:04 -0700 (PDT)
+From: La Salle Jobson <admlasallejobson@gmail.com>
+Date: Fri, 7 Apr 2017 07:53:04 -0300
+Message-ID: <CAC0dvPRZ=xZmqOMGe_YhRN89GiX4NGSsfmWzg0rLQ2dzhKr5QA@mail.gmail.com>
+Subject: =?UTF-8?Q?IMPORTANTE=3A_PAGOS_MEDIANTE_LINK=2D7=C2=BA_GRADO?=
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary=001a113f18dc182b5a054c916eca
+
+--001a113f18dc182b5a054c916eca
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Estimados Padres:
+
+Nos dirigimos a uds. a fin de informarles que debido a los reiterados
+problemas que tuvimos en los =C3=BAltimos meses con el medio de pago de lin=
+k, en
+caso que no puedan visualizar la cuota que tengan que abonar deber=C3=A1n
+realizarlo a trav=C3=A9s de los otros medios de pago disponibles: bica =C3=
+=A1gil,
+banelco o d=C3=A9bito autom=C3=A1tico en cuenta bancaria.
+
+Escapa a nosotros la resoluci=C3=B3n del problema ya que link aleatoriament=
+e no
+sube deuda de algunos alumnos. Sugerimos que los que tengan problemas en
+forma sistem=C3=A1tica, se adhieran al d=C3=A9bito autom=C3=A1tico.
+
+Atentamente.
+
+
+
+
+
+Lic. Alejandra Solis
+
+   Administradora
+
+--001a113f18dc182b5a054c916eca
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><p class=3D"MsoNormal"><span lang=3D"ES-AR">Estimados Padr=
+es:</span><span></span></p>
+
+<p class=3D"MsoNormal"><span lang=3D"ES-AR">Nos dirigimos a uds. a fin de i=
+nformarles que debido a los reiterados
+problemas que tuvimos en los =C3=BAltimos meses con el medio de pago de lin=
+k, en
+caso que no puedan visualizar la cuota que tengan que abonar deber=C3=A1n r=
+ealizarlo
+a trav=C3=A9s de los otros medios de pago disponibles: bica =C3=A1gil, bane=
+lco o d=C3=A9bito
+autom=C3=A1tico en cuenta bancaria.</span><span></span></p>
+
+<p class=3D"MsoNormal"><span lang=3D"ES-AR">Escapa a nosotros la resoluci=
+=C3=B3n del problema ya que link aleatoriamente
+no sube deuda de algunos alumnos.</span><span class=3D"gmail-m7360417016309=
+895016gmail-apple-converted-space"><span lang=3D"ES-AR" style=3D"color:rgb(=
+31,73,125)">=C2=A0</span></span><span lang=3D"ES-AR">Sugerimos que los que
+tengan problemas en forma sistem=C3=A1tica, se adhieran al d=C3=A9bito auto=
+m=C3=A1tico.</span><span></span></p>
+
+<p class=3D"MsoNormal"><span lang=3D"ES-AR">Atentamente.</span><span></span=
+></p>
+
+<p class=3D"MsoNormal"><span lang=3D"ES-AR">=C2=A0</span><span></span></p>
+
+<p class=3D"MsoNormal"><span lang=3D"ES-AR">=C2=A0</span><span></span></p>
+
+<p class=3D"MsoNormal"><span style=3D"font-size:11pt">Lic. Alejandra
+Solis</span><span></span></p>
+
+<p class=3D"MsoNormal"><span style=3D"font-size:11pt">=C2=A0=C2=A0
+Administradora</span><span></span></p></div>
+
+--001a113f18dc182b5a054c916eca--

@@ -1,0 +1,232 @@
+Return-Path: <reportes-fapersa-bounces@listas.lunix.com.ar>
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id YT2gOrV52lgGHgAATLP0zA
+	; Tue, 28 Mar 2017 11:56:54 -0300
+Return-path: <reportes-fapersa-bounces@listas.lunix.com.ar>
+Envelope-to: dottonel@fapersa.com,
+ fyori@fapersa.com,
+ jpruata@fapersa.com,
+ pcalcagno@fapersa.com,
+ rdopazo@fapersa.com
+Delivery-date: Tue, 28 Mar 2017 11:56:54 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:39969 helo=fw.fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.88)
+	(envelope-from <reportes-fapersa-bounces@listas.lunix.com.ar>)
+	id 1cssYH-0004j1-9V; Tue, 28 Mar 2017 11:56:53 -0300
+Received: from cloud.lunix.com.ar (cloud.lunix.com.ar [207.198.115.213])
+	by fw.fapersa.com (Postfix) with ESMTP id 186BC5FFDA;
+	Tue, 28 Mar 2017 11:56:52 -0300 (ART)
+Received: from localhost (localhost [127.0.0.1])
+	by cloud.lunix.com.ar (Postfix) with ESMTP id 7AE78C1D97;
+	Tue, 28 Mar 2017 11:56:51 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at cloud.lunix.com.ar
+Received: from cloud.lunix.com.ar ([127.0.0.1])
+	by localhost (cloud.lunix.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 4KJq0qeYUFDq; Tue, 28 Mar 2017 11:56:46 -0300 (ART)
+Received: by cloud.lunix.com.ar (Postfix, from userid 114)
+	id A62E6C1D85; Tue, 28 Mar 2017 11:56:46 -0300 (ART)
+Received: from cloud.lunix.com.ar (localhost [127.0.0.1])
+	by cloud.lunix.com.ar (Postfix) with ESMTP id 0698BC1D7A;
+	Tue, 28 Mar 2017 11:56:42 -0300 (ART)
+X-Original-To: reportes-fapersa@listas.lunix.com.ar
+Delivered-To: reportes-fapersa@listas.lunix.com.ar
+Received: from localhost (localhost [127.0.0.1])
+ by cloud.lunix.com.ar (Postfix) with ESMTP id 85490C1D7A
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Tue, 28 Mar 2017 11:56:40 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at cloud.lunix.com.ar
+Received: from cloud.lunix.com.ar ([127.0.0.1])
+ by localhost (cloud.lunix.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+ with ESMTP id xvVemDRuatrF for <reportes-fapersa@listas.lunix.com.ar>;
+ Tue, 28 Mar 2017 11:56:35 -0300 (ART)
+Received: by cloud.lunix.com.ar (Postfix, from userid 114)
+ id EE725C1D85; Tue, 28 Mar 2017 11:56:35 -0300 (ART)
+Received: from tanis.nocplanet.com (tanis.nocplanet.com [108.170.37.10])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by cloud.lunix.com.ar (Postfix) with ESMTPS id 03B17C1D7A
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Tue, 28 Mar 2017 11:56:31 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=fapersa.com
+ ; s=default;
+ h=Content-Type:In-Reply-To:MIME-Version:Date:Message-ID:From:
+ References:To:Subject:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID
+ :Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:
+ Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe
+ :List-Post:List-Owner:List-Archive;
+ bh=jxxImYi58AEqz1k6G9AcOEBkWddAZhDRqA8O6Ui3IFA=; b=m85G7g7pWYp/YoMjvfXNxITD26
+ r05o0dzmnO/It6I3rkQ6FDIMo2eDARVLGuvrZTVNlQ9aEdecFIW2yo7lY2cCoDzElp+E9whGp9CGh
+ eWf4q6eG3o/lbqeRffde+eXp0vdJgSGmlJZsvFQjRwa2kYN1d7JJM4/xcBMZGc5mXNgmJFNLicGMw
+ kJVuncrAl9NczlGHU7A8swJQS/Kldc9+xumL6mAHRjXAsmO5nGcQisryrh5+FYA/PN9oyJSb8fuKt
+ cJmHH2rkfW+vgsSbq/ZpZPkQ244cUZSNP0YvEv4+XbEeNacyLBkMVFJAPyap/e/omLehQiotE1swo
+ st+WM5RQ==;
+Received: from mx1.fapersa.com ([181.14.247.181]:52409 helo=[192.168.1.67])
+ by tanis.nocplanet.com with esmtpsa (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128)
+ (Exim 4.88) (envelope-from <fyori@fapersa.com>) id 1cssXt-0004ec-8p
+ for reportes-fapersa@listas.lunix.com.ar; Tue, 28 Mar 2017 11:56:29 -0300
+To: reportes-fapersa@listas.lunix.com.ar
+References: <A0bKtQa-OuZhfb9zV-BgAAAKcRAABV-@c3e4180701>
+From: "Ing. Fernando Yori" <fyori@fapersa.com>
+Message-ID: <8124cb61-ef30-7ac0-f8c0-e01233f47a23@fapersa.com>
+Date: Tue, 28 Mar 2017 11:59:57 -0300
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:45.0) Gecko/20100101
+ Thunderbird/45.4.0
+MIME-Version: 1.0
+In-Reply-To: <A0bKtQa-OuZhfb9zV-BgAAAKcRAABV-@c3e4180701>
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - tanis.nocplanet.com
+X-AntiAbuse: Original Domain - listas.lunix.com.ar
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - fapersa.com
+X-Get-Message-Sender-Via: tanis.nocplanet.com: authenticated_id:
+ fyori@fapersa.com
+X-Authenticated-Sender: tanis.nocplanet.com: fyori@fapersa.com
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+Subject: Re: [Reportes-fapersa]
+ =?utf-8?q?Instalar_software_para_visualizar_la?=
+ =?utf-8?b?cyBjw6FtYXJhcyBbQ2VycmFkbyAjMDA4NDVd?=
+X-BeenThere: reportes-fapersa@listas.lunix.com.ar
+X-Mailman-Version: 2.1.18
+Precedence: list
+List-Id: <reportes-fapersa.listas.lunix.com.ar>
+List-Unsubscribe: <http://listas.lunix.com.ar/cgi-bin/mailman/options/reportes-fapersa>, 
+ <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=unsubscribe>
+List-Post: <mailto:reportes-fapersa@listas.lunix.com.ar>
+List-Help: <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=help>
+List-Subscribe: <http://listas.lunix.com.ar/cgi-bin/mailman/listinfo/reportes-fapersa>, 
+ <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=subscribe>
+Reply-To: reportes-fapersa@listas.lunix.com.ar
+Content-Type: multipart/mixed; boundary="===============2444230157921618998=="
+Errors-To: reportes-fapersa-bounces@listas.lunix.com.ar
+Sender: "Reportes-fapersa" <reportes-fapersa-bounces@listas.lunix.com.ar>
+
+This is a multi-part message in MIME format.
+--===============2444230157921618998==
+Content-Type: multipart/alternative;
+ boundary="------------9392E46C97424623D104555A"
+
+This is a multi-part message in MIME format.
+--------------9392E46C97424623D104555A
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 8bit
+
+César:
+Falta configurar en cada usuario la parte de grabación, ya que hasta el 
+momento podemos ver únicamente las cámaras en vivo, pero no podemos 
+buscar ningún registro.
+Necesitamos ésto a la brevedad.
+
+Saludos
+Fernando
+
+On 27/03/2017 05:04 p.m., Helpdesk Lunix SRL wrote:
+> --responder por encima de esta línea--
+>
+> *Cliente:* Reportes_Fapersa
+> *Ticket:* #00845 
+> <https://soporte.lunix.com.ar/scp/https://soporte.lunix.com.ar/view.php?auth=o1xayaaaacpamaaacXgZXZ3q3fnMOg%3D%3D>
+> *Fecha de creación:* 22/03/17 19:03
+> *Fecha de cierre*: 27/03/17 17:03
+> *Departamento:* Area-Soporte
+> *Agente: *Cesar Menendez
+>
+> **Resolución**
+> ----------------
+> Se instalo el software en los puestos requeridos
+>
+> ------------------------------------------------------------------------
+> /esperamos que esta respuesta haya contestado a sus preguntas. Si no, 
+> por favor no envie otro correo electrónico. Por el contrario, responda 
+> a este correo electrónico o ingresar a tu cuenta 
+> <https://soporte.lunix.com.ar/view.php?auth=o1xayaaaacpamaaacXgZXZ3q3fnMOg%3D%3D> 
+> para un archivo completo de todas sus solicitudes de asistencia y las 
+> respuestas./
+>
+>
+> _______________________________________________
+> Reportes-fapersa mailing list
+> Reportes-fapersa@listas.lunix.com.ar
+> http://listas.lunix.com.ar/cgi-bin/mailman/listinfo/reportes-fapersa
+
+
+--------------9392E46C97424623D104555A
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  </head>
+  <body bgcolor="#FFFFFF" text="#000000">
+    César:<br>
+    Falta configurar en cada usuario la parte de grabación, ya que hasta
+    el momento podemos ver únicamente las cámaras en vivo, pero no
+    podemos buscar ningún registro.<br>
+    Necesitamos ésto a la brevedad.<br>
+    <br>
+    Saludos<br>
+    Fernando<br>
+    <br>
+    <div class="moz-cite-prefix">On 27/03/2017 05:04 p.m., Helpdesk
+      Lunix SRL wrote:<br>
+    </div>
+    <blockquote cite="mid:A0bKtQa-OuZhfb9zV-BgAAAKcRAABV-@c3e4180701"
+      type="cite">
+      <div style="display:none"
+        class="mid-$pxEAAA==$03457f66fc@20d1f5ee7b">--responder por
+        encima de esta línea--<br>
+        <br>
+      </div>
+      <strong>Cliente:</strong> Reportes_Fapersa<br>
+      <strong>Ticket:</strong> <a moz-do-not-send="true"
+href="https://soporte.lunix.com.ar/scp/https://soporte.lunix.com.ar/view.php?auth=o1xayaaaacpamaaacXgZXZ3q3fnMOg%3D%3D">
+        #00845</a><br>
+      <strong>Fecha de creación:</strong> 22/03/17 19:03 <br>
+      <strong>Fecha de cierre</strong>: 27/03/17 17:03<br>
+      <strong>Departamento:</strong> Area-Soporte<br>
+      <strong>Agente: </strong>Cesar Menendez<br>
+      <br>
+      <strong>*Resolución*</strong><br>
+      ----------------<br>
+      Se instalo el software en los puestos requeridos<br>
+      <br>
+      <hr>
+      <div style="color:rgb(127, 127,
+        127);font-size:small;text-align:center"> <em>esperamos que esta
+          respuesta haya contestado a sus preguntas. Si no, por favor no
+          envie otro correo electrónico. Por el contrario, responda a
+          este correo electrónico o <a moz-do-not-send="true"
+href="https://soporte.lunix.com.ar/view.php?auth=o1xayaaaacpamaaacXgZXZ3q3fnMOg%3D%3D"
+            style="color:rgb(84, 141, 212)"> ingresar a tu cuenta</a>
+          para un archivo completo de todas sus solicitudes de
+          asistencia y las respuestas.</em> </div>
+      <br>
+      <fieldset class="mimeAttachmentHeader"></fieldset>
+      <br>
+      <pre wrap="">_______________________________________________
+Reportes-fapersa mailing list
+<a class="moz-txt-link-abbreviated" href="mailto:Reportes-fapersa@listas.lunix.com.ar">Reportes-fapersa@listas.lunix.com.ar</a>
+<a class="moz-txt-link-freetext" href="http://listas.lunix.com.ar/cgi-bin/mailman/listinfo/reportes-fapersa">http://listas.lunix.com.ar/cgi-bin/mailman/listinfo/reportes-fapersa</a>
+</pre>
+    </blockquote>
+    <br>
+  </body>
+</html>
+
+--------------9392E46C97424623D104555A--
+
+--===============2444230157921618998==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+Content-Disposition: inline
+
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KUmVwb3J0ZXMt
+ZmFwZXJzYSBtYWlsaW5nIGxpc3QKUmVwb3J0ZXMtZmFwZXJzYUBsaXN0YXMubHVuaXguY29tLmFy
+Cmh0dHA6Ly9saXN0YXMubHVuaXguY29tLmFyL2NnaS1iaW4vbWFpbG1hbi9saXN0aW5mby9yZXBv
+cnRlcy1mYXBlcnNhCg==
+
+--===============2444230157921618998==--

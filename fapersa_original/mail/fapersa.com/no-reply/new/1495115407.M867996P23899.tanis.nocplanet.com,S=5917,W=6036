@@ -1,0 +1,119 @@
+Return-Path: <>
+Delivered-To: no-reply@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id qax3M4+mHVlbXQAATLP0zA
+	for <no-reply@fapersa.com>; Thu, 18 May 2017 10:50:07 -0300
+Return-path: <>
+Envelope-to: no-reply@fapersa.com
+Delivery-date: Thu, 18 May 2017 10:50:07 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:56447 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	id 1dBLod-0007CS-3U
+	for no-reply@fapersa.com; Thu, 18 May 2017 10:50:07 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id E008C7F219
+	for <no-reply@fapersa.com>; Thu, 18 May 2017 10:50:06 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id sSY2ViuQ3Bnu for <no-reply@fapersa.com>;
+	Thu, 18 May 2017 10:50:06 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 884797F22A; Thu, 18 May 2017 10:50:06 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 73F527F219
+	for <no-reply@fapersa.com>; Thu, 18 May 2017 10:50:05 -0300 (ART)
+Received-SPF: none (mail.wilnet.com.ar: No applicable sender policy available) receiver=mx1.fapersa.com; identity=helo; helo=mail.wilnet.com.ar; client-ip=200.2.127.148
+Received: from mail.wilnet.com.ar (mail.wilnet.com.ar [200.2.127.148])
+	by fw.fapersa.com (Postfix) with ESMTP id 296CF5FE2D
+	for <no-reply@fapersa.com>; Thu, 18 May 2017 10:50:04 -0300 (ART)
+Received: by mail.wilnet.com.ar (Postfix, from userid 5251)
+	id B44F3518630; Thu, 18 May 2017 10:50:02 -0300 (ART)
+Message-ID: <dovecot-1495115402-656565-0@mail.wilnet.com.ar>
+Date: Thu, 18 May 2017 10:50:02 -0300
+From: Mail Delivery Subsystem <wiltel@wiltel.com.ar>
+To: <no-reply@fapersa.com>
+MIME-Version: 1.0
+Content-Type: multipart/report; report-type=disposition-notification;
+	boundary="2017/mail.wilnet.com.ar"
+Subject: Rejected: Fapersa ICSA - Envio de comprobantes electronicos
+Auto-Submitted: auto-replied (rejected)
+Precedence: bulk
+
+This is a MIME-encapsulated message
+
+--2017/mail.wilnet.com.ar
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: inline
+Content-Transfer-Encoding: 8bit
+
+Your message to <repuestosdellasanta@wilnet.com.ar> was automatically rejected:
+Not enough disk space
+--2017/mail.wilnet.com.ar
+Content-Type: message/disposition-notification
+
+Reporting-UA: mail.wilnet.com.ar; Dovecot Mail Delivery Agent
+Final-Recipient: rfc822; repuestosdellasanta@wilnet.com.ar
+Original-Message-ID: <652395301.3.1495115109929.JavaMail.cmg@equis>
+Disposition: automatic-action/MDN-sent-automatically; deleted
+
+--2017/mail.wilnet.com.ar
+Content-Type: message/rfc822
+
+Return-Path: <no-reply@fapersa.com>
+X-Original-To: repuestosdellasanta@wilnet.com.ar
+Delivered-To: repuestosdellasanta@wilnet.com.ar
+Received: from mail.wilnet.com.ar (unknown [192.168.10.1])
+	by mail.wilnet.com.ar (Postfix) with ESMTP id 79A19518627
+	for <repuestosdellasanta@wilnet.com.ar>; Thu, 18 May 2017 10:50:02 -0300 (ART)
+Received: from localhost (localhost [127.0.0.1])
+	by mail1.wilnet.com.ar (Postfix) with ESMTP id 768407C090
+	for <repuestosdellasanta@wilnet.com.ar>; Thu, 18 May 2017 10:50:02 -0300 (ART)
+Received: from mail1.wilnet.com.ar ([127.0.0.1])
+	by localhost (mail1.wilnet.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id mkeL9pln-Ouh for <repuestosdellasanta@wilnet.com.ar>;
+	Thu, 18 May 2017 10:50:02 -0300 (ART)
+Received: by mail1.wilnet.com.ar (Postfix, from userid 113)
+	id 55A4A7C143; Thu, 18 May 2017 10:50:02 -0300 (ART)
+Received: from tanis.nocplanet.com (tanis.nocplanet.com [108.170.37.10])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by mail1.wilnet.com.ar (Postfix) with ESMTPS id 079687C090
+	for <repuestosdellasanta@wilnet.com.ar>; Thu, 18 May 2017 10:50:00 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=fapersa.com
+	; s=default; h=Content-Type:MIME-Version:Subject:Message-ID:To:From:Sender:
+	Reply-To:Date:Cc:Content-Transfer-Encoding:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+	List-Post:List-Owner:List-Archive;
+	bh=ZK6t+3nygo5toYOcbDcWA323yzwMeJLEJVFpglD0DaQ=; b=VmpNO+Ut1/r15KW8qhfOjLK2I7
+	Xxg2dj6SgvojTP21vsKAEzkMm3dr1pUp4x0Z/m41QPVKwf4XQ8fSSRah2RTwkeDM3mQ9W0j/Lsnw1
+	ZBKy7nyb4LztP9k6bbKEX5PteoEKvOmOoFC8uYIoasAzD9uDV6reWHLdWnnMJikjcsgZZyxJRDkZE
+	K9It/bhh5FNEV1zOVjWHFdOJiie3k9q7ibbereQlt6mgCoR/lJsXfKCj5Gv5odLQepLGcy1SWOXgW
+	qOzkXEhkGID22ENOXwCAyceCxpCmSWZ5eq01wqfbBHnOTakds+VZo2qk6fIpEelfw9wjFTDOVbk+X
+	XaLMBZGQ==;
+Received: from mx1.fapersa.com ([181.14.247.181]:61911 helo=equis.fapersa.int)
+	by tanis.nocplanet.com with esmtpa (Exim 4.89)
+	(envelope-from <no-reply@fapersa.com>)
+	id 1dBLoA-000796-6s; Thu, 18 May 2017 10:49:45 -0300
+From: =?Cp1252?Q?Daniel_Ram=EDrez?= <no-reply@fapersa.com>
+To: Corporativo <repuestosdellasanta@wilnet.com.ar>, 
+	=?Cp1252?Q?Administraci=F3n?= <repuestosdellasanta@wilnet.com.ar>
+Message-ID: <652395301.3.1495115109929.JavaMail.cmg@equis>
+Subject: Fapersa ICSA - Envio de comprobantes electronicos
+MIME-Version: 1.0
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - tanis.nocplanet.com
+X-AntiAbuse: Original Domain - wilnet.com.ar
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - fapersa.com
+X-Get-Message-Sender-Via: tanis.nocplanet.com: authenticated_id: no-reply@fapersa.com
+X-Authenticated-Sender: tanis.nocplanet.com: no-reply@fapersa.com
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+Date: Thu, 18 May 2017 10:50:00 -0300 (ART)
+
+
+
+--2017/mail.wilnet.com.ar--

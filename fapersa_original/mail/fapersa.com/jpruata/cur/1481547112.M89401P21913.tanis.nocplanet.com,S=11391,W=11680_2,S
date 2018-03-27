@@ -1,0 +1,289 @@
+Return-Path: <reportes-fapersa-bounces@listas.lunix.com.ar>
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id YdF+BGidTliZVQAATLP0zA
+	; Mon, 12 Dec 2016 09:51:52 -0300
+Return-path: <reportes-fapersa-bounces@listas.lunix.com.ar>
+Envelope-to: dottonel@fapersa.com,
+ fyori@fapersa.com,
+ jpruata@fapersa.com,
+ pcalcagno@fapersa.com,
+ rdopazo@fapersa.com
+Delivery-date: Mon, 12 Dec 2016 09:51:52 -0300
+Received: from cloud.lunix.com.ar ([207.198.115.213]:48375)
+	by tanis.nocplanet.com with esmtp (Exim 4.87)
+	(envelope-from <reportes-fapersa-bounces@listas.lunix.com.ar>)
+	id 1cGQ4y-0005YF-RH; Mon, 12 Dec 2016 09:51:51 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by cloud.lunix.com.ar (Postfix) with ESMTP id 51577C0D4E;
+	Mon, 12 Dec 2016 09:49:40 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at cloud.lunix.com.ar
+Received: from cloud.lunix.com.ar ([127.0.0.1])
+	by localhost (cloud.lunix.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id G8sfphxZmZI9; Mon, 12 Dec 2016 09:49:35 -0300 (ART)
+Received: by cloud.lunix.com.ar (Postfix, from userid 114)
+	id 9117DC17AE; Mon, 12 Dec 2016 09:49:35 -0300 (ART)
+Received: from cloud.lunix.com.ar (localhost [127.0.0.1])
+	by cloud.lunix.com.ar (Postfix) with ESMTP id EFD5DC0D4E;
+	Mon, 12 Dec 2016 09:49:30 -0300 (ART)
+X-Original-To: reportes-fapersa@listas.lunix.com.ar
+Delivered-To: reportes-fapersa@listas.lunix.com.ar
+Received: from localhost (localhost [127.0.0.1])
+ by cloud.lunix.com.ar (Postfix) with ESMTP id B9217C0D4E
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Mon, 12 Dec 2016 09:49:29 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at cloud.lunix.com.ar
+Received: from cloud.lunix.com.ar ([127.0.0.1])
+ by localhost (cloud.lunix.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+ with ESMTP id 5kqDJU4ii9mP for <reportes-fapersa@listas.lunix.com.ar>;
+ Mon, 12 Dec 2016 09:49:22 -0300 (ART)
+Received: by cloud.lunix.com.ar (Postfix, from userid 114)
+ id 12593C13C7; Mon, 12 Dec 2016 09:49:22 -0300 (ART)
+Received: from tanis.nocplanet.com (tanis.nocplanet.com [108.170.37.10])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by cloud.lunix.com.ar (Postfix) with ESMTPS id 0966DC0D4E
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Mon, 12 Dec 2016 09:49:17 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=fapersa.com
+ ; s=default;
+ h=Content-Type:MIME-Version:Date:Subject:To:From:Sender:Reply-To
+ :Message-ID:Cc:Content-Transfer-Encoding:Content-ID:Content-Description:
+ Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+ In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=TmsnVx/+HO/nKyTl1M7VDnNLCKgAwDF4ZMdcOXdCNew=; b=VjZdwwRp8xJybPMzwmmhAiqpgC
+ jlY+sPtzgz1TWujUmv9DkW8/B21L08ZtgMoyZYFRC11Ghd4y4IB4tnz3agg6PdXjeGrnxIa5fJlB3
+ oBNrB5g93TTU4o0n/SPMfiEN5B1p3BRFDihybXf/i3cvOaOldn07LrX0FRcXSTgbSZcxqy9PMO+R+
+ 96Dmvu/U6M1peT1N2S3E6JyLyUvtN417ZN73QVUePmt3YGaUXaUwFNb7MTN8V9NGWL79jOHXaa69g
+ d2YFKbGOlhCBeoOiEoeBhgVBPDD6LjQ4SAP6FV5Y4gneHqkorp+oFDEbLX3oepeQYr4L7Th3DffBl
+ 6wJDEz4w==;
+Received: from [181.14.247.181] (port=49757 helo=ADMPCal)
+ by tanis.nocplanet.com with esmtpa (Exim 4.87)
+ (envelope-from <pcalcagno@fapersa.com>) id 1cGQ2c-0005TY-QJ
+ for reportes-fapersa@listas.lunix.com.ar; Mon, 12 Dec 2016 09:49:15 -0300
+From: "Paulina Calcagno" <pcalcagno@fapersa.com>
+To: <reportes-fapersa@listas.lunix.com.ar>
+Date: Mon, 12 Dec 2016 09:50:18 -0300
+MIME-Version: 1.0
+X-Priority: 1 (Highest)
+X-MSMail-Priority: High
+X-Mailer: Microsoft Office Outlook, Build 11.0.5510
+Thread-Index: AdJUdkq4cVWm6sH3ShOV1RheuEKXsA==
+Importance: High
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.23573
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - tanis.nocplanet.com
+X-AntiAbuse: Original Domain - listas.lunix.com.ar
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - fapersa.com
+X-Get-Message-Sender-Via: tanis.nocplanet.com: authenticated_id:
+ pcalcagno@fapersa.com
+X-Authenticated-Sender: tanis.nocplanet.com: pcalcagno@fapersa.com
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+Message-Id: <20161212124917.0966DC0D4E@cloud.lunix.com.ar>
+Subject: [Reportes-fapersa] problemas en descarga de adjuntos en hotmail
+X-BeenThere: reportes-fapersa@listas.lunix.com.ar
+X-Mailman-Version: 2.1.18
+Precedence: list
+List-Id: <reportes-fapersa.listas.lunix.com.ar>
+List-Unsubscribe: <http://listas.lunix.com.ar/cgi-bin/mailman/options/reportes-fapersa>, 
+ <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=unsubscribe>
+List-Post: <mailto:reportes-fapersa@listas.lunix.com.ar>
+List-Help: <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=help>
+List-Subscribe: <http://listas.lunix.com.ar/cgi-bin/mailman/listinfo/reportes-fapersa>, 
+ <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=subscribe>
+Reply-To: reportes-fapersa@listas.lunix.com.ar
+Content-Type: multipart/mixed; boundary="===============6948472932355520756=="
+Errors-To: reportes-fapersa-bounces@listas.lunix.com.ar
+Sender: "Reportes-fapersa" <reportes-fapersa-bounces@listas.lunix.com.ar>
+X-Spam-Status: No, score=-4.8
+X-Spam-Score: -47
+X-Spam-Bar: ----
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Buen día: este problema ya lo he planteado en reiteradas oportunidades.
+    Yo trabajo mucho con una casilla de correo de Hotmail, en la cual siempre
+    me envian archivos adjuntos. Me es casi imposible verlos o descargarlos desde
+    mi PC. Cuando lo intento desde otra PC de la administración, se abren y/o
+    descargan sin problema. [...] 
+ 
+ Content analysis details:   (-4.8 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: fapersa.com]
+ -3.0 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+  0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
+                             domains are different
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+  0.0 T_DKIM_INVALID         DKIM-Signature header exists but is not valid
+X-Spam-Flag: NO
+
+This is a multi-part message in MIME format.
+
+--===============6948472932355520756==
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0064_01D2545D.26AA4370"
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0064_01D2545D.26AA4370
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Buen d=EDa: este problema ya lo he planteado en reiteradas =
+oportunidades. Yo
+trabajo mucho con una casilla de correo de Hotmail, en la cual siempre =
+me
+envian archivos adjuntos. Me es casi imposible verlos o descargarlos =
+desde
+mi PC. Cuando lo intento desde otra PC de la administraci=F3n, se abren =
+y/o
+descargan sin problema.
+
+Esto me genera much=EDsima perdida de tiempo Repito que son correos de =
+trabajo
+y necesito permanentemente utilizar esa casilla.
+
+Agradezco me den una soluci=F3n definitiva a este problema, cosa que no =
+ha
+ocurrido hasta ahora.
+
+Muchas gracias!
+
+=20
+
+Saludos
+
+=20
+
+Paulina
+
+
+------=_NextPart_000_0064_01D2545D.26AA4370
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns=3D"http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<meta name=3DGenerator content=3D"Microsoft Word 11 (filtered medium)">
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+span.EstiloCorreo17
+	{mso-style-type:personal-compose;
+	font-family:Arial;
+	color:windowtext;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=3DES link=3Dblue vlink=3Dpurple>
+
+<div class=3DSection1>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span lang=3DES-MX =
+style=3D'font-size:
+10.0pt;font-family:Arial'>Buen d=EDa: este problema ya lo he planteado =
+en
+reiteradas oportunidades. Yo trabajo mucho con una casilla de correo de =
+Hotmail,
+en la cual siempre me envian archivos adjuntos. Me es casi imposible =
+verlos o
+descargarlos desde mi PC. Cuando lo intento desde otra PC de la =
+administraci=F3n,
+se abren y/o descargan sin problema.<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span lang=3DES-MX =
+style=3D'font-size:
+10.0pt;font-family:Arial'>Esto me genera much=EDsima perdida de tiempo =
+Repito que
+son correos de trabajo y necesito permanentemente utilizar esa =
+casilla.<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span lang=3DES-MX =
+style=3D'font-size:
+10.0pt;font-family:Arial'>Agradezco me den una soluci=F3n definitiva a =
+este problema,
+cosa que no ha ocurrido hasta ahora.<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span lang=3DES-MX =
+style=3D'font-size:
+10.0pt;font-family:Arial'>Muchas gracias!<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span lang=3DES-MX =
+style=3D'font-size:
+10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span lang=3DES-MX =
+style=3D'font-size:
+10.0pt;font-family:Arial'>Saludos<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span lang=3DES-MX =
+style=3D'font-size:
+10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span lang=3DES-MX =
+style=3D'font-size:
+10.0pt;font-family:Arial'>Paulina<o:p></o:p></span></font></p>
+
+</div>
+
+</body>
+
+</html>
+
+------=_NextPart_000_0064_01D2545D.26AA4370--
+
+
+--===============6948472932355520756==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+Content-Disposition: inline
+
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KUmVwb3J0ZXMt
+ZmFwZXJzYSBtYWlsaW5nIGxpc3QKUmVwb3J0ZXMtZmFwZXJzYUBsaXN0YXMubHVuaXguY29tLmFy
+Cmh0dHA6Ly9saXN0YXMubHVuaXguY29tLmFyL2NnaS1iaW4vbWFpbG1hbi9saXN0aW5mby9yZXBv
+cnRlcy1mYXBlcnNhCg==
+
+--===============6948472932355520756==--
+

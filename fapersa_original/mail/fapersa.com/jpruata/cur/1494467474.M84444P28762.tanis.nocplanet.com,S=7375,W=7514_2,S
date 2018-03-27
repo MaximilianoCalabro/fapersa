@@ -1,0 +1,139 @@
+Return-Path: <info@c.comoterminarundiscurso.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id YQq0BJLDE1lacAAATLP0zA
+	for <jpruata@fapersa.com>; Wed, 10 May 2017 22:51:14 -0300
+Return-path: <info@c.comoterminarundiscurso.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Wed, 10 May 2017 22:51:14 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:49419 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <info@c.comoterminarundiscurso.com>)
+	id 1d8dG5-0007dT-9r
+	for jpruata@fapersa.com; Wed, 10 May 2017 22:51:13 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 9207B7F21A
+	for <jpruata@fapersa.com>; Wed, 10 May 2017 22:51:13 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+X-Spam-Flag: NO
+X-Spam-Score: 3.326
+X-Spam-Level: ***
+X-Spam-Status: No, score=3.326 tagged_above=2 required=5
+	tests=[DKIM_SIGNED=0.1, DKIM_VALID=-0.1, DKIM_VALID_AU=-0.1,
+	HTML_FONT_LOW_CONTRAST=0.001, HTML_IMAGE_RATIO_04=0.61,
+	HTML_MESSAGE=0.001, MIME_HTML_ONLY=1.105, SPF_PASS=-0.001,
+	T_KHOP_FOREIGN_CLICK=0.01, URIBL_DBL_SPAM=1.7]
+	autolearn=no autolearn_force=no
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id tLdfJvzoc0m4 for <jpruata@fapersa.com>;
+	Wed, 10 May 2017 22:51:10 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id D8F527F232; Wed, 10 May 2017 22:51:10 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 7316B7F21A
+	for <jpruata@fapersa.com>; Wed, 10 May 2017 22:51:03 -0300 (ART)
+Received-SPF: pass (c.comoterminarundiscurso.com: Sender is authorized to use 'info@c.comoterminarundiscurso.com' in 'mfrom' identity (mechanism 'include:treceosos.com' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="info@c.comoterminarundiscurso.com"; helo=ce231.os52.treceosos.com; client-ip=89.163.231.52
+Received: from ce231.os52.treceosos.com (ce231.os52.treceosos.com [89.163.231.52])
+	by fw.fapersa.com (Postfix) with ESMTP id 06F445FE0D
+	for <jpruata@fapersa.com>; Wed, 10 May 2017 22:50:58 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=c.comoterminarundiscurso.com;
+ h=To:Subject:Message-ID:Date:From:Reply-To:MIME-Version:List-Unsubscribe:Content-Type:Content-Transfer-Encoding; i=info@c.comoterminarundiscurso.com;
+ bh=wbxDIwUQr9g4LJ4nIsYgAxedPRQ=;
+ b=v0rRfMQ2x+bVVmObyzpGY4YQmeMHa0gqzOpGEOF7VrR2GQLA6o9T7XbzbVitf0Rhs1rvt1p2w554
+   bzya2i8w9n6Tysy/yCgZ8jpjUYlEpO8lF7ybSELQX5Mj/n+eJGv+DtPMZ1jN+fTbz87ay+8oRSIX
+   AsMYi6v+4/PET4Y0jmI=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=c.comoterminarundiscurso.com;
+ b=FjdXRu3to345DXQGEG1RbLLM9WKNRaJ+CA7cv6zj/81le+NNwKd4h247UwSSo4F6xZsvcbliw3Du
+   efwpMrV4rULSEMBsiDfBaHaS0F2f9PzVWJrUwNfFVIfycl2Po+taUTQZoPIRG6cBgBpmlBNO3zk6
+   eLGIyzGsEqNe4CMKxYE=;
+Received: from mv.tenetufiat.com (37.187.163.96) by ce231.os52.treceosos.com id h2f1oe0001gq for <jpruata@fapersa.com>; Wed, 10 May 2017 22:50:46 -0300 (envelope-from <info@c.comoterminarundiscurso.com>)
+To: jpruata@fapersa.com
+Subject: Re: Tenemos stock
+Message-ID: <7a5fef804e1b1bb54b3d1e3cf181895a@mv.tenetufiat.com>
+Date: Wed, 10 May 2017 22:50:45 -0300
+From: "Julieta Gauna" <info@c.comoterminarundiscurso.com>
+Reply-To: consultas@c.comoterminarundiscurso.com
+MIME-Version: 1.0
+X-Mailer-LID: 1
+List-Unsubscribe: <http://mv.tenetufiat.com/unsubscribe.php?M=3415716&C=58b8e6487399fadbcd1d78bc9efbce8c&L=35&N=25>
+X-Mailer-RecptId: 3415716MVTE
+X-mcda: FALSE
+Precedence: bulk
+X-Mailer-SID: 25
+X-Mailer-Sent-By: ACEM MVTE1
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+</head>
+<body>
+<div align="center"><a
+href="http://mv.tenetufiat.com/link.php?M=3415716&N=25&L=1&F=H"
+target="_blank">Si no visualiza correctamente este mensaje haga click
+aqui.</a><br /> <span style="color: #ffffff;">-</span></div>
+<table style="width: 720px;" align="center">
+<tbody>
+<tr>
+<td>
+<p align="left"><span style="font-size: small;"><strong><span
+style="font-family: Arial,Helvetica,sans-serif;"><span
+style="text-decoration: underline;">FIAT ARGENTINA</span><br /> Lista de
+Precios y Stock para entrega inmediata: </span></strong><span
+style="font-family: Arial,Helvetica,sans-serif;"><a target="_blank"
+href="http://mv.tenetufiat.com/link.php?M=3415716&N=25&L=1&F=H">Click
+aqui.</a><br />
+------------------------------------------------------------------------------------------------<br
+/> <strong>Marca</strong>: Fiat <br /> <strong>Tipo de Plan:</strong> Fiat
+Plan Argentina <br /> <strong>Cantidad de Cuotas </strong>: 84 Cuotas<br />
+<strong>Lugar de Entrega </strong>: Amba, Cordoba, Santa Fe y
+Neuqu&eacute;n<br /> <strong>Seguro</strong>: Responsabilidad Civil desde
+F&aacute;brica<br /> </span></span></p>
+<p align="left"><span style="font-family: Arial,Helvetica,sans-serif;
+font-size: small;"><strong>Stock para entrega en cuota 4:</strong><br />
+----------------------------------<br /> <strong>Nuevo Fiat
+MoBi</strong>...... 185 Unidades.... <a
+href="http://mv.tenetufiat.com/link.php?M=3415716&N=25&L=1&F=H">Ver
+modelo</a> <br /> <br /> Nuevo Palio:........63 Unidades .....<a
+target="_blank"
+href="http://mv.tenetufiat.com/link.php?M=3415716&N=25&L=1&F=H">Ver
+modelo</a><br /> Nuevo Punto:.......22 Unidades..... <a target="_blank"
+href="http://mv.tenetufiat.com/link.php?M=3415716&N=25&L=1&F=H">Ver
+modelo</a><br /> Siena EL:............14 Unidades ......<a target="_blank"
+href="http://mv.tenetufiat.com/link.php?M=3415716&N=25&L=1&F=H">Ver
+modelo</a><br /> Grand Siena:.......40 Unidades .....<a target="_blank"
+href="http://mv.tenetufiat.com/link.php?M=3415716&N=25&L=1&F=H">Ver
+modelo</a><br /> Idea:.....................12 Unidades......<a
+target="_blank"
+href="http://mv.tenetufiat.com/link.php?M=3415716&N=25&L=1&F=H">Ver
+modelo</a><br /> Strada:................No disponible.... <a
+target="_blank"
+href="http://mv.tenetufiat.com/link.php?M=3415716&N=25&L=1&F=H">Ver
+modelo</a><br /> Nueva Fiorino:....48 Unidades .....<a target="_blank"
+href="http://mv.tenetufiat.com/link.php?M=3415716&N=25&L=1&F=H">Ver
+modelo</a><br /> </span></p>
+<p align="left"><span style="font-family: Arial,Helvetica,sans-serif;
+font-size: small;"><strong>Consulta precios vigentes en <a target="_blank"
+href="http://mv.tenetufiat.com/link.php?M=3415716&N=25&L=1&F=H">haciendo
+clic aqui</a></strong></span></p>
+<p align="center"><span style="font-family: Arial, Helvetica,
+sans-serif;"><a target="_blank"
+href="http://mv.tenetufiat.com/link.php?M=3415716&N=25&L=1&F=H"><img
+src="http://mv.tenetufiat.com/images/fiat-em.jpg" alt="FIAT ARGENTINA"
+border="0" width="674" height="474" /></a></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<div align="center"><span style="color: #ffffff;">-</span><br /> <a
+href="http://mv.tenetufiat.com/unsubscribe.php?M=3415716&C=58b8e6487399fadbcd1d78bc9efbce8c&L=35&N=25">Si
+desea desuscribirse de nuestra lista haga click aqui.<br /></a><span
+style="color: #ffffff;">-</span></div>
+<img
+src="http://mv.tenetufiat.com/open.php?M=3415716&L=35&N=25&F=H&image=.jpg"
+height="1" width="10"></body>
+</html>
+

@@ -1,0 +1,452 @@
+Return-Path: <ggonzalez@redsurcos.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id 01IlFzTctlgBEQAATLP0zA
+	for <jpruata@fapersa.com>; Wed, 01 Mar 2017 11:35:32 -0300
+Return-path: <ggonzalez@redsurcos.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Wed, 01 Mar 2017 11:35:32 -0300
+Received: from mail-qk0-f170.google.com ([209.85.220.170]:34622)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128)
+	(Exim 4.88)
+	(envelope-from <ggonzalez@redsurcos.com>)
+	id 1cj5Le-0003oV-L6
+	for jpruata@fapersa.com; Wed, 01 Mar 2017 11:35:32 -0300
+Received: by mail-qk0-f170.google.com with SMTP id s186so72759575qkb.1
+        for <jpruata@fapersa.com>; Wed, 01 Mar 2017 06:35:03 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=redsurcos-com.20150623.gappssmtp.com; s=20150623;
+        h=message-id:reply-to:from:to:cc:references:subject:date:organization
+         :mime-version:disposition-notification-to;
+        bh=Bsg0YPqy8t0GKooZ8HcFIB9sLGIxhKTNohhlUw8RGHw=;
+        b=PSOGAj76FTR7x83tJ2rZS4Er2DQiZtxvef040MOzG5qFyyaWc6yBD5ZWIp4QQvm0gp
+         LgCnJcheYE+diMmJOcbAmrM+B7ykm6JcLh9RxlejMg27t/FAr13L3n1IHnDN8wP5DLhB
+         1NdPg+ljS82phXks16KtNjYOIh5y9Gc1+lUdKEDJ1o3A3ZCPmVRsNoKFJQU3Q34dhZXV
+         NlqeLK1l7DwxBdkjWixTu3gvPteA1KAi/uCtHo9QT1izkCtucXD4/9fekv2LFxOo93Kv
+         ucjw/Jss4fF4f0OfwXIlOmoM5I3MYbjz0Uj390QtFGvEp/lKr/Vv6Ny3BYYdgumIt5Yj
+         Ughw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:message-id:reply-to:from:to:cc:references
+         :subject:date:organization:mime-version:disposition-notification-to;
+        bh=Bsg0YPqy8t0GKooZ8HcFIB9sLGIxhKTNohhlUw8RGHw=;
+        b=Ygv+ugthNEG0MEOpi6yNI9RkvKJFwtLIv7e48cwM0wXd3jvSPn/2gk3vVcF3RIxXsA
+         exC0c/Q1T4CtRh6X8Z0EYmJse9SivNYD0GlGCuboKCke22Z4GyJGfIhYPljQNrE84nJt
+         0h5Lhb98AlvVnX5lrZruTZ226yj5I+MqL7DABIC+faoNt1qkvwESBzv1E6CpUHpoEoD6
+         fJE562bPQOTLVvqXGRxwjTddSBB/OWl5pcGYhhF9nLhB7C99W+nFgwe7upiru5/0sc9Z
+         duFGc6k/uFcrvPYI7fJkK6WNBtIjDZ0ei3vdzLwBoEeZAhu1yR36b5MAPw082SSEe1HR
+         CavQ==
+X-Gm-Message-State: AMke39nAg74vl4EMQzmM9a/pfswsEFT1MFVxx60/74U7BNf8GsN0UTSmEcEl4vMD+/hB/BVC
+X-Received: by 10.55.15.18 with SMTP id z18mr9644091qkg.267.1488378882354;
+        Wed, 01 Mar 2017 06:34:42 -0800 (PST)
+Received: from 130Ggonzalez ([190.221.178.149])
+        by smtp.gmail.com with ESMTPSA id k18sm3253057qtc.12.2017.03.01.06.34.40
+        (version=TLS1 cipher=DES-CBC3-SHA bits=112/168);
+        Wed, 01 Mar 2017 06:34:41 -0800 (PST)
+Message-ID: <4213C397AEC14EFEB673E6691EC72ECD@130Ggonzalez>
+Reply-To: "Gabriela Gonzalez" <ggonzalez@redsurcos.com>
+From: "Gabriela Gonzalez" <ggonzalez@redsurcos.com>
+To: "FAPERSA" <jpruata@fapersa.com>
+Cc: <nchamorro@redsurcos.com>
+References: <62B5CE52-5BF6-4C5F-B6EF-885716C00E82@fapersa.com> <83208965-4201-49D1-85A8-FD34A50743F9@fapersa.com> <44DDD32B7B8D4E499B24C944CFF0D34C@130Ggonzalez> <44E481AE-C686-473A-B0C8-4412A22A87D1@fapersa.com>
+Subject: Re: La Turquina
+Date: Wed, 1 Mar 2017 11:59:55 -0300
+Organization: Red Surcos
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_001B_01D29283.578C9DD0"
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2900.5512
+Disposition-Notification-To: "Gabriela Gonzalez" <ggonzalez@redsurcos.com>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5512
+X-Spam-Status: No, score=-0.9
+X-Spam-Score: -8
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Hola Juampi, Tenemos Nero que es lamdacialotrina + imidacloprid
+    a dosis de 250 o 300 cc/ha. el precio de lista es de usd 19,80 + iva y tenemos
+    disponible. Decime si te sirve y lo llevamos mañana al campo. Saludos [...]
+    
+ 
+ Content analysis details:   (-0.9 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: gappssmtp.com]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+  1.0 KAM_HTMLNOISE          Spam containing useless HTML padding
+X-Spam-Flag: NO
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_001B_01D29283.578C9DD0
+Content-Type: text/plain;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hola Juampi, Tenemos Nero que es lamdacialotrina + imidacloprid a dosis =
+de 250 o 300 cc/ha. el precio de lista es de usd 19,80 + iva y tenemos =
+disponible.=20
+Decime si te sirve y lo llevamos ma=C3=B1ana al campo.
+Saludos
+
+  ----- Original Message -----=20
+  From: FAPERSA=20
+  To: Gabriela Gonzalez=20
+  Cc: nchamorro@redsurcos.com=20
+  Sent: Tuesday, February 28, 2017 10:39 PM
+  Subject: Re: La Turquina
+
+
+  Gabriela que tal!!!
+
+
+  Te confirmo el fungicida ACENTO, son 250 litros. Lo ideal seria si me =
+lo pueden llevar al campo lo antes posible ya q el encargado choco la =
+camioneta.
+
+
+  Por otro lado te consulto por productos para la ISOCA, CHINCHE y si =
+tenes algun DUAL con los dos juntos mejor, por favor pasame precios de =
+todo mas disponibilidad y si lo pueden llevar al campo junto al =
+fungicida.
+
+
+  Saludos.
+
+
+
+
+
+
+  Juampi.
+
+
+
+
+    El 17 feb. 2017, a las 16:34, Gabriela Gonzalez =
+<ggonzalez@redsurcos.com> escribi=C3=B3:
+
+
+    Hola Juampi. Te paso los precios de los fungicidas y las dosis en el =
+adjunto.
+
+    - Precio de Lista v=C3=A1lido para cheques hasta 90 d=C3=ADas, =
+tarjeta hasta 90 y AGRONACION, MACRO, BAPRO.=20
+
+
+    - Para operaciones de contado descontar 5% del precio de lista
+
+
+    - Precio 180 v=C3=A1lido para cheques y tarjetas a ese plazo. ( =
+Galicia, Frances,Cabal, Macro, Santander)
+
+    Tenemos stock de ambos productos. Ambos son fungicidas para =
+enfermedades para fin de ciclo, Acento es el que tiene la strobirulina, =
+semejante a Amistar u Opera , mas curativo que preventivo.
+
+    Cualquier consulta a dispocision
+    Saludos
+
+      ----- Original Message -----=20
+      From: FAPERSA
+      To: nchamorro@redsurcos.com ; ggonzalez@redsurcos.com
+      Sent: Friday, February 17, 2017 12:13 PM
+      Subject: Fwd: La Turquina
+
+
+
+
+
+
+        Inicio del mensaje reenviado:
+
+
+        De: FAPERSA <jpruata@fapersa.com>
+
+        Asunto: La Turquina
+
+        Fecha: 17 de febrero de 2017, 11:53:24 GMT-3
+
+        Para: Rodrigo Ferrero <rferrero@redsurcos.com>
+
+
+
+        Rodrigo como andas
+
+        Te consulto por productos para enfermedades de fin de ciclo para =
+la soja.
+
+        Pasame lo que tenes con especificaciones precio y forma de =
+pagos.
+
+
+        Abrazos.
+
+
+
+    <FungicidasLaturquina1.xlsx>
+
+
+------=_NextPart_000_001B_01D29283.578C9DD0
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content=3D"text/html; charset=3Dutf-8" http-equiv=3DContent-Type>
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.18702">
+<STYLE></STYLE>
+</HEAD>
+<BODY=20
+style=3D"WORD-WRAP: break-word; -webkit-nbsp-mode: space; =
+-webkit-line-break: after-white-space"=20
+bgColor=3D#ffffff>
+<DIV><FONT size=3D2 face=3DArial>Hola Juampi, Tenemos Nero que es =
+lamdacialotrina +=20
+imidacloprid a dosis de 250 o 300 cc/ha. el precio de lista es de usd =
+19,80 +=20
+iva y tenemos disponible. </FONT></DIV>
+<DIV><FONT size=3D2 face=3DArial>Decime si te sirve y lo llevamos =
+ma=C3=B1ana al=20
+campo.</FONT></DIV>
+<DIV><FONT size=3D2 face=3DArial>Saludos</FONT></DIV>
+<DIV>&nbsp;</DIV>
+<BLOCKQUOTE=20
+style=3D"BORDER-LEFT: #000000 2px solid; PADDING-LEFT: 5px; =
+PADDING-RIGHT: 0px; MARGIN-LEFT: 5px; MARGIN-RIGHT: 0px"=20
+dir=3Dltr>
+  <DIV style=3D"FONT: 10pt arial">----- Original Message ----- </DIV>
+  <DIV=20
+  style=3D"FONT: 10pt arial; BACKGROUND: #e4e4e4; font-color: =
+black"><B>From:</B>=20
+  <A title=3Djpruata@fapersa.com =
+href=3D"mailto:jpruata@fapersa.com">FAPERSA</A>=20
+  </DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>To:</B> <A =
+title=3Dggonzalez@redsurcos.com=20
+  href=3D"mailto:ggonzalez@redsurcos.com">Gabriela Gonzalez</A> </DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>Cc:</B> <A =
+title=3Dnchamorro@redsurcos.com=20
+  href=3D"mailto:nchamorro@redsurcos.com">nchamorro@redsurcos.com</A> =
+</DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>Sent:</B> Tuesday, February 28, =
+2017 10:39=20
+  PM</DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>Subject:</B> Re: La Turquina</DIV>
+  <DIV><BR></DIV>
+  <DIV=20
+  style=3D"WORD-WRAP: break-word; -webkit-nbsp-mode: space; =
+-webkit-line-break: after-white-space"=20
+  dir=3Dauto>Gabriela que tal!!!
+  <DIV><BR></DIV>
+  <DIV>Te confirmo el fungicida ACENTO, son 250 litros. Lo ideal seria =
+si me lo=20
+  pueden llevar al campo lo antes posible ya q el encargado choco la=20
+  camioneta.</DIV>
+  <DIV><BR></DIV>
+  <DIV>Por otro lado te consulto por productos para la ISOCA, CHINCHE y =
+si tenes=20
+  algun DUAL con los dos juntos mejor, por favor pasame precios de todo =
+mas=20
+  disponibilidad y si lo pueden llevar al campo junto al =
+fungicida.</DIV>
+  <DIV><BR></DIV>
+  <DIV>Saludos.</DIV>
+  <DIV><BR></DIV>
+  <DIV><BR></DIV>
+  <DIV><BR></DIV>
+  <DIV>Juampi.</DIV>
+  <DIV><BR></DIV>
+  <DIV><BR>
+  <DIV>
+  <BLOCKQUOTE type=3D"cite">
+    <DIV>El 17 feb. 2017, a las 16:34, Gabriela Gonzalez &lt;<A=20
+    =
+href=3D"mailto:ggonzalez@redsurcos.com">ggonzalez@redsurcos.com</A>&gt;=20
+    escribi=C3=B3:</DIV><BR class=3DApple-interchange-newline>
+    <DIV>
+    <DIV=20
+    style=3D"TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); =
+FONT-STYLE: normal; TEXT-INDENT: 0px; FONT-FAMILY: Helvetica; =
+WHITE-SPACE: normal; LETTER-SPACING: normal; FONT-SIZE: 12px; =
+FONT-WEIGHT: normal; WORD-SPACING: 0px; font-variant-caps: normal; =
+-webkit-text-stroke-width: 0px"><FONT=20
+    size=3D2 face=3DArial>Hola Juampi. Te paso los precios de los =
+fungicidas y las=20
+    dosis en el adjunto.</FONT></DIV>
+    <DIV=20
+    style=3D"TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); =
+FONT-STYLE: normal; TEXT-INDENT: 0px; FONT-FAMILY: Helvetica; =
+WHITE-SPACE: normal; LETTER-SPACING: normal; FONT-SIZE: 12px; =
+FONT-WEIGHT: normal; WORD-SPACING: 0px; font-variant-caps: normal; =
+-webkit-text-stroke-width: 0px"><FONT=20
+    size=3D2 face=3DArial></FONT>&nbsp;</DIV>
+    <DIV=20
+    style=3D"TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); =
+FONT-STYLE: normal; TEXT-INDENT: 0px; FONT-FAMILY: Helvetica; =
+WHITE-SPACE: normal; LETTER-SPACING: normal; FONT-SIZE: 12px; =
+FONT-WEIGHT: normal; WORD-SPACING: 0px; font-variant-caps: normal; =
+-webkit-text-stroke-width: 0px"><FONT=20
+    size=3D2 face=3DArial>
+    <DIV style=3D"FONT-SIZE: 12px"><SPAN=20
+    =
+class=3Dgmail-m_147646822573402139gmail-m_300509458420323370gmail-m_81773=
+68712078828447gmail-il>-=20
+    Pre</SPAN><SPAN style=3D"FONT-SIZE: 12px"=20
+    =
+class=3Dgmail-m_147646822573402139gmail-m_300509458420323370gmail-m_81773=
+68712078828447gmail-il>cio</SPAN><SPAN=20
+    style=3D"FONT-SIZE: 12px">&nbsp;de&nbsp;</SPAN><SPAN =
+style=3D"FONT-SIZE: 12px"=20
+    =
+class=3Dgmail-m_147646822573402139gmail-m_300509458420323370gmail-m_81773=
+68712078828447gmail-il>Lista&nbsp;</SPAN><SPAN=20
+    style=3D"FONT-SIZE: 12px">v=C3=A1lido para</SPAN><SPAN=20
+    style=3D"FONT-SIZE: 12px">&nbsp;cheques hasta 90 d=C3=ADas, tarjeta =
+hasta 90 y=20
+    AGRONACION, MACRO, BAPRO.&nbsp;</SPAN></DIV>
+    <DIV style=3D"FONT-SIZE: 12px"><BR></DIV>
+    <DIV style=3D"FONT-SIZE: 12px">- Para operaciones de contado =
+descontar 5% del=20
+    precio de lista</DIV>
+    <DIV style=3D"FONT-SIZE: 12px"><BR></DIV>
+    <DIV style=3D"FONT-SIZE: 12px">-&nbsp;<SPAN=20
+    =
+class=3Dgmail-m_147646822573402139gmail-m_300509458420323370gmail-m_81773=
+68712078828447gmail-il>Precio</SPAN>&nbsp;180=20
+    v=C3=A1lido para cheques y tarjetas a ese plazo.&nbsp;( Galicia, =
+Frances,Cabal,=20
+    Macro, Santander)</DIV>
+    <DIV style=3D"FONT-SIZE: 12px">&nbsp;</DIV>
+    <DIV style=3D"FONT-SIZE: 12px"><FONT size=3D2>Tenemos stock de ambos =
+productos.=20
+    Ambos son fungicidas para enfermedades para fin de ciclo, Acento es =
+el que=20
+    tiene la strobirulina, semejante a Amistar u Opera , mas curativo =
+que=20
+    preventivo.</FONT></DIV>
+    <DIV style=3D"FONT-SIZE: 12px">&nbsp;</DIV>
+    <DIV style=3D"FONT-SIZE: 12px"><FONT size=3D2>Cualquier consulta a=20
+    dispocision</FONT></DIV>
+    <DIV style=3D"FONT-SIZE: 12px"><FONT size=3D2>Saludos</FONT></DIV>
+    <DIV style=3D"FONT-SIZE: 12px"><FONT =
+size=3D2></FONT>&nbsp;</DIV></FONT></DIV>
+    <BLOCKQUOTE=20
+    style=3D"BORDER-LEFT: rgb(0,0,0) 2px solid; TEXT-TRANSFORM: none; =
+BACKGROUND-COLOR: rgb(255,255,255); FONT-STYLE: normal; TEXT-INDENT: =
+0px; PADDING-LEFT: 5px; PADDING-RIGHT: 0px; FONT-FAMILY: Helvetica; =
+WHITE-SPACE: normal; LETTER-SPACING: normal; MARGIN-LEFT: 5px; =
+FONT-SIZE: 12px; FONT-WEIGHT: normal; MARGIN-RIGHT: 0px; WORD-SPACING: =
+0px; font-variant-caps: normal; -webkit-text-stroke-width: 0px"=20
+    type=3D"cite">
+      <DIV=20
+      style=3D"LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: =
+arial; FONT-SIZE: 10pt; FONT-WEIGHT: normal; font-variant-caps: =
+normal">-----=20
+      Original Message -----<SPAN=20
+class=3DApple-converted-space>&nbsp;</SPAN></DIV>
+      <DIV=20
+      style=3D"LINE-HEIGHT: normal; BACKGROUND-COLOR: rgb(228,228,228); =
+FONT-STYLE: normal; FONT-FAMILY: arial; FONT-SIZE: 10pt; FONT-WEIGHT: =
+normal; font-variant-caps: normal"><B>From:</B><SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN><A =
+title=3Djpruata@fapersa.com=20
+      href=3D"mailto:jpruata@fapersa.com">FAPERSA</A></DIV>
+      <DIV=20
+      style=3D"LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: =
+arial; FONT-SIZE: 10pt; FONT-WEIGHT: normal; font-variant-caps: =
+normal"><B>To:</B><SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN><A =
+title=3Dnchamorro@redsurcos.com=20
+      =
+href=3D"mailto:nchamorro@redsurcos.com">nchamorro@redsurcos.com</A><SPAN =
+
+      class=3DApple-converted-space>&nbsp;</SPAN>;<SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN><A =
+title=3Dggonzalez@redsurcos.com=20
+      =
+href=3D"mailto:ggonzalez@redsurcos.com">ggonzalez@redsurcos.com</A></DIV>=
+
+      <DIV=20
+      style=3D"LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: =
+arial; FONT-SIZE: 10pt; FONT-WEIGHT: normal; font-variant-caps: =
+normal"><B>Sent:</B><SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN>Friday, February 17, =
+2017 12:13=20
+      PM</DIV>
+      <DIV=20
+      style=3D"LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: =
+arial; FONT-SIZE: 10pt; FONT-WEIGHT: normal; font-variant-caps: =
+normal"><B>Subject:</B><SPAN=20
+      class=3DApple-converted-space>&nbsp;</SPAN>Fwd: La Turquina</DIV>
+      <DIV><BR></DIV><BR>
+      <DIV><BR>
+      <BLOCKQUOTE type=3D"cite">
+        <DIV>Inicio del mensaje reenviado:</DIV><BR=20
+        class=3DApple-interchange-newline>
+        <DIV style=3D"MARGIN: 0px"><SPAN=20
+        style=3D"FONT-FAMILY: -webkit-system-font, 'Helvetica Neue', =
+Helvetica, sans-serif"><B>De:<SPAN=20
+        class=3DApple-converted-space>&nbsp;</SPAN></B></SPAN><SPAN=20
+        style=3D"FONT-FAMILY: -webkit-system-font, 'Helvetica Neue', =
+Helvetica, sans-serif">FAPERSA=20
+        &lt;<A=20
+        =
+href=3D"mailto:jpruata@fapersa.com">jpruata@fapersa.com</A>&gt;<BR></SPAN=
+></DIV>
+        <DIV style=3D"MARGIN: 0px"><SPAN=20
+        style=3D"FONT-FAMILY: -webkit-system-font, 'Helvetica Neue', =
+Helvetica, sans-serif"><B>Asunto:<SPAN=20
+        class=3DApple-converted-space>&nbsp;</SPAN></B></SPAN><SPAN=20
+        style=3D"FONT-FAMILY: -webkit-system-font, 'Helvetica Neue', =
+Helvetica, sans-serif"><B>La=20
+        Turquina</B><BR></SPAN></DIV>
+        <DIV style=3D"MARGIN: 0px"><SPAN=20
+        style=3D"FONT-FAMILY: -webkit-system-font, 'Helvetica Neue', =
+Helvetica, sans-serif"><B>Fecha:<SPAN=20
+        class=3DApple-converted-space>&nbsp;</SPAN></B></SPAN><SPAN=20
+        style=3D"FONT-FAMILY: -webkit-system-font, 'Helvetica Neue', =
+Helvetica, sans-serif">17=20
+        de febrero de 2017, 11:53:24 GMT-3<BR></SPAN></DIV>
+        <DIV style=3D"MARGIN: 0px"><SPAN=20
+        style=3D"FONT-FAMILY: -webkit-system-font, 'Helvetica Neue', =
+Helvetica, sans-serif"><B>Para:<SPAN=20
+        class=3DApple-converted-space>&nbsp;</SPAN></B></SPAN><SPAN=20
+        style=3D"FONT-FAMILY: -webkit-system-font, 'Helvetica Neue', =
+Helvetica, sans-serif">Rodrigo=20
+        Ferrero &lt;<A=20
+        =
+href=3D"mailto:rferrero@redsurcos.com">rferrero@redsurcos.com</A>&gt;<BR>=
+</SPAN></DIV><BR>
+        <DIV>
+        <DIV>Rodrigo como andas<BR><BR>Te consulto por productos para=20
+        enfermedades de fin de ciclo para la soja.<BR><BR>Pasame lo que =
+tenes=20
+        con especificaciones precio y forma de=20
+        =
+pagos.<BR><BR><BR>Abrazos.<BR></DIV></DIV></BLOCKQUOTE></DIV><BR></BLOCKQ=
+UOTE><SPAN=20
+    =
+id=3Dcid:061B43A6-FB98-4236-85BA-FC9C9B788A8C>&lt;FungicidasLaturquina1.x=
+lsx&gt;</SPAN></DIV></BLOCKQUOTE></DIV><BR></DIV></DIV></BLOCKQUOTE></BOD=
+Y></HTML>
+
+------=_NextPart_000_001B_01D29283.578C9DD0--
+

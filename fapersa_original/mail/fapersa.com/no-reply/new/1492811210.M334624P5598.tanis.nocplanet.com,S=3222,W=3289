@@ -1,0 +1,67 @@
+Return-Path: <>
+Delivered-To: no-reply@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id 8TaiE8p9+ljeFQAATLP0zA
+	for <no-reply@fapersa.com>; Fri, 21 Apr 2017 18:46:50 -0300
+Return-path: <>
+Envelope-to: no-reply@fapersa.com
+Delivery-date: Fri, 21 Apr 2017 18:46:50 -0300
+Received: from mailnull by tanis.nocplanet.com with local (Exim 4.89)
+	id 1d1gO9-0002CV-VE
+	for no-reply@fapersa.com; Fri, 21 Apr 2017 18:46:50 -0300
+X-Failed-Recipients: wendler@arnet.com.ar
+Auto-Submitted: auto-replied
+From: Mail Delivery System <Mailer-Daemon@tanis.nocplanet.com>
+To: no-reply@fapersa.com
+Content-Type: multipart/report; report-type=delivery-status; boundary=1492811209-eximdsn-2124005675
+MIME-Version: 1.0
+Subject: Mail delivery failed: returning message to sender
+Message-Id: <E1d1gO9-0002CV-VE@tanis.nocplanet.com>
+Date: Fri, 21 Apr 2017 18:46:49 -0300
+
+--1492811209-eximdsn-2124005675
+Content-type: text/plain; charset=us-ascii
+
+This message was created automatically by mail delivery software.
+
+A message that you sent could not be delivered to one or more of its
+recipients. This is a permanent error. The following address(es) failed:
+
+  wendler@arnet.com.ar
+    host mx-02.arnet.com.ar [200.45.191.214]
+    SMTP error from remote mail server after RCPT TO:<wendler@arnet.com.ar>:
+    550 5.1.1 <wendler@arnet.com.ar>: Recipient address rejected:
+    User unknown in relay recipient table
+
+--1492811209-eximdsn-2124005675
+Content-type: message/delivery-status
+
+Reporting-MTA: dns; tanis.nocplanet.com
+
+Action: failed
+Final-Recipient: rfc822;wendler@arnet.com.ar
+Status: 5.0.0
+Remote-MTA: dns; mx-02.arnet.com.ar
+Diagnostic-Code: smtp; 550 5.1.1 <wendler@arnet.com.ar>: Recipient address rejected: User unknown in relay recipient table
+
+--1492811209-eximdsn-2124005675
+Content-type: message/rfc822
+
+Return-path: <no-reply@fapersa.com>
+Received: from mx1.fapersa.com ([181.14.247.181]:64780 helo=equis.fapersa.int)
+	by tanis.nocplanet.com with esmtpa (Exim 4.89)
+	(envelope-from <no-reply@fapersa.com>)
+	id 1d1fDp-0002h5-Ax; Fri, 21 Apr 2017 17:32:05 -0300
+From: Equis <no-reply@fapersa.com>
+To: MARCELO WENDLER <wendlerrepuestos@hotmail.com>, 
+	MARCELO WENDLER <marcelo@aureliowendler.com.ar>, 
+	WENDLER AURELIO Y OTROS SH <wendler@arnet.com.ar>
+Message-ID: <668754554.22.1492806508173.JavaMail.cmg@equis>
+Subject: Fapersa ICSA - Bonificacion por pago Semana y 3 dias
+MIME-Version: 1.0
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+<p>Estimado cliente, a continuaci&#243;n se detallan las facturas generadas en el transcurso de esta semana, recuerde que cancelando las mismas antes del mi&#233;rcoles pr&#243;ximo 26/04/2017 a trav&#233;s de dep&#243;sito bancario en las ctas. oportunamente informadas, se aplicar&#225; una bonificaci&#243;n del 5%.</p><p>Cliente: WENDLER AURELIO Y OTROS SH</p><p><br>Factura: 0013-00010203<br>Fecha: 21/04/2017<br>Importe:         3.976,67<br>Bonificaci&#243;n 5%:           198,83<br>Neto a Depositar::         3.777,84<br></p><p>Recuerde enviar el comprobante de pago a cobranzas@fapersa.com para hacer efectiva la bonificacion en su Cuenta Corriente.</p><p>Saludos Cordiales</p>
+
+--1492811209-eximdsn-2124005675--

@@ -1,0 +1,122 @@
+Return-Path: <>
+Delivered-To: no-reply@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id ke/uE0XhJVmiVgAATLP0zA
+	for <no-reply@fapersa.com>; Wed, 24 May 2017 16:38:45 -0300
+Return-path: <>
+Envelope-to: no-reply@fapersa.com
+Delivery-date: Wed, 24 May 2017 16:38:45 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:47409 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	id 1dDc7I-0007Xc-Id
+	for no-reply@fapersa.com; Wed, 24 May 2017 16:38:45 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id BF8A47F224
+	for <no-reply@fapersa.com>; Wed, 24 May 2017 16:38:44 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id PlbBJuaNSQaZ for <no-reply@fapersa.com>;
+	Wed, 24 May 2017 16:38:44 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 482407F232; Wed, 24 May 2017 16:38:44 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id EA1597F224
+	for <no-reply@fapersa.com>; Wed, 24 May 2017 16:38:42 -0300 (ART)
+Received-SPF: none (mail.gigared.com: No applicable sender policy available) receiver=mx1.fapersa.com; identity=helo; helo=mail.gigared.com; client-ip=190.183.195.10
+Received: from mail.gigared.com (mail.gigared.com [190.183.195.10])
+	by fw.fapersa.com (Postfix) with ESMTPS id E6D815FE81
+	for <no-reply@fapersa.com>; Wed, 24 May 2017 16:38:41 -0300 (ART)
+Received: by mail.gigared.com (Postfix)
+	id E2E552C434EE; Wed, 24 May 2017 16:38:37 -0300 (ART)
+Date: Wed, 24 May 2017 16:38:37 -0300 (ART)
+From: MAILER-DAEMON@mail.gigared.com (Mail Delivery System)
+Subject: Undelivered Mail Returned to Sender
+To: no-reply@fapersa.com
+Auto-Submitted: auto-replied
+MIME-Version: 1.0
+Content-Type: multipart/report; report-type=delivery-status;
+	boundary="354F92C4341B.1495654717/mail.gigared.com"
+Message-Id: <20170524193837.E2E552C434EE@mail.gigared.com>
+
+This is a MIME-encapsulated message.
+
+--354F92C4341B.1495654717/mail.gigared.com
+Content-Description: Notification
+Content-Type: text/plain; charset=us-ascii
+
+This is the mail system at host mail.gigared.com.
+
+I'm sorry to have to inform you that your message could not
+be delivered to one or more recipients. It's attached below.
+
+For further assistance, please send mail to postmaster.
+
+If you do so, please include this problem report. You can
+delete your own text from the attached returned message.
+
+                   The mail system
+
+<rodriguezmotor@gigared.com>: Mail quota exceeded
+
+--354F92C4341B.1495654717/mail.gigared.com
+Content-Description: Delivery report
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; mail.gigared.com
+X-Postfix-Queue-ID: 354F92C4341B
+X-Postfix-Sender: rfc822; no-reply@fapersa.com
+Arrival-Date: Wed, 24 May 2017 16:38:35 -0300 (ART)
+
+Final-Recipient: rfc822; rodriguezmotor@gigared.com
+Original-Recipient: rfc822;rodriguezmotor@gigared.com
+Action: failed
+Status: 5.7.1
+Diagnostic-Code: x-unix; Mail quota exceeded
+
+--354F92C4341B.1495654717/mail.gigared.com
+Content-Description: Undelivered Message Headers
+Content-Type: text/rfc822-headers
+
+Return-Path: <no-reply@fapersa.com>
+X-No-Auth: unauthenticated sender
+X-No-Relay: not in my network
+Received: from tanis.nocplanet.com (tanis.nocplanet.com [108.170.37.10])
+	by mail.gigared.com (Postfix) with ESMTPS id 354F92C4341B
+	for <rodriguezmotor@gigared.com>; Wed, 24 May 2017 16:38:35 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=fapersa.com
+	; s=default; h=Content-Type:MIME-Version:Subject:Message-ID:To:From:Sender:
+	Reply-To:Date:Cc:Content-Transfer-Encoding:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+	List-Post:List-Owner:List-Archive;
+	bh=4/eYbPhDfUwdnJf31OB+ZVLi4ytxztGdGy8sFwnpLUU=; b=Yq6Vfz2Q3pq8YSSBZPvETdHiT3
+	T8R2gp+0Bla90Imhg0GH61mLU1y9uNsnrLNqsc3r9f52JYzrPOBBHwEdIQwWhyWj3/SdBgfFrtseY
+	FW2ldQ98X0dxGW751HhonwcOB/foa8wWwpAD+X6pCnAVCight78yakWUMN6rOLHo9sATY79Lgl1yt
+	UeqomVhwuNgsdxHrIvJHwiWW3RkKt5YHitzv9EIR2/LQ3r0V2dcGnhFQZMASY/ALXbJ6W3Epv3R7V
+	W+xyH0d2rgKUsEYlRbmqJmlyFaeO1N+sOkpuSV4IGXIM+3thtd5oS+07+adTlY43lDXz0FbTH0C0S
+	W2GekOCg==;
+Received: from mx1.fapersa.com ([181.14.247.181]:57952 helo=equis.fapersa.int)
+	by tanis.nocplanet.com with esmtpa (Exim 4.89)
+	(envelope-from <no-reply@fapersa.com>)
+	id 1dDc71-0007Sr-Vl
+	for rodriguezmotor@gigared.com; Wed, 24 May 2017 16:38:34 -0300
+From: =?Cp1252?Q?Daniel_Ram=EDrez?= <no-reply@fapersa.com>
+To: RODRIGUEZ JAVIER <rodriguezmotor@gigared.com>
+Message-ID: <2077739477.61.1495654709144.JavaMail.cmg@equis>
+Subject: Fapersa ICSA - Envio de comprobantes electronicos
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_60_988955649.1495654708488"
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - tanis.nocplanet.com
+X-AntiAbuse: Original Domain - gigared.com
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - fapersa.com
+X-Get-Message-Sender-Via: tanis.nocplanet.com: authenticated_id: no-reply@fapersa.com
+X-Authenticated-Sender: tanis.nocplanet.com: no-reply@fapersa.com
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+
+--354F92C4341B.1495654717/mail.gigared.com--

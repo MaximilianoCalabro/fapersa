@@ -1,0 +1,894 @@
+Return-Path: <wcehngn+sncrefn.pbz_1613_10710_1968428_1519213_Pubv7@oo155.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id 2TJEFQeB+lj6NQAATLP0zA
+	for <jpruata@fapersa.com>; Fri, 21 Apr 2017 19:00:39 -0300
+Return-path: <wcehngn+sncrefn.pbz_1613_10710_1968428_1519213_Pubv7@oo155.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Fri, 21 Apr 2017 19:00:39 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:36933 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <wcehngn+sncrefn.pbz_1613_10710_1968428_1519213_Pubv7@oo155.com>)
+	id 1d1gbW-0003dz-Eb
+	for jpruata@fapersa.com; Fri, 21 Apr 2017 19:00:39 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id EEA697F21F
+	for <jpruata@fapersa.com>; Fri, 21 Apr 2017 19:00:37 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 7SjXV4y8JxdZ for <jpruata@fapersa.com>;
+	Fri, 21 Apr 2017 19:00:36 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id A38CA7F233; Fri, 21 Apr 2017 19:00:36 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 4D4627F21F
+	for <jpruata@fapersa.com>; Fri, 21 Apr 2017 19:00:35 -0300 (ART)
+Received-SPF: pass (oo155.com: 69.63.151.137 is authorized to use 'wcehngn+sncrefn.pbz_1613_10710_1968428_1519213_Pubv7@oo155.com' in 'mfrom' identity (mechanism 'ip4:69.63.151.0/24' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="wcehngn+sncrefn.pbz_1613_10710_1968428_1519213_Pubv7@oo155.com"; helo=mail8.edeliv1.com; client-ip=69.63.151.137
+Received: from mail8.edeliv1.com (mail8.edeliv1.com [69.63.151.137])
+	by fw.fapersa.com (Postfix) with ESMTP id C326F601D9
+	for <jpruata@fapersa.com>; Fri, 21 Apr 2017 19:00:30 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=em; d=u2.com;
+ h=Date:From:Reply-To:To:Subject:MIME-Version:List-Unsubscribe:Content-Type:Content-transfer-encoding:Message-ID; i=U2@U2.com;
+ bh=61brJdOTSy7pcnl6HDnzjLuhnZs=;
+ b=rEF5BqlXq/du7gimT5b/x3sAxTTWObROew9wSe2V2jaaPU29nqtF6EnG2RkYwIJIk9j5ICEQ3Qa1
+   oI0JlD1Bnark5bIyLveO5VCeAJx93zXWgltxVDjqmXzj7hqz6S8zewmjzBtrdTpvn5KL8euiQYjl
+   nryt0wI9eFpBSOJhS2M=
+Received: from EWHServer962 (172.22.151.29) by mail8.edeliv1.com id hva0fm151q46 for <jpruata@fapersa.com>; Fri, 21 Apr 2017 18:00:20 -0400 (envelope-from <wcehngn+sncrefn.pbz_1613_10710_1968428_1519213_Pubv7@oo155.com>)
+Date: Fri, 21 Apr 2017 18:00:17 -0400
+From: "=?utf-8?B?VTIuY29t?=" <U2@U2.com>
+Reply-To: "=?utf-8?B?VTIuY29t?=" <U2@U2.com>
+Received: from app7.publicaster.com (HELO [69.63.132.243]) by app7.publicaster.com (69.63.132.243) id 00000; Fri, 21 Apr 2017 21:26:40 GMT
+To: "jpruata@fapersa.com" <jpruata@fapersa.com>
+Subject: =?utf-8?B?UmVkIEhpbGwgTWluaW5nIFRvd24gb24gUmVjb3JkIFN0b3JlIERheQ==?=
+MIME-Version: 1.0
+X-BPS1: Pubv7
+X-CampaignID: BSF161310710
+X-BPS2: 1613_10710_1968428_1519213
+X-BPS3: wcehngn@sncrefn.pbz
+Feedback-ID: 1613:10710:1968428:WCPubEdition
+List-Unsubscribe: <mailto:  1613_10710_1968428@oo155.com?subject=Unsubscribe>, <https://ct1.publicaster.com/GlobalOptOut.aspx?aid=1613&Email=jpruata@fapersa.com&sysid=1&ap=1>
+Content-Type: multipart/alternative; boundary="--=Content_Boundary"
+Content-transfer-encoding: 7bit
+Message-ID: <0.0.7.536.1D2BAEAAB44EBA0.8F677D@mail8.edeliv1.com>
+
+
+This is a multi-part message in MIME format.
+
+----=Content_Boundary
+Content-Type: text/plain; charset="utf-8"
+Content-transfer-encoding: 7bit
+
+https://ct1.publicaster.com/ViewInBrowser.aspx?pubids=6168%7c65265%7c6413973%7c6064768&digest=uzpsJeoPjsLnZzueXMXEhg&sysid=1  View In Browser 
+This email is sent from
+Live Nation Entertainment
+450 Mission Street, Ste. 300
+SFCA 94105=============================================================================
+You are receiving this email because you opted into the U2.com email list. If you would like to stop receiving emails from us, please click here to unsubscribe:
+https://ct1.publicaster.com/OptOut.aspx?pubids=6168%7c65265%7c6413973%7c6064768&digest=uzpsJeoPjsLnZzueXMXEhg&sysid=1  
+=============================================================================
+----=Content_Boundary
+Content-Type: text/html; charset="utf-8"
+Content-transfer-encoding: 7bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html hola_ext_inject="disabled">
+    <head>
+    </head>
+    <body data-gramm_id="849f0628-80a1-aa17-df18-673963a14322" data-gramm="true"
+ bgcolor="#cccccc"><style>.dvPreheader{display: none !important;
+ mso-hide:all;}</style><div class="dvPreheader" style="display: none !important;
+ mso-hide:all;">Record Store Day, tomorrow, Saturday, April 22nd. Get your limited
+ edition vinyl release of Steve Lillywhite's 2017 mix of Red Hill Mining
+ Town.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </div>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--[if mso]>
+<style>
+    td {
+      font-family: Arial, sans-serif !important;
+    }
+</style>
+<![endif]-->
+        <style type="text/css">
+            body {
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100% !important;
+            -ms-text-size-adjust: 100% !important;
+            -webkit-font-smoothing: antialiased !important;
+            }
+            table {
+            border-collapse: collapse;
+            mso-table-lspace: 0px;
+            mso-table-rspace: 0px;
+            }
+            td {
+            border-collapse: collapse;
+            mso-line-height-rule: exactly;
+            }
+            table th {
+            margin: 0 !important;
+            padding: 0 !important;
+            vertical-align: top;
+            font-weight: normal;
+            }
+            a {
+            color: #44749d
+            }
+            img {
+            border: none
+            }
+            .ReadMsgBody {
+            width: 100%;
+            }
+            .ExternalClass {
+            width: 100%;
+            }
+            .appleLinksGray a {
+            color: #c1c1c1;
+            text-decoration: none
+            }
+            .ExternalClass * {
+            line-height: 100%
+            }
+            sup {
+            font-size: 8px;
+            line-height: 0;
+            vertical-align: 3px
+            }
+            @media only screen and (max-width: 600px) {
+            /************************************ MAIN
+ *************************************/
+            *[class].remove {
+            display: none !important;
+            width: 0 !important;
+            height: 0 !important;
+            }
+            *[class].stack {
+            display: block !important;
+            }
+            *[class].stack-header {
+            display: table-header-group !important;
+            }
+            *[class].stack-footer {
+            display: table-footer-group !important;
+            }
+            /************************************ ALIGNERS
+ *************************************/
+            *[class].center-align {
+            text-align: center !important;
+            }
+            /************************************ WIDTH RESIZERS
+ *************************************/
+            *[class].min-300 {
+            min-width: 300px !important;
+            }
+            *[class].w-resize100 {
+            width: 100% !important;
+            }
+            *[class].w-resize90 {
+            width: 90% !important;
+            }
+            *[class].w-resize180 {
+            width: 180px !important;
+            }
+            /************************************ HEIGHT RESIZERS
+ *************************************/
+            *[class].h-resize10 {
+            height: 10px !important;
+            }
+            *[class].h-resize15 {
+            height: 15px !important;
+            }
+            *[class].h-resize20 {
+            height: 20px !important;
+            }
+            *[class].h-resize30 {
+            height: 30px !important;
+            }
+            *[class].h-resize40 {
+            height: 40px !important;
+            }
+            /************************************ IMAGE RESIZERS
+ *************************************/
+            *[class].resize100 img {
+            width: 100% !important;
+            height: auto !important;
+            }
+            /************************************ SPACING
+ *************************************/
+            *[class].margin40 {
+            margin: 40px 0 0 0 !important;
+            }
+            *[class].pad-top-20 {
+            padding: 20px 0 0 0 !important;
+            }
+            *[class].margin20 img {
+            margin: 0 0 20px 0 !important;
+            }
+            /************************************ SPACING
+ *************************************/
+            *[class].text18 {
+            font-size: 18px !important;
+            line-height: 21px !important;
+            }
+            *[class].text18 a {
+            text-decoration: none !important;
+            }
+            *[class].bold {
+            font-weight: bold !important;
+            color: #428bca !important;
+            }
+            /************************************ RANDOM
+ *************************************/
+            *[class].footer-nav1 {
+            background-color: #ffffff !important;
+            display: block !important;
+            margin: 0 auto 10px auto !important;
+            -webkit-border-radius: 5px !important;
+            -moz-border-radius: 5px !important;
+            border: 1px solid #bfbfbf !important;
+            border-radius: 5px !important;
+            font-family: Arial, sans-serif, Helvetica !important;
+            font-size: 16px !important;
+            text-align: center !important;
+            color: #bfbfbf !important;
+            width: 100% !important;
+            padding: 15px 0 !important;
+            }
+            *[class].footer-nav1 a {
+            display: inline-block !important;
+            text-decoration: none !important;
+            color: #bfbfbf !important;
+            }
+            *[class].footer-text {
+            display: block !important;
+            margin: 0 0 20px 0 !important;
+            }
+            *[class].footer-links a {
+            display: block !important;
+            margin: 0 0 20px 0 !important;
+            }
+            *[class].cta1 {
+            margin: 0 auto !important;
+            min-width: 230px !important;
+            }
+            *[class].cta1 td {
+            height: 44px !important;
+            padding: 2px !important;
+            font-size: 16px !important;
+            }
+            *[class].cta1 td a {
+            line-height: 44px !important;
+            }
+            *[class].cta2 {
+            margin: 0 auto !important;
+            }
+            *[class].social img {
+            width: 42px !important;
+            height: 42px !important;
+            }
+            *[class].ad-image img {
+            width: 300px !important;
+            height: auto !important;
+            }
+            }
+            a:link {
+            color: #FF0000;
+            }
+            a:visited {
+            color: #FF0000;
+            }
+            a:hover {
+            color: #FF0000;
+            }
+            a:active {
+            color: #FF0000;
+            }
+        </style>
+        <!-- font-family: 'Montserrat', Arial, sans-serif; -->
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody>
+                <tr>
+                    <td bgcolor="#FFFFFF" align="center">
+                    <!-- FIXES GMAIL DISPLAY ISSUES -->
+                    <table class="remove" width="640" cellspacing="0"
+ cellpadding="0" border="0" align="center">
+                        <tbody>
+                            <tr>
+                                <td><img
+ src="http://media.whatcounts.com/whatcounts_knickoles/150604_WC-Mod-Template-Editor/spcr.gif"
+ alt="" style="display:block; min-height:1px; max-height:1px; width:640px;
+ min-width:640px;" height="1" width="640"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- FIXES GMAIL DISPLAY ISSUES -->
+                    <!-- PREHEADER -->
+                   
+ <!------------------------------------------------------------------------->
+                   
+ <!------------------------------------------------------------------------->
+                    <div class="PREHEADER">
+                    <table class="w-resize100 min-300" width="640" cellspacing="0"
+ cellpadding="0" border="0">
+                        <tbody>
+                            <tr>
+                                <td bgcolor="#ffffff" align="center">
+                                <table class="remove" width="600" cellspacing="0"
+ cellpadding="0" border="0" align="center">
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2" style="font-size:0;
+ line-height:0" height="8">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family:'Montserrat',
+ Arial, sans-serif; font-weight:400; font-size:12px; color:#b9b9b9" valign="bottom"
+ align="left">
+                                            Record Store Day</td>
+                                            <td style="font-family:'Montserrat',
+ Arial, sans-serif; font-weight:400; font-size:12px; color:#b9b9b9" valign="bottom"
+ align="right">
+                                            <a
+ href="https://ct1.publicaster.com/ViewInBrowser.aspx?pubids=6168%7c65265%7c6413973%7c6064768&digest=uzpsJeoPjsLnZzueXMXEhg&sysid=1" 
+ style="color:#b9b9b9; text-decoration:none">View in browser</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="font-size:0;
+ line-height:0" height="20">&nbsp;</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                   
+ <!------------------------------------------------------------------------->
+                   
+ <!------------------------------------------------------------------------->
+                    <!-- END PREHEADER -->
+                    <!-- HEADER -->
+                   
+ <!------------------------------------------------------------------------->
+                   
+ <!------------------------------------------------------------------------->
+                    <div class="HEADER">
+                    <table class="w-resize100 min-300" width="640" cellspacing="0"
+ cellpadding="0" border="0">
+                        <tbody>
+                            <tr>
+                                <td bgcolor="#ffffff" align="center">
+                                <table class="w-resize90" width="600"
+ cellspacing="0" cellpadding="0" border="0" align="center">
+                                    <tbody>
+                                        <tr>
+                                            <th class="stack w-resize100"
+ width="300">
+                                            <table class="w-resize100" width="300"
+ cellspacing="0" cellpadding="0" border="0" align="center">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="center-align
+ pad-top-20" align="left">
+                                                        <!-- INSERT LOGO HERE (MAX
+ WIDTH 280PX / OPTIMAL HEIGHT 50PX-->
+                                                        <a id="LID73956"
+ href="https://ct1.publicaster.com/ClickThru.aspx?pubids=6168%7c28401%7c6413973%7c6064768&digest=A7RniK8T27URX1md4E%2bTMw&sysid=1"
+ target="_blank"><img
+ src="https://app7.publicaster.com/ImageLibrary/Account1613/images/150804_Modular_Template/u2-logo.png"
+ alt="U2" height="45" width="62" border="0"></a>
+                                                        <!-- INSERT LOGO HERE (MAX
+ WIDth 280PX-->
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="font-size:0;
+ line-height:0" height="10">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center-align"
+ style="font-family:'Montserrat', Arial, sans-serif; font-weight:400;
+ font-size:14px; color:#a3a3a3" align="left">
+                                                        #U2TheJoshuaTree2017</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            </th>
+                                            <th class="stack w-resize100"
+ width="300">
+                                            <table class="w-resize100" width="300"
+ cellspacing="0" cellpadding="0" border="0" align="center">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="h-resize30"
+ style="font-size:0; line-height:0" height="10">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center-align"
+ style="font-family:'Montserrat', Arial, sans-serif; font-weight:400;
+ font-size:15px; color:#4e4e4e" align="right">
+                                                        <a id="LID73957"
+ href="https://ct1.publicaster.com/ClickThru.aspx?pubids=6168%7c28402%7c6413973%7c6064768&digest=e5n2W80ip91LRusDzWvH%2fQ&sysid=1"
+ target="_blank" style="color:#4e4e4e; text-decoration:none">NEWS</a>
+ &nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <a id="LID73958"
+ href="https://ct1.publicaster.com/ClickThru.aspx?pubids=6168%7c28403%7c6413973%7c6064768&digest=XQclHZRXNhwxycfskBQpXw&sysid=1"
+ target="_blank" style="color:#4e4e4e; text-decoration:none">TOUR</a>
+ &nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <a id="LID73959"
+ href="https://ct1.publicaster.com/ClickThru.aspx?pubids=6168%7c28404%7c6413973%7c6064768&digest=sI7WzUvDwKBxOcl7TXUXrQ&sysid=1"
+ target="_blank" style="color:#4e4e4e; text-decoration:none">MUSIC</a>
+ &nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <a id="LID73960"
+ href="https://ct1.publicaster.com/ClickThru.aspx?pubids=6168%7c28415%7c6413973%7c6064768&digest=eznmnRd8ElVDho8jKmFC3Q&sysid=1"
+ target="_blank" style="color:#4e4e4e; text-decoration:none">SHOP</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            </th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="w-resize100" width="600"
+ cellspacing="0" cellpadding="0" border="0" align="center">
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-size:0; line-height:0"
+ height="20">&nbsp;</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                   
+ <!------------------------------------------------------------------------->
+                   
+ <!------------------------------------------------------------------------->
+                    <!-- END HEADER -->
+                    <!-- HERO -->
+                   
+ <!------------------------------------------------------------------------->
+                   
+ <!------------------------------------------------------------------------->
+                    <div class="HERO">
+                    <table class="w-resize100 min-300" width="640" cellspacing="0"
+ cellpadding="0" border="0" align="center">
+                        <tbody>
+                            <tr>
+                                <td class="resize100">
+                                <a id="LID73961"
+ href="https://ct1.publicaster.com/ClickThru.aspx?pubids=6168%7c28416%7c6413973%7c6064768&digest=Ac7nsZdozjlvF0XhFgDdeQ&sysid=1"
+ target="_blank"><img
+ src="http://cdn.u2.com/images/email/2017/email_header_rsd_20april17.jpg" alt=""
+ style="display:block" height="234" width="640"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                   
+ <!------------------------------------------------------------------------->
+                   
+ <!------------------------------------------------------------------------->
+                    <!-- END HERO -->
+                    <!-- MODULE-1 -->
+                   
+ <!------------------------------------------------------------------------->
+                   
+ <!------------------------------------------------------------------------->
+                    <div class="MODULE-1">
+                    <table class="w-resize100" width="640" border="0"
+ cellspacing="0" cellpadding="20" align="center">
+                        <tbody>
+                            <tr>
+                                <td bgcolor="#000000">
+                                <table class="w-resize100" width="600" border="0"
+ cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:0; line-height:0"
+ height="20">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left"
+ style="font-family:'Montserrat',
+                                            Arial, sans-serif; font-weight:400;
+ font-size:16px; line-height:22px;
+                                            color:#ffffff">
+                                            Dear JUAN PABLO,
+                                            <br>
+                                            <br>
+                                            It’s getting close! The <strong>tour
+ kicks off in Vancouver in less than three weeks</strong> and the band are well
+ into rehearsals. It's starting to get a little busy...
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:0; line-height:0"
+ height="20">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center-align" align="left">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                   
+ <!------------------------------------------------------------------------->
+                   
+ <!------------------------------------------------------------------------->
+                    <!-- END MODULE-1 -->
+                    <!-- MODULE-3 -->
+                   
+ <!------------------------------------------------------------------------->
+                   
+ <!------------------------------------------------------------------------->
+                    <div class="MODULE-3">
+                    <table class="w-resize100" width="640" cellspacing="0"
+ cellpadding="20" border="0" align="center">
+                        <tbody>
+                            <tr>
+                                <td bgcolor="#CCCCCC" align="center">
+                                <table class="w-resize100" width="560"
+ cellspacing="0" cellpadding="0" border="0" align="center">
+                                    <tbody>
+                                        <tr>
+                                            <td class="stack w-resize100"
+ width="140" align="center">
+                                            <a id="LID73962"
+ href="https://ct1.publicaster.com/ClickThru.aspx?pubids=6168%7c28417%7c6413973%7c6064768&digest=MEY6MjGk1CiyxgKzVRGR2Q&sysid=1"
+ target="_blank"><img src="http://cdn.u2.com/images/email/2017/RHMT2017_140.jpg"
+ alt="" height="140" width="140" border="0" align="top"></a>
+                                            </td>
+                                            <td class="stack w-resize100
+ h-resize20" style="font-size:0; line-height:0" width="20">&nbsp;</td>
+                                            <td class="stack w-resize100
+ center-align" style="font-family:'Montserrat', Arial, sans-serif; font-weight:400;
+ font-size:14px; line-height:20px; color:#000000" width="400" align="left">
+                                            <span style="font-size:24px">Record
+ Store Day</span>
+                                            <br>
+                                            <br>
+                                            First up, <strong>Record Store Day,
+ tomorrow, Saturday, April 22nd.</strong> Get your <strong>limited edition vinyl
+ release</strong> of Steve Lillywhite's 2017 mix of <strong>Red Hill Mining
+ Town</strong>. You'll need to be quick. <strong>
+                                            <br>
+                                            <br>
+                                            <div>
+                                            <!--[if mso]>
+  <v:rect xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:w="urn:schemas-microsoft-com:office:word"
+ href="http://www.recordstoreday.com/Venues"
+ style="height:40px;v-text-anchor:middle;width:200px;" stroke="f"
+ fillcolor="#A69364">
+    <w:anchorlock/>
+    <center>
+  <![endif]-->
+                                            <a id="LID73963"
+ href="https://ct1.publicaster.com/ClickThru.aspx?pubids=6168%7c28418%7c6413973%7c6064768&digest=BZgvpiFfqFOOHRxzcl8v3w&sysid=1"
+ style="background-color:#A69364;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:14px;font-weight:bold;line-height:40px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;">Participating
+ Stores</a>
+                                            <!--[if mso]>
+    </center>
+  </v:rect>
+<![endif]-->
+                                            </div>
+                                            </strong></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                   
+ <!------------------------------------------------------------------------->
+                   
+ <!------------------------------------------------------------------------->
+                    <!-- END MODULE-3 -->
+                    <!-- MODULE-3 -->
+                   
+ <!------------------------------------------------------------------------->
+                   
+ <!------------------------------------------------------------------------->
+                    <div class="MODULE-3">
+                    <table class="w-resize100" width="640" cellspacing="0"
+ cellpadding="20" border="0" align="center">
+                        <tbody>
+                            <tr>
+                                <td bgcolor="#F2F1F0" align="center">
+                                <table class="w-resize100" width="560"
+ cellspacing="0" cellpadding="0" border="0" align="center">
+                                    <tbody>
+                                        <tr>
+                                            <td class="stack w-resize100"
+ width="140" align="center">
+                                            <a id="LID73964"
+ href="https://ct1.publicaster.com/ClickThru.aspx?pubids=6168%7c28419%7c6413973%7c6064768&digest=E%2b751QZ5U5VS7CrwsULV7g&sysid=1"
+ target="_blank" style="text-align: -webkit-center; background-color:
+ rgb(204, 204, 204);"><img
+ src="http://cdn.u2.com/images/email/2017/140x140-1-13mar17.jpg" alt="" width="140"
+ height="140" border="0" align="top" usemap="#v"></a><a id="LID73965"
+ href="https://ct1.publicaster.com/ClickThru.aspx?pubids=6168%7c28410%7c6413973%7c6064768&digest=vbI4Y8oHmjOxSrZRDU3Jrg&sysid=1"
+ target="_blank"></a>
+                                            </td>
+                                            <td class="stack w-resize100
+ h-resize20" style="font-size:0; line-height:0" width="20">&nbsp;</td>
+                                            <td class="stack w-resize100
+ center-align" style="font-family:'Montserrat', Arial, sans-serif; font-weight:400;
+ font-size:14px; line-height:20px; color:#000000" width="400" align="left">
+                                            <span
+ style="font-size:24px">Pre-order</span>
+                                            <br>
+                                            <br>
+                                            <strong>Pre-ordered </strong>your copy
+ of the 30th anniversary release of <strong>The Joshua Tree</strong>? It arrives on
+ June 2nd. <a id="LID73966"
+ href="https://ct1.publicaster.com/ClickThru.aspx?pubids=6168%7c28411%7c6413973%7c6064768&digest=F%2fp1QZu%2bPyBdrXUgd%2b6jYw&sysid=1"
+ target="_blank">Here's everything you <strong>need to know</strong></a> about
+ what's on what disc.
+                                            <br>
+                                            <br>
+                                            <div>
+                                            <!--[if mso]>
+  <v:rect xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:w="urn:schemas-microsoft-com:office:word"
+ href="http://smarturl.it/U2Store?categoryName=The+Joshua+Tree+30th+Anniversary"
+ style="height:40px;v-text-anchor:middle;width:200px;" stroke="f"
+ fillcolor="#A69364">
+    <w:anchorlock/>
+    <center>
+  <![endif]-->
+                                            <a id="LID73967"
+ href="https://ct1.publicaster.com/ClickThru.aspx?pubids=6168%7c28412%7c6413973%7c6064768&digest=269sE7Z0HHwMp2L3EJJP7w&sysid=1"
+ style="background-color:#A69364;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:14px;font-weight:bold;line-height:40px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;">Pre-Order
+ Here</a>
+                                            <!--[if mso]>
+    </center>
+  </v:rect>
+<![endif]-->
+                                            </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                   
+ <!------------------------------------------------------------------------->
+                   
+ <!------------------------------------------------------------------------->
+                    <!-- END MODULE-3 -->
+                    <!-- MODULE-3 -->
+                   
+ <!------------------------------------------------------------------------->
+                   
+ <!------------------------------------------------------------------------->
+                    <div class="MODULE-3">
+                    <table class="w-resize100" width="640" cellspacing="0"
+ cellpadding="20" border="0" align="center">
+                        <tbody>
+                            <tr>
+                                <td bgcolor="#CCCCCC" align="center">
+                                <table class="w-resize100" width="560"
+ cellspacing="0" cellpadding="0" border="0" align="center">
+                                    <tbody>
+                                        <tr>
+                                            <td class="stack w-resize100"
+ width="140" align="center"><a id="LID73968"
+ href="https://ct1.publicaster.com/ClickThru.aspx?pubids=6168%7c28413%7c6413973%7c6064768&digest=SsIlIvT%2bqniNbnX%2fJxPhMg&sysid=1"
+ target="_blank"><img src="http://cdn.u2.com/images/email/2017/spotifylogo140.jpg"
+ alt="" width="140" height="140" border="0" align="top" usemap="#v"></a>
+                                            </td>
+                                            <td class="stack w-resize100
+ h-resize20" style="font-size:0; line-height:0" width="20">&nbsp;</td>
+                                            <td class="stack w-resize100
+ center-align" style="font-family:'Montserrat', Arial, sans-serif; font-weight:400;
+ font-size:14px; line-height:20px; color:#000000" width="400" align="left">
+                                            <span
+ style="font-size:24px">Pre-save</span>
+                                            <br>
+                                            <br>
+                                            <strong>Got Spotify</strong>? <a
+ id="LID73969" href="https://ct1.publicaster.com/ClickThru.aspx?pubids=6168%7c28414%7c6413973%7c6064768&digest=5QU9LHS05bIRl1x1sDlPLQ&sysid=1"
+ target="_blank">Pre-save</a> The Joshua Tree 30th Anniversary edition now & it’ll
+ automatically be added to your library on release day, June 2. And any tracks
+ released in advance&#8230; you’ll get in advance. <strong>Like that new Steve
+ Lillywhite mix of Red Hill Mining Town</strong>.&nbsp; <br>
+                                            <br>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                   
+ <!------------------------------------------------------------------------->
+                   
+ <!------------------------------------------------------------------------->
+                    <!-- END MODULE-3 -->
+                    <!-- FOOTER-1 -->
+                   
+ <!------------------------------------------------------------------------->
+                   
+ <!------------------------------------------------------------------------->
+                    <div class="FOOTER-1"></div>
+                   
+ <!------------------------------------------------------------------------->
+                   
+ <!------------------------------------------------------------------------->
+                    <!-- END FOOTER-1 -->
+                    <!-- FOOTER-2 -->
+                   
+ <!------------------------------------------------------------------------->
+                   
+ <!------------------------------------------------------------------------->
+                    <div class="FOOTER-2">
+                    <table class="w-resize100" width="640" cellspacing="0"
+ cellpadding="0" border="0" align="center">
+                        <tbody>
+                            <tr>
+                                <td style="font-size:0; line-height:0" height="25"
+ bgcolor="#000000">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#000000" align="center">
+                                <table class="w-resize180" width="400"
+ cellspacing="0" cellpadding="0" border="0" align="center">
+                                    <tbody>
+                                        <tr>
+                                            <td class="stack w-resize180"
+ width="180">
+                                            <table width="100%" cellspacing="0"
+ cellpadding="0" border="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="social"
+ align="left">
+                                                        <a id="LID73970"
+ href="https://ct1.publicaster.com/ClickThru.aspx?pubids=6168%7c28425%7c6413973%7c6064768&digest=JFfY9cVYBXJNYWH88L7djw&sysid=1"
+ target="_blank"><img
+ src="http://cdn.u2.com/images/email/2015/footer/facebook_32x32.png" alt="facebook"
+ height="32" width="32" border="0"></a>
+                                                        </td>
+                                                        <td class="social"
+ align="center">
+                                                        <a id="LID73971"
+ href="https://ct1.publicaster.com/ClickThru.aspx?pubids=6168%7c28426%7c6413973%7c6064768&digest=ayPuq99XBf0OjrqlpKgIaw&sysid=1"
+ target="_blank"><img
+ src="http://cdn.u2.com/images/email/2015/footer/tumblr_32x32.png" alt="twitter"
+ height="32" width="32" border="0"></a>
+                                                        </td>
+                                                        <td class="social"
+ align="right">
+                                                        <a id="LID73972"
+ href="https://ct1.publicaster.com/ClickThru.aspx?pubids=6168%7c28427%7c6413973%7c6064768&digest=Rjl1PamaVWMZdjayIT441g&sysid=1"
+ target="_blank"><img
+ src="http://cdn.u2.com/images/email/2015/footer/instagram_32x32.png"
+ alt="instagram" height="32" width="32" border="0"></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            </td>
+                                            <td class="stack w-resize180
+ h-resize10" style="font-size:0; line-height:0" width="40">&nbsp;</td>
+                                            <td class="stack w-resize180"
+ width="180">
+                                            <table width="100%" cellspacing="0"
+ cellpadding="0" border="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="social"
+ align="left">
+                                                        <a id="LID73973"
+ href="https://ct1.publicaster.com/ClickThru.aspx?pubids=6168%7c28428%7c6413973%7c6064768&digest=v99n18sUMurBlfrEX8HQTQ&sysid=1"
+ target="_blank"><img
+ src="http://cdn.u2.com/images/email/2015/footer/youtube_32x32.png" alt="youtube"
+ height="32" width="32" border="0"></a>
+                                                        </td>
+                                                        <td class="social"
+ align="center">
+                                                        <a id="LID73974"
+ href="https://ct1.publicaster.com/ClickThru.aspx?pubids=6168%7c28429%7c6413973%7c6064768&digest=3de514%2ft3Mv5DG3dfyaadA&sysid=1"
+ target="_blank"><img
+ src="http://cdn.u2.com/images/email/2015/footer/google_32x32.png" alt="google+"
+ height="32" width="32" border="0"></a>
+                                                        </td>
+                                                        <td class="social"
+ align="right">
+                                                        <a id="LID73975"
+ href="https://ct1.publicaster.com/ClickThru.aspx?pubids=6168%7c28420%7c6413973%7c6064768&digest=2CyfzkHDim2ngsxgOUc4lA&sysid=1"
+ target="_blank"><img
+ src="http://cdn.u2.com/images/email/2015/footer/tumblr_32x32.png" alt="tumbler"
+ height="32" width="32" border="0"></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-size:0; line-height:0" height="25"
+ bgcolor="#000000">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="remove" style="font-size:0;
+ line-height:0" height="25" bgcolor="#000000">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family:'Montserrat', Arial,
+ sans-serif; font-weight:400; font-size:14px; color:#c1c1c1; line-height:20px"
+ bgcolor="#000000" align="center">
+                                <span class="appleLinksGray">
+                                This email is sent from<br>Live Nation
+ Entertainment<br>450 Mission Street, Ste. 300<br>SFCA 94105<br>
+                                </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-size:0; line-height:0" height="40"
+ bgcolor="#000000">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                   
+ <!------------------------------------------------------------------------->
+                   
+ <!------------------------------------------------------------------------->
+                    <!-- FOOTER-2 -->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <img src="https://ct1.publicaster.com/Open.aspx?pubids=6168%7c65265%7c6413973%7c6064768&digest=uzpsJeoPjsLnZzueXMXEhg&sysid=1" height="1"
+ style="display:none;" width="1"/></body>
+</html><br>
+<div style="text-align: center; font-size: 12px; color: black; ">
+You are receiving this email because you opted into the U2.com email list.<br>
+If you would like to stop receiving emails from us, please <a
+ href="https://ct1.publicaster.com/OptOut.aspx?pubids=6168%7c65265%7c6413973%7c6064768&digest=uzpsJeoPjsLnZzueXMXEhg&sysid=1" ><font
+ color="red">click here</font></a> to unsubscribe.</div><br>
+
+----=Content_Boundary--
+

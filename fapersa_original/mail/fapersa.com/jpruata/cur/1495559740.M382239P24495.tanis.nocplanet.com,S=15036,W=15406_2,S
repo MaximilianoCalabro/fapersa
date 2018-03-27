@@ -1,0 +1,370 @@
+Return-Path: <0100015c364e71ca-815a83ce-f01c-4c88-8ce1-ceadea3c4745-000000@amazonses.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id 8Uy2FjxuJFmvXwAATLP0zA
+	for <jpruata@fapersa.com>; Tue, 23 May 2017 14:15:40 -0300
+Return-path: <0100015c364e71ca-815a83ce-f01c-4c88-8ce1-ceadea3c4745-000000@amazonses.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Tue, 23 May 2017 14:15:40 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:60617 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <0100015c364e71ca-815a83ce-f01c-4c88-8ce1-ceadea3c4745-000000@amazonses.com>)
+	id 1dDDPH-0006sE-Li
+	for jpruata@fapersa.com; Tue, 23 May 2017 14:15:40 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id D0E957F21B
+	for <jpruata@fapersa.com>; Tue, 23 May 2017 14:15:39 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 4BbJz3kqscyK for <jpruata@fapersa.com>;
+	Tue, 23 May 2017 14:15:38 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 433BF7F234; Tue, 23 May 2017 14:15:38 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id C9E0B7F21B
+	for <jpruata@fapersa.com>; Tue, 23 May 2017 14:15:34 -0300 (ART)
+Received-SPF: pass (amazonses.com: 54.240.11.118 is authorized to use '0100015c364e71ca-815a83ce-f01c-4c88-8ce1-ceadea3c4745-000000@amazonses.com' in 'mfrom' identity (mechanism 'ip4:54.240.0.0/18' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="0100015c364e71ca-815a83ce-f01c-4c88-8ce1-ceadea3c4745-000000@amazonses.com"; helo=a11-118.smtp-out.amazonses.com; client-ip=54.240.11.118
+Received: from a11-118.smtp-out.amazonses.com (a11-118.smtp-out.amazonses.com [54.240.11.118])
+	by fw.fapersa.com (Postfix) with ESMTPS id 3005E60040
+	for <jpruata@fapersa.com>; Tue, 23 May 2017 14:15:32 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=2qle3v5abv64ntcufu4jafzyg6m7ziml; d=generic.pmkt16.info;
+	t=1495559729;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Date;
+	bh=aW1cnWqF0WB4S9mVRGXzYW/+VbRpNvxnPbonopcJebo=;
+	b=c54Ku/8w1MUY0UFNy39HiCCPbbAi5W3/jKtFlmAUjzOK3qgGCyGgA2zBtEFSAnP+
+	fv9J6kA8Jc8mZyrlV5aGOqBmJrC0xgQp81lP2ywbrQTA/yEJZgpYJArtnjGaxQaC2m/
+	+dt38wE1fSqR0sCAeh/AxKCEwiaE5zge98hmUxjM=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=224i4yxa5dv7c2xz3womw6peuasteono; d=amazonses.com; t=1495559729;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Date:Feedback-ID;
+	bh=aW1cnWqF0WB4S9mVRGXzYW/+VbRpNvxnPbonopcJebo=;
+	b=m5XNNeacC0aogBhGLFO9FC9vDYrIWjeuiHZKu/o67D8wAKMWNWNd89j+oyWzAw1y
+	AzkMrEkNEDw2zm+d8JX2zisc4VreyymhoxzRUjjLDJtR/ZkTP0bHDrlAIR18+br1yqO
+	b30iPwD8/2CIpCgXduDK7DC/lZ9vBI8z97zWMiIg=
+From: =?UTF-8?Q?ADT?= <no-reply@generic.pmkt16.info>
+Reply-To: no-reply@generic.pmkt16.info
+To: jpruata@fapersa.com
+Subject: =?UTF-8?Q?Proteg=C3=A9_tu_casa_con_un_25%_de_descuento.?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_4357906_1972507784.1495559729612"
+Message-ID: <0100015c364e71ca-815a83ce-f01c-4c88-8ce1-ceadea3c4745-000000@email.amazonses.com>
+Date: Tue, 23 May 2017 17:15:29 +0000
+X-SES-Outgoing: 2017.05.23-54.240.11.118
+Feedback-ID: 1.us-east-1.DWLlRKmBtI6c0h8XIqGCJwVwQj+b24fD7145ysboAFw=:AmazonSES
+
+------=_Part_4357906_1972507784.1495559729612
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+[ADT | ALARMAS MONITOREADAS]
+[http://alarmasadt.com.ar/sistemas-de-seguridad/?utm_medium=3DQuarcom&utm_s=
+ource=3DQuarcon-Emailing&utm_campaign=3DEmailing-Alternativo]
+
+[http://alarmasadt.com.ar/sistemas-de-seguridad/?utm_medium=3DQuarcom&utm_s=
+ource=3DQuarcon-Emailing&utm_campaign=3DEmailing-Alternativo]
+
+[DEJATE DE CUENTOS]
+[http://alarmasadt.com.ar/sistemas-de-seguridad/?utm_medium=3DQuarcom&utm_s=
+ource=3DQuarcon-Emailing&utm_campaign=3DEmailing-Alternativo]
+[25% DE DESCUENTO POR 12 MESES + $0 LA INSTALACI=C3=93N]
+[http://alarmasadt.com.ar/sistemas-de-seguridad/?utm_medium=3DQuarcom&utm_s=
+ource=3DQuarcon-Emailing&utm_campaign=3DEmailing-Alternativo]
+
+=C2=A0
+Quiero la promo
+[http://alarmasadt.com.ar/sistemas-de-seguridad/?utm_medium=3DQuarcom&utm_s=
+ource=3DQuarcon-Emailing&utm_campaign=3DEmailing-Alternativo]
+=C2=A0
+
+[ADT ARGENTINA]
+[http://alarmasadt.com.ar/sistemas-de-seguridad/?utm_medium=3DQuarcom&utm_s=
+ource=3DQuarcon-Emailing&utm_campaign=3DEmailing-Alternativo]
+
+=C2=A0
+
+Oferta v=C3=A1lida desde 01-04-2017 hasta el 31-05-2017, para la
+contrataci=C3=B3n de nuevas cuentas adheridas al d=C3=A9bito autom=C3=A1tic=
+o por
+tarjeta de cr=C3=A9dito. Corresponde al costo de instalaci=C3=B3n del Kit
+Al=C3=A1mbrico1.1 - equipos en comodato. Se aplicar=C3=A1 un descuento del
+veinticinco por ciento (25%) sobre el abono mensual por el servicio de
+monitoreo del Pack VIP durante los doce (12) primeros meses de
+contrataci=C3=B3n. La aplicaci=C3=B3n de dicho descuento se realizara al
+cierre del resumen en el cual se registre la operaci=C3=B3n, o en hasta
+dos (2) res=C3=BAmenes de cuenta. Sujeto a disponibilidad t=C3=A9cnica y
+cobertura geogr=C3=A1fica del servicio (consultar en 0810-555- 1008). La
+presente promoci=C3=B3n no es acumulable con otras. T=C3=A9rminos y
+condiciones del servicio en www.adt.com.ar ADT Security Services S.A.
+CUIT 30-65663161- 5, Thames 139, Boulogne, Provincia de Buenos Aires.
+=C2=A9 2015. ADT Security Services S.A. Quedan todos los derechos
+reservados.
+
+=C2=A0
+
+
+------=_Part_4357906_1972507784.1495559729612
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Dutf-8"><title></title></head><body><!DOCTYPE html>
+<html lang=3D"en">
+<head>
+<meta charset=3D"utf-8">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1"=
+>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<title>ADT 2017</title>
+
+<style type=3D"text/css">
+
+html, body {
+=09margin: 0;
+=09padding: 0;
+=09height: 100% !important;
+=09width: 100% !important;
+}
+* {
+=09-ms-text-size-adjust: 100%;
+=09-webkit-text-size-adjust: 100%;
+}
+.ExternalClass {
+=09width: 100%;
+}
+table, td {
+=09mso-table-lspace: 0pt;
+=09mso-table-rspace: 0pt;
+}
+table {
+=09border-spacing: 0 !important;
+}
+.ExternalClass, .ExternalClass * {
+=09line-height: 100%;
+}
+table {
+=09border-collapse: collapse;
+=09margin: 0 auto;
+}
+img {
+=09-ms-interpolation-mode: bicubic;
+}
+.yshortcuts a {
+=09border-bottom: none !important;
+}
+.mobile-link--footer a {
+=09color: #666666 !important;
+}
+img {
+=09border: 0 !important;
+=09outline: none !important;
+=09text-decoration: none !important;
+=09
+}
+
+td[class=3D"stack-column-none"] {
+=09display: block !important;
+=09width: 100% !important;
+=09direction: ltr !important;
+}
+
+
+</style>
+
+</head>
+<body leftmargin=3D"0" topmargin=3D"0" marginwidth=3D"0" marginheight=3D"0"=
+ bgcolor=3D"#f2f2f2" style=3D"margin:0; padding:0; -webkit-text-size-adjust=
+:none; -ms-text-size-adjust:none;">
+<p style=3D"font-size: 0px;">Dejate de cuentos, necesit&aacute;s una soluci=
+&oacute;n real. 25% de descuento por 12 meses + $0 la instalaci&oacute;n.</=
+p>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" height=3D"100%" wid=
+th=3D"100%" bgcolor=3D"#f2f2f2" style=3D"border-collapse: collapse;">
+<tbody>
+<tr>
+<td>
+<table border=3D"0" width=3D"600" cellpadding=3D"0" cellspacing=3D"0" align=
+=3D"center" style=3D"width: 600px; margin: auto;" class=3D"email-container"=
+>
+<tbody>
+<tr>
+<td><!-- EMAIL CON SUS COLUMNAS -->
+<table border=3D"0" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" bgco=
+lor=3D"#ffffff">
+<tbody>
+<tr>
+<td style=3D"padding: 0;">
+<table border=3D"0" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" alig=
+n=3D"center">
+<tbody>
+<tr>
+<td width=3D"50%" height=3D"4%" valign=3D"top" bgcolor=3D"#ededed" class=3D=
+"stack-column"><a href=3D"http://l.generic.pmkt16.info/e/c/MzFnLzE3RnZYL2xL=
+YTQ%3D" target=3D"_blank" rel=3D"noopener noreferrer"><img src=3D"http://l.=
+generic.pmkt16.info/static/900/11610/top-A.jpg" width=3D"100%" border=3D"0"=
+ style=3D"display: block;" alt=3D"ADT | ALARMAS MONITOREADAS" /></a></td>
+<td width=3D"50%" height=3D"4%" valign=3D"top" bgcolor=3D"#ededed" class=3D=
+"stack-column-none"><a href=3D"http://l.generic.pmkt16.info/e/c/MzFnLzE3RnZ=
+YL2xLYTQ%3D" target=3D"_blank" rel=3D"noopener noreferrer"><img src=3D"http=
+://www.di-paola.com/works/adt/2017/marzo/Email-ADT-Dino-Mar17/images/top-B.=
+jpg" width=3D"100%" border=3D"0" style=3D"display: block;" alt=3D"" /></a><=
+/td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"5" style=3D"padding: 0;"></td>
+</tr>
+<tr>
+<td style=3D"padding: 0;">
+<table border=3D"0" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" alig=
+n=3D"center">
+<tbody>
+<tr>
+<td width=3D"50%" height=3D"4%" valign=3D"top" bgcolor=3D"#ededed" class=3D=
+"stack-column"><a href=3D"http://l.generic.pmkt16.info/e/c/MzFnLzE3RnZYL2xL=
+YTQ%3D" target=3D"_blank" rel=3D"noopener noreferrer"><img src=3D"http://l.=
+generic.pmkt16.info/static/900/11610/A1.jpg" width=3D"100%" border=3D"0" st=
+yle=3D"display: block;" alt=3D"DEJATE DE CUENTOS" /></a></td>
+<td width=3D"50%" height=3D"4%" valign=3D"top" bgcolor=3D"#ededed" class=3D=
+"stack-column"><a href=3D"http://l.generic.pmkt16.info/e/c/MzFnLzE3RnZYL2xL=
+YTQ%3D" target=3D"_blank" rel=3D"noopener noreferrer"><img src=3D"http://l.=
+generic.pmkt16.info/static/900/11610/A2.jpg" width=3D"100%" border=3D"0" st=
+yle=3D"display: block; background-color: #0065a7; color: #fff; text-transfo=
+rm: uppercase; font-size: 1.3em;" alt=3D"25% DE DESCUENTO POR 12 MESES + $0=
+ LA INSTALACI&Oacute;N" /></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"120" style=3D"padding: 0;">
+<table width=3D"494" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"127" height=3D"57">&nbsp;</td>
+<td width=3D"242" style=3D"background-color: #e62b58; color: #fff; text-dec=
+oration: none;" align=3D"center"><a href=3D"http://l.generic.pmkt16.info/e/=
+c/MzFnLzE3RnZYL2xLYTQ%3D" target=3D"_blank" style=3D"color: #fff; text-deco=
+ration: none; font-weight: 800; font-size: 1.3em; text-transform: uppercase=
+; text-align: center;" rel=3D"noopener noreferrer"> Quiero la promo </a></t=
+d>
+<td width=3D"125">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style=3D"padding: 0;">
+<table border=3D"0" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" alig=
+n=3D"center">
+<tbody>
+<tr>
+<td width=3D"50%" height=3D"4%" valign=3D"top" bgcolor=3D"#0065A7" class=3D=
+"stack-column"><a href=3D"http://l.generic.pmkt16.info/e/c/MzFnLzE3RnZYL2xL=
+YTQ%3D" target=3D"_blank" rel=3D"noopener noreferrer"><img src=3D"http://l.=
+generic.pmkt16.info/static/900/11610/ADT.jpg" width=3D"140" border=3D"0" st=
+yle=3D"display: block; margin: 0 auto;" alt=3D"ADT ARGENTINA" class=3D"flui=
+d3" /></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style=3D"padding: 0;">
+<table border=3D"0" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" alig=
+n=3D"center">
+<tbody>
+<tr>
+<td width=3D"100%" height=3D"4%" valign=3D"top" bgcolor=3D"#fff" class=3D"s=
+tack-column" style=3D"padding: 0; font-family: sans-serif; font-size: 15px;=
+ line-height: 1.3; color: #666666; text-align: center;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"5%">&nbsp;</td>
+<td width=3D"90%" style=3D"padding: 5px; font-family: 'Trebuchet MS', Verda=
+na, sans-serif; font-size: 10px; line-height: 12px; color: #999; text-align=
+: justify;"><br /> Oferta v&aacute;lida desde 01-04-2017 hasta el 31-05-201=
+7, para la contrataci&oacute;n de nuevas cuentas adheridas al d&eacute;bito=
+ autom&aacute;tico por tarjeta de cr&eacute;dito. Corresponde al costo de i=
+nstalaci&oacute;n del Kit Al&aacute;mbrico1.1 - equipos en comodato. Se apl=
+icar&aacute; un descuento del veinticinco por ciento (25%) sobre el abono m=
+ensual por el servicio de monitoreo del Pack VIP durante los doce (12) prim=
+eros meses de contrataci&oacute;n. La aplicaci&oacute;n de dicho descuento =
+se realizara al cierre del resumen en el cual se registre la operaci&oacute=
+;n, o en hasta dos (2) res&uacute;menes de cuenta. Sujeto a disponibilidad =
+t&eacute;cnica y cobertura geogr&aacute;fica del servicio (consultar en 081=
+0-555- 1008). La presente promoci&oacute;n no es acumulable con otras. T&ea=
+cute;rminos y condiciones del servicio en www.adt.com.ar ADT Security Servi=
+ces S.A. CUIT 30-65663161- 5, Thames 139, Boulogne, Provincia de Buenos Air=
+es. &copy; 2015. ADT Security Services S.A. Quedan todos los derechos reser=
+vados. <br /> <br /><br /></td>
+<td width=3D"5%">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html><table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" align=3D"center">
+                      <tbody>
+                        <tr>
+                          <td align=3D"center" style=3D"font-family:Arial,H=
+elvetica,sans-serif;">
+                          <span style=3D"font-family:Arial,Helvetica,sans-s=
+erif;font-size:12px;color:#999!important;">Para previsualizar este email en=
+ un navegador, hacer click <a style=3D"font-size:12px;color:#000!important"=
+ href=3D"http://l.generic.pmkt16.info/e/w/MzFnLzE3RnZY">aqu=C3=AD</a>.</spa=
+n>
+                        </td>
+                        </tr>
+                      </tbody>
+                    </table><br><br><br><table width=3D"600" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" align=3D"center">
+                              <tbody>
+                                <tr>
+                                  <td align=3D"center" style=3D"font-family=
+:Arial,Helvetica,sans-serif;">
+                                  <span style=3D"font-family:Arial,Helvetic=
+a,sans-serif;font-size:12px;color:#999!important;">Para no recibir m=C3=A1s=
+ comunicaciones de este tipo, usted puede <a style=3D"font-size:12px;color:=
+#000!important" href=3D"http://l.generic.pmkt16.info/e/u/MzFnLzE3RnZY">DESU=
+SCRIBIRSE</a>.</span>
+                                  <br><br>
+                                  <a style=3D"font-size:12px;color:#999!imp=
+ortant" href=3D"http://l.generic.pmkt16.info/e/a/MzFnLzE3RnZY">Reportar abu=
+so en el env=C3=ADo</a> | <span style=3D"font-family:Arial,Helvetica,sans-s=
+erif;font-size:12px;color:#999!important"> Correo enviado a: jpruata@fapers=
+a.com</span>
+                                </td>
+                                </tr>
+                              </tbody>
+                            </table><br><br><img src=3D"http://l.generic.pm=
+kt16.info/e/o/MzFnLzE3RnZY" style=3D" visibility:hidden; display:none;" alt=
+=3D"" title=3D"" width=3D"1" height=3D"1" /></body></html>
+------=_Part_4357906_1972507784.1495559729612--

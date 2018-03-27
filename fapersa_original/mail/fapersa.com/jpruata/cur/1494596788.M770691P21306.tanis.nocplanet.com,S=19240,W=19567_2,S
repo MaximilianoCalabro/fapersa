@@ -1,0 +1,327 @@
+Return-Path: <matiborioli@gmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id 2ZvbLbS8FVk6UwAATLP0zA
+	for <jpruata@fapersa.com>; Fri, 12 May 2017 10:46:28 -0300
+Return-path: <matiborioli@gmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Fri, 12 May 2017 10:46:28 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:38686 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <matiborioli@gmail.com>)
+	id 1d9Ato-0006Nn-3q
+	for jpruata@fapersa.com; Fri, 12 May 2017 10:46:28 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id C4CF97F209
+	for <jpruata@fapersa.com>; Fri, 12 May 2017 10:46:27 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id odrB1z6Nchid for <jpruata@fapersa.com>;
+	Fri, 12 May 2017 10:46:27 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 58CE57F232; Fri, 12 May 2017 10:46:27 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 32AB77F209
+	for <jpruata@fapersa.com>; Fri, 12 May 2017 10:46:26 -0300 (ART)
+Received-SPF: pass (gmail.com ... _spf.google.com: Sender is authorized to use 'matiborioli@gmail.com' in 'mfrom' identity (mechanism 'include:_netblocks.google.com' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="matiborioli@gmail.com"; helo=mail-yw0-f180.google.com; client-ip=209.85.161.180
+Received: from mail-yw0-f180.google.com (mail-yw0-f180.google.com [209.85.161.180])
+	by fw.fapersa.com (Postfix) with ESMTPS id 83B655FE38
+	for <jpruata@fapersa.com>; Fri, 12 May 2017 10:46:24 -0300 (ART)
+Received: by mail-yw0-f180.google.com with SMTP id 203so11158827ywe.0
+        for <jpruata@fapersa.com>; Fri, 12 May 2017 06:46:23 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=lExp3SEMnC1e4UnRlw8L/4Bm53CJQcU/d3WyPja+/Qg=;
+        b=CHkJQhXW5+pk3SZAPPyDVmhfku2wLSj6LgV96p/L4jKP08YYQI3I2m01NxxEn66FGD
+         7aUwTFEejwi9nouiyfJ026qJ57MZloev0IVLaSP1g/iZleJTpCCb33iVGYN368j+wfhg
+         2XovsnNTTZZ/iTqeVVbeoO+Hx7466/UPnjfPMJrx9cQaeCEcRqIRCvmDLqCtZiCU/+tz
+         T2cavY4K52o/DDGyMerolcciQiNzAZ5+8W27oBjjR0KKjjwvyf5bIDqK21UG8d209xhK
+         cA3l/H1aS3NE1lYcrFs1qrGcMDtMpl0VkjStwbSEBCWdki8uzeIuThIIddTjUqdJyIxv
+         RLSg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=lExp3SEMnC1e4UnRlw8L/4Bm53CJQcU/d3WyPja+/Qg=;
+        b=JVs/1F81RgA1yh/tc08o3Bk2ICW5P0Ap0nlDRPCiHQrr/lp5BUO2ryO/+/kcQdbGAP
+         Ksh+Slv+KgtBN09ZElz7LyXg/mFIKHo83Rs8C3ZXMpEif6R9d2w1IIhINHkTnqFKOO9D
+         hCkWJ7RlqrHyfnNA3ueM2Wyo69A+r3DHCNg0c41YoZYmV+cRwAKzGhwm23fNNIZaTNGh
+         CLVDKwiHhXvECVVw1FcULHK9/ZV1Rqo/LTsJWxdBtDLD2cvFEZyyjdeyT47m9hNhTxAG
+         F1vBhm9Rn2bXbn1dBAXgVgwAtDqVLhOfaB6xzNUq6SX8M9l1RC5nKm57o5jDHmr6Jjnt
+         aDEQ==
+X-Gm-Message-State: AODbwcBiELZ+ZIE12xttjokQdfuVFuJnIEPYf2N82P6XUDlEQ6Rhbvyq
+	bo5yHvf27mEkmPe5BTdqqhnfBDt+jw==
+X-Received: by 10.129.106.196 with SMTP id f187mr3221734ywc.189.1494596782205;
+ Fri, 12 May 2017 06:46:22 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.13.236.17 with HTTP; Fri, 12 May 2017 06:46:21 -0700 (PDT)
+In-Reply-To: <D0DE60D7-595B-4EAB-AE5A-EB437E5313E7@fapersa.com>
+References: <CAOh_CxPMHDVH8XiF_L6YJYdWCh4vty9t0Adc9m_YXKTOoUWsdQ@mail.gmail.com>
+ <D0DE60D7-595B-4EAB-AE5A-EB437E5313E7@fapersa.com>
+From: Matias Borioli <matiborioli@gmail.com>
+Date: Fri, 12 May 2017 10:46:21 -0300
+Message-ID: <CAOh_CxOuEjbCKxMQCSAMxV-Du1nLyf89Lb4SXX5jE64PFk1eQA@mail.gmail.com>
+Subject: Re: Listado de manager
+To: FAPERSA <jpruata@fapersa.com>
+Content-Type: multipart/related; boundary="001a1147390449ab80054f53ee7a"
+
+--001a1147390449ab80054f53ee7a
+Content-Type: multipart/alternative; boundary="001a1147390449ab7c054f53ee79"
+
+--001a1147390449ab7c054f53ee79
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Te corrigo 2 direcciones que estaban mal.
+
+M10-sebacavallero@yahoo.com
+
+M12-gustavoboffi@gmail.com
+
+
+
+[image: Logo Rodrigo 2] <http://www.rodrigoblasco.com/>
+
+www.rodrigoblasco.com
+
+*  Matias Borioli*
+
+*Cel: 0351-155504662*
+
+
+
+Camino a Potrero de Garay Km. 2 1/2.
+
+Villas Ciudad de Am=C3=A9rica
+
+Twiter. Rodrigo_Blasco <http://twitter.com/#!/Rodrigo_Blasco>
+
+Facebook: Rodrigo Blasco
+<http://www.facebook.com/profile.php?id=3D100001339988322>
+
+El 12 de mayo de 2017, 10:36, FAPERSA <jpruata@fapersa.com> escribi=C3=B3:
+
+> Gracias Matias ya reenv=C3=ADo info.
+>
+> Abrazos
+>
+> El 11 may. 2017, a las 20:36, Matias Borioli <matiborioli@gmail.com>
+> escribi=C3=B3:
+>
+>
+>  Juan como estas, te paso los contactos de mis manager para hacer contact=
+o
+> y confeccionar los listados de alojamiento. Esto lo deber=C3=ADamos tener
+> cerrado entre lunes y martes.
+>
+> M9-Viviana Alverich-3513854604
+> vivialberich@hotmail.com
+>
+> M10-Sebastian Caballero-3515149220-sebacaballero@yahoo.com
+>
+> M11-Felipe Diaz-3515600860
+> felipejosediaz@hotmail.com
+>
+> M12-Gustavo Boffi-3515079285-gustaviboffi@gmail.com
+>
+> M13 Pablo Castillo- 3513450991-p_castillo73@hotmail.com
+>
+>
+> Saludos
+>
+>
+>
+
+--001a1147390449ab7c054f53ee79
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Te corrigo 2 direcciones que estaban mal.<div><br></div><d=
+iv><a href=3D"mailto:M10-sebacavallero@yahoo.com" target=3D"_blank">M10-seb=
+acavallero@yahoo.com</a></div><div><br></div><div><a href=3D"mailto:M12-gus=
+tavoboffi@gmail.com" target=3D"_blank">M12-gustavoboffi@gmail.com</a>=C2=A0=
+</div></div><div class=3D"gmail_extra"><br clear=3D"all"><div><div class=3D=
+"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><span=
+ style=3D"color:rgb(31,73,125);font-family:Calibri,sans-serif;font-size:11p=
+t">=C2=A0</span><br><div><p style=3D"margin:0cm 0cm 0.0001pt;font-size:11pt=
+;font-family:Calibri,sans-serif"><a href=3D"http://www.rodrigoblasco.com/" =
+style=3D"color:rgb(17,85,204)" target=3D"_blank"><span style=3D"font-size:1=
+3.5pt;font-family:DokChampa,sans-serif;color:rgb(31,73,125);text-decoration=
+:none"><img border=3D"0" width=3D"189" height=3D"79" src=3D"cid:image001.jp=
+g@01CE9D8F.27D137F0" alt=3D"Logo Rodrigo 2"></span></a><span style=3D"color=
+:rgb(31,73,125)"><u></u><u></u></span></p><p style=3D"margin:0cm 0cm 0.0001=
+pt;font-size:11pt;font-family:Calibri,sans-serif"><span lang=3D"ES" style=
+=3D"font-size:13.5pt;font-family:DokChampa,sans-serif;color:rgb(31,73,125)"=
+><a href=3D"http://www.rodrigoblasco.com/" style=3D"color:rgb(17,85,204)" t=
+arget=3D"_blank"><span style=3D"color:blue">www.rodrigoblasco.com</span></a=
+><u></u><u></u></span></p><p style=3D"margin:0cm 0cm 0.0001pt;font-size:11p=
+t;font-family:Calibri,sans-serif"><b><span lang=3D"ES" style=3D"font-size:1=
+3.5pt;font-family:DokChampa,sans-serif;color:rgb(31,73,125)">=C2=A0 Matias =
+Borioli</span></b></p><p style=3D"margin:0cm 0cm 0.0001pt;font-size:11pt;fo=
+nt-family:Calibri,sans-serif"><b><span lang=3D"ES" style=3D"font-family:Dok=
+Champa,sans-serif;color:rgb(31,73,125)">Cel: 0351-155504662</span></b></p><=
+p style=3D"margin:0cm 0cm 0.0001pt;font-size:11pt;font-family:Calibri,sans-=
+serif"><span style=3D"color:rgb(31,73,125);font-size:11pt">=C2=A0</span></p=
+><p style=3D"margin:0cm 0cm 0.0001pt;font-size:11pt;font-family:Calibri,san=
+s-serif"><span lang=3D"ES" style=3D"color:rgb(31,73,125)">Camino a Potrero =
+de Garay Km. 2=C2=A0</span><span lang=3D"ES" style=3D"font-size:8pt;color:r=
+gb(31,73,125)">1/2</span><span lang=3D"ES" style=3D"color:rgb(31,73,125)">.=
+<u></u><u></u></span></p><p style=3D"margin:0cm 0cm 0.0001pt;font-size:11pt=
+;font-family:Calibri,sans-serif"><span lang=3D"ES" style=3D"color:rgb(31,73=
+,125)">Villas Ciudad de Am=C3=A9rica<u></u><u></u></span></p><p style=3D"ma=
+rgin:0cm 0cm 0.0001pt;font-size:11pt;font-family:Calibri,sans-serif"><span =
+lang=3D"ES" style=3D"color:rgb(31,73,125)"><a href=3D"http://twitter.com/#!=
+/Rodrigo_Blasco" style=3D"color:rgb(17,85,204)" target=3D"_blank"><span sty=
+le=3D"color:blue">Twiter. Rodrigo_Blasco</span></a><u></u><u></u></span></p=
+><p style=3D"margin:0cm 0cm 0.0001pt;font-size:11pt;font-family:Calibri,san=
+s-serif"><span lang=3D"ES" style=3D"color:rgb(31,73,125)"><a href=3D"http:/=
+/www.facebook.com/profile.php?id=3D100001339988322" style=3D"color:rgb(17,8=
+5,204)" target=3D"_blank"><span style=3D"color:blue">Facebook: Rodrigo Blas=
+co</span></a></span></p></div></div></div></div>
+<br><div class=3D"gmail_quote">El 12 de mayo de 2017, 10:36, FAPERSA <span =
+dir=3D"ltr">&lt;<a href=3D"mailto:jpruata@fapersa.com" target=3D"_blank">jp=
+ruata@fapersa.com</a>&gt;</span> escribi=C3=B3:<br><blockquote class=3D"gma=
+il_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-lef=
+t:1ex"><div style=3D"word-wrap:break-word">Gracias Matias ya reenv=C3=ADo i=
+nfo.<div><br></div><div>Abrazos<div><div class=3D"h5"><br><div><blockquote =
+type=3D"cite"><div>El 11 may. 2017, a las 20:36, Matias Borioli &lt;<a href=
+=3D"mailto:matiborioli@gmail.com" target=3D"_blank">matiborioli@gmail.com</=
+a>&gt; escribi=C3=B3:</div><br class=3D"m_7959719494012740899Apple-intercha=
+nge-newline"><div><div dir=3D"ltr"><br clear=3D"all"><div><div class=3D"m_7=
+959719494012740899gmail_signature"><div dir=3D"ltr"><font color=3D"#1f497d"=
+ face=3D"Calibri, sans-serif"><span style=3D"font-size:11pt">=C2=A0Juan com=
+o estas, te paso los contactos de mis manager para hacer contacto y confecc=
+ionar los listados de alojamiento. Esto lo </span><span style=3D"font-size:=
+14.6667px">deber=C3=ADamos</span><span style=3D"font-size:11pt">=C2=A0tener=
+ cerrado entre lunes y martes.</span></font></div><div dir=3D"ltr"><font co=
+lor=3D"#1f497d" face=3D"Calibri, sans-serif"><span style=3D"font-size:11pt"=
+><br></span></font></div><div><font color=3D"#1f497d" face=3D"Calibri, sans=
+-serif"><span style=3D"font-size:14.6667px">M9-Viviana Alverich-3513854604<=
+/span></font></div><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+width=3D"223" style=3D"border-collapse:collapse;width:167pt"><tbody><tr hei=
+ght=3D"20" style=3D"height:15pt">
+  <td height=3D"20" class=3D"m_7959719494012740899gmail-xl64" width=3D"223"=
+ style=3D"height:15pt;width:167pt"><span style=3D"color:rgb(49,132,155)"><a=
+ href=3D"mailto:vivialberich@hotmail.com" target=3D"_blank">vivialberich@ho=
+tmail.com</a><br><br>M10-Sebastian <a href=3D"mailto:Caballero-3515149220-s=
+ebacaballero@yahoo.com" target=3D"_blank">Caballero-3515149220-<wbr>sebacab=
+allero@yahoo.com</a><br><br>M11-Felipe Diaz-3515600860</span><table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"223" style=3D"border-co=
+llapse:collapse;width:167pt"><tbody><tr height=3D"20" style=3D"height:15pt"=
+>
+  <td height=3D"20" class=3D"m_7959719494012740899gmail-xl65" width=3D"223"=
+ style=3D"height:15pt;width:167pt"><a href=3D"mailto:felipejosediaz@hotmail=
+.com" target=3D"_blank">felipejosediaz@hotmail.com</a><br><br>M12-Gustavo <=
+a href=3D"mailto:Boffi-3515079285-gustaviboffi@gmail.com" target=3D"_blank"=
+>Boffi-3515079285-gustaviboffi@<wbr>gmail.com</a><br><br>M13 Pablo Castillo=
+- <a href=3D"mailto:3513450991-p_castillo73@hotmail.com" target=3D"_blank">=
+3513450991-p_castillo73@<wbr>hotmail.com</a><br><br><br>Saludos</td></tr></=
+tbody></table></td></tr></tbody></table></div></div>
+</div>
+</div></blockquote></div><br></div></div></div></div></blockquote></div><br=
+></div>
+
+--001a1147390449ab7c054f53ee79--
+--001a1147390449ab80054f53ee7a
+Content-Type: image/jpeg; name="image001.jpg"
+Content-Disposition: inline; filename="image001.jpg"
+Content-Transfer-Encoding: base64
+Content-ID: <image001.jpg@01CE9D8F.27D137F0>
+X-Attachment-Id: fbe043714a4b8bd3_0.1
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIf
+IiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7
+Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCABPAL0DASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD2auZv
+/E1zd3z6Z4ctlu7iPiW4c/uYfqe5pfE+o3FxcQeHtMk2Xd5/rZB/yxi7n6kVs6Vpdro9hHZ2cYSN
+Bye7HuSe5qG23ZHRGMacVKSu3sv1ZhL4Svb759Z1+9nY9Y7d/KjH0Ap3/Cv9E7teH/t5aunrCXX4
+m8WHSQ4wsPI/2s1LUVuCrVn8L+4q/wDCv9D9bz/wJaj/AIV/ofref+BLV09ULrWbKz1O30+dyk1w
+MocfL1xgnsTTcYroCr13tJmP/wAK/wBD9bz/AMCWo/4V/ofref8AgS1dPSU+SPYX1it/Mzmf+Ff6
+H63n/gS1H/Cv9D9bz/wJarN1410Gyu5bW4vSksTFXHlscH64rUsNSs9Ut/tFjcJPFnG5T0PofSkl
+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
+--001a1147390449ab80054f53ee7a--

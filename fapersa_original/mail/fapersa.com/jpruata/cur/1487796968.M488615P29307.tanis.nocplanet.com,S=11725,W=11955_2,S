@@ -1,0 +1,230 @@
+Return-Path: <bounces+2179135-7056-jpruata=fapersa.com@sendgrid.net>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id KVjbHOj6rVh7cgAATLP0zA
+	for <jpruata@fapersa.com>; Wed, 22 Feb 2017 17:56:08 -0300
+Return-path: <bounces+2179135-7056-jpruata=fapersa.com@sendgrid.net>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Wed, 22 Feb 2017 17:56:08 -0300
+Received: from o1.b.az.sendgrid.net ([208.117.55.133]:44005)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128)
+	(Exim 4.88)
+	(envelope-from <bounces+2179135-7056-jpruata=fapersa.com@sendgrid.net>)
+	id 1cgdwz-00015t-Ks
+	for jpruata@fapersa.com; Wed, 22 Feb 2017 17:56:07 -0300
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=sendgrid.me; 
+	h=from:to:subject:mime-version:content-type:content-transfer-encoding; 
+	s=smtpapi; bh=+8Y158BENlVXo0iKYHBtqqxpIl0=; b=LWHDD3Fc8jtuBQPs21
+	4mU3N82BVWUnDG34TMQMKom/0yeOvUAS40cP9ax3DsVnQP6kzRnp5CJu5qkVCigx
+	KgjHOJNUBHQuLdPenywsDg5gSSxaOwPjNYiYEh0tLw+Fo9GZrEmOakqcW2ZlVmHF
+	gbuPx807woT4ITPGDhxvfTtAk=
+Received: by filter0355p1las1.sendgrid.net with SMTP id filter0355p1las1-26578-58ADFAAC-4
+        2017-02-22 20:55:08.378347985 +0000 UTC
+Received: from bd.uar.com.ar (unknown [23.101.181.66])
+	by ismtpd0004p1sjc2.sendgrid.net (SG) with ESMTP id BaczTWwvRX-zm0Zp1P0upg
+	for <jpruata@fapersa.com>; Wed, 22 Feb 2017 20:55:08.142 +0000 (UTC)
+From: "noreply UAR - ssl" <noreply@uar.com.ar>
+To: jpruata@fapersa.com
+X-Mailer: CakePHP Email
+Date: Wed, 22 Feb 2017 17:55:08 -0300
+Message-ID: <58adfaac309c4571bc4d1e2801ce7e74@bd.uar.com.ar>
+Subject: UAR - Alta de usuario
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="b705ab9a11265e0c159b034727d83c04"
+Content-Transfer-Encoding: 8bit
+X-SG-EID: VfNqVyrjLjKdIIXcj4qJiEnEUuu5wqrVHRmdo0fkVZTR2bszVvZZ/vHDCG/Z+Ob+7PnmqGFARjec7q
+ z8PaCaF1y4HepIaBx/OelV57hgshGmfKKEkYYgw+OLadBAT9TnOSl6GPR0DuuCdCzX9QQeXaDvAHi9
+ g3Dzqzt4GEZd/6sVnq5EPnBp/gMZioGuZ10trgC/SoYkn/0fArQDL3p3MUxS/13ShUa6rj9HWnR7qn
+ k=
+X-Spam-Status: No, score=0.1
+X-Spam-Score: 1
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Alta de usuario Su usuario ha sido dado de alta. Para confirmarlo
+    complete sus datos haciendo <a href="https://u2179135.ct.sendgrid.net/wf/click?upn=7di1x8Mx1HTEHrzJdtV4ZD2spaBrttx71ZGwCU4Ip0JIeb5gUWryhKosSCZliaPF4DzwHj8nFUkSChBtAJsfzwwN0b5wJR78HZrsurYyvc8-3D_-2BhQsPu9Q2VEUqe1WPYN4pT-2BIvMtng7VbwqiKNwfIv6LJG6JzMA1zfOz5BbxqQCWlpgq-2BcGQzqUmdIxYKyRoG323ZVMkWE8CqJiVQXEoc2hDjLAZ3nwG7qNrlJs0saTOxYS8TdsfvewtfBXvA1CcxdulpJFaLRaYP7h85J3aNEbwRTRaqhWqqyR49B2bQb7z-2FW8sirwuVrENYqZpsozCTzq9wphcY1pOw5uZ7zMs8Mc0-3D">click
+    aquí</a>. [...] 
+ 
+ Content analysis details:   (0.1 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
+                             domains are different
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: sendgrid.net]
+  0.0 T_SPF_TEMPERROR        SPF: test of record failed (temperror)
+ -0.0 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+  2.0 HTTPS_HTTP_MISMATCH    BODY: No description available.
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+X-Spam-Flag: NO
+
+--b705ab9a11265e0c159b034727d83c04
+Content-Type: multipart/alternative; boundary="alt-b705ab9a11265e0c159b034727d83c04"
+
+--alt-b705ab9a11265e0c159b034727d83c04
+Content-Type: text/plain; charset=UTF-8
+content-transfer-encoding: quoted-printable
+
+  =0D
+=0D
+Alta de usuario=0D
+=0D
+Su usuario ha sido dado de alta.=0D
+Para confirmarlo complete sus datos haciendo <a href=3D"https://u2179135.ct=
+.sendgrid.net/wf/click?upn=3D7di1x8Mx1HTEHrzJdtV4ZD2spaBrttx71ZGwCU4Ip0JIeb=
+5gUWryhKosSCZliaPF4DzwHj8nFUkSChBtAJsfzwwN0b5wJR78HZrsurYyvc8-3D_-2BhQsPu9Q=
+2VEUqe1WPYN4pT-2BIvMtng7VbwqiKNwfIv6LJG6JzMA1zfOz5BbxqQCWlpgq-2BcGQzqUmdIxY=
+KyRoG323ZVMkWE8CqJiVQXEoc2hDjLAZ3nwG7qNrlJs0saTOxYS8TdsfvewtfBXvA1CcxdulpJF=
+aLRaYP7h85J3aNEbwRTRaqhWqqyR49B2bQb7z-2FW8sirwuVrENYqZpsozCTzq9wphcY1pOw5uZ=
+7zMs8Mc0-3D">click aqu=C3=AD</a>.=0D
+=0D
+This email was sent using the CakePHP Framework, https://u2179135.ct.sendgr=
+id.net/wf/click?upn=3Dom9YzUNsmJDGEeRzzSdxmDw3TThM-2BkmVEZ2Va6D1fhE-3D_-2Bh=
+QsPu9Q2VEUqe1WPYN4pT-2BIvMtng7VbwqiKNwfIv6LJG6JzMA1zfOz5BbxqQCWlisZMT5m7gC1=
+-2FVDiSgqsUNYyA1tzj8ElfIQP2QV4h8DDCRsMAwPxLyfAtv-2BrryInBC68pREV0y63HrBdwce=
+FzfXSE-2FTFTKpyBdQacto9v5uS39pMoxyq8I9uiwmnAgY9veXKMtX6crZGV2JY5I2A5KelnDXk=
+-2Bj5QXJo98P-2FNJVuo-3D
+
+--alt-b705ab9a11265e0c159b034727d83c04
+Content-Type: text/html; charset=UTF-8
+content-transfer-encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html style=3D"height: 100%;font-size: 10px;-webkit-tap-highlight-color: rg=
+ba(0,0,0,0);font-family: sans-serif;display: block;">=0D
+<head>=0D
+	<meta charset=3D"utf-8">=0D
+	<meta content=3D"IE=3Dedge">=0D
+	<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1=
+">=0D
+	<title>Uni=C3=B3n Argentina de Rugby</title>=0D
+=0D
+	<link href=3D"https://fonts.googleapis.com/css?family=3DRoboto:400,300,100=
+,500,700,900" rel=3D"stylesheet" type=3D"text/css">=0D
+=0D
+</head>=0D
+=0D
+<body style=3D"background-color: white;font-family: 'Roboto',Helvetica Neue=
+,Helvetica,Arial,sans-serif;font-size: 13px;line-height: 1.5384616;color: #=
+333;margin: 0 !important;display: block; max-width: 1200px;">=0D
+=0D
+	<div class=3D"page-header" style=3D"display: block;background-image: url(h=
+ttp://wap06-html.azurewebsites.net/mail/fondoheadmail.jpg);background-size:=
+ cover; background-position: top left;background-repeat: no-repeat;backgrou=
+nd-size: cover;margin: 0;padding: 0;border-bottom-width: 0;border-bottom: 1=
+px solid #ddd;">=0D
+		<div class=3D"page-header-content" style=3D"display: block;position: rela=
+tive;background-color: inherit;padding: 0 20px;">=0D
+			<div class=3D"page-title" style=3D"padding: 10px 36px 10px 0;display: bl=
+ock;position: relative;">=0D
+				<div class=3D"logo-mail" style=3D"display: block;width: auto;height: au=
+to;text-align: left;">=0D
+					<img class=3D"logo-mail" src=3D"http://wap06-html.azurewebsites.net/ma=
+il/logomail.png" style=3D"vertical-align: middle;border: 0;width: auto;heig=
+ht: 55px;text-align: left;">=0D
+				</div>=0D
+			</div>=0D
+		</div>=0D
+	</div>=0D
+=0D
+	<div class=3D"page-container" style=3D"padding-top: 0;position: relative;p=
+adding: 20px 20px;padding-bottom: 40px;">=0D
+		<div class=3D"page-content">=0D
+			<div class=3D"content-wrapper" style=3D"width: 100%;">=0D
+          =0D
+<h3  style=3D"display: block;letter-spacing: -0.015em;font-family: inherit;=
+line-height: 1.5;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webk=
+it-margin-start: 0px;-webkit-margin-end: 0px;margin: 2rem !important;font-s=
+ize: 25px;font-weight: 900;color: #404040;text-align: center;">Alta de usua=
+rio</h3>=0D
+<p  style=3D"display: block;-webkit-margin-before: 1em;-webkit-margin-after=
+: 1em;-webkit-margin-start: 0px;-webkit-margin-end: 0px;margin: 0 2rem 2rem=
+ 2rem;font-size: 15px;text-align: center;color: #404040;">=0D
+  Su usuario <strong>""</strong> del grupo <strong>"Managers"</strong> ha s=
+ido dado de alta.=0D
+  Para confirmarlo complete sus datos haciendo click en el siguiente bot=C3=
+=B3n=0D
+</p>=0D
+<div  style=3D"display: block;text-align: center;">=0D
+  <a href=3D"https://u2179135.ct.sendgrid.net/wf/click?upn=3D7di1x8Mx1HTEHr=
+zJdtV4ZD2spaBrttx71ZGwCU4Ip0JIeb5gUWryhKosSCZliaPF4DzwHj8nFUkSChBtAJsfzwwN0=
+b5wJR78HZrsurYyvc8-3D_-2BhQsPu9Q2VEUqe1WPYN4pT-2BIvMtng7VbwqiKNwfIv6LJG6JzM=
+A1zfOz5BbxqQCWl7Buipvmm8DgJLVCwOsrAq9ekZHUGkP1xOoNK2J3G8k3llUqvssKP6F7CVBXf=
+44xYHPw9V-2BLAc-2FLPnJIxBJlzg-2FmawMOCUoPhoRqRp53jYP-2FTMrh-2FnsVOlH7X4yn5V=
+Nzd0PUFyhohy7-2Fv5A5ke5A1swHN2WJ-2BFNXUi6kjq0iM6ao-3D" target=3D"_blank"  s=
+tyle=3D"text-decoration:none;color:#ffffff;">=0D
+    <button type=3D"button"  style=3D"outline: 0;font-family: inherit;line-=
+height: inherit;-webkit-appearance: button;cursor: pointer;text-transform: =
+none;overflow: visible;font: inherit;align-items: flex-start;text-rendering=
+: auto;letter-spacing: normal;word-spacing: normal;text-indent: 0px;text-sh=
+adow: none;display: inline-block;-webkit-writing-mode: horizontal-tb;text-a=
+lign: center;margin: 0;border: transparent;border-radius: 5px;padding: 5px =
+20px;font-size: 16px;color: #ffffff;background-color: #2196f3;margin-top: 0=
+;">=0D
+      Completar datos de usuario=0D
+    </button>=0D
+  </a>=0D
+</div>=0D
+<p>=0D
+  Link para completar datos de usuario: <a href=3D"https://u2179135.ct.send=
+grid.net/wf/click?upn=3D7di1x8Mx1HTEHrzJdtV4ZD2spaBrttx71ZGwCU4Ip0JIeb5gUWr=
+yhKosSCZliaPF4DzwHj8nFUkSChBtAJsfzwwN0b5wJR78HZrsurYyvc8-3D_-2BhQsPu9Q2VEUq=
+e1WPYN4pT-2BIvMtng7VbwqiKNwfIv6LJG6JzMA1zfOz5BbxqQCWlHyyDGipiqL5q5Mkygsl1tH=
+04Wyng9XSpx3r9JL-2F-2BoNGnzi6MACFKxO8qfMkA70x-2BYEobEwZDVtdHaFoIg2F-2BYOVFj=
+vHh5niFc5OOuI00hlkImVMsO8Msxl5qQpNjH6joP1-2BSpUTM0ECIhzvOc-2Fj22RW-2FHQo9xt=
+OOaMnQ959MRH0-3D" target=3D"_blank">https://bd.uar.com.ar/Users/confirm/139=
+6?token=3D58adfaabde67b</a>=0D
+</p>			</div>=0D
+		</div>=0D
+	</div>=0D
+=0D
+	<div class=3D"page-footer" style=3D"display: block;height: 70px;background=
+-color: #0053a1;background-size: cover;margin-bottom: 0rem !important;">=0D
+		<div class=3D"footerline" style=3D"display: block;height: 5px;width: 100%=
+;background-image: url(http://wap06-html.azurewebsites.net/mail/lineafooter=
+mail.jpg);background-position: top left;background-repeat: no-repeat;backgr=
+ound-size: cover;"></div>=0D
+		<p class=3D"copyright-mail" style=3D"display: block;-webkit-margin-before=
+: 1em;-webkit-margin-after: 1em;-webkit-margin-start: 0px;-webkit-margin-en=
+d: 0px;margin: 20px 5px 20px 5px;color: white;">&copy; 2017. <a href=3D"htt=
+ps://u2179135.ct.sendgrid.net/wf/click?upn=3Djn1zcWBd3vRk9XIJ1XTeUaPN9qJX-2=
+FGtsYp1IxioVAkM-3D_-2BhQsPu9Q2VEUqe1WPYN4pT-2BIvMtng7VbwqiKNwfIv6LJG6JzMA1z=
+fOz5BbxqQCWl9kCH0KUXbxXy75ifWWpgiB-2F0n0LhHBafwzWlypQZzzpD53wN81k7Iy7Ebso3b=
+-2FUUQSdGpOYCFLdW2gqumoLbUPKXjRVwzrj-2Fe42wlmlIlsLovIoTL1jxGeyt6uDwr09pLN7K=
+pGIN5hdQhWO5C0rXLrBZ-2FsLoiE6z56vNqAZYJsE-3D" target=3D"_blank" style=3D"co=
+lor:#66b3ff;">UAR</a></p>=0D
+	</div>=0D
+=0D
+
+<img src=3D"https://u2179135.ct.sendgrid.net/wf/open?upn=3D-2BhQsPu9Q2VEUqe=
+1WPYN4pT-2BIvMtng7VbwqiKNwfIv6LJG6JzMA1zfOz5BbxqQCWlaYc8fhwRdkl20bXfUlmdX9U=
+IYoQ1LIXaX61h2FSuJEn-2BhSJKQz1IgQonNRr9jJ66pW-2BPp1Eccr5KOzx69To3qA4uzBhvHV=
+64aFPcft-2B2cbRFoxTIr5yqX6Bw42IwT2lAyxc2Z6PhqZHh6JVcI2tBkPanan455dYFEoe7rYL=
+Tqeo-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px=
+ !important;width:1px !important;border-width:0 !important;margin-top:0 !im=
+portant;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 =
+!important;padding-top:0 !important;padding-bottom:0 !important;padding-rig=
+ht:0 !important;padding-left:0 !important;"/>
+</body>=0D
+</html>
+
+
+--alt-b705ab9a11265e0c159b034727d83c04--
+
+
+--b705ab9a11265e0c159b034727d83c04--
+
+
+

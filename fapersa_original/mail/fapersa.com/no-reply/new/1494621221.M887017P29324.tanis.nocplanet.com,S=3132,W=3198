@@ -1,0 +1,66 @@
+Return-Path: <>
+Delivered-To: no-reply@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id gdLNNCUcFlmMcgAATLP0zA
+	for <no-reply@fapersa.com>; Fri, 12 May 2017 17:33:41 -0300
+Return-path: <>
+Envelope-to: no-reply@fapersa.com
+Delivery-date: Fri, 12 May 2017 17:33:41 -0300
+Received: from mailnull by tanis.nocplanet.com with local (Exim 4.89)
+	id 1d9HFt-0000CZ-Gw
+	for no-reply@fapersa.com; Fri, 12 May 2017 17:33:41 -0300
+X-Failed-Recipients: motopart@ciudad.com.ar
+Auto-Submitted: auto-replied
+From: Mail Delivery System <Mailer-Daemon@tanis.nocplanet.com>
+To: no-reply@fapersa.com
+Content-Type: multipart/report; report-type=delivery-status; boundary=1494621221-eximdsn-1444718541
+MIME-Version: 1.0
+Subject: Mail delivery failed: returning message to sender
+Message-Id: <E1d9HFt-0000CZ-Gw@tanis.nocplanet.com>
+Date: Fri, 12 May 2017 17:33:41 -0300
+
+--1494621221-eximdsn-1444718541
+Content-type: text/plain; charset=us-ascii
+
+This message was created automatically by mail delivery software.
+
+A message that you sent could not be delivered to one or more of its
+recipients. This is a permanent error. The following address(es) failed:
+
+  motopart@ciudad.com.ar
+    host mta4.ciudad.com.ar [200.42.138.144]
+    SMTP error from remote mail server after RCPT TO:<motopart@ciudad.com.ar>:
+    550 5.1.1 <motopart@ciudad.com.ar>: Recipient address rejected:
+    ciudad.com.ar
+
+--1494621221-eximdsn-1444718541
+Content-type: message/delivery-status
+
+Reporting-MTA: dns; tanis.nocplanet.com
+
+Action: failed
+Final-Recipient: rfc822;motopart@ciudad.com.ar
+Status: 5.0.0
+Remote-MTA: dns; mta4.ciudad.com.ar
+Diagnostic-Code: smtp; 550 5.1.1 <motopart@ciudad.com.ar>: Recipient address rejected: ciudad.com.ar
+
+--1494621221-eximdsn-1444718541
+Content-type: message/rfc822
+
+Return-path: <no-reply@fapersa.com>
+Received: from mx1.fapersa.com ([181.14.247.181]:57369 helo=equis.fapersa.int)
+	by tanis.nocplanet.com with esmtpa (Exim 4.89)
+	(envelope-from <no-reply@fapersa.com>)
+	id 1d9HFq-0000Bx-4v; Fri, 12 May 2017 17:33:38 -0300
+From: Equis <no-reply@fapersa.com>
+To: Corporativo <motopart@ciudad.com.ar>, 
+	=?Cp1252?Q?Administraci=F3n?= <motopart@ciudad.com.ar>
+Message-ID: <1655627208.39.1494620959870.JavaMail.cmg@equis>
+Subject: Fapersa ICSA - Bonificacion por pago Semana y 3 dias
+MIME-Version: 1.0
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+<p>Estimado cliente, a continuaci&#243;n se detallan las facturas generadas en el transcurso de esta semana, recuerde que cancelando las mismas antes del mi&#233;rcoles pr&#243;ximo 17/05/2017 a trav&#233;s de dep&#243;sito bancario en las ctas. oportunamente informadas, se aplicar&#225; una bonificaci&#243;n del 5%.</p><p>Cliente: DISTRIBUIDORA MOTORPART SRL</p><p><br>Factura: 0013-00010334<br>Fecha: 08/05/2017<br>Importe:        14.091,58<br>Bonificaci&#243;n 5%:           704,58<br>Neto a Depositar::        13.387,00<br></p><p>Recuerde enviar el comprobante de pago a cobranzas@fapersa.com para hacer efectiva la bonificacion en su Cuenta Corriente.</p><p>Saludos Cordiales</p>
+
+--1494621221-eximdsn-1444718541--

@@ -1,0 +1,250 @@
+Return-Path: <sergioparado@hotmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id 2Z/EDkTuW1g3DQAATLP0zA
+	for <jpruata@fapersa.com>; Thu, 22 Dec 2016 12:16:20 -0300
+Return-path: <sergioparado@hotmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Thu, 22 Dec 2016 12:16:20 -0300
+Received: from bay004-omc4s17.hotmail.com ([65.54.190.219]:55308)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-SHA384:256)
+	(Exim 4.87)
+	(envelope-from <sergioparado@hotmail.com>)
+	id 1cK56H-0002h9-R5
+	for jpruata@fapersa.com; Thu, 22 Dec 2016 12:16:20 -0300
+Received: from NAM03-BY2-obe.outbound.protection.outlook.com ([65.54.190.201]) by BAY004-OMC4S17.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Thu, 22 Dec 2016 07:15:30 -0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=9J+ryuNmho8kU+9p8R0SUJYLNkpl8HgfdDKhesa7v4U=;
+ b=DzxdTU+gCZaWOANTBjIcnBdogATfEwVqTpPQ5GURtCBPFOmZ6QCT177AlFCCeQJqJx9qnUlmQI3AoRNmlXHlfIFr5ItOjPzPkEpD4EDjnrfBgFDAB8FwpsAD/NG2R7Or/ipcAQ23FE+/6vBLbuzHUjadHVi4CVSicD1KF5wq3JZDZdUq7mnXpvYZDg14MxVXJG8rtC+kCjNaLytT/QDvS0JMaNTc5KFJbwDyxrPkWb51ADLwBFK6qO74LfxigCG1we3ZH69Msg9tDLS5/sn3bCMDpNWNjqnyi4AU1WyOpaCD+YrttN44mRAmeh+TqO18uo4d7ew3+osuNTZPqhkzgw==
+Received: from BY2NAM03FT056.eop-NAM03.prod.protection.outlook.com
+ (10.152.84.58) by BY2NAM03HT070.eop-NAM03.prod.protection.outlook.com
+ (10.152.85.142) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.789.10; Thu, 22
+ Dec 2016 15:15:29 +0000
+Received: from BN6PR2001MB0977.namprd20.prod.outlook.com (10.152.84.57) by
+ BY2NAM03FT056.mail.protection.outlook.com (10.152.85.45) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.789.10 via Frontend Transport; Thu, 22 Dec 2016 15:15:29 +0000
+Received: from BN6PR2001MB0977.namprd20.prod.outlook.com ([10.172.109.135]) by
+ BN6PR2001MB0977.namprd20.prod.outlook.com ([10.172.109.135]) with mapi id
+ 15.01.0789.018; Thu, 22 Dec 2016 15:15:29 +0000
+From: sergio parado <sergioparado@hotmail.com>
+To: FAPERSA <jpruata@fapersa.com>
+Subject: RE: FACTURA AGRONEGOCIOS           AGROSERVICIOS HUMBOLDT S.A.
+Thread-Topic: FACTURA AGRONEGOCIOS           AGROSERVICIOS HUMBOLDT S.A.
+Thread-Index: AQHSXFQioropbXgxEEq0wPyRAHqOJqEUE8tr
+Date: Thu, 22 Dec 2016 15:15:29 +0000
+Message-ID: <BN6PR2001MB097742A1CA75E8FEED6B77F4C3920@BN6PR2001MB0977.namprd20.prod.outlook.com>
+References: <708278331.1.1482409969622.JavaMail.semi@gestion.grupocem.com.ar>,<DFEB2609-3654-4F74-B8C4-BF2DCC4E7738@fapersa.com>
+In-Reply-To: <DFEB2609-3654-4F74-B8C4-BF2DCC4E7738@fapersa.com>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: fapersa.com; dkim=none (message not signed)
+ header.d=none;fapersa.com; dmarc=none action=none header.from=hotmail.com;
+x-incomingtopheadermarker: OriginalChecksum:6D732B563C6ADE2AA093EFF634E853C0792998C753EAB2AFCD407015A1527AF7;UpperCasedChecksum:295E417826FC4BCF1E9EA3A807B7B8EC55658B32DD0E843A74F929B5861BBAC1;SizeAsReceived:7547;Count:39
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [Su3Al7McIWTcVSxNnBt3ViQ0+4q4BH7QprH1RhRdrPE=]
+x-incomingheadercount: 39
+x-eopattributedmessage: 0
+x-microsoft-exchange-diagnostics: 1;BY2NAM03HT070;7:6Hn7/Ra2pkxsxK11v4H4Iylk5YUerqUmISUtKHdd5NH2mKx3v/LjHlWoLqsdz2DyKin2YokzbrUV7d1RKmBiSBtCalWnNYb0auVDSRwRrm4uzFeImyfT0j6CAZsSoo37fW+sKb96jNufgLAo0OQt5hRvDUgCAHgE4wWQqGWzlssOf2mXhu3biyO65mUtbdGtnHO/l0Y1TeXDQ4GZW1QombIjcqyHl2cLGSfe+a95m3AMoeFkZEEhtzjEjhw8uqeVaNfMV1KWTDLTRxMtllFNnltCanjC9rwnWDq45NHkfplyn4ZJjFB5eLetXvAV5e44Nwz183upEeprtE6yj344ERl6vFP3rpUJ08p/aSRG7RXFf5F6UpAJsTlZ0AeBd2m/st3wb0XLOguta4QNCZsyviDrko3tWWTftxV8In9HuPUHLoElsP44XQbDZplWVmvcVv4rrYb9LapM7G9Xj03rGg==
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(10019020)(98900003);DIR:OUT;SFP:1102;SCL:1;SRVR:BY2NAM03HT070;H:BN6PR2001MB0977.namprd20.prod.outlook.com;FPR:;SPF:None;LANG:es;
+x-ms-office365-filtering-correlation-id: b6a6411e-ce0d-4dc2-d815-08d42a7d5d6f
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(1601124038)(5061506318)(5061507293)(1603103113)(1603101340)(1601125047);SRVR:BY2NAM03HT070;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(444111334)(444112120)(432015012)(82015046);SRVR:BY2NAM03HT070;BCL:0;PCL:0;RULEID:;SRVR:BY2NAM03HT070;
+x-forefront-prvs: 01644DCF4A
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_BN6PR2001MB097742A1CA75E8FEED6B77F4C3920BN6PR2001MB0977_"
+MIME-Version: 1.0
+X-OriginatorOrg: hotmail.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 22 Dec 2016 15:15:29.2171
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BY2NAM03HT070
+X-OriginalArrivalTime: 22 Dec 2016 15:15:30.0504 (UTC) FILETIME=[3BB0FC80:01D25C66]
+X-Spam-Status: No, score=-3.6
+X-Spam-Score: -35
+X-Spam-Bar: ---
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Si los paracuat es para soja El 24d Maiz Cleptodim graminicida
+    para soja Lambda para soja (ciper) Aceite para paracua y gaminisida Inoculante
+    para silo de alfalfa Fosfato para soja Enviado desde mi Samsung Mobile de
+    Claro [...] 
+ 
+ Content analysis details:   (-3.6 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: fapersa.com]
+  1.5 SUBJ_ALL_CAPS          Subject is all capitals
+ -3.1 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (sergioparado[at]hotmail.com)
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+X-Spam-Flag: NO
+
+--_000_BN6PR2001MB097742A1CA75E8FEED6B77F4C3920BN6PR2001MB0977_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Si los paracuat es para soja
+El 24d Maiz
+Cleptodim graminicida para soja
+Lambda para soja (ciper)
+Aceite para paracua y gaminisida
+Inoculante para silo de alfalfa
+Fosfato para soja
+
+
+
+Enviado desde mi Samsung Mobile de Claro
+
+
+-------- Mensaje original --------
+De: FAPERSA <jpruata@fapersa.com>
+Fecha: 22/12/16 10:05 AM (GMT-03:00)
+A: Sergio Parado <sergioparado@hotmail.com>
+Asunto: Fwd: FACTURA AGRONEGOCIOS           AGROSERVICIOS HUMBOLDT S.A.
+
+Sergio autorizame esto de av?cola q estuviste sacando por favor.
+
+
+
+Inicio del mensaje reenviado:
+
+De: veronica.brechbuhl@grupocem.com.ar<mailto:veronica.brechbuhl@grupocem.c=
+om.ar>
+Asunto: FACTURA AGRONEGOCIOS AGROSERVICIOS HUMBOLDT S.A.
+Fecha: 22 de diciembre de 2016, 09:32:49 GMT-3
+Para: acarboni@fapersa.com<mailto:acarboni@fapersa.com>, pagos@fapersa.com<=
+mailto:pagos@fapersa.com>, jpruata@fapersa.com<mailto:jpruata@fapersa.com>
+Responder a: veronica.brechbuhl@grupocem.com.ar<mailto:veronica.brechbuhl@g=
+rupocem.com.ar>
+
+
+
+--_000_BN6PR2001MB097742A1CA75E8FEED6B77F4C3920BN6PR2001MB0977_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta content=3D"text/html; charset=3Dutf-8">
+</head>
+<body>
+<div>Si los paracuat es para soja</div>
+<div>El 24d Maiz</div>
+<div>Cleptodim graminicida para soja</div>
+<div>Lambda para soja (ciper)</div>
+<div>Aceite para paracua y gaminisida</div>
+<div>Inoculante para silo de alfalfa</div>
+<div>Fosfato para soja</div>
+<div><br>
+</div>
+<div><br>
+</div>
+<div><br>
+</div>
+<div id=3D"composer_signature">
+<div dir=3D"auto" style=3D"font-size:85%; color:#575757">Enviado desde mi S=
+amsung Mobile de Claro</div>
+</div>
+<div><br>
+</div>
+<div><br>
+</div>
+<div>-------- Mensaje original --------</div>
+<div>De: FAPERSA &lt;jpruata@fapersa.com&gt; </div>
+<div>Fecha: 22/12/16 10:05 AM (GMT-03:00) </div>
+<div>A: Sergio Parado &lt;sergioparado@hotmail.com&gt; </div>
+<div>Asunto: Fwd: FACTURA AGRONEGOCIOS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp; AGROSERVICIOS HUMBOLDT S.A. </div>
+<div><br>
+</div>
+<div>
+<div class=3D"" style=3D"word-wrap:break-word">Sergio autorizame esto de av=
+&iacute;cola q estuviste sacando por favor.
+<div class=3D""><br class=3D"">
+</div>
+<div class=3D""><br class=3D"">
+<div><br class=3D"">
+<blockquote type=3D"cite" class=3D"">
+<div class=3D"">Inicio del mensaje reenviado:</div>
+<br class=3D"x_Apple-interchange-newline">
+<div class=3D"" style=3D"margin-top:0px; margin-right:0px; margin-bottom:0p=
+x; margin-left:0px">
+<span class=3D"" style=3D""><b class=3D"">De: </b></span><span class=3D"" s=
+tyle=3D""><a href=3D"mailto:veronica.brechbuhl@grupocem.com.ar" class=3D"">=
+veronica.brechbuhl@grupocem.com.ar</a><br class=3D"">
+</span></div>
+<div class=3D"" style=3D"margin-top:0px; margin-right:0px; margin-bottom:0p=
+x; margin-left:0px">
+<span class=3D"" style=3D""><b class=3D"">Asunto: </b></span><span class=3D=
+"" style=3D""><b class=3D"">FACTURA AGRONEGOCIOS AGROSERVICIOS HUMBOLDT S.A=
+.</b><br class=3D"">
+</span></div>
+<div class=3D"" style=3D"margin-top:0px; margin-right:0px; margin-bottom:0p=
+x; margin-left:0px">
+<span class=3D"" style=3D""><b class=3D"">Fecha: </b></span><span class=3D"=
+" style=3D"">22 de diciembre de 2016, 09:32:49 GMT-3<br class=3D"">
+</span></div>
+<div class=3D"" style=3D"margin-top:0px; margin-right:0px; margin-bottom:0p=
+x; margin-left:0px">
+<span class=3D"" style=3D""><b class=3D"">Para: </b></span><span class=3D""=
+ style=3D""><a href=3D"mailto:acarboni@fapersa.com" class=3D"">acarboni@fap=
+ersa.com</a>,
+<a href=3D"mailto:pagos@fapersa.com" class=3D"">pagos@fapersa.com</a>, <a h=
+ref=3D"mailto:jpruata@fapersa.com" class=3D"">
+jpruata@fapersa.com</a><br class=3D"">
+</span></div>
+<div class=3D"" style=3D"margin-top:0px; margin-right:0px; margin-bottom:0p=
+x; margin-left:0px">
+<span class=3D"" style=3D""><b class=3D"">Responder a: </b></span><span cla=
+ss=3D"" style=3D""><a href=3D"mailto:veronica.brechbuhl@grupocem.com.ar" cl=
+ass=3D"">veronica.brechbuhl@grupocem.com.ar</a><br class=3D"">
+</span></div>
+<br class=3D"">
+<div class=3D""></div>
+</blockquote>
+</div>
+</div>
+</div>
+<div class=3D"" style=3D"word-wrap:break-word">
+<div class=3D"">
+<div>
+<blockquote type=3D"cite" class=3D"">
+<div class=3D""></div>
+</blockquote>
+</div>
+<br class=3D"">
+</div>
+</div>
+</div>
+</body>
+</html>
+
+--_000_BN6PR2001MB097742A1CA75E8FEED6B77F4C3920BN6PR2001MB0977_--

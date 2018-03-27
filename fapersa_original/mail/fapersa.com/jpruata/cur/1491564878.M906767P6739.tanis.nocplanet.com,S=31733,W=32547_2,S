@@ -1,0 +1,814 @@
+Return-Path: <SEMA-CR-1-COBTKAM@bancogalicia.com>
+Delivered-To: JPRUATA@FAPERSA.COM
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id oW67NU5551hTGgAATLP0zA
+	for <JPRUATA@FAPERSA.COM>; Fri, 07 Apr 2017 08:34:38 -0300
+Return-path: <SEMA-CR-1-COBTKAM@bancogalicia.com>
+Envelope-to: JPRUATA@FAPERSA.COM
+Delivery-date: Fri, 07 Apr 2017 08:34:38 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:44524 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.88)
+	(envelope-from <SEMA-CR-1-COBTKAM@bancogalicia.com>)
+	id 1cwSA2-0003AF-3Z
+	for JPRUATA@FAPERSA.COM; Fri, 07 Apr 2017 08:34:38 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id BF0E37F209
+	for <JPRUATA@FAPERSA.COM>; Fri,  7 Apr 2017 08:34:37 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id j9szFpIbVu4X for <JPRUATA@fapersa.com>;
+	Fri,  7 Apr 2017 08:34:35 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 138707F22B; Fri,  7 Apr 2017 08:34:35 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 3D1897F209
+	for <JPRUATA@FAPERSA.COM>; Fri,  7 Apr 2017 08:34:31 -0300 (ART)
+Received-SPF: pass (bancogalicia.com: 161.190.1.77 is authorized to use 'SEMA-CR-1-COBTKAM@bancogalicia.com' in 'mfrom' identity (mechanism 'ip4:161.190.1.0/24' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="SEMA-CR-1-COBTKAM@bancogalicia.com"; helo=mailing04.bancogalicia.com.ar; client-ip=161.190.1.77
+Received: from mailing04.bancogalicia.com.ar (mailing04.bancogalicia.com.ar [161.190.1.77])
+	by fw.fapersa.com (Postfix) with ESMTP id 0CC765FFAF
+	for <JPRUATA@FAPERSA.COM>; Fri,  7 Apr 2017 08:34:28 -0300 (ART)
+Received: from mailing04.bancogalicia.com.ar (unknown [127.0.0.1])
+	by IMSVA (Postfix) with ESMTP id F149A7AD9D
+	for <JPRUATA@FAPERSA.COM>; Fri,  7 Apr 2017 08:34:26 -0300 (ART)
+Received: from APPSBLMKT01.bgcmz.bancogalicia.com.ar (unknown [10.0.25.14])
+	by mailing04.bancogalicia.com.ar (Postfix) with SMTP id A31FF7ABA1
+	for <JPRUATA@FAPERSA.COM>; Fri,  7 Apr 2017 08:34:26 -0300 (ART)
+Date: Fri, 7 Apr 2017 07:02:20 -0300
+To: <JPRUATA@FAPERSA.COM>
+X-Mailer: Siebel 201601281236
+Sender: Quiero! <quiero@bancogalicia.com.ar>
+Subject: Balanza de cocina =?utf-8?q?=C2=A1s=C3=B3lo?= por hoy!
+From: Quiero! <quiero@bancogalicia.com.ar>
+Message-ID: <SEMA-CR-1-COBTKAM@bancogalicia.com>
+Content-Type: text/html;	charset="UTF-8"
+Content-Transfer-Encoding: Quoted-Printable
+X-TM-AS-MML: disable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head><meta charset=3D"ISO-8859-1"><meta name=3D"viewport" content=3D"width=
+=3Ddevice-width"><meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"=
+>
+	<title>Banco Galicia</title>
+	<style type=3D"text/css">.ExternalClass p {
+  MARGIN: 0px;
+}
+.ReadMsgBody {
+  width: 100%
+}
+#outlook a {
+  padding: 0
+}
+html, body {
+  margin: 0 !important;
+  padding: 0;
+  height: 100% !important;
+  width: 100% !important;
+}
+.ExternalClass {
+  width: 100%;
+}
+table, th, td {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+  font-weight: normal;
+}
+table {
+  border-spacing: 0 !important;
+}
+.ExternalClass, .ExternalClass * {
+  line-height: 100%;
+}
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+img {
+  -ms-interpolation-mode: bicubic;
+}
+.yshortcuts a {
+  border-bottom: none !important;
+}
+.mobile-link--footer a {
+  color: #666666 !important;
+}
+img {
+  border: 0 !important;
+  outline: none !important;
+  text-decoration: none !important;
+}
+
+@media screen and (max-device-width: 540px), screen and (max-width: 540px) =
+{
+.email-container {
+  width: 100% !important;
+  max-width: 480px !important;
+}
+img[class=3D"fluid"], img[class=3D"fluid-centered"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: auto !important;
+}
+img[class=3D"fluid2"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 53px !important;
+  margin: auto !important;
+}
+img[class=3D"fluid-centered"] {
+  margin: auto !important;
+}
+th[class=3D"stack-column"], th[class=3D"stack-column-center"] {
+  display: block !important;
+  width: 100% !important;
+  direction: ltr !important;
+}
+th[class=3D"stack-column-center"] {
+  text-align: center !important;
+}
+th[class=3D"data-table-th"] {
+  display: none !important;
+}
+th[class=3D"data-table-th"], th[class=3D"data-table-th-title"] {
+  display: block !important;
+  width: 100% !important;
+  border: 0 !important;
+}
+th[class=3D"data-table-th-title"] {
+  font-weight: bold;
+  color: #333333;
+  padding: 10px 0 0 0 !important;
+  border-top: 2px solid #eeeeee !important;
+}
+th[class=3D"data-table-th"] {
+  padding: 5px 0 0 0 !important;
+}
+th[class=3D"data-table-mobile-divider"] {
+  display: block !important;
+  height: 20px;
+}
+td[class=3D"vertical-1"] {
+  height: 90px;
+  visibility: hidden;
+}
+td[class=3D"invisible"] {
+  visibility: hidden;
+  display: none;
+}
+th[class=3D"invisible-50"] {
+  display: block !important;
+  width: 100% !important;
+  direction: ltr !important;
+  visibility: hidden;
+  display: none;
+  height: 1px;
+}
+}
+	</style>
+</head>
+<body leftmargin=3D"0" marginheight=3D"0" marginwidth=3D"0" style=3D"margin=
+: 0px; padding: 0px; font-family: &quot;Trebuchet MS&quot;, Arial, Helvetic=
+a, sans-serif; -ms-text-size-adjust: none; -webkit-text-size-adjust: none;"=
+ topmargin=3D"0">
+<table bgcolor=3D"#ffffff" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"border-collapse: collapse;" width=3D"100%">
+	<tbody>
+		<tr>
+			<th><!-- Email wrapper : INICIO --><!--[if (gte mso 9)|(IE)]><center><ta=
+ble><tr><td width=3D"550"><![endif]-->
+			<div style=3D"margin: 0px auto; max-width: 550px;">
+			<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ class=3D"email-container" style=3D"margin: auto; width: 100% !important; m=
+ax-width: 550px !important;" width=3D"550">
+				<tbody>
+					<tr>
+						<th style=3D"font-weight: normal;" valign=3D"top"><!-- NOMBRE Y PUBLI=
+CIDAD HOLA :INICIO -->
+						<center>
+						<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"91%"=
+>
+							<tbody>
+								<tr>
+									<td align=3D"left" style=3D"color: rgb(102, 102, 102); line-height=
+: 24px; font-family: &quot;Trebuchet MS&quot;, Arial, Helvetica, sans-serif=
+; font-size: 11px; font-weight: normal;" valign=3D"top" width=3D"50%">Hola =
+JUAN PABLO=
+ =
+RUATA=
+ <img src=3D"http://mailing.bancogalicia.com.ar:80/ctd/tmo?RID=3D=
+1-COBTKAM=
+" width=3D1 height=3D1></td>
+									<td align=3D"right" style=3D"color: rgb(102, 102, 102); line-heigh=
+t: 24px; padding-bottom: 30px; font-family: &quot;Trebuchet MS&quot;, Arial=
+, Helvetica, sans-serif; font-size: 11px; font-weight: normal;" valign=3D"t=
+op" width=3D"50%">PUBLICIDAD</td>
+								</tr>
+							</tbody>
+						</table>
+						</center>
+						<!-- NOMBRE Y PUBLICIDAD HOLA : FIN --><!-- SEGMENTO -- QUIERO MASIVO=
+ :INICIO -->
+
+						<center>
+						<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"91%"=
+>
+							<tbody>
+								<tr bgcolor=3D"#ff6600">
+									<td height=3D"6" style=3D"line-height: 0; font-size: 0px; mso-line=
+-height-alt: 0;">&nbsp;</td>
+									<td height=3D"6" style=3D"line-height: 0; font-size: 0px; mso-line=
+-height-alt: 0;">&nbsp;</td>
+								</tr>
+								<tr>
+									<td height=3D"50" style=3D"text-align: left;" width=3D"50%"><img a=
+lign=3D"left" alt=3D"Quiero!" border=3D"0" height=3D"50" src=3D"http://www.=
+bancogalicia.com/render/get?path=3DBG-MAILING/Catalogo/logo_header_quiero_m=
+asivo.png" style=3D"margin: auto; color: rgb(102, 102, 102); font-size: 14p=
+x; display: block;" width=3D"85" /></td>
+									<td height=3D"50" style=3D"text-align: right;" width=3D"50%"><img =
+align=3D"right" alt=3D"Solo por hoy" border=3D"0" height=3D"50" src=3D"http=
+://www.bancogalicia.com/render/get?path=3DBG-MAILING/Catalogo/logo_header_S=
+xH_masivo.png" style=3D"margin: auto; color: rgb(102, 102, 102); font-size:=
+ 14px; display: block;" width=3D"130" /></td>
+								</tr>
+							</tbody>
+						</table>
+						</center>
+						<!-- SEGMENTO -- QUIERO MASIVO : FIN --><!-- IMAGEN 100% : INICIO -->
+
+						<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+							<tbody>
+								<tr>
+									<td><img align=3D"center" alt=3D"BALANZA DE COCINA KEEP CALM" bord=
+er=3D"0" src=3D"http://www.bancogalicia.com/render/get?path=3DBG-MAILING/20=
+17_04/SxH_Prod01-balanza.jpg" style=3D"margin: auto; width: 100%; text-alig=
+n: center; color: rgb(102, 102, 102); font-family: &quot;Trebuchet MS&quot;=
+, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; display=
+: block; min-width: 300px;" /></td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- IMAGEN 100% : FIN --><!-- DESTACADO : INICIO -->
+
+						<center>
+						<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+							<tbody>
+								<tr>
+									<td height=3D"30" style=3D"font-size: 1px;">&nbsp;</td>
+								</tr>
+								<tr>
+									<td>
+									<center>
+									<table bgcolor=3D"#a59d95" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" width=3D"224">
+										<tbody>
+											<tr>
+												<td height=3D"30" style=3D"text-align: center; color: rgb(255, =
+255, 255); text-transform: uppercase; font-family: &quot;Trebuchet MS&quot;=
+, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: bold;">Vierne=
+s 7 de abril</td>
+											</tr>
+										</tbody>
+									</table>
+									</center>
+									</td>
+								</tr>
+								<tr>
+									<td height=3D"26">&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+						</center>
+						<!-- DESTACADO : FIN --><!-- NOMBRE PRODUCTO Y PUNTOS : INICIO -->
+
+						<center>
+						<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"91%"=
+>
+							<tbody>
+								<tr>
+									<td style=3D"text-align: center; color: rgb(102, 102, 102); text-t=
+ransform: uppercase; line-height: 1; font-family: &quot;Trebuchet MS&quot;,=
+ Arial, Helvetica, sans-serif; font-size: 22px;"><strong>BALANZA DE COCINA =
+KEEP CALM</strong><sup style=3D"font-size: 12px;">(1)</sup></td>
+								</tr>
+								<tr>
+									<td height=3D"26">&nbsp;</td>
+								</tr>
+								<tr>
+									<td style=3D"text-align: center; color: rgb(255, 102, 0); line-hei=
+ght: 1; font-family: &quot;Trebuchet MS&quot;, Arial, Helvetica, sans-serif=
+; font-size: 25px; font-weight: normal;">1.900 puntos</td>
+								</tr>
+								<tr>
+									<td height=3D"14" style=3D"font-size: 5px;">&nbsp;</td>
+								</tr>
+								<tr>
+									<td>
+									<center>
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"2=
+14">
+										<tbody>
+											<tr>
+												<td height=3D"22" style=3D"border-top-color: rgb(255, 102, 0); =
+border-top-width: 1px; border-top-style: solid;">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									</center>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</center>
+						<!-- NOMBRE DE PRODUCTO Y PUNTOS : FIN --><!-- CTA : INICIO -->
+
+						<center>
+						<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"178"=
+>
+							<tbody>
+								<tr>
+									<td height=3D"8" style=3D"font-size: 1px;">&nbsp;</td>
+								</tr>
+								<tr>
+									<td style=3D"height: 35px; text-align: center; line-height: 35px; =
+font-size: 18px;">
+									<div><!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-co=
+m:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" style=3D"height:35=
+px;v-text-anchor:middle;width:178px;" arcsize=3D"10%" stroke=3D"f" fillcolo=
+r=3D"#ff6600"><w:anchorlock/><center><![endif]--><a href=3D"http://www.quie=
+ro.com.ar/Catalogo/Detalle/1-CLATXPL" style=3D"border-radius: 6px; width: 1=
+78px; height: 35px; text-align: center; color: rgb(255, 255, 255); line-hei=
+ght: 35px; font-family: &quot;Trebuchet MS&quot;, Arial, Helvetica, sans-se=
+rif; font-size: 18px; font-weight: normal; text-decoration: none; display: =
+inline-block; background-color: rgb(255, 102, 0); -webkit-text-size-adjust:=
+ none;" target=3D"_blank"><span style=3D"text-align: center; color: rgb(255=
+, 255, 255); line-height: 35px; font-family: &quot;Trebuchet MS&quot;, Aria=
+l, Helvetica, sans-serif; font-size: 18px; display: inline-block;">CANJE=C3=
+=81 AHORA</span></a> <!--[if mso]></center></v:roundrect><![endif]--></div>
+									</td>
+								</tr>
+								<tr>
+									<td height=3D"20" style=3D"font-size: 5px;">&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+						</center>
+						<!-- CTA : FIN --><!-- DESCRIPCI=C3=93N PRODUCTO : INICIO -->
+
+						<center>
+						<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"320"=
+>
+							<tbody>
+								<tr>
+									<td style=3D"text-align: center; color: rgb(109, 111, 113); line-h=
+eight: 21px; font-family: &quot;Trebuchet MS&quot;, Arial, Helvetica, sans-=
+serif; font-size: 13px; font-weight: normal;">Balanza de cocina digital<spa=
+n style=3D"color: rgb(255, 102, 0);">/ </span>Medidas: 20 cm x 20 cm x 1.8 =
+cm<span style=3D"color: rgb(255, 102, 0);"> / </span>Grosor del vidrio temp=
+lado: 4 mm<span style=3D"color: rgb(255, 102, 0);"> / </span>Pantalla LCD: =
+4.4 cm x 2.1 cm<span style=3D"color: rgb(255, 102, 0);"> / </span>Funciona =
+con bater=C3=ADas: 1 x 3 V<span style=3D"color: rgb(255, 102, 0);"> / </spa=
+n> CR2032. Rango de Medici=C3=B3n: 0 =E2=80=93 3 kg</td>
+								</tr>
+								<tr>
+									<td height=3D"24">&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+						</center>
+						<!-- DESCRIPCI=C3=93N PRODUCTO : FIN --><!-- T=C3=8DTULO OTRO BENEFIC=
+IO : INICIO -->
+
+						<center>
+						<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"91%"=
+>
+							<tbody>
+								<tr>
+									<td height=3D"20">&nbsp;</td>
+								</tr>
+								<tr>
+									<td style=3D"text-align: center; color: rgb(102, 102, 102); text-t=
+ransform: uppercase; line-height: 1; font-family: &quot;Trebuchet MS&quot;,=
+ Arial, Helvetica, sans-serif; font-size: 16px; font-weight: normal;"><stro=
+ng>Otros productos para tener la cocina que so=C3=B1=C3=A1s.</strong></td>
+								</tr>
+								<tr>
+									<td height=3D"12">&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+						</center>
+						<!-- T=C3=8DTULO OTRO BENEFICIO : FIN --><!-- PRODUCTOS SECUNDARIOS :=
+ INICIO -->
+
+						<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+							<tbody>
+								<tr>
+									<td class=3D"multi-column" style=3D"text-align: center; padding-ri=
+ght: 0px; padding-left: 0px; font-size: 0px;"><!--[if (gte mso 9)|(IE)]>
+                        <center>
+          			<table width=3D"508" style=3D"border-spacing:0;font-family:san=
+s-serif;color:#333333;">
+          			<tr>
+          			<td width=3D"254" valign=3D"top" style=3D"padding-top:0;paddin=
+g-bottom:0;padding-right:0;padding-left:0;">
+          			<![endif]-->
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"w=
+idth: 100%; color: rgb(51, 51, 51); padding-right: 5px; padding-left: 5px; =
+font-family: sans-serif; vertical-align: top; display: inline-block; max-wi=
+dth: 244px; border-spacing: 0;">
+										<tbody>
+											<tr>
+												<td>
+												<center>
+												<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" width=3D"244">
+													<tbody>
+														<tr>
+															<td bgcolor=3D"#f2f2f2" height=3D"144">
+															<center><img align=3D"center" alt=3D"Set por 6 platos playos=
+ " border=3D"0" height=3D"90" src=3D"http://www.bancogalicia.com/render/get=
+?path=3DBG-MAILING/2017_04/SxH_Prod02_platoplayo.jpg" style=3D"margin: auto=
+; color: rgb(102, 102, 102); font-size: 15px; display: block;" width=3D"132=
+" /></center>
+															</td>
+														</tr>
+														<tr>
+															<td height=3D"8" style=3D"line-height: 0; font-size: 0px; ms=
+o-line-height-alt: 0;">&nbsp;</td>
+														</tr>
+														<tr>
+															<td style=3D"text-align: center; color: rgb(102, 102, 102); =
+line-height: 1.2; font-family: &quot;Trebuchet MS&quot;, Arial, Helvetica, =
+sans-serif; font-size: 15px; font-weight: normal;">Set por 6 platos playos =
+<sup style=3D"font-size: 9px;">(2)</sup></td>
+														</tr>
+														<tr>
+															<td style=3D"text-align: center; color: rgb(102, 102, 102); =
+line-height: 1.2; font-family: &quot;Trebuchet MS&quot;, Arial, Helvetica, =
+sans-serif; font-size: 16px; font-weight: bold;">2.600 puntos</td>
+														</tr>
+														<tr>
+															<td height=3D"8" style=3D"line-height: 0; font-size: 0px; ms=
+o-line-height-alt: 0;">&nbsp;</td>
+														</tr>
+														<tr>
+															<td>
+															<center>
+															<table align=3D"center" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0">
+																<tbody>
+																	<tr>
+																		<td style=3D"text-align: center; line-height: 25px; font-=
+size: 14px;">
+																		<div><!--[if mso]>
+                                        <v:roundrect xmlns:v=3D"urn:schemas=
+-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word"=20
+                                        style=3D"height:30px;v-text-anchor:=
+middle;width:140px;" arcsize=3D"15%" stroke=3D"f" fillcolor=3D"#FF6600">
+                                        <w:anchorlock/><center><![endif]-->=
+<a href=3D"http://www.quiero.com.ar/Catalogo/Detalle/1-87I325S/" style=3D"b=
+order-radius: 4px; width: 140px; text-align: center; color: rgb(255, 255, 2=
+55); line-height: 25px; font-family: &quot;Trebuchet MS&quot;, Arial, Helve=
+tica, sans-serif; font-size: 14px; font-weight: normal; text-decoration: no=
+ne; display: inline-block; background-color: rgb(255, 102, 0); -webkit-text=
+-size-adjust: none;" target=3D"_blank"><span style=3D"height: 25px; text-al=
+ign: center; color: rgb(255, 255, 255); line-height: 25px; font-family: &qu=
+ot;Trebuchet MS&quot;, Arial, Helvetica, sans-serif; font-size: 14px; displ=
+ay: inline-block;">CANJE=C3=81 AHORA</span></a> <!--[if mso]></center></v:r=
+oundrect><![endif]--></div>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td style=3D"line-height: 1; font-size: 18px;">&nbsp;</td=
+>
+																	</tr>
+																</tbody>
+															</table>
+															</center>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</center>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<!--[if (gte mso 9)|(IE)]>
+        			    </td><td width=3D"254" valign=3D"top" style=3D"padding-top:0=
+;padding-bottom:0;padding-right:0;padding-left:0;">
+        			    <![endif]-->
+
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"w=
+idth: 100%; color: rgb(51, 51, 51); padding-right: 5px; padding-left: 5px; =
+font-family: sans-serif; vertical-align: top; display: inline-block; max-wi=
+dth: 244px; border-spacing: 0;">
+										<tbody>
+											<tr>
+												<td>
+												<center>
+												<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" width=3D"244">
+													<tbody>
+														<tr>
+															<td bgcolor=3D"#f2f2f2" height=3D"144">
+															<center><img align=3D"center" alt=3D"Set por 6 platos para p=
+ostre " border=3D"0" height=3D"110" src=3D"http://www.bancogalicia.com/rend=
+er/get?path=3DBG-MAILING/2017_04/SxH_Prod03_platopostre.jpg" style=3D"margi=
+n: auto; color: rgb(102, 102, 102); font-size: 15px; display: block;" width=
+=3D"132" /></center>
+															</td>
+														</tr>
+														<tr>
+															<td height=3D"8" style=3D"line-height: 0; font-size: 0px; ms=
+o-line-height-alt: 0;">&nbsp;</td>
+														</tr>
+														<tr>
+															<td style=3D"text-align: center; color: rgb(102, 102, 102); =
+line-height: 1.2; font-family: &quot;Trebuchet MS&quot;, Arial, Helvetica, =
+sans-serif; font-size: 15px; font-weight: normal;">Set por 6 platos para po=
+stre <sup style=3D"font-size: 9px;">(2)</sup></td>
+														</tr>
+														<tr>
+															<td style=3D"text-align: center; color: rgb(102, 102, 102); =
+line-height: 1.2; font-family: &quot;Trebuchet MS&quot;, Arial, Helvetica, =
+sans-serif; font-size: 16px; font-weight: bold;">2.200 puntos</td>
+														</tr>
+														<tr>
+															<td height=3D"8" style=3D"line-height: 0; font-size: 0px; ms=
+o-line-height-alt: 0;">&nbsp;</td>
+														</tr>
+														<tr>
+															<td>
+															<center>
+															<table align=3D"center" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0">
+																<tbody>
+																	<tr>
+																		<td style=3D"text-align: center; line-height: 25px; font-=
+size: 14px;">
+																		<div><!--[if mso]>
+                                        <v:roundrect xmlns:v=3D"urn:schemas=
+-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word"=20
+                                        style=3D"height:30px;v-text-anchor:=
+middle;width:140px;" arcsize=3D"15%" stroke=3D"f" fillcolor=3D"#FF6600">
+                                        <w:anchorlock/><center><![endif]-->=
+<a href=3D"http://www.quiero.com.ar/Catalogo/Detalle/1-87I324T/" style=3D"b=
+order-radius: 4px; width: 140px; text-align: center; color: rgb(255, 255, 2=
+55); line-height: 25px; font-family: &quot;Trebuchet MS&quot;, Arial, Helve=
+tica, sans-serif; font-size: 14px; font-weight: normal; text-decoration: no=
+ne; display: inline-block; background-color: rgb(255, 102, 0); -webkit-text=
+-size-adjust: none;" target=3D"_blank"><span style=3D"height: 25px; text-al=
+ign: center; color: rgb(255, 255, 255); line-height: 25px; font-family: &qu=
+ot;Trebuchet MS&quot;, Arial, Helvetica, sans-serif; font-size: 14px; displ=
+ay: inline-block;">CANJE=C3=81 AHORA</span></a> <!--[if mso]></center></v:r=
+oundrect><![endif]--></div>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td style=3D"line-height: 1; font-size: 18px;">&nbsp;</td=
+>
+																	</tr>
+																</tbody>
+															</table>
+															</center>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</center>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<!--[if (gte mso 9)|(IE)]>
+        			    </td>
+        			    </tr>
+        			    </table>
+                          </center>
+        			    <![endif]--></td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- PRODUCTOS SECUNDARIOS : FIN --><!-- M=C3=93DULO VENCIMIENTO DE P=
+UNTOS MASIVO: INICIO -->
+
+						<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+							<tbody>
+								<tr>
+									<td height=3D"10" style=3D"font-size: 1px;">&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<center>
+						<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"bord=
+er: 2px solid rgb(235, 236, 237); border-image: none;" width=3D"91%">
+							<tbody>
+								<tr>
+									<td>
+									<center>
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"9=
+6%">
+										<tbody>
+											<tr>
+												<td height=3D"9" style=3D"font-size: 1px;">&nbsp;</td>
+											</tr>
+											<tr>
+												<td>
+												<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" height=
+=3D"44" width=3D"100%">
+													<tbody>
+														<tr>
+															<td width=3D"33%">
+															<center><img align=3D"center" alt=3D"!" height=3D"49" src=3D=
+"http://www.bancogalicia.com/render/get?path=3DBG-MAILING/2017_04/icono_exc=
+lamacion_masivo.png" style=3D"border: 0px currentColor; border-image: none;=
+ color: rgb(102, 102, 102); font-size: 14px; display: inline-block;" width=
+=3D"49" /></center>
+															</td>
+															<td style=3D"text-align: left; color: rgb(109, 110, 113); li=
+ne-height: 22px; font-family: &quot;Trebuchet MS&quot;, Arial, Helvetica, s=
+ans-serif; font-size: 18px;" width=3D"60%">Record=C3=A1 que ten=C3=A9s =
+2827=
+ puntos que vencen el =
+18/10/2017=
+</td>
+															<td width=3D"4%">&nbsp;</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+											<tr>
+												<td height=3D"9" style=3D"font-size: 1px;">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									</center>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</center>
+
+						<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+							<tbody>
+								<tr>
+									<td height=3D"10" style=3D"font-size: 1px;">&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- M=C3=93DULO VENCIMIENTO DE PUNTOS MASIVO: FIN --><!-- ESPACIADOR=
+ : INICIO -->
+
+						<center>
+						<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+">
+							<tbody>
+								<tr>
+									<td height=3D"26">&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+						</center>
+						<!-- ESPACIADOR : FIN --><!-- FOOTER - MASIVO : INICIO -->
+
+						<table bgcolor=3D"#eeeeee" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%">
+							<tbody>
+								<tr>
+									<td height=3D"16" style=3D"line-height: 1; font-size: 16px;">&nbsp=
+;</td>
+								</tr>
+								<tr>
+									<td>
+									<center>
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"9=
+1%">
+										<tbody>
+											<tr>
+												<td style=3D"min-width: 120px !important;" width=3D"28%"><a alt=
+=3D"Banco Galicia" href=3D"http://www.bancogalicia.com/banca/online/web/Per=
+sonas" target=3D"_blank"><img alt=3D"Banco Galicia" height=3D"39" src=3D"ht=
+tp://www.bancogalicia.com/render/get?path=3DBG-MAILING/Catalogo/logo_galici=
+a_footer_masivo.png" style=3D"margin: auto; border: currentColor; border-im=
+age: none; height: auto; color: rgb(102, 102, 102); font-size: 14px; displa=
+y: block;" width=3D"141" /></a></td>
+												<td align=3D"right"><span style=3D"text-align: right; color: rg=
+b(102, 102, 102); font-family: &quot;Trebuchet MS&quot;, Arial, Helvetica, =
+sans-serif; font-size: 11px;">SEGUINOS EN:</span></td>
+												<td width=3D"2%">&nbsp;</td>
+												<td style=3D"min-width: 30px !important;" width=3D"7%"><a href=
+=3D"https://www.facebook.com/bancogalicia" target=3D"_blank" title=3D"Faceb=
+ook Galicia"><img alt=3D"Facebook" height=3D"37" src=3D"http://www.bancogal=
+icia.com/render/get?path=3DBG-MAILING/Catalogo/icono_footer_fb.png" style=
+=3D"margin: auto; border: currentColor; border-image: none; height: auto; d=
+isplay: block;" width=3D"37" /></a></td>
+												<td width=3D"2%">&nbsp;</td>
+												<td style=3D"min-width: 30px !important;" width=3D"7%"><a href=
+=3D"https://twitter.com/bancogalicia" target=3D"_blank" title=3D"Twitter Ga=
+licia"><img alt=3D"Twitter" height=3D"37" src=3D"http://www.bancogalicia.co=
+m/render/get?path=3DBG-MAILING/Catalogo/icono_footer_tw.png" style=3D"margi=
+n: auto; border: currentColor; border-image: none; height: auto; display: b=
+lock;" width=3D"37" /></a></td>
+											</tr>
+										</tbody>
+									</table>
+									</center>
+									</td>
+								</tr>
+								<tr>
+									<td height=3D"16" style=3D"line-height: 1; font-size: 16px;">&nbsp=
+;</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- FOOTER - MASIVO : FIN --><!-- LEGALES : INICIO -->
+
+						<center>
+						<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"98%"=
+>
+							<tbody>
+								<tr>
+									<td>&nbsp;</td>
+								</tr>
+								<!-- LEGALES DE LA PROMO --- REEMPLAZAR O BORRAR!!!! : INICIO -->
+								<tr>
+									<td style=3D"text-align: justify; color: rgb(102, 102, 102); line-=
+height: 16px; font-family: &quot;Trebuchet MS&quot;, Arial, Helvetica, sans=
+-serif; font-size: 11px; font-weight: normal;">(1)Promoci=C3=B3n v=C3=A1lid=
+a el 07/04/2017 =C3=B3 hasta agotar el stock de 1.000 unidades (lo que suce=
+da primero). El art=C3=ADculo canjeado ser=C3=A1 entregado en el domicilio =
+que indiques al momento de realizar tu canje, dentro de los 10 d=C3=ADas h=
+=C3=A1biles para Capital Federal y Gran Buenos Aires, y 15 d=C3=ADas h=C3=
+=A1biles para el interior del pa=C3=ADs. Las entregas se realizan de lunes =
+a viernes, de 8 a 20 hs. En caso de que el cliente no se encuentre o no hay=
+a nadie en el domicilio de entrega se le deja un aviso de visita con todos =
+los datos de su canje, como asi tambi=C3=A9n todos los datos del Correo par=
+a poder contactarse.<br />
+									(2) Beneficios disponibles para canjes de puntos realizados desde =
+el 07/04/2017 hasta el 31/12/2017 =C3=B3 hasta agotar el stock informado en=
+ cada beneficio. Al momento de realizar el canje recibir=C3=A1 la informaci=
+=C3=B3n de contacto del proveedor con el cual deber=C3=A1 coordinar la entr=
+ega del producto.<br />
+									Si no desea recibir m=C3=A1s promociones, responda este mensaje co=
+n el t=C3=ADtulo "Eliminar" Se deja expresa constancia que Ud. podr=C3=A1 e=
+jercer su derecho de retiro o bloqueo total o parcial de su nombre en nuest=
+ra base de datos, mediante formal a entregar en cualquiera de nuestras sucu=
+rsales. Para mejor comprensi=C3=B3n, se transcriben: 1) Art=C3=ADculo 27, i=
+nc. 3ro. de la 25326: (Archivos, registros o bancos de datos con fines de p=
+ublicidad).3. El titular podr=C3=A1 en cualquier momento solicitar el retir=
+o bloqueo de su nombre de los bancos de datos a los que se refiere el prese=
+nte art=C3=ADculo; y 2) Art=C3=ADculo 27 - Anexo I - Decreto 1558/01: En to=
+da comunicaci=C3=B3n con fines de publicidad que se realice por correo, tel=
+=C3=A9fono, correo electr=C3=B3nico, Internet u otro medio a distancia a co=
+nocer, se deber=C3=A1 indicar, en forma expresa y destacada, la posibilidad=
+ del titular del dato de solicitar el retiro o bloqueo, total o parcial, de=
+ su nombre de la base de datos. A pedido del interesado, se deber=C3=A1 inf=
+ormar el nombre del responsable o usuario del banco de datos que provey=C3=
+=B3 la informaci=C3=B3n. Recordatorio de seguridad: En Banco Galicia manten=
+emos estrictas normas de seguridad y procedimientos para prevenir el acceso=
+ no autorizado a toda informaci=C3=B3n relacionada con usted. Adem=C3=A1s, =
+fuera del proceso standard de acceso a Galicia Online Banking, Banco Galici=
+a nunca lo contactar=C3=A1 (por mail, tel=C3=A9fono u otros medios) para va=
+lidar informaci=C3=B3n personal tal como: n=C3=BAmero de documento, claves =
+de acceso, n=C3=BAmeros de la tarjeta de coordenadas o n=C3=BAmero de cuent=
+a. Si usted recibe un requerimiento de este tipo comun=C3=ADquese de inmedi=
+ato al 011-6329-6585, donde ser=C3=A1 asesorado convenientemente.</td>
+								</tr>
+								<!-- LEGALES DE LA PROMO --- REEMPLAZAR O BORRAR!!!! : FIN --><!-- =
+LEGALES DEL BANCO --- NO BORRAR!!!!!! : INICIO -->
+								<tr>
+									<td style=3D"text-align: justify; color: rgb(102, 102, 102); line-=
+height: 16px; font-family: &quot;Trebuchet MS&quot;, Arial, Helvetica, sans=
+-serif; font-size: 11px; font-weight: normal;">&nbsp;</td>
+								</tr>
+								<!-- LEGALES DEL BANCO --- NO BORRAR!!!!!! : INICIO -->
+								<tr>
+									<td height=3D"20">&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+						</center>
+						<!-- LEGALES : FIN --></th>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+			<!--[if mso]></td></tr></table></center><![endif]--><!-- Email wrapper :=
+ FIN --></th>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

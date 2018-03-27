@@ -1,0 +1,3600 @@
+Return-Path: <vrearte@pluscargocordoba.com.ar>
+Delivered-To: rdopazo@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id WeYyNMPr51i6KAAATLP0zA
+	for <rdopazo@fapersa.com>; Fri, 07 Apr 2017 16:42:59 -0300
+Return-path: <vrearte@pluscargocordoba.com.ar>
+Envelope-to: rdopazo@fapersa.com
+Delivery-date: Fri, 07 Apr 2017 16:42:59 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:48660 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.88)
+	(envelope-from <vrearte@pluscargocordoba.com.ar>)
+	id 1cwZmb-0003OJ-St
+	for rdopazo@fapersa.com; Fri, 07 Apr 2017 16:42:59 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 3B7C57F229
+	for <rdopazo@fapersa.com>; Fri,  7 Apr 2017 16:42:58 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id HvSNWlRSFXGT for <rdopazo@fapersa.com>;
+	Fri,  7 Apr 2017 16:42:56 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id B3A177F230; Fri,  7 Apr 2017 16:42:56 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 0BE447F229
+	for <rdopazo@fapersa.com>; Fri,  7 Apr 2017 16:42:55 -0300 (ART)
+Received-SPF: pass (pluscargocordoba.com.ar: Sender is authorized to use 'vrearte@pluscargocordoba.com.ar' in 'mfrom' identity (mechanism 'include:_spf.google.com' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="vrearte@pluscargocordoba.com.ar"; helo=mail-lf0-f54.google.com; client-ip=209.85.215.54
+Received: from mail-lf0-f54.google.com (mail-lf0-f54.google.com [209.85.215.54])
+	by fw.fapersa.com (Postfix) with ESMTPS id 3ED685FFD0
+	for <rdopazo@fapersa.com>; Fri,  7 Apr 2017 16:42:51 -0300 (ART)
+Received: by mail-lf0-f54.google.com with SMTP id s141so11563180lfe.3
+        for <rdopazo@fapersa.com>; Fri, 07 Apr 2017 12:42:50 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=pluscargocordoba-com-ar.20150623.gappssmtp.com; s=20150623;
+        h=from:references:in-reply-to:mime-version:thread-index:date
+         :message-id:subject:to;
+        bh=qmUCKXkbEg7iXrboX20Agwv1LMH0LyFqOMsowgomINY=;
+        b=Tx5nUgZxfXH5tW+LLPG8hVaMLhXUusu6WeMfrTyCbucRbXb7xQs5Dci6lOpFPk78dK
+         svpp1MwXSmC9g/gRF9kSHXD9nF6M1rrPw69axGmRugLo3mWZKNN1L1uBX24ZRsKwRN+Y
+         p/yF7Cz4MqEeWfRRHoubcAq5uDpbwkV+9uZ3h0cymlJ4BRc7cpWTMX3D0zeeB8rX83TA
+         U6fiem2CJejf2pZPdymCDrPPKWE2hswJ1aBCi7qAWdv31zt/B5V5Nz+28a0Kn2uXQWwX
+         R2EAPFjKZB9mg7OSwlySsH1aTAXMzeRSMsXzB3Tc5tEZkshgrxbIS+jgn29cqyURrQYD
+         dpew==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:from:references:in-reply-to:mime-version
+         :thread-index:date:message-id:subject:to;
+        bh=qmUCKXkbEg7iXrboX20Agwv1LMH0LyFqOMsowgomINY=;
+        b=TpkvlHMpdX59ihQd9URQY5xrDqjuG9m2nyqX9DMympgFonWy1OKiLUHV+kG5ldJlJS
+         RcqQStzuFIVAgQeqoIl65at/ftdQ0QsJGH7baM/Qqu7axjB9fFhMJrhGCBQqL20XwWI6
+         NC1s/umkztSxcm2KZd88TFWXvF3wQ8cE0F0Z7S4YGbzLRBeMcBQa+VV+i6sCu6JFOe6M
+         BV7ZG4w97x1Uxg0pdvjUl3G7pmQBXIuxpEdnWom4Z2NKADralM5y2taZdOKYFveWqoQM
+         j8Zxq6jS2d8wZnS7t0cb/DBCimvzGn4AeeTsVcSKJ8LTmvG92QVRsV+84aVEwz3lGNsS
+         puMw==
+X-Gm-Message-State: AFeK/H1zjJM+0Lcwaz7Aq/Z9IqvkTxFN2suJQSAad78Dz07TQU6wkIr+zcYDlU5XU0f+1GovZBpeZRJqtOTOoTkN
+X-Received: by 10.46.21.76 with SMTP id 12mr12838782ljv.98.1491594166976; Fri,
+ 07 Apr 2017 12:42:46 -0700 (PDT)
+From: Vanesa Rearte <vrearte@pluscargocordoba.com.ar>
+References: <908914B5BA004EDEAF8700DCF5704BF2@faprd> <58DBD8E2.1040900@fapersa.com>
+ <58DBFBBE.5050708@fapersa.com> <23040491834efba3aad99ef6d6815a9f@mail.gmail.com>
+ <58E24354.8070702@fapersa.com> <MWHPR20MB1647DACE8F8BB0B4164F0707D4080@MWHPR20MB1647.namprd20.prod.outlook.com>
+ <c4a5650aee401db1edbff035d1242bc2@mail.gmail.com> <58E3C150.7030009@fapersa.com>
+ <MWHPR20MB16478B19B34267F7AA51FAB3D40B0@MWHPR20MB1647.namprd20.prod.outlook.com>
+ <4485671c64c8a78ebedcccc154bd9a05@mail.gmail.com> <58E5385E.5070404@fapersa.com>
+ <1c6b858d704a3fd381b2d0e4252f0d94@mail.gmail.com> <58E53CEE.5010000@fapersa.com>
+ <4905b0cf735fa939977a1a28733589d7@mail.gmail.com> <58E542F1.5000009@fapersa.com>
+ <c8942f69617cada17fa66aa6d85d6bd5@mail.gmail.com> <08FE0949E11D43CF9BB5A561DC8B6A23@faprd>
+ <24a4ec97cf82c8ea3741adc5bafed801@mail.gmail.com> <58E78AC2.3080005@fapersa.com>
+ <bec9d5b5a946765ab522dc0820f75afe@mail.gmail.com> <58E7B9E4.3050703@fapersa.com>
+ <db4f0212395a39f3a66ec3af699793b9@mail.gmail.com> <58E7EB54.50204@fapersa.com >
+In-Reply-To: <58E7EB54.50204@fapersa.com>
+MIME-Version: 1.0
+X-Mailer: Microsoft Outlook 14.0
+Thread-Index: AQJilwUJMIhg+eot/3Ec5+Myx9K4/wGdGijJAXtVrjABKQ2UrQIAvh4DAdHz0AMClgU9PgJ0CL36Ajz+4AEA35X3VgKFfO2HAy69jJQCbnVxFQKGozYAArogI3cCCu9nJgKoVpT3AdZSoHoCW6AaRQFygYlTAU0unegDKjH9hgJ4U4AZnyNSTQA=
+Date: Fri, 7 Apr 2017 16:42:20 -0300
+Message-ID: <572f985f5c614f3768fd748baf064c8b@mail.gmail.com>
+Subject: RE: AVISO DE LLEGADA DE CARGA - Ref.: 13477; Shipper: WENZHOU RUIMING
+ INDUSTRIAL CO., LTD; Consignee: FAPERSA ICSA; Vessel: CAP SAN VINCENT/
+To: Marcela Triszcz <comext@fapersa.com>, 
+	Agustin Cocciolo <acocciolo@pluscargocordoba.com.ar>, Roberto Dopazo <rdopazo@fapersa.com>
+Content-Type: multipart/related; boundary=f403045f7568790a04054c98d491
+
+--f403045f7568790a04054c98d491
+Content-Type: multipart/alternative; boundary=f403045f75687909ff054c98d490
+
+--f403045f75687909ff054c98d490
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hola Marcela,
+
+Ya los pedimos de nuevo.
+
+En cuanto tengamos la informaci=C3=B3n te la envio.
+
+Te mantengo al tanto.
+
+Saludos,
+
+
+
+
+
+
+
+
+
+[image: Descripci=C3=B3n: cid:image001.jpg@01CE344E.B86A7100]
+
+
+
+* Vanesa Rearte*
+
+ Customer Service
+
+ San Jer=C3=B3nimo 177  - Piso 6 Of. A
+
+ (5000) C=C3=B3rdoba - Argentina
+
+  Phone: + 54 351 4234670/77 Lin. Rot.
+
+  Web: www.gruporas.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Visite nuestro video corporativo...
+
+PLUSCARGO CORDOBA "GRUPO RAS" - VIDEO INSTITUCIONAL
+<http://m.youtube.com/watch?v=3DNYqo0dO6o6U&desktop_uri=3D%2Fwatch%3Fv%3DNY=
+qo0dO6o6U>
+
+
+
+*De:* Marcela Triszcz [mailto:comext@fapersa.com]
+*Enviado el:* viernes, 07 de abril de 2017 16:41
+*Para:* Agustin Cocciolo; Roberto Dopazo; Vanesa Rearte
+*Asunto:* Re: AVISO DE LLEGADA DE CARGA - Ref.: 13477; Shipper: WENZHOU
+RUIMING INDUSTRIAL CO., LTD; Consignee: FAPERSA ICSA; Vessel: CAP SAN
+VINCENT/
+
+
+
+Agustin
+Necesito los datos.
+nombre, DNI chofer
+patente
+rastreo.
+Saludos
+
+
+
+Marcela Triszcz
+
+Compras / Comercio Exterior
+
+Tel: +54 342 4810810
+
+Lamadrid 3065
+
+CP 3000 Santa Fe, Argentina.
+
+comext@fapersa.com
+
+El 07/04/2017 a las 01:12 p.m., Agustin Cocciolo escribi=C3=B3:
+
+Hola Marcela
+
+por la tarde los vamos a tener y te los paso
+
+
+
+SALUDOS
+
+
+
+
+
+
+
+*Agustin Cocciolo *
+
+ Customer Service
+
+ San Jer=C3=B3nimo 177  - Piso 6 Of. A
+
+ (5000) C=C3=B3rdoba - Argentina
+
+  Phone: + 54 351 4234670/77
+
+  Cel:  +54 351 154-022063
+
+acocciolo@pluscargocordoba.com.ar
+
+ *Nuevo **Nextel: 674*1379*
+
+  Web: www.gruporas.com
+
+
+
+
+
+[image: cid:024601ca2ac7$24d9c330$0300a8c0@cathy]
+
+
+
+*De:* Marcela Triszcz [mailto:comext@fapersa.com]
+*Enviado el:* viernes, 07 de abril de 2017 13:10
+*Para:* Agustin Cocciolo; Roberto Dopazo; Vanesa Rearte
+*Asunto:* Re: AVISO DE LLEGADA DE CARGA - Ref.: 13477; Shipper: WENZHOU
+RUIMING INDUSTRIAL CO., LTD; Consignee: FAPERSA ICSA; Vessel: CAP SAN
+VINCENT/
+
+
+
+Agustin:
+
+Tendr=C3=A1s los datos del chofer y cami=C3=B3n?
+
+Vane:
+Ten=C3=A9s la certificaci=C3=B3n de flete?
+Saludos
+
+
+Marcela Triszcz
+
+Compras / Comercio Exterior
+
+Tel: +54 342 4810810
+
+Lamadrid 3065
+
+CP 3000 Santa Fe, Argentina.
+
+comext@fapersa.com
+
+El 07/04/2017 a las 10:11 a.m., Agustin Cocciolo escribi=C3=B3:
+
+Vane
+
+la envia
+
+
+
+
+
+
+
+*Agustin Cocciolo *
+
+ Customer Service
+
+ San Jer=C3=B3nimo 177  - Piso 6 Of. A
+
+ (5000) C=C3=B3rdoba - Argentina
+
+  Phone: + 54 351 4234670/77
+
+  Cel:  +54 351 154-022063
+
+acocciolo@pluscargocordoba.com.ar
+
+ *Nuevo **Nextel: 674*1379*
+
+  Web: www.gruporas.com
+
+
+
+
+
+[image: cid:024601ca2ac7$24d9c330$0300a8c0@cathy]
+
+
+
+*De:* Marcela Triszcz [mailto:comext@fapersa.com]
+*Enviado el:* viernes, 07 de abril de 2017 9:49
+*Para:* Agustin Cocciolo; Roberto Dopazo
+*Asunto:* Re: AVISO DE LLEGADA DE CARGA - Ref.: 13477; Shipper: WENZHOU
+RUIMING INDUSTRIAL CO., LTD; Consignee: FAPERSA ICSA; Vessel: CAP SAN
+VINCENT/
+
+
+
+Buen dia Agustin.
+
+Buenisimo.
+Por favor enviar certificaci=C3=B3n de flete tambi=C3=A9n y confirmar apena=
+s puedas
+los datos del chofer y cami=C3=B3n.
+Desde ya muchas gracias.
+Saludos.
+
+Marcela Triszcz
+
+Compras / Comercio Exterior
+
+Tel: +54 342 4810810
+
+Lamadrid 3065
+
+CP 3000 Santa Fe, Argentina.
+
+comext@fapersa.com
+
+El 07/04/2017 a las 09:45 a.m., Agustin Cocciolo escribi=C3=B3:
+
+Roberto
+
+asi es
+
+en breve envio el CRT
+
+
+
+
+
+
+
+*Agustin Cocciolo *
+
+ Customer Service
+
+ San Jer=C3=B3nimo 177  - Piso 6 Of. A
+
+ (5000) C=C3=B3rdoba - Argentina
+
+  Phone: + 54 351 4234670/77
+
+  Cel:  +54 351 154-022063
+
+acocciolo@pluscargocordoba.com.ar
+
+ *Nuevo **Nextel: 674*1379*
+
+  Web: www.gruporas.com
+
+
+
+
+
+[image: cid:024601ca2ac7$24d9c330$0300a8c0@cathy]
+
+
+
+*De:* Roberto Dopazo [mailto:rdopazo@fapersa.com]
+*Enviado el:* viernes, 07 de abril de 2017 8:59
+*Para:* Agustin Cocciolo
+*CC:* Marcela Triszcz
+*Asunto:* Re: AVISO DE LLEGADA DE CARGA - Ref.: 13477; Shipper: WENZHOU
+RUIMING INDUSTRIAL CO., LTD; Consignee: FAPERSA ICSA; Vessel: CAP SAN
+VINCENT/
+
+
+
+Buen d=C3=ADa Agust=C3=ADn..
+
+Cargan hoy en Montevideo..?
+
+Abrazo.
+
+Roberto Dopazo
+
+Departamento de Compras
+
+Tel: +54 342 4810810
+
+Lamadrid 3065
+
+CP 3000 Santa Fe, Argentina.
+
+rdopazo@fapersa.com
+
+----- Original Message -----
+
+*From:* Agustin Cocciolo <acocciolo@pluscargocordoba.com.ar>
+
+*To:* Marcela Triszcz <comext@fapersa.com> ; Estudio De Lorenzo
+<estudiodelorenzo@hotmail.com>
+
+*Cc:* Dopazo <rdopazo@fapersa.com> ; Andr=C3=A9s Carboni <acarboni@fapersa.=
+com>
+; Vanesa Rearte <vrearte@pluscargocordoba.com.ar>
+
+*Sent:* Wednesday, April 05, 2017 4:32 PM
+
+*Subject:* RE: AVISO DE LLEGADA DE CARGA - Ref.: 13477; Shipper: WENZHOU
+RUIMING INDUSTRIAL CO., LTD; Consignee: FAPERSA ICSA; Vessel: CAP SAN
+VINCENT/
+
+
+
+Marcela
+
+por favor comprender que no es mala predisposicion ni falta de
+incumplimiento. Solo que una carga consolidada por su condici=C3=B3n depend=
+e de
+otras para poder ser trasladada.
+
+Generalmente cumplimos con la previsi=C3=B3n que siempre manejamos, por esa
+motivo siempre comento que todo es estimado cuando damos fechas.
+
+
+
+
+
+De todos modos, estoy consiguiendo poder armar el camion
+
+
+
+te aviso como sigue.
+
+
+
+
+
+
+
+*Agustin Cocciolo *
+
+ Customer Service
+
+ San Jer=C3=B3nimo 177  - Piso 6 Of. A
+
+ (5000) C=C3=B3rdoba - Argentina
+
+  Phone: + 54 351 4234670/77
+
+  Cel:  +54 351 154-022063
+
+acocciolo@pluscargocordoba.com.ar
+
+ *Nuevo **Nextel: 674*1379*
+
+  Web: www.gruporas.com
+
+
+
+
+
+[image: cid:024601ca2ac7$24d9c330$0300a8c0@cathy]
+
+
+
+*De:* Marcela Triszcz [mailto:comext@fapersa.com]
+*Enviado el:* mi=C3=A9rcoles, 05 de abril de 2017 16:18
+*Para:* Agustin Cocciolo; Estudio De Lorenzo
+*CC:* Dopazo; Andr=C3=A9s Carboni; Vanesa Rearte
+*Asunto:* Re: AVISO DE LLEGADA DE CARGA - Ref.: 13477; Shipper: WENZHOU
+RUIMING INDUSTRIAL CO., LTD; Consignee: FAPERSA ICSA; Vessel: CAP SAN
+VINCENT/
+
+
+
+Agustin:
+Si por favor una soluci=C3=B3n viable, mas conociendo nuestra urgencia expr=
+esada
+con mucha anticipaci=C3=B3n,  en tener la carga el lunes.
+Saludos.
+
+Marcela Triszcz
+
+Compras / Comercio Exterior
+
+Tel: +54 342 4810810
+
+Lamadrid 3065
+
+CP 3000 Santa Fe, Argentina.
+
+comext@fapersa.com
+
+El 05/04/2017 a las 03:54 p.m., Agustin Cocciolo escribi=C3=B3:
+
+Marcela
+
+estoy viendo la alternativa mas viable
+
+
+
+en este caso seria un exclusivo para un carga menor de 9 mentros
+
+
+
+los exclusivos anteriores salen con mas cargas y los costos se pueden
+prorratear de otro modo.
+
+
+
+
+
+Dame hasta el final del dia si consigo juntar carga, anticipo que va a ser
+complicado.
+
+
+
+
+
+
+
+*Agustin Cocciolo *
+
+ Customer Service
+
+ San Jer=C3=B3nimo 177  - Piso 6 Of. A
+
+ (5000) C=C3=B3rdoba - Argentina
+
+  Phone: + 54 351 4234670/77
+
+  Cel:  +54 351 154-022063
+
+acocciolo@pluscargocordoba.com.ar
+
+ *Nuevo **Nextel: 674*1379*
+
+  Web: www.gruporas.com
+
+
+
+
+
+[image: cid:024601ca2ac7$24d9c330$0300a8c0@cathy]
+
+
+
+*De:* Marcela Triszcz [mailto:comext@fapersa.com]
+*Enviado el:* mi=C3=A9rcoles, 05 de abril de 2017 15:53
+*Para:* Agustin Cocciolo; Estudio De Lorenzo
+*CC:* Dopazo; Andr=C3=A9s Carboni; Vanesa Rearte
+*Asunto:* Re: AVISO DE LLEGADA DE CARGA - Ref.: 13477; Shipper: WENZHOU
+RUIMING INDUSTRIAL CO., LTD; Consignee: FAPERSA ICSA; Vessel: CAP SAN
+VINCENT/
+
+
+
+
+Agustin:
+Por favor fijate que podes hacer y esperamos tus novedades para una decisi=
+=C3=B3n
+Desde ya que nunca pagamos un exclusivo mas de USD 1400 no se por que decis
+USD 1800
+Saludos.
+
+Marcela Triszcz
+
+Compras / Comercio Exterior
+
+Tel: +54 342 4810810
+
+Lamadrid 3065
+
+CP 3000 Santa Fe, Argentina.
+
+comext@fapersa.com
+
+El 05/04/2017 a las 03:38 p.m., Agustin Cocciolo escribi=C3=B3:
+
+Marcela
+
+es carga consolidada y dependemos de juntar volumen para sacar el cami=C3=
+=B3n,
+caso contrario debo esperar, y como pocas veces en esta ocasi=C3=B3n nos es=
+ta
+ocurriendo esto.
+
+
+
+La soluci=C3=B3n es un cami=C3=B3n exclusivo pero por el tama=C3=B1o de la =
+carga, los
+costos serian bastantes altos, aprox 1800 usd
+
+
+
+Lo otro que podemos hacer es ver la diferencia de costos a cubrir saliendo
+con mitad de camion.
+
+
+
+
+
+
+
+*Agustin Cocciolo *
+
+ Customer Service
+
+ San Jer=C3=B3nimo 177  - Piso 6 Of. A
+
+ (5000) C=C3=B3rdoba - Argentina
+
+  Phone: + 54 351 4234670/77
+
+  Cel:  +54 351 154-022063
+
+acocciolo@pluscargocordoba.com.ar
+
+ *Nuevo **Nextel: 674*1379*
+
+  Web: www.gruporas.com
+
+
+
+
+
+[image: cid:024601ca2ac7$24d9c330$0300a8c0@cathy]
+
+
+
+*De:* Marcela Triszcz [mailto:comext@fapersa.com]
+*Enviado el:* mi=C3=A9rcoles, 05 de abril de 2017 15:33
+*Para:* Agustin Cocciolo; Estudio De Lorenzo
+*CC:* Dopazo; Andr=C3=A9s Carboni; Vanesa Rearte
+*Asunto:* Re: AVISO DE LLEGADA DE CARGA - Ref.: 13477; Shipper: WENZHOU
+RUIMING INDUSTRIAL CO., LTD; Consignee: FAPERSA ICSA; Vessel: CAP SAN
+VINCENT/
+
+
+
+Agustin:
+
+No nos sirve martes que viene, encima est=C3=A1 semana santa.
+Por favor procur=C3=A1 una soluci=C3=B3n para que tengamos la carga en Sant=
+a Fe el
+lunes 10/4, asi habiamos quedado.
+Exclusivo para ma=C3=B1ana jueves o viernes ??
+Aguardo tus novedades
+
+Marcela Triszcz
+
+Compras / Comercio Exterior
+
+Tel: +54 342 4810810
+
+Lamadrid 3065
+
+CP 3000 Santa Fe, Argentina.
+
+comext@fapersa.com
+
+El 05/04/2017 a las 03:20 p.m., Agustin Cocciolo escribi=C3=B3:
+
+Hola Marcela
+
+buenas tardes
+
+escribo para comentarte que no llegamos a cargar el consolidado este
+Viernes.
+
+Muy posiblemente lo podamos sacar Martes que viene.
+
+
+
+Te mantengo informada
+
+
+
+Saludos
+
+
+
+
+
+
+
+*Agustin Cocciolo *
+
+ Customer Service
+
+ San Jer=C3=B3nimo 177  - Piso 6 Of. A
+
+ (5000) C=C3=B3rdoba - Argentina
+
+  Phone: + 54 351 4234670/77
+
+  Cel:  +54 351 154-022063
+
+acocciolo@pluscargocordoba.com.ar
+
+ *Nuevo **Nextel: 674*1379*
+
+  Web: www.gruporas.com
+
+
+
+
+
+[image: cid:024601ca2ac7$24d9c330$0300a8c0@cathy]
+
+
+
+*De:* Estudio De Lorenzo [mailto:estudiodelorenzo@hotmail.com]
+*Enviado el:* martes, 04 de abril de 2017 13:01
+*Para:* Marcela Triszcz; Agustin Cocciolo
+*CC:* Dopazo; Andr=C3=A9s Carboni; Vanesa Rearte
+*Asunto:* Re: AVISO DE LLEGADA DE CARGA - Ref.: 13477; Shipper: WENZHOU
+RUIMING INDUSTRIAL CO., LTD; Consignee: FAPERSA ICSA; Vessel: CAP SAN
+VINCENT/
+
+
+
+Agust=C3=ADn
+
+notar que en el aviso dice destino Cordoba , si bien no me afecta en este
+documento ver que los dem=C3=A1s documentos digan destino SANTA FE
+
+slds.
+------------------------------
+
+*De:* Marcela Triszcz <comext@fapersa.com>
+*Enviado:* martes, 04 de abril de 2017 12:52:48 p.m.
+*Para:* Agustin Cocciolo; Estudio De Lorenzo
+*Cc:* Dopazo; Andr=C3=A9s Carboni; Vanesa Rearte
+*Asunto:* Re: AVISO DE LLEGADA DE CARGA - Ref.: 13477; Shipper: WENZHOU
+RUIMING INDUSTRIAL CO., LTD; Consignee: FAPERSA ICSA; Vessel: CAP SAN
+VINCENT/
+
+
+
+Buen dia Agustin:
+
+Notado.
+Quedamos al aguardo de la certificaci=C3=B3n de flete y apenas puedas los d=
+atos
+del cami=C3=B3n y chofer que vendr=C3=A1 a Santa Fe.
+Saludos.
+
+Marcela Triszcz
+
+Compras / Comercio Exterior
+
+Tel: +54 342 4810810
+
+Lamadrid 3065
+
+CP 3000 Santa Fe, Argentina.
+
+comext@fapersa.com
+
+El 03/04/2017 a las 06:09 p.m., Agustin Cocciolo escribi=C3=B3:
+
+Buenas tardes
+
+envio aviso formal de arribo, Vanesa enviara oportunamente la certificaci=
+=C3=B3n
+
+
+
+Llegada .......... :               03/ABRIL
+
+Origen ........... :               NINGBO
+
+Destino .......... :               CORDOBA
+
+Vapor ............ :               CAP SAN VINCENT
+
+H B/L ............ :                 HDMUNXUY1512402L
+
+Seguimiento ...... :          13477
+
+
+
+Embarcador ....... :          WENZHOU RUIMING INDUSTRIAL CO., LTD
+
+Consignatario .... :           FAPERSA ICSA
+
+Ref. proveedor ... :         S/R
+
+Contenedor ....... :          S/I;
+
+Dep=C3=B3sito ......... :             BOM PORT
+
+Doc. originales .. :            NO
+
+Mercader=C3=ADa ....... :           CARGA GENERAL              Bultos:     =
+8
+Peso:   3328.00 KGS
+
+CBM .............. :               9.8000
+
+
+
+CONTINUAREMOS INFORMANDO
+
+
+
+*** MUY IMPORTANTE ***.
+
+
+
+SR. CLIENTE LE RECORDAMOS QUE ES INDISPENSABLE LA PRESENTACI=C3=93N DEL ORI=
+GINAL
+DEL B/L PARA PODER ENTREGARLES LA CARGA. TENER EN CUENTA ADEM=C3=81S QUE PA=
+RA
+TRAMITAR EL TRANSITO ADUANERO ES FUNDAMENTAL,  ENVIARNOS COPIA DE FACTURA
+COMERCIAL, LISTA DE EMPAQUE Y LA POSICI=C3=93N ARANCELARIA DE LA MERCADER=
+=C3=8DA.
+
+
+
+
+
+SALUDOS CORDIALES
+
+
+
+
+
+
+
+*Agustin Cocciolo *
+
+ Customer Service
+
+ San Jer=C3=B3nimo 177  - Piso 6 Of. A
+
+ (5000) C=C3=B3rdoba - Argentina
+
+  Phone: + 54 351 4234670/77
+
+  Cel:  +54 351 154-022063
+
+acocciolo@pluscargocordoba.com.ar
+
+ *Nuevo **Nextel: 674*1379*
+
+  Web: www.gruporas.com
+
+
+
+
+
+[image: cid:024601ca2ac7$24d9c330$0300a8c0@cathy]
+
+
+
+*De:* Estudio De Lorenzo [mailto:estudiodelorenzo@hotmail.com]
+*Enviado el:* lunes, 03 de abril de 2017 9:52
+*Para:* Marcela Triszcz; Agustin Cocciolo
+*CC:* Dopazo; Andr=C3=A9s Carboni; Gonzalo Martinez
+*Asunto:* Re: Cargas en agua - 13477
+
+
+
+Agust=C3=ADn
+
+van los datos
+
+SON CULATAS PARA MOTORES
+
+NCM 8409,91,12
+
+MODELOS TIPO 1.6// CORSA 1.6//R9
+
+ NCM 8409.99.59
+
+F8Q KANGOO // F8Q CLIO
+
+
+
+REMITIR A ZONA PRIMARIA PUERTO SANTA FE 42001
+
+ORIGEN CHINA
+
+slds.
+------------------------------
+
+*De:* Marcela Triszcz <comext@fapersa.com>
+*Enviado:* lunes, 03 de abril de 2017 09:43 a.m.
+*Para:* Agustin Cocciolo
+*Cc:* Dopazo; Andr=C3=A9s Carboni; Gonzalo Martinez; Estudio De Lorenzo
+*Asunto:* Re: Cargas en agua - 13477
+
+
+
+Buen dia Agustin:
+
+Adjunto factura, packing y B/L de la carga de Wenzhou Ruiming (ref. 13477)
+Por favor confirmar si lleg=C3=B3 el barco.
+Recordar que necesitamos que la carga este en Santa Fe el pr=C3=B3ximo lune=
+s 10/4
+
+Ra=C3=BAl:
+Por favor confirmale a Agustin los datos para el cruce.
+Saludos.
+
+Marcela Triszcz
+
+Compras / Comercio Exterior
+
+Tel: +54 342 4810810
+
+Lamadrid 3065
+
+CP 3000 Santa Fe, Argentina.
+
+comext@fapersa.com
+
+El 29/03/2017 a las 04:03 p.m., Agustin Cocciolo escribi=C3=B3:
+
+Hola Marcela
+
+buenas tardes
+
+notado el pedido
+
+debajo te paso las cargas, me falta solo la del King que no puedo saber
+cu=C3=A1ndo arriba aun.
+
+
+
+*13477*
+
+WENZHOU RUIMING
+
+*FAPERSA*
+
+HDMUNXUY1512402L
+
+*CAP SAN VINCENT*
+
+NBO
+
+*25-feb*
+
+8
+
+3328.00
+
+9.80
+
+*03-abr*
+
+*13468*
+
+CHENGDU
+
+*FAPERSA*
+
+YSGSHASFNB1703253
+
+*CMA CGM GANGES*
+
+SHA
+
+*05-mar*
+
+18
+
+6727.00
+
+11.74
+
+*12-abr*
+
+*13645*
+
+ELRINGKLINGER
+
+*FAPERSA*
+
+24870041703
+
+*CAP SAN MARCO*
+
+HAM
+
+*20-mar*
+
+3
+
+695.00
+
+2.38
+
+*14-abr*
+
+*13552*
+
+CHENGDU
+
+*FAPERSA*
+
+YSGSHASFNB1708180
+
+*SEAMAX ROWAYTON*
+
+SHA
+
+*11-mar*
+
+3
+
+1607.00
+
+1.94
+
+*19-abr*
+
+*13650*
+
+ZHEJIANG WENZHOU
+
+*FAPERSA*
+
+NKYMVD6053
+
+*SAN FERNANDO*
+
+NBO
+
+*25-mar*
+
+4
+
+3581.00
+
+4.42
+
+*01-may*
+
+*13691*
+
+CHENGDU
+
+*FAPERSA*
+
+YSGSHASFNC1700971
+
+*VALIANT*
+
+SHA
+
+*25-mar*
+
+16
+
+4734.00
+
+13.63
+
+*03-may*
+
+
+
+
+
+
+
+
+
+
+
+
+
+*Agustin Cocciolo *
+
+ Customer Service
+
+ San Jer=C3=B3nimo 177  - Piso 6 Of. A
+
+ (5000) C=C3=B3rdoba - Argentina
+
+  Phone: + 54 351 4234670/77
+
+  Cel:  +54 351 154-022063
+
+acocciolo@pluscargocordoba.com.ar
+
+ *Nuevo **Nextel: 674*1379*
+
+  Web: www.gruporas.com
+
+
+
+
+
+[image: cid:024601ca2ac7$24d9c330$0300a8c0@cathy]
+
+
+
+*De:* Marcela Triszcz [mailto:comext@fapersa.com]
+*Enviado el:* mi=C3=A9rcoles, 29 de marzo de 2017 15:24
+*Para:* 'Agustin Cocciolo'
+*CC:* Dopazo; Andr=C3=A9s Carboni; Pluscargo Cordoba-Gonzalo Martinez
+*Asunto:* Re: Cargas en agua
+
+
+
+Hola Agustin:
+
+Reforzando nuestra conversaci=C3=B3n telef=C3=B3nica, ten=C3=A9 presente qu=
+e la carga de
+Ruiming que llega el 3/4 a MTVD, vamos a necesitar que este en Santa Fe el
+lunes 10/4 por lo cual necesitamos que nos asegures que podemos contar con
+la salida del  consolidado del  dia viernes 7/4.
+
+Saludos.
+
+Marcela Triszcz
+
+Compras / Comercio Exterior
+
+Tel: +54 342 4810810
+
+Lamadrid 3065
+
+CP 3000 Santa Fe, Argentina.
+
+comext@fapersa.com
+
+El 29/03/2017 a las 12:55 p.m., Marcela Triszcz escribi=C3=B3:
+
+Buen dia Agustin:
+
+Por favor actuzlizanos el detalle de las cargas en agua.
+Quedamos al aguardo.
+Saludos.
+
+
+
+Marcela Triszcz
+
+Compras / Comercio Exterior
+
+Tel: +54 342 4810810
+
+Lamadrid 3065
+
+CP 3000 Santa Fe, Argentina.
+
+comext@fapersa.com
+
+
+
+---
+
+Marcela
+
+como estas
+
+te paso lo que tenemos confirmado en el agua
+
+
+
+*13477*
+
+WENZHOU RUIMING
+
+*FAPERSA*
+
+HDMUNXUY1512402L
+
+*CAP SAN VINCENT*
+
+*LCL*
+
+8
+
+3328.00
+
+9.80
+
+*03-abr*
+
+*13468*
+
+CHENGDU
+
+*FAPERSA*
+
+YSGSHASFNB1703253
+
+*CMA CGM GANGES*
+
+*LCL*
+
+18
+
+6727.00
+
+11.74
+
+*12-abr*
+
+*13552*
+
+CHENGDU
+
+*FAPERSA*
+
+YSGSHASFNB1708180
+
+*SEAWAY ROTATION*
+
+*LCL*
+
+3
+
+1607.00
+
+1.94
+
+*19-abr*
+
+
+
+
+
+Luego tengo 4 cargas mas sin mayor info que resta actualizar aun.
+
+serian
+
+KING
+
+LCL ALEMANIA
+
+Y dos de CHINA
+
+Saludos
+
+
+
+
+
+
+
+*Agustin Cocciolo *
+
+ Customer Service
+
+ San Jer=C3=B3nimo 177  - Piso 6 Of. A
+
+ (5000) C=C3=B3rdoba - Argentina
+
+  Phone: + 54 351 4234670/77
+
+  Cel:  +54 351 154-022063
+
+acocciolo@pluscargocordoba.com.ar
+
+ *Nuevo **Nextel: 674*1379*
+
+  Web: www.gruporas.com
+
+
+
+
+
+[image: cid:024601ca2ac7$24d9c330$0300a8c0@cathy]
+
+
+
+*De:* Marcela Triszcz [mailto:comext@fapersa.com]
+*Enviado el:* lunes, 20 de marzo de 2017 12:45
+*Para:* Agustin Cocciolo
+*CC:* Gonzalo Martinez
+*Asunto:* Re: Cargas en agua
+
+
+
+Buenas tardes Agustin:
+
+Ten=C3=A9s disponible el detalle con la cargas en agua.?
+Necesito agendar las llegadas por diferentes temas internos.
+Saludos.
+
+Marcela Triszcz
+
+Compras / Comercio Exterior
+
+Tel: +54 342 4810810
+
+Lamadrid 3065
+
+CP 3000 Santa Fe, Argentina.
+
+comext@fapersa.com
+
+El 09/03/2017 a las 05:05 p.m., Agustin Cocciolo escribi=C3=B3:
+
+CLARO
+
+TE PASO EL BL DE LO QUE YA SALIO EL 05
+
+
+
+EL 11 SALE OTRA MAS CHENGDU, LUNES ME LLEGAN ESTOS BLS
+
+
+
+
+
+
+
+
+
+
+
+
+
+*Agustin Cocciolo *
+
+ Customer Service
+
+ San Jer=C3=B3nimo 177  - Piso 6 Of. A
+
+ (5000) C=C3=B3rdoba - Argentina
+
+  Phone: + 54 351 4234670/77
+
+  Cel:  +54 351 154-022063
+
+acocciolo@pluscargocordoba.com.ar
+
+ *Nuevo **Nextel: 674*1379*
+
+  Web: www.gruporas.com
+
+
+
+
+
+[image: cid:024601ca2ac7$24d9c330$0300a8c0@cathy]
+
+
+
+*De:* Marcela Triszcz [mailto:comext@fapersa.com]
+*Enviado el:* jueves, 09 de marzo de 2017 17:01
+*Para:* Agustin Cocciolo
+*CC:* Gonzalo Martinez
+*Asunto:* Re: Cargas en agua
+
+
+
+Agustin:
+
+Yo quisiera saber qu=C3=A9 es lo que embarc=C3=B3, y despu=C3=A9s confirmam=
+e los arribos.
+Saludos.
+
+Marcela Triszcz
+
+Compras / Comercio Exterior
+
+Tel: +54 342 4810810
+
+Lamadrid 3065
+
+CP 3000 Santa Fe, Argentina.
+
+comext@fapersa.com
+
+El 09/03/2017 a las 04:56 p.m., Agustin Cocciolo escribi=C3=B3:
+
+Hola Marcela
+
+como estas
+
+la info es la misma
+
+me falta confirmar algunos arribos, como reci=C3=A9n han salido las cargas =
+no
+puedo identficar las fechas
+
+
+
+si me esperas a la seman que viene te paso todo completo
+
+
+
+av=C3=ADsame cualquier cosa
+
+
+
+Saluods!
+
+
+
+
+
+
+
+
+
+*Agustin Cocciolo *
+
+ Customer Service
+
+ San Jer=C3=B3nimo 177  - Piso 6 Of. A
+
+ (5000) C=C3=B3rdoba - Argentina
+
+  Phone: + 54 351 4234670/77
+
+  Cel:  +54 351 154-022063
+
+acocciolo@pluscargocordoba.com.ar
+
+ *Nuevo **Nextel: 674*1379*
+
+  Web: www.gruporas.com
+
+
+
+
+
+[image: cid:024601ca2ac7$24d9c330$0300a8c0@cathy]
+
+
+
+*De:* Marcela Triszcz [mailto:comext@fapersa.com]
+*Enviado el:* jueves, 09 de marzo de 2017 12:45
+*Para:* Agustin Cocciolo
+*CC:* Gonzalo Martinez
+*Asunto:* Cargas en agua
+
+
+
+Hola Agustin:
+
+Ten=C3=A9s el detalle de lo que est=C3=A1 en agua?
+
+Gracias, saludos.
+
+Marcela Triszcz
+
+Compras / Comercio Exterior
+
+Tel: +54 342 4810810
+
+Lamadrid 3065
+
+CP 3000 Santa Fe, Argentina.
+
+comext@fapersa.com
+
+El 08/03/2017 a las 04:17 p.m., Marcela Triszcz escribi=C3=B3:
+
+Agustin:
+
+Ok aguardo tu detalle.
+Saludos.
+
+Marcela Triszcz
+
+Compras / Comercio Exterior
+
+Tel: +54 342 4810810
+
+Lamadrid 3065
+
+CP 3000 Santa Fe, Argentina.
+
+comext@fapersa.com
+
+El 08/03/2017 a las 03:35 p.m., Agustin Cocciolo escribi=C3=B3:
+
+si si, tenemos una que sali=C3=B3 05/marzo de CHENGDU
+
+
+
+OTRA SALE EL 11,
+
+
+
+DESPUES TE PASO TODO
+
+
+
+SALUDOS!
+
+
+
+
+
+
+
+*Agustin Cocciolo *
+
+ Customer Service
+
+ San Jer=C3=B3nimo 177  - Piso 6 Of. A
+
+ (5000) C=C3=B3rdoba - Argentina
+
+  Phone: + 54 351 4234670/77
+
+  Cel:  +54 351 154-022063
+
+acocciolo@pluscargocordoba.com.ar
+
+ *Nuevo **Nextel: 674*1379*
+
+  Web: www.gruporas.com
+
+
+
+
+
+[image: cid:024601ca2ac7$24d9c330$0300a8c0@cathy]
+
+
+
+*De:* Marcela Triszcz [mailto:comext@fapersa.com]
+*Enviado el:* mi=C3=A9rcoles, 08 de marzo de 2017 15:32
+*Para:* Agustin Cocciolo
+*CC:* Pluscargo Cordoba-Gonzalo Martinez
+*Asunto:* Re: Carga KING 13612
+
+
+
+
+Ja OK! ; yo pens=C3=A9 que me pasabas adjunto con las cargas en agua.
+Como estuve de vacaciones estoy haciendo memoria que tenia que embarcar,
+ayudame si sali=C3=B3 algo en estos dias.
+Saludos.
+
+Marcela Triszcz
+
+Compras / Comercio Exterior
+
+Tel: +54 342 4810810
+
+Lamadrid 3065
+
+CP 3000 Santa Fe, Argentina.
+
+comext@fapersa.com
+
+El 08/03/2017 a las 03:23 p.m., Agustin Cocciolo escribi=C3=B3:
+
+Perdon en el asunto quise decir
+
+
+
+
+
+
+
+
+
+*Agustin Cocciolo *
+
+ Customer Service
+
+ San Jer=C3=B3nimo 177  - Piso 6 Of. A
+
+ (5000) C=C3=B3rdoba - Argentina
+
+  Phone: + 54 351 4234670/77
+
+  Cel:  +54 351 154-022063
+
+acocciolo@pluscargocordoba.com.ar
+
+ *Nuevo **Nextel: 674*1379*
+
+  Web: www.gruporas.com
+
+
+
+
+
+[image: cid:024601ca2ac7$24d9c330$0300a8c0@cathy]
+
+
+
+*De:* Marcela Triszcz [mailto:comext@fapersa.com]
+*Enviado el:* mi=C3=A9rcoles, 08 de marzo de 2017 15:21
+*Para:* Agustin Cocciolo
+*CC:* Gonzalo Martinez
+*Asunto:* Re: Carga KING 13612
+
+
+
+Hola Agustin:
+
+Todo Ok por aqui, te falt=C3=B3 pasarme el adjunto que mencion=C3=A1s.
+Saludos.
+
+Marcela Triszcz
+
+Compras / Comercio Exterior
+
+Tel: +54 342 4810810
+
+Lamadrid 3065
+
+CP 3000 Santa Fe, Argentina.
+
+comext@fapersa.com
+
+El 08/03/2017 a las 03:02 p.m., Agustin Cocciolo escribi=C3=B3:
+
+Marcela
+
+como estas
+
+lo paso en adjunto
+
+esta todav=C3=ADa no hizo trasbordo en ITALIA.
+
+
+
+
+
+
+
+
+
+*Agustin Cocciolo *
+
+ Customer Service
+
+ San Jer=C3=B3nimo 177  - Piso 6 Of. A
+
+ (5000) C=C3=B3rdoba - Argentina
+
+  Phone: + 54 351 4234670/77
+
+  Cel:  +54 351 154-022063
+
+acocciolo@pluscargocordoba.com.ar
+
+ *Nuevo **Nextel: 674*1379*
+
+  Web: www.gruporas.com
+
+
+
+
+
+[image: cid:024601ca2ac7$24d9c330$0300a8c0@cathy]
+
+
+
+*De:* Marcela Triszcz [mailto:comext@fapersa.com]
+*Enviado el:* mi=C3=A9rcoles, 08 de marzo de 2017 14:31
+*Para:* 'Agustin Cocciolo'
+*CC:* Pluscargo Cordoba-Gonzalo Martinez
+*Asunto:* Carga KING
+
+
+
+Buenas tardes Agustin:
+
+Adjunto B/L de embarque King.
+Por favor confirmar tu nro. de ref..
+Te pido me pases el detalle de las cargas en agua, incluyendo a esta de
+King.
+Saludos.
+
+
+
+Marcela Triszcz
+
+Compras / Comercio Exterior
+
+Tel: +54 342 4810810
+
+Lamadrid 3065
+
+CP 3000 Santa Fe, Argentina.
+
+comext@fapersa.com
+
+
+
+-----
+
+--f403045f75687909ff054c98d490
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Dutf-8"><meta name=3D"Generator" content=3D"Microsoft Word 14 (filtered m=
+edium)"><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"Century Gothic";
+	panose-1:2 11 5 2 2 2 2 2 2 4;}
+@font-face
+	{font-family:"Microsoft Sans Serif";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	color:black;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+p
+	{mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	color:black;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-priority:99;
+	mso-style-link:"Texto de globo Car";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	color:black;}
+span.TextodegloboCar
+	{mso-style-name:"Texto de globo Car";
+	mso-style-priority:99;
+	mso-style-link:"Texto de globo";
+	font-family:"Tahoma","sans-serif";
+	color:black;}
+span.EstiloCorreo20
+	{mso-style-type:personal-reply;
+	font-family:"Calibri","sans-serif";
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+--></style></head><body bgcolor=3D"white" lang=3D"ES" link=3D"blue" vlink=
+=3D"purple"><div class=3D"WordSection1"><p class=3D"MsoNormal"><span style=
+=3D"font-size:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;=
+;color:windowtext">Hola Marcela, </span></p><p class=3D"MsoNormal"><span st=
+yle=3D"font-size:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&qu=
+ot;;color:windowtext">Ya los pedimos de nuevo.</span></p><p class=3D"MsoNor=
+mal"><span style=3D"font-size:11.0pt;font-family:&quot;Calibri&quot;,&quot;=
+sans-serif&quot;;color:windowtext">En cuanto tengamos la informaci=C3=B3n t=
+e la envio.</span></p><p class=3D"MsoNormal"><span style=3D"font-size:11.0p=
+t;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;color:windowtext">=
+Te mantengo al tanto.</span></p><p class=3D"MsoNormal"><span style=3D"font-=
+size:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;color:wi=
+ndowtext">Saludos, </span></p><p class=3D"MsoNormal"><span style=3D"font-si=
+ze:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;color:wind=
+owtext">=C2=A0</span></p><div><p class=3D"MsoNormal"><span style=3D"color:w=
+indowtext">=C2=A0</span></p><p class=3D"MsoNormal"><span style=3D"font-size=
+:11.0pt;font-family:&quot;Microsoft Sans Serif&quot;,&quot;sans-serif&quot;=
+;color:#1f497d">=C2=A0</span><span style=3D"color:windowtext"></span></p><p=
+ class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Cali=
+bri&quot;,&quot;sans-serif&quot;;color:#1f497d">=C2=A0</span><span style=3D=
+"color:windowtext"></span></p><table class=3D"MsoNormalTable" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" align=3D"left" width=3D"810" style=3D"w=
+idth:486.0pt;border-collapse:collapse;margin-left:5.4pt"><tr style=3D"heigh=
+t:74.5pt"><td width=3D"288" valign=3D"top" style=3D"width:172.8pt;border:no=
+ne;border-right:solid #afdef3 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:74.5=
+pt"><p class=3D"MsoNormal" style=3D"mso-element:frame;mso-element-frame-hsp=
+ace:7.2pt;mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso=
+-element-anchor-horizontal:column;mso-height-rule:exactly"><span style=3D"f=
+ont-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:=
+#1f497d"><img width=3D"216" height=3D"46" id=3D"Imagen_x0020_1" src=3D"cid:=
+image001.jpg@01D2AFBD.EC753630" alt=3D"Descripci=C3=B3n: cid:image001.jpg@0=
+1CE344E.B86A7100"></span><span style=3D"color:windowtext"></span></p><p cla=
+ss=3D"MsoNormal" style=3D"mso-element:frame;mso-element-frame-hspace:7.2pt;=
+mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element-a=
+nchor-horizontal:column;mso-height-rule:exactly"><span style=3D"font-size:1=
+1.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;color:#1f497d"=
+>=C2=A0</span><span style=3D"color:windowtext"></span></p></td><td width=3D=
+"522" valign=3D"top" style=3D"width:313.2pt;padding:0cm 5.4pt 0cm 5.4pt;hei=
+ght:74.5pt"><p class=3D"MsoNormal" style=3D"mso-element:frame;mso-element-f=
+rame-hspace:7.2pt;mso-element-wrap:around;mso-element-anchor-vertical:parag=
+raph;mso-element-anchor-horizontal:column;mso-height-rule:exactly"><b><span=
+ style=3D"font-size:10.0pt;font-family:&quot;Tahoma&quot;,&quot;sans-serif&=
+quot;">=C2=A0Vanesa Rearte</span></b><span style=3D"color:windowtext"></spa=
+n></p><p class=3D"MsoNormal" style=3D"mso-element:frame;mso-element-frame-h=
+space:7.2pt;mso-element-wrap:around;mso-element-anchor-vertical:paragraph;m=
+so-element-anchor-horizontal:column;mso-height-rule:exactly"><b><span style=
+=3D"font-size:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;=
+">=C2=A0</span></b><span style=3D"font-size:9.0pt;font-family:&quot;Century=
+ Gothic&quot;,&quot;sans-serif&quot;">Customer Service</span><span style=3D=
+"color:windowtext"></span></p><p class=3D"MsoNormal" style=3D"mso-element:f=
+rame;mso-element-frame-hspace:7.2pt;mso-element-wrap:around;mso-element-anc=
+hor-vertical:paragraph;mso-element-anchor-horizontal:column;mso-height-rule=
+:exactly"><span style=3D"font-size:9.0pt;font-family:&quot;Century Gothic&q=
+uot;,&quot;sans-serif&quot;">=C2=A0San Jer=C3=B3nimo 177=C2=A0 - Piso 6 Of.=
+ A</span><span style=3D"color:windowtext"></span></p><p class=3D"MsoNormal"=
+ style=3D"mso-element:frame;mso-element-frame-hspace:7.2pt;mso-element-wrap=
+:around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal=
+:column;mso-height-rule:exactly"><span style=3D"font-size:9.0pt;font-family=
+:&quot;Century Gothic&quot;,&quot;sans-serif&quot;">=C2=A0(5000) C=C3=B3rdo=
+ba - Argentina</span><span style=3D"color:windowtext"></span></p><p class=
+=3D"MsoNormal" style=3D"mso-element:frame;mso-element-frame-hspace:7.2pt;ms=
+o-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element-anc=
+hor-horizontal:column;mso-height-rule:exactly"><span style=3D"font-size:9.0=
+pt;font-family:&quot;Century Gothic&quot;,&quot;sans-serif&quot;">=C2=A0 </=
+span><span lang=3D"EN-US" style=3D"font-size:9.0pt;font-family:&quot;Centur=
+y Gothic&quot;,&quot;sans-serif&quot;">Phone: + 54 351 4234670/77 Lin. Rot.=
+</span><span style=3D"color:windowtext"></span></p><p class=3D"MsoNormal" s=
+tyle=3D"mso-element:frame;mso-element-frame-hspace:7.2pt;mso-element-wrap:a=
+round;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:c=
+olumn;mso-height-rule:exactly"><span lang=3D"EN-GB" style=3D"font-size:9.0p=
+t;font-family:&quot;Century Gothic&quot;,&quot;sans-serif&quot;">=C2=A0 Web=
+: </span><span style=3D"font-size:9.0pt;font-family:&quot;Century Gothic&qu=
+ot;,&quot;sans-serif&quot;"><a href=3D"http://www.gruporas.com/" title=3D"b=
+locked::http://www.gruporas.com/"><span lang=3D"EN-GB" style=3D"color:black=
+">www.gruporas.com</span></a></span><span style=3D"color:windowtext"></span=
+></p><p class=3D"MsoNormal" style=3D"mso-element:frame;mso-element-frame-hs=
+pace:7.2pt;mso-element-wrap:around;mso-element-anchor-vertical:paragraph;ms=
+o-element-anchor-horizontal:column;mso-height-rule:exactly"><span style=3D"=
+font-size:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;col=
+or:#1f497d">=C2=A0</span><span style=3D"color:windowtext"></span></p></td><=
+/tr></table><p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:=
+11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;color:red">=
+=C2=A0</span><span style=3D"color:windowtext"></span></p><p class=3D"MsoNor=
+mal"><span lang=3D"EN-US" style=3D"font-size:11.0pt;font-family:&quot;Calib=
+ri&quot;,&quot;sans-serif&quot;;color:red">=C2=A0</span><span style=3D"colo=
+r:windowtext"></span></p><p class=3D"MsoNormal"><span lang=3D"EN-US" style=
+=3D"font-size:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;=
+;color:red">=C2=A0</span><span style=3D"color:windowtext"></span></p><p cla=
+ss=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:11.0pt;font-family=
+:&quot;Calibri&quot;,&quot;sans-serif&quot;;color:red">=C2=A0</span><span s=
+tyle=3D"color:windowtext"></span></p><p class=3D"MsoNormal"><span lang=3D"E=
+N-US" style=3D"font-size:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-=
+serif&quot;;color:red">=C2=A0</span><span style=3D"color:windowtext"></span=
+></p><p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:11.0pt;=
+font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;color:red">=C2=A0</s=
+pan><span style=3D"color:windowtext"></span></p><p class=3D"MsoNormal"><spa=
+n lang=3D"EN-US" style=3D"font-size:11.0pt;font-family:&quot;Calibri&quot;,=
+&quot;sans-serif&quot;;color:red">=C2=A0</span><span style=3D"color:windowt=
+ext"></span></p><p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-s=
+ize:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;color:red=
+">V</span><span style=3D"font-size:11.0pt;font-family:&quot;Calibri&quot;,&=
+quot;sans-serif&quot;;color:red">isite nuestro video corporativo...</span><=
+span style=3D"color:windowtext"></span></p><p class=3D"MsoNormal"><span lan=
+g=3D"ES-AR" style=3D"font-size:11.0pt;font-family:&quot;Calibri&quot;,&quot=
+;sans-serif&quot;;color:#0070c0"><a href=3D"http://m.youtube.com/watch?v=3D=
+NYqo0dO6o6U&amp;desktop_uri=3D%2Fwatch%3Fv%3DNYqo0dO6o6U" title=3D"blocked:=
+:http://m.youtube.com/watch?v=3DNYqo0dO6o6U&amp;desktop_uri=3D/watch?v=3DNY=
+qo0dO6o6U"><span style=3D"color:#0070c0">PLUSCARGO CORDOBA=C2=A0&quot;GRUPO=
+ RAS&quot; - VIDEO INSTITUCIONAL</span></a></span><span style=3D"color:wind=
+owtext"></span></p></div><p class=3D"MsoNormal"><span style=3D"font-size:11=
+.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;color:windowtex=
+t">=C2=A0</span></p><div><div style=3D"border:none;border-top:solid #b5c4df=
+ 1.0pt;padding:3.0pt 0cm 0cm 0cm"><p class=3D"MsoNormal"><b><span style=3D"=
+font-size:10.0pt;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;colo=
+r:windowtext">De:</span></b><span style=3D"font-size:10.0pt;font-family:&qu=
+ot;Tahoma&quot;,&quot;sans-serif&quot;;color:windowtext"> Marcela Triszcz [=
+mailto:<a href=3D"mailto:comext@fapersa.com">comext@fapersa.com</a>] <br><b=
+>Enviado el:</b> viernes, 07 de abril de 2017 16:41<br><b>Para:</b> Agustin=
+ Cocciolo; Roberto Dopazo; Vanesa Rearte<br><b>Asunto:</b> Re: AVISO DE LLE=
+GADA DE CARGA - Ref.: 13477; Shipper: WENZHOU RUIMING INDUSTRIAL CO., LTD; =
+Consignee: FAPERSA ICSA; Vessel: CAP SAN VINCENT/</span></p></div></div><p =
+class=3D"MsoNormal">=C2=A0</p><p class=3D"MsoNormal" style=3D"margin-bottom=
+:12.0pt">Agustin<br>Necesito los datos.<br>nombre, DNI chofer<br>patente<br=
+>rastreo.<br>Saludos<br><br><br><br></p><div><p class=3D"MsoNormal"><img bo=
+rder=3D"0" width=3D"109" height=3D"34" id=3D"_x0000_i1025" src=3D"cid:image=
+002.jpg@01D2AFBD.EC753630"></p><table class=3D"MsoNormalTable" border=3D"0"=
+ cellspacing=3D"3" cellpadding=3D"0"><tr><td style=3D"padding:.75pt .75pt .=
+75pt .75pt"></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p =
+class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Arial=
+&quot;,&quot;sans-serif&quot;">Marcela Triszcz</span></p></td></tr><tr><td =
+style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal"><span styl=
+e=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"=
+>Compras / Comercio Exterior</span></p></td></tr><tr><td style=3D"padding:.=
+75pt .75pt .75pt .75pt"><p class=3D"MsoNormal"><span style=3D"font-size:10.=
+0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Tel: +54 342 4810=
+810</span></p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><=
+p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ari=
+al&quot;,&quot;sans-serif&quot;">Lamadrid 3065</span></p></td></tr><tr><td =
+style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal"><span styl=
+e=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"=
+>CP 3000 Santa Fe, Argentina.</span></p></td></tr><tr><td style=3D"padding:=
+.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal"><span style=3D"font-size:8.=
+0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><a href=3D"mailto=
+:comext@fapersa.com">comext@fapersa.com</a></span></p></td></tr></table></d=
+iv><div><p class=3D"MsoNormal">El 07/04/2017 a las 01:12 p.m., Agustin Cocc=
+iolo escribi=C3=B3:</p></div><blockquote style=3D"margin-top:5.0pt;margin-b=
+ottom:5.0pt"><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;m=
+so-margin-bottom-alt:auto">Hola Marcela</p><p class=3D"MsoNormal" style=3D"=
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">por la tarde los vamos =
+a tener y te los paso</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt=
+:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D=
+"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">SALUDOS </p><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>=C2=A0</p><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso=
+-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-marg=
+in-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><div><table class=3D"=
+MsoNormalTable" border=3D"0" cellspacing=3D"3" cellpadding=3D"0"><tr><td st=
+yle=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso=
+-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>Agustin Cocciolo </b></=
+p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom=
+-alt:auto"><b>=C2=A0</b>Customer Service</p><p class=3D"MsoNormal" style=3D=
+"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0San Jer=C3=B3nim=
+o 177=C2=A0 - Piso 6 Of. A</p><p class=3D"MsoNormal" style=3D"mso-margin-to=
+p-alt:auto;mso-margin-bottom-alt:auto">=C2=A0(5000) C=C3=B3rdoba - Argentin=
+a</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bot=
+tom-alt:auto">=C2=A0 Phone: + 54 351 4234670/77 </p><p class=3D"MsoNormal" =
+style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0 Cel:=C2=
+=A0 +54 351 154-022063</p><p class=3D"MsoNormal" style=3D"mso-margin-top-al=
+t:auto;mso-margin-bottom-alt:auto"><span lang=3D"EN-US"><a href=3D"mailto:a=
+cocciolo@pluscargocordoba.com.ar">acocciolo@pluscargocordoba.com.ar</a></sp=
+an></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-b=
+ottom-alt:auto"><span lang=3D"EN-US">=C2=A0<b>Nuevo </b></span><b><span lan=
+g=3D"EN-GB">Nextel: 674*1379</span></b></p></td></tr></table></div><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+><span lang=3D"EN-GB">=C2=A0 Web: </span><a href=3D"http://www.gruporas.com=
+/" title=3D"blocked::http://www.gruporas.com/"><span lang=3D"EN-GB">www.gru=
+poras.com</span></a></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:=
+auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"=
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"M=
+soNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><img=
+ border=3D"0" width=3D"263" height=3D"67" id=3D"_x0000_i1026" src=3D"cid:im=
+age003.jpg@01D2AFBD.EC753630" alt=3D"cid:024601ca2ac7$24d9c330$0300a8c0@cat=
+hy"></p></div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-m=
+argin-bottom-alt:auto">=C2=A0</p><div><div><p class=3D"MsoNormal" style=3D"=
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>De:</b> Marcela Tris=
+zcz [mailto:<a href=3D"mailto:comext@fapersa.com">comext@fapersa.com</a>] <=
+br><b>Enviado el:</b> viernes, 07 de abril de 2017 13:10<br><b>Para:</b> Ag=
+ustin Cocciolo; Roberto Dopazo; Vanesa Rearte<br><b>Asunto:</b> Re: AVISO D=
+E LLEGADA DE CARGA - Ref.: 13477; Shipper: WENZHOU RUIMING INDUSTRIAL CO., =
+LTD; Consignee: FAPERSA ICSA; Vessel: CAP SAN VINCENT/</p></div></div><p cl=
+ass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:au=
+to">=C2=A0</p><p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt">Agustin=
+:<br><br>Tendr=C3=A1s los datos del chofer y cami=C3=B3n?<br><br>Vane:<br>T=
+en=C3=A9s la certificaci=C3=B3n de flete?<br>Saludos<br><br><br></p><div><p=
+ class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt=
+:auto"><img border=3D"0" width=3D"109" height=3D"34" id=3D"_x0000_i1027" sr=
+c=3D"cid:image002.jpg@01D2AFBD.EC753630"></p><table class=3D"MsoNormalTable=
+" border=3D"0" cellspacing=3D"3" cellpadding=3D"0"><tr><td style=3D"padding=
+:.75pt .75pt .75pt .75pt"></td></tr><tr><td style=3D"padding:.75pt .75pt .7=
+5pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto">Marcela Triszcz</p></td></tr><tr><td style=3D"padding:.=
+75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:=
+auto;mso-margin-bottom-alt:auto">Compras / Comercio Exterior</p></td></tr><=
+tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" sty=
+le=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Tel: +54 342 4810=
+810</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>Lamadrid 3065</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75p=
+t"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-botto=
+m-alt:auto">CP 3000 Santa Fe, Argentina.</p></td></tr><tr><td style=3D"padd=
+ing:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top=
+-alt:auto;mso-margin-bottom-alt:auto"><a href=3D"mailto:comext@fapersa.com"=
+>comext@fapersa.com</a></p></td></tr></table></div><div><p class=3D"MsoNorm=
+al" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">El 07/04/2=
+017 a las 10:11 a.m., Agustin Cocciolo escribi=C3=B3:</p></div><blockquote =
+style=3D"margin-top:5.0pt;margin-bottom:5.0pt"><div><p class=3D"MsoNormal" =
+style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Vane</p><p cla=
+ss=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:aut=
+o">la envia</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-=
+margin-bottom-alt:auto">=C2=A0</p><div><p class=3D"MsoNormal" style=3D"mso-=
+margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNo=
+rmal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</=
+p><div><table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"3" cellp=
+adding=3D"0"><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"=
+MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>=
+Agustin Cocciolo </b></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt=
+:auto;mso-margin-bottom-alt:auto"><b>=C2=A0</b>Customer Service</p><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>=C2=A0San Jer=C3=B3nimo 177=C2=A0 - Piso 6 Of. A</p><p class=3D"MsoNormal"=
+ style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0(5000) =
+C=C3=B3rdoba - Argentina</p><p class=3D"MsoNormal" style=3D"mso-margin-top-=
+alt:auto;mso-margin-bottom-alt:auto">=C2=A0 Phone: + 54 351 4234670/77 </p>=
+<p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-a=
+lt:auto">=C2=A0 Cel:=C2=A0 +54 351 154-022063</p><p class=3D"MsoNormal" sty=
+le=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span lang=3D"EN-=
+US"><a href=3D"mailto:acocciolo@pluscargocordoba.com.ar">acocciolo@pluscarg=
+ocordoba.com.ar</a></span></p><p class=3D"MsoNormal" style=3D"mso-margin-to=
+p-alt:auto;mso-margin-bottom-alt:auto"><span lang=3D"EN-US">=C2=A0<b>Nuevo =
+</b></span><b><span lang=3D"EN-GB">Nextel: 674*1379</span></b></p></td></tr=
+></table></div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-=
+margin-bottom-alt:auto"><span lang=3D"EN-GB">=C2=A0 Web: <a href=3D"http://=
+www.gruporas.com">www.gruporas.com</a></span></p><p class=3D"MsoNormal" sty=
+le=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p clas=
+s=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto=
+">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-mar=
+gin-bottom-alt:auto"><img border=3D"0" width=3D"263" height=3D"67" id=3D"_x=
+0000_i1028" src=3D"cid:image003.jpg@01D2AFBD.EC753630" alt=3D"cid:024601ca2=
+ac7$24d9c330$0300a8c0@cathy"></p></div><p class=3D"MsoNormal" style=3D"mso-=
+margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><div><div><p clas=
+s=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto=
+"><b>De:</b> Marcela Triszcz [mailto:<a href=3D"mailto:comext@fapersa.com">=
+comext@fapersa.com</a>] <br><b>Enviado el:</b> viernes, 07 de abril de 2017=
+ 9:49<br><b>Para:</b> Agustin Cocciolo; Roberto Dopazo<br><b>Asunto:</b> Re=
+: AVISO DE LLEGADA DE CARGA - Ref.: 13477; Shipper: WENZHOU RUIMING INDUSTR=
+IAL CO., LTD; Consignee: FAPERSA ICSA; Vessel: CAP SAN VINCENT/</p></div></=
+div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bott=
+om-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:a=
+uto;mso-margin-bottom-alt:auto">Buen dia Agustin.<br><br>Buenisimo.<br>Por =
+favor enviar certificaci=C3=B3n de flete tambi=C3=A9n y confirmar apenas pu=
+edas los datos del chofer y cami=C3=B3n.<br>Desde ya muchas gracias.<br>Sal=
+udos.</p><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-m=
+argin-bottom-alt:auto"><img border=3D"0" width=3D"109" height=3D"34" id=3D"=
+_x0000_i1029" src=3D"cid:image002.jpg@01D2AFBD.EC753630"></p><table class=
+=3D"MsoNormalTable" border=3D"0" cellspacing=3D"3" cellpadding=3D"0"><tr><t=
+d style=3D"padding:.75pt .75pt .75pt .75pt"></td></tr><tr><td style=3D"padd=
+ing:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top=
+-alt:auto;mso-margin-bottom-alt:auto">Marcela Triszcz</p></td></tr><tr><td =
+style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"m=
+so-margin-top-alt:auto;mso-margin-bottom-alt:auto">Compras / Comercio Exter=
+ior</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>Tel: +54 342 4810810</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75=
+pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margi=
+n-bottom-alt:auto">Lamadrid 3065</p></td></tr><tr><td style=3D"padding:.75p=
+t .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:aut=
+o;mso-margin-bottom-alt:auto">CP 3000 Santa Fe, Argentina.</p></td></tr><tr=
+><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><a href=3D"mailto:c=
+omext@fapersa.com">comext@fapersa.com</a></p></td></tr></table></div><div><=
+p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-al=
+t:auto">El 07/04/2017 a las 09:45 a.m., Agustin Cocciolo escribi=C3=B3:</p>=
+</div><blockquote style=3D"margin-top:5.0pt;margin-bottom:5.0pt"><div><p cl=
+ass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:au=
+to">Roberto</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-=
+margin-bottom-alt:auto">asi es</p><p class=3D"MsoNormal" style=3D"mso-margi=
+n-top-alt:auto;mso-margin-bottom-alt:auto">en breve envio el CRT </p><p cla=
+ss=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:aut=
+o">=C2=A0</p><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;m=
+so-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-ma=
+rgin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><div><table class=
+=3D"MsoNormalTable" border=3D"0" cellspacing=3D"3" cellpadding=3D"0"><tr><t=
+d style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D=
+"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>Agustin Cocciolo </=
+b></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bo=
+ttom-alt:auto"><b>=C2=A0</b>Customer Service</p><p class=3D"MsoNormal" styl=
+e=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0San Jer=C3=
+=B3nimo 177=C2=A0 - Piso 6 Of. A</p><p class=3D"MsoNormal" style=3D"mso-mar=
+gin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0(5000) C=C3=B3rdoba - Ar=
+gentina</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto">=C2=A0 Phone: + 54 351 4234670/77 </p><p class=3D"MsoNo=
+rmal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0 C=
+el:=C2=A0 +54 351 154-022063</p><p class=3D"MsoNormal" style=3D"mso-margin-=
+top-alt:auto;mso-margin-bottom-alt:auto"><span lang=3D"EN-US"><a href=3D"ma=
+ilto:acocciolo@pluscargocordoba.com.ar">acocciolo@pluscargocordoba.com.ar</=
+a></span></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-ma=
+rgin-bottom-alt:auto"><span lang=3D"EN-US">=C2=A0<b>Nuevo </b></span><b><sp=
+an lang=3D"EN-GB">Nextel: 674*1379</span></b></p></td></tr></table></div><p=
+ class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt=
+:auto"><span lang=3D"EN-GB">=C2=A0 Web: <a href=3D"http://www.gruporas.com"=
+>www.gruporas.com</a></span></p><p class=3D"MsoNormal" style=3D"mso-margin-=
+top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" s=
+tyle=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p cl=
+ass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:au=
+to"><img border=3D"0" width=3D"263" height=3D"67" id=3D"_x0000_i1030" src=
+=3D"cid:image003.jpg@01D2AFBD.EC753630" alt=3D"cid:024601ca2ac7$24d9c330$03=
+00a8c0@cathy"></p></div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:=
+auto;mso-margin-bottom-alt:auto">=C2=A0</p><div><div><p class=3D"MsoNormal"=
+ style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>De:</b> Ro=
+berto Dopazo [mailto:<a href=3D"mailto:rdopazo@fapersa.com">rdopazo@fapersa=
+.com</a>] <br><b>Enviado el:</b> viernes, 07 de abril de 2017 8:59<br><b>Pa=
+ra:</b> Agustin Cocciolo<br><b>CC:</b> Marcela Triszcz<br><b>Asunto:</b> Re=
+: AVISO DE LLEGADA DE CARGA - Ref.: 13477; Shipper: WENZHOU RUIMING INDUSTR=
+IAL CO., LTD; Consignee: FAPERSA ICSA; Vessel: CAP SAN VINCENT/</p></div></=
+div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bott=
+om-alt:auto">=C2=A0</p><div><p class=3D"MsoNormal" style=3D"mso-margin-top-=
+alt:auto;mso-margin-bottom-alt:auto">Buen d=C3=ADa Agust=C3=ADn..</p></div>=
+<div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bot=
+tom-alt:auto">Cargan hoy en Montevideo..?</p></div><div><p class=3D"MsoNorm=
+al" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Abrazo.</p=
+></div><div><table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"3" =
+cellpadding=3D"0"><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p clas=
+s=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto=
+"><img border=3D"0" width=3D"109" height=3D"34" id=3D"_x0000_i1031" src=3D"=
+cid:image004.jpg@01D2AFBD.EC753630"></p></td></tr><tr><td style=3D"padding:=
+.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt=
+:auto;mso-margin-bottom-alt:auto">Roberto Dopazo</p></td></tr><tr><td style=
+=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-ma=
+rgin-top-alt:auto;mso-margin-bottom-alt:auto">Departamento de Compras</p></=
+td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNo=
+rmal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Tel: +54=
+ 342 4810810</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"=
+><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-=
+alt:auto">Lamadrid 3065</p></td></tr><tr><td style=3D"padding:.75pt .75pt .=
+75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-mar=
+gin-bottom-alt:auto">CP 3000 Santa Fe, Argentina.</p></td></tr><tr><td styl=
+e=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-m=
+argin-top-alt:auto;mso-margin-bottom-alt:auto"><a href=3D"mailto:rdopazo@fa=
+persa.com">rdopazo@fapersa.com</a></p></td></tr></table></div><blockquote s=
+tyle=3D"margin-top:5.0pt;margin-bottom:5.0pt"><div><p class=3D"MsoNormal" s=
+tyle=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">----- Original =
+Message ----- </p></div><div><p class=3D"MsoNormal" style=3D"mso-margin-top=
+-alt:auto;mso-margin-bottom-alt:auto"><b>From:</b> <a href=3D"mailto:acocci=
+olo@pluscargocordoba.com.ar" title=3D"acocciolo@pluscargocordoba.com.ar">Ag=
+ustin Cocciolo</a> </p></div><div><p class=3D"MsoNormal" style=3D"mso-margi=
+n-top-alt:auto;mso-margin-bottom-alt:auto"><b>To:</b> <a href=3D"mailto:com=
+ext@fapersa.com" title=3D"comext@fapersa.com">Marcela Triszcz</a> ; <a href=
+=3D"mailto:estudiodelorenzo@hotmail.com" title=3D"estudiodelorenzo@hotmail.=
+com">Estudio De Lorenzo</a> </p></div><div><p class=3D"MsoNormal" style=3D"=
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>Cc:</b> <a href=3D"m=
+ailto:rdopazo@fapersa.com" title=3D"rdopazo@fapersa.com">Dopazo</a> ; <a hr=
+ef=3D"mailto:acarboni@fapersa.com" title=3D"acarboni@fapersa.com">Andr=C3=
+=A9s Carboni</a> ; <a href=3D"mailto:vrearte@pluscargocordoba.com.ar" title=
+=3D"vrearte@pluscargocordoba.com.ar">Vanesa Rearte</a> </p></div><div><p cl=
+ass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:au=
+to"><b>Sent:</b> Wednesday, April 05, 2017 4:32 PM</p></div><div><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+><b>Subject:</b> RE: AVISO DE LLEGADA DE CARGA - Ref.: 13477; Shipper: WENZ=
+HOU RUIMING INDUSTRIAL CO., LTD; Consignee: FAPERSA ICSA; Vessel: CAP SAN V=
+INCENT/</p></div><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:au=
+to;mso-margin-bottom-alt:auto">=C2=A0</p></div><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Marcela</p><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>por favor comprender que no es mala predisposicion ni falta de incumplimie=
+nto. Solo que una carga consolidada por su condici=C3=B3n depende de otras =
+para poder ser trasladada.</p><p class=3D"MsoNormal" style=3D"mso-margin-to=
+p-alt:auto;mso-margin-bottom-alt:auto">Generalmente cumplimos con la previs=
+i=C3=B3n que siempre manejamos, por esa motivo siempre comento que todo es =
+estimado cuando damos fechas.</p><p class=3D"MsoNormal" style=3D"mso-margin=
+-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" =
+style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p c=
+lass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:a=
+uto">De todos modos, estoy consiguiendo poder armar el camion</p><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto">te aviso como sigue.</p><p class=3D"MsoNormal" style=3D=
+"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><div><p clas=
+s=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto=
+">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-mar=
+gin-bottom-alt:auto">=C2=A0</p><div><table class=3D"MsoNormalTable" border=
+=3D"0" cellspacing=3D"3" cellpadding=3D"0"><tr><td style=3D"padding:.75pt .=
+75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;m=
+so-margin-bottom-alt:auto"><b>Agustin Cocciolo </b></p><p class=3D"MsoNorma=
+l" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>=C2=A0</=
+b>Customer Service</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:au=
+to;mso-margin-bottom-alt:auto">=C2=A0San Jer=C3=B3nimo 177=C2=A0 - Piso 6 O=
+f. A</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-=
+bottom-alt:auto">=C2=A0(5000) C=C3=B3rdoba - Argentina</p><p class=3D"MsoNo=
+rmal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0 P=
+hone: + 54 351 4234670/77 </p><p class=3D"MsoNormal" style=3D"mso-margin-to=
+p-alt:auto;mso-margin-bottom-alt:auto">=C2=A0 Cel:=C2=A0 +54 351 154-022063=
+</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bott=
+om-alt:auto"><span lang=3D"EN-US"><a href=3D"mailto:acocciolo@pluscargocord=
+oba.com.ar">acocciolo@pluscargocordoba.com.ar</a></span></p><p class=3D"Mso=
+Normal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span =
+lang=3D"EN-US">=C2=A0<b>Nuevo </b></span><b><span lang=3D"EN-GB">Nextel: 67=
+4*1379</span></b></p></td></tr></table></div><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span lang=3D"EN-GB=
+">=C2=A0 Web: <a href=3D"http://www.gruporas.com">www.gruporas.com</a></spa=
+n></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bo=
+ttom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt=
+:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D=
+"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><img border=3D"0" widt=
+h=3D"263" height=3D"67" id=3D"_x0000_i1032" src=3D"cid:image003.jpg@01D2AFB=
+D.EC753630" alt=3D"cid:024601ca2ac7$24d9c330$0300a8c0@cathy"></p></div><p c=
+lass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:a=
+uto">=C2=A0</p><div><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt=
+:auto;mso-margin-bottom-alt:auto"><b>De:</b> Marcela Triszcz [mailto:<a hre=
+f=3D"mailto:comext@fapersa.com">comext@fapersa.com</a>] <br><b>Enviado el:<=
+/b> mi=C3=A9rcoles, 05 de abril de 2017 16:18<br><b>Para:</b> Agustin Cocci=
+olo; Estudio De Lorenzo<br><b>CC:</b> Dopazo; Andr=C3=A9s Carboni; Vanesa R=
+earte<br><b>Asunto:</b> Re: AVISO DE LLEGADA DE CARGA - Ref.: 13477; Shippe=
+r: WENZHOU RUIMING INDUSTRIAL CO., LTD; Consignee: FAPERSA ICSA; Vessel: CA=
+P SAN VINCENT/</p></div></div><p class=3D"MsoNormal" style=3D"mso-margin-to=
+p-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" sty=
+le=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Agustin:<br>Si po=
+r favor una soluci=C3=B3n viable, mas conociendo nuestra urgencia expresada=
+ con mucha anticipaci=C3=B3n,=C2=A0 en tener la carga el lunes.<br>Saludos.=
+</p><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin=
+-bottom-alt:auto"><img border=3D"0" width=3D"109" height=3D"34" id=3D"_x000=
+0_i1033" src=3D"cid:image002.jpg@01D2AFBD.EC753630"></p><table class=3D"Mso=
+NormalTable" border=3D"0" cellspacing=3D"3" cellpadding=3D"0"><tr><td style=
+=3D"padding:.75pt .75pt .75pt .75pt"></td></tr><tr><td style=3D"padding:.75=
+pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:au=
+to;mso-margin-bottom-alt:auto">Marcela Triszcz</p></td></tr><tr><td style=
+=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-ma=
+rgin-top-alt:auto;mso-margin-bottom-alt:auto">Compras / Comercio Exterior</=
+p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"M=
+soNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Tel:=
+ +54 342 4810810</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .7=
+5pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bot=
+tom-alt:auto">Lamadrid 3065</p></td></tr><tr><td style=3D"padding:.75pt .75=
+pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso=
+-margin-bottom-alt:auto">CP 3000 Santa Fe, Argentina.</p></td></tr><tr><td =
+style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"m=
+so-margin-top-alt:auto;mso-margin-bottom-alt:auto"><a href=3D"mailto:comext=
+@fapersa.com">comext@fapersa.com</a></p></td></tr></table></div><div><p cla=
+ss=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:aut=
+o">El 05/04/2017 a las 03:54 p.m., Agustin Cocciolo escribi=C3=B3:</p></div=
+><blockquote style=3D"margin-top:5.0pt;margin-bottom:5.0pt"><div><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>Marcela</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-mar=
+gin-bottom-alt:auto">estoy viendo la alternativa mas viable</p><p class=3D"=
+MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=
+=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-b=
+ottom-alt:auto">en este caso seria un exclusivo para un carga menor de 9 me=
+ntros</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin=
+-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-=
+alt:auto;mso-margin-bottom-alt:auto">los exclusivos anteriores salen con ma=
+s cargas y los costos se pueden prorratear de otro modo.</p><p class=3D"Mso=
+Normal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0=
+</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bott=
+om-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:a=
+uto;mso-margin-bottom-alt:auto">Dame hasta el final del dia si consigo junt=
+ar carga, anticipo que va a ser complicado.</p><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><div><p c=
+lass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:a=
+uto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-=
+margin-bottom-alt:auto">=C2=A0</p><div><table class=3D"MsoNormalTable" bord=
+er=3D"0" cellspacing=3D"3" cellpadding=3D"0"><tr><td style=3D"padding:.75pt=
+ .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto=
+;mso-margin-bottom-alt:auto"><b>Agustin Cocciolo </b></p><p class=3D"MsoNor=
+mal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>=C2=A0=
+</b>Customer Service</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:=
+auto;mso-margin-bottom-alt:auto">=C2=A0San Jer=C3=B3nimo 177=C2=A0 - Piso 6=
+ Of. A</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margi=
+n-bottom-alt:auto">=C2=A0(5000) C=C3=B3rdoba - Argentina</p><p class=3D"Mso=
+Normal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0=
+ Phone: + 54 351 4234670/77 </p><p class=3D"MsoNormal" style=3D"mso-margin-=
+top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0 Cel:=C2=A0 +54 351 154-0220=
+63</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bo=
+ttom-alt:auto"><span lang=3D"EN-US"><a href=3D"mailto:acocciolo@pluscargoco=
+rdoba.com.ar">acocciolo@pluscargocordoba.com.ar</a></span></p><p class=3D"M=
+soNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><spa=
+n lang=3D"EN-US">=C2=A0<b>Nuevo </b></span><b><span lang=3D"EN-GB">Nextel: =
+674*1379</span></b></p></td></tr></table></div><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span lang=3D"EN-GB=
+">=C2=A0 Web: <a href=3D"http://www.gruporas.com">www.gruporas.com</a></spa=
+n></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bo=
+ttom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt=
+:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D=
+"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><img border=3D"0" widt=
+h=3D"263" height=3D"67" id=3D"_x0000_i1034" src=3D"cid:image003.jpg@01D2AFB=
+D.EC753630" alt=3D"cid:024601ca2ac7$24d9c330$0300a8c0@cathy"></p></div><p c=
+lass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:a=
+uto">=C2=A0</p><div><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt=
+:auto;mso-margin-bottom-alt:auto"><b>De:</b> Marcela Triszcz [mailto:<a hre=
+f=3D"mailto:comext@fapersa.com">comext@fapersa.com</a>] <br><b>Enviado el:<=
+/b> mi=C3=A9rcoles, 05 de abril de 2017 15:53<br><b>Para:</b> Agustin Cocci=
+olo; Estudio De Lorenzo<br><b>CC:</b> Dopazo; Andr=C3=A9s Carboni; Vanesa R=
+earte<br><b>Asunto:</b> Re: AVISO DE LLEGADA DE CARGA - Ref.: 13477; Shippe=
+r: WENZHOU RUIMING INDUSTRIAL CO., LTD; Consignee: FAPERSA ICSA; Vessel: CA=
+P SAN VINCENT/</p></div></div><p class=3D"MsoNormal" style=3D"mso-margin-to=
+p-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" sty=
+le=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><br>Agustin:<br>P=
+or favor fijate que podes hacer y esperamos tus novedades para una decisi=
+=C3=B3n<br>Desde ya que nunca pagamos un exclusivo mas de USD 1400 no se po=
+r que decis USD 1800<br>Saludos.</p><div><p class=3D"MsoNormal" style=3D"ms=
+o-margin-top-alt:auto;mso-margin-bottom-alt:auto"><img border=3D"0" width=
+=3D"109" height=3D"34" id=3D"_x0000_i1035" src=3D"cid:image002.jpg@01D2AFBD=
+.EC753630"></p><table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"=
+3" cellpadding=3D"0"><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"></td=
+></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNorm=
+al" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Marcela Tr=
+iszcz</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p cla=
+ss=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:aut=
+o">Compras / Comercio Exterior</p></td></tr><tr><td style=3D"padding:.75pt =
+.75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;=
+mso-margin-bottom-alt:auto">Tel: +54 342 4810810</p></td></tr><tr><td style=
+=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-ma=
+rgin-top-alt:auto;mso-margin-bottom-alt:auto">Lamadrid 3065</p></td></tr><t=
+r><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" styl=
+e=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">CP 3000 Santa Fe, =
+Argentina.</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><=
+p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-al=
+t:auto"><a href=3D"mailto:comext@fapersa.com">comext@fapersa.com</a></p></t=
+d></tr></table></div><div><p class=3D"MsoNormal" style=3D"mso-margin-top-al=
+t:auto;mso-margin-bottom-alt:auto">El 05/04/2017 a las 03:38 p.m., Agustin =
+Cocciolo escribi=C3=B3:</p></div><blockquote style=3D"margin-top:5.0pt;marg=
+in-bottom:5.0pt"><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:au=
+to;mso-margin-bottom-alt:auto">Marcela</p><p class=3D"MsoNormal" style=3D"m=
+so-margin-top-alt:auto;mso-margin-bottom-alt:auto">es carga consolidada y d=
+ependemos de juntar volumen para sacar el cami=C3=B3n, caso contrario debo =
+esperar, y como pocas veces en esta ocasi=C3=B3n nos esta ocurriendo esto.<=
+/p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-botto=
+m-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:au=
+to;mso-margin-bottom-alt:auto">La soluci=C3=B3n es un cami=C3=B3n exclusivo=
+ pero por el tama=C3=B1o de la carga, los costos serian bastantes altos, ap=
+rox 1800 usd</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso=
+-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-marg=
+in-top-alt:auto;mso-margin-bottom-alt:auto">Lo otro que podemos hacer es ve=
+r la diferencia de costos a cubrir saliendo con mitad de camion.</p><p clas=
+s=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto=
+">=C2=A0</p><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;ms=
+o-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-mar=
+gin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><div><table class=3D=
+"MsoNormalTable" border=3D"0" cellspacing=3D"3" cellpadding=3D"0"><tr><td s=
+tyle=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"ms=
+o-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>Agustin Cocciolo </b><=
+/p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-botto=
+m-alt:auto"><b>=C2=A0</b>Customer Service</p><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0San Jer=C3=B3=
+nimo 177=C2=A0 - Piso 6 Of. A</p><p class=3D"MsoNormal" style=3D"mso-margin=
+-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0(5000) C=C3=B3rdoba - Argen=
+tina</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-=
+bottom-alt:auto">=C2=A0 Phone: + 54 351 4234670/77 </p><p class=3D"MsoNorma=
+l" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0 Cel:=
+=C2=A0 +54 351 154-022063</p><p class=3D"MsoNormal" style=3D"mso-margin-top=
+-alt:auto;mso-margin-bottom-alt:auto"><span lang=3D"EN-US"><a href=3D"mailt=
+o:acocciolo@pluscargocordoba.com.ar">acocciolo@pluscargocordoba.com.ar</a><=
+/span></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margi=
+n-bottom-alt:auto"><span lang=3D"EN-US">=C2=A0<b>Nuevo </b></span><b><span =
+lang=3D"EN-GB">Nextel: 674*1379</span></b></p></td></tr></table></div><p cl=
+ass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:au=
+to"><span lang=3D"EN-GB">=C2=A0 Web: <a href=3D"http://www.gruporas.com">ww=
+w.gruporas.com</a></span></p><p class=3D"MsoNormal" style=3D"mso-margin-top=
+-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" styl=
+e=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+><img border=3D"0" width=3D"263" height=3D"67" id=3D"_x0000_i1036" src=3D"c=
+id:image003.jpg@01D2AFBD.EC753630" alt=3D"cid:024601ca2ac7$24d9c330$0300a8c=
+0@cathy"></p></div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;=
+mso-margin-bottom-alt:auto">=C2=A0</p><div><div><p class=3D"MsoNormal" styl=
+e=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>De:</b> Marcela=
+ Triszcz [mailto:<a href=3D"mailto:comext@fapersa.com">comext@fapersa.com</=
+a>] <br><b>Enviado el:</b> mi=C3=A9rcoles, 05 de abril de 2017 15:33<br><b>=
+Para:</b> Agustin Cocciolo; Estudio De Lorenzo<br><b>CC:</b> Dopazo; Andr=
+=C3=A9s Carboni; Vanesa Rearte<br><b>Asunto:</b> Re: AVISO DE LLEGADA DE CA=
+RGA - Ref.: 13477; Shipper: WENZHOU RUIMING INDUSTRIAL CO., LTD; Consignee:=
+ FAPERSA ICSA; Vessel: CAP SAN VINCENT/</p></div></div><p class=3D"MsoNorma=
+l" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><=
+p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-al=
+t:auto">Agustin:<br><br>No nos sirve martes que viene, encima est=C3=A1 sem=
+ana santa.<br>Por favor procur=C3=A1 una soluci=C3=B3n para que tengamos la=
+ carga en Santa Fe el lunes 10/4, asi habiamos quedado.<br>Exclusivo para m=
+a=C3=B1ana jueves o viernes ??<br>Aguardo tus novedades</p><div><p class=3D=
+"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><i=
+mg border=3D"0" width=3D"109" height=3D"34" id=3D"_x0000_i1037" src=3D"cid:=
+image002.jpg@01D2AFBD.EC753630"></p><table class=3D"MsoNormalTable" border=
+=3D"0" cellspacing=3D"3" cellpadding=3D"0"><tr><td style=3D"padding:.75pt .=
+75pt .75pt .75pt"></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75p=
+t"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-botto=
+m-alt:auto">Marcela Triszcz</p></td></tr><tr><td style=3D"padding:.75pt .75=
+pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso=
+-margin-bottom-alt:auto">Compras / Comercio Exterior</p></td></tr><tr><td s=
+tyle=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"ms=
+o-margin-top-alt:auto;mso-margin-bottom-alt:auto">Tel: +54 342 4810810</p><=
+/td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoN=
+ormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Lamadri=
+d 3065</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p cl=
+ass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:au=
+to">CP 3000 Santa Fe, Argentina.</p></td></tr><tr><td style=3D"padding:.75p=
+t .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:aut=
+o;mso-margin-bottom-alt:auto"><a href=3D"mailto:comext@fapersa.com">comext@=
+fapersa.com</a></p></td></tr></table></div><div><p class=3D"MsoNormal" styl=
+e=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">El 05/04/2017 a la=
+s 03:20 p.m., Agustin Cocciolo escribi=C3=B3:</p></div><blockquote style=3D=
+"margin-top:5.0pt;margin-bottom:5.0pt"><div><p class=3D"MsoNormal" style=3D=
+"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Hola Marcela</p><p cla=
+ss=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:aut=
+o">buenas tardes</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto=
+;mso-margin-bottom-alt:auto">escribo para comentarte que no llegamos a carg=
+ar el consolidado este Viernes.</p><p class=3D"MsoNormal" style=3D"mso-marg=
+in-top-alt:auto;mso-margin-bottom-alt:auto">Muy posiblemente lo podamos sac=
+ar Martes que viene.</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:=
+auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"=
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Te mantengo informada</=
+p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom=
+-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:aut=
+o;mso-margin-bottom-alt:auto">Saludos </p><p class=3D"MsoNormal" style=3D"m=
+so-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><div><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto">=C2=A0</p><div><table class=3D"MsoNormalTable" border=
+=3D"0" cellspacing=3D"3" cellpadding=3D"0"><tr><td style=3D"padding:.75pt .=
+75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;m=
+so-margin-bottom-alt:auto"><b>Agustin Cocciolo </b></p><p class=3D"MsoNorma=
+l" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>=C2=A0</=
+b>Customer Service</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:au=
+to;mso-margin-bottom-alt:auto">=C2=A0San Jer=C3=B3nimo 177=C2=A0 - Piso 6 O=
+f. A</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-=
+bottom-alt:auto">=C2=A0(5000) C=C3=B3rdoba - Argentina</p><p class=3D"MsoNo=
+rmal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0 P=
+hone: + 54 351 4234670/77 </p><p class=3D"MsoNormal" style=3D"mso-margin-to=
+p-alt:auto;mso-margin-bottom-alt:auto">=C2=A0 Cel:=C2=A0 +54 351 154-022063=
+</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bott=
+om-alt:auto"><span lang=3D"EN-US"><a href=3D"mailto:acocciolo@pluscargocord=
+oba.com.ar">acocciolo@pluscargocordoba.com.ar</a></span></p><p class=3D"Mso=
+Normal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span =
+lang=3D"EN-US">=C2=A0<b>Nuevo </b></span><b><span lang=3D"EN-GB">Nextel: 67=
+4*1379</span></b></p></td></tr></table></div><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span lang=3D"EN-GB=
+">=C2=A0 Web: <a href=3D"http://www.gruporas.com">www.gruporas.com</a></spa=
+n></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bo=
+ttom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt=
+:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D=
+"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><img border=3D"0" widt=
+h=3D"263" height=3D"67" id=3D"_x0000_i1038" src=3D"cid:image003.jpg@01D2AFB=
+D.EC753630" alt=3D"cid:024601ca2ac7$24d9c330$0300a8c0@cathy"></p></div><p c=
+lass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:a=
+uto">=C2=A0</p><div><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt=
+:auto;mso-margin-bottom-alt:auto"><b>De:</b> Estudio De Lorenzo [mailto:<a =
+href=3D"mailto:estudiodelorenzo@hotmail.com">estudiodelorenzo@hotmail.com</=
+a>] <br><b>Enviado el:</b> martes, 04 de abril de 2017 13:01<br><b>Para:</b=
+> Marcela Triszcz; Agustin Cocciolo<br><b>CC:</b> Dopazo; Andr=C3=A9s Carbo=
+ni; Vanesa Rearte<br><b>Asunto:</b> Re: AVISO DE LLEGADA DE CARGA - Ref.: 1=
+3477; Shipper: WENZHOU RUIMING INDUSTRIAL CO., LTD; Consignee: FAPERSA ICSA=
+; Vessel: CAP SAN VINCENT/</p></div></div><p class=3D"MsoNormal" style=3D"m=
+so-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><div id=3D"div=
+tagdefaultwrapper"><p>Agust=C3=ADn</p><p>notar que en el aviso dice destino=
+ Cordoba=C2=A0, si bien no me afecta en este documento ver que los dem=C3=
+=A1s documentos digan destino SANTA FE</p><p>slds.</p></div><div><div><div>=
+<div><div><div><div class=3D"MsoNormal" align=3D"center" style=3D"text-alig=
+n:center"><hr size=3D"3" width=3D"98%" align=3D"center"></div></div></div><=
+/div></div></div></div><div id=3D"divRplyFwdMsg"><p class=3D"MsoNormal" sty=
+le=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>De:</b> Marcel=
+a Triszcz &lt;<a href=3D"mailto:comext@fapersa.com">comext@fapersa.com</a>&=
+gt;<br><b>Enviado:</b> martes, 04 de abril de 2017 12:52:48 p.m.<br><b>Para=
+:</b> Agustin Cocciolo; Estudio De Lorenzo<br><b>Cc:</b> Dopazo; Andr=C3=A9=
+s Carboni; Vanesa Rearte<br><b>Asunto:</b> Re: AVISO DE LLEGADA DE CARGA - =
+Ref.: 13477; Shipper: WENZHOU RUIMING INDUSTRIAL CO., LTD; Consignee: FAPER=
+SA ICSA; Vessel: CAP SAN VINCENT/ </p><div><p class=3D"MsoNormal" style=3D"=
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p></div></div><=
+div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bott=
+om-alt:auto">Buen dia Agustin:<br><br>Notado.<br>Quedamos al aguardo de la =
+certificaci=C3=B3n de flete y apenas puedas los datos del cami=C3=B3n y cho=
+fer que vendr=C3=A1 a Santa Fe.<br>Saludos.</p><div><p class=3D"MsoNormal" =
+style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><img border=3D=
+"0" width=3D"109" height=3D"34" id=3D"_x0000_i1040" src=3D"cid:image002.jpg=
+@01D2AFBD.EC753630"></p><table class=3D"MsoNormalTable" border=3D"0" cellsp=
+acing=3D"3" cellpadding=3D"0"><tr><td style=3D"padding:.75pt .75pt .75pt .7=
+5pt"></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>Marcela Triszcz</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .7=
+5pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bot=
+tom-alt:auto">Compras / Comercio Exterior</p></td></tr><tr><td style=3D"pad=
+ding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-to=
+p-alt:auto;mso-margin-bottom-alt:auto">Tel: +54 342 4810810</p></td></tr><t=
+r><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" styl=
+e=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Lamadrid 3065</p><=
+/td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoN=
+ormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">CP 3000=
+ Santa Fe, Argentina.</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75=
+pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margi=
+n-bottom-alt:auto"><a href=3D"mailto:comext@fapersa.com">comext@fapersa.com=
+</a></p></td></tr></table></div><div><p class=3D"MsoNormal" style=3D"mso-ma=
+rgin-top-alt:auto;mso-margin-bottom-alt:auto">El 03/04/2017 a las 06:09 p.m=
+., Agustin Cocciolo escribi=C3=B3:</p></div><blockquote style=3D"margin-top=
+:5.0pt;margin-bottom:5.0pt"><div><p class=3D"MsoNormal" style=3D"mso-margin=
+-top-alt:auto;mso-margin-bottom-alt:auto">Buenas tardes</p><p class=3D"MsoN=
+ormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">envio a=
+viso formal de arribo, Vanesa enviara oportunamente la certificaci=C3=B3n</=
+p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom=
+-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:aut=
+o;mso-margin-bottom-alt:auto">Llegada .......... : =C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 03/ABRIL</p><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>Origen ........... : =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0 NINGBO</p><p class=3D"MsoNormal" style=3D"mso-m=
+argin-top-alt:auto;mso-margin-bottom-alt:auto">Destino .......... : =C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 CO=
+RDOBA</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin=
+-bottom-alt:auto">Vapor ............ : =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 CAP SAN VINCENT</p><p class=3D"M=
+soNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">H B/=
+L ............ : =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 HDMUNXUY1512402L</p><p class=3D"MsoNormal=
+" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Seguimiento =
+...... : =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 13477</p><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto">Embarcador ....... : =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0 WENZHOU RUIMING INDUSTRIAL CO., LTD</p><p class=3D"MsoNorma=
+l" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Consignatar=
+io .... : =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 FAPERSA IC=
+SA</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bo=
+ttom-alt:auto"><span lang=3D"EN-US">Ref. proveedor ... : =C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0 S/R</span></p><p class=3D"MsoNormal" style=3D"mso-=
+margin-top-alt:auto;mso-margin-bottom-alt:auto"><span lang=3D"EN-US">Conten=
+edor ....... : =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 S/I; </span=
+></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bot=
+tom-alt:auto">Dep=C3=B3sito ......... : =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 BOM PORT</p><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Doc. originales .. =
+: =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 NO</p><p cla=
+ss=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:aut=
+o">Mercader=C3=ADa ....... : =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0 CARGA GENERAL=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0 Bultos:=C2=A0=C2=A0=C2=A0=C2=A0 8=C2=A0 Peso:=
+=C2=A0=C2=A0 3328.00 KGS</p><p class=3D"MsoNormal" style=3D"mso-margin-top-=
+alt:auto;mso-margin-bottom-alt:auto">CBM .............. : =C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 9.8000</p><=
+p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-al=
+t:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;m=
+so-margin-bottom-alt:auto">CONTINUAREMOS INFORMANDO</p><p class=3D"MsoNorma=
+l" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><=
+p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-al=
+t:auto">*** MUY IMPORTANTE ***.</p><p class=3D"MsoNormal" style=3D"mso-marg=
+in-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal=
+" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">SR. CLIENTE =
+LE RECORDAMOS QUE ES INDISPENSABLE LA PRESENTACI=C3=93N DEL ORIGINAL DEL B/=
+L PARA PODER ENTREGARLES LA CARGA. TENER EN CUENTA ADEM=C3=81S QUE PARA TRA=
+MITAR EL TRANSITO ADUANERO ES FUNDAMENTAL,=C2=A0 ENVIARNOS COPIA DE FACTURA=
+ COMERCIAL, LISTA DE EMPAQUE Y LA POSICI=C3=93N ARANCELARIA DE LA MERCADER=
+=C3=8DA.</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-mar=
+gin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-t=
+op-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" st=
+yle=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">SALUDOS CORDIALE=
+S</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bot=
+tom-alt:auto">=C2=A0</p><div><p class=3D"MsoNormal" style=3D"mso-margin-top=
+-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" styl=
+e=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><div><ta=
+ble class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"3" cellpadding=3D"=
+0"><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal"=
+ style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>Agustin Co=
+cciolo </b></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-=
+margin-bottom-alt:auto"><b>=C2=A0</b>Customer Service</p><p class=3D"MsoNor=
+mal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0San=
+ Jer=C3=B3nimo 177=C2=A0 - Piso 6 Of. A</p><p class=3D"MsoNormal" style=3D"=
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0(5000) C=C3=B3rdo=
+ba - Argentina</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;m=
+so-margin-bottom-alt:auto">=C2=A0 Phone: + 54 351 4234670/77 </p><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>=C2=A0 Cel:=C2=A0 +54 351 154-022063</p><p class=3D"MsoNormal" style=3D"ms=
+o-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span lang=3D"EN-US"><a h=
+ref=3D"mailto:acocciolo@pluscargocordoba.com.ar">acocciolo@pluscargocordoba=
+.com.ar</a></span></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:au=
+to;mso-margin-bottom-alt:auto"><span lang=3D"EN-US">=C2=A0<b>Nuevo </b></sp=
+an><b><span lang=3D"EN-GB">Nextel: 674*1379</span></b></p></td></tr></table=
+></div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-b=
+ottom-alt:auto"><span lang=3D"EN-GB">=C2=A0 Web: <a href=3D"http://www.grup=
+oras.com">www.gruporas.com</a></span></p><p class=3D"MsoNormal" style=3D"ms=
+o-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"Mso=
+Normal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0=
+</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bott=
+om-alt:auto"><img border=3D"0" width=3D"263" height=3D"67" id=3D"_x0000_i10=
+41" src=3D"cid:image003.jpg@01D2AFBD.EC753630" alt=3D"cid:024601ca2ac7$24d9=
+c330$0300a8c0@cathy"></p></div><p class=3D"MsoNormal" style=3D"mso-margin-t=
+op-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><div><div><p class=3D"Mso=
+Normal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>De:=
+</b> Estudio De Lorenzo [mailto:<a href=3D"mailto:estudiodelorenzo@hotmail.=
+com">estudiodelorenzo@hotmail.com</a>] <br><b>Enviado el:</b> lunes, 03 de =
+abril de 2017 9:52<br><b>Para:</b> Marcela Triszcz; Agustin Cocciolo<br><b>=
+CC:</b> Dopazo; Andr=C3=A9s Carboni; Gonzalo Martinez<br><b>Asunto:</b> Re:=
+ Cargas en agua - 13477</p></div></div><p class=3D"MsoNormal" style=3D"mso-=
+margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><div><p>Agust=C3=
+=ADn</p><p>van los datos</p><p>SON CULATAS PARA MOTORES</p><p>NCM 8409,91,1=
+2</p><p>MODELOS TIPO 1.6// CORSA 1.6//R9</p><p>=C2=A0NCM 8409.99.59</p><p>F=
+8Q KANGOO // F8Q CLIO</p><div><p class=3D"MsoNormal" style=3D"mso-margin-to=
+p-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p></div><p class=3D"MsoNorma=
+l" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">REMITIR A Z=
+ONA PRIMARIA PUERTO SANTA FE 42001 </p><div><p class=3D"MsoNormal" style=3D=
+"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">ORIGEN CHINA</p></div>=
+<div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bot=
+tom-alt:auto">slds.</p><div><div><div><div><div><div><div><div><div class=
+=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><hr size=3D"3" =
+width=3D"98%" align=3D"center"></div></div></div></div></div></div></div></=
+div><div id=3D"divRplyFwdMsg"><p class=3D"MsoNormal" style=3D"mso-margin-to=
+p-alt:auto;mso-margin-bottom-alt:auto"><b>De:</b> Marcela Triszcz &lt;<a hr=
+ef=3D"mailto:comext@fapersa.com">comext@fapersa.com</a>&gt;<br><b>Enviado:<=
+/b> lunes, 03 de abril de 2017 09:43 a.m.<br><b>Para:</b> Agustin Cocciolo<=
+br><b>Cc:</b> Dopazo; Andr=C3=A9s Carboni; Gonzalo Martinez; Estudio De Lor=
+enzo<br><b>Asunto:</b> Re: Cargas en agua - 13477 </p><div><p class=3D"MsoN=
+ormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0<=
+/p></div></div><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto=
+;mso-margin-bottom-alt:auto">Buen dia Agustin:<br><br>Adjunto factura, pack=
+ing y B/L de la carga de Wenzhou Ruiming (ref. 13477)<br>Por favor confirma=
+r si lleg=C3=B3 el barco.<br>Recordar que necesitamos que la carga este en =
+Santa Fe el pr=C3=B3ximo lunes 10/4<br><br>Ra=C3=BAl:<br>Por favor confirma=
+le a Agustin los datos para el cruce.<br>Saludos.</p><div><p class=3D"MsoNo=
+rmal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><img bor=
+der=3D"0" width=3D"109" height=3D"34" id=3D"_x0000_i1043" src=3D"cid:image0=
+02.jpg@01D2AFBD.EC753630"></p><table class=3D"MsoNormalTable" border=3D"0" =
+cellspacing=3D"3" cellpadding=3D"0"><tr><td style=3D"padding:.75pt .75pt .7=
+5pt .75pt"></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p c=
+lass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:a=
+uto">Marcela Triszcz</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75p=
+t .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin=
+-bottom-alt:auto">Compras / Comercio Exterior</p></td></tr><tr><td style=3D=
+"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margi=
+n-top-alt:auto;mso-margin-bottom-alt:auto">Tel: +54 342 4810810</p></td></t=
+r><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" =
+style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Lamadrid 3065<=
+/p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"=
+MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">CP =
+3000 Santa Fe, Argentina.</p></td></tr><tr><td style=3D"padding:.75pt .75pt=
+ .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-m=
+argin-bottom-alt:auto"><a href=3D"mailto:comext@fapersa.com">comext@fapersa=
+.com</a></p></td></tr></table></div><div><p class=3D"MsoNormal" style=3D"ms=
+o-margin-top-alt:auto;mso-margin-bottom-alt:auto">El 29/03/2017 a las 04:03=
+ p.m., Agustin Cocciolo escribi=C3=B3:</p></div><blockquote style=3D"margin=
+-top:5.0pt;margin-bottom:5.0pt"><div><p class=3D"MsoNormal" style=3D"mso-ma=
+rgin-top-alt:auto;mso-margin-bottom-alt:auto">Hola Marcela</p><p class=3D"M=
+soNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">buen=
+as tardes</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-ma=
+rgin-bottom-alt:auto">notado el pedido</p><p class=3D"MsoNormal" style=3D"m=
+so-margin-top-alt:auto;mso-margin-bottom-alt:auto">debajo te paso las carga=
+s, me falta solo la del King que no puedo saber cu=C3=A1ndo arriba aun.</p>=
+<p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-a=
+lt:auto">=C2=A0</p><table class=3D"MsoNormalTable" border=3D"0" cellspacing=
+=3D"3" cellpadding=3D"0" width=3D"1014" style=3D"width:608.4pt"><tr><td wid=
+th=3D"39" nowrap style=3D"width:23.4pt;padding:.75pt .75pt .75pt .75pt"><p =
+class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:=
+auto"><b>13477</b></p></td><td width=3D"232" nowrap style=3D"width:139.2pt;=
+padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin=
+-top-alt:auto;mso-margin-bottom-alt:auto">WENZHOU RUIMING</p></td><td width=
+=3D"163" nowrap style=3D"width:97.8pt;padding:.75pt .75pt .75pt .75pt"><p c=
+lass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:a=
+uto"><b>FAPERSA</b></p></td><td width=3D"139" nowrap style=3D"width:83.4pt;=
+padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin=
+-top-alt:auto;mso-margin-bottom-alt:auto">HDMUNXUY1512402L</p></td><td widt=
+h=3D"132" nowrap style=3D"width:79.2pt;padding:.75pt .75pt .75pt .75pt"><p =
+class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:=
+auto"><b><i>CAP SAN VINCENT</i></b></p></td><td width=3D"35" nowrap style=
+=3D"width:21.0pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" st=
+yle=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">NBO</p></td><td =
+width=3D"51" nowrap style=3D"width:30.6pt;padding:.75pt .75pt .75pt .75pt">=
+<p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-a=
+lt:auto"><b>25-feb</b></p></td><td width=3D"55" nowrap style=3D"width:33.0p=
+t;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-marg=
+in-top-alt:auto;mso-margin-bottom-alt:auto">8</p></td><td width=3D"64" nowr=
+ap style=3D"width:38.4pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNo=
+rmal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">3328.00<=
+/p></td><td width=3D"52" nowrap style=3D"width:31.2pt;padding:.75pt .75pt .=
+75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-mar=
+gin-bottom-alt:auto">9.80</p></td><td width=3D"51" nowrap style=3D"width:30=
+.6pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-m=
+argin-top-alt:auto;mso-margin-bottom-alt:auto"><b>03-abr</b></p></td></tr><=
+tr><td width=3D"39" nowrap style=3D"width:23.4pt;padding:.75pt .75pt .75pt =
+.75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-b=
+ottom-alt:auto"><b>13468</b></p></td><td width=3D"232" nowrap style=3D"widt=
+h:139.2pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"=
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">CHENGDU</p></td><td wid=
+th=3D"163" nowrap style=3D"width:97.8pt;padding:.75pt .75pt .75pt .75pt"><p=
+ class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt=
+:auto"><b>FAPERSA</b></p></td><td width=3D"139" nowrap style=3D"width:83.4p=
+t;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-marg=
+in-top-alt:auto;mso-margin-bottom-alt:auto">YSGSHASFNB1703253</p></td><td w=
+idth=3D"132" nowrap style=3D"width:79.2pt;padding:.75pt .75pt .75pt .75pt">=
+<p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-a=
+lt:auto"><b><i>CMA CGM GANGES</i></b></p></td><td width=3D"35" nowrap style=
+=3D"width:21.0pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" st=
+yle=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">SHA</p></td><td =
+width=3D"51" nowrap style=3D"width:30.6pt;padding:.75pt .75pt .75pt .75pt">=
+<p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-a=
+lt:auto"><b>05-mar</b></p></td><td width=3D"55" nowrap style=3D"width:33.0p=
+t;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-marg=
+in-top-alt:auto;mso-margin-bottom-alt:auto">18</p></td><td width=3D"64" now=
+rap style=3D"width:38.4pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoN=
+ormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">6727.00=
+</p></td><td width=3D"52" nowrap style=3D"width:31.2pt;padding:.75pt .75pt =
+.75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-ma=
+rgin-bottom-alt:auto">11.74</p></td><td width=3D"51" nowrap style=3D"width:=
+30.6pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso=
+-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>12-abr</b></p></td></tr=
+><tr><td width=3D"39" nowrap style=3D"width:23.4pt;padding:.75pt .75pt .75p=
+t .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin=
+-bottom-alt:auto"><b>13645</b></p></td><td width=3D"232" nowrap style=3D"wi=
+dth:139.2pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">ELRINGKLINGER</p></=
+td><td width=3D"163" nowrap style=3D"width:97.8pt;padding:.75pt .75pt .75pt=
+ .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-=
+bottom-alt:auto"><b>FAPERSA</b></p></td><td width=3D"139" nowrap style=3D"w=
+idth:83.4pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">24870041703=C2=A0=
+=C2=A0=C2=A0 </p></td><td width=3D"132" nowrap style=3D"width:79.2pt;paddin=
+g:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-a=
+lt:auto;mso-margin-bottom-alt:auto"><b><i>CAP SAN MARCO</i></b></p></td><td=
+ width=3D"35" nowrap style=3D"width:21.0pt;padding:.75pt .75pt .75pt .75pt"=
+><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-=
+alt:auto">HAM</p></td><td width=3D"51" nowrap style=3D"width:30.6pt;padding=
+:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-al=
+t:auto;mso-margin-bottom-alt:auto"><b>20-mar</b></p></td><td width=3D"55" n=
+owrap style=3D"width:33.0pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"Ms=
+oNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">3</p>=
+</td><td width=3D"64" nowrap style=3D"width:38.4pt;padding:.75pt .75pt .75p=
+t .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin=
+-bottom-alt:auto">695.00</p></td><td width=3D"52" nowrap style=3D"width:31.=
+2pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-ma=
+rgin-top-alt:auto;mso-margin-bottom-alt:auto">2.38</p></td><td width=3D"51"=
+ nowrap style=3D"width:30.6pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"=
+MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>=
+14-abr</b></p></td></tr><tr><td width=3D"39" nowrap style=3D"width:23.4pt;p=
+adding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-=
+top-alt:auto;mso-margin-bottom-alt:auto"><b>13552</b></p></td><td width=3D"=
+232" nowrap style=3D"width:139.2pt;padding:.75pt .75pt .75pt .75pt"><p clas=
+s=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto=
+">CHENGDU</p></td><td width=3D"163" nowrap style=3D"width:97.8pt;padding:.7=
+5pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:a=
+uto;mso-margin-bottom-alt:auto"><b>FAPERSA</b></p></td><td width=3D"139" no=
+wrap style=3D"width:83.4pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"Mso=
+Normal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">YSGSHA=
+SFNB1708180</p></td><td width=3D"132" nowrap style=3D"width:79.2pt;padding:=
+.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt=
+:auto;mso-margin-bottom-alt:auto"><b><i>SEAMAX ROWAYTON</i></b></p></td><td=
+ width=3D"35" nowrap style=3D"width:21.0pt;padding:.75pt .75pt .75pt .75pt"=
+><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-=
+alt:auto">SHA</p></td><td width=3D"51" nowrap style=3D"width:30.6pt;padding=
+:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-al=
+t:auto;mso-margin-bottom-alt:auto"><b>11-mar</b></p></td><td width=3D"55" n=
+owrap style=3D"width:33.0pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"Ms=
+oNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">3</p>=
+</td><td width=3D"64" nowrap style=3D"width:38.4pt;padding:.75pt .75pt .75p=
+t .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin=
+-bottom-alt:auto">1607.00</p></td><td width=3D"52" nowrap style=3D"width:31=
+.2pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-m=
+argin-top-alt:auto;mso-margin-bottom-alt:auto">1.94</p></td><td width=3D"51=
+" nowrap style=3D"width:30.6pt;padding:.75pt .75pt .75pt .75pt"><p class=3D=
+"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b=
+>19-abr</b></p></td></tr><tr><td width=3D"39" nowrap style=3D"width:23.4pt;=
+padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin=
+-top-alt:auto;mso-margin-bottom-alt:auto"><b>13650</b></p></td><td width=3D=
+"232" nowrap style=3D"width:139.2pt;padding:.75pt .75pt .75pt .75pt"><p cla=
+ss=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:aut=
+o">ZHEJIANG WENZHOU</p></td><td width=3D"163" nowrap style=3D"width:97.8pt;=
+padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin=
+-top-alt:auto;mso-margin-bottom-alt:auto"><b>FAPERSA</b></p></td><td width=
+=3D"139" nowrap style=3D"width:83.4pt;padding:.75pt .75pt .75pt .75pt"><p c=
+lass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:a=
+uto">NKYMVD6053</p></td><td width=3D"132" nowrap style=3D"width:79.2pt;padd=
+ing:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top=
+-alt:auto;mso-margin-bottom-alt:auto"><b><i>SAN FERNANDO</i></b></p></td><t=
+d width=3D"35" nowrap style=3D"width:21.0pt;padding:.75pt .75pt .75pt .75pt=
+"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom=
+-alt:auto">NBO</p></td><td width=3D"51" nowrap style=3D"width:30.6pt;paddin=
+g:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-a=
+lt:auto;mso-margin-bottom-alt:auto"><b>25-mar</b></p></td><td width=3D"55" =
+nowrap style=3D"width:33.0pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"M=
+soNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">4</p=
+></td><td width=3D"64" nowrap style=3D"width:38.4pt;padding:.75pt .75pt .75=
+pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margi=
+n-bottom-alt:auto">3581.00</p></td><td width=3D"52" nowrap style=3D"width:3=
+1.2pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-=
+margin-top-alt:auto;mso-margin-bottom-alt:auto">4.42</p></td><td width=3D"5=
+1" nowrap style=3D"width:30.6pt;padding:.75pt .75pt .75pt .75pt"><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+><b>01-may</b></p></td></tr><tr><td width=3D"39" nowrap style=3D"width:23.4=
+pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-mar=
+gin-top-alt:auto;mso-margin-bottom-alt:auto"><b>13691</b></p></td><td width=
+=3D"232" nowrap style=3D"width:139.2pt;padding:.75pt .75pt .75pt .75pt"><p =
+class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:=
+auto">CHENGDU</p></td><td width=3D"163" nowrap style=3D"width:97.8pt;paddin=
+g:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-a=
+lt:auto;mso-margin-bottom-alt:auto"><b>FAPERSA</b></p></td><td width=3D"139=
+" nowrap style=3D"width:83.4pt;padding:.75pt .75pt .75pt .75pt"><p class=3D=
+"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">YS=
+GSHASFNC1700971</p></td><td width=3D"132" nowrap style=3D"width:79.2pt;padd=
+ing:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top=
+-alt:auto;mso-margin-bottom-alt:auto"><b><i>VALIANT</i></b></p></td><td wid=
+th=3D"35" nowrap style=3D"width:21.0pt;padding:.75pt .75pt .75pt .75pt"><p =
+class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:=
+auto">SHA</p></td><td width=3D"51" nowrap style=3D"width:30.6pt;padding:.75=
+pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:au=
+to;mso-margin-bottom-alt:auto"><b>25-mar</b></p></td><td width=3D"55" nowra=
+p style=3D"width:33.0pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNor=
+mal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">16</p></t=
+d><td width=3D"64" nowrap style=3D"width:38.4pt;padding:.75pt .75pt .75pt .=
+75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bo=
+ttom-alt:auto">4734.00</p></td><td width=3D"52" nowrap style=3D"width:31.2p=
+t;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-marg=
+in-top-alt:auto;mso-margin-bottom-alt:auto">13.63</p></td><td width=3D"51" =
+nowrap style=3D"width:30.6pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"M=
+soNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>0=
+3-may</b></p></td></tr></table><p class=3D"MsoNormal" style=3D"mso-margin-t=
+op-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" st=
+yle=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p cla=
+ss=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:aut=
+o">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-ma=
+rgin-bottom-alt:auto">=C2=A0</p><div><p class=3D"MsoNormal" style=3D"mso-ma=
+rgin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNorm=
+al" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p>=
+<div><table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"3" cellpad=
+ding=3D"0"><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"Ms=
+oNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>Ag=
+ustin Cocciolo </b></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:a=
+uto;mso-margin-bottom-alt:auto"><b>=C2=A0</b>Customer Service</p><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>=C2=A0San Jer=C3=B3nimo 177=C2=A0 - Piso 6 Of. A</p><p class=3D"MsoNormal"=
+ style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0(5000) =
+C=C3=B3rdoba - Argentina</p><p class=3D"MsoNormal" style=3D"mso-margin-top-=
+alt:auto;mso-margin-bottom-alt:auto">=C2=A0 Phone: + 54 351 4234670/77 </p>=
+<p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-a=
+lt:auto">=C2=A0 Cel:=C2=A0 +54 351 154-022063</p><p class=3D"MsoNormal" sty=
+le=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span lang=3D"EN-=
+US"><a href=3D"mailto:acocciolo@pluscargocordoba.com.ar">acocciolo@pluscarg=
+ocordoba.com.ar</a></span></p><p class=3D"MsoNormal" style=3D"mso-margin-to=
+p-alt:auto;mso-margin-bottom-alt:auto"><span lang=3D"EN-US">=C2=A0<b>Nuevo =
+</b></span><b><span lang=3D"EN-GB">Nextel: 674*1379</span></b></p></td></tr=
+></table></div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-=
+margin-bottom-alt:auto"><span lang=3D"EN-GB">=C2=A0 Web: <a href=3D"http://=
+www.gruporas.com">www.gruporas.com</a></span></p><p class=3D"MsoNormal" sty=
+le=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p clas=
+s=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto=
+">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-mar=
+gin-bottom-alt:auto"><img border=3D"0" width=3D"263" height=3D"67" id=3D"_x=
+0000_i1044" src=3D"cid:image003.jpg@01D2AFBD.EC753630" alt=3D"cid:024601ca2=
+ac7$24d9c330$0300a8c0@cathy"></p></div><p class=3D"MsoNormal" style=3D"mso-=
+margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><div><div><p clas=
+s=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto=
+"><b>De:</b> Marcela Triszcz [mailto:<a href=3D"mailto:comext@fapersa.com">=
+comext@fapersa.com</a>] <br><b>Enviado el:</b> mi=C3=A9rcoles, 29 de marzo =
+de 2017 15:24<br><b>Para:</b> &#39;Agustin Cocciolo&#39;<br><b>CC:</b> Dopa=
+zo; Andr=C3=A9s Carboni; Pluscargo Cordoba-Gonzalo Martinez<br><b>Asunto:</=
+b> Re: Cargas en agua</p></div></div><p class=3D"MsoNormal" style=3D"mso-ma=
+rgin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNorm=
+al" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Hola Agust=
+in:<br><br>Reforzando nuestra conversaci=C3=B3n telef=C3=B3nica, ten=C3=A9 =
+presente que la carga de Ruiming que llega el 3/4 a MTVD, vamos a necesitar=
+ que este en Santa Fe el lunes 10/4 por lo cual necesitamos que nos asegure=
+s que podemos contar con la salida del=C2=A0 consolidado del=C2=A0 dia vier=
+nes 7/4.<br><br>Saludos.</p><div><p class=3D"MsoNormal" style=3D"mso-margin=
+-top-alt:auto;mso-margin-bottom-alt:auto"><img border=3D"0" width=3D"109" h=
+eight=3D"34" id=3D"_x0000_i1045" src=3D"cid:image002.jpg@01D2AFBD.EC753630"=
+></p><table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"3" cellpad=
+ding=3D"0"><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"></td></tr><tr>=
+<td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Marcela Triszcz</p>=
+</td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"Mso=
+Normal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Compra=
+s / Comercio Exterior</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75=
+pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margi=
+n-bottom-alt:auto">Tel: +54 342 4810810</p></td></tr><tr><td style=3D"paddi=
+ng:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-=
+alt:auto;mso-margin-bottom-alt:auto">Lamadrid 3065</p></td></tr><tr><td sty=
+le=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-=
+margin-top-alt:auto;mso-margin-bottom-alt:auto">CP 3000 Santa Fe, Argentina=
+.</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+><a href=3D"mailto:comext@fapersa.com">comext@fapersa.com</a></p></td></tr>=
+</table></div><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;=
+mso-margin-bottom-alt:auto">El 29/03/2017 a las 12:55 p.m., Marcela Triszcz=
+ escribi=C3=B3:</p></div><blockquote style=3D"margin-top:5.0pt;margin-botto=
+m:5.0pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin=
+-bottom-alt:auto">Buen dia Agustin:<br><br>Por favor actuzlizanos el detall=
+e de las cargas en agua.<br>Quedamos al aguardo.<br>Saludos.</p><div><p cla=
+ss=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:aut=
+o">=C2=A0</p><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;m=
+so-margin-bottom-alt:auto"><img border=3D"0" width=3D"109" height=3D"34" id=
+=3D"_x0000_i1046" src=3D"cid:image002.jpg@01D2AFBD.EC753630"></p><table cla=
+ss=3D"MsoNormalTable" border=3D"0" cellspacing=3D"3" cellpadding=3D"0"><tr>=
+<td style=3D"padding:.75pt .75pt .75pt .75pt"></td></tr><tr><td style=3D"pa=
+dding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-t=
+op-alt:auto;mso-margin-bottom-alt:auto">Marcela Triszcz</p></td></tr><tr><t=
+d style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D=
+"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Compras / Comercio Ext=
+erior</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p cla=
+ss=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:aut=
+o">Tel: +54 342 4810810</p></td></tr><tr><td style=3D"padding:.75pt .75pt .=
+75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-mar=
+gin-bottom-alt:auto">Lamadrid 3065</p></td></tr><tr><td style=3D"padding:.7=
+5pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:a=
+uto;mso-margin-bottom-alt:auto">CP 3000 Santa Fe, Argentina.</p></td></tr><=
+tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" sty=
+le=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><a href=3D"mailto=
+:comext@fapersa.com">comext@fapersa.com</a></p></td></tr></table></div><p c=
+lass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:a=
+uto"><br><br>---</p><blockquote style=3D"margin-top:5.0pt;margin-bottom:5.0=
+pt"><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin=
+-bottom-alt:auto">Marcela</p><p class=3D"MsoNormal" style=3D"mso-margin-top=
+-alt:auto;mso-margin-bottom-alt:auto">como estas</p><p class=3D"MsoNormal" =
+style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">te paso lo que=
+ tenemos confirmado en el agua</p><p class=3D"MsoNormal" style=3D"mso-margi=
+n-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><table class=3D"MsoNor=
+malTable" border=3D"0" cellspacing=3D"3" cellpadding=3D"0" width=3D"937" st=
+yle=3D"width:562.2pt"><tr><td width=3D"39" nowrap style=3D"width:23.4pt;pad=
+ding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-to=
+p-alt:auto;mso-margin-bottom-alt:auto"><b>13477</b></p></td><td width=3D"16=
+4" nowrap style=3D"width:98.4pt;padding:.75pt .75pt .75pt .75pt"><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>WENZHOU RUIMING</p></td><td width=3D"163" nowrap style=3D"width:97.8pt;pad=
+ding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-to=
+p-alt:auto;mso-margin-bottom-alt:auto"><b>FAPERSA</b></p></td><td width=3D"=
+128" nowrap style=3D"width:76.8pt;padding:.75pt .75pt .75pt .75pt"><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>HDMUNXUY1512402L</p></td><td width=3D"132" nowrap style=3D"width:79.2pt;pa=
+dding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-t=
+op-alt:auto;mso-margin-bottom-alt:auto"><b><i>CAP SAN VINCENT</i></b></p></=
+td><td width=3D"88" nowrap style=3D"width:52.8pt;padding:.75pt .75pt .75pt =
+.75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-b=
+ottom-alt:auto"><b>LCL</b></p></td><td width=3D"55" nowrap style=3D"width:3=
+3.0pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-=
+margin-top-alt:auto;mso-margin-bottom-alt:auto">8</p></td><td width=3D"64" =
+nowrap style=3D"width:38.4pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"M=
+soNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">3328=
+.00</p></td><td width=3D"52" nowrap style=3D"width:31.2pt;padding:.75pt .75=
+pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso=
+-margin-bottom-alt:auto">9.80</p></td><td width=3D"51" nowrap style=3D"widt=
+h:30.6pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"m=
+so-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>03-abr</b></p></td></=
+tr><tr><td width=3D"39" nowrap style=3D"width:23.4pt;padding:.75pt .75pt .7=
+5pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto"><b>13468</b></p></td><td width=3D"164" nowrap style=3D"=
+width:98.4pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">CHENGDU</p></td><td=
+ width=3D"163" nowrap style=3D"width:97.8pt;padding:.75pt .75pt .75pt .75pt=
+"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom=
+-alt:auto"><b>FAPERSA</b></p></td><td width=3D"128" nowrap style=3D"width:7=
+6.8pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-=
+margin-top-alt:auto;mso-margin-bottom-alt:auto">YSGSHASFNB1703253</p></td><=
+td width=3D"132" nowrap style=3D"width:79.2pt;padding:.75pt .75pt .75pt .75=
+pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bott=
+om-alt:auto"><b><i>CMA CGM GANGES</i></b></p></td><td width=3D"88" nowrap s=
+tyle=3D"width:52.8pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal=
+" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>LCL</b></=
+p></td><td width=3D"55" nowrap style=3D"width:33.0pt;padding:.75pt .75pt .7=
+5pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto">18</p></td><td width=3D"64" nowrap style=3D"width:38.4p=
+t;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-marg=
+in-top-alt:auto;mso-margin-bottom-alt:auto">6727.00</p></td><td width=3D"52=
+" nowrap style=3D"width:31.2pt;padding:.75pt .75pt .75pt .75pt"><p class=3D=
+"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">11=
+.74</p></td><td width=3D"51" nowrap style=3D"width:30.6pt;padding:.75pt .75=
+pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso=
+-margin-bottom-alt:auto"><b>12-abr</b></p></td></tr><tr><td width=3D"39" no=
+wrap style=3D"width:23.4pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"Mso=
+Normal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>135=
+52</b></p></td><td width=3D"164" nowrap style=3D"width:98.4pt;padding:.75pt=
+ .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto=
+;mso-margin-bottom-alt:auto">CHENGDU</p></td><td width=3D"163" nowrap style=
+=3D"width:97.8pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" st=
+yle=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>FAPERSA</b></=
+p></td><td width=3D"128" nowrap style=3D"width:76.8pt;padding:.75pt .75pt .=
+75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-mar=
+gin-bottom-alt:auto">YSGSHASFNB1708180</p></td><td width=3D"132" nowrap sty=
+le=3D"width:79.2pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" =
+style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b><i>SEAWAY R=
+OTATION</i></b></p></td><td width=3D"88" nowrap style=3D"width:52.8pt;paddi=
+ng:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-=
+alt:auto;mso-margin-bottom-alt:auto"><b>LCL</b></p></td><td width=3D"55" no=
+wrap style=3D"width:33.0pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"Mso=
+Normal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">3</p><=
+/td><td width=3D"64" nowrap style=3D"width:38.4pt;padding:.75pt .75pt .75pt=
+ .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-=
+bottom-alt:auto">1607.00</p></td><td width=3D"52" nowrap style=3D"width:31.=
+2pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-ma=
+rgin-top-alt:auto;mso-margin-bottom-alt:auto">1.94</p></td><td width=3D"51"=
+ nowrap style=3D"width:30.6pt;padding:.75pt .75pt .75pt .75pt"><p class=3D"=
+MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>=
+19-abr</b></p></td></tr></table><p class=3D"MsoNormal" style=3D"mso-margin-=
+top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" s=
+tyle=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p cl=
+ass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:au=
+to">Luego tengo 4 cargas mas sin mayor info que resta actualizar aun.</p><p=
+ class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt=
+:auto">serian</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;ms=
+o-margin-bottom-alt:auto">KING</p><p class=3D"MsoNormal" style=3D"mso-margi=
+n-top-alt:auto;mso-margin-bottom-alt:auto">LCL ALEMANIA</p><p class=3D"MsoN=
+ormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Y dos d=
+e CHINA</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto">Saludos </p><div><p class=3D"MsoNormal" style=3D"mso-ma=
+rgin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNorm=
+al" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p>=
+<p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-a=
+lt:auto">=C2=A0</p><div><table class=3D"MsoNormalTable" border=3D"0" cellsp=
+acing=3D"3" cellpadding=3D"0"><tr><td style=3D"padding:.75pt .75pt .75pt .7=
+5pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bot=
+tom-alt:auto"><b>Agustin Cocciolo </b></p><p class=3D"MsoNormal" style=3D"m=
+so-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>=C2=A0</b>Customer Se=
+rvice</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin=
+-bottom-alt:auto">=C2=A0San Jer=C3=B3nimo 177=C2=A0 - Piso 6 Of. A</p><p cl=
+ass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:au=
+to">=C2=A0(5000) C=C3=B3rdoba - Argentina</p><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0 Phone: + 54 =
+351 4234670/77 </p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;=
+mso-margin-bottom-alt:auto">=C2=A0 Cel:=C2=A0 +54 351 154-022063</p><p clas=
+s=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto=
+"><span lang=3D"EN-US"><a href=3D"mailto:acocciolo@pluscargocordoba.com.ar"=
+>acocciolo@pluscargocordoba.com.ar</a></span></p><p class=3D"MsoNormal" sty=
+le=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span lang=3D"EN-=
+US">=C2=A0<b>Nuevo </b></span><b><span lang=3D"EN-GB">Nextel: 674*1379</spa=
+n></b></p></td></tr></table></div><p class=3D"MsoNormal" style=3D"mso-margi=
+n-top-alt:auto;mso-margin-bottom-alt:auto"><span lang=3D"EN-GB">=C2=A0 Web:=
+ </span><a href=3D"http://www.gruporas.com">www.gruporas.com</a></p><p clas=
+s=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto=
+">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-mar=
+gin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-t=
+op-alt:auto;mso-margin-bottom-alt:auto"><img border=3D"0" width=3D"263" hei=
+ght=3D"67" id=3D"_x0000_i1047" src=3D"cid:image003.jpg@01D2AFBD.EC753630" a=
+lt=3D"cid:024601ca2ac7$24d9c330$0300a8c0@cathy"></p></div><p class=3D"MsoNo=
+rmal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</=
+p><div><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-mar=
+gin-bottom-alt:auto"><b>De:</b> Marcela Triszcz [mailto:<a href=3D"mailto:c=
+omext@fapersa.com">comext@fapersa.com</a>] <br><b>Enviado el:</b> lunes, 20=
+ de marzo de 2017 12:45<br><b>Para:</b> Agustin Cocciolo<br><b>CC:</b> Gonz=
+alo Martinez<br><b>Asunto:</b> Re: Cargas en agua</p></div></div><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto">Buenas tardes Agustin:<br><br>Ten=C3=A9s disponible el =
+detalle con la cargas en agua.?<br>Necesito agendar las llegadas por difere=
+ntes temas internos.<br>Saludos.</p><div><p class=3D"MsoNormal" style=3D"ms=
+o-margin-top-alt:auto;mso-margin-bottom-alt:auto"><img border=3D"0" width=
+=3D"109" height=3D"34" id=3D"_x0000_i1048" src=3D"cid:image002.jpg@01D2AFBD=
+.EC753630"></p><table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"=
+3" cellpadding=3D"0"><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"></td=
+></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNorm=
+al" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Marcela Tr=
+iszcz</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p cla=
+ss=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:aut=
+o">Compras / Comercio Exterior</p></td></tr><tr><td style=3D"padding:.75pt =
+.75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;=
+mso-margin-bottom-alt:auto">Tel: +54 342 4810810</p></td></tr><tr><td style=
+=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-ma=
+rgin-top-alt:auto;mso-margin-bottom-alt:auto">Lamadrid 3065</p></td></tr><t=
+r><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" styl=
+e=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">CP 3000 Santa Fe, =
+Argentina.</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><=
+p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-al=
+t:auto"><a href=3D"mailto:comext@fapersa.com">comext@fapersa.com</a></p></t=
+d></tr></table></div><div><p class=3D"MsoNormal" style=3D"mso-margin-top-al=
+t:auto;mso-margin-bottom-alt:auto">El 09/03/2017 a las 05:05 p.m., Agustin =
+Cocciolo escribi=C3=B3:</p></div><blockquote style=3D"margin-top:5.0pt;marg=
+in-bottom:5.0pt"><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:au=
+to;mso-margin-bottom-alt:auto">CLARO</p><p class=3D"MsoNormal" style=3D"mso=
+-margin-top-alt:auto;mso-margin-bottom-alt:auto">TE PASO EL BL DE LO QUE YA=
+ SALIO EL 05</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso=
+-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-marg=
+in-top-alt:auto;mso-margin-bottom-alt:auto">EL 11 SALE OTRA MAS CHENGDU, LU=
+NES ME LLEGAN ESTOS BLS</p><p class=3D"MsoNormal" style=3D"mso-margin-top-a=
+lt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>=C2=A0</p><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso=
+-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-marg=
+in-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal=
+" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><d=
+iv><table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"3" cellpaddi=
+ng=3D"0"><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoN=
+ormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>Agus=
+tin Cocciolo </b></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:aut=
+o;mso-margin-bottom-alt:auto"><b>=C2=A0</b>Customer Service</p><p class=3D"=
+MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=
+=A0San Jer=C3=B3nimo 177=C2=A0 - Piso 6 Of. A</p><p class=3D"MsoNormal" sty=
+le=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0(5000) C=C3=
+=B3rdoba - Argentina</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:=
+auto;mso-margin-bottom-alt:auto">=C2=A0 Phone: + 54 351 4234670/77 </p><p c=
+lass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:a=
+uto">=C2=A0 Cel:=C2=A0 +54 351 154-022063</p><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span lang=3D"EN-US=
+"><a href=3D"mailto:acocciolo@pluscargocordoba.com.ar">acocciolo@pluscargoc=
+ordoba.com.ar</a></span></p><p class=3D"MsoNormal" style=3D"mso-margin-top-=
+alt:auto;mso-margin-bottom-alt:auto"><span lang=3D"EN-US">=C2=A0<b>Nuevo </=
+b></span><b><span lang=3D"EN-GB">Nextel: 674*1379</span></b></p></td></tr><=
+/table></div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-ma=
+rgin-bottom-alt:auto"><span lang=3D"EN-GB">=C2=A0 Web: </span><a href=3D"ht=
+tp://www.gruporas.com">www.gruporas.com</a></p><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto"><img border=3D"0" width=3D"263" height=3D"67" id=3D"_x0=
+000_i1049" src=3D"cid:image003.jpg@01D2AFBD.EC753630" alt=3D"cid:024601ca2a=
+c7$24d9c330$0300a8c0@cathy"></p></div><p class=3D"MsoNormal" style=3D"mso-m=
+argin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><div><div><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+><b>De:</b> Marcela Triszcz [mailto:<a href=3D"mailto:comext@fapersa.com">c=
+omext@fapersa.com</a>] <br><b>Enviado el:</b> jueves, 09 de marzo de 2017 1=
+7:01<br><b>Para:</b> Agustin Cocciolo<br><b>CC:</b> Gonzalo Martinez<br><b>=
+Asunto:</b> Re: Cargas en agua</p></div></div><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>Agustin:<br><br>Yo quisiera saber qu=C3=A9 es lo que embarc=C3=B3, y despu=
+=C3=A9s confirmame los arribos.<br>Saludos.</p><div><p class=3D"MsoNormal" =
+style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><img border=3D=
+"0" width=3D"109" height=3D"34" id=3D"_x0000_i1050" src=3D"cid:image002.jpg=
+@01D2AFBD.EC753630"></p><table class=3D"MsoNormalTable" border=3D"0" cellsp=
+acing=3D"3" cellpadding=3D"0"><tr><td style=3D"padding:.75pt .75pt .75pt .7=
+5pt"></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>Marcela Triszcz</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .7=
+5pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bot=
+tom-alt:auto">Compras / Comercio Exterior</p></td></tr><tr><td style=3D"pad=
+ding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-to=
+p-alt:auto;mso-margin-bottom-alt:auto">Tel: +54 342 4810810</p></td></tr><t=
+r><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" styl=
+e=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Lamadrid 3065</p><=
+/td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoN=
+ormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">CP 3000=
+ Santa Fe, Argentina.</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75=
+pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margi=
+n-bottom-alt:auto"><a href=3D"mailto:comext@fapersa.com">comext@fapersa.com=
+</a></p></td></tr></table></div><div><p class=3D"MsoNormal" style=3D"mso-ma=
+rgin-top-alt:auto;mso-margin-bottom-alt:auto">El 09/03/2017 a las 04:56 p.m=
+., Agustin Cocciolo escribi=C3=B3:</p></div><blockquote style=3D"margin-top=
+:5.0pt;margin-bottom:5.0pt"><div><p class=3D"MsoNormal" style=3D"mso-margin=
+-top-alt:auto;mso-margin-bottom-alt:auto">Hola Marcela</p><p class=3D"MsoNo=
+rmal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">como est=
+as</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bo=
+ttom-alt:auto">la info es la misma</p><p class=3D"MsoNormal" style=3D"mso-m=
+argin-top-alt:auto;mso-margin-bottom-alt:auto">me falta confirmar algunos a=
+rribos, como reci=C3=A9n han salido las cargas no puedo identficar las fech=
+as</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bo=
+ttom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt=
+:auto;mso-margin-bottom-alt:auto">si me esperas a la seman que viene te pas=
+o todo completo</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;=
+mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-m=
+argin-top-alt:auto;mso-margin-bottom-alt:auto">av=C3=ADsame cualquier cosa<=
+/p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-botto=
+m-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:au=
+to;mso-margin-bottom-alt:auto">Saluods!</p><p class=3D"MsoNormal" style=3D"=
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><div><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-to=
+p-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><div><table class=3D"MsoNo=
+rmalTable" border=3D"0" cellspacing=3D"3" cellpadding=3D"0"><tr><td style=
+=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-ma=
+rgin-top-alt:auto;mso-margin-bottom-alt:auto"><b>Agustin Cocciolo </b></p><=
+p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-al=
+t:auto"><b>=C2=A0</b>Customer Service</p><p class=3D"MsoNormal" style=3D"ms=
+o-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0San Jer=C3=B3nimo 1=
+77=C2=A0 - Piso 6 Of. A</p><p class=3D"MsoNormal" style=3D"mso-margin-top-a=
+lt:auto;mso-margin-bottom-alt:auto">=C2=A0(5000) C=C3=B3rdoba - Argentina</=
+p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom=
+-alt:auto">=C2=A0 Phone: + 54 351 4234670/77 </p><p class=3D"MsoNormal" sty=
+le=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0 Cel:=C2=A0=
+ +54 351 154-022063</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:a=
+uto;mso-margin-bottom-alt:auto"><span lang=3D"EN-US"><a href=3D"mailto:acoc=
+ciolo@pluscargocordoba.com.ar">acocciolo@pluscargocordoba.com.ar</a></span>=
+</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bott=
+om-alt:auto"><span lang=3D"EN-US">=C2=A0<b>Nuevo </b></span><b><span lang=
+=3D"EN-GB">Nextel: 674*1379</span></b></p></td></tr></table></div><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+><span lang=3D"EN-GB">=C2=A0 Web: <a href=3D"http://www.gruporas.com">www.g=
+ruporas.com</a></span></p><p class=3D"MsoNormal" style=3D"mso-margin-top-al=
+t:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+><img border=3D"0" width=3D"263" height=3D"67" id=3D"_x0000_i1051" src=3D"c=
+id:image003.jpg@01D2AFBD.EC753630" alt=3D"cid:024601ca2ac7$24d9c330$0300a8c=
+0@cathy"></p></div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;=
+mso-margin-bottom-alt:auto">=C2=A0</p><div><div><p class=3D"MsoNormal" styl=
+e=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>De:</b> Marcela=
+ Triszcz [mailto:<a href=3D"mailto:comext@fapersa.com">comext@fapersa.com</=
+a>] <br><b>Enviado el:</b> jueves, 09 de marzo de 2017 12:45<br><b>Para:</b=
+> Agustin Cocciolo<br><b>CC:</b> Gonzalo Martinez<br><b>Asunto:</b> Cargas =
+en agua</p></div></div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:a=
+uto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"m=
+so-margin-top-alt:auto;mso-margin-bottom-alt:auto">Hola Agustin:<br><br>Ten=
+=C3=A9s el detalle de lo que est=C3=A1 en agua?<br><br>Gracias, saludos.</p=
+><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bo=
+ttom-alt:auto"><img border=3D"0" width=3D"109" height=3D"34" id=3D"_x0000_i=
+1052" src=3D"cid:image002.jpg@01D2AFBD.EC753630"></p><table class=3D"MsoNor=
+malTable" border=3D"0" cellspacing=3D"3" cellpadding=3D"0"><tr><td style=3D=
+"padding:.75pt .75pt .75pt .75pt"></td></tr><tr><td style=3D"padding:.75pt =
+.75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;=
+mso-margin-bottom-alt:auto">Marcela Triszcz</p></td></tr><tr><td style=3D"p=
+adding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-=
+top-alt:auto;mso-margin-bottom-alt:auto">Compras / Comercio Exterior</p></t=
+d></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNor=
+mal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Tel: +54 =
+342 4810810</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt">=
+<p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-a=
+lt:auto">Lamadrid 3065</p></td></tr><tr><td style=3D"padding:.75pt .75pt .7=
+5pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto">CP 3000 Santa Fe, Argentina.</p></td></tr><tr><td style=
+=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-ma=
+rgin-top-alt:auto;mso-margin-bottom-alt:auto"><a href=3D"mailto:comext@fape=
+rsa.com">comext@fapersa.com</a></p></td></tr></table></div><div><p class=3D=
+"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">El=
+ 08/03/2017 a las 04:17 p.m., Marcela Triszcz escribi=C3=B3:</p></div><bloc=
+kquote style=3D"margin-top:5.0pt;margin-bottom:5.0pt"><p class=3D"MsoNormal=
+" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Agustin:<br>=
+<br>Ok aguardo tu detalle. <br>Saludos.</p><div><p class=3D"MsoNormal" styl=
+e=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><img border=3D"0" =
+width=3D"109" height=3D"34" id=3D"_x0000_i1053" src=3D"cid:image002.jpg@01D=
+2AFBD.EC753630"></p><table class=3D"MsoNormalTable" border=3D"0" cellspacin=
+g=3D"3" cellpadding=3D"0"><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"=
+></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"Ms=
+oNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Marce=
+la Triszcz</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><=
+p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-al=
+t:auto">Compras / Comercio Exterior</p></td></tr><tr><td style=3D"padding:.=
+75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:=
+auto;mso-margin-bottom-alt:auto">Tel: +54 342 4810810</p></td></tr><tr><td =
+style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"m=
+so-margin-top-alt:auto;mso-margin-bottom-alt:auto">Lamadrid 3065</p></td></=
+tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal"=
+ style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">CP 3000 Santa=
+ Fe, Argentina.</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75=
+pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bott=
+om-alt:auto"><a href=3D"mailto:comext@fapersa.com">comext@fapersa.com</a></=
+p></td></tr></table></div><div><p class=3D"MsoNormal" style=3D"mso-margin-t=
+op-alt:auto;mso-margin-bottom-alt:auto">El 08/03/2017 a las 03:35 p.m., Agu=
+stin Cocciolo escribi=C3=B3:</p></div><blockquote style=3D"margin-top:5.0pt=
+;margin-bottom:5.0pt"><div><p class=3D"MsoNormal" style=3D"mso-margin-top-a=
+lt:auto;mso-margin-bottom-alt:auto">si si, tenemos una que sali=C3=B3 05/ma=
+rzo de CHENGDU</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;m=
+so-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-ma=
+rgin-top-alt:auto;mso-margin-bottom-alt:auto">OTRA SALE EL 11, </p><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto">DESPUES TE PASO TODO</p><p class=3D"MsoNormal" style=3D=
+"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"=
+MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">SAL=
+UDOS!</p><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-m=
+argin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin=
+-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" =
+style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><div=
+><table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"3" cellpadding=
+=3D"0"><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNor=
+mal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>Agusti=
+n Cocciolo </b></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;=
+mso-margin-bottom-alt:auto"><b>=C2=A0</b>Customer Service</p><p class=3D"Ms=
+oNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=
+=A0San Jer=C3=B3nimo 177=C2=A0 - Piso 6 Of. A</p><p class=3D"MsoNormal" sty=
+le=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0(5000) C=C3=
+=B3rdoba - Argentina</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:=
+auto;mso-margin-bottom-alt:auto">=C2=A0 Phone: + 54 351 4234670/77 </p><p c=
+lass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:a=
+uto">=C2=A0 Cel:=C2=A0 +54 351 154-022063</p><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span lang=3D"EN-US=
+"><a href=3D"mailto:acocciolo@pluscargocordoba.com.ar">acocciolo@pluscargoc=
+ordoba.com.ar</a></span></p><p class=3D"MsoNormal" style=3D"mso-margin-top-=
+alt:auto;mso-margin-bottom-alt:auto"><span lang=3D"EN-US">=C2=A0<b>Nuevo </=
+b></span><b><span lang=3D"EN-GB">Nextel: 674*1379</span></b></p></td></tr><=
+/table></div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-ma=
+rgin-bottom-alt:auto"><span lang=3D"EN-GB">=C2=A0 Web: <a href=3D"http://ww=
+w.gruporas.com">www.gruporas.com</a></span></p><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto"><img border=3D"0" width=3D"263" height=3D"67" id=3D"_x0=
+000_i1054" src=3D"cid:image003.jpg@01D2AFBD.EC753630" alt=3D"cid:024601ca2a=
+c7$24d9c330$0300a8c0@cathy"></p></div><p class=3D"MsoNormal" style=3D"mso-m=
+argin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><div><div><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+><b>De:</b> Marcela Triszcz [mailto:<a href=3D"mailto:comext@fapersa.com">c=
+omext@fapersa.com</a>] <br><b>Enviado el:</b> mi=C3=A9rcoles, 08 de marzo d=
+e 2017 15:32<br><b>Para:</b> Agustin Cocciolo<br><b>CC:</b> Pluscargo Cordo=
+ba-Gonzalo Martinez<br><b>Asunto:</b> Re: Carga KING 13612</p></div></div><=
+p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-al=
+t:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;m=
+so-margin-bottom-alt:auto"><br>Ja OK! ; yo pens=C3=A9 que me pasabas adjunt=
+o con las cargas en agua.<br>Como estuve de vacaciones estoy haciendo memor=
+ia que tenia que embarcar, ayudame si sali=C3=B3 algo en estos dias.<br>Sal=
+udos.</p><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-m=
+argin-bottom-alt:auto"><img border=3D"0" width=3D"109" height=3D"34" id=3D"=
+_x0000_i1055" src=3D"cid:image002.jpg@01D2AFBD.EC753630"></p><table class=
+=3D"MsoNormalTable" border=3D"0" cellspacing=3D"3" cellpadding=3D"0"><tr><t=
+d style=3D"padding:.75pt .75pt .75pt .75pt"></td></tr><tr><td style=3D"padd=
+ing:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top=
+-alt:auto;mso-margin-bottom-alt:auto">Marcela Triszcz</p></td></tr><tr><td =
+style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"m=
+so-margin-top-alt:auto;mso-margin-bottom-alt:auto">Compras / Comercio Exter=
+ior</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>Tel: +54 342 4810810</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75=
+pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margi=
+n-bottom-alt:auto">Lamadrid 3065</p></td></tr><tr><td style=3D"padding:.75p=
+t .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:aut=
+o;mso-margin-bottom-alt:auto">CP 3000 Santa Fe, Argentina.</p></td></tr><tr=
+><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><a href=3D"mailto:c=
+omext@fapersa.com">comext@fapersa.com</a></p></td></tr></table></div><div><=
+p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-al=
+t:auto">El 08/03/2017 a las 03:23 p.m., Agustin Cocciolo escribi=C3=B3:</p>=
+</div><blockquote style=3D"margin-top:5.0pt;margin-bottom:5.0pt"><div><p cl=
+ass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:au=
+to">Perdon en el asunto quise decir</p><p class=3D"MsoNormal" style=3D"mso-=
+margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><div><p class=3D"=
+MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=
+=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-b=
+ottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-al=
+t:auto;mso-margin-bottom-alt:auto">=C2=A0</p><div><table class=3D"MsoNormal=
+Table" border=3D"0" cellspacing=3D"3" cellpadding=3D"0"><tr><td style=3D"pa=
+dding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-t=
+op-alt:auto;mso-margin-bottom-alt:auto"><b>Agustin Cocciolo </b></p><p clas=
+s=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto=
+"><b>=C2=A0</b>Customer Service</p><p class=3D"MsoNormal" style=3D"mso-marg=
+in-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0San Jer=C3=B3nimo 177=C2=
+=A0 - Piso 6 Of. A</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:au=
+to;mso-margin-bottom-alt:auto">=C2=A0(5000) C=C3=B3rdoba - Argentina</p><p =
+class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:=
+auto">=C2=A0 Phone: + 54 351 4234670/77 </p><p class=3D"MsoNormal" style=3D=
+"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0 Cel:=C2=A0 +54 =
+351 154-022063</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;m=
+so-margin-bottom-alt:auto"><span lang=3D"EN-US"><a href=3D"mailto:acocciolo=
+@pluscargocordoba.com.ar">acocciolo@pluscargocordoba.com.ar</a></span></p><=
+p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-al=
+t:auto"><span lang=3D"EN-US">=C2=A0<b>Nuevo </b></span><b><span lang=3D"EN-=
+GB">Nextel: 674*1379</span></b></p></td></tr></table></div><p class=3D"MsoN=
+ormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span l=
+ang=3D"EN-GB">=C2=A0 Web: </span><a href=3D"http://www.gruporas.com">www.gr=
+uporas.com</a></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;m=
+so-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-ma=
+rgin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNorm=
+al" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><img borde=
+r=3D"0" width=3D"263" height=3D"67" id=3D"_x0000_i1056" src=3D"cid:image003=
+.jpg@01D2AFBD.EC753630" alt=3D"cid:024601ca2ac7$24d9c330$0300a8c0@cathy"></=
+p></div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-=
+bottom-alt:auto">=C2=A0</p><div><div><p class=3D"MsoNormal" style=3D"mso-ma=
+rgin-top-alt:auto;mso-margin-bottom-alt:auto"><b>De:</b> Marcela Triszcz [m=
+ailto:<a href=3D"mailto:comext@fapersa.com">comext@fapersa.com</a>] <br><b>=
+Enviado el:</b> mi=C3=A9rcoles, 08 de marzo de 2017 15:21<br><b>Para:</b> A=
+gustin Cocciolo<br><b>CC:</b> Gonzalo Martinez<br><b>Asunto:</b> Re: Carga =
+KING 13612</p></div></div><p class=3D"MsoNormal" style=3D"mso-margin-top-al=
+t:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Hola Agustin:<br><b=
+r>Todo Ok por aqui, te falt=C3=B3 pasarme el adjunto que mencion=C3=A1s.<br=
+>Saludos.</p><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;m=
+so-margin-bottom-alt:auto"><img border=3D"0" width=3D"109" height=3D"34" id=
+=3D"_x0000_i1057" src=3D"cid:image002.jpg@01D2AFBD.EC753630"></p><table cla=
+ss=3D"MsoNormalTable" border=3D"0" cellspacing=3D"3" cellpadding=3D"0"><tr>=
+<td style=3D"padding:.75pt .75pt .75pt .75pt"></td></tr><tr><td style=3D"pa=
+dding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-t=
+op-alt:auto;mso-margin-bottom-alt:auto">Marcela Triszcz</p></td></tr><tr><t=
+d style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D=
+"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Compras / Comercio Ext=
+erior</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p cla=
+ss=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:aut=
+o">Tel: +54 342 4810810</p></td></tr><tr><td style=3D"padding:.75pt .75pt .=
+75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-mar=
+gin-bottom-alt:auto">Lamadrid 3065</p></td></tr><tr><td style=3D"padding:.7=
+5pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:a=
+uto;mso-margin-bottom-alt:auto">CP 3000 Santa Fe, Argentina.</p></td></tr><=
+tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" sty=
+le=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><a href=3D"mailto=
+:comext@fapersa.com">comext@fapersa.com</a></p></td></tr></table></div><div=
+><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-=
+alt:auto">El 08/03/2017 a las 03:02 p.m., Agustin Cocciolo escribi=C3=B3:</=
+p></div><blockquote style=3D"margin-top:5.0pt;margin-bottom:5.0pt"><div><p =
+class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:=
+auto">Marcela</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;ms=
+o-margin-bottom-alt:auto">como estas</p><p class=3D"MsoNormal" style=3D"mso=
+-margin-top-alt:auto;mso-margin-bottom-alt:auto">lo paso en adjunto</p><p c=
+lass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:a=
+uto">esta todav=C3=ADa no hizo trasbordo en ITALIA.</p><p class=3D"MsoNorma=
+l" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><=
+div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bott=
+om-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:a=
+uto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"m=
+so-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><div><table cl=
+ass=3D"MsoNormalTable" border=3D"0" cellspacing=3D"3" cellpadding=3D"0"><tr=
+><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b>Agustin Cocciolo=
+ </b></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin=
+-bottom-alt:auto"><b>=C2=A0</b>Customer Service</p><p class=3D"MsoNormal" s=
+tyle=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0San Jer=
+=C3=B3nimo 177=C2=A0 - Piso 6 Of. A</p><p class=3D"MsoNormal" style=3D"mso-=
+margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0(5000) C=C3=B3rdoba -=
+ Argentina</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-m=
+argin-bottom-alt:auto">=C2=A0 Phone: + 54 351 4234670/77 </p><p class=3D"Ms=
+oNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=
+=A0 Cel:=C2=A0 +54 351 154-022063</p><p class=3D"MsoNormal" style=3D"mso-ma=
+rgin-top-alt:auto;mso-margin-bottom-alt:auto"><span lang=3D"EN-US"><a href=
+=3D"mailto:acocciolo@pluscargocordoba.com.ar">acocciolo@pluscargocordoba.co=
+m.ar</a></span></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;=
+mso-margin-bottom-alt:auto"><span lang=3D"EN-US">=C2=A0<b>Nuevo </b></span>=
+<b><span lang=3D"EN-GB">Nextel: 674*1379</span></b></p></td></tr></table></=
+div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bott=
+om-alt:auto"><span lang=3D"EN-GB">=C2=A0 Web: <a href=3D"http://www.grupora=
+s.com">www.gruporas.com</a></span></p><p class=3D"MsoNormal" style=3D"mso-m=
+argin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNor=
+mal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p=
+><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-=
+alt:auto"><img border=3D"0" width=3D"263" height=3D"67" id=3D"Imagen_x005f_=
+x005f_x005f_x0020_1" src=3D"cid:image003.jpg@01D2AFBD.EC753630" alt=3D"cid:=
+024601ca2ac7$24d9c330$0300a8c0@cathy"></p></div><p class=3D"MsoNormal" styl=
+e=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><div><di=
+v><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom=
+-alt:auto"><b>De:</b> Marcela Triszcz [mailto:<a href=3D"mailto:comext@fape=
+rsa.com">comext@fapersa.com</a>] <br><b>Enviado el:</b> mi=C3=A9rcoles, 08 =
+de marzo de 2017 14:31<br><b>Para:</b> &#39;Agustin Cocciolo&#39;<br><b>CC:=
+</b> Pluscargo Cordoba-Gonzalo Martinez<br><b>Asunto:</b> Carga KING</p></d=
+iv></div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin=
+-bottom-alt:auto">=C2=A0</p><p class=3D"MsoNormal" style=3D"mso-margin-top-=
+alt:auto;mso-margin-bottom-alt:auto">Buenas tardes Agustin:<br><br>Adjunto =
+B/L de embarque King.<br>Por favor confirmar tu nro. de ref..<br>Te pido me=
+ pases el detalle de las cargas en agua, incluyendo a esta de King.<br>Salu=
+dos.</p><div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-ma=
+rgin-bottom-alt:auto">=C2=A0</p><div><p class=3D"MsoNormal" style=3D"mso-ma=
+rgin-top-alt:auto;mso-margin-bottom-alt:auto"><img border=3D"0" width=3D"10=
+9" height=3D"34" id=3D"_x0000_i1059" src=3D"cid:image002.jpg@01D2AFBD.EC753=
+630"></p><table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"3" cel=
+lpadding=3D"0"><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"></td></tr>=
+<tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" st=
+yle=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Marcela Triszcz<=
+/p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"=
+MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Com=
+pras / Comercio Exterior</p></td></tr><tr><td style=3D"padding:.75pt .75pt =
+.75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-ma=
+rgin-bottom-alt:auto">Tel: +54 342 4810810</p></td></tr><tr><td style=3D"pa=
+dding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"mso-margin-t=
+op-alt:auto;mso-margin-bottom-alt:auto">Lamadrid 3065</p></td></tr><tr><td =
+style=3D"padding:.75pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=3D"m=
+so-margin-top-alt:auto;mso-margin-bottom-alt:auto">CP 3000 Santa Fe, Argent=
+ina.</p></td></tr><tr><td style=3D"padding:.75pt .75pt .75pt .75pt"><p clas=
+s=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto=
+"><a href=3D"mailto:comext@fapersa.com">comext@fapersa.com</a></p></td></tr=
+></table></div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-=
+margin-bottom-alt:auto"><br><br>-----</p></div><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p></div></b=
+lockquote><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margi=
+n-bottom-alt:auto">=C2=A0</p></div></blockquote><p class=3D"MsoNormal" styl=
+e=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p></div></=
+blockquote><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto">=C2=A0</p></blockquote><p class=3D"MsoNormal" style=3D"=
+mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p></div></block=
+quote><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bo=
+ttom-alt:auto">=C2=A0</p></div></blockquote><p class=3D"MsoNormal" style=3D=
+"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p><p class=3D"=
+MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=
+=A0</p></div><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-ma=
+rgin-bottom-alt:auto">=C2=A0</p></blockquote><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p></div><p =
+class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:=
+auto">=C2=A0</p></blockquote><p class=3D"MsoNormal" style=3D"mso-margin-top=
+-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p></div></blockquote><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"=
+>=C2=A0</p></div></div></div></div></div></blockquote><p class=3D"MsoNormal=
+" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p></=
+div></div></blockquote><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:a=
+uto;mso-margin-bottom-alt:auto">=C2=A0</p></div></blockquote><p class=3D"Ms=
+oNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=
+=A0</p></div></blockquote><p class=3D"MsoNormal" style=3D"mso-margin-top-al=
+t:auto;mso-margin-bottom-alt:auto">=C2=A0</p></blockquote></div></blockquot=
+e><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom=
+-alt:auto">=C2=A0</p></div></blockquote><p class=3D"MsoNormal" style=3D"mso=
+-margin-top-alt:auto;mso-margin-bottom-alt:auto">=C2=A0</p></div></blockquo=
+te><p class=3D"MsoNormal">=C2=A0</p></div></body></html>
+
+--f403045f75687909ff054c98d490--
+--f403045f7568790a04054c98d491
+Content-Type: image/jpeg; name="image001.jpg"
+Content-Disposition: inline; filename="image001.jpg"
+Content-Transfer-Encoding: base64
+Content-ID: <image001.jpg@01D2AFBD.EC753630>
+X-Attachment-Id: d629577967f3328d_0.1
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIf
+IiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7
+Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAAuANgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD2Siig
+kAZJwBQAVSvNa0zT32Xd/BC391nGfyrGmvr/AMSXUlppMxttPiO2a9A+Zz3VP8a0bHwzo+np8lnH
+I/8AFLON7N7kmgC/a3ltfQia1njmjPG5GyKmrnPCcUTXOrXdpGI7Oa52wqowp2jBI9ia6OgAoooo
+AKKKKACiiigAooooAKKKKACiioxMhnMIDFlGSccD8aAJKKKKACiiigAooooAKKKKACiiigArn/Es
+893Pa6DaOUkvcmZx1SIdfzroK5/VLbU7TX49X0+zW9U2/kSRFwrLznIzQBsW0Npp1rHaw7IY41wq
+kgcViavfyarqg8O2cvkB03XM54JT+6nqT61Xn0C+8S3sV1rVvDZwxDCwxNukcehboB9K1tV0G31C
+1iSI/Zri2A+zTJ1jx0HuPagDD8R29tZX2jWSx3Is1SRTDaswdgAMdDzzz+dUpBfQabkm8htG1KIW
+q3DnzNvOc98V0lhaXN9PbXer2zw31gWVHRx5cuRgsP8ACruq6VbaxbLb3TSBFcODG20gjpzQBm+M
+5Hj0aJo3ZD9qjGVYjjNM1uWRPFWlKkxiBimJJbCj5eCR7VaTwxYi2ntppru5jnADCecttwcgj0NL
+ZeGrGzuDOz3F1IYzGGuZC+1T1AoA5izWTT7i0m1AX1vM0wzfxz+dDPk9CM4ANXrHT18Qx6hqN/fX
+EUsc7xxeXKVW3C9OBWrD4S06F48SXTwRPvjtnmJiU9uKdeeFdPvLmWffcw+eczJDKVWX6igDG1+/
+Eml6bpo1dCbkFpL0NsDKoODwe5/lVe+1M6n4b0WVmmZjdLDOsDkO5AwQMdyP511MOhafBefalhyw
+hWFEblEQdgKh/wCEZ04T+avmr/pIugivhQ49Bjp7UAc3BezaZcas1j9sgjgs94t71iz7ycbwDngV
+JJBBpEGnaj9s1L7RNskkuVzJG+7qrAnAzmuqk0m1m1Fr+RWaR4DAyk/KyZzyKzf+EN0zAQyXZhU5
+jhM5KRnOeBQBTtbBfEmqapJf3NwotZzDDFFKUEYH8XHc0mjX11qGn2tncXLsv2iSJpgcNIq9Oa1b
+7w1Y312915lzbyyjEpt5SnmD3FTtpum2unw2ewQwxsFiwcEMT6+pNXBpSuyZpuNkV51GlR3P2a5Y
+nytwhc7ivONwNR3Ft9gsYr6GeUzZUsWckSZ6jFX4bOytnkRpPMklGH818sR6VCmn6dC6ObguqfMk
+by5Ue4FbKpFbv/gmLpy7f8Az5tr3V+0kd05RvlMTHCcd+akSNruXTop5nYPCxYo5GfStSKOzQzSp
+MpFz8zEuMHtxVeXT7BEhR7iRDENibZMN8x4/Wn7WP9egvZS/r1KU1xPYreWsU7sqFAjsclN3Xmp5
+7YaXLay28spaSUI6s5beD3qdU0u3hmtidwY4k3ZYsc469zkjpTIIdMt2S4+0PKF4j3sWC9Og/Efn
+S9pH+uug/Zy/roZrLK0N3MsdwzpK2JVlwqAH0zVnVLsSx28CXQT915pkzt3HHA/Gp47PTLiVkjuZ
+m80lyiyEK2ef8iprf+zFlaWN1YyFYwHHA44ABHoKp1YXT7EqlOzRZsbkXdlFOOrLz9e9WKqactqs
+L/ZJC0bOTz0BPp7Vbrmla7tsdMb21CiiipGFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABUF1
+Zw3qqs4LBckAHGDjGfrU9FAFSfS7W5kaSVCzMME557f4Cok0SxjQKEbjvnn1rQooAz10OyWRZCrs
+y45Y9ec1M2nW73RuWDF8g9eARj/AVaooApvpdtJMZXDtk52FvlzkE8fUU0aRagBSHZBjCFuOMf8A
+xIq9RQBWSxgjmEiBlAO5UB+UHGMgfSof7GshjCMNuMYbGCO/14q/RQBBa2kdoriMsd5ydxqeiigA
+ooooA//Z
+--f403045f7568790a04054c98d491
+Content-Type: image/jpeg; name="image002.jpg"
+Content-Disposition: inline; filename="image002.jpg"
+Content-Transfer-Encoding: base64
+Content-ID: <image002.jpg@01D2AFBD.EC753630>
+X-Attachment-Id: d629577967f3328d_0.2
+
+/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcU
+FhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgo
+KCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAiAG0DASIA
+AhEBAxEB/8QAHAABAAICAwEAAAAAAAAAAAAAAAcIBAYBAgMF/8QAMRAAAQMDAwIFAgUFAQAAAAAA
+AQIDBAAFEQYSIQcxExQiQVEIcRVSYZGhFiMkMkKB/8QAGAEBAAMBAAAAAAAAAAAAAAAAAAECAwT/
+xAAoEQABAwMDAwMFAAAAAAAAAAABAAIRAwQSEyExFEGxIlFhcYHR4fD/2gAMAwEAAhEDEQA/ALU1
+iTblBgFInTY0Yq5SHnUoz9smsuqmXyBZ9SdeNQRtZXZcG3NuOAPF5LeNgAQgKUCAMe2PataNPUJk
+8LGtVNMCByrSxLzbJj4ZiXGE+8ckIafSpR/8BrOqGWEWPpxYRO6b2CfqWXclHbIjIXIQEJVgguoS
+QACD6RyT37Vi2DrbcVaut9k1Ppd60qmOIaSVlaVoKztSooUkEpzxn7/GKtoOdJZwo12tgP5/u6nC
+lQHP6431OpbpaLVpQXByE+63/YW4tRShe3cUpScDt+9bB0461QNSvz4t9ios0iIyp9S1u7myhJAV
+kkAhQz25z/FQbeoBJCNuabjiCpcpUE3LrpcIrqbo1pZ93Sbr5ZYnKUpCnMEgkcFOeFYT+nfvj6Or
+utabNqKxxYFr89brlFjyw6lRDu1xRGEoA5UAO3zxTp6nsnU0/dTLSoNuXWi/Wm0RZF10g5GnT31N
+Q4ji1pWtKdu5RBTnkrSEgDnn9M/V0t1A15fr2xBc0I7bWVnLkqaHWm20jufUgZPwkcn7ZIGg8CT5
+CkXDCYHP0Kl2lRbrvqPqCz3hUPTuirvdWGQQ7KVEeQ2VfCMIOQPzdj7cc16dI+qX9dXC4W2dbfw6
+4xEeJ4YcKgpIVtVwQCCCQD96jRfjnGynWZlhO6k6lKVktUqr1r01a9V/UPqS3XyOqRE3vubEuKR6
+gU4OUkH3q0NYrVtgtTFy2oUZEpedzyWkhZz3yrGa1pVTTmO6yq0hUiexVZOtsVvSepdOWJh26QdI
+sRt6G4jpKtynVqdKSo+pXKe54yPmtRSi3jqRpF6zqvi4T78VxC7wEeKv/IIynaSNnp4/UKq5sqLH
+lteHLYafb/K6gKH7GvBy021xxlxy3w1OMJSlpSmUktgcgJOOAPbFbtusRBC532mTpB2VV9GaygaI
+6y6ruFzjzJDb7suKhuIhKllapCVDhShx6T/HFe+s+l10e0rfdayoz0efKmqmotoGVMR1rUTv4/2G
+5Jx7BJz8DdOjOkJi+p2rNRz4bf4Z5mUxGU8kErd8wFb0Aj/naRu+Tge+J6q1Wvg8YfEqlK31GEP+
+Y/KpdpxWk7nZIcC93vVSJZUECDHbS8yVZ9Phpz757Yzmtm1RaG7F1g6d2xkyC3HTb0p8yAHAPNKO
+FAZGefarOt2e2NShJat0NEgHIdSwkLB++M13ftsGRLblPwozslvGx5bSVLTg5GFEZGDVTdbzCuLT
+0wTvt2/aiL6gpGhpirdA1VPmMXJjc415BAcWhCsZCweADgY9+PjNQvY3Itv6gWJrpvcrxIW8+2HA
++2G9x3cghJ9Sduc5GAM1b9+xWmQ8t6Ra4DrqzlS1x0KUo/JJHNe0K2QIJJhQosYnuWWkoz+wqtO4
+DG4xPhXqWxe/KQPtv5VQZdyTK19fGdbzNUCUqUptli1lJXu3kBO1ZHGNu0Ctp+mxlMbq5qBhCZCE
+tQpCAmTjxQBIaGF443fOPfNWYcgxHZKJDsVhchByh1TYKk/Y9xXSNbYMWS5IjQozMhzO91tpKVKy
+cnJAyeeal1yC0tjkKrbUhwcXcFZdKUrkXYlKUoiUpSiLhKQkYSAB8CuaUoiUpSiJSlKIlKUoiUpS
+iL//2Q==
+--f403045f7568790a04054c98d491
+Content-Type: image/jpeg; name="image003.jpg"
+Content-Disposition: inline; filename="image003.jpg"
+Content-Transfer-Encoding: base64
+Content-ID: <image003.jpg@01D2AFBD.EC753630>
+X-Attachment-Id: d629577967f3328d_0.3
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIf
+IiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7
+Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCABDAQcDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD2Siii
+gAoornNb8Wx2Fz9g0+E3t8TjYuSEPvjqfagDo6K4tk8dvE12ZoYto3CABc49MYP863/Dmqyazo8V
+5KoWQkq4XpkUAatFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUU
+UAFFFFADqKKKAG0UVBfXcdhYzXcx+SFCx9/agDD8T6zcQNFpWmfNqF3wu3/lmvr7f5NW/D/h220S
+24/eXT/62Y9SfQegrP8ACFjJctN4gvRm5vCfLB/gT2/z0FdQeKAKOs36aZpFzduQPLQ7R6seAPzq
+n4Rs3s/Dlskgw8gMrf8AAjn+WKy7tj4s19bKI50ywbdO46Sv/dH+fWo9RtrrUfGUmnxanc2US2wk
+HlMcAjA6Z96AOyorzu41LUYdD1SzbUJZnsbmNI7lWIYgk5GfwruLtmGizOrEOLZiGB5B29aALlFc
+rp1zcP8ADuS5e4kafyJSJS5LZBODmsi51GeWx0O0u9SmtLW4hLz3CsdzHJ4J/L86APQaK4+1ub/Q
+dL1K4N6uoWUag2kxlDkseMH8x+VV49D8QjT4tZt9VuJr98SG3J+Ug9uTjp26UAdxRXMeLL69Gl2V
+pbeZBe3rqNqNhlwMkZHvVabVZrn4dG7SaRLiNVRnViG3BgDz/nrQB2FFef3cWoaLY2OqQ69cXEkr
+pm3kbIO4ZxjJzWjf/bfEXiK40yG+ksrOyQGUxH5mY/5/SgDr6K5S1udV0DStSF/IbqK1XNrO7Al8
+8AHnPXHWs/8AsnW00f8A4SD+2Z/tezzzDn5NvXGOnTtjFAHd0ma55NTn1i1sEt3MJuo98jL29QPy
+NW7eC8026YNI9xaFCxZjypFacml7mfPra2hfubo27xIsTStKcAL29z7VODmsCC2vNTge9N5JExJ8
+tFPAxTJ72e6061PmtHIZvLcqcZqvZdE/Uj2vW3odHRWEi3FhqtvELx7hZiQysc4qK2tby+NzJHfy
+xmOQhVySP50vZdb6D9r0tqdFSZ9qwTqty+lIgOLl5PK3f1omgutGMVz9redCwWVW6c0/ZPZvUPar
+dLQ3xRXOzAz6tdRyai9siYK/PgH9auaVdyrps0tw5kWMttc/xAClKk0rhGqm7Gt3orC0K5na5eK4
+dmMqCVNxzxW7Uzg4OzLhLmVwoooqCx1FFFADa5vxwztpNvZocfa7lIz9Ov8APFdJWT4j0d9a03yI
+pRFNG4kic9Aw/wD10AW5c6fpbC1g81reLEcQON2BwK57S/EN14oe5002bWieUwe4ikyYz0A6VD/Y
+fivVF+y6nqaQ2vR/KwWkH4AfrXTaZplrpVmlraR7EXk+rH1J7mgDnPCdy2j3kvh2/jSKZGLwyAYE
+wP8AM+n5dqh1HSrbWfHktpcvIqC0D/u22nIx/jW54j0JdYtVeFvKvYDuglHGD1wfarmli8azjfUY
+I47sDa5QghvfPv6UAc14m0ez0XwhLBZoVVpkZmZsljnuauW3irTNZj/sq1M3nzwsi7kwM7T3zXSs
+iuNrqGHoRmmCCFTlYkU+oUCgDz+28Q21n4Sm0OaOZb4K8Ii2dSxP+NXLiddJsdKsNcsEk05oP3kj
+RktHJzxkdO1dobeEyeYYkLj+IqM/nSvEkilXQOp6hhkUAed2enRaj/bUOhiY2DwqY94OGkBBwM/Q
+/nV8eND/AGJDY2cUv9rBVhEZiyAw4zXbJGkaBERUUdAowKTyIhJ5giQSH+PaM/nQBxdymrat4ojj
+s7mBLnTLZRJJIuV3sPm4/H9KzZDNp2ja/o926GWNkmBThTlhkj26V6OqIpLKoBPUgdaRoY2JLRqS
+epKjmgDgtT0Sy0bRtO1qyDR3AeJnJbcDkc8H3q3c3kXh7xNfTX6SfYNTjBEqDODjkfz/AErszGjL
+tKKV9COKR4Y5U2SIrr/dYAigDznSrCDUG1m202KVIpbUNbrKfmfDDB/Eg1ePi6FvDf8AZQgn/tIx
+fZ/J2d8Yz+Xau5EaKQVUDAxwO1N8iHzfN8pPM/v7Rn86AObtbOXQrbTJZUJWKHZNj+EnJ/r+laEd
+8+qXjQ2xP2URkOxXqSK0rieGARiZgPNcRqCM5J7Upe3hITfHGT0XIH6Vpzq2q1MuR30ehiWeqppt
+m1pcI4niJCqB96q8ts0WmWizAgzXG5h3ANdEz22dzvFlTtyxHB9KatxbSuyCSNmQBiMjgYzn6e9X
+7azukS6Tas2ZT2kOmavaGDKrKSrAnOahstVgsPtSOGZ2mYqFHWt8NC/RkbjI5B49ahFxamfy1KFt
+nmZABG3PXNL2qatJXD2TT912MT7HcR6ZHdmM+Ys/nFMc4qW8v01dYbO1VyXcM5I+6BWgNYtWTePN
+IJ4AhYkjBOQMZIwDzTvt9lHF5ysNpzyidcDd29qftbu7Woey6JmRLLYRazdfbY/MXgKNucHFRLI4
+06aKIMsdzOFhVvTv/Stn+07EldwOWOGzEcpzj5uPl59amkvbaO6W2cHzOAD5ZKgnoM4wDxT9ttp2
+/ATovuZDxXWnXlncXMkTIpEQ2DGF966EHIqg2qWbIj7jIrkgYjLYwcEn0Gcc+9X16VlOfNY1jDlu
+LRRRUFjqKKKAG0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQBR1DTft7IxnaPywd
+m3+9xgn1xjpUd5o6Xlw0zsm4qACUyRwR/XNaVFAGInhtAX8yZZAzEjcme+ecnrRJ4e8zeonRUIOC
+seGBwRjOfu89K26KAMy30VILSeHzBunTaXC9OPc8inWukLCsu9kJmRkby02gZJPHoOa0aKAMcaG8
+jH7VciRePlQMo4UrnrwTntxxSnRJWjML3KGLacYTB3FQp79Ov51r0UAZkmjgbktpFiimQJMrKWJG
+Scg568kc5p13pP2m5a5SbZL8uxsEhcA9s89a0aKAMZtAZFEcFzhFbKlwS6HABKsCOePpzWwOBS0U
+AFFFFADqKKKAG0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQ
+AUUUUAFFFFABRRRQAUUUUAOooooA/9k=
+--f403045f7568790a04054c98d491
+Content-Type: image/jpeg; name="image004.jpg"
+Content-Disposition: inline; filename="image004.jpg"
+Content-Transfer-Encoding: base64
+Content-ID: <image004.jpg@01D2AFBD.EC753630>
+X-Attachment-Id: d629577967f3328d_0.4
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAiAG0DASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+q9z
+f2dmQLq7ggLdBLIFz+ZqxXzzqdlpWvfGDWLfxJqbWlkjuBKZVTG3AVQWBAFaU4c7d+hlVqciVlue
+9warp11KIre/tZpDyEjmVifwBq3XmUSaP4E0cXngzRLvXbi+Pyz26tOoRTggyKpAGQeBznr0qvpf
+xbv28S2eka54cl043TrGCxZXUscKdrKMjPFP2Tesdg9tFaS3PVaK8iuvi9rA16/0yw8NC9e0mkT9
+0zsxVW27iApx2/Otfwh8WLLXpbu31W2XS5raJpi7SZQqv3uoBBGeneh0ZpXsCr027Jno1FeTXnxh
+vraQajH4blk8PSTeVDdsxVpMcEjjGeDge3WruvfFkaVrelW9pp32uyv7eG4EgY+ZtdiMBcctgdPW
+j2M+we3p9z0yivKbz4ra1pumW89/4XeC7vJjHa2zs6swXGWIK55LKAAOefbOhofjXxnrOqw2b+DZ
+LGJjmS4uhJGiL3PKjJ9AOv60OjNK4KtBu36Ho1FcD4n8d63pepta6P4S1LUIowRJcG2lVC3+zheR
+79PT1p/gL4i/8Jhe3mn3Wn/Yr22XfsDlty5weCAQQSPzpeyly83QftYc3LfU7uiiiszQK8GstA07
+xJ8bNbsNUhM1tumfaHK8gjHIIPevearpYWcVy1zHaQJcNndKsYDHPXJ61pTqcl7dTOpTU7X6Hhfx
+Jt08Na9oujRSX9p4cht9yx20hLZaRjIVLHluR1PGRXOKliPHPhyXTjqzWs01u6Pqm3zG/fEZXaSN
+vH55r6ant4LqPy7iGOVP7sihh+RqJtMsHkikextmeIBY2MSkoB0AOOMVrHEWVrGMsNd3ueA+HfFN
+l4R+KHiC+vYLmZJpLm3RLZQzbjMCOCRx8pqXxF8PNRl8O6t4unt5YLu4u2ulsAMtDAzMTu9xuBx2
+AOfbp/h34Yum8feIdeu7RPsP2i4igaVclpPOB3KD6bSM+p+teuVVStyS93yJp0eeD5vOx8xaQ3hn
+UNJtrLU9X8Qrcbgn2SFBLGWzxsGffpjOa3Nb0xNH+JvgzT4zMUgWzVfPAD489jhscZ5r3ZNL0+O4
+FwlharMDkSLCoYH64zT5bCznuUuJbSCSdMbZXjBZccjBxkVLxGt7FfV9LXPOPivN4OumsrLXr26i
+vYdzx/Y1DuinGQwPGDgY78V5lpj21l4z0mPwXf6nM0syCQTIEyd3IIU8rjOcjgZr6Pl0fTJ5Wll0
+60kkY5Z3gUkn3OKlttPsrMk2tpbwE9TFGFz+QpQrKMeUqdBylzf8OfOE9+tx4y1WLxPda+J2uWSK
+LTyC27cQFwxHGMYArf8Ag7EsHxK1iFVnVY7SZQs+PMAE0Y+bHG71969ye0tpJ1ne3iaZOVkZAWX6
+Gmw2FnbzvPBaQRTPndIkYVmycnJAyeabrpxcbCWHakpXLFFFFcx0hRRRQAUUUUAIAFGAAB7UtFFA
+BRRRQAUUUUAFFFFABRRRQB//2Q==
+--f403045f7568790a04054c98d491--

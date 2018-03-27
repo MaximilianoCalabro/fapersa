@@ -1,0 +1,239 @@
+Return-Path: <angelfernandolopezcamara@gmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id EbWPAMfZCFnQZwAATLP0zA
+	for <jpruata@fapersa.com>; Tue, 02 May 2017 16:11:03 -0300
+Return-path: <angelfernandolopezcamara@gmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Tue, 02 May 2017 16:11:03 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:43160 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <angelfernandolopezcamara@gmail.com>)
+	id 1d5dCQ-00079w-5d
+	for jpruata@fapersa.com; Tue, 02 May 2017 16:11:02 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 37DD27F216
+	for <jpruata@fapersa.com>; Tue,  2 May 2017 16:11:02 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id RBeeBoN0Gsgl for <jpruata@fapersa.com>;
+	Tue,  2 May 2017 16:11:01 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id CF6777F231; Tue,  2 May 2017 16:11:01 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 36B0E7F216
+	for <jpruata@fapersa.com>; Tue,  2 May 2017 16:11:01 -0300 (ART)
+Received-SPF: pass (gmail.com ... _spf.google.com: Sender is authorized to use 'angelfernandolopezcamara@gmail.com' in 'mfrom' identity (mechanism 'include:_netblocks.google.com' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="angelfernandolopezcamara@gmail.com"; helo=mail-io0-f182.google.com; client-ip=209.85.223.182
+Received: from mail-io0-f182.google.com (mail-io0-f182.google.com [209.85.223.182])
+	by fw.fapersa.com (Postfix) with ESMTPS id 6D42A5FDAB
+	for <jpruata@fapersa.com>; Tue,  2 May 2017 16:10:59 -0300 (ART)
+Received: by mail-io0-f182.google.com with SMTP id o22so40493033iod.0
+        for <jpruata@fapersa.com>; Tue, 02 May 2017 12:10:59 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=L0xA1p9uX4r//XjNeV8NZfgEkNpx6nQV+w51nchWG7w=;
+        b=WjwPuRc/hvc11r3ae93Ggn7Q7tJJzSO9L8xRjkdZb3jGRBT8fmOk82AXISGWJfKMjd
+         qWyTC9ZR1wungQx8+bPtGYp/9rlMD35UcxKXn2SF/71jfJAx+wunIN9Jyl4UzSXcPvrq
+         AzD5cARBKY4L04EmHMCtczKqeyVuwUDbVu4xgc37phr9YHQXkhlvPE+HD4c151IEiMsZ
+         H4F3cOgdUNcdvd/BVKB3i2OdpGOhAAhkj637r3jcyhjn08ZaLU8Hcox2LUlnQdeGY7KF
+         Wz76KdJVzn8g2yOherHSk6V8fyBR7buo/YbPuil4vxn0GGrDA1hNUvGQtCxNiI33ZsWf
+         5vQw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=L0xA1p9uX4r//XjNeV8NZfgEkNpx6nQV+w51nchWG7w=;
+        b=KazgNJNFMVQSUKwmemnOKdaKd3pokRSxOxlvBnQpoDYSCUUIQovdm/ls72YXD9/xAE
+         IASLoycr/kuunBOmovsGgmKFfSDmBfAoq7ORNEZrAG0BOIPtcRj+j4IV221pNdWhRCfu
+         41DOMJDl2BmWqkWJXzjPgEOYWfZhf98+Vv8nFRDlZt8hhpc0yrWTJP0zMZgctynT8XdR
+         EhBkzTTRo5vC5IgkB0ui8N/PnKpiiiivdcl7gQkoh9fXyZg1xchMN3CHpysFhIETV6oD
+         MkAUpnqAC77MlaBglfB1usLBaxwjlq0TynfRkpGGvEdSZJU+79VrJxotTqygGQ/J9DOt
+         41zQ==
+X-Gm-Message-State: AN3rC/7V5EEn1vMvJUCX+hBekB0YQY/HsJf+me0dUOJwdcDSQNUDm85n
+	RGHjgTiOmgpPq9kZYfpWmc6kFW52wA==
+X-Received: by 10.107.6.219 with SMTP id f88mr29576002ioi.126.1493752257868;
+ Tue, 02 May 2017 12:10:57 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.107.55.212 with HTTP; Tue, 2 May 2017 12:10:57 -0700 (PDT)
+In-Reply-To: <de8ea84.9fae49c2678250720b77503966c97e34@marathona.com.ar>
+References: <de8ea84.9fae49c2678250720b77503966c97e34@marathona.com.ar>
+From: Angel Fernando Lopez <angelfernandolopezcamara@gmail.com>
+Date: Tue, 2 May 2017 16:10:57 -0300
+Message-ID: <CAJkTxbJ3SkkKrHnj3kJLk7PxOjEZ0gpcQkUAo2iG_s2=eUoa5w@mail.gmail.com>
+Subject: Re: ENRI 2017 - 19 de agosto - Santa Fe RC
+To: Martin Galan <martin@marathona.com.ar>
+Cc: =?UTF-8?Q?Hern=C3=A1n_Vidou?= <hernan.vidou@interfly.com.ar>, 
+	Ricardo Cejka <ricardocejka@yahoo.com>, Juan Pablo Ruata <jpruata@fapersa.com>, 
+	Rauli Freyre <raf@freyre-iturraspe.com.ar>
+Content-Type: multipart/alternative; boundary=001a113f8948b68084054e8f4cdb
+
+--001a113f8948b68084054e8f4cdb
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Gracias Martin, un fuerte abrazo!
+
+
+*Angel Fernando L=C3=B3pez*
+
+*angelfernandolopezcamara@gmail.com* <angelfernandolopezcamara@gmail.com>
+
+*Wapp & Cell: **+54 (9) 11 5597 3289*
+
+Linkedin
+<https://www.linkedin.com/profile/view?id=3DAAMAAAAVe3YBzhSaveXPgAgDMsDRlNL=
+vrcMRS54&trk=3Dhp-identity-name>
+
+Twitter <http://@AngelFerLopez>
+
+Skype: angel.fernando.lopez
+
+
+
+2017-05-02 9:54 GMT-03:00 Martin Galan <martin@marathona.com.ar>:
+
+> Estimados Amigos de BACRC,
+>
+>                                            En nombre de Santa Fe Rugby
+> Club, agradecemos y confirmamos nuestra participaci=C3=B3n en el ENRI 201=
+7.
+> Va a ser un gusto nuevamente poder ser parte de este Gran Encuentro, dond=
+e
+> los chicos son los grandes protagonistas de un fin de semana a puro Rugby=
+.
+> Si bien les confirmo que participaremos con todas las categor=C3=ADas,nos
+> comprometemos enviarles las cantidades en las pr=C3=B3ximas semanas.
+> Les dejo un fuerte Abrazo.
+>
+>
+> *Mart=C3=ADn Gal=C3=A1n*
+> Secretario CD-SFRC
+>
+>
+>
+> ---- Original Message ----
+> *From*: Hern=C3=A1n Vidou <hernan.vidou@interfly.com.ar>
+> *To*: "'Martin Galan'" <martin@marathona.com.ar>
+> *Cc*: "Angel Fernando Lopez" <angelfernandolopezcamara@gmail.com>,
+> "Ricardo Cejka" <ricardocejka@yahoo.com>
+> *Sent*: Vie, Abr 21, 2017, 6:02 PM
+> *Subject*: ENRI 2017 - 19 de agosto - Santa Fe RC
+>
+> Hola Mart=C3=ADn, c=C3=B3mo est=C3=A1s?
+>
+>
+>
+> Dando casi por descontada la participaci=C3=B3n de Santa Fe Rugby Club en=
+ el
+> ENRI de =C3=A9ste a=C3=B1o (que se jugar=C3=A1 puntualmente el pr=C3=B3xi=
+mo s=C3=A1bado 19 de
+> agosto), te pido por favor que simplemente me la re-confirmes, y cuando
+> puedas me mandes cantidades estimadas (lo m=C3=A1s realistas posible!) qu=
+e
+> tendr=C3=A1n =C3=A9ste a=C3=B1o por divisi=C3=B3n.
+>
+>
+>
+> Un fuerte abrazo, y quedo a la espera de tus noticias.
+>
+>
+>
+> Hern=C3=A1n.-
+>
+>
+>
+>
+>
+>
+>
+> Hern=C3=A1n Vidou
+>
+> Coordinaci=C3=B3n Rugby Infantil - BACRC 2017
+>
+>
+
+--001a113f8948b68084054e8f4cdb
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Gracias Martin, un fuerte abrazo!<div><br></div></div><div=
+ class=3D"gmail_extra"><br clear=3D"all"><div><div class=3D"gmail_signature=
+" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"=
+><div><div dir=3D"ltr"><div dir=3D"ltr"><p style=3D"text-align:left"><a nam=
+e=3D"UNIQUE_ID_SafeHtmlFilter_UNIQUE_ID_SafeHtmlFilter_UNIQUE_ID_SafeHtmlFi=
+lter__MailAutoSig"><b>Angel Fernando L=C3=B3pez</b></a></p>
+
+<p style=3D"text-align:left"><a href=3D"mailto:angelfernandolopezcamara@gma=
+il.com" target=3D"_blank"><b><span style=3D"font-size:9.0pt;color:blue">ang=
+elfernandolopezcamara@gmail.com</span></b></a><b><span style=3D"font-size:9=
+.0pt"></span></b></p>
+
+<p style=3D"text-align:left"><b style=3D"font-size:12.8px">Wapp &amp; Cell:=
+=C2=A0</b><b style=3D"font-size:12.8px">+54 (9) 11 5597 3289</b><br></p>
+
+<p style=3D"text-align:left"><span style=3D"color:blue"><a href=3D"https://=
+www.linkedin.com/profile/view?id=3DAAMAAAAVe3YBzhSaveXPgAgDMsDRlNLvrcMRS54&=
+amp;trk=3Dhp-identity-name" target=3D"_blank">Linkedin</a></span></p><p sty=
+le=3D"text-align:left"><a href=3D"http://@AngelFerLopez" target=3D"_blank">=
+Twitter</a></p><p style=3D"text-align:left">Skype: angel.fernando.lopez</p>
+
+<p align=3D"center" style=3D"text-align:center"><span style=3D"color:#1f497=
+d">=C2=A0<br></span></p></div></div></div></div></div></div></div></div>
+<br><div class=3D"gmail_quote">2017-05-02 9:54 GMT-03:00 Martin Galan <span=
+ dir=3D"ltr">&lt;<a href=3D"mailto:martin@marathona.com.ar" target=3D"_blan=
+k">martin@marathona.com.ar</a>&gt;</span>:<br><blockquote class=3D"gmail_qu=
+ote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex=
+">Estimados Amigos de BACRC,<div><br></div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0En nombre de Santa Fe R=
+ugby Club, agradecemos y confirmamos nuestra participaci=C3=B3n en el ENRI =
+2017.</div><div>Va a ser un gusto nuevamente poder ser parte de este Gran E=
+ncuentro, donde los chicos son los grandes protagonistas de un fin de seman=
+a a puro Rugby.</div><div>Si bien les confirmo que participaremos con todas=
+ las categor=C3=ADas,nos comprometemos enviarles las cantidades en las pr=
+=C3=B3ximas semanas.</div><div>Les dejo un fuerte Abrazo.</div><div><br><br=
+><b>Mart=C3=ADn Gal=C3=A1n</b><div>Secretario CD-SFRC</div></div><div><br><=
+/div><br><br><blockquote style=3D"border-left:solid 2px #000000;margin-left=
+:5px;padding-left:5px">---- Original Message ----<br><b>From</b>: Hern=C3=
+=A1n Vidou &lt;<a href=3D"mailto:hernan.vidou@interfly.com.ar" target=3D"_b=
+lank">hernan.vidou@interfly.com.ar</a>&gt;<br><b>To</b>: &quot;&#39;Martin =
+Galan&#39;&quot; &lt;<a href=3D"mailto:martin@marathona.com.ar" target=3D"_=
+blank">martin@marathona.com.ar</a>&gt;<br><b>Cc</b>: &quot;Angel Fernando L=
+opez&quot; &lt;<a href=3D"mailto:angelfernandolopezcamara@gmail.com" target=
+=3D"_blank">angelfernandolopezcamara@<wbr>gmail.com</a>&gt;, &quot;Ricardo =
+Cejka&quot; &lt;<a href=3D"mailto:ricardocejka@yahoo.com" target=3D"_blank"=
+>ricardocejka@yahoo.com</a>&gt;<br><b>Sent</b>: Vie, Abr 21, 2017, 6:02 PM<=
+br><b>Subject</b>: ENRI 2017 - 19 de agosto - Santa Fe RC<br><br><div class=
+=3D"m_5961447842759778513WordSection1"><p class=3D"MsoNormal"><span style=
+=3D"font-family:&quot;Tahoma&quot;,sans-serif">Hola Mart=C3=ADn, c=C3=B3mo =
+est=C3=A1s?<u></u><u></u></span></p><p class=3D"MsoNormal"><span style=3D"f=
+ont-size:5.0pt;font-family:&quot;Tahoma&quot;,sans-serif"><u></u>=C2=A0<u><=
+/u></span></p><p class=3D"MsoNormal"><span style=3D"font-family:&quot;Tahom=
+a&quot;,sans-serif">Dando casi por descontada la participaci=C3=B3n de Sant=
+a Fe Rugby Club en el ENRI de =C3=A9ste a=C3=B1o (que se jugar=C3=A1 puntua=
+lmente el pr=C3=B3ximo s=C3=A1bado 19 de agosto), te pido por favor que sim=
+plemente me la re-confirmes, y cuando puedas me mandes cantidades estimadas=
+ (lo m=C3=A1s realistas posible!) que tendr=C3=A1n =C3=A9ste a=C3=B1o por d=
+ivisi=C3=B3n.<u></u><u></u></span></p><p class=3D"MsoNormal"><span style=3D=
+"font-size:5.0pt;font-family:&quot;Tahoma&quot;,sans-serif"><u></u>=C2=A0<u=
+></u></span></p><p class=3D"MsoNormal"><span style=3D"font-family:&quot;Tah=
+oma&quot;,sans-serif">Un fuerte abrazo, y quedo a la espera de tus noticias=
+.<u></u><u></u></span></p><p class=3D"MsoNormal"><span style=3D"font-size:8=
+.0pt;font-family:&quot;Tahoma&quot;,sans-serif"><u></u>=C2=A0<u></u></span>=
+</p><p class=3D"MsoNormal"><span style=3D"font-family:&quot;Tahoma&quot;,sa=
+ns-serif">Hern=C3=A1n.-<u></u><u></u></span></p><p class=3D"MsoNormal"><spa=
+n style=3D"font-family:&quot;Tahoma&quot;,sans-serif"><u></u>=C2=A0<u></u><=
+/span></p><p class=3D"MsoNormal"><span style=3D"font-family:&quot;Tahoma&qu=
+ot;,sans-serif"><u></u>=C2=A0<u></u></span></p><p class=3D"MsoNormal"><span=
+ style=3D"font-family:&quot;Tahoma&quot;,sans-serif"><u></u>=C2=A0<u></u></=
+span></p><p class=3D"MsoNormal"><span style=3D"font-family:&quot;Tahoma&quo=
+t;,sans-serif">Hern=C3=A1n Vidou<u></u><u></u></span></p><p class=3D"MsoNor=
+mal"><span style=3D"font-family:&quot;Tahoma&quot;,sans-serif">Coordinaci=
+=C3=B3n Rugby Infantil - BACRC 2017<u></u><u></u></span></p></div></blockqu=
+ote>
+</blockquote></div><br></div>
+
+--001a113f8948b68084054e8f4cdb--

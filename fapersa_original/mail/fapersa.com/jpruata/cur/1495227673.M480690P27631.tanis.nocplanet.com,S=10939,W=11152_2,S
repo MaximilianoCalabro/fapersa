@@ -1,0 +1,213 @@
+Return-Path: <bounces+2699078-f437-jpruata=fapersa.com@sendgrid.net>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id Yu+JHBldH1nvawAATLP0zA
+	for <jpruata@fapersa.com>; Fri, 19 May 2017 18:01:13 -0300
+Return-path: <bounces+2699078-f437-jpruata=fapersa.com@sendgrid.net>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Fri, 19 May 2017 18:01:13 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:46299 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <bounces+2699078-f437-jpruata=fapersa.com@sendgrid.net>)
+	id 1dBp1M-0007At-JD
+	for jpruata@fapersa.com; Fri, 19 May 2017 18:01:13 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 8989D7F219
+	for <jpruata@fapersa.com>; Fri, 19 May 2017 18:01:12 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 8kD8Dk6YRRGK for <jpruata@fapersa.com>;
+	Fri, 19 May 2017 18:01:12 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 0AE377F232; Fri, 19 May 2017 18:01:12 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id E63477F219
+	for <jpruata@fapersa.com>; Fri, 19 May 2017 18:01:09 -0300 (ART)
+Received-SPF: pass (sendgrid.net: 167.89.100.24 is authorized to use 'bounces+2699078-f437-jpruata=fapersa.com@sendgrid.net' in 'mfrom' identity (mechanism 'ip4:167.89.0.0/17' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="bounces+2699078-f437-jpruata=fapersa.com@sendgrid.net"; helo=o1.24le.shared.sendgrid.net; client-ip=167.89.100.24
+Received: from o1.24le.shared.sendgrid.net (o1.24le.shared.sendgrid.net [167.89.100.24])
+	by fw.fapersa.com (Postfix) with ESMTPS id 167DF5FE2D
+	for <jpruata@fapersa.com>; Fri, 19 May 2017 18:01:06 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=sendgrid.net; 
+	h=from:to:subject:mime-version:content-type:content-transfer-encoding; 
+	s=smtpapi; bh=Atlo8XYBa5iH64luGZyksBJT+v4=; b=YqeRWQkbj8e5PiK6HS
+	3phk7OBhR92S1PnG5Aoct7D02aCbo+QaYuChibSbpKx9kttPDzZZ5aYqMyJ1GczJ
+	WlfSoraum7wy5ls0MvEEzNR45DMSYw7l210IJ5yWiCdmAcjAMjpu6xlmyYqKiRiR
+	yoWUHiOt++FZ7JHsITwFgWUIo=
+Received: by filter0076p1las1.sendgrid.net with SMTP id filter0076p1las1-14955-591F5D0C-16
+        2017-05-19 21:01:00.159131818 +0000 UTC
+Received: from bd.uar.com.ar (unknown [23.101.185.142])
+	by ismtpd0015p1las1.sendgrid.net (SG) with ESMTP id oN6qrVqTRyCrbpvKEYwc7A
+	for <jpruata@fapersa.com>; Fri, 19 May 2017 21:01:00.091 +0000 (UTC)
+From: "noreply UAR - ssl" <noreply@uar.com.ar>
+To: jpruata@fapersa.com
+X-Mailer: CakePHP Email
+Date: Fri, 19 May 2017 18:00:59 -0300
+Message-ID: <591f5d0b04104fe9af92119801ce7e74@bd.uar.com.ar>
+Subject: UAR - Alta de usuario
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="4e6abb9c5b419734720cefe2f0609086"
+Content-Transfer-Encoding: 8bit
+X-SG-EID: VfNqVyrjLjKdIIXcj4qJiEnEUuu5wqrVHRmdo0fkVZRsa/gV83Wu8FakKunafla8Xw/ROmu8azN0po
+ Gr+c4JwY3EB/Kec6Qtx3ZxpqD0J8IUPzuzGRWfPwYUeTyAMt8fKq8jTohnFqcqsoRNF9aq7DdS+KhI
+ qMuRp4CzZfVFsBsFhPidwC28D4peK7mDI+WLGs9jOM2pGVFZvbTVM4D82N+0MJ49Tf+FNR/VPNm0zA
+ s=
+
+--4e6abb9c5b419734720cefe2f0609086
+Content-Type: multipart/alternative; boundary="alt-4e6abb9c5b419734720cefe2f0609086"
+
+--alt-4e6abb9c5b419734720cefe2f0609086
+Content-Type: text/plain; charset=UTF-8
+content-transfer-encoding: quoted-printable
+
+  =0D
+=0D
+Alta de usuario=0D
+=0D
+Su usuario ha sido dado de alta.=0D
+Para confirmarlo complete sus datos haciendo <a href=3D"https://u2699078.ct=
+.sendgrid.net/wf/click?upn=3Dh9eXz29JjMJYP0Adc5I8Y3fzxSKroAzKrAHnun52-2FJLH=
+91IoStOk5ioQjvTbrNfQgw2zDDZCA9vHBgxyMinmMjeerziw1Zb1OHSokzE5Ra0-3D_-2BhQsPu=
+9Q2VEUqe1WPYN4pT-2BIvMtng7VbwqiKNwfIv6LJwiU64u-2BsLbN4fHI6in8-2FGXr1WbGJbFU=
+QBzvR3LpDGyrNbne18tGa71gWM82lb1-2BXGwEWSnxOKysHTN2WPzELjhLj8RyHbnbNmZFMBIWp=
+rB7HTc956cgItCId1ot0HdxSbUpLkePs2hCs4NC6W4stmjH2sQHhTr4Cjq6ffiWpEgmpmM6Nrlx=
+OwGJVvyYdGNY-3D">click aqu=C3=AD</a>.=0D
+=0D
+This email was sent using the CakePHP Framework, https://u2699078.ct.sendgr=
+id.net/wf/click?upn=3D9mmcQHSOvLeiJqxBSawrH6wmpQX7RbYgjRKg5w4CSi0-3D_-2BhQs=
+Pu9Q2VEUqe1WPYN4pT-2BIvMtng7VbwqiKNwfIv6LJwiU64u-2BsLbN4fHI6in8-2FJMXbkTage=
+6ITD5OF3SH-2FVk6PC-2FSTUIRGeC1FuuHbvM9jLZ04dru3viP1CXE-2B2TD1Q-2F3HO9zlnd0h=
+AOQeB8FiF580q1IoP-2BT-2FXDTM-2FJ3eOvWdP4IAUZ1SV-2FenvomzbAVaKsLNMCq6XtWCoov=
+ELlINoB6qIM-2FZHwf9U48dxuMH8bc-3D
+
+--alt-4e6abb9c5b419734720cefe2f0609086
+Content-Type: text/html; charset=UTF-8
+content-transfer-encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html style=3D"height: 100%;font-size: 10px;-webkit-tap-highlight-color: rg=
+ba(0,0,0,0);font-family: sans-serif;display: block;">=0D
+<head>=0D
+	<meta charset=3D"utf-8">=0D
+	<meta content=3D"IE=3Dedge">=0D
+	<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1=
+">=0D
+	<title>Uni=C3=B3n Argentina de Rugby</title>=0D
+=0D
+	<link href=3D"https://fonts.googleapis.com/css?family=3DRoboto:400,300,100=
+,500,700,900" rel=3D"stylesheet" type=3D"text/css">=0D
+=0D
+</head>=0D
+=0D
+<body style=3D"background-color: white;font-family: 'Roboto',Helvetica Neue=
+,Helvetica,Arial,sans-serif;font-size: 13px;line-height: 1.5384616;color: #=
+333;margin: 0 !important;display: block; max-width: 1200px;">=0D
+=0D
+	<div class=3D"page-header" style=3D"display: block;background-image: url(h=
+ttp://wap06-html.azurewebsites.net/mail/fondoheadmail.jpg);background-size:=
+ cover; background-position: top left;background-repeat: no-repeat;backgrou=
+nd-size: cover;margin: 0;padding: 0;border-bottom-width: 0;border-bottom: 1=
+px solid #ddd;">=0D
+		<div class=3D"page-header-content" style=3D"display: block;position: rela=
+tive;background-color: inherit;padding: 0 20px;">=0D
+			<div class=3D"page-title" style=3D"padding: 10px 36px 10px 0;display: bl=
+ock;position: relative;">=0D
+				<div class=3D"logo-mail" style=3D"display: block;width: auto;height: au=
+to;text-align: left;">=0D
+					<img class=3D"logo-mail" src=3D"http://wap06-html.azurewebsites.net/ma=
+il/logomail.png" style=3D"vertical-align: middle;border: 0;width: auto;heig=
+ht: 55px;text-align: left;">=0D
+				</div>=0D
+			</div>=0D
+		</div>=0D
+	</div>=0D
+=0D
+	<div class=3D"page-container" style=3D"padding-top: 0;position: relative;p=
+adding: 20px 20px;padding-bottom: 40px;">=0D
+		<div class=3D"page-content">=0D
+			<div class=3D"content-wrapper" style=3D"width: 100%;">=0D
+          =0D
+<h3  style=3D"display: block;letter-spacing: -0.015em;font-family: inherit;=
+line-height: 1.5;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webk=
+it-margin-start: 0px;-webkit-margin-end: 0px;margin: 2rem !important;font-s=
+ize: 25px;font-weight: 900;color: #404040;text-align: center;">Alta de usua=
+rio</h3>=0D
+<p  style=3D"display: block;-webkit-margin-before: 1em;-webkit-margin-after=
+: 1em;-webkit-margin-start: 0px;-webkit-margin-end: 0px;margin: 0 2rem 2rem=
+ 2rem;font-size: 15px;text-align: center;color: #404040;">=0D
+  Su usuario <strong>""</strong> del grupo <strong>"AR - Managers"</strong>=
+ ha sido dado de alta.=0D
+  Para confirmarlo complete sus datos haciendo click en el siguiente bot=C3=
+=B3n=0D
+</p>=0D
+<div  style=3D"display: block;text-align: center;">=0D
+  <a href=3D"https://u2699078.ct.sendgrid.net/wf/click?upn=3Dh9eXz29JjMJYP0=
+Adc5I8Y3fzxSKroAzKrAHnun52-2FJLH91IoStOk5ioQjvTbrNfQgw2zDDZCA9vHBgxyMinmMje=
+erziw1Zb1OHSokzE5Ra0-3D_-2BhQsPu9Q2VEUqe1WPYN4pT-2BIvMtng7VbwqiKNwfIv6LJwiU=
+64u-2BsLbN4fHI6in8-2FFi-2FTwhF86kyDISj1gAv0Mc7DGT8zb-2BGHdC4EvXj92e0XbyZL-2=
+FDKLqzdBl0LkO1dQ5IcWAFDmrxAOUdMfD4-2BqwXc06XcM8iUybHRFhRVnUHIJV3sgUUEHlEGNz=
+QP0NmRfZ6rQPTW2RMRlbs-2Bhzl21wrbJdDum-2Ft-2BuOQvAKRhP7QU-3D" target=3D"_bla=
+nk"  style=3D"text-decoration:none;color:#ffffff;">=0D
+    <button type=3D"button"  style=3D"outline: 0;font-family: inherit;line-=
+height: inherit;-webkit-appearance: button;cursor: pointer;text-transform: =
+none;overflow: visible;font: inherit;align-items: flex-start;text-rendering=
+: auto;letter-spacing: normal;word-spacing: normal;text-indent: 0px;text-sh=
+adow: none;display: inline-block;-webkit-writing-mode: horizontal-tb;text-a=
+lign: center;margin: 0;border: transparent;border-radius: 5px;padding: 5px =
+20px;font-size: 16px;color: #ffffff;background-color: #2196f3;margin-top: 0=
+;">=0D
+      Completar datos de usuario=0D
+    </button>=0D
+  </a>=0D
+</div>=0D
+<p>=0D
+  Link para completar datos de usuario: <a href=3D"https://u2699078.ct.send=
+grid.net/wf/click?upn=3Dh9eXz29JjMJYP0Adc5I8Y3fzxSKroAzKrAHnun52-2FJLH91IoS=
+tOk5ioQjvTbrNfQgw2zDDZCA9vHBgxyMinmMjeerziw1Zb1OHSokzE5Ra0-3D_-2BhQsPu9Q2VE=
+Uqe1WPYN4pT-2BIvMtng7VbwqiKNwfIv6LJwiU64u-2BsLbN4fHI6in8-2FTZA-2Bt0UeC5L4C4=
+KWEqsutwOEHrq-2FxV-2BoqH0ByNdyNa4EhOU03u-2B5oYHHAtfWuspGyx8pD10YNAUOcgy-2Fe=
+4hJOCKrUHIYklCt95gQsp5XmC7M3p2eEg7RXPlh5b1zLe9zbzaDJ-2FTcXTduCw8wmUGoP9XA2q=
+ZI88eAlPLNy0XNt6I-3D" target=3D"_blank">https://bd.uar.com.ar/Users/confirm=
+/2719?token=3D591f5d0b2a5df</a>=0D
+</p>			</div>=0D
+		</div>=0D
+	</div>=0D
+=0D
+	<div class=3D"page-footer" style=3D"display: block;height: 70px;background=
+-color: #0053a1;background-size: cover;margin-bottom: 0rem !important;">=0D
+		<div class=3D"footerline" style=3D"display: block;height: 5px;width: 100%=
+;background-image: url(http://wap06-html.azurewebsites.net/mail/lineafooter=
+mail.jpg);background-position: top left;background-repeat: no-repeat;backgr=
+ound-size: cover;"></div>=0D
+		<p class=3D"copyright-mail" style=3D"display: block;-webkit-margin-before=
+: 1em;-webkit-margin-after: 1em;-webkit-margin-start: 0px;-webkit-margin-en=
+d: 0px;margin: 20px 5px 20px 5px;color: white;">&copy; 2017. <a href=3D"htt=
+ps://u2699078.ct.sendgrid.net/wf/click?upn=3DeIBEPTb1YhJ2QSXBlo-2BCXd8SZKaI=
+EwzTCmD0xXv8eO4-3D_-2BhQsPu9Q2VEUqe1WPYN4pT-2BIvMtng7VbwqiKNwfIv6LJwiU64u-2=
+BsLbN4fHI6in8-2FoUSyo2bLMVgWXhPQVfKkjKnCz2oz2I3Do7XzdPUvzE7e8Uan7f6SLhgWsx0=
+3RG1iWH2KNKWRHsQQfz1Tps6hSx7dgYTPQLGCuco6tLXYb1MkHQ-2Fdzw0RHvhEGRS8P7hxlr-2=
+Fq5Trzzx9WXStOJ-2FXi6y4fPnogpZvrgqhaDurTig0-3D" target=3D"_blank" style=3D"=
+color:#66b3ff;">UAR</a></p>=0D
+	</div>=0D
+=0D
+
+<img src=3D"https://u2699078.ct.sendgrid.net/wf/open?upn=3D-2BhQsPu9Q2VEUqe=
+1WPYN4pT-2BIvMtng7VbwqiKNwfIv6LJwiU64u-2BsLbN4fHI6in8-2FbmWB6H-2F58VS0-2Bmk=
+u4WWsXkEUd8NYJHogvtaLxvoLV4irXMOm2nevCA5L-2FCtKw6siYBp0F0C9DJOfT5GwZP6-2BaT=
+SJffAx8wCuG5bcumzuzO4ZWrxeYfcY0nw78AzzIgM6bjOwv2yuZTI65-2By9Z7A7XtzFUZ7ntMR=
+U3mOSOsOIeuo-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"he=
+ight:1px !important;width:1px !important;border-width:0 !important;margin-t=
+op:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin=
+-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;pad=
+ding-right:0 !important;padding-left:0 !important;"/>
+</body>=0D
+</html>
+
+
+--alt-4e6abb9c5b419734720cefe2f0609086--
+
+
+--4e6abb9c5b419734720cefe2f0609086--
+
+
+

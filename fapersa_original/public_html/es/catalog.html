@@ -1,0 +1,54 @@
+<?php
+include("security.inc.php");
+include("header.inc.php");
+
+if($_GET[basket]=="cancelar"){
+	        unset($_SESSION[cart_products]);
+	      }
+?>
+        <div id="menu2"><div id="acceso">
+<h2 class="accesonav">Acceso Catalogo</h2>
+<div id="fbuscar" class="cuerpolateral"> 
+<form ACTION="login.php" METHOD="POST">
+<div id="campotexto"><input type="text" name="cliente" value="Cliente" onfocus="this.value = ''"></div> 
+<div id="campotexto"><input type="password" name="password" value="Password" onfocus="this.value = ''"></div>
+<div id="botonbuscar"><input type=image src="../images/boton.gif" width="105" height="27"><input name="sent" type="hidden" id="sent" value="1"></div>
+</form> 
+</div> 
+        </div>
+        </div>
+  </div>
+        <div id="contenido">
+        <div id="contactos">    	
+<div id="textogeneral" class="graltexto">
+<h1>catalogo</h1>
+<div id="catalogo_header"><div id="carrito"><? include("carrito.php"); ?></div></div>    
+  <div id="catalogo">  <div id="formulario_search" class="cuerpoingreso">
+<FORM ACTION="" METHOD="POST" name="fbuscar" onsubmit="Buscar(); return false">
+<div id="campotexto2">
+  <div id="nombrecampo">Marca<span class="asterisco"></span></div>
+<?
+$select = "select * from fapersa_marcas order by Marcas";
+$stmd=$bd->ejecutar($select);
+?>
+  <select name="id_marca">
+  	<option value="-1">Todas las marcas...</option>
+ <?   	  while ($d=$bd->obtener_fila($stmd,0)){
+   ?>
+  <option value="<?=$d[id]?>"><?=$d[Marcas]?></option>
+<?}
+?></select></div><div id="campotexto3">
+  <div id="nombrecampo">Buscar<span class="asterisco"></span></div><input type="text" name="code" class="fields_stylish" value="<?=$_POST[code]?>">
+</div>
+                               <div id="campotexto2">&nbsp;</div>
+<div id="botonbuscar3"><input type="image" src="../images/search_es.gif" name="Image1" width="105" height="27" border="0" /></div></FORM></div></div>
+  <h1>resultados</h1>
+  <div id="result" class="cuerpocatalog">
+  	<div id="resultados"></div>
+  </div>
+</div>
+        </div>
+        </div>
+<?php
+include("footer.inc.php"); 
+?>

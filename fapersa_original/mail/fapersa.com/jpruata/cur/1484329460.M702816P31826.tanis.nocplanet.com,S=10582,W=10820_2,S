@@ -1,0 +1,238 @@
+Return-Path: <ingfyori@gmail.com>
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id sdCRKfQReVhSfAAATLP0zA
+	; Fri, 13 Jan 2017 14:44:20 -0300
+Return-path: <ingfyori@gmail.com>
+Envelope-to: jpruata@fapersa.com,
+ fyori@fapersa.com
+Delivery-date: Fri, 13 Jan 2017 14:44:20 -0300
+Received: from mail-lf0-f51.google.com ([209.85.215.51]:36310)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128)
+	(Exim 4.87)
+	(envelope-from <ingfyori@gmail.com>)
+	id 1cS5tc-0008MH-Mz; Fri, 13 Jan 2017 14:44:20 -0300
+Received: by mail-lf0-f51.google.com with SMTP id z134so39873220lff.3;
+        Fri, 13 Jan 2017 09:43:32 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:cc;
+        bh=R8j42IkRh0YGwjArEaiaEd2hMK9Bwx9V6BsffQ0gwtI=;
+        b=aTcwaji0uX98ulHEx4FZOJ44MkwwiMq0A+Jr5LMwB1k+skLUYM2+pLd5IHh9kDgpnF
+         MRyhLP+3nOVW2tvDVG8FoLQVcuKAEmSFaokLEkrNenMpySwnZrcppw5iO4+z4eQAeaiM
+         /Yk4tewz36Ct7iwtZVst6g6IuG6DiH0tLdFASkMOaNOkL2L2MQ6RviMqmPutjxneMa2Q
+         KxO4nyV/91cPzJpa4rl0VDStVCgR5/A+Ch9yLyE3YXnB04vpLFNlLdyxDgDDIsuoTJUv
+         zFkcODsUSs/m/j9kqPjsSbFZOPXB53Sdl377Ya0hamXtRpk25lMHW6TF+zK6thrafPK4
+         m6BQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:sender:in-reply-to:references:from
+         :date:message-id:subject:to:cc;
+        bh=R8j42IkRh0YGwjArEaiaEd2hMK9Bwx9V6BsffQ0gwtI=;
+        b=ggZkzDBlMzy7+XBky2F490fLUKheqZ8YXI/VMA2rIad1+ZGX/eOqNTAre4o8czRGUB
+         axaxJ3H/QKZ4lPMhajkaIXp9GDwAyANKFytR3K00p6bf0zVD+xmC2Drjxe/2ywLz9Wd9
+         pCJOdX108AjSv/mEEMoCSaJZ2v9zBhIk9UwiTnzV7pRpViSEDVgRXbSD4DnRRJhZJ2ZR
+         9uBlYYgTM0GT1ORd7Utt6aIbTHRORXiHIez7WbkAAely0wcj6lKLp6xg7uyZkNeUliHi
+         bN6i/WOeZm/FyBTA84IbReiR8Md5XAxNKuh1wYj+O9UvsDihWjkM+SYkhYQi4SvWwUJv
+         tiNA==
+X-Gm-Message-State: AIkVDXKzdqabx1L/Fkd0JQx1N2J1iie4iR+UhicogmxsthwsE+k9Fm7qhS29DtgF/u5Amp2L6fPdAYapjWNKwg==
+X-Received: by 10.25.161.208 with SMTP id k199mr3268551lfe.165.1484329390255;
+ Fri, 13 Jan 2017 09:43:10 -0800 (PST)
+MIME-Version: 1.0
+Sender: ingfyori@gmail.com
+Received: by 10.25.145.3 with HTTP; Fri, 13 Jan 2017 09:43:09 -0800 (PST)
+Received: by 10.25.145.3 with HTTP; Fri, 13 Jan 2017 09:43:09 -0800 (PST)
+In-Reply-To: <F38DBF6E-A112-4E99-A84A-7FB9817D4716@fapersa.com>
+References: <56866b3e-b13b-aa8b-6040-511701fcaf9e@fapersa.com>
+ <b30828a9-4f7f-c9c4-2f44-c8e638159487@fapersa.com> <F38DBF6E-A112-4E99-A84A-7FB9817D4716@fapersa.com>
+From: =?UTF-8?Q?Fernando_Adri=C3=A1n_Yori?= <fyori@fapersa.com>
+Date: Fri, 13 Jan 2017 14:43:09 -0300
+X-Google-Sender-Auth: mAOjYwZhVj9HmeuEqLDiJWpeIPs
+Message-ID: <CADbW4uR_zXw8NOXiMgJPYEofUSconcnEsvF_O40-fUFaB2oY3g@mail.gmail.com>
+Subject: Re: Sueldo Ruscitti
+To: Juan Pablo Ruata <jpruata@fapersa.com>
+Cc: "Ing. Fernando Yori" <fyori@fapersa.com>
+Content-Type: multipart/alternative; boundary=001a114106a60935b80545fd5e61
+X-Spam-Status: No, score=-1.9
+X-Spam-Score: -18
+X-Spam-Bar: -
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Juampi: Yo creo que está en un nivel de importancia equivalente
+    a este momento de Damián. Por eso me hubiera gustado un golpe importante,
+    pero si te parece que puede generar kilombo, déjalo en 18. Sí, es un lío,
+    porque cuando no se atrasa uno, se atrasa otro. Por eso yo te mandé un archivo
+    con los grupos de personas equivalentes en cuanto a importancia. Ahora estoy
+    en Sauce, porque me avisó Cafaro que podía venir antes de que llueva. [...]
+    
+ 
+ Content analysis details:   (-1.9 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+                             [209.85.215.51 listed in wl.mailspike.net]
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: fapersa.com]
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (ingfyori[at]gmail.com)
+  0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
+                             domains are different
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and EnvelopeFrom
+                              freemail headers are different
+ -0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+X-Spam-Flag: NO
+
+--001a114106a60935b80545fd5e61
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Juampi:
+Yo creo que est=C3=A1 en un nivel de importancia equivalente a este momento=
+ de
+Dami=C3=A1n. Por eso me hubiera gustado un golpe importante, pero si te par=
+ece
+que puede generar kilombo, d=C3=A9jalo en 18. S=C3=AD, es un l=C3=ADo, porq=
+ue cuando no se
+atrasa uno, se atrasa otro. Por eso yo te mand=C3=A9 un archivo con los gru=
+pos
+de personas equivalentes en cuanto a importancia.
+Ahora estoy en Sauce, porque me avis=C3=B3 Cafaro que pod=C3=ADa venir ante=
+s de que
+llueva.
+
+Saludos
+Fernando
+
+
+El 13 ene. 2017 1:07 p. m., "FAPERSA" <jpruata@fapersa.com> escribi=C3=B3:
+
+Fernando al aumentar a Diego a 20.000 de bolsillo pasar=C3=ADa a cobrar igu=
+al
+que Damian, y cobrar=C3=ADa mas que German y Adrian Alovatti.
+
+Como queres q siga que le de marcha y se nos arme quilombo o solo lo subo a
+18.000 y despu=C3=A9s vemos=E2=80=A6=E2=80=A6=E2=80=A6=E2=80=A6..
+
+El 13 ene. 2017, a las 10:10, Ing. Fernando Yori <fyori@fapersa.com>
+escribi=C3=B3:
+
+Juampi:
+Olvid=C3=A9 ponerte en el mail que te mencion=C3=A9 si pod=C3=ADas llegar a=
+ $20000 de
+bolsillo.
+
+Saludos
+Fernando
+
+
+-------- Forwarded Message --------
+Subject: Sueldo Ruscitti
+Date: Thu, 12 Jan 2017 11:25:08 -0300
+From: Ing. Fernando Yori <fyori@fapersa.com> <fyori@fapersa.com>
+To: Juan Pablo Ruata <jpruata@fapersa.com> <jpruata@fapersa.com>
+
+Juan Pablo:
+De acuerdo a lo conversado, fijate si a Diego Ruscitti se le puede dar
+un aumento importante para poder diferenciarlo de los operarios comunes.
+Est=C3=A1 muy desmoralizado por ese tema.
+
+Saludos
+Fernando
+
+--001a114106a60935b80545fd5e61
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Juampi:<div dir=3D"auto">Yo creo que est=C3=A1 en un nive=
+l de importancia equivalente a este momento de Dami=C3=A1n. Por eso me hubi=
+era gustado un golpe importante, pero si te parece que puede generar kilomb=
+o, d=C3=A9jalo en 18. S=C3=AD, es un l=C3=ADo, porque cuando no se atrasa u=
+no, se atrasa otro. Por eso yo te mand=C3=A9 un archivo con los grupos de p=
+ersonas equivalentes en cuanto a importancia.</div><div dir=3D"auto">Ahora =
+estoy en Sauce, porque me avis=C3=B3 Cafaro que pod=C3=ADa venir antes de q=
+ue llueva.</div><div dir=3D"auto"><br></div><div dir=3D"auto">Saludos</div>=
+<div dir=3D"auto">Fernando<br><div dir=3D"auto"><br><div class=3D"gmail_ext=
+ra"><br><div class=3D"gmail_quote">El 13 ene. 2017 1:07 p. m., &quot;FAPERS=
+A&quot; &lt;<a href=3D"mailto:jpruata@fapersa.com">jpruata@fapersa.com</a>&=
+gt; escribi=C3=B3:<br type=3D"attribution"><blockquote class=3D"quote" styl=
+e=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div st=
+yle=3D"word-wrap:break-word">Fernando al aumentar a Diego a 20.000 de bolsi=
+llo pasar=C3=ADa a cobrar igual que Damian, y cobrar=C3=ADa mas que German =
+y Adrian Alovatti.<div><br></div><div>Como queres q siga que le de marcha y=
+ se nos arme quilombo o solo lo subo a 18.000 y despu=C3=A9s vemos=E2=80=A6=
+=E2=80=A6=E2=80=A6=E2=80=A6..<br><div><blockquote type=3D"cite"><div>El 13 =
+ene. 2017, a las 10:10, Ing. Fernando Yori &lt;<a href=3D"mailto:fyori@fape=
+rsa.com" target=3D"_blank">fyori@fapersa.com</a>&gt; escribi=C3=B3:</div><b=
+r class=3D"m_-4740777043229145439Apple-interchange-newline"><div>
+ =20
+
+   =20
+ =20
+  <div bgcolor=3D"#FFFFFF" text=3D"#000000">
+    Juampi:<br>
+    Olvid=C3=A9 ponerte en el mail que te mencion=C3=A9 si pod=C3=ADas lleg=
+ar a $20000
+    de bolsillo.<br>
+    <br>
+    Saludos<br>
+    Fernando<br>
+    <div class=3D"m_-4740777043229145439moz-forward-container"><br>
+      <br>
+      -------- Forwarded Message --------
+      <table class=3D"m_-4740777043229145439moz-email-headers-table" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+        <tbody>
+          <tr>
+            <th align=3D"RIGHT" nowrap valign=3D"BASELINE">Subject:
+            </th>
+            <td>Sueldo Ruscitti</td>
+          </tr>
+          <tr>
+            <th align=3D"RIGHT" nowrap valign=3D"BASELINE">Date: </th>
+            <td>Thu, 12 Jan 2017 11:25:08 -0300</td>
+          </tr>
+          <tr>
+            <th align=3D"RIGHT" nowrap valign=3D"BASELINE">From: </th>
+            <td>Ing. Fernando Yori <a class=3D"m_-4740777043229145439moz-tx=
+t-link-rfc2396E" href=3D"mailto:fyori@fapersa.com" target=3D"_blank">&lt;fy=
+ori@fapersa.com&gt;</a></td>
+          </tr>
+          <tr>
+            <th align=3D"RIGHT" nowrap valign=3D"BASELINE">To: </th>
+            <td>Juan Pablo Ruata <a class=3D"m_-4740777043229145439moz-txt-=
+link-rfc2396E" href=3D"mailto:jpruata@fapersa.com" target=3D"_blank">&lt;jp=
+ruata@fapersa.com&gt;</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      <pre>Juan Pablo:
+De acuerdo a lo conversado, fijate si a Diego Ruscitti se le puede dar=20
+un aumento importante para poder diferenciarlo de los operarios comunes.=20
+Est=C3=A1 muy desmoralizado por ese tema.
+
+Saludos
+Fernando
+</pre>
+    </div>
+  </div>
+
+</div></blockquote></div><br></div></div></blockquote></div><br></div></div=
+></div></div>
+
+--001a114106a60935b80545fd5e61--

@@ -1,0 +1,116 @@
+Return-Path: <>
+Delivered-To: no-reply@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id UTnnB71WH1mzHQAATLP0zA
+	for <no-reply@fapersa.com>; Fri, 19 May 2017 17:34:05 -0300
+Return-path: <>
+Envelope-to: no-reply@fapersa.com
+Delivery-date: Fri, 19 May 2017 17:34:05 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:46075 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	id 1dBob6-0002SR-DL
+	for no-reply@fapersa.com; Fri, 19 May 2017 17:34:04 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 78CF17F219
+	for <no-reply@fapersa.com>; Fri, 19 May 2017 17:34:04 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id IiTkcRNmg6xe for <no-reply@fapersa.com>;
+	Fri, 19 May 2017 17:34:04 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 091877F234; Fri, 19 May 2017 17:34:04 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id D26477F219
+	for <no-reply@fapersa.com>; Fri, 19 May 2017 17:34:02 -0300 (ART)
+Received-SPF: none (snt004-omc4s32.hotmail.com: No applicable sender policy available) receiver=mx1.fapersa.com; identity=helo; helo=SNT004-OMC4S32.hotmail.com; client-ip=65.55.90.235
+Received: from SNT004-OMC4S32.hotmail.com (snt004-omc4s32.hotmail.com [65.55.90.235])
+	by fw.fapersa.com (Postfix) with ESMTPS id 197955FD33
+	for <no-reply@fapersa.com>; Fri, 19 May 2017 17:34:00 -0300 (ART)
+Received: from SNT004-MC4F32.hotmail.com ([65.55.90.199]) by SNT004-OMC4S32.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Fri, 19 May 2017 13:33:56 -0700
+From: postmaster@hotmail.com
+To: no-reply@fapersa.com
+Date: Fri, 19 May 2017 13:33:56 -0700
+MIME-Version: 1.0
+Content-Type: multipart/report; report-type=delivery-status;
+	boundary="9B095B5ADSN=_01D2CD404FE1C18300090651SNT004?MC4F32.ho"
+X-DSNContext: 335a7efd - 4516 - 00000001 - 80040546
+Message-ID: <o8yfogkJX000192eb@SNT004-MC4F32.hotmail.com>
+Subject: Delivery Status Notification (Failure)
+X-OriginalArrivalTime: 19 May 2017 20:33:56.0840 (UTC) FILETIME=[3D177E80:01D2D0DF]
+
+This is a MIME-formatted message.  
+Portions of this message may be unreadable without a MIME-capable mail program.
+
+--9B095B5ADSN=_01D2CD404FE1C18300090651SNT004?MC4F32.ho
+Content-Type: text/plain; charset=unicode-1-1-utf-7
+
+This is an automatically generated Delivery Status Notification.
+
+Delivery to the following recipients failed.
+
+       tuchirepuestos@hotmail.com
+
+
+
+
+--9B095B5ADSN=_01D2CD404FE1C18300090651SNT004?MC4F32.ho
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns;SNT004-MC4F32.hotmail.com
+Received-From-MTA: dns;tanis.nocplanet.com
+Arrival-Date: Fri, 19 May 2017 13:33:56 -0700
+
+Final-Recipient: rfc822;tuchirepuestos@hotmail.com
+Action: failed
+Status: 5.5.0
+Diagnostic-Code: smtp;550 Requested action not taken: mailbox unavailable (2083702978:4278:-2147467259)
+
+--9B095B5ADSN=_01D2CD404FE1C18300090651SNT004?MC4F32.ho
+Content-Type: message/rfc822
+
+Received: from tanis.nocplanet.com ([108.170.37.10]) by SNT004-MC4F32.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23143);
+	 Fri, 19 May 2017 13:33:56 -0700
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=fapersa.com
+	; s=default; h=Content-Transfer-Encoding:Content-Type:MIME-Version:Subject:
+	Message-ID:To:From:Sender:Reply-To:Date:Cc:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+	List-Post:List-Owner:List-Archive;
+	bh=EuMArTjSLY+zlfDVUjpoRJkYrnQkZESZ0O/vm4Lgek0=; b=lMUclCSdrLRR+rqa0pa+lk6tbv
+	rzHyui01CtDx5GytX8H1h842I9B185Xcl7XAoqzzFTxB02UFW5u9Xn8vGUCpAQ5gOiqWH9DlrH7HK
+	sJcHHGHMPnrfX9s+zDFSqzviBI9TOHtTY5ch/JpN2+kB1nGfri+w2J6eeOoAojhGX0v/tVGqMNueH
+	ECfz15cXNOZdOFp2V5OnkTMC0OtwNkG/EQeUPtObJVTnvQIyvtpIN5KDUqx6iFGoQoLksB/T7gLGv
+	+YQY09zEOsd2QIYo1fwako29uBupYK0dJ+7ZQGgkjahIUuC1h9GJLhyPLNZ/rrAcGmzvlHkGflSV6
+	g94t9g6A==;
+Received: from mx1.fapersa.com ([181.14.247.181]:58400 helo=equis.fapersa.int)
+	by tanis.nocplanet.com with esmtpa (Exim 4.89)
+	(envelope-from <no-reply@fapersa.com>)
+	id 1dBoaw-0002Pd-52
+	for tuchirepuestos@hotmail.com; Fri, 19 May 2017 17:33:54 -0300
+From: Equis <no-reply@fapersa.com>
+To: GABRIEL RAUL CABRAL <tuchirepuestos@hotmail.com>
+Message-ID: <2108044736.43.1495225764178.JavaMail.cmg@equis>
+Subject: Fapersa ICSA - Bonificacion por pago Semana y 3 dias
+MIME-Version: 1.0
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - tanis.nocplanet.com
+X-AntiAbuse: Original Domain - hotmail.com
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - fapersa.com
+X-Get-Message-Sender-Via: tanis.nocplanet.com: authenticated_id: no-reply@fapersa.com
+X-Authenticated-Sender: tanis.nocplanet.com: no-reply@fapersa.com
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+Return-Path: no-reply@fapersa.com
+X-OriginalArrivalTime: 19 May 2017 20:33:56.0403 (UTC) FILETIME=[3CD4D030:01D2D0DF]
+Date: 19 May 2017 13:33:56 -0700
+
+<p>Estimado cliente, a continuaci&#243;n se detallan las facturas generadas en el transcurso de esta semana, recuerde que cancelando las mismas antes del mi&#233;rcoles pr&#243;ximo 24/05/2017 a trav&#233;s de dep&#243;sito bancario en las ctas. oportunamente informadas, se aplicar&#225; una bonificaci&#243;n del 5%.</p><p>Cliente: TUCHI REPUESTOS DE CABRAL GABRIEL R</p><p><br>Factura: 0013-00010423<br>Fecha: 17/05/2017<br>Importe:        10.366,94<br>Bonificaci&#243;n 5%:           518,35<br>Neto a Depositar::         9.848,59<br></p><p>Recuerde enviar el comprobante de pago a cobranzas@fapersa.com para hacer efectiva la bonificacion en su Cuenta Corriente.</p><p>Saludos Cordiales</p>
+
+
+--9B095B5ADSN=_01D2CD404FE1C18300090651SNT004?MC4F32.ho--

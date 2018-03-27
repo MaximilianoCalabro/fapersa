@@ -1,0 +1,123 @@
+Return-Path: <>
+Delivered-To: no-reply@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id UaELDdlsQFi9GAAATLP0zA
+	for <no-reply@fapersa.com>; Thu, 01 Dec 2016 15:32:57 -0300
+Return-path: <>
+Envelope-to: no-reply@fapersa.com
+Delivery-date: Thu, 01 Dec 2016 15:32:57 -0300
+Received: from smtp-out-01c.arnet.com.ar ([200.45.0.210]:16709)
+	by tanis.nocplanet.com with esmtp (Exim 4.87)
+	id 1cCWA6-00047S-V6
+	for no-reply@fapersa.com; Thu, 01 Dec 2016 15:32:56 -0300
+Received: from localhost by smtp-route-03.arnet.com.ar;
+  01 Dec 2016 16:51:22 -0300
+Message-Id: <e80edf$aa3039@smtp-route-03.arnet.com.ar>
+Date: 01 Dec 2016 16:51:22 -0300
+To: no-reply@fapersa.com
+From: "Mail Delivery System" <MAILER-DAEMON@smtp-route-03.arnet.com.ar>
+Subject: Delivery Status Notification (Failure)
+MIME-Version: 1.0
+Content-Type: multipart/report; report-type=delivery-status; boundary="KeO1R.5GfubNoVu.6ukzxAMabFq.BDBtf3o"
+X-Spam-Status: No, score=3.5
+X-Spam-Score: 35
+X-Spam-Bar: +++
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  The following message to <distribuidoramotor@arnet.com.ar>
+    was undeliverable. The reason for the problem: 5.1.0 - Unknown address error
+    550-'5.7.1 Unable to relay' [...] 
+ 
+ Content analysis details:   (3.5 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  1.3 RCVD_IN_BL_SPAMCOP_NET RBL: Received via a relay in bl.spamcop.net
+                 [Blocked - see <http://www.spamcop.net/bl.shtml?200.45.0.210>]
+ -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+                             [200.45.0.210 listed in wl.mailspike.net]
+  0.5 RCVD_IN_SORBS_SPAM     RBL: SORBS: sender is a spam source
+                             [200.45.0.210 listed in dnsbl.sorbs.net]
+  0.9 DKIM_ADSP_NXDOMAIN     No valid author signature and domain not in DNS
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0001]
+  1.8 PYZOR_CHECK            Listed in Pyzor (http://pyzor.sf.net/)
+ -0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+  0.9 BODY_URI_ONLY          Message body is only a URI in one line of text or for
+                             an image
+X-Spam-Flag: NO
+
+--KeO1R.5GfubNoVu.6ukzxAMabFq.BDBtf3o
+content-type: text/plain;
+    charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+The following message to <distribuidoramotor@arnet.com.ar> was undeliverabl=
+e.
+The reason for the problem:
+5.1.0 - Unknown address error 550-'5.7.1 Unable to relay'
+
+--KeO1R.5GfubNoVu.6ukzxAMabFq.BDBtf3o
+content-type: message/delivery-status
+
+Reporting-MTA: dns; smtp-route-03.arnet.com.ar
+
+Final-Recipient: rfc822;distribuidoramotor@arnet.com.ar
+Action: failed
+Status: 5.0.0 (permanent failure)
+Remote-MTA: dns; [10.68.2.24]
+Diagnostic-Code: smtp; 5.1.0 - Unknown address error 550-'5.7.1 Unable to relay' (delivery attempts: 0)
+
+--KeO1R.5GfubNoVu.6ukzxAMabFq.BDBtf3o
+content-type: message/rfc822
+
+Date: 01 Dec 2016 16:51:17 -0300
+Received: from unknown (HELO smtp-mx-02.arnet.com.ar) ([192.168.221.195])
+  by smtp-route-03.arnet.com.ar with ESMTP; 01 Dec 2016 16:51:17 -0300
+X-IPAS-Result: A0CgAAACbEBYhwolqmyERQEBAQEBxkkEAgEDEwEBAR4J4DiHAQE
+X-Arnet-Anti-Spam: Activado
+Received: from tanis.nocplanet.com ([108.170.37.10])
+  by smtp-mx-02.arnet.com.ar with ESMTP; 01 Dec 2016 16:50:59 -0300
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=fapersa.com
+	; s=default; h=Content-Type:MIME-Version:Subject:Message-ID:To:From:Sender:
+	Reply-To:Date:Cc:Content-Transfer-Encoding:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+	List-Post:List-Owner:List-Archive;
+	bh=UkJyFKbbY2cM/ycM+yZPRDZBszcMD5KFG8UATT2yUAQ=; b=LfpJljeD7B1mP6TQg81kVSqsQc
+	KhihvyS1CCCokvcLSD+Y5OJutPINVlhInjr/R6QTql52HXOsyV9PZAWkClmGEh7AIZMEOJmW5+xr7
+	59aNxd2bHfvwzVnb71ZqaD+L14XgiBBFdTIYNjofcrm4Axv4DrNXUMvvUgxGqKYMyKFfdyPzcpcKf
+	uFPJT4DDM8/pR7ea3/XpjhevVBZAkfYwP+L+PofVu1ZHa92FGPWTBRqd8IMP03UqxZ1sppqjmyYXz
+	jNforYm8o+AasDF8ze5noG4rIr7RJwanssUIxqkvPpP8GfRvjClwgtQwLlNDNGCmW3u3ybT/dTvLZ
+	o+Nxyr3A==;
+Received: from [181.14.247.181] (port=59513 helo=equis.fapersa.int)
+	by tanis.nocplanet.com with esmtpa (Exim 4.87)
+	(envelope-from <no-reply@fapersa.com>)
+	id 1cCW8q-0003tj-9j; Thu, 01 Dec 2016 15:31:34 -0300
+From: =?Cp1252?Q?Daniel_Ram=EDrez?= <no-reply@fapersa.com>
+To: VICTOR CARDOZO / DIEGO CARDOZO <distribuidoramotor@arnet.com.ar>, 
+	Ana Cardozo <acardoso@motormetalrosario.com.ar>, 
+	Compras <admin@motormetalrosario.com.ar>
+Message-ID: <2023453416.19.1480617021287.JavaMail.cmg@equis>
+Subject: Fapersa ICSA - Envio de comprobantes electronicos
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_18_1626454262.1480617020319"
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - tanis.nocplanet.com
+X-AntiAbuse: Original Domain - arnet.com.ar
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - fapersa.com
+X-Get-Message-Sender-Via: tanis.nocplanet.com: authenticated_id: no-reply@fapersa.com
+X-Authenticated-Sender: tanis.nocplanet.com: no-reply@fapersa.com
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+
+--KeO1R.5GfubNoVu.6ukzxAMabFq.BDBtf3o--
+
+

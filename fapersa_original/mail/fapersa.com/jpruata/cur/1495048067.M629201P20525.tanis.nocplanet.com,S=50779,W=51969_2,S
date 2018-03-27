@@ -1,0 +1,1190 @@
+Return-Path: <reportes-fapersa-bounces@listas.lunix.com.ar>
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id WeYPJYOfHFktUAAATLP0zA
+	; Wed, 17 May 2017 16:07:47 -0300
+Return-path: <reportes-fapersa-bounces@listas.lunix.com.ar>
+Envelope-to: dottonel@fapersa.com,
+ fyori@fapersa.com,
+ jpruata@fapersa.com,
+ pcalcagno@fapersa.com,
+ rdopazo@fapersa.com
+Delivery-date: Wed, 17 May 2017 16:07:47 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:46818 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <reportes-fapersa-bounces@listas.lunix.com.ar>)
+	id 1dB4IU-0005yh-JW; Wed, 17 May 2017 16:07:47 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 55E297F212;
+	Wed, 17 May 2017 16:07:46 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id wYHRa3NSIDjq; Wed, 17 May 2017 16:07:45 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 93C5C7F232; Wed, 17 May 2017 16:07:45 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 50A457F212;
+	Wed, 17 May 2017 16:07:44 -0300 (ART)
+Received: from cloud.lunix.com.ar (cloud.lunix.com.ar [207.198.115.213])
+	by fw.fapersa.com (Postfix) with ESMTP id 7B9EF5FE0D;
+	Wed, 17 May 2017 16:07:43 -0300 (ART)
+Received: from localhost (localhost [127.0.0.1])
+	by cloud.lunix.com.ar (Postfix) with ESMTP id 1D581C213A;
+	Wed, 17 May 2017 16:07:42 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at cloud.lunix.com.ar
+Received: from cloud.lunix.com.ar ([127.0.0.1])
+	by localhost (cloud.lunix.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id zzqoYwncJdts; Wed, 17 May 2017 16:07:36 -0300 (ART)
+Received: by cloud.lunix.com.ar (Postfix, from userid 114)
+	id DFBAEC2142; Wed, 17 May 2017 16:07:36 -0300 (ART)
+Received: from cloud.lunix.com.ar (localhost [127.0.0.1])
+	by cloud.lunix.com.ar (Postfix) with ESMTP id 98F20C213A;
+	Wed, 17 May 2017 16:07:31 -0300 (ART)
+X-Original-To: reportes-fapersa@listas.lunix.com.ar
+Delivered-To: reportes-fapersa@listas.lunix.com.ar
+Received: from localhost (localhost [127.0.0.1])
+ by cloud.lunix.com.ar (Postfix) with ESMTP id B38C2C213A
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Wed, 17 May 2017 16:07:30 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at cloud.lunix.com.ar
+Received: from cloud.lunix.com.ar ([127.0.0.1])
+ by localhost (cloud.lunix.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+ with ESMTP id NmUlWwXs2y7F for <reportes-fapersa@listas.lunix.com.ar>;
+ Wed, 17 May 2017 16:07:25 -0300 (ART)
+Received: by cloud.lunix.com.ar (Postfix, from userid 114)
+ id 74F14C213F; Wed, 17 May 2017 16:07:25 -0300 (ART)
+Received: from tanis.nocplanet.com (tanis.nocplanet.com [108.170.37.10])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by cloud.lunix.com.ar (Postfix) with ESMTPS id 24AC4C213A
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Wed, 17 May 2017 16:07:20 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=fapersa.com
+ ; s=default;
+ h=Content-Type:MIME-Version:Date:Subject:To:From:Sender:Reply-To
+ :Message-ID:Cc:Content-Transfer-Encoding:Content-ID:Content-Description:
+ Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+ In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=1TnQ4Z2pg0+izUmqzGze2U6h0HcMHE+u4A1FUgSiFe8=; b=IAqLM05Uhwbj3GEsyDN3ZOwutB
+ K15wlsteg0Phmdr5eUMEt/CtmDDz4vho1ar4cCQa+jVdP9CXVRhPMB+R5btirmXXjISyim5Kq8pdW
+ Kh68X8XlCDBe927RoWTqbHP80srXrEdsfaGgB/Xiiw/xvbIQRcmi3kKTZZpAfVk4ULfh+j9aWX6VU
+ 2X2jc2f8CFfG47y6wOJ2IqZKlXaHKy5dJxZKNXH2pTq0CWI8XViEmaHZurvyWsi6aiJrva3OL476S
+ Fw3IA/KblXRj/spoZRAcyUPRXY54kUIhtYz9hWpKD3A1isYHNVMAWh2no+AHratqaJtpseDxvcA/M
+ mjOhSuhg==;
+Received: from mx1.fapersa.com ([181.14.247.181]:51050 helo=ADMPCal)
+ by tanis.nocplanet.com with esmtpa (Exim 4.89)
+ (envelope-from <pcalcagno@fapersa.com>) id 1dB4I0-0005vd-Bf
+ for reportes-fapersa@listas.lunix.com.ar; Wed, 17 May 2017 16:07:18 -0300
+From: "Paulina Calcagno" <pcalcagno@fapersa.com>
+To: <reportes-fapersa@listas.lunix.com.ar>
+Date: Wed, 17 May 2017 16:09:35 -0300
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+ boundary="----=_NextPart_000_0037_01D2CF27.FB587C00"
+X-Mailer: Microsoft Office Outlook, Build 11.0.5510
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.23651
+Thread-Index: AdLPODazOTQFJmpMTUq55uhwUwLYtwAB3HHwAABdBdA=
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - tanis.nocplanet.com
+X-AntiAbuse: Original Domain - listas.lunix.com.ar
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - fapersa.com
+X-Get-Message-Sender-Via: tanis.nocplanet.com: authenticated_id:
+ pcalcagno@fapersa.com
+X-Authenticated-Sender: tanis.nocplanet.com: pcalcagno@fapersa.com
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+Message-Id: <20170517190720.24AC4C213A@cloud.lunix.com.ar>
+Subject: [Reportes-fapersa] RV: ***SPAM*** RE: AVISO DE PAGO CH ELECTRONICO
+	BBVA FRANCES
+X-BeenThere: reportes-fapersa@listas.lunix.com.ar
+X-Mailman-Version: 2.1.18
+Precedence: list
+List-Id: <reportes-fapersa.listas.lunix.com.ar>
+List-Unsubscribe: <http://listas.lunix.com.ar/cgi-bin/mailman/options/reportes-fapersa>, 
+ <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=unsubscribe>
+List-Post: <mailto:reportes-fapersa@listas.lunix.com.ar>
+List-Help: <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=help>
+List-Subscribe: <http://listas.lunix.com.ar/cgi-bin/mailman/listinfo/reportes-fapersa>, 
+ <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=subscribe>
+Reply-To: reportes-fapersa@listas.lunix.com.ar
+Errors-To: reportes-fapersa-bounces@listas.lunix.com.ar
+Sender: "Reportes-fapersa" <reportes-fapersa-bounces@listas.lunix.com.ar>
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0037_01D2CF27.FB587C00
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+
+
+-----Mensaje original-----
+De: Maria Lis Perich [mailto:lperich@fapersa.com]=20
+Enviado el: mi=E9rcoles, 17 de mayo de 2017 04:00 p.m.
+Para: 'Paulina Calcagno'
+Asunto: RV: ***SPAM*** RE: AVISO DE PAGO CH ELECTRONICO BBVA FRANCES
+
+Paulina
+Por favor reenviar a LUNIX
+
+Asi recibo las respuestas de mail, de nuestro proveedor TRANS RODAS
+
+GRACIAS!
+
+=20
+Maria Lis Perich=09
+Pago a Proveedores - Cuentas Corrientes=09
+Tel: +54 342 4810810=09
+Lamadrid 3065=09
+Santa Fe, Argentina.=09
+lperich@fapersa.com
+pagos@fapersa.com
+cobranzas@fapersa.com
+
+-----Mensaje original-----
+De: Rodas [mailto:rodas@transrodassrl.com.ar]=20
+Enviado el: Mi=E9rcoles, 17 de Mayo de 2017 03:06 p.m.
+Para: 'Maria Lis Perich'
+Asunto: ***SPAM*** RE: AVISO DE PAGO CH ELECTRONICO BBVA FRANCES
+
+Spam detection software, running on the system "mail.fapersa.com",
+has identified this incoming email as possible spam.  The original
+message has been attached to this so you can view it or label
+similar future email.  If you have any questions, see
+@@CONTACT_ADDRESS@@ for details.
+
+Content preview:  Gracias Lis. Saludos Mary [...]=20
+
+Content analysis details:   (7.0 points, 5.0 required)
+
+ pts rule name              description
+---- ----------------------
+--------------------------------------------------
+ 1.6 SUBJ_ALL_CAPS          Subject is all capitals
+ 1.6 HTTP_ESCAPED_HOST      URI: Uses %-escapes inside a URL's hostname
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 3.8 KB_DATE_CONTAINS_TAB   No description available.
+ 0.0 TAB_IN_FROM            From starts with a tab
+
+The original message was not completely plain text, and may be unsafe to
+open with some email clients; in particular, it may contain a virus,
+or confirm that your address can receive spam.  If you wish to view
+it, it may be safer to save it to a file and open it with an editor.
+
+
+------=_NextPart_000_0037_01D2CF27.FB587C00
+Content-Type: message/rfc822
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment
+
+From: "Rodas" <rodas@transrodassrl.com.ar>
+To: "'Maria Lis Perich'" <lperich@fapersa.com>
+References: <!&!AAAAAAAAAAAYAAAAAAAAADErt7bAdXpGgSPcQlAlokbCgAAAEAAAAKUduLs0dPZLlq9KJxyWTcwBAAAAAA==@fapersa.com>
+In-Reply-To: <!&!AAAAAAAAAAAYAAAAAAAAADErt7bAdXpGgSPcQlAlokbCgAAAEAAAAKUduLs0dPZLlq9KJxyWTcwBAAAAAA==@fapersa.com>
+Subject: RE: AVISO DE PAGO CH ELECTRONICO BBVA FRANCES
+Date: Wed, 17 May 2017 15:05:41 -0300
+Message-ID: <012601d2cf38$324ed0f0$96ec72d0$@com.ar>
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	boundary="----=_NextPart_000_0032_01D2CF27.FB587C00"
+X-Mailer: Microsoft Office Outlook 12.0
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.23651
+Thread-Index: AdLPNdD+nn+wYGkwRnGM3PvZ9NrwjQAAkrGw
+X-Antivirus: Avast (VPS 170517-14, 17/05/2017), Outbound message
+X-Antivirus-Status: Clean
+X-Fib-Al-Info: Al
+X-Fib-Al-MRId: e3a5a4d418109bd475775aba1ca9994e
+X-Fib-Al: noav
+X-Fib-Al-SA: analyzed
+X-Fib-Al-From: rodas@transrodassrl.com.ar
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0032_01D2CF27.FB587C00
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_001_0033_01D2CF27.FB587C00"
+
+
+------=_NextPart_001_0033_01D2CF27.FB587C00
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+=20
+
+Gracias Lis.
+
+=20
+
+Saludos
+
+=20
+
+Mary
+
+=20
+
+=20
+
+
+cid:image009.gif@01D1CD7D.3B1F7B20
+<http://www.transrodassrl.com.ar%20%20%20/%20%20www.maxitrans.com.br> =20
+
+cid:image010.gif@01D1CD7D.3B1F7B20cid:image011.gif@01D1CD7D.3B1F7B20
+
+=20
+
+cid:image012.gif@01D1CD7D.3B1F7B20
+
+Sandra M. Otaz=FA / Gerente=20
+ <mailto:maxitrans@transrodassrl.com.ar> maxitrans@transrodassrl.com.ar=20
+
+Maxitrans Transportes & Log=EDstica Internacional Ltda.=20
+Trans Rodas S.R.L.=20
+Office: + 54 11 4687-6713 / 0716=20
+Nextel ID: 167*2308-15-5307-4744 - Skype: sandrarodas333=20
+Fragata La Argentina 1633 Dto. 2(1440)=20
+Cap. Fed. Buenos Aires Rep Argentina=20
+ <http://www.transrodassrl.com.ar%20%20%20/%20%20www.maxitrans.com.br>
+www.transrodassrl.com.ar / www.maxitrans.com.br=20
+
+ <https://www.facebook.com/MaxitransTranportes>
+Facebookcid:image011.gif@01D1CD7D.3B1F7B20
+<https://www.linkedin.com/company/maxitrans?trk=3Dbiz-companies-cym>
+LinkedIncid:image011.gif@01D1CD7D.3B1F7B20
+<https://www.youtube.com/watch?v=3D50f49i6ObPc>
+Youtubecid:image011.gif@01D1CD7D.3B1F7B20
+<https://www.google.com.br/maps/place/Fragata+la+Argentina+1633,+C1440EXE=
++CA
+BA,+Argentina/@-34.6572261,-58.5198375,17z/data=3D!4m2!3m1!1s0x95bcc8f862=
+cff8b
+3:0x668bc029a7e9c897> cid:image016.gif@01D1CD7D.3B1F7B20alt=3DMaps
+data-filename=3Dmaps.png>
+
+=20
+
+=20
+
+De: Maria Lis Perich [mailto:lperich@fapersa.com]=20
+Enviado el: mi=E9rcoles, 17 de mayo de 2017 14:49
+Para: Maria Lis Perich
+Asunto: AVISO DE PAGO CH ELECTRONICO BBVA FRANCES
+Importancia: Alta
+
+=20
+
+Buenas tardes
+
+=20
+
+Les informo que en el d=EDa de hoy se gener=F3 un pago con cheque =
+electr=F3nico.=20
+
+=20
+
+El mismo estar=E1 disponible a partir de ma=F1ana en la sucursal  del =
+banco BBVA
+FRANCES que Uds. designaron.
+
+=20
+
+Para despejar cualquier consulta respecto de los pagos a retirar, =
+verificar
+importes, etc. pueden utilizar el siguiente numero 0810 - 666 =96 2886
+Atenci=F3n al cliente BBVA Frances
+
+=20
+
+Desde ya les agradecemos su consideraci=F3n.
+
+=20
+
+=20
+
+=20
+
+=20
+
+
+
+
+
+Maria Lis Perich
+
+
+Pago a Proveedores - Cuentas Corrientes
+
+
+Tel: +54 342 4810810
+
+
+Lamadrid 3065
+
+
+Santa Fe, Argentina.
+
+
+lperich@fapersa.com
+
+pagos@fapersa.com
+
+cobranzas@fapersa.com
+
+=20
+
+
+=20
+<https://www.avast.com/sig-email?utm_medium=3Demail&utm_source=3Dlink&utm=
+_campai
+gn=3Dsig-email&utm_content=3Demailclient> 	 Libre de virus. =
+www.avast.com
+<https://www.avast.com/sig-email?utm_medium=3Demail&utm_source=3Dlink&utm=
+_campai
+gn=3Dsig-email&utm_content=3Demailclient>  =09
+
+
+------=_NextPart_001_0033_01D2CF27.FB587C00
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Diso-8859-1">
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:x=3D"urn:schemas-microsoft-com:office:excel" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" =
+xmlns=3D"http://www.w3.org/TR/REC-html40">
+
+<head>
+
+<meta name=3DGenerator content=3D"Microsoft Word 12 (filtered medium)">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Helvetica;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-priority:99;
+	mso-style-link:"Texto de globo Car";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";}
+span.EstiloCorreo17
+	{mso-style-type:personal;
+	font-family:"Tahoma","sans-serif";
+	color:windowtext;
+	font-weight:normal;
+	font-style:normal;
+	text-decoration:none none;}
+span.EstiloCorreo18
+	{mso-style-type:personal-reply;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+span.TextodegloboCar
+	{mso-style-name:"Texto de globo Car";
+	mso-style-priority:99;
+	mso-style-link:"Texto de globo";
+	font-family:"Tahoma","sans-serif";}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext=3D"edit" spidmax=3D"2050" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext=3D"edit">
+  <o:idmap v:ext=3D"edit" data=3D"1" />
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=3DES link=3Dblue vlink=3Dpurple>
+
+<div class=3DSection1>
+
+<p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";
+color:#1F497D'><o:p>&nbsp;</o:p></span></p>
+
+<p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";
+color:#1F497D'>Gracias Lis.<o:p></o:p></span></p>
+
+<p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";
+color:#1F497D'><o:p>&nbsp;</o:p></span></p>
+
+<p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";
+color:#1F497D'>Saludos<o:p></o:p></span></p>
+
+<p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";
+color:#1F497D'><o:p>&nbsp;</o:p></span></p>
+
+<p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";
+color:#1F497D'>Mary<o:p></o:p></span></p>
+
+<div>
+
+<p class=3DMsoNormal><i><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif";
+color:blue'><o:p>&nbsp;</o:p></span></i></p>
+
+<p class=3DMsoNormal><i><span =
+style=3D'font-size:11.0pt;font-family:"Cambria","serif";
+color:blue'><o:p>&nbsp;</o:p></span></i></p>
+
+</div>
+
+<table class=3DMsoNormalTable border=3D0 cellspacing=3D0 cellpadding=3D0 =
+width=3D450
+ style=3D'width:337.5pt'>
+ <tr>
+  <td width=3D110 valign=3Dtop style=3D'width:82.5pt;padding:0cm 0cm 0cm =
+0cm'>
+  <p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:5.0pt;margin-right:7.5pt;
+  margin-bottom:7.5pt;margin-left:0cm;line-height:10.5pt'><span
+  =
+style=3D'font-size:9.0pt;font-family:"Helvetica","sans-serif";color:blue'=
+><img
+  width=3D145 height=3D102 id=3D"Imagen_x0020_1"
+  src=3D"cid:image002.gif@01D2CF1F.0CB3C710"
+  alt=3D"cid:image009.gif@01D1CD7D.3B1F7B20"><a
+  =
+href=3D"http://www.transrodassrl.com.ar%20%20%20/%20%20www.maxitrans.com.=
+br">&nbsp;</a><o:p></o:p></span></p>
+  <p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";
+  color:blue'><img border=3D0 width=3D154 height=3D71 =
+id=3D"Imagen_x0020_2"
+  src=3D"cid:image003.gif@01D2CF1F.0CB3C710"
+  alt=3D"cid:image010.gif@01D1CD7D.3B1F7B20"><img border=3D0 width=3D2 =
+height=3D2
+  id=3D"Imagen_x0020_3" src=3D"cid:image004.gif@01D2CF1F.0CB3C710"
+  alt=3D"cid:image011.gif@01D1CD7D.3B1F7B20"></span><span =
+style=3D'color:blue'><o:p></o:p></span></p>
+  <p class=3DMsoNormal><span =
+style=3D'font-family:"Calibri","sans-serif";
+  color:blue'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=3D16 nowrap valign=3Dtop =
+style=3D'width:12.0pt;border:none;border-left:
+  solid #324191 1.5pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=3DMsoNormal><span =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";
+  color:blue'><img border=3D0 width=3D10 height=3D10 =
+id=3D"Imagen_x0020_4"
+  src=3D"cid:image005.gif@01D2CF1F.0CB3C710"
+  alt=3D"cid:image012.gif@01D1CD7D.3B1F7B20"></span><span =
+style=3D'font-family:
+  "Calibri","sans-serif";color:blue'><o:p></o:p></span></p>
+  </td>
+  <td width=3D352 nowrap valign=3Dtop style=3D'width:264.0pt;padding:0cm =
+0cm 0cm 0cm'>
+  <p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;margin-bottom:7.5pt;
+  line-height:10.5pt'><b><span =
+style=3D'font-size:9.0pt;font-family:"Helvetica","sans-serif";
+  color:#2B1818'>Sandra M. Otaz=FA </span></b><span =
+style=3D'font-size:9.0pt;
+  font-family:"Helvetica","sans-serif";color:#212121'>/</span><span
+  =
+style=3D'font-size:9.0pt;font-family:"Helvetica","sans-serif";color:#2121=
+21'> </span><span
+  =
+style=3D'font-size:9.0pt;font-family:"Helvetica","sans-serif";color:#2B18=
+18'>Gerente</span><span
+  =
+style=3D'font-size:9.0pt;font-family:"Helvetica","sans-serif";color:#2121=
+21'> <br>
+  <a href=3D"mailto:maxitrans@transrodassrl.com.ar"><span =
+style=3D'color:#324191'>maxitrans@transrodassrl.com.ar</span></a>
+  <o:p></o:p></span></p>
+  <p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;margin-bottom:7.5pt;
+  line-height:10.5pt'><b><span =
+style=3D'font-size:9.0pt;font-family:"Helvetica","sans-serif";
+  color:#2B1818'>Maxitrans Transportes &amp; Log=EDstica Internacional =
+Ltda. </span></b><b><span
+  =
+style=3D'font-size:9.0pt;font-family:"Helvetica","sans-serif";color:#2B18=
+18'><br>
+  </span></b><b><span =
+style=3D'font-size:9.0pt;font-family:"Helvetica","sans-serif";
+  color:#2B1818'>Trans Rodas S.R.L. </span></b><span =
+style=3D'font-size:9.0pt;
+  font-family:"Helvetica","sans-serif";color:blue'><br>
+  </span><span =
+style=3D'font-size:9.0pt;font-family:"Helvetica","sans-serif";
+  color:#2B1818'>Office: + 54 11 4687-6713 / 0716</span><span =
+style=3D'font-size:
+  9.0pt;font-family:"Helvetica","sans-serif";color:blue'> </span><span
+  =
+style=3D'font-size:9.0pt;font-family:"Helvetica","sans-serif";color:#2B18=
+18'><br>
+  </span><span =
+style=3D'font-size:9.0pt;font-family:"Helvetica","sans-serif";
+  color:#2B1818'>Nextel ID: 167*2308-15-5307-4744 - Skype: =
+sandrarodas333</span><span
+  =
+style=3D'font-size:9.0pt;font-family:"Helvetica","sans-serif";color:blue'=
+> <br>
+  </span><span =
+style=3D'font-size:9.0pt;font-family:"Helvetica","sans-serif";
+  color:#2B1818'>Fragata La Argentina 1633 Dto. 2(1440) </span><span
+  =
+style=3D'font-size:9.0pt;font-family:"Helvetica","sans-serif";color:#2B18=
+18'><br>
+  </span><span =
+style=3D'font-size:9.0pt;font-family:"Helvetica","sans-serif";
+  color:#2B1818'>Cap. Fed. Buenos Aires Rep Argentina </span><span
+  =
+style=3D'font-size:9.0pt;font-family:"Helvetica","sans-serif";color:blue'=
+><br>
+  <a =
+href=3D"http://www.transrodassrl.com.ar%20%20%20/%20%20www.maxitrans.com.=
+br"><span
+  style=3D'color:#324191'>www.transrodassrl.com.ar / =
+www.maxitrans.com.br </span></a></span><span
+  style=3D'color:#324191'><o:p></o:p></span></p>
+  <p class=3DMsoNormal =
+style=3D'mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  line-height:0%'><a =
+href=3D"https://www.facebook.com/MaxitransTranportes"><span
+  =
+style=3D'font-size:1.0pt;font-family:"Helvetica","sans-serif";text-decora=
+tion:
+  none'><img border=3D0 width=3D16 height=3D16 id=3D"Imagen_x0020_5"
+  src=3D"cid:image006.gif@01D2CF1F.0CB3C710" =
+alt=3DFacebook></span></a><span
+  =
+style=3D'font-size:1.0pt;font-family:"Helvetica","sans-serif";color:blue'=
+><img
+  border=3D0 width=3D2 height=3D2 id=3D"Imagen_x0020_6"
+  src=3D"cid:image004.gif@01D2CF1F.0CB3C710"
+  alt=3D"cid:image011.gif@01D1CD7D.3B1F7B20"></span><a
+  =
+href=3D"https://www.linkedin.com/company/maxitrans?trk=3Dbiz-companies-cy=
+m"><span
+  =
+style=3D'font-size:1.0pt;font-family:"Helvetica","sans-serif";text-decora=
+tion:
+  none'><img border=3D0 width=3D16 height=3D16 id=3D"Imagen_x0020_7"
+  src=3D"cid:image007.gif@01D2CF1F.0CB3C710" =
+alt=3DLinkedIn></span></a><span
+  =
+style=3D'font-size:1.0pt;font-family:"Helvetica","sans-serif";color:blue'=
+><img
+  border=3D0 width=3D2 height=3D2 id=3D"Imagen_x0020_8"
+  src=3D"cid:image004.gif@01D2CF1F.0CB3C710"
+  alt=3D"cid:image011.gif@01D1CD7D.3B1F7B20"></span><a
+  href=3D"https://www.youtube.com/watch?v=3D50f49i6ObPc"><span =
+style=3D'font-size:
+  1.0pt;font-family:"Helvetica","sans-serif";text-decoration:none'><img
+  border=3D0 width=3D16 height=3D16 id=3D"Imagen_x0020_9"
+  src=3D"cid:image008.gif@01D2CF1F.0CB3C710" =
+alt=3DYoutube></span></a><span
+  =
+style=3D'font-size:1.0pt;font-family:"Helvetica","sans-serif";color:blue'=
+><img
+  border=3D0 width=3D2 height=3D2 id=3D"Imagen_x0020_10"
+  src=3D"cid:image004.gif@01D2CF1F.0CB3C710"
+  alt=3D"cid:image011.gif@01D1CD7D.3B1F7B20"><a
+  =
+href=3D"https://www.google.com.br/maps/place/Fragata+la+Argentina+1633,+C=
+1440EXE+CABA,+Argentina/@-34.6572261,-58.5198375,17z/data=3D!4m2!3m1!1s0x=
+95bcc8f862cff8b3:0x668bc029a7e9c897"><span
+  style=3D'text-decoration:none'><img border=3D0 width=3D16 height=3D16
+  id=3D"Imagen_x0020_11" src=3D"cid:image009.gif@01D2CF1F.0CB3C710"
+  alt=3D"cid:image016.gif@01D1CD7D.3B1F7B20"></span><span =
+lang=3DEN-US>alt=3DMaps
+  data-filename=3Dmaps.png&gt;</span></a></span><span lang=3DEN-US
+  style=3D'font-size:1.0pt;color:blue'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";
+color:#1F497D'><o:p>&nbsp;</o:p></span></p>
+
+<p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-size:11.0pt;font-family:"Calibri","sans-serif";
+color:#1F497D'><o:p>&nbsp;</o:p></span></p>
+
+<div>
+
+<div style=3D'border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt =
+0cm 0cm 0cm'>
+
+<p class=3DMsoNormal><b><span =
+style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif"'>De:</span></=
+b><span
+style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif"'> Maria Lis =
+Perich
+[mailto:lperich@fapersa.com] <br>
+<b>Enviado el:</b> mi=E9rcoles, 17 de mayo de 2017 14:49<br>
+<b>Para:</b> Maria Lis Perich<br>
+<b>Asunto:</b> AVISO DE PAGO CH ELECTRONICO BBVA FRANCES<br>
+<b>Importancia:</b> Alta<o:p></o:p></span></p>
+
+</div>
+
+</div>
+
+<p class=3DMsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif"'>Buenas
+tardes<o:p></o:p></span></p>
+
+<p class=3DMsoNormal><span lang=3DES-AR =
+style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif"'><o:p>&nbsp;<=
+/o:p></span></p>
+
+<p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif"'>Les
+informo que en el d=EDa de hoy&nbsp;se gener=F3 un pago con cheque =
+electr=F3nico. <o:p></o:p></span></p>
+
+<p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif"'><o:p>&nbsp;<=
+/o:p></span></p>
+
+<p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif"'>El
+mismo estar=E1 disponible a partir de ma=F1ana en la sucursal &nbsp;del =
+banco BBVA
+FRANCES que Uds. designaron.<o:p></o:p></span></p>
+
+<p class=3DMsoNormal><span lang=3DES-AR =
+style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif"'><o:p>&nbsp;<=
+/o:p></span></p>
+
+<p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif"'>Para
+despejar cualquier consulta respecto de los pagos a retirar, verificar
+importes, etc. pueden utilizar el siguiente numero <b>0810 - 666 &#8211; =
+2886
+Atenci=F3n al cliente BBVA Frances<o:p></o:p></b></span></p>
+
+<p class=3DMsoNormal><span lang=3DES-AR =
+style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif"'><o:p>&nbsp;<=
+/o:p></span></p>
+
+<p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif"'>Desde
+ya les agradecemos su consideraci=F3n.<o:p></o:p></span></p>
+
+<p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif"'><o:p>&nbsp;<=
+/o:p></span></p>
+
+<p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif"'><o:p>&nbsp;<=
+/o:p></span></p>
+
+<p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif"'><o:p>&nbsp;<=
+/o:p></span></p>
+
+<p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Tahoma","sans-serif"'><o:p>&nbsp;<=
+/o:p></span></p>
+
+<table class=3DMsoNormalTable border=3D0 cellpadding=3D0>
+ <tr>
+  <td style=3D'padding:.75pt .75pt .75pt .75pt'>
+  <p class=3DMsoNormal><img border=3D0 width=3D123 height=3D41 =
+id=3D"_x0000_i1025"
+  src=3D"cid:image010.jpg@01D2CF1F.0CB3C710"><o:p></o:p></p>
+  </td>
+ </tr>
+ <tr>
+  <td style=3D'padding:.75pt .75pt .75pt .75pt'>
+  <p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif"'>Maria
+  Lis Perich<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style=3D'padding:.75pt .75pt .75pt .75pt'>
+  <p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif"'>Pago
+  a Proveedores - Cuentas Corrientes<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style=3D'padding:.75pt .75pt .75pt .75pt'>
+  <p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif"'>Tel:
+  +54 342 4810810<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style=3D'padding:.75pt .75pt .75pt .75pt'>
+  <p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif"'>Lamadrid
+  3065<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style=3D'padding:.75pt .75pt .75pt .75pt'>
+  <p class=3DMsoNormal><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif"'>Santa
+  Fe, Argentina.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style=3D'padding:.75pt .75pt .75pt .75pt'>
+  <div>
+  <p class=3DMsoNormal><span =
+style=3D'font-size:8.0pt;font-family:"Arial","sans-serif"'><a
+  =
+href=3D"mailto:lperich@fapersa.com">lperich@fapersa.com</a><o:p></o:p></s=
+pan></p>
+  </div>
+  <div>
+  <p class=3DMsoNormal><span =
+style=3D'font-size:8.0pt;font-family:"Arial","sans-serif"'><a
+  =
+href=3D"mailto:pagos@fapersa.com">pagos@fapersa.com</a><o:p></o:p></span>=
+</p>
+  </div>
+  <div>
+  <p class=3DMsoNormal><span =
+style=3D'font-size:8.0pt;font-family:"Arial","sans-serif"'><a
+  =
+href=3D"mailto:cobranzas@fapersa.com">cobranzas@fapersa.com</a><o:p></o:p=
+></span></p>
+  </div>
+  </td>
+ </tr>
+</table>
+
+<p class=3DMsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+<div id=3D"DAB4FAD8-2DD7-40BB-A1B8-4E2AA1F9FDF2"><br /> <table =
+style=3D"border-top: 1px solid #D3D4DE;">
+	<tr>
+      <td style=3D"width: 55px; padding-top: 18px;"><a =
+href=3D"https://www.avast.com/sig-email?utm_medium=3Demail&utm_source=3Dl=
+ink&utm_campaign=3Dsig-email&utm_content=3Demailclient" =
+target=3D"_blank"><img =
+src=3D"https://ipmcdn.avast.com/images/icons/icon-envelope-tick-round-ora=
+nge-animated-no-repeat-v1.gif" alt=3D"" width=3D"46" height=3D"29" =
+style=3D"width: 46px; height: 29px;" /></a></td>
+		<td style=3D"width: 470px; padding-top: 17px; color: #41424e; =
+font-size: 13px; font-family: Arial, Helvetica, sans-serif; line-height: =
+18px;">Libre de virus. <a =
+href=3D"https://www.avast.com/sig-email?utm_medium=3Demail&utm_source=3Dl=
+ink&utm_campaign=3Dsig-email&utm_content=3Demailclient" =
+target=3D"_blank" style=3D"color: #4453ea;">www.avast.com</a> 		</td>
+	</tr>
+</table>
+<a href=3D"#DAB4FAD8-2DD7-40BB-A1B8-4E2AA1F9FDF2" width=3D"1" =
+height=3D"1"> </a></div></body>
+
+</html>
+
+------=_NextPart_001_0033_01D2CF27.FB587C00--
+
+------=_NextPart_000_0032_01D2CF27.FB587C00
+Content-Type: image/gif;
+	name="image002.gif"
+Content-Transfer-Encoding: base64
+Content-ID: <image002.gif@01D2CF1F.0CB3C710>
+
+R0lGODdhkQBmAHcAACH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACwAAAAAkQBmAIf///9a
+vd4hMYQhKYxatd5rvebv9/cxSpzmzhmtzowQGYQxY5xCWq1ChLXezu/m74y171K17xl7Y4yE3u+t
+771KWpStpc5Cra0Qa5whKYSElL3m773m71IpGebm7xm1Qu+1Qmu1Qq21Qimt74wpGbW1EO+1EGu1
+EK21ECkQreYQra1SY+/mc+8Q7+YQ7621c2u1c621cykIGea1Qs61Qkq1Qoy1QggIGbW1EM61EEq1
+EIy1EAgQjOYQjK1SY87mc84QzuYQzq21c0q1c4y1cwhapdYpOox7veYQKYRKc7U63ns6a1o63jGE
+Md46KVqEMZw6nHs6nDE6axk6KRkQ3nsQ3jEQnHsQnDEQa1oQKVoQaxkQKRlj3nsZSu9j3jFzzsVj
+nHtjnDFja1pjKVpjaxljKRmE3loZa86E3hBz76WEnFqEnBA6Slo6CFo6Shk6CBkQSloQCFoQShkQ
+CBljSlpjCFpjShljCBlCrd695u+9xd6txb3mQu/mQmvmQq3mQinmEO/mEGvmEK3mECmtc+/mc2vm
+c63mcynmQs7mQkrmQozmQgjmEM7mEErmEIzmEAitc87mc0rmc4zmcwh7jOZrY60QQpSEY+/mpe9C
+7+ZC7621pWu1pa21pSlj5u+EY87mpc5CzuZCzq21pUq1pYy1pQjWzoylzlKlzhlKjM6Ea1qE3nsZ
+a++E3jGEKVpz78WEnHuEnDGEaxmEKRmESlqECFqEShmECBml5u9jlL2lxebmpWvmpa3mpSmtpe9S
+EO9SEK3mpUrmpYzmpQhSEM5SEIzWzr3mzkJ7reaEY62EnJxjnJze7+/3zozFzlLFzhlalN4671o6
+7xCEEO+EEK06rVo6rRAQ71oQ7xAQrVoQrRBj71opSs5j7xCEzqVjrVpjrRBCjO86zlo6zhCEEM6E
+EIw6jFo6jBAQzloQzhAQjFoQjBBjzloISs5jzhBjzqVjjFpjjBBSMe9SMa1SMc5SMYz3zr3mzmMp
+EIz/1u8pMYxave8xKYxatff//+YhMZQI/wABCBxIsKDBgwgTKlxo0AAzZgYMMJxIsaLFixgzUsyj
+q0C/AgWOTMijsaTJkyhRMjsSoN8+kB6L9DtCMqXNmzhR5olZoAjPniBr5hxKtGjBnT5hKoUpU6jR
+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
+fKwLejAzAQEAOw==
+
+------=_NextPart_000_0032_01D2CF27.FB587C00
+Content-Type: image/gif;
+	name="image003.gif"
+Content-Transfer-Encoding: base64
+Content-ID: <image003.gif@01D2CF1F.0CB3C710>
+
+R0lGODdhmgBHAHcAACH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACwAAAAAmgBHAIf///8A
+rea1tbWclJRKxe+ctd4QGRlzzu/eva3m70qt70rm73tSSlK9vd5za1qEjIR7jLXe5t4xve/W1tbm
+7/cICBClra1aY6VSjK2clMUpEBB75uatlO9anFoQSloQGUL37+9SWlJaWsUpIRnW7/cZre9Sra3m
+EO/mEGvmEK3mECmtEO+tEGutEK2tECl7nFrmEM7mEErmEIzmEAitEM6tEEqtEIytEAicvYTWvRmc
+vRkArfelnKV7pa17Wu/vlJx7760xaxnva5xS760QaxkQ3nsQWu9a3jEQ3jFaGe8QnHsQGe9anDEQ
+nDFaMZQQa5RaaxkQKZQpzq1aKRkx3loxWs573hAx3hB7Gc4xnFoxGc57nBAxnBB7EJTOlJx7zq3O
+a5xSzq0QSpRaShkQCJQIzq1aCBmc3vcxQiExQlLOxc5S7+Z7jN4xGTp772sp5ua95vela60I5ual
+a4zW5q3WvUqcvUrWvXt7rd57Y6XmlO/mlGvmQu/mQmsxa1oxGWPmQq3mQinmlCmtQu+tQmutQq2t
+QimtlGutlCmta+9anHtSrebma+/ma2vmaymta2utaykQa1oQGWNaKVopnKV7SloQveZaY4TmlM7m
+lErmQs7mQkrmQozmQgjmlAitQs6tQkqtQoytQgitlEqtlAita85SjObma87ma0rmawita0qtawha
+CFoInKWc5rWc74TW7xmc7xkxSpQAnO97WsV7a3sx3nsxWu973jEx3jExa5R7axl7Ge8xnHsxGe97
+nDExnDF7MZQxKZQp7617KRl7ShkxCJQI7617CBm9vYT3vRm9vRlazlrW1uYhjO+c5t57KVopnMV7
+CFoInMXWve/35q33vUq9vUr3vXu95rW974T37xm97xlaY2Naa+9aznsQSikQ71oQa85a7xAQ7xBa
+Kc4QrVoQKc5arRAQrRBaEKVa71p7zlpaSu8QSggQzloQSs5azhAQzhBaCM4QjFoQCM5ajBAQjBBa
+EIT3xea95t5a73t7znv3//8IIQj3/+YI/wABCBxIsKDBgwgTKlzIsKHDhxAjSpxIsaLFixgzatzI
+saPHjyBDihxJsqTJkyhTqlzJsqVLACAE9osJYKZMmjZr4twJ4B8AEkCDAu3nk4JAnwCM9hSoFGlT
+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
+
+------=_NextPart_000_0032_01D2CF27.FB587C00
+Content-Type: image/gif;
+	name="image004.gif"
+Content-Transfer-Encoding: base64
+Content-ID: <image004.gif@01D2CF1F.0CB3C710>
+
+R0lGODlhAgACAHcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAAAAAAB
+AAEAgAAAAAECAwICRAEAOw==
+
+------=_NextPart_000_0032_01D2CF27.FB587C00
+Content-Type: image/gif;
+	name="image005.gif"
+Content-Transfer-Encoding: base64
+Content-ID: <image005.gif@01D2CF1F.0CB3C710>
+
+R0lGODlhCgAKAHcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAAAAAAB
+AAEAgAAAAAECAwICRAEAOw==
+
+------=_NextPart_000_0032_01D2CF27.FB587C00
+Content-Type: image/gif;
+	name="image006.gif"
+Content-Transfer-Encoding: base64
+Content-ID: <image006.gif@01D2CF1F.0CB3C710>
+
+R0lGODlhEAAQAHcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAAAAAAQ
+ABAAhgAAAD5enzxcnD1cnDxbmzxbnD5enj9ZmTtZmT5dnzpZmjdXmDpamj1bnDhYmTlYmTtamz1c
+mzlYmjBRlS9QlDNUlzBQlD5dnDJSljJTljFSlj9dnTtamixNkjRUlzdYmTlZmjBRlDtVnT1dnz9Z
+nT9dmUBdnUBfnUFfnkBhpUlmoVNup0BgpUpmokZjoH6SvXeNumuDs3WLuHGHtnKIt4OXv4yfxIib
+woSYwIqdw5eoyrbC2sHK387W5s3W5tXc6dHY6MjQ48rS5M7V5vP1+fv8/ejs8//+//L0+P///wEC
+AwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwEC
+AwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwEC
+AwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwebgAAAAQIDBIeI
+AwUGggAJKYgECgsLDIcpjA2QiA4PKionEJcRBZESJztERS8TiAUCkRQwSUU9MRWIsJEWNkk+F5aR
+kRgyRklEPzMZwogUN0nQRzQazIcMCjpJQCsbHNWHHThJQR4f34fOSUIcIMK66DlJQ+yRAqWIITVI
+PPSRACyIOKBo4UJYigGDNkla4CBSihGNABRipogRgEAAOw==
+
+------=_NextPart_000_0032_01D2CF27.FB587C00
+Content-Type: image/gif;
+	name="image007.gif"
+Content-Transfer-Encoding: base64
+Content-ID: <image007.gif@01D2CF1F.0CB3C710>
+
+R0lGODlhEAAQAHcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAAAAAAQ
+ABAAhgAAAAB3rgF3twF0sgF0swFzsgF2twBzswB3swF1tgF7vgBxsQBwsABzsgB3twFzswR1sw56
+tgF1swh1swBsrgBvsABorABysgBysQFwsQh4tQBtrwp4tQZ2swBurwBwsQh3tAVzshJ9twBiqRN9
+twBnrBJ8twF6vRB7tgV1swl3tAx5tQFysgJzsgF3tgBztwBuswF1twBzriGEvCaFvCOGvSuKvyyL
+vyiIvj6VxTyUxC+MwDiSwzWQwjaRwjKOwUucyV+nz2Wq0Xa01ni11nGx1GWq0HSz1Wqt0oC52JPD
+3pnH4JrI4Z3K4ZzI4bbX6a/T5rLV56HL4sHd7dnq9NXo8trr9Mfg7uXw9+/3+uLv9vH4+/3+//T6
++/P5+/n8/e72+u31+uPw9v///wECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwEC
+AwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwfMgAAAAgMEBYeI
+hgaCAAkKCwwNiJMKiw+PEBEMk5QSDwsTT1g5FJyTBBURWWNCFgsXGAwLiQUXGTpBGhUMGxUcCxuT
+Cx1JSzNAUENMVFE7HogfIFpjPERj19dTIbMF0VVjPUVjVjRGY1siFYfe4OJNIzVcXSTq3SDf4WNO
+JTZcXvQFCESzMsbHkTFSStwY84UegU8groD5gQSMEgs4wogx8eEBgBMFUJBIoYLEChYQSJhocWIA
+AAMKPlS4sKDCrAu7TrhgBKCQKUMxBAUCADs=
+
+------=_NextPart_000_0032_01D2CF27.FB587C00
+Content-Type: image/gif;
+	name="image008.gif"
+Content-Transfer-Encoding: base64
+Content-ID: <image008.gif@01D2CF1F.0CB3C710>
+
+R0lGODlhEAAQAHcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAAAAAAQ
+ABAAhQAAAP83N/82NP80Mv81M/40Mv81NP8zM/41M/83Nf40M/4zMf80M/4tK/4kIv4jIf4lI/4n
+Jf4uLP4xL/4vLf47Ov4lIv00Mv41NPszM/5APv5QT/5CQP5IRv5UU/5PTv5SUP5sav6Qj/6Yl/6e
+nf6Pjv6amf6dnP6fnv6ZmP6RkP6lpP6mpf/MzP/Nzf/W1v/Ozv/x8f/29v/z8//09P/v7//i4v/6
++v///wECAwECAwECAwECAwECAwECAwECAwaXQABAMCAUjkijQQhAJJBQZIIAUDyhi0U0wTgiGo4H
+JBKBPBwNxHFQkGxEI9JqRRqJNpICe1Jo4f6Afy4KfAUUGjF/Mi+BMxwURxIdNH81FSE2f46QbZOV
+HiI1mo9Hh4k4N6ejnHx+gYAwhHptHyUmJyssKCkqIHlsBQgSYQ5kFmdpBRcAV0hZWwwAGM1RRwkY
+TABF1UpCQQA7
+
+------=_NextPart_000_0032_01D2CF27.FB587C00
+Content-Type: image/gif;
+	name="image009.gif"
+Content-Transfer-Encoding: base64
+Content-ID: <image009.gif@01D2CF1F.0CB3C710>
+
+R0lGODlhEAAQAHcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAAAAAAQ
+ABAAhgAAAIkfF4ofFokdFY0mHo0lHY4nH4wkG40kHI4oH4ogF4siGoshGIwkHIshGYwjGo0lHJEu
+IpUuJpEtJZItJZQuJYwuKpQuJpswJ5AqIpArI5UvJpEuKpowJ5EuJo4oIJc5MY8qIpMxKZg7NJAs
+JJk7NI8pIY8oIJAqI5EsJJAqIZErI5EtJpQwJZAsI4wqJp5FPp1FPZ9IQalZU6lZVKhZU6hYUq1i
+XbRwa7NvacWRjc+in9i0sdeyr92/vN29u929utCkod/Bv9/CwODEwuXOzObQzuvY1+HFw+3b2uvY
+1uzZ2OTLyevZ1/79/f37+/z5+f7//vn08////wECAwECAwECAwECAwECAwECAwECAwECAwECAwEC
+AwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwEC
+AwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAweogAAAEhMUE4eI
+FBQVggAXGIgZBAQaiBgbABQdhx4FGjIwHwYeh5uGhwUwRFNOPCAGiachHkVTRkdTPQaVhYgHM1NI
+CCJJTyMJiL40U0IKJEpPJcjJEyYiS1NDTFM+JyjUhwo4U+RQNQvghxkFP+Q7ASnphww2UVIxDdSn
+6ipNQA4rkimiJiCIjgHgAGxC9CDHDQjJMLAYBAkRqYiYGvWa4ILEIUUtBAUCADs=
+
+------=_NextPart_000_0032_01D2CF27.FB587C00
+Content-Type: image/jpeg;
+	name="image010.jpg"
+Content-Transfer-Encoding: base64
+Content-ID: <image010.jpg@01D2CF1F.0CB3C710>
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/4QAWRXhpZgAASUkqAAgAAAAAAAAAAAD/2wBDAAgGBgcGBQgH
+BwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/
+2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy
+MjIyMjIyMjIyMjL/wAARCAApAHsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQF
+BgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS
+0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4
+eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi
+4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREA
+AgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl
+8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImK
+kpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP0
+9fb3+Pn6/9oADAMBAAIRAxEAPwD2bxT4ksvCmhy6pfB2RWCJHHjdI56KM/ifoDXlzfH8hiB4ZXHb
+dqGD/wCi62PjsT/wiGnDPH9or/6KkrF+Hfi/wVong6G11me3jvhLI8gayeQkFjtJYIc8Y71006cf
+Z8zVzlqVJe05U7I7jwP4y1TxlFJeP4fXT9NXKpctdmQyuOoVdgyB3OcZ4GecdpXD+Nbjxc1hDYeD
+dLISRAz3oliQIvZUVmBz6kjgdOeR5hrOqfFPwpBDe6rfXdvC8nlo7PDKpbBOCBnsD19KlUufWNl5
+FOr7NWkm/Ox9D0V4t4n8fazd/DHQtbsrtrG9nu2guTB0YqHHfPBwDjtmuatdX+KF7ov9s2l3qc+n
+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
+
+------=_NextPart_000_0032_01D2CF27.FB587C00--
+
+------=_NextPart_000_0037_01D2CF27.FB587C00
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+Content-Disposition: inline
+
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KUmVwb3J0ZXMt
+ZmFwZXJzYSBtYWlsaW5nIGxpc3QKUmVwb3J0ZXMtZmFwZXJzYUBsaXN0YXMubHVuaXguY29tLmFy
+Cmh0dHA6Ly9saXN0YXMubHVuaXguY29tLmFyL2NnaS1iaW4vbWFpbG1hbi9saXN0aW5mby9yZXBv
+cnRlcy1mYXBlcnNhCg==
+
+------=_NextPart_000_0037_01D2CF27.FB587C00--
+
+
+
+

@@ -1,0 +1,65 @@
+Return-Path: <>
+Delivered-To: no-reply@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id +U4VOl6KdljCKQAATLP0zA
+	for <no-reply@fapersa.com>; Wed, 11 Jan 2017 16:41:18 -0300
+Return-path: <>
+Envelope-to: no-reply@fapersa.com
+Delivery-date: Wed, 11 Jan 2017 16:41:18 -0300
+Received: from mailnull by tanis.nocplanet.com with local (Exim 4.87)
+	id 1cROlq-0002uq-Np
+	for no-reply@fapersa.com; Wed, 11 Jan 2017 16:41:18 -0300
+X-Failed-Recipients: adminlcm@arnetbiz.com.ar
+Auto-Submitted: auto-replied
+From: Mail Delivery System <Mailer-Daemon@tanis.nocplanet.com>
+To: no-reply@fapersa.com
+Content-Type: multipart/report; report-type=delivery-status; boundary=1484163678-eximdsn-662748095
+MIME-Version: 1.0
+Subject: Mail delivery failed: returning message to sender
+Message-Id: <E1cROlq-0002uq-Np@tanis.nocplanet.com>
+Date: Wed, 11 Jan 2017 16:41:18 -0300
+
+--1484163678-eximdsn-662748095
+Content-type: text/plain; charset=us-ascii
+
+This message was created automatically by mail delivery software.
+
+A message that you sent could not be delivered to one or more of its
+recipients. This is a permanent error. The following address(es) failed:
+
+  adminlcm@arnetbiz.com.ar
+    host mx.arnetbiz.com.ar [190.226.40.1]
+    SMTP error from remote mail server after RCPT TO:<adminlcm@arnetbiz.com.ar>:
+    550 5.1.1 <adminlcm@arnetbiz.com.ar>: Recipient address rejected:
+    User unknown in relay recipient table
+
+--1484163678-eximdsn-662748095
+Content-type: message/delivery-status
+
+Reporting-MTA: dns; tanis.nocplanet.com
+
+Action: failed
+Final-Recipient: rfc822;adminlcm@arnetbiz.com.ar
+Status: 5.0.0
+Remote-MTA: dns; mx.arnetbiz.com.ar
+Diagnostic-Code: smtp; 550 5.1.1 <adminlcm@arnetbiz.com.ar>: Recipient address rejected: User unknown in relay recipient table
+
+--1484163678-eximdsn-662748095
+Content-type: text/rfc822-headers
+
+Return-path: <no-reply@fapersa.com>
+Received: from [181.14.247.181] (port=50186 helo=equis.fapersa.int)
+	by tanis.nocplanet.com with esmtpa (Exim 4.87)
+	(envelope-from <no-reply@fapersa.com>)
+	id 1cROli-0002s8-Og; Wed, 11 Jan 2017 16:41:14 -0300
+From: =?Cp1252?Q?Daniel_Ram=EDrez?= <no-reply@fapersa.com>
+To: Corporativo <adminlcm@arnetbiz.com.ar>, Corporativo <iset12@fibertel.com.ar>
+Message-ID: <1587736923.43.1484163657088.JavaMail.cmg@equis>
+Subject: Fapersa ICSA - Envio de comprobantes electronicos
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_42_426628973.1484163656291"
+X-Exim-DSN-Information: Due to administrative limits only headers are returned
+
+
+--1484163678-eximdsn-662748095--

@@ -1,0 +1,137 @@
+Return-Path: <santiago_triaca@hotmail.com>
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id KdsmOskGR1h4DAAATLP0zA
+	; Tue, 06 Dec 2016 15:43:21 -0300
+Return-path: <santiago_triaca@hotmail.com>
+Envelope-to: dottonel@fapersa.com,
+ jpruata@fapersa.com,
+ rruata@fapersa.com,
+ rdopazo@fapersa.com
+Delivery-date: Tue, 06 Dec 2016 15:43:21 -0300
+Received: from snt004-omc4s34.hotmail.com ([65.55.90.237]:63884)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-SHA384:256)
+	(Exim 4.87)
+	(envelope-from <santiago_triaca@hotmail.com>)
+	id 1cEKi0-0000eb-6K; Tue, 06 Dec 2016 15:43:21 -0300
+Received: from NAM01-BY2-obe.outbound.protection.outlook.com ([65.55.90.199]) by SNT004-OMC4S34.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Tue, 6 Dec 2016 10:41:40 -0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=Z2ylwvMYhU41jHOIqSjig5/NTY5fpt96orlCG33UZrs=;
+ b=pD034W9Y97HnPyX57ZPoiX+VXqpnfJGAlh3aljPJd1Wi5sEdPQJLCSm7SJRi8b5YmqfQD4tGkUVr0vvnxDllsk0Hern8ADHxH8vwgUxbHO8jsQTvprMlTqmsZmTVR+rzYDG41CU56+RXaf06OnaOrF/16pEMR71g7Gz41KmuuoK5DYpUPsElUNsA1eiToc/Enddlw2oTs0ihF3DrdrkiUNqVdm2m4xq1t2oy9SDY1Sh/4/FYt+4D1O1F+Q7bHNPVA9/59bhaIPHkjUXQHbAQ+wnizAK3cdc2d4I0roQR8PXS/e1WdBAnlqlcgZmsZo8Z1CLqVGu9MZDrTQHXKL8Xkw==
+Received: from BY2NAM01FT025.eop-nam01.prod.protection.outlook.com
+ (10.152.68.54) by BY2NAM01HT126.eop-nam01.prod.protection.outlook.com
+ (10.152.69.179) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.761.6; Tue, 6 Dec
+ 2016 18:41:39 +0000
+Received: from CY1PR07MB2522.namprd07.prod.outlook.com (10.152.68.54) by
+ BY2NAM01FT025.mail.protection.outlook.com (10.152.69.195) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.761.6 via Frontend Transport; Tue, 6 Dec 2016 18:41:39 +0000
+Received: from CY1PR07MB2522.namprd07.prod.outlook.com ([10.167.16.13]) by
+ CY1PR07MB2522.namprd07.prod.outlook.com ([10.167.16.13]) with mapi id
+ 15.01.0747.020; Tue, 6 Dec 2016 18:41:38 +0000
+From: "Santi .-" <santiago_triaca@hotmail.com>
+To: Fapersa - Diego Ottonelli <dottonel@fapersa.com>, "Fapersa - Juan Pablo
+ Ruata" <jpruata@fapersa.com>, Fapersa - Roberto Ruata <rruata@fapersa.com>,
+	Fapersa - Roberto Dopazo <rdopazo@fapersa.com>
+Subject: Vuelta
+Thread-Topic: Vuelta
+Thread-Index: AQHST/Bh4PcvzzYaekGpkIScLJ2fCA==
+Date: Tue, 6 Dec 2016 18:41:38 +0000
+Message-ID: <CY1PR07MB252217A118DE198FB965A05B94820@CY1PR07MB2522.namprd07.prod.outlook.com>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: fapersa.com; dkim=none (message not signed)
+ header.d=none;fapersa.com; dmarc=none action=none header.from=hotmail.com;
+x-incomingtopheadermarker: OriginalChecksum:4039BE9F4F0F89D474A764A28A5FFC34CEDAAB76A98AC5DDC66B898737F8CE7F;UpperCasedChecksum:A0EE8B415FB5B1D8EC9F5D1C033B3DA281B6B7AD9314715A199171DBB7F81ECA;SizeAsReceived:7346;Count:37
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [Hv7BXT3L1onWLcdLStXd53+J6mGgzIcB]
+x-incomingheadercount: 37
+x-eopattributedmessage: 0
+x-microsoft-exchange-diagnostics: 1;BY2NAM01HT126;5:risAj6/SgVUAAy58P+jZQkayLmchm6PM0RynuO4u0CaZjfx7PiyMu6VR3rwcvoN+XoPaxfyNbsyKTkR82aMxUEPWcpNIWJbL8i1ucgdDUv7qhH7IOnSspvZJ92ktZO+PqOV+ZVKT9tIkbcc/K20UeEQMqJYlT2xhoxbSG+RQxZg=;24:n4s6962b3AaEmiw9l9VhA4k67K4HgmkAw/s2UkxjWVEdVu06ESe/2RPNK6ztVzFUh3PtdrsTf34YFsYPMqo/WALbKCFK1eYgflVQliSBEgs=;7:4Tp90ccsTYLbkFyvI1u5/BKldPBWjKWztvfqtfRro9zvmKKW3mRX4ZbtX8OnoketzEueAtzdsza4YWGp62c6mfgcgIP6hkPm1mXPdoru/O9EFnrDDYciZD69sve/ebFvpphClOCYLBTesjC9rhfx53dVeUPK152CrgnthoyOKu44YHNF7XNhd4Z3znGM4oz1b99yUfLVQzy2+VRN1zbmgR2vaOgRjohxvdhbnPciTZ6ecwwHkecF7788/OXlOW644D2OJCLOS+AAwcydHe0wBnQ+yu11DWgdY2oTWC07ei3149Ha8x48NxZUGWm8bu5lqmQ+sUSGGHbTVce5S6loy6dluEer3LewDaZNKuHiGeq7YzwTrmB7T+zndZ7Aa8thSFAUDwoJo2niTSOID9MqGX2GUHo8L2Qz1/giSdGVHGSTNuWrHWK4dFE12htPF+GvbL8CxfHaW/k7yeiVAw8WoQ==
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(10019020)(98900003);DIR:OUT;SFP:1102;SCL:1;SRVR:BY2NAM01HT126;H:CY1PR07MB2522.namprd07.prod.outlook.com;FPR:;SPF:None;LANG:es;
+x-ms-office365-filtering-correlation-id: 647e050b-7431-4161-1260-08d41e0783b2
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(1601124038)(5061506293)(5061507293)(1603103113)(1603101340)(1601125047);SRVR:BY2NAM01HT126;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(432015012)(82015046);SRVR:BY2NAM01HT126;BCL:0;PCL:0;RULEID:;SRVR:BY2NAM01HT126;
+x-forefront-prvs: 01480965DA
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_CY1PR07MB252217A118DE198FB965A05B94820CY1PR07MB2522namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: hotmail.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 06 Dec 2016 18:41:38.6970
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BY2NAM01HT126
+X-OriginalArrivalTime: 06 Dec 2016 18:41:40.0552 (UTC) FILETIME=[62348480:01D24FF0]
+X-Spam-Status: No, score=-4.9
+X-Spam-Score: -48
+X-Spam-Bar: ----
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Buen día, estamos en Los Angeles, camino Houston y luego
+   Bs As, llegamos el miércoles madrugada. estuvo todo muy bien, pudimos contactar
+    a varios proveedores de los productos que nos interesan. Siendo que el jueves
+    y viernes es feriado, proponemos reunirnos el lunes por la mañana en Santa
+    Fe. [...] 
+ 
+ Content analysis details:   (-4.9 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+                             [65.55.90.237 listed in wl.mailspike.net]
+ -2.9 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (santiago_triaca[at]hotmail.com)
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+X-Spam-Flag: NO
+
+--_000_CY1PR07MB252217A118DE198FB965A05B94820CY1PR07MB2522namp_
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+QnVlbiBkw61hLCBlc3RhbW9zIGVuIExvcyBBbmdlbGVzLCBjYW1pbm8gSG91c3RvbiB5IGx1ZWdv
+IEJzIEFzLCBsbGVnYW1vcyBlbCBtacOpcmNvbGVzIG1hZHJ1Z2FkYS4gZXN0dXZvIHRvZG8gbXV5
+IGJpZW4sIHB1ZGltb3MgY29udGFjdGFyIGEgdmFyaW9zIHByb3ZlZWRvcmVzIGRlIGxvcyBwcm9k
+dWN0b3MgcXVlIG5vcyBpbnRlcmVzYW4uDQpTaWVuZG8gcXVlIGVsIGp1ZXZlcyB5IHZpZXJuZXMg
+ZXMgZmVyaWFkbywgcHJvcG9uZW1vcyByZXVuaXJub3MgZWwgbHVuZXMgcG9yIGxhIG1hw7FhbmEg
+ZW4gU2FudGEgRmUuDQoNClNhbHVkb3MNCg0KDQoNCkVudmlhZG8gZGVzZGUgbWkgU2Ftc3VuZyBN
+b2JpbGUgZGUgQ2xhcm8NCg==
+
+--_000_CY1PR07MB252217A118DE198FB965A05B94820CY1PR07MB2522namp_
+Content-Type: text/html; charset="utf-8"
+Content-ID: <866D38B2F77B3A4988842DDDF36F57FE@sct-15-1-659-11-msonline-outlook-5c1f4.templateTenant>
+Content-Transfer-Encoding: base64
+
+PGh0bWw+DQo8aGVhZD4NCjxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0i
+dGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04Ij4NCjwvaGVhZD4NCjxib2R5Pg0KPGRpdj5CdWVuIGTD
+rWEsIGVzdGFtb3MgZW4gTG9zIEFuZ2VsZXMsIGNhbWlubyBIb3VzdG9uIHkgbHVlZ28gQnMgQXMs
+IGxsZWdhbW9zIGVsIG1pw6lyY29sZXMgbWFkcnVnYWRhLiBlc3R1dm8gdG9kbyBtdXkgYmllbiwg
+cHVkaW1vcyBjb250YWN0YXIgYSB2YXJpb3MgcHJvdmVlZG9yZXMgZGUgbG9zIHByb2R1Y3RvcyBx
+dWUgbm9zIGludGVyZXNhbi4mbmJzcDs8L2Rpdj4NCjxkaXY+U2llbmRvIHF1ZSBlbCBqdWV2ZXMg
+eSB2aWVybmVzIGVzIGZlcmlhZG8sIHByb3BvbmVtb3MgcmV1bmlybm9zIGVsIGx1bmVzIHBvciBs
+YSBtYcOxYW5hIGVuIFNhbnRhIEZlLjwvZGl2Pg0KPGRpdj48YnI+DQo8L2Rpdj4NCjxkaXY+U2Fs
+dWRvczwvZGl2Pg0KPGRpdj48YnI+DQo8L2Rpdj4NCjxkaXY+PGJyPg0KPC9kaXY+DQo8ZGl2Pjxi
+cj4NCjwvZGl2Pg0KPGRpdiBpZD0iY29tcG9zZXJfc2lnbmF0dXJlIj4NCjxkaXYgc3R5bGU9ImZv
+bnQtc2l6ZTo4NSU7Y29sb3I6IzU3NTc1NyIgZGlyPSJhdXRvIj5FbnZpYWRvIGRlc2RlIG1pIFNh
+bXN1bmcgTW9iaWxlIGRlIENsYXJvPC9kaXY+DQo8L2Rpdj4NCjwvYm9keT4NCjwvaHRtbD4NCg==
+
+--_000_CY1PR07MB252217A118DE198FB965A05B94820CY1PR07MB2522namp_--

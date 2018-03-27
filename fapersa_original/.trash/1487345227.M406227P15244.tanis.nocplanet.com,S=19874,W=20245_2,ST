@@ -1,0 +1,371 @@
+Return-Path: <estudiodelorenzo@hotmail.com>
+Delivered-To: rdopazo@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id sewiGEsWp1iMOwAATLP0zA
+	for <rdopazo@fapersa.com>; Fri, 17 Feb 2017 12:27:07 -0300
+Return-path: <estudiodelorenzo@hotmail.com>
+Envelope-to: rdopazo@fapersa.com
+Delivery-date: Fri, 17 Feb 2017 12:27:07 -0300
+Received: from blu004-omc4s11.hotmail.com ([65.55.111.150]:53200)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-SHA384:256)
+	(Exim 4.88)
+	(envelope-from <estudiodelorenzo@hotmail.com>)
+	id 1ceg9H-00029l-Gd; Fri, 17 Feb 2017 07:52:33 -0300
+Received: from NAM03-CO1-obe.outbound.protection.outlook.com ([65.55.111.137]) by BLU004-OMC4S11.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Fri, 17 Feb 2017 02:51:23 -0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=uHHmB34GVtn9VvfQdAn96Q/U/rHLEoUOonKNZ54jC1E=;
+ b=lf+RHEuZ9t+5k9E3/3G31XW30iyKEDumDaQxuuuoEDmooMSSBv0QRwSNSVV77b5jGW/awLb1rwlID6PZBL76BQxLvTPwIH3uw56FbwbNV8SvV3sje9xPpmOgfxfNfrUEoXYCOoo2WsYDWKtePYhUIukX4BddhFUFcvJ1yT9k/Asu8s/NKPr8okYgUpuTbxhvEp2gaHwFFlh87EZVYGHLM3YwahLhuuQXeZb4aCNYrZtHVkK8DJCNbQRUlDStfheIuQaN5gbg1ANmUQicMG1a16n3gtJMIQGzvWO3M8n6fdtVejymlc8UE82YLTkSjpfMU3iVCu6G/fy5l86uak21Tg==
+Received: from BY2NAM03FT028.eop-NAM03.prod.protection.outlook.com
+ (10.152.84.51) by BY2NAM03HT074.eop-NAM03.prod.protection.outlook.com
+ (10.152.85.24) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.919.10; Fri, 17
+ Feb 2017 10:51:22 +0000
+Received: from MWHPR20MB1647.namprd20.prod.outlook.com (10.152.84.59) by
+ BY2NAM03FT028.mail.protection.outlook.com (10.152.84.238) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.919.10 via Frontend Transport; Fri, 17 Feb 2017 10:51:21 +0000
+Received: from MWHPR20MB1647.namprd20.prod.outlook.com ([10.171.150.17]) by
+ MWHPR20MB1647.namprd20.prod.outlook.com ([10.171.150.17]) with mapi id
+ 15.01.0919.013; Fri, 17 Feb 2017 10:51:21 +0000
+From: Estudio De Lorenzo <estudiodelorenzo@hotmail.com>
+To: rdopazo <rdopazo@fapersa.com>
+CC: Marcela Triszcz <comext@fapersa.com>
+Subject: Re: the BL to cinfirm
+Thread-Topic: the BL to cinfirm
+Thread-Index: AQHSiMQd8ABooqXSqkKM4pZRfuG0B6FtBJtx
+Date: Fri, 17 Feb 2017 10:51:21 +0000
+Message-ID: <MWHPR20MB16471D4B4090DA08ECA51791D45D0@MWHPR20MB1647.namprd20.prod.outlook.com>
+References: <001501d288c1$fd764d20$f862e760$@com>,<df255191-8857-c233-d35a-6f22b01a9072@fapersa.com>
+In-Reply-To: <df255191-8857-c233-d35a-6f22b01a9072@fapersa.com>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: fapersa.com; dkim=none (message not signed)
+ header.d=none;fapersa.com; dmarc=none action=none header.from=hotmail.com;
+x-incomingtopheadermarker: OriginalChecksum:8B0BA93CBC77075EF90C20D054B6BD22D1A4327A68EBCF84B83DA1D2F9EDEC1E;UpperCasedChecksum:053B7DC03E38C7D33066A79CAEB385F811D678029F57F142BF03EA41166C585E;SizeAsReceived:7792;Count:40
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [CiREq1qvFImHrw6C0TPUT/DTQ2ypEaVp]
+x-incomingheadercount: 40
+x-eopattributedmessage: 0
+x-microsoft-exchange-diagnostics: 1;BY2NAM03HT074;5:Vg15BysIhcgksPDy6SppIM/aJ0catRda2qZ3C8dEGXkNbzHlJ/uNtB+FfMh0x5WH7Oqy3o4XtekpK1uSF/uCLlh7XRqvyArzgDbhZZXleK/wKARo/770sTZ/cMXG/3g7EZfLfAYG3JBWlTsDnhTV3Q==;24:ppYtAt/uTf9QqqJSF63w+pzf0KnAragrovZdsF9QN0Bl1+wQ7HRtLtsz9PiMn0YBq5zLRxZ5rhdz90VKmcAgjnTI+rrHf01OhXb1h/SAFKk=;7:pzx8HFF3D2RLwrD6qvmF0RxE1fMCDC9Zz4tSkZ+Qm1Xw2av+BQRmoMk+DgRE6EJLa4Pvrn6iu8GWzu/Kxrygv6hxUAaPrLpneP9jXlNdVCLQMLZnG4H2eFnQ7dW6wuiJ31j0yZHIRmkdmtK86BwD4G1a5+Hwn9Vn4j3nYOnlNFvOciMjKvCyC52Gr1Se8hzpb6+phZAU7CZs2JSAYA0PPASBqa/AXRtxMXDn5mZ28OqqQI1I8aV8pIJIos20FIjNWw02qyOT3Ln1feax9FOWJroJ+jxDHOfMbuATcYfB5eZDijXfXUsVpATc2ao87r/W
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(10019020)(98900012);DIR:OUT;SFP:1102;SCL:1;SRVR:BY2NAM03HT074;H:MWHPR20MB1647.namprd20.prod.outlook.com;FPR:;SPF:None;LANG:es;
+x-ms-office365-filtering-correlation-id: 363c8bb9-2dbb-4478-2106-08d45722e937
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(201702061056)(5061506541)(5061507331)(1603103135)(1603101389)(1601125222)(1701031045);SRVR:BY2NAM03HT074;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(432015087)(444000031);SRVR:BY2NAM03HT074;BCL:0;PCL:0;RULEID:;SRVR:BY2NAM03HT074;
+x-forefront-prvs: 02213C82F8
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_MWHPR20MB16471D4B4090DA08ECA51791D45D0MWHPR20MB1647namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: hotmail.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 17 Feb 2017 10:51:21.7820
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BY2NAM03HT074
+X-OriginalArrivalTime: 17 Feb 2017 10:51:23.0736 (UTC) FILETIME=[C7D3D580:01D2890B]
+X-Spam-Status: No, score=1.6
+X-Spam-Score: 16
+X-Spam-Bar: +
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Roberto Buen d¨ªa!! En primer lugar no se a que factura se
+    aplica [...] 
+ 
+ Content analysis details:   (1.6 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: fapersa.com]
+ -0.0 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (estudiodelorenzo[at]hotmail.com)
+  2.6 DEAR_FRIEND            BODY: Dear Friend? That's not very dear!
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  1.0 FREEMAIL_REPLY         From and body contain different freemails
+X-Spam-Flag: NO
+
+--_000_MWHPR20MB16471D4B4090DA08ECA51791D45D0MWHPR20MB1647namp_
+Content-Type: text/plain; charset="gb2312"
+Content-Transfer-Encoding: base64
+
+Um9iZXJ0bw0KDQpCdWVuIGSoqmEhIQ0KDQpFbiBwcmltZXIgbHVnYXIgbm8gc2UgYSBxdWUgZmFj
+dHVyYSBzZSBhcGxpY2ENCg0KU0kgRVMgTEEgUk0yMDE2MTEwNQ0KDQpOTyBNRSBDT0lOQ0lERSBM
+T1MgUEVTT1MgQlJVVE9TIFFVRSBZTyBURU5HTyAgTkkgTEEgQ0FOVElEQUQgREUgQlVMVE9TDQoN
+CnBlcm8gcHVkbyBoYWJlciBjYW1iaWFkbywgbm8gdGVuZ28gZG9jdW1lbnRvcyBmaW5hbGVzIGVu
+IGJvcnJhZG9yIHBhcmEgcG9kZXIgZGVjaXJ0ZQ0KDQpJZ3VhbG1lbnRlIGVzdGEgSU5DT1JSRUNU
+Tw0KDQpkZXN0aW5hbiBhIENPUkRPQkEgREVCRVJJQSBERUNJUiBTQU5UQSBGRS1BUkdFTlRJTkEN
+Cg0KRkFMVEEgUVVFIERJR0EgTUVSQ0FERVJJQSBDT04gREVTVElOTyBGSU5BTCBTQU5UQSBGRS1B
+UkdFTlRJTkEtVklBIE1PTlRFVklERU8NCg0KRkFMVEEgQUdSRUdBUiBMQVMgTkNNIDg0MDkuOTEu
+MTItIDg0MDkuOTkuNTkNCg0KZWwgcmVzdG8gZGUgbG9zIGRhdG9zIGxvcyBkZXNjb25vemNvDQoN
+CnNsZHMuDQoNCg0KX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18NCkRlOiByZG9wYXpv
+IDxyZG9wYXpvQGZhcGVyc2EuY29tPg0KRW52aWFkbzoganVldmVzLCAxNiBkZSBmZWJyZXJvIGRl
+IDIwMTcgMTE6MTcgcC5tLg0KUGFyYTogRXN0dWRpbyBEZSBMb3JlbnpvDQpDYzogTWFyY2VsYSBU
+cmlzemN6DQpBc3VudG86IEZ3ZDogdGhlIEJMIHRvIGNpbmZpcm0NCg0KDQpFc3RpbWFkbyBSYXVs
+DQoNCkNvbmZpcm1hbWUgc2kgZXN0YSBjb3JyZWN0byBlbCBCL0wgcGFyYSBpbmZvcm1hciBhbCBw
+cm92ZWVkb3IuDQoNClNhbHVkb3MNCg0KUm9iZXJ0bw0KDQoNCi0tLS0tLS0tIE1lbnNhamUgcmVl
+bnZpYWRvIC0tLS0tLS0tDQpBc3VudG86ICAgICAgICAgdGhlIEJMIHRvIGNpbmZpcm0NCkZlY2hh
+OiAgRnJpLCAxNyBGZWIgMjAxNyAxMDowMzoxMCArMDgwMA0KRGU6ICAgICBtZW5ncWlhbkBjaGlu
+YXJtLmNvbTxtYWlsdG86bWVuZ3FpYW5AY2hpbmFybS5jb20+DQpBOiAgICAgICdSb2JlcnRvIERv
+cGF6bycgPHJvYmVydG9sZG9wYXpvQGhvdG1haWwuY29tPjxtYWlsdG86cm9iZXJ0b2xkb3Bhem9A
+aG90bWFpbC5jb20+LCBhdWJlcnRvQGZhcGVyc2EuY29tPG1haWx0bzphdWJlcnRvQGZhcGVyc2Eu
+Y29tPg0KQ0M6ICAgICByZG9wYXpvQGZhcGVyc2EuY29tPG1haWx0bzpyZG9wYXpvQGZhcGVyc2Eu
+Y29tPg0KDQoNCkRlYXIgRnJpZW5kDQoNClBsZWFzZSBjb25maXJtIHRoZSBCTCBmb3IgbWUuDQoN
+CkFueSBxdWVzdGlvbiAsa2luZGx5IGxldCBtZSBrbm93IC4NCg0KVGhhbmsgeW91ICENCg0KUGxl
+YXNlIGxldCBtZSBrbm93IGlmIHRoZSBOQ00gaXMgIDg0MDkuOTkuNTkgLyA4NDA5LjkxLjEyIGFz
+IGJlZm9yZT8NCg0KDQpCZXN0IHJlZ2FyZHMNCg0KTmFuY3kgTWVuZw0Kw8/Zuw0KDQpUZWwuOjA1
+NzctNTk4OTE1MjYNCkZheDogMDU3Ny01OTg5MTUyNg0KQ2VsbCBwaG9uZTogMTM1IDg3OTYgMDg3
+Mg0KDQpFLW1haWw6IG1lbmdxaWFuQGNoaW5hcm0uY29tPG1haWx0bzptZW5ncWlhbkBjaGluYXJt
+LmNvbT4NCg0Kt6K8/sjLOiBSb2JlcnRvIERvcGF6byBbbWFpbHRvOnJvYmVydG9sZG9wYXpvQGhv
+dG1haWwuY29tXQ0Kt6LLzcqxvOQ6IDIwMTfE6jLUwjE2yNUgMjM6MzkNCsrVvP7IyzogbWVuZ3Fp
+YW5AY2hpbmFybS5jb208bWFpbHRvOm1lbmdxaWFuQGNoaW5hcm0uY29tPjsgYXViZXJ0b0BmYXBl
+cnNhLmNvbTxtYWlsdG86YXViZXJ0b0BmYXBlcnNhLmNvbT4NCrOty806IHJkb3Bhem9AZmFwZXJz
+YS5jb208bWFpbHRvOnJkb3Bhem9AZmFwZXJzYS5jb20+DQrW98ziOiBPcmRlciAzIGFuZCA0DQoN
+CkRlYXIgTmFuY3ksDQoNCldlIHdpbGwgdGFrZSB0aGlzIGludG8gYWNjb3VudCBmb3Igb3JkZXJz
+IG4goeMgNSAvIG4goeMgNi4NCg0KVW5mb3J0dW5hdGVseSBmb3Igb3JkZXJzIG4goeMgMyAvIG4g
+oeMgNCB3ZSBjYW4gbm90IG1ha2UgY2hhbmdlcywgb3VyIEN1c3RvbXMgQnJva2VyIGhhZCBhbHJl
+YWR5IHByZXNlbnRlZCB0aGUgYXV0aG9yaXphdGlvbiBwcm9jZXNzLg0KDQpCZXN0IHJlZ2FyZHMu
+DQoNClJvYmVydCBEb3Bhem8NCmZhcGVyc2EgaWNzYQ0KDQo=
+
+--_000_MWHPR20MB16471D4B4090DA08ECA51791D45D0MWHPR20MB1647namp_
+Content-Type: text/html; charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dgb2312">
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt;color:#000000;font=
+-family:Calibri,Arial,Helvetica,sans-serif;" dir=3D"ltr">
+<p>Roberto</p>
+<p>Buen d=A8=AAa!!</p>
+<p>En primer lugar no se a que factura se aplica</p>
+<p>SI ES LA RM20161105&nbsp;</p>
+<p>NO ME COINCIDE LOS PESOS BRUTOS QUE YO TENGO &nbsp;NI LA CANTIDAD DE BUL=
+TOS</p>
+<p>pero pudo haber cambiado, no tengo documentos finales en borrador para p=
+oder decirte&nbsp;</p>
+<p>Igualmente esta INCORRECTO</p>
+<p>destinan a CORDOBA DEBERIA DECIR SANTA FE-ARGENTINA</p>
+<p>FALTA QUE DIGA MERCADERIA CON DESTINO FINAL SANTA FE-ARGENTINA-VIA MONTE=
+VIDEO</p>
+<p>FALTA AGREGAR LAS NCM 8409.91.12- 8409.99.59</p>
+<p>el resto de los datos los desconozco</p>
+<p>slds.</p>
+<br>
+<br>
+<div style=3D"color: rgb(0, 0, 0);">
+<hr tabindex=3D"-1" style=3D"display:inline-block; width:98%">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" co=
+lor=3D"#000000" style=3D"font-size:11pt"><b>De:</b> rdopazo &lt;rdopazo@fap=
+ersa.com&gt;<br>
+<b>Enviado:</b> jueves, 16 de febrero de 2017 11:17 p.m.<br>
+<b>Para:</b> Estudio De Lorenzo<br>
+<b>Cc:</b> Marcela Triszcz<br>
+<b>Asunto:</b> Fwd: the BL to cinfirm</font>
+<div>&nbsp;</div>
+</div>
+<div>
+<p>Estimado Raul</p>
+<p>Confirmame si esta correcto el B/L para informar al proveedor.</p>
+<p>Saludos</p>
+<p>Roberto<br>
+</p>
+<div class=3D"moz-forward-container"><br>
+<br>
+-------- Mensaje reenviado --------
+<table class=3D"moz-email-headers-table" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0">
+<tbody>
+<tr>
+<th align=3D"RIGHT" nowrap=3D"nowrap" valign=3D"BASELINE">Asunto: </th>
+<td>the BL to cinfirm</td>
+</tr>
+<tr>
+<th align=3D"RIGHT" nowrap=3D"nowrap" valign=3D"BASELINE">Fecha: </th>
+<td>Fri, 17 Feb 2017 10:03:10 &#43;0800</td>
+</tr>
+<tr>
+<th align=3D"RIGHT" nowrap=3D"nowrap" valign=3D"BASELINE">De: </th>
+<td><a class=3D"moz-txt-link-abbreviated" href=3D"mailto:mengqian@chinarm.c=
+om">mengqian@chinarm.com</a></td>
+</tr>
+<tr>
+<th align=3D"RIGHT" nowrap=3D"nowrap" valign=3D"BASELINE">A: </th>
+<td>'Roberto Dopazo' <a class=3D"moz-txt-link-rfc2396E" href=3D"mailto:robe=
+rtoldopazo@hotmail.com">
+&lt;robertoldopazo@hotmail.com&gt;</a>, <a class=3D"moz-txt-link-abbreviate=
+d" href=3D"mailto:auberto@fapersa.com">
+auberto@fapersa.com</a></td>
+</tr>
+<tr>
+<th align=3D"RIGHT" nowrap=3D"nowrap" valign=3D"BASELINE">CC: </th>
+<td><a class=3D"moz-txt-link-abbreviated" href=3D"mailto:rdopazo@fapersa.co=
+m">rdopazo@fapersa.com</a></td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<meta name=3D"Generator" content=3D"Microsoft Word 12 (filtered=0A=
+        medium)">
+<div class=3D"Section1">
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:10.5pt; font=
+-family:&quot;Calibri&quot;,&quot;sans-serif&quot;; color:#1F497D">Dear Fri=
+end
+</span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:10.5pt; font=
+-family:&quot;Calibri&quot;,&quot;sans-serif&quot;; color:#1F497D">&nbsp;</=
+span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:10.5pt; font=
+-family:&quot;Calibri&quot;,&quot;sans-serif&quot;; color:#1F497D">Please c=
+onfirm the BL for me.</span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:10.5pt; font=
+-family:&quot;Calibri&quot;,&quot;sans-serif&quot;; color:#1F497D">&nbsp;</=
+span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:10.5pt; font=
+-family:&quot;Calibri&quot;,&quot;sans-serif&quot;; color:#1F497D">Any ques=
+tion ,kindly let me know .</span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:10.5pt; font=
+-family:&quot;Calibri&quot;,&quot;sans-serif&quot;; color:#1F497D">&nbsp;</=
+span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:10.5pt; font=
+-family:&quot;Calibri&quot;,&quot;sans-serif&quot;; color:#1F497D">Thank yo=
+u !</span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:10.5pt; font=
+-family:&quot;Calibri&quot;,&quot;sans-serif&quot;; color:#1F497D">&nbsp;</=
+span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:10.5pt; font=
+-family:&quot;Calibri&quot;,&quot;sans-serif&quot;; color:#1F497D">Please l=
+et me know if the NCM is &nbsp;8409.99.59 / 8409.91.12 as before?</span></p=
+>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:10.5pt; font=
+-family:&quot;Calibri&quot;,&quot;sans-serif&quot;; color:#1F497D">&nbsp;</=
+span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:10.5pt; font=
+-family:&quot;Calibri&quot;,&quot;sans-serif&quot;; color:#1F497D">&nbsp;</=
+span></p>
+<div>
+<p class=3D"MsoNormal" style=3D"text-align:justify; text-justify:inter-ideo=
+graph"><span lang=3D"EN-US" style=3D"font-size:10.5pt; font-family:&quot;Ca=
+libri&quot;,&quot;sans-serif&quot;; color:#1F497D">Best regards</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify; text-justify:inter-ideo=
+graph"><span lang=3D"EN-US" style=3D"font-size:10.5pt; font-family:&quot;Ca=
+libri&quot;,&quot;sans-serif&quot;; color:#1F497D">&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify; text-justify:inter-ideo=
+graph"><span lang=3D"EN-US" style=3D"font-size:10.5pt; font-family:&quot;Ca=
+libri&quot;,&quot;sans-serif&quot;; color:#1F497D">Nancy Meng
+</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify; text-justify:inter-ideo=
+graph"><span style=3D"font-size:10.5pt; font-family:SimSun; color:#1F497D">=
+=C3=CF=D9=BB</span><span lang=3D"EN-US" style=3D"font-size:10.5pt; font-fam=
+ily:&quot;Calibri&quot;,&quot;sans-serif&quot;; color:#1F497D"></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify; text-justify:inter-ideo=
+graph"><span lang=3D"EN-US" style=3D"font-size:10.5pt; font-family:&quot;Ca=
+libri&quot;,&quot;sans-serif&quot;; color:#1F497D">&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify; text-justify:inter-ideo=
+graph"><span lang=3D"EN-US" style=3D"font-size:10.5pt; font-family:&quot;Ca=
+libri&quot;,&quot;sans-serif&quot;; color:#1F497D">Tel.:0577-59891526</span=
+></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify; text-justify:inter-ideo=
+graph"><span lang=3D"EN-US" style=3D"font-size:10.5pt; font-family:&quot;Ca=
+libri&quot;,&quot;sans-serif&quot;; color:#1F497D">Fax: 0577-59891526</span=
+></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify; text-justify:inter-ideo=
+graph"><span lang=3D"EN-US" style=3D"font-size:10.5pt; font-family:&quot;Ca=
+libri&quot;,&quot;sans-serif&quot;; color:#1F497D">Cell phone: 135 8796 087=
+2</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify; text-justify:inter-ideo=
+graph"><span lang=3D"EN-US" style=3D"font-size:10.5pt; font-family:&quot;Ca=
+libri&quot;,&quot;sans-serif&quot;; color:#1F497D">&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify; text-justify:inter-ideo=
+graph"><span lang=3D"EN-US" style=3D"font-size:10.5pt; font-family:&quot;Ca=
+libri&quot;,&quot;sans-serif&quot;; color:#1F497D">E-mail:
+<a class=3D"moz-txt-link-abbreviated" href=3D"mailto:mengqian@chinarm.com">=
+mengqian@chinarm.com</a></span></p>
+</div>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:10.5pt; font=
+-family:&quot;Calibri&quot;,&quot;sans-serif&quot;; color:#1F497D">&nbsp;</=
+span></p>
+<div>
+<div style=3D"border:none; border-top:solid #B5C4DF=0A=
+            1.0pt; padding:3.0pt 0cm 0cm 0cm">
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt; font-family:SimS=
+un">=B7=A2=BC=FE=C8=CB<span lang=3D"EN-US">:</span></span></b><span lang=3D=
+"EN-US" style=3D"font-size:10.0pt; font-family:SimSun"> Roberto Dopazo [<a =
+class=3D"moz-txt-link-freetext" href=3D"mailto:robertoldopazo@hotmail.com">=
+mailto:robertoldopazo@hotmail.com</a>]
+<br>
+</span><b><span style=3D"font-size:10.0pt; font-family:SimSun">=B7=A2=CB=CD=
+=CA=B1=BC=E4<span lang=3D"EN-US">:</span></span></b><span lang=3D"EN-US" st=
+yle=3D"font-size:10.0pt; font-family:SimSun"> 2017</span><span style=3D"fon=
+t-size:10.0pt; font-family:SimSun">=C4=EA<span lang=3D"EN-US">2</span>=D4=
+=C2<span lang=3D"EN-US">16</span>=C8=D5<span lang=3D"EN-US">
+ 23:39<br>
+</span><b>=CA=D5=BC=FE=C8=CB<span lang=3D"EN-US">:</span></b><span lang=3D"=
+EN-US"> <a class=3D"moz-txt-link-abbreviated" href=3D"mailto:mengqian@china=
+rm.com">
+mengqian@chinarm.com</a>; <a class=3D"moz-txt-link-abbreviated" href=3D"mai=
+lto:auberto@fapersa.com">
+auberto@fapersa.com</a><br>
+</span><b>=B3=AD=CB=CD<span lang=3D"EN-US">:</span></b><span lang=3D"EN-US"=
+> <a class=3D"moz-txt-link-abbreviated" href=3D"mailto:rdopazo@fapersa.com"=
+>
+rdopazo@fapersa.com</a><br>
+</span><b>=D6=F7=CC=E2<span lang=3D"EN-US">:</span></b><span lang=3D"EN-US"=
+> Order 3 and 4</span></span></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">&nbsp;</span></p>
+<div id=3D"divtagdefaultwrapper">
+<div>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-family:&quot;Cali=
+bri&quot;,&quot;sans-serif&quot;; color:black">Dear Nancy,<br>
+<br>
+We will take this into account for orders n =A1=E3 5 / n =A1=E3 6.<br>
+<br>
+Unfortunately for orders n =A1=E3 3 / n =A1=E3 4 we can not make changes, o=
+ur Customs Broker had already presented the authorization process.<br>
+<br>
+Best regards.<br>
+<br>
+Robert Dopazo</span></p>
+</div>
+<div>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-family:&quot;Cali=
+bri&quot;,&quot;sans-serif&quot;; color:black">fapersa icsa</span></p>
+</div>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-family:&quot;Cali=
+bri&quot;,&quot;sans-serif&quot;; color:black">&nbsp;</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+--_000_MWHPR20MB16471D4B4090DA08ECA51791D45D0MWHPR20MB1647namp_--

@@ -1,0 +1,158 @@
+Return-Path: <martinceppi@hotmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id Yes4CMpjJFiwEgAATLP0zA
+	for <jpruata@fapersa.com>; Thu, 10 Nov 2016 09:10:50 -0300
+Return-path: <martinceppi@hotmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Thu, 10 Nov 2016 09:10:50 -0300
+Received: from col004-omc2s2.hotmail.com ([65.55.34.76]:51936)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-SHA384:256)
+	(Exim 4.87)
+	(envelope-from <martinceppi@hotmail.com>)
+	id 1c4oBs-0002gy-3J
+	for jpruata@fapersa.com; Thu, 10 Nov 2016 09:10:49 -0300
+Received: from NAM04-CO1-obe.outbound.protection.outlook.com ([65.55.34.72]) by COL004-OMC2S2.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Thu, 10 Nov 2016 04:10:07 -0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=VSfbtEP/D97YHTFRsFZ9ggiqBWiynKIq++W9v/ZOAhQ=;
+ b=Mp7u8fHMuOtIWxOZFTr45tg610cT1CYaSW+tc0NYWivFx9D7TSJTqNbpJ3fC0odmZmPundEMIIeGadD81Sc8hp/A2b7BaWmoLuuCFRSuL8+gTA4ddbVTY0bgGEXOquBWBNIjIGG2Vp29NhKG2Tj/7CMxxkyAonstj0Cnk3tW2Q/n4Ox+wToV+JtEn1YJsgnrAbiReLzBugQLtrm6rCniGX0zK8pvpdOqfvUMzr72B+RYIfYc94XXTLfBCZa9EV50DJKsGlIBaGdKfhXg7YfMcvh17GBElnScSQn6xNrBYjfmycqx5uxNez35nB04kmCnOBBlY45zdh69+MF4D8rg4Q==
+Received: from CO1NAM04FT040.eop-NAM04.prod.protection.outlook.com
+ (10.152.90.51) by CO1NAM04HT066.eop-NAM04.prod.protection.outlook.com
+ (10.152.91.97) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.707.3; Thu, 10 Nov
+ 2016 12:10:00 +0000
+Received: from BLUPR10MB0513.namprd10.prod.outlook.com (10.152.90.54) by
+ CO1NAM04FT040.mail.protection.outlook.com (10.152.91.23) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.707.3 via Frontend Transport; Thu, 10 Nov 2016 12:10:00 +0000
+Received: from BLUPR10MB0513.namprd10.prod.outlook.com ([10.163.123.20]) by
+ BLUPR10MB0513.namprd10.prod.outlook.com ([10.163.123.20]) with mapi id
+ 15.01.0707.013; Thu, 10 Nov 2016 12:09:55 +0000
+From: =?iso-8859-1?Q?Mart=EDn_Ceppi?= <martinceppi@hotmail.com>
+Subject: =?iso-8859-1?Q?BAJ=D3_EL_TRIPLE!?=
+Thread-Topic: =?iso-8859-1?Q?BAJ=D3_EL_TRIPLE!?=
+Thread-Index: AQHSO0q4uy5l5TOmlE+mUg25GoFgdQ==
+Date: Thu, 10 Nov 2016 12:09:55 +0000
+Message-ID: <BLUPR10MB05132A55A27F037D71D2AF97ADB80@BLUPR10MB0513.namprd10.prod.outlook.com>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: hotmail.com; dkim=none (message not signed)
+ header.d=none;hotmail.com; dmarc=none action=none header.from=hotmail.com;
+x-incomingtopheadermarker: OriginalChecksum:;UpperCasedChecksum:;SizeAsReceived:7664;Count:35
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [Vdytq+UhoPKum0JAXwU1cdcxqdlojZOK]
+x-incomingheadercount: 35
+x-eopattributedmessage: 0
+x-microsoft-exchange-diagnostics: 1;CO1NAM04HT066;7:Zq9nAWZ9aw1CfaXXF+izDqBCItDuZ9MEv00citzJkuIZNScAHGnzCij5DSLcV2iKrxDfNgwZX7blH9cCaKlHirX7Gx8pMHHflXUEqytC454cz/ko2fzJZja+DbfYnsKv/T6fCbGuFKG6HAStDC9UQWiETHRxodK4bK/4XNYjzVeq92BzZGLMP+9SRGqwiVEjxOWFcIIGIFq96UZbp4+sH4V9WMN9YlQGlZALoG+JwUOL+sn19v8pcSDrqU4G3Hs9FfjgYugZX6wQSTpQw9AfF3WkHILfEYNrL6ZXNy2kUwlZRNJ3/qezOFyg3L1aLl8+hc/PVtBlySs38kjXLkl6793+Hu/oU6emlcu9bQLWF+M=
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(10019020)(98900003);DIR:OUT;SFP:1102;SCL:1;SRVR:CO1NAM04HT066;H:BLUPR10MB0513.namprd10.prod.outlook.com;FPR:;SPF:None;LANG:es;
+x-ms-office365-filtering-correlation-id: a212c0d0-9b56-4355-4209-08d409627bd3
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001);SRVR:CO1NAM04HT066;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(432015012)(82015046);SRVR:CO1NAM04HT066;BCL:0;PCL:0;RULEID:;SRVR:CO1NAM04HT066;
+x-forefront-prvs: 01221E3973
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_BLUPR10MB05132A55A27F037D71D2AF97ADB80BLUPR10MB0513namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: hotmail.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 10 Nov 2016 12:09:55.2357
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CO1NAM04HT066
+Bcc:
+X-OriginalArrivalTime: 10 Nov 2016 12:10:07.0708 (UTC) FILETIME=[60A381C0:01D23B4B]
+X-Spam-Status: No, score=-5.3
+X-Spam-Score: -52
+X-Spam-Bar: -----
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Bajó el precio del triple! Precio del Super Triple A GRANEL
+    441 U$S/tn Precio del Super Triple EN BOLSAS 23.8 U$S/bl. Además se puede
+    pagar con Agronación a 210 días o Galicia Rural a 31/01/17 [...] 
+ 
+ Content analysis details:   (-5.3 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -2.9 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+ -2.9 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+                             [65.55.34.76 listed in wl.mailspike.net]
+  1.0 MISSING_HEADERS        Missing To: header
+  1.5 SUBJ_ALL_CAPS          Subject is all capitals
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (martinceppi[at]hotmail.com)
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+X-Spam-Flag: NO
+
+--_000_BLUPR10MB05132A55A27F037D71D2AF97ADB80BLUPR10MB0513namp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Baj=F3 el precio del triple!
+
+Precio del Super Triple A GRANEL 441 U$S/tn
+Precio del Super Triple EN BOLSAS 23.8 U$S/bl.
+
+Adem=E1s se puede pagar con Agronaci=F3n a 210 d=EDas o Galicia Rural a 31/=
+01/17
+
+
+
+--_000_BLUPR10MB05132A55A27F037D71D2AF97ADB80BLUPR10MB0513namp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt;color:#000000;font=
+-family:Calibri,Arial,Helvetica,sans-serif;" dir=3D"ltr">
+<div>Baj=F3 el precio del triple!</div>
+<div><br>
+</div>
+Precio del Super Triple A GRANEL 441 U$S/tn
+<div><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, &qu=
+ot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &qu=
+ot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-siz=
+e: 16px;">Precio del Super Triple EN BOLSAS 23.8 U$S/bl.</span></div>
+<div><br>
+</div>
+<div>Adem=E1s se puede pagar con Agronaci=F3n a 210 d=EDas o Galicia Rural =
+a 31/01/17<br>
+<span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, &quot;Ap=
+ple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &quot;Se=
+goe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-size: 16=
+px;"></span>
+<div><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, &qu=
+ot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &qu=
+ot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-siz=
+e: 16px;"><br>
+</span></div>
+<br>
+</div>
+</div>
+</body>
+</html>
+
+--_000_BLUPR10MB05132A55A27F037D71D2AF97ADB80BLUPR10MB0513namp_--

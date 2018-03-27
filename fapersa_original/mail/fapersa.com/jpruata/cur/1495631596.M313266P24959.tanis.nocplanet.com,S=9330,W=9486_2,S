@@ -1,0 +1,156 @@
+Return-Path: <martinceppi@hotmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id cdS/D+yGJVl/YQAATLP0zA
+	for <jpruata@fapersa.com>; Wed, 24 May 2017 10:13:16 -0300
+Return-path: <martinceppi@hotmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Wed, 24 May 2017 10:13:16 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:43326 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <martinceppi@hotmail.com>)
+	id 1dDW6F-0006aB-BD
+	for jpruata@fapersa.com; Wed, 24 May 2017 10:13:16 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 6FBCF7F224
+	for <jpruata@fapersa.com>; Wed, 24 May 2017 10:13:15 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+X-Spam-Flag: NO
+X-Spam-Score: 3.085
+X-Spam-Level: ***
+X-Spam-Status: No, score=3.085 tagged_above=2 required=5
+	tests=[DKIM_SIGNED=0.1, DKIM_VALID=-0.1, DKIM_VALID_AU=-0.1,
+	FORGED_HOTMAIL_RCVD2=1.187, FREEMAIL_FROM=0.001, HTML_MESSAGE=0.001,
+	MISSING_HEADERS=1.207, RCVD_IN_DNSWL_NONE=-0.0001,
+	SPF_HELO_PASS=-0.001, SPF_PASS=-0.001, UPPERCASE_50_75=0.791]
+	autolearn=no autolearn_force=no
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id bhSrkiP4vOlM for <jpruata@fapersa.com>;
+	Wed, 24 May 2017 10:13:15 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 053377F232; Wed, 24 May 2017 10:13:15 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 95BFF7F224
+	for <jpruata@fapersa.com>; Wed, 24 May 2017 10:13:14 -0300 (ART)
+Received-SPF: pass (hotmail.com: Sender is authorized to use 'martinceppi@hotmail.com' in 'mfrom' identity (mechanism 'include:spf.protection.outlook.com' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="martinceppi@hotmail.com"; helo=NAM01-BN3-obe.outbound.protection.outlook.com; client-ip=40.92.0.82
+Received: from NAM01-BN3-obe.outbound.protection.outlook.com (mail-oln040092000082.outbound.protection.outlook.com [40.92.0.82])
+	by fw.fapersa.com (Postfix) with ESMTPS id F2C7F5FFDA
+	for <jpruata@fapersa.com>; Wed, 24 May 2017 10:13:12 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=h9nSMsvWpRPkdfOzx02tMiSUlUmYZe31Egi73xhBVuU=;
+ b=mTpxY9pqoEvY0Kv/HRgEGikzzwLT2L/hTVZT6n2c2ZBzu3OZ1QyKMBOmnwNbFPjrocNEAKyuA7zva9aD66nwB4d+5Z4qxxljFxajDUiUcXTlZHylDry6fYi/M+OStSvZGTvvihqkrwxxY8OdUjat8ziT6+BupKVOTzX1Os2W+ciMkMkcRw4idmWMvxziu4xGTeqw5d8BY2EVrc6HWvrtIrWa3Pzh6NCeBWWZ/69QxkeXgT+0Z7IwMRaYs/RgCr1t0P3M4NR08DEKf3k5rTyWxkNlhT1kwuqZ7nyn3XBpUbPUe5D23vQ5J6BG3Aw6qGKxLgKDzlN3er6EIOfi0fQdoA==
+Received: from BY2NAM01FT028.eop-nam01.prod.protection.outlook.com
+ (10.152.68.55) by BY2NAM01HT023.eop-nam01.prod.protection.outlook.com
+ (10.152.69.121) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.1075.5; Wed, 24
+ May 2017 13:10:59 +0000
+Received: from CY4PR1001MB2054.namprd10.prod.outlook.com (10.152.68.51) by
+ BY2NAM01FT028.mail.protection.outlook.com (10.152.69.201) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id
+ 15.1.1075.5 via Frontend Transport; Wed, 24 May 2017 13:10:59 +0000
+Received: from CY4PR1001MB2054.namprd10.prod.outlook.com ([10.171.219.158]) by
+ CY4PR1001MB2054.namprd10.prod.outlook.com ([10.171.219.158]) with mapi id
+ 15.01.1124.009; Wed, 24 May 2017 13:10:59 +0000
+From: =?iso-8859-1?Q?Mart=EDn_Ceppi?= <martinceppi@hotmail.com>
+Subject: Trigo ALGARROBO DON MARIO
+Thread-Topic: Trigo ALGARROBO DON MARIO
+Thread-Index: AQHS1I6T85WOxkxe1062+t2USOsYaw==
+Date: Wed, 24 May 2017 13:10:58 +0000
+Message-ID: <CY4PR1001MB2054598D071BEE5138B12C35ADFE0@CY4PR1001MB2054.namprd10.prod.outlook.com>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: hotmail.com; dkim=none (message not signed)
+ header.d=none;hotmail.com; dmarc=none action=none header.from=hotmail.com;
+x-incomingtopheadermarker: OriginalChecksum:94908CF4DD1721A66491359971362842B4F38857E5D5E06296A5F2BA1D55FC92;UpperCasedChecksum:127A8B87C7B858DB8F7296307F624561A0EBFFC0CAA589643DB349391C99DFC2;SizeAsReceived:13326;Count:42
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [QrEYyDEXZSNvUU29WHOvKwa2BjRyL7g3]
+x-ms-publictraffictype: Email
+x-microsoft-exchange-diagnostics: 1;BY2NAM01HT023;24:P5Bi7d5vuYY9gzUnSOiYizMwoBMfTfz6OZLY3k6MckZQ8DWX0GQ0613agWadNhKoI2+0U+0QsqcGzckkm6rCYz0Qdggr5Kp6yduIQAS1VQA=;7:GX5s3QeOALgkEK/wy6OX1prO3pec01uggbO9DK/aAOkIWoXBcUf/oSvXE6DlvMzJuzJwh2xyRNGBw7dinzFUNVBsrcfGh21jM2VQUGzHrMZMKVD3jN967m5ATi8oXGApyWUl0NORBTClhp8beuYKKD2bJobFIiJ66msxfsW5ALqKsggEzgxmn80hUwEeHjGPSIxFZEXLgTjCgM+lY4ukrFe/WtWskftfDEBU3ehsfpQbRTomlJ+C+yxvcQbXUXMBJdZLzOXDoQGMAlOJtBQxTzFzPa24CknrlhkIFNYRK4/UF8A80ZN2n1Q26vPSY4xo
+x-incomingheadercount: 42
+x-eopattributedmessage: 0
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(7070007)(98901004);DIR:OUT;SFP:1901;SCL:1;SRVR:BY2NAM01HT023;H:CY4PR1001MB2054.namprd10.prod.outlook.com;FPR:;SPF:None;LANG:es;
+x-ms-office365-filtering-correlation-id: 93ac1a11-af5d-4562-850d-08d4a2a65205
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(201702061074)(5061506573)(5061507331)(1603103135)(2017031320274)(2017031324274)(2017031323274)(201702181274)(2017031322274)(1601125374)(1603101448)(1701031045);SRVR:BY2NAM01HT023;
+x-ms-exchange-slblob-mailprops: siQW62g2TLCQZRxQCA3otGuVxQ7BoRrenZ6rNvDLLUIsWJCPy00N6E7i/ZoqMMaks4samresWkogA0LW85h4yvT7wNRsT053zHypqH6m1gUhVxHp0aD/wVqiF1RAPGaJyMJTz9IJoTwj9tNRCzK3e+6ezoptLaXk4EPWTQ9os1F0BHCLs0hq47yyFMGQ0+BzisVl426Gv41iDjy/dLzJn6hfVYS2znSxuyj1/hNlv7rCznJsBaU8HomO4VsQI91cMXq9Pqo7vKnwjotWtgw27v3pRQf8+WlXy0rScTKz4JGDMOF6hY0RA3g9TpOqdCvJtGBT8q/BOfum2mqaxbOwRXIjjAy+4QW9sBU4nyLGEZU5ze7/nE27F6HWK9YaDTRHzSd+JBI5s9z9UB94XUXfNLw2hfSSNCqpChlACaHgPkIHbZyIz67EvaK5BtXGjGCAxvYyR2oDKTcoaUvW+dvxXYQfMd3vNotNPLG98cjP+iqeKUvMcUwK+lKgeJ6BOhVl+OiPATpmCgs3j9YS/l7+Bw2NBrYIlbYnwBVHcFbTIprq/UFwmBLwIMJAtNxFEaRvp2NqGWOdUFr/UPIWqsTQl0sItWwtpwlV+C5KBrB3cnV1MofcxiK7qk66Jja7ny2ckMDMsIYbz9wCwdQlfojoUg==
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(100000700054)(100105000095)(100000701054)(100105300095)(100000702054)(100105100095)(444000031);SRVR:BY2NAM01HT023;BCL:0;PCL:0;RULEID:(100000800054)(100110000095)(100000801054)(100110300095)(100000802054)(100110100095)(100000803054)(100110400095)(100000804054)(100110200095)(100000805047)(100110500095);SRVR:BY2NAM01HT023;
+x-forefront-prvs: 031763BCAF
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_CY4PR1001MB2054598D071BEE5138B12C35ADFE0CY4PR1001MB2054_"
+MIME-Version: 1.0
+X-OriginatorOrg: hotmail.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 24 May 2017 13:10:58.9665
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BY2NAM01HT023
+
+--_000_CY4PR1001MB2054598D071BEE5138B12C35ADFE0CY4PR1001MB2054_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+DISPONEMOS DE LA VARIEDAD DE TRIGO ALGARROBO DE DON MARIO, LA CUAL CUENTA C=
+ON MUY BUENOS RINDES EN LA ZONA,  A 19 U$S/BL.
+
+
+Adem=E1s, Diam=F3nico 532 dol/tn granel, Triple 456 dol/tn granel, Urea 369=
+ dol/tn granel, y m=E1s.
+
+
+CONSULTENOS.
+
+
+Mart=EDn Ceppi
+
+03404-1541 9217
+
+--_000_CY4PR1001MB2054598D071BEE5138B12C35ADFE0CY4PR1001MB2054_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt;color:#000000;font=
+-family:Calibri,Arial,Helvetica,sans-serif;" dir=3D"ltr">
+<p>DISPONEMOS DE LA VARIEDAD DE TRIGO ALGARROBO&nbsp;<span style=3D"font-fa=
+mily: Calibri, Arial, Helvetica, sans-serif, EmojiFont, &quot;Apple Color E=
+moji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &quot;Segoe UI Symb=
+ol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-size: 16px;">DE DON=
+ MARIO</span>,
+ LA CUAL CUENTA&nbsp;CON MUY BUENOS RINDES EN LA ZONA, &nbsp;A 19 U$S/BL.</=
+p>
+<p><br>
+</p>
+<p>Adem=E1s, Diam=F3nico 532 dol/tn granel, Triple 456&nbsp;<span style=3D"=
+font-family: Calibri, Arial, Helvetica, sans-serif, EmojiFont, &quot;Apple =
+Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &quot;Segoe =
+UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-size: 16px;"=
+>dol/tn
+ granel, Urea 369&nbsp;<span style=3D"font-family: Calibri, Arial, Helvetic=
+a, sans-serif, EmojiFont, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emo=
+ji&quot;, NotoColorEmoji, &quot;Segoe UI Symbol&quot;, &quot;Android Emoji&=
+quot;, EmojiSymbols; font-size: 16px;">dol/tn granel, y m=E1s.</span></span=
+></p>
+<p><br>
+</p>
+<p>CONSULTENOS.</p>
+<p><br>
+</p>
+<p>Mart=EDn Ceppi</p>
+<p>03404-1541 9217</p>
+</div>
+</body>
+</html>
+
+--_000_CY4PR1001MB2054598D071BEE5138B12C35ADFE0CY4PR1001MB2054_--

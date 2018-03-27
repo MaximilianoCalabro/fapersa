@@ -1,0 +1,808 @@
+Return-Path: <ofertas@e.mercadopago.com.ar>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id WUMRA0J/HVlJNQAATLP0zA
+	for <jpruata@fapersa.com>; Thu, 18 May 2017 08:02:26 -0300
+Return-path: <ofertas@e.mercadopago.com.ar>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Thu, 18 May 2017 08:02:26 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:54679 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <ofertas@e.mercadopago.com.ar>)
+	id 1dBJCI-0003lR-ID
+	for jpruata@fapersa.com; Thu, 18 May 2017 08:02:25 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 7AD2A7F21E
+	for <jpruata@fapersa.com>; Thu, 18 May 2017 08:02:22 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id JcVpXXAxwdE2 for <jpruata@fapersa.com>;
+	Thu, 18 May 2017 08:02:21 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id EE2557F232; Thu, 18 May 2017 08:02:21 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 9A8F47F21E
+	for <jpruata@fapersa.com>; Thu, 18 May 2017 08:02:20 -0300 (ART)
+Received-SPF: pass (e.mercadopago.com.ar: 199.7.206.243 is authorized to use 'ofertas@e.mercadopago.com.ar' in 'mfrom' identity (mechanism 'ip4:199.7.200.0/21' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="ofertas@e.mercadopago.com.ar"; helo=omp.e.mercadolibre.com.ar; client-ip=199.7.206.243
+Received: from omp.e.mercadolibre.com.ar (omp.e.mercadolibre.com.ar [199.7.206.243])
+	by fw.fapersa.com (Postfix) with ESMTP id EA5B45FE2D
+	for <jpruata@fapersa.com>; Thu, 18 May 2017 08:02:18 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mercadopago3; d=e.mercadopago.com.ar;
+ h=MIME-Version:Content-Type:Content-Transfer-Encoding:Date:To:From:Reply-To:Subject:List-Unsubscribe:Message-ID; i=ofertas@e.mercadopago.com.ar;
+ bh=ttw1kA5Hhj5V1Bm+apTgFy9QiYU=;
+ b=T3YOLJW0EDWskzIqvunQLDcOzMVCydAyWzv85ZmdZhXUjeO7W/eVp3uFplFs0NpFB63I0vixwrFK
+   KT9WkYNYP2H6sAyQXja15OIuDVVhMSvZkxUrZdhNjZImSgdtXogft2ONnZBlTGBiyHEkixVVQplr
+   wlqGRqFPf/zVyevsbs4=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mercadopago3; d=e.mercadopago.com.ar;
+ b=vnZPU6rt+VD2pVLrk7t1wm2zwBMCg5YQ8OZAEFjLojAeOE0RaOqu8X59a+r06yJeak8i1jCkfbM+
+   S+O76oy4JMZ/x0gx3YzfAqwH6SDLJPfZVXR4teS4ql1kvYjb0ARyGR6U3b+3aYzL8ktRA0HinEdb
+   bzSEvC4cxuV55LJBaBI=;
+Received: by omp.e.mercadolibre.com.ar id h3lvjo1615k4 for <jpruata@fapersa.com>; Thu, 18 May 2017 04:02:16 -0700 (envelope-from <ofertas@e.mercadopago.com.ar>)
+X-CSA-Complaints: whitelist-complaints@eco.de
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Date: Thu, 18 May 2017 04:02:16 -0700
+To: jpruata@fapersa.com
+From: "Mercado Pago" <ofertas@e.mercadopago.com.ar>
+Reply-To: "Mercado Pago" <contacto@mercadolibre.com.ar>
+Subject: =?UTF-8?B?8J+UpcKhU2UgdmllbmUgZWwgSE9UU0FMRSEgTGxlZ8OhIGNvbiB2?=
+	=?UTF-8?B?ZW50YWphLg==?=
+Feedback-ID: 54975:911045:oraclersys
+List-Unsubscribe: <http://e.mercadolibre.com.ar/pub/optout/UnsubscribeOneStepConfirmAction?YES=true&_ri_=X0Gzc2X%3DYQpglLjHJlYQGjo1mAIvnm2lFcCou8ibRiHwXJ6vzbqcH6oO3FNyzd0fcFhcgXBTpbyCzdshD6pf7f&_ei_=EolaGGF4SNMvxFF7KucKuWN0GfaVsvar6FTv2Cgg9puht73_65EcQV-d7Y6qCbmy-ZNcoDp9lRh-GHU>, <mailto:unsubscribe-YQpglLjHJlYQGjo1mAIvnm2lFcCou8ibRiHwXJ6vzbqcH6oO3FNyzd0fcFhcgXBTpbyCzdshD6pf7f@imh.rsys5.com?subject=List-Unsubscribe>
+X-sgxh1: rijmHlHxMHiLjkHQJhu
+X-rext: 5.interact5.ErhSu6bNguTtzJ8hmCpI0paO_cANq-JaAhwUzvPZRMJzoJn_72iIP8Zko9AiMBM
+X-cid: mercaliarg.1290585
+Message-ID: <0.0.97.8A7.1D2CFC635FAB280.0@omp.e.mercadolibre.com.ar>
+
+<=21DOCTYPE html>
+<html lang=3D=22es=22>
+ <head>
+ </head>
+ <body bgcolor=3D=22=23ffffff=22 style=3D=22-webkit-font-smoothing:antialia=
+sed; width:100%=21important; background-color:=23ffffff; background-image:n=
+one; background-repeat:repeat;background-position:top left; background-atta=
+chment:scroll; -webkit-text-size-adjust:none;=22>
+  <p>
+  <meta name=3D=22viewport=22 content=3D=22width=3Ddevice-width, initial-sc=
+ale=3D1, maximum-scale=3D1=22>
+  <meta http-equiv=3D=22Content-Type=22 content=3D=22text/html; charset=3Du=
+tf-8=22>
+  <link rel=3D=22shortcut icon=22 href=3D=22https://secure=2Emlstatic=2Ecom=
+/components/resources/mp/desktop/images/favicon=2Eico?v=3D2=2E6=2E16/favico=
+n=2Eico=22 />     <=21-- <title>Oferta =7C Mercado Pago</title>-->&=239;
+  <title>Mercado Pago</title>
+  <style type=3D=22text/css=22>
+      /* RESET */
+      * =7B
+      padding: 0;
+      margin: 0;
+      border: 0;
+      =7D
+      body =7B
+      width: 100% =21important;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      margin: 0;
+      padding: 0;
+      =7D
+      :link, :visited =7B
+      text-decoration: none
+      =7D
+      ul, ol =7B
+      list-style: none
+      =7D
+      h1, h2, h3, h4, h5, h6, pre, code =7B
+      font-size: 1em;
+      =7D
+      ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockqu=
+ote, fieldset, input =7B
+      margin: 0;
+      padding: 0
+      =7D
+      a img, :link img, :visited img =7B
+      border: none
+      =7D
+      /* FIN RESET */
+      /*img=5Bclass=3D=22logo=22=5D =7B width:100%;	=7D*/
+      img =7B
+      max-width: 100%;
+      =7D
+      img=5Bclass=3D=22banner=22=5D=7B
+      width:100%;
+      height:auto;
+      =7D
+      img=5Bclass=3D=22col-3-img=22=5D =7B
+      width: 175px;
+      =7D
+      a=5Bclass=3D=22button=22=5D =7B
+      width: 100px;
+      display: block;
+      border-radius: 2px;
+      -moz-border-radius: 2px;
+      -webkitborder-radius: 2px;
+      background-color: =234d688b;
+      color: =23fff =21important;
+      display: block;
+      text-decoration: none;
+      text-transform: uppercase;
+      margin: 10px auto;
+      =7D
+      td=5Bclass=3D=22force-col=22=5D =7B
+      padding-right: 0 =21important; margin:0; width:100%;
+      =7D
+      /*Oculta para version mobile*/
+      div=5Bclass=3D=22hiddenMob=22=5D, table=5Bclass=3D=22hiddenMob=22=5D,=
+ tr=5Bclass=3D=22hiddenMob=22=5D, td=5Bclass=3D=22hiddenMob=22=5D, img=5Bcl=
+ass=3D=22hiddenMob=22=5D =7B
+      display: none;
+      =7D
+      =40media only screen and (max-width: 600px) =7B
+      /*img=7Bwidth:100%;=7D*/
+      table=5Bclass=3D=22logo=22=5D =7B
+      width: 100%;
+      text-align: center=21important;
+      margin: auto=21important;
+      =7D
+      table=5Bclass=3D=22table3-4=22=5D =7B width: 100% =21important; text-=
+align: center =21important;margin-top:10px; =7D
+      table=5Bclass=3D=22credit=22=5D =7B
+      width: 100%;
+      text-align: center=21important;
+      margin: auto;
+      padding:0=21important;
+      =7D
+      table=5Bclass=3D=22credit2=22=5D =7B
+      width: 100%;
+      text-align: center=21important;
+      margin: auto;
+      =7D
+      table=5Bclass=3D=22fecha=22=5D =7B
+      width: 94%;
+      text-align: center;
+      margin: auto;
+      =7D
+      table=5Bclass=3D=22table3-3=22=5D =7B width: 100% =21important; text-=
+align: center =21important; =7D
+      td=5Bclass=3D=22boxes=22=5D =7B width:100%; text-align:center; margin=
+:auto;=7D
+      table=5Bclass=3D=22content_wrap=22=5D =7B
+      width: 100%;
+      =7D
+      /*<=21--3 columnas banner de brasil-->*/
+      table=5Bclass=3D=22table3=22=5D =7B
+      float: none =21important;
+      text-align: center =21important;
+      width: 100% =21important;
+      =7D	=09
+      table=5Bclass=3D=22full_width=22=5D =7B
+      width: 100%;
+      =7D
+      /* ocultan campos para mobile */
+      div=5Bclass=3D=22hidden=22=5D, table=5Bclass=3D=22hidden=22=5D, tr=5B=
+class=3D=22hidden=22=5D, td=5Bclass=3D=22hidden=22=5D, img=5Bclass=3D=22hid=
+den=22=5D =7B
+      display: none =21important;
+      =7D
+      /*Muestra para version mobile*/
+      div=5Bclass=3D=22hiddenMob=22=5D, table =5Bclass=3D=22hiddenMob=22=5D=
+, tr=5Bclass=3D=22hiddenMob=22=5D, td=5Bclass=3D=22hiddenMob=22=5D, img=5Bc=
+lass=3D=22hiddenMob=22=5D =7B
+      display: block =21important;
+      =7D
+      /* force container columns to (horizontal) blocks */
+      td=5Bclass=3D=22force-col=22=5D =7B
+      display: block;
+      padding-right: 0 =21important;
+      =7D
+      table=5Bclass=3D=22col=22=5D =7B
+      /* unset table align=3D=22left/right=22 */
+      float: none;
+      width: 100%;
+      =7D
+      table=5Bclass=3D=22col-b=22=5D =7B
+      /* unset table align=3D=22left/right=22 */
+      float: none;
+      /*width:100%;*/
+      width:290px;
+      =7D
+      /* btn footer */
+      a=5Bclass=3D=22footerLink=22=5D =7B
+      width: 280px;
+      display: block
+      =7D
+      =2Ecentrado=7Btext-align: center;=7D
+      /* ocultan campos para mobile */
+      div=5Bclass=3D=22hidden=22=5D, table=5Bclass=3D=22hidden=22=5D, tr=5B=
+class=3D=22hidden=22=5D, td=5Bclass=3D=22hidden=22=5D, img=5Bclass=3D=22hid=
+den=22=5D=7B
+      display: none =21important;
+      =7D
+      div=5Bclass=3D=22center=22=5D, table=5Bclass=3D=22center=22=5D, tr=5B=
+class=3D=22center=22=5D, td=5Bclass=3D=22center=22=5D, img=5Bclass=3D=22cen=
+ter=22=5D=7B
+      text-align:center =21important;
+      =7D
+      table=5Bclass=3D=22float=22=5D, tr=5Bclass=3D=22float=22=5D, td=5Bcla=
+ss=3D=22float=22=5D=7B float:none =21important=7D
+      img=5Bclass=3D=22logo=22=5D=7B width:176px; display:block; margin:aut=
+o;=7D
+      table=5Bclass=3D=22btn=22=5D=7B width:117px; display:block; margin:au=
+to; float:none =21important=7D
+      img=5Bclass=3D=22img1=22=5D=7Bwidth:100%; text-align:center; margin:0=
+ auto;=7D
+      =7D
+    </style>           <=21-- SUBJECT - Preview -->                        =
+                           </meta>
+  </meta>
+  </p>
+  <div style=3D=22display:none; line-height:0px; font-size:0px;=22>=C2=A1De=
+l 15 al 17 de Mayo=21 No pierdas tu oportunidad=2E</div>
+  <=21-- Contenedor general para Header -->     <=21-- Contenedor general p=
+ara Header -->
+  <table width=3D=22100%=22 cellpadding=3D=220=22 cellspacing=3D=220=22 bor=
+der=3D=220=22>
+   <tbody>
+    <tr>
+     <td align=3D=22center=22>
+     <table width=3D=22600px=22 cellpadding=3D=220=22 cellspacing=3D=220=22=
+ border=3D=220=22 align=3D=22center=22 class=3D=22content_wrap=22 style=3D=
+=22max-width:600px=22>
+      <tbody>
+       <tr>
+        <td height=3D=220=22 width=3D=22600=22 align=3D=22center=22>
+        <table align=3D=22center=22 border=3D=220=22 cellpadding=3D=220=22 =
+cellspacing=3D=220=22 class=3D=22content_wrap=22 width=3D=22600=22>
+         <=21-- Preheaeder -->
+         <tbody>
+          <tr>
+           <td align=3D=22center=22 height=3D=2230=22 style=3D=22font-famil=
+y:Arial;color:=23a2a2a2;font-size:9px;text-decoration:none;padding:10px 20p=
+x=22 valign=3D=22top=22 width=3D=22600=22>Mir&=23225; la <a href=3D=22http:=
+//e=2Emercadolibre=2Ecom=2Ear/pub/cc?_ri_=3DX0Gzc2X%3DYQpglLjHJlYQGjo1mAIvn=
+m2lFcCou8ibRiHwXJ6vzbqcH6oO3FNyzd0fcFhcgXBTpbyCzdshD6pf7fVXtpKX%3DWCTTRY&_e=
+i_=3DEolaGGF4SNMvxFF7KucKuWN0GfaVsvar6FTv2Cgg9puht73_65EcQV-d7Y6qCbmy-ZNcoD=
+p9lRh-GHU=2E=22 target=3D=22_blank=22 title=3D=22Versi&=23243;n online=22>v=
+ersi&=23243;n online</a> =7C Agreganos a tu lista de contactos (<a href=3D=
+=22mailto:ofertas=40e=2Emercadopago=2Ecom=2Ear=22 target=3D=22_blank=22 tit=
+le=3D=22Agreganos=22>ofertas=40e=2Emercadopago=2Ecom=2Ear</a>) =7C <a href=
+=3D=22http://e=2Emercadolibre=2Ecom=2Ear/pub/cc?_ri_=3DX0Gzc2X%3DYQpglLjHJl=
+YQGjo1mAIvnm2lFcCou8ibRiHwXJ6vzbqcH6oO3FNyzd0fcFhcgXBTpbyCzdshD6pf7fVXtpKX%=
+3DWCTUWY&_ei_=3DEolaGGF4SNMvxFF7KucKuWN0GfaVsvar6FTv2Cgg9puht73_65EcQV-d7Y6=
+qCbmy-ZNcoDp9lRh-GHU=2E=22 title=3D=22Cancel&=23225; la suscripci&=23243;n=
+=22>Cancel&=23225; la suscripci&=23243;n</a></td>
+          </tr>
+          <=21-- Fin Preheaeder -->                   <=21--  Fila Logo + R=
+edes sociales -->
+          <tr>
+           <td width=3D=22600=22>
+           <table border=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=
+=22 width=3D=22100%=22>
+            <tbody>
+             <tr>
+              <td width=3D=22210=22 height=3D=2280=22 valign=3D=22middle=22=
+ style=3D=22 border-top: 1px solid =23ccc; border-bottom: 1px solid =23ccc;=
+=22><a href=3D=22http://e=2Emercadolibre=2Ecom=2Ear/pub/cc?_ri_=3DX0Gzc2X%3=
+DYQpglLjHJlYQGjo1mAIvnm2lFcCou8ibRiHwXJ6vzbqcH6oO3FNyzd0fcFhcgXBTpbyCzdshD6=
+pf7fVXtpKX%3DYAWDTY&_ei_=3DEolaGGF4SNMvxFF7KucKuWN0GfaVsvar6FTv2Cgg9puht73_=
+65EcQV-d7Y6qCbmy-ZNcoDp9lRh-GHU=2E=22 target=3D=22_blank=22><img alt=3D=22M=
+ercado Pago=22 title=3D=22Mercado Pago=22 src=3D=22http://www=2Emercadopago=
+=2Ecom/org-img/insiteDesarrollo/assets/img/MercadoPago=2Egif=22 style=3D=22=
+width: 173px;=22 /></a></td>
+             </tr>
+            </tbody>
+           </table>
+           </td>
+          </tr>
+          <=21--  Fin Fila Logo + Redes sociales -->                   <=21=
+-- Titular -->
+          <tr>
+           <td>
+           <table class=3D=22credit=22 border=3D=220=22 cellspacing=3D=220=
+=22 cellpadding=3D=220=22 align=3D=22center=22 width=3D=22600=22>
+            <tbody>
+             <tr>
+              <td align=3D=22center=22 style=3D=22font-family: Arial, Helve=
+tica, sans-serif; font-size: 24px =21important; color: =23009fe3; padding: =
+15px  0px;=22><span style=3D=22font-weight: bold; color: =23ee5434;=22>Hot =
+Sale </span> de <b>Mercado Pago</b> del <b>15</b> al <b>17</b> de <b>Mayo</=
+b></td>
+             </tr>
+            </tbody>
+           </table>
+           </td>
+          </tr>
+          <=21-- Fin  Titular -->
+         </tbody>
+        </table>
+        </td>
+       </tr>
+       <tr>
+        <td width=3D=22100%=22 align=3D=22center=22><a href=3D=22http://e=
+=2Emercadolibre=2Ecom=2Ear/pub/cc?_ri_=3DX0Gzc2X%3DYQpglLjHJlYQGjo1mAIvnm2l=
+FcCou8ibRiHwXJ6vzbqcH6oO3FNyzd0fcFhcgXBTpbyCzdshD6pf7fVXtpKX%3DABCCTY&_ei_=
+=3DEolaGGF4SNMvxFF7KucKuWN0GfaVsvar6FTv2Cgg9puht73_65EcQV-d7Y6qCbmy-ZNcoDp9=
+lRh-GHU=2E=22 target=3D=22_blank=22 title=3D=22HotSale - Hasta 50% Off=22> =
+                  <img src=3D=22https://www=2Emercadopago=2Ecom/org-img/MP3=
+/promociones/ar/2017/hotsale/guest/img/header=2Epng=22 width=3D=22100%=22 s=
+tyle=3D=22display:block=22 alt=3D=22HotSale - Hasta 50% Off=22 border=3D=22=
+0=22 hspace=3D=220=22 vspace=3D=220=22 />                 </a></td>
+       </tr>
+      </tbody>
+     </table>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <=21-- Fin Contenedor general para Header -->
+  <table width=3D=22100%=22 cellpadding=3D=220=22 cellspacing=3D=220=22 bor=
+der=3D=220=22>
+   <tbody>
+    <tr>
+     <td align=3D=22center=22>
+     <table width=3D=22600px=22 cellpadding=3D=220=22 cellspacing=3D=220=22=
+ border=3D=220=22 align=3D=22center=22 class=3D=22content_wrap=22 style=3D=
+=22max-width:600px=22>
+      <tbody>
+       <tr>
+        <td height=3D=2250=22></td>
+       </tr>
+       <tr>
+        <td height=3D=2230=22 align=3D=22center=22 style=3D=22font-family: =
+Arial, Helvetica, Sans-Serif; font-size: 18px =21important; color: =23666;=
+=22>Registrate hoy y acced&=23233; antes que nadie <br /> a las mejores ofe=
+rtas de la temporada=2E</td>
+       </tr>
+       <tr>
+        <td height=3D=2250=22></td>
+       </tr>
+       <=21-- Logos 01 -->
+       <tr>
+        <td width=3D=22600=22 align=3D=22center=22><=21-- Columna 1 -->
+        <div style=3D=22width:290px; display: inline-block; vertical-align:=
+ top; padding-top: 10px=22>
+        <table width=3D=22285=22 align=3D=22center=22 border=3D=220=22 cell=
+padding=3D=220=22 cellspacing=3D=220=22 class=3D=22content_wrap=22 style=3D=
+=22border: 1px solid =23cccccc; border-radius: 5px;=22>
+         <tbody>
+          <tr>
+           <td height=3D=2210=22></td>
+          </tr>
+          <tr>
+           <td align=3D=22center=22 height=3D=2270=22 valign=3D=22middle=22=
+><img src=3D=22https://www=2Emercadopago=2Ecom/org-img/MP3/promociones/ar/2=
+017/hotsale/guest/img/logo_arredo=2Ejpg=22 hspace=3D=220=22 vspace=3D=220=
+=22 style=3D=22display:block=22 alt=3D=22Arredo=22 /></td>
+          </tr>
+          <tr>
+           <td height=3D=2210=22></td>
+          </tr>
+          <tr>
+           <td align=3D=22center=22 height=3D=22275=22 class=3D=22force-col=
+=22 width=3D=22280=22 valign=3D=22middle=22 style=3D=22max-width: 280px; fo=
+nt-size:0px =21important; margin:0; padding:0px; =22><img src=3D=22https://=
+www=2Emercadopago=2Ecom/org-img/MP3/promociones/ar/2017/hotsale/guest/img/a=
+rredo=2Ejpg=22 alt=3D=22Arredo=22 width=3D=22275=22 hspace=3D=220=22 border=
+=3D=220=22 vspace=3D=220=22 style=3D=22display: block;=22 /></td>
+          </tr>
+          <tr>
+           <td height=3D=2210=22></td>
+          </tr>
+         </tbody>
+        </table>
+        </div>
+        <=21-- Columna 1 -->
+        <div style=3D=22width:290px; display: inline-block; vertical-align:=
+ top; padding-top: 10px=22>
+        <table width=3D=22285=22 align=3D=22center=22 border=3D=220=22 cell=
+padding=3D=220=22 cellspacing=3D=220=22 class=3D=22content_wrap=22 style=3D=
+=22border: 1px solid =23cccccc; border-radius: 5px;=22>
+         <tbody>
+          <tr>
+           <td height=3D=2210=22></td>
+          </tr>
+          <tr>
+           <td align=3D=22center=22 height=3D=2270=22 valign=3D=22middle=22=
+><img src=3D=22https://www=2Emercadopago=2Ecom/org-img/MP3/promociones/ar/2=
+017/hotsale/guest/img/logo_sportline=2Ejpg=22 hspace=3D=220=22 vspace=3D=22=
+0=22 style=3D=22display:block=22 alt=3D=22SportLine=22 /></td>
+          </tr>
+          <tr>
+           <td height=3D=2210=22></td>
+          </tr>
+          <tr>
+           <td align=3D=22center=22 height=3D=22275=22 class=3D=22force-col=
+=22 width=3D=22280=22 valign=3D=22middle=22 style=3D=22max-width: 280px;=22=
+><img src=3D=22https://www=2Emercadopago=2Ecom/org-img/MP3/promociones/ar/2=
+017/hotsale/guest/img/sportline=2Ejpg=22 alt=3D=22SportLine=22 width=3D=222=
+75=22 hspace=3D=220=22 border=3D=220=22 vspace=3D=220=22 style=3D=22display=
+: block;=22 /></td>
+          </tr>
+          <tr>
+           <td height=3D=2210=22></td>
+          </tr>
+         </tbody>
+        </table>
+        </div>
+        </td>
+       </tr>
+       <=21-- Logos 01 -->
+       <tr>
+        <td height=3D=2220=22></td>
+       </tr>
+       <=21-- Logos 02 -->
+       <tr>
+        <td width=3D=22600=22 align=3D=22center=22><=21-- Columna 1 -->
+        <div style=3D=22width:290px; display: inline-block; vertical-align:=
+ top; padding-top: 10px=22>
+        <table width=3D=22285=22 align=3D=22center=22 border=3D=220=22 cell=
+padding=3D=220=22 cellspacing=3D=220=22 class=3D=22content_wrap=22 style=3D=
+=22border: 1px solid =23cccccc; border-radius: 5px;=22>
+         <tbody>
+          <tr>
+           <td height=3D=2210=22></td>
+          </tr>
+          <tr>
+           <td align=3D=22center=22 height=3D=2270=22 valign=3D=22middle=22=
+><img src=3D=22https://www=2Emercadopago=2Ecom/org-img/MP3/promociones/ar/2=
+017/hotsale/guest/img/logo_colonia=2Ejpg=22 hspace=3D=220=22 vspace=3D=220=
+=22 style=3D=22display:block=22 alt=3D=22Colonia Express=22 /></td>
+          </tr>
+          <tr>
+           <td height=3D=2210=22></td>
+          </tr>
+          <tr>
+           <td align=3D=22center=22 height=3D=22275=22 class=3D=22force-col=
+=22 width=3D=22280=22 valign=3D=22middle=22 style=3D=22max-width: 280px;=22=
+><img src=3D=22https://www=2Emercadopago=2Ecom/org-img/MP3/promociones/ar/2=
+017/hotsale/guest/img/colonia_express=2Ejpg=22 alt=3D=22Colonia Express=22 =
+width=3D=22275=22 hspace=3D=220=22 border=3D=220=22 vspace=3D=220=22 style=
+=3D=22display: block;=22 /></td>
+          </tr>
+          <tr>
+           <td height=3D=2210=22></td>
+          </tr>
+         </tbody>
+        </table>
+        </div>
+        <=21-- Columna 1 -->
+        <div style=3D=22width:290px; display: inline-block; vertical-align:=
+ top; padding-top: 10px=22>
+        <table width=3D=22285=22 align=3D=22center=22 border=3D=220=22 cell=
+padding=3D=220=22 cellspacing=3D=220=22 class=3D=22content_wrap=22 style=3D=
+=22border: 1px solid =23cccccc; border-radius: 5px;=22>
+         <tbody>
+          <tr>
+           <td height=3D=2210=22></td>
+          </tr>
+          <tr>
+           <td align=3D=22center=22 height=3D=2270=22 valign=3D=22middle=22=
+><img src=3D=22https://www=2Emercadopago=2Ecom/org-img/MP3/promociones/ar/2=
+017/hotsale/guest/img/logo_mimo=2Ejpg=22 hspace=3D=220=22 vspace=3D=220=22 =
+style=3D=22display:block=22 alt=3D=22Mimo=22 /></td>
+          </tr>
+          <tr>
+           <td height=3D=2210=22></td>
+          </tr>
+          <tr>
+           <td align=3D=22center=22 height=3D=22275=22 class=3D=22force-col=
+=22 width=3D=22280=22 valign=3D=22middle=22 style=3D=22max-width: 280px;=22=
+><img src=3D=22https://www=2Emercadopago=2Ecom/org-img/MP3/promociones/ar/2=
+017/hotsale/guest/img/mimo=2Ejpg=22 alt=3D=22Mimo=22 width=3D=22275=22 hspa=
+ce=3D=220=22 border=3D=220=22 vspace=3D=220=22 style=3D=22display: block;=
+=22 /></td>
+          </tr>
+          <tr>
+           <td height=3D=2210=22></td>
+          </tr>
+         </tbody>
+        </table>
+        </div>
+        </td>
+       </tr>
+       <tr>
+        <td height=3D=2250=22></td>
+       </tr>
+       <tr>
+        <td height=3D=2230=22 align=3D=22center=22 style=3D=22font-family: =
+Arial, Helvetica, Sans-Serif; font-size: 22px =21important; color: =23009fe=
+3;=22>Y muchas m&=23225;s=2E=2E=2E</td>
+       </tr>
+       <=21-- Logos 02 -->
+       <tr>
+        <td height=3D=2210=22></td>
+       </tr>
+       <tr>
+        <td height=3D=2230=22 align=3D=22center=22 style=3D=22font-family: =
+Arial, Helvetica, Sans-Serif; font-size: 16px =21important; color: =23666;=
+=22><b>Gadgets=2E Indumentaria=2E Deco=2E</b> Todo eso que <br /> te gusta =
+y quer&=23233;s comprar ahora es posible=2E</td>
+       </tr>
+       <tr>
+        <td height=3D=2250=22></td>
+       </tr>
+       <tr>
+        <td width=3D=22600=22 align=3D=22center=22><a href=3D=22http://e=2E=
+mercadolibre=2Ecom=2Ear/pub/cc?_ri_=3DX0Gzc2X%3DYQpglLjHJlYQGjo1mAIvnm2lFcC=
+ou8ibRiHwXJ6vzbqcH6oO3FNyzd0fcFhcgXBTpbyCzdshD6pf7fVXtpKX%3DABCCTY&_ei_=3DE=
+olaGGF4SNMvxFF7KucKuWN0GfaVsvar6FTv2Cgg9puht73_65EcQV-d7Y6qCbmy-ZNcoDp9lRh-=
+GHU=2E=22 target=3D=22_blank=22 title=3D=22Desat&=23225; tu instinto compra=
+dor=22>                     <img src=3D=22https://www=2Emercadopago=2Ecom/o=
+rg-img/MP3/promociones/ar/2017/hotsale/guest/img/banner=2Ejpg=22 hspace=3D=
+=220=22 vspace=3D=220=22 border=3D=220=22 alt=3D=22Desat&=23225; tu instint=
+o comprador=22 />                   </a></td>
+       </tr>
+       <tr>
+        <td height=3D=2250=22></td>
+       </tr>
+       <tr>
+        <td style=3D=22text-align: right;=22 class=3D=22center=22><a href=
+=3D=22http://e=2Emercadolibre=2Ecom=2Ear/pub/cc?_ri_=3DX0Gzc2X%3DYQpglLjHJl=
+YQGjo1mAIvnm2lFcCou8ibRiHwXJ6vzbqcH6oO3FNyzd0fcFhcgXBTpbyCzdshD6pf7fVXtpKX%=
+3DYAWDTY&_ei_=3DEolaGGF4SNMvxFF7KucKuWN0GfaVsvar6FTv2Cgg9puht73_65EcQV-d7Y6=
+qCbmy-ZNcoDp9lRh-GHU=2E=22 target=3D=22_blank=22><img alt=3D=22Mercado Pago=
+=22 title=3D=22Mercado Pago=22 src=3D=22http://www=2Emercadopago=2Ecom/org-=
+img/insiteDesarrollo/assets/img/MercadoPago=2Egif=22 style=3D=22width: 150p=
+x;=22 /></a></td>
+       </tr>
+       <=21-- Logos 02 -->
+       <tr>
+        <td height=3D=2210=22></td>
+       </tr>
+       <tr>
+        <td height=3D=2230=22 style=3D=22margin: 0px; padding: 0px; line-he=
+ight: 0; letter-spacing: 0; font-size: 0px =21important;=22>
+        <table width=3D=22220=22 align=3D=22left=22 class=3D=22col=22 cellp=
+adding=3D=220=22 cellspacing=3D=220=22 border=3D=220=22>
+         <tbody>
+          <tr>
+           <td height=3D=2220=22></td>
+          </tr>
+          <tr>
+           <td align=3D=22center=22 style=3D=22font-family: Arial, Helvetic=
+a, Sans-Serif; font-size: 12px =21important; color: =23999;=22>&iexcl;Desca=
+rga la app=21</td>
+          </tr>
+          <tr>
+           <td height=3D=225=22></td>
+          </tr>
+          <tr>
+           <td width=3D=22600=22 align=3D=22center=22 style=3D=22padding: 1=
+0px 0px=22>
+           <table width=3D=22220=22 align=3D=22center=22 cellpadding=3D=220=
+=22 cellspacing=3D=220=22 border=3D=220=22>
+            <tbody>
+             <tr>
+              <td width=3D=22110=22 align=3D=22center=22><a href=3D=22http:=
+//e=2Emercadolibre=2Ecom=2Ear/pub/cc?_ri_=3DX0Gzc2X%3DYQpglLjHJlYQGjo1mAIvn=
+m2lFcCou8ibRiHwXJ6vzbqcH6oO3FNyzd0fcFhcgXBTpbyCzdshD6pf7fVXtpKX%3DABCCWY&_e=
+i_=3DEolaGGF4SNMvxFF7KucKuWN0GfaVsvar6FTv2Cgg9puht73_65EcQV-d7Y6qCbmy-ZNcoD=
+p9lRh-GHU=2E=22 target=3D=22_blank=22 title=3D=22Apple Store=22>           =
+                      <img src=3D=22https://www=2Emercadopago=2Ecom/org-img=
+/MP3/promociones/ar/2017/hotsale/guest/img/aStore=2Ejpg=22 hspace=3D=220=22=
+ vspace=3D=220=22 border=3D=220=22 alt=3D=22Apple Store=22 />              =
+                 </a></td>
+              <td width=3D=22110=22 align=3D=22center=22><a href=3D=22http:=
+//e=2Emercadolibre=2Ecom=2Ear/pub/cc?_ri_=3DX0Gzc2X%3DYQpglLjHJlYQGjo1mAIvn=
+m2lFcCou8ibRiHwXJ6vzbqcH6oO3FNyzd0fcFhcgXBTpbyCzdshD6pf7fVXtpKX%3DABCCAY&_e=
+i_=3DEolaGGF4SNMvxFF7KucKuWN0GfaVsvar6FTv2Cgg9puht73_65EcQV-d7Y6qCbmy-ZNcoD=
+p9lRh-GHU=2E=22 target=3D=22_blank=22 title=3D=22Google Play=22>           =
+                      <img src=3D=22https://www=2Emercadopago=2Ecom/org-img=
+/MP3/promociones/ar/2017/hotsale/guest/img/gPlay=2Ejpg=22 hspace=3D=220=22 =
+vspace=3D=220=22 border=3D=220=22 alt=3D=22Google Play=22 />               =
+                </a></td>
+             </tr>
+            </tbody>
+           </table>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+        <table width=3D=22150=22 align=3D=22right=22 class=3D=22col=22 cell=
+padding=3D=220=22 cellspacing=3D=220=22 border=3D=220=22>
+         <tbody>
+          <tr>
+           <td height=3D=2220=22></td>
+          </tr>
+          <tr>
+           <td align=3D=22center=22 style=3D=22font-family: Arial, Helvetic=
+a, Sans-Serif; font-size: 12px =21important; color: =23999;=22>Siguenos en<=
+/td>
+          </tr>
+          <tr>
+           <td height=3D=225=22></td>
+          </tr>
+          <tr>
+           <td width=3D=22600=22 align=3D=22center=22 style=3D=22padding: 1=
+0px 0px=22>
+           <table width=3D=22150=22 align=3D=22center=22 cellpadding=3D=220=
+=22 cellspacing=3D=220=22 border=3D=220=22>
+            <tbody>
+             <tr>
+              <td width=3D=2250=22 align=3D=22center=22><a href=3D=22http:/=
+/e=2Emercadolibre=2Ecom=2Ear/pub/cc?_ri_=3DX0Gzc2X%3DYQpglLjHJlYQGjo1mAIvnm=
+2lFcCou8ibRiHwXJ6vzbqcH6oO3FNyzd0fcFhcgXBTpbyCzdshD6pf7fVXtpKX%3DYAWDWY&_ei=
+_=3DEolaGGF4SNMvxFF7KucKuWN0GfaVsvar6FTv2Cgg9puht73_65EcQV-d7Y6qCbmy-ZNcoDp=
+9lRh-GHU=2E=22 target=3D=22_blank=22 title=3D=22Facebook=22>               =
+                  <img src=3D=22https://www=2Emercadopago=2Ecom/org-img/MP3=
+/promociones/ar/2017/hotsale/guest/img/fb=2Ejpg=22 hspace=3D=220=22 vspace=
+=3D=220=22 border=3D=220=22 alt=3D=22Facebook=22 />                        =
+       </a></td>
+              <td width=3D=2250=22 align=3D=22center=22><a href=3D=22http:/=
+/e=2Emercadolibre=2Ecom=2Ear/pub/cc?_ri_=3DX0Gzc2X%3DYQpglLjHJlYQGjo1mAIvnm=
+2lFcCou8ibRiHwXJ6vzbqcH6oO3FNyzd0fcFhcgXBTpbyCzdshD6pf7fVXtpKX%3DWCSARY&_ei=
+_=3DEolaGGF4SNMvxFF7KucKuWN0GfaVsvar6FTv2Cgg9puht73_65EcQV-d7Y6qCbmy-ZNcoDp=
+9lRh-GHU=2E=22 target=3D=22_blank=22 title=3D=22Twitter=22>                =
+                 <img src=3D=22https://www=2Emercadopago=2Ecom/org-img/MP3/=
+promociones/ar/2017/hotsale/guest/img/tw=2Ejpg=22 hspace=3D=220=22 vspace=
+=3D=220=22 border=3D=220=22 alt=3D=22Twitter=22 />                         =
+      </a></td>
+              <td width=3D=2250=22 align=3D=22center=22><a href=3D=22http:/=
+/e=2Emercadolibre=2Ecom=2Ear/pub/cc?_ri_=3DX0Gzc2X%3DYQpglLjHJlYQGjo1mAIvnm=
+2lFcCou8ibRiHwXJ6vzbqcH6oO3FNyzd0fcFhcgXBTpbyCzdshD6pf7fVXtpKX%3DYAWDAY&_ei=
+_=3DEolaGGF4SNMvxFF7KucKuWN0GfaVsvar6FTv2Cgg9puht73_65EcQV-d7Y6qCbmy-ZNcoDp=
+9lRh-GHU=2E=22 target=3D=22_blank=22 title=3D=22Instagram=22>              =
+                   <img src=3D=22https://www=2Emercadopago=2Ecom/org-img/MP=
+3/promociones/ar/2017/hotsale/guest/img/ig=2Ejpg=22 hspace=3D=220=22 vspace=
+=3D=220=22 border=3D=220=22 alt=3D=22Instagram=22 />                       =
+        </a></td>
+             </tr>
+            </tbody>
+           </table>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+        </td>
+       </tr>
+       <=21-- Logos 02 -->
+       <tr>
+        <td height=3D=2250=22></td>
+       </tr>
+      </tbody>
+     </table>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <=21-- Fin Contenedor general para Header -->
+  <table width=3D=22100%=22 cellpadding=3D=220=22 cellspacing=3D=220=22 bor=
+der=3D=220=22>
+   <tbody>
+    <tr>
+     <td align=3D=22center=22>
+     <table width=3D=22600px=22 cellpadding=3D=220=22 cellspacing=3D=220=22=
+ border=3D=220=22 align=3D=22center=22 class=3D=22content_wrap=22 style=3D=
+=22max-width:600px=22>
+      <=21--             <tr>
+              <td  width=3D=22600=22 align=3D=22center=22>
+                <table class=3D=22logo=22 border=3D=220=22 cellspacing=3D=
+=220=22 cellpadding=3D=220=22 align=3D=22right=22>
+                  <tr>
+                    <td align=3D=22center=22 style=3D=22padding: 10px 0px;=
+=22 ><a href=3D=22https://www=2Emercadopago=2Ecom=2Ear=22 target=3D=22_blan=
+k=22><img alt=3D=22MercadoPago=22 src=3D=22http://www=2Emercadopago=2Ecom/o=
+rg-img/insiteDesarrollo/assets/img/MercadoPago=2Egif=22 style=3D=22width: 1=
+73px; height: 46px;=22 /></a>
+                    </td>
+                    </tr>
+                  <tr>
+                    <td width=3D=22100%=22 style=3D=22font-family:Arial, He=
+lvetica, sans-serif; font-size:12px; color:=233774A3; border-top:solid 1px =
+=23CCCCCC;padding:8px 0 15px 0; text-align:center=22>
+                      Copyright =C2=A9 2017 Mercado Pago=2Ecom
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr> -->
+      <tbody>
+       <tr>
+        <td height=3D=2210=22></td>
+       </tr>
+       <tr>
+        <td align=3D=22center=22 style=3D=22font-family:Arial, Helvetica, s=
+ans-serif; font-size:11px; color:=23999999;text-align:center;=22>
+        <p style=3D=22font-family:Arial, Helvetica, sans-serif; font-size:1=
+1px; color:=23999999;text-align:center;=22></p>
+        <br />
+        <p>
+  <div align=3D=22center=22>
+  <table border=3D=220=22 cellspacing=3D=220=22 cellpadding=3D=220=22 width=
+=3D=22100%=22 style=3D=22max-width:600px=22>
+   <tbody>
+    <tr>
+     <td style=3D=22padding:1pt 1pt 1pt 1pt=22 align=3D=22center=22><span s=
+tyle=3D=22font-size:8=2E5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&=
+quot;;color:=23666666; text-align:center=22> Te enviamos este e-mail a jpru=
+ata=40fapersa=2Ecom porque elegiste recibir informaci&=23243;n=2E <a href=
+=3D=22http://e=2Emercadolibre=2Ecom=2Ear/pub/cc?_ri_=3DX0Gzc2X%3DYQpglLjHJl=
+YQGjo1mAIvnm2lFcCou8ibRiHwXJ6vzbqcH6oO3FNyzd0fcFhcgXBTpbyCzdshD6pf7fVXtpKX%=
+3DWCTUWY&_ei_=3DEolaGGF4SNMvxFF7KucKuWN0GfaVsvar6FTv2Cgg9puht73_65EcQV-d7Y6=
+qCbmy-ZNcoDp9lRh-GHU=2E=22> Cancelar suscripci&=23243;n</a>=2E</span></td>
+    </tr>
+    <tr>
+     &=239;
+     <td align=3D=22center=22><span style=3D=22font-size:8=2E5pt;  font-fam=
+ily:&quot;Arial&quot;,&quot;sans-serif&quot;;color:=23666666=22> Nunca env&=
+=23237;es tu clave o datos de tu cuenta por e-mail=2E</span> <br /> <span s=
+tyle=3D=22font-size:8=2E5pt; font-family:&quot;Arial&quot;,&quot;sans-serif=
+&quot;;color:=23666666=22>Visita las <a href=3D=22http://e=2Emercadolibre=
+=2Ecom=2Ear/pub/cc?_ri_=3DX0Gzc2X%3DYQpglLjHJlYQGjo1mAIvnm2lFcCou8ibRiHwXJ6=
+vzbqcH6oO3FNyzd0fcFhcgXBTpbyCzdshD6pf7fVXtpKX%3DWCTUAY&_ei_=3DEolaGGF4SNMvx=
+FF7KucKuWN0GfaVsvar6FTv2Cgg9puht73_65EcQV-d7Y6qCbmy-ZNcoDp9lRh-GHU=2E=22>Po=
+l&=23237;ticas de Privacidad</a> y los <a href=3D=22http://e=2Emercadolibre=
+=2Ecom=2Ear/pub/cc?_ri_=3DX0Gzc2X%3DYQpglLjHJlYQGjo1mAIvnm2lFcCou8ibRiHwXJ6=
+vzbqcH6oO3FNyzd0fcFhcgXBTpbyCzdshD6pf7fVXtpKX%3DWCSATY&_ei_=3DEolaGGF4SNMvx=
+FF7KucKuWN0GfaVsvar6FTv2Cgg9puht73_65EcQV-d7Y6qCbmy-ZNcoDp9lRh-GHU=2E=22>  =
+ T&=23233;rminos y Condiciones</a> de MercadoPago (de MercadoLibre S=2ER=2E=
+L)</span></td>
+    </tr>
+    <tr>
+     &=239;
+     <td align=3D=22center=22><span style=3D=22font-size:8=2E5pt;font-famil=
+y:&quot;Arial&quot;,&quot;sans-serif&quot;;color:=23666666; text-align:cent=
+er=22>El titular del dato podr&=23225; solicitar el retiro o bloqueo, total=
+ o parcial, de su nombre de la base de datos=2E A pedido del interesado, se=
+ le informar&=23225; el nombre del responsable o usuario del banco de datos=
+ que provey&=23243; la informaci&=23243;n (Ley 25=2E326 - Art=2E27=2E - INC=
+=2E 3 y Decreto 1558/01 - art=2E 27=2E - 3er=2E P&=23225;rrafo)=2E  </span>=
+</td>
+    </tr>
+    <tr>
+     &=239;
+     <td style=3D=22padding:1pt 1pt 1pt 1pt=22 align=3D=22center=22><span s=
+tyle=3D=22font-size:8=2E5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&=
+quot;;color:=23666666=22>El titular de los datos personales tiene la facult=
+ad de ejercer el derecho de acceso a los mismos en forma gratuita a interva=
+los no inferior a seis meses, salvo que se acredite un inter&=23233;s leg&=
+=23237;timo al efecto conforme lo establecido en el art&=23237;culo 14, inc=
+iso 3 de la Ley N&deg; 25=2E326=2E La Direcci&=23243;n Nacional de Protecci=
+&=23243;n de Datos Personales, &=23243;rgano de Control de la Ley N&deg; 25=
+=2E326, tiene la atribuci&=23243;n de atender las denuncias y reclamos que =
+se interpongan con relaci&=23243;n al incumplimiento de las normas sobre pr=
+otecci&=23243;n de datos personales=2E <br /><span style=3D=22font-size:8=
+=2E5pt;line-height:115%;font-family:&=2310;&quot;Arial&quot;,&quot;sans-ser=
+if&quot;;color:=23666666=22>P=2EO=2E Box - Leandro N=2E Alem 518, piso 11, =
+CP 1001, CABA, Argentina=2E</span><o:p></o:p></span></td>
+    </tr>
+    <tr>
+     <td height=3D=2220=22></td>
+    </tr>
+   </tbody>
+  </table>
+  </div>
+  <=21-- Campaign ID: GUEST_AO --></p>
+        </td>
+       </tr>
+       <tr>
+        <td height=3D=2230=22></td>
+       </tr>
+      </tbody>
+     </table>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p></p><br>
+<table cellpadding=3D=220=22 cellspacing=3D=220=22 style=3D=22border: 0px; =
+padding: 0px; margin: 0px; position: absolute; display: none; float: left=
+=22>
+<tr>
+<td height=3D=221=22 style=3D=22font-size: 1px; line-height: 1px; padding: =
+0px;=22>
+<br><img height=3D=221=22 width=3D=221=22 style=3D =22padding: 0px 0px; =21=
+important; margin: 0px 0px; font-size: 1px; line-height: 1px;=22 src=3D=22h=
+ttp://e=2Emercadolibre=2Ecom=2Ear/pub/as?_ri_=3DX0Gzc2X%3DYQpglLjHJlYQGjo1m=
+AIvnm2lFcCou8ibRiHwXJ6vzbqcH6oO3FNyzd0fcFhcgXBTpbyCzdshD6pf7fVXHkMX%3Dw&_ei=
+_=3DEolaGGF4SNMvxFF7KucKuWN0GfaVsvar6FTv2Cgg9puht73_65EcQV-d7Y6qCbmy-ZNcoDp=
+9lRh-GHU=2E=22></img>
+</td>
+</tr>
+</table>
+ </body>
+</html>
+
+

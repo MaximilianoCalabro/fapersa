@@ -1,0 +1,455 @@
+Return-Path: <estudiodelorenzo@hotmail.com>
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id 0WVnCJnerVh5LQAATLP0zA
+	; Wed, 22 Feb 2017 15:55:21 -0300
+Return-path: <estudiodelorenzo@hotmail.com>
+Envelope-to: acarboni@fapersa.com,
+ comext@fapersa.com,
+ rdopazo@fapersa.com,
+ sgonzalez@fapersa.com
+Delivery-date: Wed, 22 Feb 2017 15:55:21 -0300
+Received: from bay004-omc2s16.hotmail.com ([65.54.190.91]:54788)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-SHA384:256)
+	(Exim 4.88)
+	(envelope-from <estudiodelorenzo@hotmail.com>)
+	id 1cgc4G-0003me-MG; Wed, 22 Feb 2017 15:55:20 -0300
+Received: from NAM02-CY1-obe.outbound.protection.outlook.com ([65.54.190.125]) by BAY004-OMC2S16.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Wed, 22 Feb 2017 10:53:32 -0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=NikvQasDIS5rZ42S9ZdAEc3SRc/9sWuBaRZ+663JKSk=;
+ b=JTeLPl/QOY80JI3Pa+JL+2VFcIMYlxRYgqksGWCScDbLNLpefUt5GRPYVDR0L+UOsAtdOgPQOwoLHd3His0rImUTQMRa2ExBsaaXrTbJX5HwaCHv931ucxpn/LPLSKhUEm1mEICSds1V4e8MaQS15RJqUCTDFflpwLv3fGxRvuchid5Ffxv25D7oxkLfzZlFuI94ql7DlJBIhsMtErvt7x1Uo0GqxjU2bXK7zLcIrZnDIuzTrc0xUeTmkpax2k8ykaLe6qS2fMyA8CWBAfzp+InAQWYeV5ISNjkZbMRya6lnnsa0wzTkg54Lv+pupYgqPv1iLDvO4DTE/t0eejeKTg==
+Received: from CY1NAM02FT044.eop-nam02.prod.protection.outlook.com
+ (10.152.74.56) by CY1NAM02HT037.eop-nam02.prod.protection.outlook.com
+ (10.152.74.178) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.919.10; Wed, 22
+ Feb 2017 18:53:31 +0000
+Received: from MWHPR20MB1647.namprd20.prod.outlook.com (10.152.74.51) by
+ CY1NAM02FT044.mail.protection.outlook.com (10.152.75.137) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.919.10 via Frontend Transport; Wed, 22 Feb 2017 18:53:30 +0000
+Received: from MWHPR20MB1647.namprd20.prod.outlook.com ([10.171.150.17]) by
+ MWHPR20MB1647.namprd20.prod.outlook.com ([10.171.150.17]) with mapi id
+ 15.01.0919.018; Wed, 22 Feb 2017 18:53:30 +0000
+From: Estudio De Lorenzo <estudiodelorenzo@hotmail.com>
+To: Andres Carboni <acarboni@fapersa.com>, Marcela Triszcz
+	<comext@fapersa.com>, roberto dopazo <rdopazo@fapersa.com>, santiago gonzalez
+	<sgonzalez@fapersa.com>
+Subject: Re: arribo de cargas
+Thread-Topic: arribo de cargas
+Thread-Index: AQHSjPWNpV24Ymp5kkevCpq/IyW6b6F1BnSAgAAF3wCAAFMMow==
+Date: Wed, 22 Feb 2017 18:53:30 +0000
+Message-ID: <MWHPR20MB16471EF0411B832ED07AD991D4500@MWHPR20MB1647.namprd20.prod.outlook.com>
+References: <MWHPR20MB16479750EB6AAC5A4D533DEAD4500@MWHPR20MB1647.namprd20.prod.outlook.com>
+ <58AD930D.305@fapersa.com>,<3b9a38e3-11ad-5ab3-4c4e-35532495a2a9@fapersa.com>
+In-Reply-To: <3b9a38e3-11ad-5ab3-4c4e-35532495a2a9@fapersa.com>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator:
+authentication-results: fapersa.com; dkim=none (message not signed)
+ header.d=none;fapersa.com; dmarc=none action=none header.from=hotmail.com;
+x-incomingtopheadermarker: OriginalChecksum:8E689CCA45B539679A5C34547C1472C3BD778FBB15524038FC786B04ACFD297E;UpperCasedChecksum:27DB92FF31AE99D5F824996DA5B31DBDCB32D42A61CF11EB208C9FB245D2ABB8;SizeAsReceived:7963;Count:39
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [n2xe28YNICavqntvAgijytByy8De+uzn]
+x-incomingheadercount: 39
+x-eopattributedmessage: 0
+x-microsoft-exchange-diagnostics: 1;CY1NAM02HT037;5:9vgIr1dvGtDDljwkqvXFKy7hyxP+9I0QoeW6eyAwA5LbfuDME+PYmChRwHoVbOUeHZK+ceSfsKTM5tVgg8yZPLXQEKyOjr1XDrIoKT8r255rJfIL+2v82FIyIBzBQ/x7pT641KBOmkxN6UKkAS4ucE4+0y3rvgqVoAiIobHKIbQ=;24:seKFZmhYAw0wpng9pRdaicimQFDhSFZ4zWnc5X4Bb3vkbEMb4QxP0YLUWfndLa1fTrdP/LeBVISmAy/JPLGh4kF/m9/UzzyA6H3vqgYiZac=;7:5zL0TBsZfASb03Brz/ijeLahAE18He7sMdMhboYDJfZh8/KciwNdxKQCAOwYX17klffrBPuH1drie9pmx65s2WGIU0WxcD7t5IGpUosOy2xjJHjI99udyuxvG7M1ZOgozzzU9psOlM5S+vrziC115A9GugEFaFIz/ltURAQvr3F2FsZsbvkLMQUefxzzL56+3b0AjMoiDoxD51Q4XSui/A3UzxEFcMYoC070C5IsgmKgdp4sNDpcPkckQ7dX4kpAL/34N1DtAUvyZMV5iD+hAz2Ze/cB0+CumwCm+OcxG6VtVcwcgUb1uPhq8QHJFewi
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(10019020)(98900012);DIR:OUT;SFP:1102;SCL:1;SRVR:CY1NAM02HT037;H:MWHPR20MB1647.namprd20.prod.outlook.com;FPR:;SPF:None;MLV:ovrnspm;LANG:es;
+x-ms-office365-filtering-correlation-id: 95b4a316-7cc4-4807-8ef8-08d45b541834
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(201702061074)(5061506564)(5061507331)(1603103135)(1603101373)(1601125245)(1701031045);SRVR:CY1NAM02HT037;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(432015087)(444000031);SRVR:CY1NAM02HT037;BCL:0;PCL:0;RULEID:;SRVR:CY1NAM02HT037;
+x-forefront-prvs: 022649CC2C
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/related;
+	boundary="_005_MWHPR20MB16471EF0411B832ED07AD991D4500MWHPR20MB1647namp_";
+	type="multipart/alternative"
+MIME-Version: 1.0
+X-OriginatorOrg: hotmail.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 22 Feb 2017 18:53:30.7220
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CY1NAM02HT037
+X-OriginalArrivalTime: 22 Feb 2017 18:53:32.0229 (UTC) FILETIME=[F69E4F50:01D28D3C]
+X-Spam-Status: No, score=-2.0
+X-Spam-Score: -19
+X-Spam-Bar: --
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Andrés van los datos factura 018/17 [...] 
+ 
+ Content analysis details:   (-2.0 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: fapersa.com]
+ -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+                             [65.54.190.91 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (estudiodelorenzo[at]hotmail.com)
+ -0.0 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  0.0 LOTS_OF_MONEY          Huge... sums of money
+ -0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+X-Spam-Flag: NO
+
+--_005_MWHPR20MB16471EF0411B832ED07AD991D4500MWHPR20MB1647namp_
+Content-Type: multipart/alternative;
+	boundary="_000_MWHPR20MB16471EF0411B832ED07AD991D4500MWHPR20MB1647namp_"
+
+--_000_MWHPR20MB16471EF0411B832ED07AD991D4500MWHPR20MB1647namp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Andr=E9s
+
+van los datos
+
+factura 018/17
+
+despacho 17062IC05000110F
+
+importe $ 278.932,75
+
+simi 97P
+
+------------------
+
+
+factura 90337467
+
+despacho 17062IC05000111G
+
+importe $ 345.708,27
+
+simi 1404H
+
+------------------
+
+saldo $ 3.789,83
+AMBAS CARGAS YA FUERON LIBERADAS
+SLDS.
+________________________________
+De: Andres Carboni <acarboni@fapersa.com>
+Enviado: mi=E9rcoles, 22 de febrero de 2017 10:54 a.m.
+Para: Marcela Triszcz; Estudio De Lorenzo; roberto dopazo; santiago gonzale=
+z
+Asunto: Re: arribo de cargas
+
+
+Ya hicimos las transferencias por las dos cargas.
+
+Saludos
+
+El 22/02/2017 a las 10:33 a.m., Marcela Triszcz escribi=F3:
+
+Andr=E9s:
+
+Llleg=F3 KS
+Susin, estan averiguando los de trasnsrodas.
+Saludos.
+
+
+
+[cid:part1.78F7B95C.8487843D@fapersa.com]
+Marcela Triszcz
+Compras / Comercio Exterior
+Tel: +54 342 4810810
+Lamadrid 3065
+CP 3000 Santa Fe, Argentina.
+comext@fapersa.com<mailto:comext@fapersa.com>
+El 22/02/2017 a las 07:23 a.m., Estudio De Lorenzo escribi=F3:
+
+Andr=E9s
+
+Necesito saber que van hacer apenas arribe los camones con SUSIN Y KS y los=
+ bancos a declarar
+
+El de susin si no me cambiaron la orden debe ser liberado temprano para pod=
+er hacer la exportaci=F3n a Brasil
+
+Apenas arriben te aviso
+
+Favor de agilizar tr=E1mites
+
+slds.
+
+
+--
+[cid:part3.A0F23D4F.EE1B21C5@fapersa.com]
+C.P.N. Carboni, Andr=E9s
+Administraci=F3n y Finanzas
+Tel: +54 342 4810810
+Lamadrid 3065
+Santa Fe, Argentina.
+acarboni@fapersa.com<mailto:acarboni@fapersa.com>
+
+--_000_MWHPR20MB16471EF0411B832ED07AD991D4500MWHPR20MB1647namp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt;color:#000000;font=
+-family:Calibri,Arial,Helvetica,sans-serif;" dir=3D"ltr">
+<p>Andr=E9s</p>
+<p>van los datos</p>
+<p>factura 018/17</p>
+<p>despacho 17062IC05000110F</p>
+<p>importe $ 278.932,75</p>
+<p>simi 97P</p>
+<p>------------------</p>
+<br>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, 'Apple Colo=
+r Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emo=
+ji', EmojiSymbols; font-size: 16px;">
+factura 90337467</p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, 'Apple Colo=
+r Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emo=
+ji', EmojiSymbols; font-size: 16px;">
+despacho 17062IC05000111G</p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, 'Apple Colo=
+r Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emo=
+ji', EmojiSymbols; font-size: 16px;">
+importe $ 345.708,27</p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, 'Apple Colo=
+r Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emo=
+ji', EmojiSymbols; font-size: 16px;">
+simi 1404H</p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, 'Apple Colo=
+r Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emo=
+ji', EmojiSymbols; font-size: 16px;">
+------------------</p>
+saldo $ 3.789,83
+<div>AMBAS CARGAS YA FUERON LIBERADAS</div>
+<div>SLDS.<br>
+<div style=3D"color: rgb(0, 0, 0);">
+<hr tabindex=3D"-1" style=3D"display:inline-block; width:98%">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" co=
+lor=3D"#000000" style=3D"font-size:11pt"><b>De:</b> Andres Carboni &lt;acar=
+boni@fapersa.com&gt;<br>
+<b>Enviado:</b> mi=E9rcoles, 22 de febrero de 2017 10:54 a.m.<br>
+<b>Para:</b> Marcela Triszcz; Estudio De Lorenzo; roberto dopazo; santiago =
+gonzalez<br>
+<b>Asunto:</b> Re: arribo de cargas</font>
+<div>&nbsp;</div>
+</div>
+<div>
+<p>Ya hicimos las transferencias por las dos cargas.</p>
+<p>Saludos<br>
+</p>
+<br>
+<div class=3D"moz-cite-prefix">El 22/02/2017 a las 10:33 a.m., Marcela Tris=
+zcz escribi=F3:<br>
+</div>
+<blockquote type=3D"cite"><br>
+Andr=E9s:<br>
+<br>
+Llleg=F3 KS<br>
+Susin, estan averiguando los de trasnsrodas.<br>
+Saludos.<br>
+<br>
+<br>
+<br>
+<div class=3D"moz-signature"><img naturalheight=3D"34" naturalwidth=3D"109"=
+ aria-expanded=3D"false" tabindex=3D"0" style=3D"-webkit-user-select: none;=
+" src=3D"cid:part1.78F7B95C.8487843D@fapersa.com">
+<table border=3D"0">
+<tbody>
+<tr>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Marcela Triszcz</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Compras / Comercio Exterior</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Tel: &#43;54 342 4810810</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Lamadrid 3065</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>CP 3000 Santa Fe, Argentina.</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:8pt">
+<td><a class=3D"moz-txt-link-abbreviated" href=3D"mailto:comext@fapersa.com=
+">comext@fapersa.com</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"moz-cite-prefix">El 22/02/2017 a las 07:23 a.m., Estudio De L=
+orenzo escribi=F3:<br>
+</div>
+<blockquote type=3D"cite">
+<div id=3D"divtagdefaultwrapper" dir=3D"ltr" style=3D"font-size:12pt; color=
+:#000000; font-family:Calibri,Arial,Helvetica,sans-serif">
+<p>Andr=E9s</p>
+<p>Necesito saber que van hacer apenas arribe los camones con SUSIN Y KS y =
+los bancos a declarar</p>
+<p>El de susin si no me cambiaron la orden debe ser liberado temprano para =
+poder hacer la exportaci=F3n a Brasil</p>
+<p>Apenas arriben te aviso</p>
+<p>Favor de agilizar tr=E1mites</p>
+<p>slds.</p>
+</div>
+</blockquote>
+<br>
+</blockquote>
+<br>
+<div class=3D"moz-signature">-- <br>
+<img naturalheight=3D"41" naturalwidth=3D"123" aria-expanded=3D"false" tabi=
+ndex=3D"0" style=3D"-webkit-user-select: none;" src=3D"cid:part3.A0F23D4F.E=
+E1B21C5@fapersa.com">
+<table border=3D"0">
+<tbody>
+<tr>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>C.P.N. Carboni, Andr=E9s</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Administraci=F3n y Finanzas</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Tel: &#43;54 342 4810810</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Lamadrid 3065</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Santa Fe, Argentina.</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:8pt">
+<td><a class=3D"moz-txt-link-abbreviated" href=3D"mailto:acarboni@fapersa.c=
+om">acarboni@fapersa.com</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+--_000_MWHPR20MB16471EF0411B832ED07AD991D4500MWHPR20MB1647namp_--
+
+--_005_MWHPR20MB16471EF0411B832ED07AD991D4500MWHPR20MB1647namp_
+Content-Type: image/jpeg; name="ATT00001.jpg"
+Content-Description: ATT00001.jpg
+Content-Disposition: inline; filename="ATT00001.jpg"; size=1543;
+	creation-date="Wed, 22 Feb 2017 13:53:01 GMT";
+	modification-date="Wed, 22 Feb 2017 13:53:01 GMT"
+Content-ID: <part1.78F7B95C.8487843D@fapersa.com>
+Content-Transfer-Encoding: base64
+
+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
+iL//2Q==
+
+--_005_MWHPR20MB16471EF0411B832ED07AD991D4500MWHPR20MB1647namp_
+Content-Type: image/jpeg; name="logo.jpg"
+Content-Description: logo.jpg
+Content-Disposition: inline; filename="logo.jpg"; size=2446;
+	creation-date="Wed, 22 Feb 2017 13:53:01 GMT";
+	modification-date="Wed, 22 Feb 2017 13:53:01 GMT"
+Content-ID: <part3.A0F23D4F.EE1B21C5@fapersa.com>
+Content-Transfer-Encoding: base64
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/4QAWRXhpZgAASUkqAAgAAAAAAAAAAAD/2wBDAAgGBgcGBQgH
+BwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/
+2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy
+MjIyMjIyMjIyMjL/wAARCAApAHsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQF
+BgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS
+0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4
+eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi
+4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREA
+AgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl
+8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImK
+kpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP0
+9fb3+Pn6/9oADAMBAAIRAxEAPwD2bxT4ksvCmhy6pfB2RWCJHHjdI56KM/ifoDXlzfH8hiB4ZXHb
+dqGD/wCi62PjsT/wiGnDPH9or/6KkrF+Hfi/wVong6G11me3jvhLI8gayeQkFjtJYIc8Y71006cf
+Z8zVzlqVJe05U7I7jwP4y1TxlFJeP4fXT9NXKpctdmQyuOoVdgyB3OcZ4GecdpXD+Nbjxc1hDYeD
+dLISRAz3oliQIvZUVmBz6kjgdOeR5hrOqfFPwpBDe6rfXdvC8nlo7PDKpbBOCBnsD19KlUufWNl5
+FOr7NWkm/Ox9D0V4t4n8fazd/DHQtbsrtrG9nu2guTB0YqHHfPBwDjtmuatdX+KF7ov9s2l3qc+n
+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
+
+--_005_MWHPR20MB16471EF0411B832ED07AD991D4500MWHPR20MB1647namp_--

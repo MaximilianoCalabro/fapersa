@@ -1,0 +1,612 @@
+Return-Path: <martinceppi@hotmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id EbfPGBFTuVhOZgAATLP0zA
+	for <jpruata@fapersa.com>; Fri, 03 Mar 2017 08:27:13 -0300
+Return-path: <martinceppi@hotmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Fri, 03 Mar 2017 08:27:13 -0300
+Received: from col004-omc3s8.hotmail.com ([65.55.34.146]:58358)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-SHA384:256)
+	(Exim 4.88)
+	(envelope-from <martinceppi@hotmail.com>)
+	id 1cjlMV-0007QT-V3
+	for jpruata@fapersa.com; Fri, 03 Mar 2017 08:27:13 -0300
+Received: from NAM01-BY2-obe.outbound.protection.outlook.com ([65.55.34.136]) by COL004-OMC3S8.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Fri, 3 Mar 2017 03:26:23 -0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=vVB5i3sJuBf6v4EGssCoRpW33LwdFDw9HrOstjELXsE=;
+ b=ZKknBERACF/BQ+8vRGAfL/3R76lR2NJlYUh9CV21E2s4IM3OLo2wjSNsPwDtnpq0ibpSEE1hcee0sLLO4b216WFVrV18EW86RU0WHivoMBcTr3nlAt3flIKUQ98f8d0R8763eyJqL3O+2nrmw2mSijulPaHb0u6sj3nTqbtsKXHwPXne0EMAhtHZzDjz70fxLqy8KLKukfzhltEr2tVAG2qQDX8TRlCixRk+IzV9NHpzAgOk71niAGQgBFGQMI2bF4H0t2L41U20vTrGxLfsaKy6kE86e5O/5KGLq7uezozzLZcUgSFOSuiPhcjwwciSWxY0/Nny+KTlYksR3XU5MQ==
+Received: from BN3NAM01FT012.eop-nam01.prod.protection.outlook.com
+ (10.152.66.55) by BN3NAM01HT135.eop-nam01.prod.protection.outlook.com
+ (10.152.67.191) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.933.11; Fri, 3 Mar
+ 2017 11:26:18 +0000
+Received: from CY4PR1001MB2264.namprd10.prod.outlook.com (10.152.66.55) by
+ BN3NAM01FT012.mail.protection.outlook.com (10.152.67.126) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.933.11 via Frontend Transport; Fri, 3 Mar 2017 11:26:17 +0000
+Received: from CY4PR1001MB2264.namprd10.prod.outlook.com ([10.171.221.161]) by
+ CY4PR1001MB2264.namprd10.prod.outlook.com ([10.171.221.161]) with mapi id
+ 15.01.0947.015; Fri, 3 Mar 2017 11:26:13 +0000
+From: =?Windows-1252?Q?Mart=EDn_Ceppi?= <martinceppi@hotmail.com>
+Subject: RV: PROMO CANJES EXPOAGRO 2017
+Thread-Topic: PROMO CANJES EXPOAGRO 2017
+Thread-Index: AdKTkaJLxRlCE5kRR7OhycXCiOO+wwAfynZ6
+Date: Fri, 3 Mar 2017 11:26:13 +0000
+Message-ID: <CY4PR1001MB22641CC9DA2B689E818312ADAD2B0@CY4PR1001MB2264.namprd10.prod.outlook.com>
+References: <!&!AAAAAAAAAAAYAAAAAAAAAAuQf4IQGUBMisWbkKIGWCNCigAAEAAAANqLinp28odDkVvv6OCpso0BAAAAAA==@esmacol.com.ar>
+In-Reply-To: <!&!AAAAAAAAAAAYAAAAAAAAAAuQf4IQGUBMisWbkKIGWCNCigAAEAAAANqLinp28odDkVvv6OCpso0BAAAAAA==@esmacol.com.ar>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator:
+authentication-results: hotmail.com; dkim=none (message not signed)
+ header.d=none;hotmail.com; dmarc=none action=none header.from=hotmail.com;
+x-incomingtopheadermarker: OriginalChecksum:84A150D6DDF0B0AB136E147E9AE8636BC543AD77EC26C3C3AE34DB55041EA85F;UpperCasedChecksum:53279C6DEE1673DBFD46107F1731FF73D3140194E4F129F97FF35693C2180D88;SizeAsReceived:13239;Count:38
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [VV52dGYw2DiYEhUTZRpLLQgQRo4upDmI]
+x-incomingheadercount: 38
+x-eopattributedmessage: 0
+x-microsoft-exchange-diagnostics: 1;BN3NAM01HT135;5:55Ps75pNBp2H8hWn9PVzvWzSo/dcX+7Ii9DQqoY2nOYr9DLqKp9cCEf94YrjwIFKzAhX+WNBnSttDCSRIy5RQJOaQQCncU+YoQJD1PpXX0iSqXm6jbsm92Ch5YBVhbo5FI6HN+W7un5dLJnVLELBmuBSE2HlUCq3HTFt1+WPTkI=;24:HVYQss3pniijnB5cgyzFJXRN2RB7o8no0Axk5kKP+6eiZTiZCvJg6I5+SPhlpKkCncEBXQhfus8s3SKCdCfdniQRkXzMpfakRZAgc/BLFfM=;7:sR5P/E+h9krZ7/wtMvMwM4IrTyCm4KRKsnXSJAx28zHnk7iHfoPIDjWTBoYPhjCIM+xY2D88sAK+CORoa5V7ANXqpI5bymx6i5J5X3yR0wt+XzW5Gj0OkQCgsWCsNJlkmuUYG0u/1DsN5d15JV3X3Gn0IZAW9nfu0haN8R/9vtSiNjeOIRBmkuR7vfwiWBz1PglNA+oi8R2+F9cKeuiReoEIaZVJrf7XuggQXUWnAVn/G3UtjHYhCfhOQ2YMljZKsimNmScQBbZyw2hRmZRzJ3Du31Y0tZvzFD1elGI4hIjtY9OwvHKjjBRzyHDXV8rf
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(10019020)(98900014);DIR:OUT;SFP:1102;SCL:1;SRVR:BN3NAM01HT135;H:CY4PR1001MB2264.namprd10.prod.outlook.com;FPR:;SPF:None;LANG:es;
+x-ms-office365-filtering-correlation-id: dee429f3-ea36-4ad5-14df-08d4622819bc
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(201702061074)(5061506573)(5061507331)(1603103135)(201702181095)(1601125254)(1603101448)(1701031045);SRVR:BN3NAM01HT135;
+x-ms-exchange-slblob-mailprops: Gc2OTa7qnQ9EeazA3XWVlRMJTjTU2Zx5tB00HXzcJuPxTOk72tbJgbmEG8s73xA2uXMD5g1hy3XZ2n7eTmoB/sKQ9dgTNMXyMnZuhil5ap7vrilKakvPz0LWp2TIatbZ7bcQynr7J6l8ycf07gu8r6X66JnsjrlfRsQzUz43Y7IrCE03KUGhOyBWRL3SD5I0XDqm4IQuvnjptc8Qi2FuKoHse4ig/eHmkvDwme4YDB0K2Ee/YlA8zDOGl3vZdlOe+D2n7R6v1SmUoOLmKdXAb7Q1vdZ2Ig2E/Q6gXH0bFShqIj+kYUijzwZNv2sAD9x0xod/xlnxU2qwOJJM51uSHF5vg+sashg1AsTJiYhp57Hn/ySdq8Pt+91AsdngmZDAkSM5EnEbv4mOe5iBC8hvlb/cpEwubB1DXLl9g8TEz6NnBQ+V4hRxFBPoVqrUlk/WbD0u/Zs33lbsAA/Yxvpu0B+WSbrogtjB4o9Kw/mDc/1Dza0LxkgGsAL+ur0I3s++i3wilnAYfwkHwXHxO0q47vElp4H6t5DCLzxEQkSwju/YmZqCGsFtuRPFaua/0RAHFYrDVh8tz5SIpPsMEd3Hy/GjKZGlju1/Yweak0Ee670LGlAE3v1yFYpSZsi9PCDFI5RA4rTXMDX5aKGmlmTmVMrUXGT/iYeiU3L7vkQuziH7QNOazEkDfA==
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(432015087)(444000031);SRVR:BN3NAM01HT135;BCL:0;PCL:0;RULEID:;SRVR:BN3NAM01HT135;
+x-forefront-prvs: 0235CBE7D0
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/related;
+	boundary="_005_CY4PR1001MB22641CC9DA2B689E818312ADAD2B0CY4PR1001MB2264_";
+	type="multipart/alternative"
+MIME-Version: 1.0
+X-OriginatorOrg: hotmail.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 03 Mar 2017 11:26:13.4490
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN3NAM01HT135
+Bcc:
+X-OriginalArrivalTime: 03 Mar 2017 11:26:24.0022 (UTC) FILETIME=[FD7A8B60:01D29410]
+X-Spam-Status: No, score=0.5
+X-Spam-Score: 5
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Hola, reenvío las condiciones de canje para la ExpoAgro. Saludos
+    De: Distribuidor diesel Enviado: jueves, 02 de marzo de 2017 05:14 p.m. Para:
+    Distribuidor diesel Asunto: PROMO CANJES EXPOAGRO 2017 [...] 
+ 
+ Content analysis details:   (0.5 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (martinceppi[at]hotmail.com)
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: esmacol.com.ar]
+ -0.0 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  1.5 SUBJ_ALL_CAPS          Subject is all capitals
+  1.0 MISSING_HEADERS        Missing To: header
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+X-Spam-Flag: NO
+
+--_005_CY4PR1001MB22641CC9DA2B689E818312ADAD2B0CY4PR1001MB2264_
+Content-Type: multipart/alternative;
+	boundary="_000_CY4PR1001MB22641CC9DA2B689E818312ADAD2B0CY4PR1001MB2264_"
+
+--_000_CY4PR1001MB22641CC9DA2B689E818312ADAD2B0CY4PR1001MB2264_
+Content-Type: text/plain; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+
+Hola, reenv=EDo las condiciones de canje para la ExpoAgro.
+
+Saludos
+
+________________________________
+De: Distribuidor diesel <distribuidordiesel@esmacol.com.ar>
+Enviado: jueves, 02 de marzo de 2017 05:14 p.m.
+Para: Distribuidor diesel
+Asunto: PROMO CANJES EXPOAGRO 2017
+
+
+ESMACOL S.A.               YPF S.A.
+
+EXPOAGRO 2017
+
+
+
+Fecha y lugar: del 07 al 10 de Marzo, Ruta Nacional N=BA 9 Km 225 =96 San N=
+icol=E1s de los Arroyos, Pcia de Buenos Aires.
+
+
+
+Concepto: Por cada TN de soja canjeada se reconocer=E1 $100 en productos YP=
+F ( gasoil, lubricantes, agroqu=EDmicos, silo bolsas, fertilizantes)
+
+
+
+OPERACIONES DISPONIBLES
+
+
+
+1)   SOJA DISPONIBLE: Fijaci=F3n por mercado disponible del d=EDa que confi=
+rme la operaci=F3n, entrega de soja estricto hasta el 15/3.
+
+
+
+2)   SOJA COSECHA NUEVA: Se pactar=E1n las TN a canjear y tendr=E1 tiempo p=
+ara entregar y fijar el grano hasta el 31/5
+
+
+
+3)   COMISION: la habitual.
+
+
+
+Plus multiplicador:
+
+
+
+a-    MULTIPLICADOR PRECIO:
+
+Si usted se compromete a duplicar el volumen comprometido en el punto 2 (=
+=93Soja cosecha nueva=94), entregando otro volumen igual fuera de cosecha, =
+obtiene +$50 adicionales.
+
+Es decir que deber=E1 entregar la misma cantidad de soja del 1/9 al 30/11 (=
+con fijaci=F3n hasta el 30/11) y as=ED obtiene +150$/tn por la soja entrega=
+da en cosecha (en vez de los +100 $/tn habituales). La soja fuera de cosech=
+a se fijar=E1 por pizarra y sin ning=FAn plus.
+
+
+
+Ejemplo num=E9rico. Usted hace un canje de 60 tn soja cosecha nueva. Simple=
+mente obtiene +100 $/tn. Pero si se compromete a entregar de septiembre a n=
+oviembre (fuera de cosecha) otras 60 tn adicionales obtiene +150 $/tn (en v=
+ez de +100 $/tn) por las primeras 60 tn .  Las 60 tn adicionales fuera de c=
+osecha se fija por pizarra sin plus adicional.
+
+
+
+a-    MULTIPLICADOR SILO BOLSA: Las operaciones adicionales (las tns a entr=
+egar de septiembre a Noviembre) obtendr=E1n un silo bolsa de 9x60 GRATIS po=
+r cada 180 tn o un silo bolsa de 9 x 75 GRATIS por cada 210 tn.  No son acu=
+mulativas.
+
+
+
+Ejemplo num=E9rico. Un cliente hace un canje de 210 tn soja cosecha nueva. =
+Simplemente obtiene +100 $/tn. Pero si se compromete a entregar de septiemb=
+re a noviembre (fuera de cosecha) otras 210 tn adicionales obtiene +150 $/t=
+n (en vez de +100 $/tn) por las primeras 210 tn.  Las 210 tn adicionales fu=
+era de cosecha se fija por pizarra sin plus adicional. Adicionalmente este =
+cliente obtiene una bolsa gratis de 9x75. Y en el caso de que sean 180 Tn r=
+ecibir=E1 una bolsa gratis de 9 x 60
+
+
+
+ADEMAS CON EL CANJE DE GRANOS TE LLEVAS UN 20% DE DESCUENTO EN LA COMPRA DE=
+ EXTRA VIDA DURANTE LOS 4 DIAS DE LA EXPOSICI=D3N.-
+
+
+
+SE RECUERDA QUE UNA VEZ ENTREGADA LA SOJA DEBERA ENVIAR UNA COPIA DE LA CCP=
+P Y LA DESCARGA AL DISTRIBUIDOR, PARA INFORMARLA A YPF Y ASI PODER APLICARL=
+A AL CONTRATO.-
+
+
+
+CUALQUIER DUDA O CONSULTA ESTOY A SU DISPOSICION.
+
+DESDE YA MUCHAS GRACIAS
+
+SALUDOS.-
+
+
+
+
+
+
+
+
+
+
+
+[cid:image002.jpg@01CF0C55.49A75410]
+
+
+
+
+Mariela M. Liz=E1rraga
+
+Esmacol S.A.
+Distribuidor YPF Directo
+
+Tel.: 03404 - 493170 / 483 - Int: 32
+
+Avda. Risso Patr=F3n 781 - 2258
+
+Santa Clara de Buena Vista =96 Santa Fe
+
+
+
+
+
+
+--_000_CY4PR1001MB22641CC9DA2B689E818312ADAD2B0CY4PR1001MB2264_
+Content-Type: text/html; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DWindows-1=
+252">
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt;color:#000000;font=
+-family:Calibri,Arial,Helvetica,sans-serif;" dir=3D"ltr">
+<p><br>
+</p>
+Hola, reenv=EDo las condiciones de canje para la ExpoAgro.
+<div><br>
+</div>
+<div>Saludos<br>
+<br>
+<div style=3D"color: rgb(0, 0, 0);">
+<hr tabindex=3D"-1" style=3D"display:inline-block; width:98%">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" co=
+lor=3D"#000000" style=3D"font-size:11pt"><b>De:</b> Distribuidor diesel &lt=
+;distribuidordiesel@esmacol.com.ar&gt;<br>
+<b>Enviado:</b> jueves, 02 de marzo de 2017 05:14 p.m.<br>
+<b>Para:</b> Distribuidor diesel<br>
+<b>Asunto:</b> PROMO CANJES EXPOAGRO 2017</font>
+<div>&nbsp;</div>
+</div>
+<div>
+<div>
+<p align=3D"center" style=3D"text-align: center; margin: 0cm 0cm 0.0001pt; =
+font-size: 11pt; font-family: Calibri, sans-serif;">
+<b><span style=3D"font-size:28.0pt; color:blue">ESMACOL S.A.&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; YPF S=
+.A.</span></b></p>
+<p align=3D"center" style=3D"text-align: center; margin: 0cm 0cm 0.0001pt; =
+font-size: 11pt; font-family: Calibri, sans-serif;">
+<b><span style=3D"font-size:26.0pt; color:#00B050">EXPOAGRO 2017</span></b>=
+</p>
+<p style=3D"margin: 0cm 0cm 0.0001pt; font-size: 11pt; font-family: Calibri=
+, sans-serif;">
+<span style=3D"font-size:24.0pt; color:#00B050">&nbsp;</span></p>
+<p style=3D"margin: 0cm 0cm 0.0001pt; font-size: 11pt; font-family: Calibri=
+, sans-serif;">
+<b><u><span style=3D"font-size:16.0pt">Fecha y lugar</span></u></b><span st=
+yle=3D"font-size:16.0pt">: del 07 al 10 de Marzo, Ruta Nacional N=BA 9 Km 2=
+25 =96 San Nicol=E1s de los Arroyos, Pcia de Buenos Aires.</span></p>
+<p style=3D"margin: 0cm 0cm 0.0001pt; font-size: 11pt; font-family: Calibri=
+, sans-serif;">
+<span style=3D"font-size:16.0pt">&nbsp;</span></p>
+<p style=3D"margin: 0cm 0cm 0.0001pt; font-size: 11pt; font-family: Calibri=
+, sans-serif;">
+<b><u><span style=3D"font-size:16.0pt">Concepto:</span></u></b><span style=
+=3D"font-size:16.0pt"> Por cada TN de soja canjeada se reconocer=E1
+</span><b><span style=3D"font-size:18.0pt; color:red">$100</span></b><span =
+style=3D"font-size:16.0pt"> en productos YPF ( gasoil, lubricantes, agroqu=
+=EDmicos, silo bolsas, fertilizantes)</span></p>
+<p style=3D"margin: 0cm 0cm 0.0001pt; font-size: 11pt; font-family: Calibri=
+, sans-serif;">
+<span style=3D"font-size:16.0pt">&nbsp;</span></p>
+<p style=3D"margin: 0cm 0cm 0.0001pt; font-size: 11pt; font-family: Calibri=
+, sans-serif;">
+<b><u><span style=3D"font-size:16.0pt; color:blue">OPERACIONES DISPONIBLES<=
+/span></u></b></p>
+<p style=3D"margin: 0cm 0cm 0.0001pt; font-size: 11pt; font-family: Calibri=
+, sans-serif;">
+<span style=3D"font-size:16.0pt">&nbsp;</span></p>
+<p style=3D"text-align: justify; text-indent: -18pt; margin: 0cm 0cm 0.0001=
+pt 36pt; font-size: 11pt; font-family: Calibri, sans-serif;">
+<b><span style=3D"font-size:16.0pt"><span style=3D"">1)<span style=3D"font:=
+7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;
+</span></span></span></b><b><u><span style=3D"font-size:16.0pt">SOJA DISPON=
+IBLE</span></u></b><span style=3D"font-size:16.0pt">: Fijaci=F3n por mercad=
+o disponible del d=EDa que confirme la operaci=F3n, entrega de soja estrict=
+o hasta el 15/3.
+</span></p>
+<p style=3D"text-align: justify; margin: 0cm 0cm 0.0001pt 36pt; font-size: =
+11pt; font-family: Calibri, sans-serif;">
+<span style=3D"font-size:16.0pt">&nbsp;</span></p>
+<p style=3D"text-align: justify; text-indent: -18pt; margin: 0cm 0cm 0.0001=
+pt 36pt; font-size: 11pt; font-family: Calibri, sans-serif;">
+<b><span style=3D"font-size:16.0pt"><span style=3D"">2)<span style=3D"font:=
+7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;
+</span></span></span></b><b><u><span style=3D"font-size:16.0pt">SOJA COSECH=
+A NUEVA</span></u></b><span style=3D"font-size:16.0pt">: Se pactar=E1n las =
+TN a canjear y tendr=E1 tiempo para entregar y fijar el grano hasta el 31/5
+</span></p>
+<p style=3D"margin: 0cm 0cm 0.0001pt 36pt; font-size: 11pt; font-family: Ca=
+libri, sans-serif;">
+<span style=3D"font-size:16.0pt">&nbsp;</span></p>
+<p style=3D"text-align: justify; text-indent: -18pt; margin: 0cm 0cm 0.0001=
+pt 36pt; font-size: 11pt; font-family: Calibri, sans-serif;">
+<b><span style=3D"font-size:16.0pt"><span style=3D"">3)<span style=3D"font:=
+7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;
+</span></span></span></b><b><u><span style=3D"font-size:16.0pt">COMISION:</=
+span></u></b><span style=3D"font-size:16.0pt"> la habitual.</span></p>
+<p style=3D"text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 11pt;=
+ font-family: Calibri, sans-serif;">
+&nbsp;</p>
+<p style=3D"text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 11pt;=
+ font-family: Calibri, sans-serif;">
+<b><u><span style=3D"font-size:14.0pt">Plus multiplicador:</span></u></b></=
+p>
+<p style=3D"text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 11pt;=
+ font-family: Calibri, sans-serif;">
+&nbsp;</p>
+<p style=3D"text-align: justify; text-indent: -18pt; margin: 0cm 0cm 0.0001=
+pt 36pt; font-size: 11pt; font-family: Calibri, sans-serif;">
+<b><span style=3D"font-size:16.0pt; color:red"><span style=3D"">a-<span sty=
+le=3D"font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+</span></span></span></b><b><u><span style=3D"font-size:16.0pt; color:red">=
+MULTIPLICADOR PRECIO</span></u></b><b><span style=3D"font-size:16.0pt; colo=
+r:red">:</span></b><span style=3D"font-size:16.0pt; color:red">
+</span></p>
+<p style=3D"text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 11pt;=
+ font-family: Calibri, sans-serif;">
+<span style=3D"font-size:16.0pt">Si usted se compromete a duplicar el volum=
+en comprometido en el punto 2
+<b><u>(=93Soja cosecha nueva=94)</u></b>, entregando <span style=3D"backgro=
+und:aqua">otro volumen igual fuera de cosecha,
+</span></span><b><u><span style=3D"font-size:18.0pt; background:aqua">obtie=
+ne &#43;$50 adicionales.</span></u></b><span style=3D"font-size:16.0pt">
+</span></p>
+<p style=3D"text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 11pt;=
+ font-family: Calibri, sans-serif;">
+<span style=3D"font-size:16.0pt">Es decir que deber=E1 entregar la misma ca=
+ntidad de soja
+<b><u>del 1/9 al 30/11</u></b> (con fijaci=F3n hasta el 30/11) y as=ED obti=
+ene &#43;150$/tn por la soja entregada en cosecha (en vez de los &#43;100 $=
+/tn habituales). La soja fuera de cosecha se fijar=E1 por pizarra y sin nin=
+g=FAn plus.
+</span></p>
+<p style=3D"text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 11pt;=
+ font-family: Calibri, sans-serif;">
+<span style=3D"font-size:16.0pt">&nbsp;</span></p>
+<p style=3D"text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 11pt;=
+ font-family: Calibri, sans-serif;">
+<b><u><span style=3D"font-size:16.0pt">Ejemplo num=E9rico</span></u></b><b>=
+<span style=3D"font-size:16.0pt">.</span></b><span style=3D"font-size:16.0p=
+t"> Usted hace un canje de 60 tn soja cosecha nueva. Simplemente obtiene &#=
+43;100 $/tn. Pero si se compromete a entregar
+ de septiembre a noviembre (fuera de cosecha) otras 60 tn <b>adicionales</b=
+> obtiene
+<b>&#43;150 $/tn</b> (en vez de &#43;100 $/tn) por las <i><u>primeras 60 tn=
+</u></i> .&nbsp; Las 60 tn adicionales fuera de cosecha se fija por pizarra=
+ sin plus adicional.
+</span></p>
+<p style=3D"text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 11pt;=
+ font-family: Calibri, sans-serif;">
+<span style=3D"font-size:16.0pt">&nbsp;</span></p>
+<p style=3D"text-align: justify; text-indent: -18pt; margin: 0cm 0cm 0.0001=
+pt 36pt; font-size: 11pt; font-family: Calibri, sans-serif;">
+<b><span style=3D"font-size:16.0pt; color:red"><span style=3D"">a-<span sty=
+le=3D"font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;
+</span></span></span></b><b><u><span style=3D"font-size:16.0pt; color:red">=
+MULTIPLICADOR SILO BOLSA</span></u></b><span style=3D"font-size:16.0pt">: L=
+as operaciones adicionales (las tns a entregar de septiembre a Noviembre) o=
+btendr=E1n un silo bolsa de 9x60 GRATIS
+ por cada 180 tn o un silo bolsa de 9 x 75 GRATIS por cada 210 tn.&nbsp; No=
+ son acumulativas.</span></p>
+<p style=3D"text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 11pt;=
+ font-family: Calibri, sans-serif;">
+<span style=3D"font-size:16.0pt">&nbsp;</span></p>
+<p style=3D"text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 11pt;=
+ font-family: Calibri, sans-serif;">
+<b><u><span style=3D"font-size:16.0pt">Ejemplo num=E9rico</span></u></b><sp=
+an style=3D"font-size:16.0pt">. Un cliente hace un canje de 210 tn soja cos=
+echa nueva. Simplemente obtiene &#43;100 $/tn. Pero si se compromete a entr=
+egar de septiembre a noviembre (fuera de cosecha)
+ otras 210 tn <b>adicionales</b> obtiene <b>&#43;150 $/tn</b> (en vez de &#=
+43;100 $/tn) <u>
+<span style=3D"background:aqua">por las <i>primeras 210 tn</i></span></u>.&=
+nbsp; Las 210 tn adicionales fuera de cosecha se fija por pizarra sin plus =
+adicional. Adicionalmente este cliente obtiene
+<b>una bolsa gratis de 9x75</b>. Y en el caso de que sean 180 Tn recibir=E1=
+ una <b>
+bolsa gratis de 9 x 60</b></span></p>
+<p style=3D"text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 11pt;=
+ font-family: Calibri, sans-serif;">
+&nbsp;</p>
+<p style=3D"text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 11pt;=
+ font-family: Calibri, sans-serif;">
+<u><span style=3D"font-size:16.0pt; background:aqua">ADEMAS CON EL CANJE DE=
+ GRANOS TE LLEVAS UN 20% DE DESCUENTO EN LA COMPRA DE EXTRA VIDA DURANTE LO=
+S 4 DIAS DE LA EXPOSICI=D3N.-</span></u><u><span style=3D"font-size:16.0pt"=
+></span></u></p>
+<p style=3D"text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 11pt;=
+ font-family: Calibri, sans-serif;">
+<span style=3D"font-size:16.0pt">&nbsp;</span></p>
+<p style=3D"text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 11pt;=
+ font-family: Calibri, sans-serif;">
+<b><span style=3D"font-size:16.0pt; background:silver">SE RECUERDA QUE UNA =
+VEZ ENTREGADA LA SOJA DEBERA ENVIAR UNA COPIA DE LA CCPP Y LA DESCARGA AL D=
+ISTRIBUIDOR, PARA INFORMARLA A YPF Y ASI PODER APLICARLA AL CONTRATO.-</spa=
+n></b><b><span style=3D"font-size:16.0pt"></span></b></p>
+<p style=3D"text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 11pt;=
+ font-family: Calibri, sans-serif;">
+<b><span style=3D"font-size:16.0pt">&nbsp;</span></b></p>
+<p style=3D"text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 11pt;=
+ font-family: Calibri, sans-serif;">
+<span style=3D"font-size:16.0pt">CUALQUIER DUDA O CONSULTA ESTOY A SU DISPO=
+SICION.</span></p>
+<p style=3D"text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 11pt;=
+ font-family: Calibri, sans-serif;">
+<span style=3D"font-size:16.0pt">DESDE YA MUCHAS GRACIAS</span></p>
+<p style=3D"text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 11pt;=
+ font-family: Calibri, sans-serif;">
+<span style=3D"font-size:16.0pt">SALUDOS.-</span></p>
+<p style=3D"margin: 0cm 0cm 0.0001pt; font-size: 11pt; font-family: Calibri=
+, sans-serif;">
+&nbsp;</p>
+<p style=3D"margin: 0cm 0cm 0.0001pt; font-size: 11pt; font-family: Calibri=
+, sans-serif;">
+&nbsp;</p>
+<p style=3D"margin: 0cm 0cm 0.0001pt; font-size: 11pt; font-family: Calibri=
+, sans-serif;">
+&nbsp;</p>
+<p style=3D"margin: 0cm 0cm 0.0001pt; font-size: 11pt; font-family: Calibri=
+, sans-serif;">
+<b><span style=3D"color:#1F497D">&nbsp;</span></b></p>
+<p style=3D"margin: 0cm 0cm 0.0001pt; font-size: 11pt; font-family: Calibri=
+, sans-serif;">
+<b><span style=3D"color:navy"><img naturalheight=3D"6" naturalwidth=3D"567"=
+ width=3D"567" height=3D"6" id=3D"Imagen_x0020_1" alt=3D"cid:image001.png@0=
+1CF0C55.49A75410" aria-expanded=3D"false" tabindex=3D"0" style=3D"user-sele=
+ct: none;" src=3D"cid:image001.png@01D29371.E789C900"></span></b><b><span s=
+tyle=3D"color:black"></span></b></p>
+<table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"561" style=3D"width:420.55pt">
+<tbody>
+<tr style=3D"height:40.8pt">
+<td width=3D"90" valign=3D"top" style=3D"width:67.25pt; padding:0cm 0cm 0cm=
+ 0cm; height:40.8pt">
+<p style=3D"line-height: 115%; margin: 0cm 0cm 0.0001pt; font-size: 11pt; f=
+ont-family: Calibri, sans-serif;">
+<b><span style=3D"color:#1F497D"><img naturalheight=3D"51" naturalwidth=3D"=
+74" width=3D"74" height=3D"51" id=3D"Imagen_x0020_2" alt=3D"cid:image002.jp=
+g@01CF0C55.49A75410" aria-expanded=3D"false" tabindex=3D"0" style=3D"user-s=
+elect: none;" src=3D"cid:image002.jpg@01D29371.E789C900"></span></b><b><spa=
+n style=3D"color:#1F497D"></span></b></p>
+<p style=3D"line-height: 115%; margin: 0cm 0cm 0.0001pt; font-size: 11pt; f=
+ont-family: Calibri, sans-serif;">
+<b><span style=3D"font-size:10.0pt; line-height:115%; color:navy">&nbsp;</s=
+pan></b><b><span style=3D"color:#1F497D"></span></b></p>
+</td>
+<td width=3D"471" valign=3D"top" style=3D"width:353.3pt; padding:0cm 0cm 0c=
+m 0cm; height:40.8pt">
+<p style=3D"line-height: 115%; margin: 0cm 0cm 0.0001pt; font-size: 11pt; f=
+ont-family: Calibri, sans-serif;">
+<span style=3D"font-size:7.0pt; line-height:115%; font-family:&quot;Verdana=
+&quot;,&quot;sans-serif&quot;; color:black">Mariela M. Liz=E1rraga
+</span><b><span style=3D"font-size:7.0pt; line-height:115%; font-family:&qu=
+ot;Verdana&quot;,&quot;sans-serif&quot;; color:black"></span></b></p>
+<p style=3D"line-height: 115%; margin: 0cm 0cm 0.0001pt; font-size: 11pt; f=
+ont-family: Calibri, sans-serif;">
+<span style=3D"font-size:7.0pt; line-height:115%; font-family:&quot;Verdana=
+&quot;,&quot;sans-serif&quot;; color:black">Esmacol S.A.<br>
+Distribuidor YPF Directo</span></p>
+<p style=3D"line-height: 115%; margin: 0cm 0cm 0.0001pt; font-size: 11pt; f=
+ont-family: Calibri, sans-serif;">
+<span style=3D"font-size:7.0pt; line-height:115%; font-family:&quot;Verdana=
+&quot;,&quot;sans-serif&quot;; color:black">Tel.:&nbsp;03404 - 493170 / 483=
+ - Int: 32</span></p>
+<p style=3D"line-height: 115%; margin: 0cm 0cm 0.0001pt; font-size: 11pt; f=
+ont-family: Calibri, sans-serif;">
+<span style=3D"font-size:7.0pt; line-height:115%; font-family:&quot;Verdana=
+&quot;,&quot;sans-serif&quot;; color:black">Avda. Risso Patr=F3n 781 - 2258=
+</span><span style=3D"color:black"></span></p>
+<p style=3D"line-height: 115%; margin: 0cm 0cm 0.0001pt; font-size: 11pt; f=
+ont-family: Calibri, sans-serif;">
+<span style=3D"font-size:7.0pt; line-height:115%; font-family:&quot;Verdana=
+&quot;,&quot;sans-serif&quot;; color:black">Santa Clara de Buena Vista =96 =
+Santa Fe</span><b><span style=3D"font-size:7.0pt; line-height:115%; font-fa=
+mily:&quot;Verdana&quot;,&quot;sans-serif&quot;; color:#606060"></span></b>=
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style=3D"margin: 0cm 0cm 0.0001pt; font-size: 11pt; font-family: Calibri=
+, sans-serif;">
+&nbsp;</p>
+<p style=3D"margin: 0cm 0cm 0.0001pt; font-size: 11pt; font-family: Calibri=
+, sans-serif;">
+&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+--_000_CY4PR1001MB22641CC9DA2B689E818312ADAD2B0CY4PR1001MB2264_--
+
+--_005_CY4PR1001MB22641CC9DA2B689E818312ADAD2B0CY4PR1001MB2264_
+Content-Type: image/png; name="image001.png"
+Content-Description: image001.png
+Content-Disposition: inline; filename="image001.png"; size=384;
+	creation-date="Thu, 02 Mar 2017 20:18:36 GMT";
+	modification-date="Thu, 02 Mar 2017 20:18:36 GMT"
+Content-ID: <image001.png@01D29371.E789C900>
+Content-Transfer-Encoding: base64
+
+iVBORw0KGgoAAAANSUhEUgAAAjcAAAAGCAIAAACw8yjYAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAO
+wwAADr4BXf6v3wAAASVJREFUaEPt2DuKhTAUBuAbH42PRiysxGXYCFrYugxXIK7CDQguwyW4C23E
+XhAFC19zQJhquK0y508Vg5CcL8HwK9I0/XBtqqpu27bvu2EY67rKskx9SZLI4zxPRVGoQyPUoUeu
+SKgbAhCAwJMCgvP3d57nuq6bppmmybZtoliWRdf14zjiOA7D0LIsGhRCPLlFmBsCEIAAYwFxXRfj
+8j+UpaqqGoah73vTNOlOohZFURAErutylkHtEIAABN4gICg3vGEdj6zh/rlH+aksy7ZtKTPRne15
+XpZl9+++Pxvn9PnINmFSCECAswD3LPW790VRdF3nOE6e55qmcT4TqB0CEIDAewS4ZKk7Nn1p4zjS
+RZUkie/7399ElnrP8cVKIACBfy/wA+xJbRsxpVXnAAAAAElFTkSuQmCC
+
+--_005_CY4PR1001MB22641CC9DA2B689E818312ADAD2B0CY4PR1001MB2264_
+Content-Type: image/jpeg; name="image002.jpg"
+Content-Description: image002.jpg
+Content-Disposition: inline; filename="image002.jpg"; size=1826;
+	creation-date="Thu, 02 Mar 2017 20:18:36 GMT";
+	modification-date="Thu, 02 Mar 2017 20:18:36 GMT"
+Content-ID: <image002.jpg@01D29371.E789C900>
+Content-Transfer-Encoding: base64
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIf
+IiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7
+Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAAzAEoDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlQCxA
+AyTwAKtS6TqUETSzafdRxqMszwsAPqcVVr07wF4pj1azbw9q7CSTYUiaQ581McqfcD8x9K+qxFSd
+KPPFXXU+boU41JcsnbsebW9rc3blLa3lncDJWNCxA9eKfLp19BLHFLZzxySnCI8ZBb6DvXrVjpml
+/DvSL2+mlMrSOdpP3mH8EY9/X8+1ed22r3et+NrG/u3y73kW1QeEXcMKPasqeJdVycV7q69zSph1
+TSUn7z6Gd/Ymrf8AQLvP+/Df4VFcafe2ihrmzuIVPQyRMo/UV7f4p/tv+yB/YH/H55q/3fu85+9x
+6UoLr4UP/CTGDf5B+1dNv+GenTv0rlWYSspWWr2vqdLwMbtXf3aHh9vp19doZLazuJ0BwWjiLAH0
+4FS/2Jq3/QLvP+/Df4V6R8KP+QHe46fauP8AvkVPqv8AwsD+1bj+zfs32Pf+53eXnb755rWWMkqs
+qeit3djKOEi6anrr2R5NPBNbSmK4heKQdUkUqR+BplaOv3eoXmtXD6oUN5G3lSlAAMrx2+lZ1ehF
+txTZxSSUmkFaXhu8g0/xFY3l0+yGGUO7YJwPoK6H/hVmv/8APay/7+N/8TR/wqzX/wDntZf9/G/+
+JrmliaEouLktTeOHrRaaiW/H/inR9e0m3g0+5aSSOfeymNl42kdxXG6NcRWutWNzO+yKG4R3bGcA
+MCeK6f8A4VZr/wDz2sv+/jf/ABNH/CrNf/57WX/fxv8A4msqVTDU6fs1PQ0qQxFSfO46mt408a6X
+qehfZ9J1CZbkTK3yq6ErznnivPJ727uVC3F1NMB0EkhYfrXW/wDCrNf/AOe1l/38b/4mj/hVmv8A
+/Pay/wC/jf8AxNFGeFox5YyHVhiKsruJb8AeKdI0DSbiDULlo5JJ96qI2bjaB2Fc74g1+5u9fvLi
+w1K6+zSSbo9sjKMY9O1a/wDwqzX/APntZf8Afxv/AImj/hVmv/8APay/7+N/8TSjLCxqOpzasco4
+l01Dl0RxskjyyNJI7O7HLMxySfUmkrs/+FWa/wD89rL/AL+N/wDE0f8ACrNf/wCe1l/38b/4muj6
+1Q/mRh9Wrfys9dooor5Y+jEJAGScAVxl78SrC2vJYILOW5SNtolVwA309qr+PvFXlK+i2MnzsMXM
+in7o/uD39a4nQyi69p5cgILmMkt0A3CuedR3tE8jFY6Uaip0n6s7j/haNrnH9lT5/wCugo/4Wja/
+9Aub/v4KoK7NeW8esXMTXB1ANbssql44vm3ZZei/dwDVGxsNHmNrE8CPM1kZziUkyybiNuNwHA5x
+kZpc0+5k8Rib2U180bn/AAtG1/6Bc3/fwUf8LRtf+gXN/wB/BWGbPTLZFubSzimjW7Imae4+a3Ad
+dq4DcjGeec/hVq503Tp729lntoAGuJvPkE+Ps6BcxsozzuPPf04pc0+4vb4r+Zfd/wAA0/8AhaNr
+/wBAub/v4KnX4j27IG/s2bkZ/wBYK8xrSi/1Kf7oqVVmYRx+IfX8Ee31T1eaS20e8nhbZJHA7K3o
+QDiiiut7H0M9IM8MZ2kYu7FmY5Zickn1pKKK88+NEwPSjAoooEGBRgelFFAC1oxf6lP90UUU0aUz
+/9k=
+
+--_005_CY4PR1001MB22641CC9DA2B689E818312ADAD2B0CY4PR1001MB2264_--

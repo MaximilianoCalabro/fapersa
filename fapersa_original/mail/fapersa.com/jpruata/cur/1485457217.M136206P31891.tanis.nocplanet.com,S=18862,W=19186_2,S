@@ -1,0 +1,324 @@
+Return-Path: <martinceppi@hotmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id 0WDWB0FHiliTfAAATLP0zA
+	for <jpruata@fapersa.com>; Thu, 26 Jan 2017 16:00:17 -0300
+Return-path: <martinceppi@hotmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Thu, 26 Jan 2017 16:00:17 -0300
+Received: from bay004-omc4s14.hotmail.com ([65.54.190.216]:58761)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-SHA384:256)
+	(Exim 4.87)
+	(envelope-from <martinceppi@hotmail.com>)
+	id 1cWpHK-0002aN-VJ
+	for jpruata@fapersa.com; Thu, 26 Jan 2017 16:00:16 -0300
+Received: from NAM02-CY1-obe.outbound.protection.outlook.com ([65.54.190.201]) by BAY004-OMC4S14.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Thu, 26 Jan 2017 10:59:35 -0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=HAuUsEHBfsPwee75UIMp+LmqhVGOQcgCThnV/ylLgrE=;
+ b=RUotd75S9N+EdkRwOWzZDApxJfWCn+/ZbEnQTZ/VU9DwYgFTm8SAzSVNrd1E2Sjim0RBO8Hpv9xr2m1GSDDy7XfS6V7BrseriJmtVm/3+ZSVA+OaazLt/IZrNoltSAuXrNb4ZWRrXg4+ujm6ksjnv2iu4piuAMEgp9/Et6ThEbpTmgx/NX4IFAO0AqEmRq9KxKF49JcURT0BU/W/uIcAErrHtE3B1m/ewm8DPHfrZDHMilh8HdXKVTuQ8TC5ER4JzUHfFnx8xS+nv8maHsQ7YkIlS24NAdVJ6j111Wv92BiT6Z1qpAkOrTULt7YAtlOYjcAiEIoTdl3m0Uh6oyd1Fw==
+Received: from CY1NAM02FT062.eop-nam02.prod.protection.outlook.com
+ (10.152.74.54) by CY1NAM02HT215.eop-nam02.prod.protection.outlook.com
+ (10.152.75.55) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.803.8; Thu, 26 Jan
+ 2017 18:59:30 +0000
+Received: from CY4PR1001MB2264.namprd10.prod.outlook.com (10.152.74.56) by
+ CY1NAM02FT062.mail.protection.outlook.com (10.152.75.60) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.874.2 via Frontend Transport; Thu, 26 Jan 2017 18:59:29 +0000
+Received: from CY4PR1001MB2264.namprd10.prod.outlook.com ([10.171.221.161]) by
+ CY4PR1001MB2264.namprd10.prod.outlook.com ([10.171.221.161]) with mapi id
+ 15.01.0874.015; Thu, 26 Jan 2017 18:59:25 +0000
+From: =?iso-8859-1?Q?Mart=EDn_Ceppi?= <martinceppi@hotmail.com>
+Subject: Fungicida - Control de chinche
+Thread-Topic: Fungicida - Control de chinche
+Thread-Index: AQHSeAGgqxkgUV0mhkiXwln4Uup9XA==
+Date: Thu, 26 Jan 2017 18:59:24 +0000
+Message-ID: <CY4PR1001MB2264E271F82F18F0354AE8E4AD770@CY4PR1001MB2264.namprd10.prod.outlook.com>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: hotmail.com; dkim=none (message not signed)
+ header.d=none;hotmail.com; dmarc=none action=none header.from=hotmail.com;
+x-incomingtopheadermarker: OriginalChecksum:CF4B7E6D7ECA8FD148C38555D6C34E92B0948318FA6048111490BAAE68B87544;UpperCasedChecksum:D2EB1C398F59F21991DC1D3CBB20EF94964DAA4C6BF551AE7774D1B96D0ABA91;SizeAsReceived:12869;Count:36
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [se5D+OaObgZzCbWcAJj4fb4Lndp8ASju]
+x-incomingheadercount: 36
+x-eopattributedmessage: 0
+x-microsoft-exchange-diagnostics: 1;CY1NAM02HT215;7:jN44dcNofb4WOn5Hx64gakcDfCM/Gs0UkSoGdjPxla6QlzR63VG6VlCEP0qAIk5JEOo4oe8J9oRSlTa4LPZTIEsvTjCtP+PNdHIDjFQFXkxbbkRg3bhWXH0JBoYUhH4yM4F3MfnmkUinWiqDHZVtyTFTdS9+AivyoQrIuUmh2Og6jECkRadufLU16g/LUKVs3qvGKqX8mlWsIJgJwsfAk9XVmoJn6ZxtghVWgtgB/kxtqHMEmxbVFii4lR4oyuA2VnUO/QnVAMGTLx+KKMoGYgICSOVvfbRHAQ4K31SLRpUrhS/80w/Wi76Utkwt+nrZGjuCsjV9pSV6jYwlheQ911hcBhB2Sp5NbrTawZ8WV7bIQTmw8cVaDhX2ktllMS3InLWPOKthybfmcz0bIR5X02t4P7FKP8JW7kuVjfCz6tJUCtXfqQJrIercgMbeqsTcx5kgfdVLmViu8r4pIbJeaQ==
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(10019020)(98900005);DIR:OUT;SFP:1102;SCL:1;SRVR:CY1NAM02HT215;H:CY4PR1001MB2264.namprd10.prod.outlook.com;FPR:;SPF:None;LANG:es;
+x-ms-office365-filtering-correlation-id: 96a803dd-ba63-4aee-d61b-08d4461d7247
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(1601124038)(5061506344)(1603103113)(1601125047)(1603101340)(1701031023);SRVR:CY1NAM02HT215;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(444111334)(444112120)(432015012)(82015046);SRVR:CY1NAM02HT215;BCL:0;PCL:0;RULEID:;SRVR:CY1NAM02HT215;
+x-forefront-prvs: 019919A9E4
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_CY4PR1001MB2264E271F82F18F0354AE8E4AD770CY4PR1001MB2264_"
+MIME-Version: 1.0
+X-OriginatorOrg: hotmail.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 26 Jan 2017 18:59:24.8876
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CY1NAM02HT215
+Bcc:
+X-OriginalArrivalTime: 26 Jan 2017 18:59:35.0440 (UTC) FILETIME=[55F4A900:01D27806]
+X-Spam-Status: No, score=-4.2
+X-Spam-Score: -41
+X-Spam-Bar: ----
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Disponemos de: * Fungicida Paradise de NOVA (Azoxistrobin
+   + Epoxiconazole): 38.08 U$S/Lt. Dosis 250 cc/ha * Control de Chinches: Cyclon
+    de NOVA (Lambda + Imida + Bifentrin): 40.32 U$S/Lt. Dosis 200 cc/ha [...]
+    
+ 
+ Content analysis details:   (-4.2 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+                             [65.54.190.216 listed in wl.mailspike.net]
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (martinceppi[at]hotmail.com)
+  1.0 MISSING_HEADERS        Missing To: header
+ -3.2 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+X-Spam-Flag: NO
+
+--_000_CY4PR1001MB2264E271F82F18F0354AE8E4AD770CY4PR1001MB2264_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Disponemos de:
+
+
+* Fungicida Paradise de NOVA (Azoxistrobin + Epoxiconazole): 38.08 U$S/Lt. =
+Dosis 250 cc/ha
+
+
+* Control de Chinches: Cyclon de NOVA (Lambda + Imida + Bifentrin): 40.32 U=
+$S/Lt. Dosis 200 cc/ha
+
+
+* Aceite Mineral Coadyuvante YPF: 2.50 U$S/Lt. Dosis a partir de 500 cc/ha =
+(1% volumen del caldo)
+
+
+* Sulfato de Amonio YPF: 1.15 U$S/Lt.
+
+
+* Glifosato Concentrado YPF al 62% , Equivalente =E1cido del 50.4% (igual q=
+ue el sulfosato) 3.77 U$S/Lt.
+
+
+* Gen=E9rico de Coragen, Xeryus (Rynaxypyr): 195 U$S/Lt. Dosis 30 cc/ha.
+
+
+Consulte por otros agroqu=EDmicos, fertilizantes, Bolsas de silo, forrajera=
+s...
+
+
+Mart=EDn Ceppi
+
+03404- 1541 9217
+
+--_000_CY4PR1001MB2264E271F82F18F0354AE8E4AD770CY4PR1001MB2264_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt;color:#000000;font=
+-family:Calibri,Arial,Helvetica,sans-serif;" dir=3D"ltr">
+<p></p>
+<div>Disponemos de:</div>
+<p></p>
+<p><br>
+</p>
+<p>*&nbsp;Fungicida Paradise de NOVA (Azoxistrobin &#43; Epoxiconazole): 38=
+.08 U$S/Lt. Dosis 250 cc/ha</p>
+<p><br>
+</p>
+<p>* Control de Chinches:&nbsp;Cyclon de NOVA (Lambda &#43; Imida &#43; Bif=
+entrin): 40.32&nbsp;<span style=3D"font-family: Calibri, Arial, Helvetica, =
+sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, Noto=
+ColorEmoji, &quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSy=
+mbols; font-size: 16px;">U$S/Lt.
+ Dosis 200 cc/ha</span></p>
+<p><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, &quot=
+;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &quot=
+;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-size:=
+ 16px;"><br>
+</span></p>
+<p><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, &quot=
+;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &quot=
+;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-size:=
+ 16px;">* Aceite Mineral Coadyuvante YPF: 2.50&nbsp;<span style=3D"font-fam=
+ily: Calibri, Arial, Helvetica, sans-serif, &quot;Apple Color Emoji&quot;, =
+&quot;Segoe UI Emoji&quot;, NotoColorEmoji, &quot;Segoe UI Symbol&quot;, &q=
+uot;Android Emoji&quot;, EmojiSymbols; font-size: 16px;">U$S/Lt.
+ Dosis a partir de 500 cc/ha (1% volumen del caldo)</span></span></p>
+<p><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, &quot=
+;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &quot=
+;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-size:=
+ 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, =
+&quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, =
+&quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-=
+size: 16px;"><br>
+</span></span></p>
+<p><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, &quot=
+;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &quot=
+;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-size:=
+ 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, =
+&quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, =
+&quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-=
+size: 16px;">*
+ Sulfato de Amonio YPF: 1.15&nbsp;<span style=3D"font-family: Calibri, Aria=
+l, Helvetica, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emo=
+ji&quot;, NotoColorEmoji, &quot;Segoe UI Symbol&quot;, &quot;Android Emoji&=
+quot;, EmojiSymbols; font-size: 16px;">U$S/Lt.&nbsp;</span></span></span></=
+p>
+<p><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, &quot=
+;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &quot=
+;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-size:=
+ 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, =
+&quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, =
+&quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-=
+size: 16px;"><br>
+</span></span></p>
+<p><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, &quot=
+;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &quot=
+;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-size:=
+ 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, =
+&quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, =
+&quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-=
+size: 16px;">*
+ Glifosato Concentrado YPF al 62% , Equivalente =E1cido del 50.4% (igual qu=
+e el sulfosato) 3.77&nbsp;<span style=3D"font-family: Calibri, Arial, Helve=
+tica, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;=
+, NotoColorEmoji, &quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, E=
+mojiSymbols; font-size: 16px;">U$S/Lt.&nbsp;</span></span></span></p>
+<p><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, &quot=
+;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &quot=
+;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-size:=
+ 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, =
+&quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, =
+&quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-=
+size: 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-se=
+rif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEm=
+oji, &quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; =
+font-size: 16px;"><br>
+</span></span></span></p>
+<p><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, &quot=
+;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &quot=
+;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-size:=
+ 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, =
+&quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, =
+&quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-=
+size: 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-se=
+rif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEm=
+oji, &quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; =
+font-size: 16px;">*
+ Gen=E9rico de Coragen,&nbsp;Xeryus (Rynaxypyr): 195&nbsp;<span style=3D"fo=
+nt-family: Calibri, Arial, Helvetica, sans-serif, &quot;Apple Color Emoji&q=
+uot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &quot;Segoe UI Symbol&quo=
+t;, &quot;Android Emoji&quot;, EmojiSymbols; font-size: 16px;">U$S/Lt. Dosi=
+s 30 cc/ha.</span></span></span></span></p>
+<p><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, &quot=
+;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &quot=
+;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-size:=
+ 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, =
+&quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, =
+&quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-=
+size: 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-se=
+rif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEm=
+oji, &quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; =
+font-size: 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sa=
+ns-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoCo=
+lorEmoji, &quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymb=
+ols; font-size: 16px;"><br>
+</span></span></span></span></p>
+<p><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, &quot=
+;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &quot=
+;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-size:=
+ 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, =
+&quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, =
+&quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-=
+size: 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-se=
+rif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEm=
+oji, &quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; =
+font-size: 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sa=
+ns-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoCo=
+lorEmoji, &quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymb=
+ols; font-size: 16px;">Consulte
+ por otros agroqu=EDmicos, fertilizantes, Bolsas de silo, forrajeras...</sp=
+an></span></span></span></p>
+<p><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, &quot=
+;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &quot=
+;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-size:=
+ 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, =
+&quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, =
+&quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-=
+size: 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-se=
+rif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEm=
+oji, &quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; =
+font-size: 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sa=
+ns-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoCo=
+lorEmoji, &quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymb=
+ols; font-size: 16px;"><br>
+</span></span></span></span></p>
+<p><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, &quot=
+;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &quot=
+;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-size:=
+ 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, =
+&quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, =
+&quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-=
+size: 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-se=
+rif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEm=
+oji, &quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; =
+font-size: 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sa=
+ns-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoCo=
+lorEmoji, &quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymb=
+ols; font-size: 16px;">Mart=EDn
+ Ceppi</span></span></span></span></p>
+<p><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, &quot=
+;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &quot=
+;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-size:=
+ 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, =
+&quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, =
+&quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; font-=
+size: 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-se=
+rif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEm=
+oji, &quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols; =
+font-size: 16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sa=
+ns-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoCo=
+lorEmoji, &quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymb=
+ols; font-size: 16px;">03404-
+ 1541 9217</span></span></span></span></p>
+</div>
+</body>
+</html>
+
+--_000_CY4PR1001MB2264E271F82F18F0354AE8E4AD770CY4PR1001MB2264_--

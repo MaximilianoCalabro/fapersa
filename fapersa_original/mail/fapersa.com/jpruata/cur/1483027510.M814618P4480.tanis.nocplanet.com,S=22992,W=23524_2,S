@@ -1,0 +1,532 @@
+Return-Path: <rmelini@hotmail.com.ar>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id KRhEMDY0ZViAEQAATLP0zA
+	for <jpruata@fapersa.com>; Thu, 29 Dec 2016 13:05:10 -0300
+Return-path: <rmelini@hotmail.com.ar>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Thu, 29 Dec 2016 13:05:10 -0300
+Received: from blu004-omc4s10.hotmail.com ([65.55.111.149]:64158)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-SHA384:256)
+	(Exim 4.87)
+	(envelope-from <rmelini@hotmail.com.ar>)
+	id 1cMdCM-0001Ne-5w
+	for jpruata@fapersa.com; Thu, 29 Dec 2016 13:05:10 -0300
+Received: from NAM03-CO1-obe.outbound.protection.outlook.com ([65.55.111.135]) by BLU004-OMC4S10.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Thu, 29 Dec 2016 08:04:17 -0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=xdORq7Oju0PksGgL4Fh47zbZLWUFXARdpYAhHJ6SvK0=;
+ b=cyUznG2KGUknZJ30WwIjteF5KfRtqAjAczZBhEiMRa3e0tlPr1n+jfV+NjDX2kwhMsEClyVSG7VdEhUqXZSSh4I3WQ2qx97TaK1r3UJ/9EIpuTE++Smx5e/0vxbbce57Aks2lESN+WFzcCUcBsrKijkGmefJH12Lze2jwSDqryNYhG90X0X5gbpU5LubReNKYt+J39lQxh2w1lWNVc8X5r/8rxGJWxy/F4ya3DuzKx8w7KZ3o41lghRJ9n4r6OSeV4cz/LjxCnOFlAQp154I5ZNnCnaFdIfUaBVfb5ZncNyIThm6xTCPKiLCSSw2vPA7+NSJfUdfK8JYtacd80X74g==
+Received: from CO1NAM03FT022.eop-NAM03.prod.protection.outlook.com
+ (10.152.80.59) by CO1NAM03HT129.eop-NAM03.prod.protection.outlook.com
+ (10.152.81.194) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.803.8; Thu, 29 Dec
+ 2016 16:04:14 +0000
+Received: from BL2PR19MB0884.namprd19.prod.outlook.com (10.152.80.58) by
+ CO1NAM03FT022.mail.protection.outlook.com (10.152.80.182) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.803.8 via Frontend Transport; Thu, 29 Dec 2016 16:04:14 +0000
+Received: from BL2PR19MB0884.namprd19.prod.outlook.com ([10.167.121.148]) by
+ BL2PR19MB0884.namprd19.prod.outlook.com ([10.167.121.148]) with mapi id
+ 15.01.0803.021; Thu, 29 Dec 2016 16:04:13 +0000
+From: Ricardo Melini <rmelini@hotmail.com.ar>
+To: =?iso-8859-1?Q?Pedro_Lucas_P=E1ez?= <plpaez@paez-busaniche.com.ar>,
+	=?iso-8859-1?Q?Jos=E9_Ignacio_David?= <josedavid@contadoresdavid.com.ar>,
+	ruata juan pablo 1 EMPRESA <jpruata@fapersa.com>
+CC: RUATA hotmail <juampiruata@hotmail.com>, =?iso-8859-1?Q?GAL=C1N_MART=CDN?=
+	<martin@marathona.com.ar>, DECHIARA PAULO <m7.sfrc.2015@gmail.com>
+Subject: Re: insert m13, 2016
+Thread-Topic: insert m13, 2016
+Thread-Index: AQHSYdj1PCs+88YOaEGHB2E/9/ummKEfFo9V
+Date: Thu, 29 Dec 2016 16:04:13 +0000
+Message-ID: <BL2PR19MB08845044C26C56D418BABC368A6B0@BL2PR19MB0884.namprd19.prod.outlook.com>
+References: <82D3DB6182994610872403F322FFF8AD@PcPedrolucas>
+ <27A82345876B4190A35DD37835ECAF37@CuiseNote>,<E0A06C7CB362473DB875A620D795E5F0@PcPedrolucas>
+In-Reply-To: <E0A06C7CB362473DB875A620D795E5F0@PcPedrolucas>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: paez-busaniche.com.ar; dkim=none (message not signed)
+ header.d=none;paez-busaniche.com.ar; dmarc=none action=none
+ header.from=hotmail.com.ar;
+x-incomingtopheadermarker: OriginalChecksum:A9D685BF8415C004861881B7EEA37182BB82A96185058B1A9912A353E650FBBC;UpperCasedChecksum:98E6BA82EE15523FEC3AF5B7A1B3D857DF891306484239FE1206F9A7DC5AF8A2;SizeAsReceived:7760;Count:40
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [E2DEeCgPOhraG+KfJ7sNJXzotegeRm7j]
+x-incomingheadercount: 40
+x-eopattributedmessage: 0
+x-microsoft-exchange-diagnostics: 1;CO1NAM03HT129;7:IhdNUc2myQBpQeiOKis53VohCD5VQElHAO85WXHY6TxLWhZg35qTdSBq3fo0aO79AWYowy4QRN3Gtl0+cU3uDRW73m5Nip1Rb8LTpue6MxoxtijGmrIM/X6Wds7LJho7fmW5V31hhyXtkHjkCbrINh7hkhAGvrABg55mrKJdlzhmg+ep06HqD3WfW+nvcHbzs1fetcx7Iwe8ht1nyy92si3bP6qM4ykWm/m0O3xXTP6slgCD6tSgjqtQEzdYEuOVyX8AocMliyx1fwg70ksLs7SxfvuC0exIF1fBZYSuGnGwleGeF5ZuTtNxPxAqLhh3J81xh7/49Q9JjOjh0op5+5i74FsggyKXA1QQy0AGt0IWwZq8FSsZnzCF7PmE0BHGwIpLwCq6yS2qw5nrIZLa4U6CaabeHzOXaduQ6UOpuQIRfzxQ2nFybDDE+1+3hubFk43XBGYFtZhFgXZj+Rwwew==
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(10019020)(98900003);DIR:OUT;SFP:1102;SCL:1;SRVR:CO1NAM03HT129;H:BL2PR19MB0884.namprd19.prod.outlook.com;FPR:;SPF:None;LANG:es;
+x-ms-office365-filtering-correlation-id: 308b951e-5ae9-4847-cbfc-08d430045580
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(1601124038)(5061506293)(5061507293)(1603103113)(1603101340)(1601125047);SRVR:CO1NAM03HT129;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(444111334)(444112120)(432015012)(82015046);SRVR:CO1NAM03HT129;BCL:0;PCL:0;RULEID:;SRVR:CO1NAM03HT129;
+x-forefront-prvs: 01713B2841
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_BL2PR19MB08845044C26C56D418BABC368A6B0BL2PR19MB0884namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: outlook.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 29 Dec 2016 16:04:13.7608
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CO1NAM03HT129
+X-OriginalArrivalTime: 29 Dec 2016 16:04:18.0042 (UTC) FILETIME=[358815A0:01D261ED]
+X-Spam-Status: No, score=-0.9
+X-Spam-Score: -8
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Yo los preparo esta tarde si no hay objeciones. Saludos De:
+    Pedro Lucas Páez Enviado: jueves, 29 de diciembre de 2016 10:39:20 a.m. Para:
+    José Ignacio David; ruata juan pablo 1 EMPRESA; MELINI RICARDO Cc: RUATA
+   hotmail; GALÁN MARTÍN; DECHIARA PAULO Asunto: Re: insert m13, 2016 [...] 
+ 
+ Content analysis details:   (-0.9 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: eset.com]
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (rmelini[at]hotmail.com.ar)
+  0.0 T_SPF_TEMPERROR        SPF: test of record failed (temperror)
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+  1.0 KAM_HTMLNOISE          Spam containing useless HTML padding
+  0.0 T_REMOTE_IMAGE         Message contains an external image
+  0.0 T_FILL_THIS_FORM_SHORT Fill in a short form with personal information
+X-Spam-Flag: NO
+
+--_000_BL2PR19MB08845044C26C56D418BABC368A6B0BL2PR19MB0884namp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Yo los preparo esta tarde si no hay objeciones.
+
+
+Saludos
+
+________________________________
+De: Pedro Lucas P=E1ez <plpaez@paez-busaniche.com.ar>
+Enviado: jueves, 29 de diciembre de 2016 10:39:20 a.m.
+Para: Jos=E9 Ignacio David; ruata juan pablo 1 EMPRESA; MELINI RICARDO
+Cc: RUATA hotmail; GAL=C1N MART=CDN; DECHIARA PAULO
+Asunto: Re: insert m13, 2016
+
+Juan: no sab=EDa. Ojo que debajo Jos=E9 David dice que los preparar=EDa =E9=
+l a los recibos. Pongo en copia tambi=E9n a Melini para que no hagan los do=
+s los mismos recibos. Cualquier cambio a lo que dijo debajo Jos=E9 por favo=
+r av=EDsenme.
+Abzo.
+
+Pedro Lucas P=E1ez (h)
+Estudio Jur=EDdico P=E1ez - Busaniche
+Tel.: 0054-342-4593030 y rot.
+Juan de Garay 2855
+(S3000CRI) Santa Fe
+www.paez-busaniche.com.ar<http://www.paez-busaniche.com.ar>
+
+----- Original Message -----
+From: Juan Pablo Ruata<mailto:jpruata@fapersa.com>
+To: Pedro Lucas P=E1ez<mailto:plpaez@paez-busaniche.com.ar>
+Sent: Thursday, December 29, 2016 10:31 AM
+Subject: Re: insert m13, 2016
+
+Pedro le reenv=EDo de el email a Melini q hace los recibos.
+
+----- Original Message -----
+From: Jos=E9 Ignacio David<mailto:josedavid@contadoresdavid.com.ar>
+To: Pedro Lucas P=E1ez<mailto:plpaez@paez-busaniche.com.ar>
+Cc: ruata juan pablo 1 EMPRESA<mailto:jpruata@fapersa.com> ; RUATA hotmail<=
+mailto:juampiruata@hotmail.com> ; GAL=C1N MART=CDN<mailto:martin@marathona.=
+com.ar> ; DECHIARA PAULO<mailto:m7.sfrc.2015@gmail.com>
+Sent: Thursday, December 29, 2016 10:03 AM
+Subject: Re: insert m13, 2016
+
+B=E1rbaro Pedro.
+Te lo preparo para el lunes o martes.
+Abrazo
+
+From: Pedro Lucas P=E1ez<mailto:plpaez@paez-busaniche.com.ar>
+Sent: Wednesday, December 28, 2016 8:31 PM
+To: DAVID JOS=C9 (tesorer=EDa SFRC)<mailto:josedavid@contadoresdavid.com.ar=
+>
+Cc: ruata juan pablo 1 EMPRESA<mailto:jpruata@fapersa.com> ; RUATA hotmail<=
+mailto:juampiruata@hotmail.com> ; GAL=C1N MART=CDN<mailto:martin@marathona.=
+com.ar> ; DECHIARA PAULO<mailto:m7.sfrc.2015@gmail.com>
+Subject: insert m13, 2016
+
+Jos=E9:
+    =BFc=F3mo and=E1s...?
+    Necesito cobrar los insert que vend=ED. Algunos me est=E1n pidiendo los=
+ recibos o facturas. En a=F1os anteriores, a estos me los diste vos.
+    Necesitar=EDa los siguientes recibos /facturas (SON 6):
+
+Auto chapa srl.
+Santiago de el estero 2320.
+30-55283513-8
+responsable inscripto
+$ 2000
+
+Excelcom S.A.
+San Mar=EDn 2811 PA Santa Fe
+CUIT: 30-69238178-1
+Responsable Inscripto
+$ 4000
+
+BULONERIA SATA FE
+CUIT 30681935629
+de Fernando Repetti y Martin Repetti s.h
+RI
+$ 7000
+
+
+CINTIA GARNERO
+
+RESPONSABLE INSCRIPTO - CUIT: 27-23747356-1
+
+DIRECCION: RIVADAVIA 3396, LOCAL 5 Y 6
+
+$ 2000
+
+
+
+Mar=EDa Soledad Adjad
+Responsable inscripto
+cuit 27242497967
+San Ger=F3nimo 1999
+$ 2000
+
+PEDRO LUCAS P=C1EZ
+RESP INSCR
+CUIT 23-23228412-9
+JUAN DE GARAY 2855
+$ 2000
+
+
+Por favor, decime Jos=E9 cu=E1ndo puedo busc=E1rtelos (ponele la semana que=
+ viene) as=ED cobro y luego te llevo la plata.
+
+    Abzo. y muchas gracias
+
+Pedro Lucas P=E1ez (h)
+Estudio Jur=EDdico P=E1ez - Busaniche
+Tel.: 0054-342-4593030 y rot.
+Juan de Garay 2855
+(S3000CRI) Santa Fe
+www.paez-busaniche.com.ar<http://www.paez-busaniche.com.ar>
+
+
+__________ Informaci=F3n de ESET NOD32 Antivirus, versi=F3n de la base de f=
+irmas de virus 14679 (20161228) __________
+
+ESET NOD32 Antivirus ha comprobado este mensaje.
+
+http://www.eset.com
+
+
+________________________________
+[Avast logo] <http://www.avast.com/>
+
+El software de antivirus Avast ha analizado este correo electr=F3nico en bu=
+sca de virus.
+www.avast.com<http://www.avast.com/>
+
+
+
+
+__________ Informaci=F3n de ESET NOD32 Antivirus, versi=F3n de la base de f=
+irmas de virus 14683 (20161229) __________
+
+ESET NOD32 Antivirus ha comprobado este mensaje.
+
+http://www.eset.com
+
+--_000_BL2PR19MB08845044C26C56D418BABC368A6B0BL2PR19MB0884namp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<meta name=3D"GENERATOR" content=3D"MSHTML 8.00.6001.18702">
+<style></style>
+</head>
+<body style=3D"PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 15px" =
+id=3D"MailContainerBody" leftmargin=3D"0" topmargin=3D"0" bgcolor=3D"#fffff=
+f" name=3D"Compose message area" CanvasTabStop=3D"true">
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt;color:#000000;font=
+-family:Calibri,Arial,Helvetica,sans-serif;" dir=3D"ltr">
+<p>Yo los preparo esta tarde si no hay objeciones.</p>
+<p><br>
+</p>
+<p>Saludos<br>
+</p>
+</div>
+<hr style=3D"display:inline-block;width:98%" tabindex=3D"-1">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" st=
+yle=3D"font-size:11pt" color=3D"#000000"><b>De:</b> Pedro Lucas P=E1ez &lt;=
+plpaez@paez-busaniche.com.ar&gt;<br>
+<b>Enviado:</b> jueves, 29 de diciembre de 2016 10:39:20 a.m.<br>
+<b>Para:</b> Jos=E9 Ignacio David; ruata juan pablo 1 EMPRESA; MELINI RICAR=
+DO<br>
+<b>Cc:</b> RUATA hotmail; GAL=C1N MART=CDN; DECHIARA PAULO<br>
+<b>Asunto:</b> Re: insert m13, 2016</font>
+<div>&nbsp;</div>
+</div>
+<div>
+<div><font face=3D"Arial">Juan: no sab=EDa. Ojo que debajo Jos=E9 David dic=
+e que los preparar=EDa =E9l a los recibos. Pongo en copia tambi=E9n a Melin=
+i para que no hagan los dos los mismos recibos. Cualquier cambio a lo que d=
+ijo debajo Jos=E9 por favor av=EDsenme.
+</font></div>
+<div><font face=3D"Arial">Abzo. </font></div>
+<div>&nbsp;</div>
+<div>Pedro Lucas P=E1ez (h)<br>
+Estudio Jur=EDdico P=E1ez - Busaniche<br>
+Tel.: 0054-342-4593030 y rot.<br>
+Juan de Garay 2855<br>
+(S3000CRI) Santa Fe<br>
+<a href=3D"http://www.paez-busaniche.com.ar">www.paez-busaniche.com.ar</a><=
+/div>
+<div><font face=3D"Arial"></font>&nbsp;</div>
+<div>
+<div style=3D"FONT: 10pt arial">----- Original Message -----
+<div style=3D"BACKGROUND: #e4e4e4; font-color: black"><b>From:</b> <a title=
+=3D"jpruata@fapersa.com" href=3D"mailto:jpruata@fapersa.com">
+Juan Pablo Ruata</a> </div>
+<div><b>To:</b> <a title=3D"plpaez@paez-busaniche.com.ar" href=3D"mailto:pl=
+paez@paez-busaniche.com.ar">
+Pedro Lucas P=E1ez</a> </div>
+<div><b>Sent:</b> Thursday, December 29, 2016 10:31 AM</div>
+<div><b>Subject:</b> Re: insert m13, 2016</div>
+</div>
+<div><br>
+</div>
+<div>Pedro le reenv=EDo de el email a Melini q hace los recibos.&nbsp;</div=
+>
+</div>
+<div><br>
+</div>
+<blockquote style=3D"BORDER-LEFT: #000000 2px solid; PADDING-LEFT: 5px; PAD=
+DING-RIGHT: 0px; MARGIN-LEFT: 5px; MARGIN-RIGHT: 0px">
+<div style=3D"FONT: 10pt arial">----- Original Message ----- </div>
+<div style=3D"FONT: 10pt arial; BACKGROUND: #e4e4e4; font-color: black"><b>=
+From:</b>
+<a title=3D"josedavid@contadoresdavid.com.ar" href=3D"mailto:josedavid@cont=
+adoresdavid.com.ar">
+Jos=E9 Ignacio David</a> </div>
+<div style=3D"FONT: 10pt arial"><b>To:</b> <a title=3D"plpaez@paez-busanich=
+e.com.ar" href=3D"mailto:plpaez@paez-busaniche.com.ar">
+Pedro Lucas P=E1ez</a> </div>
+<div style=3D"FONT: 10pt arial"><b>Cc:</b> <a title=3D"jpruata@fapersa.com"=
+ href=3D"mailto:jpruata@fapersa.com">
+ruata juan pablo 1 EMPRESA</a> ; <a title=3D"juampiruata@hotmail.com" href=
+=3D"mailto:juampiruata@hotmail.com">
+RUATA hotmail</a> ; <a title=3D"martin@marathona.com.ar" href=3D"mailto:mar=
+tin@marathona.com.ar">
+GAL=C1N MART=CDN</a> ; <a title=3D"m7.sfrc.2015@gmail.com" href=3D"mailto:m=
+7.sfrc.2015@gmail.com">
+DECHIARA PAULO</a> </div>
+<div style=3D"FONT: 10pt arial"><b>Sent:</b> Thursday, December 29, 2016 10=
+:03 AM</div>
+<div style=3D"FONT: 10pt arial"><b>Subject:</b> Re: insert m13, 2016</div>
+<div><br>
+</div>
+<div><font color=3D"#000080" face=3D"Calibri">B=E1rbaro Pedro.</font></div>
+<div><font color=3D"#000080" face=3D"Calibri">Te lo preparo para el lunes o=
+ martes.</font></div>
+<div><font color=3D"#000080" face=3D"Calibri">Abrazo</font></div>
+<div style=3D"FONT: 10pt Tahoma">
+<div><br>
+</div>
+<div style=3D"BACKGROUND: #f5f5f5">
+<div style=3D"font-color: black"><b>From:</b> <a title=3D"plpaez@paez-busan=
+iche.com.ar" href=3D"mailto:plpaez@paez-busaniche.com.ar">
+Pedro Lucas P=E1ez</a> </div>
+<div><b>Sent:</b> Wednesday, December 28, 2016 8:31 PM</div>
+<div><b>To:</b> <a title=3D"josedavid@contadoresdavid.com.ar" href=3D"mailt=
+o:josedavid@contadoresdavid.com.ar">
+DAVID JOS=C9 (tesorer=EDa SFRC)</a> </div>
+<div><b>Cc:</b> <a title=3D"jpruata@fapersa.com" href=3D"mailto:jpruata@fap=
+ersa.com">
+ruata juan pablo 1 EMPRESA</a> ; <a title=3D"juampiruata@hotmail.com" href=
+=3D"mailto:juampiruata@hotmail.com">
+RUATA hotmail</a> ; <a title=3D"martin@marathona.com.ar" href=3D"mailto:mar=
+tin@marathona.com.ar">
+GAL=C1N MART=CDN</a> ; <a title=3D"m7.sfrc.2015@gmail.com" href=3D"mailto:m=
+7.sfrc.2015@gmail.com">
+DECHIARA PAULO</a> </div>
+<div><b>Subject:</b> insert m13, 2016</div>
+</div>
+</div>
+<div><br>
+</div>
+<div><font face=3D"Arial">Jos=E9:</font></div>
+<div><font face=3D"Arial">&nbsp;&nbsp;&nbsp; =BFc=F3mo and=E1s...?</font></=
+div>
+<div><font face=3D"Arial">&nbsp;&nbsp;&nbsp; Necesito cobrar los insert que=
+ vend=ED. Algunos me est=E1n pidiendo los recibos o facturas. En a=F1os ant=
+eriores, a estos me los diste vos.</font></div>
+<div><font face=3D"Arial">&nbsp;&nbsp;&nbsp; Necesitar=EDa los siguientes r=
+ecibos /facturas (SON 6):</font></div>
+<div><font face=3D"Arial"></font>&nbsp;</div>
+<div>
+<div>Auto chapa srl.&nbsp;
+<div>Santiago de el estero 2320.&nbsp;</div>
+<div>30-55283513-8</div>
+<div>responsable inscripto</div>
+<div>$ 2000</div>
+<div><font face=3D"Arial"></font>&nbsp;</div>
+<div>
+<p class=3D"MsoNormal"><span style=3D"FONT-FAMILY: 'Calibri','sans-serif'; =
+COLOR: #1f497d; FONT-SIZE: 11pt">Excelcom S.A.</span></p>
+<p class=3D"MsoNormal"><span style=3D"FONT-FAMILY: 'Calibri','sans-serif'; =
+COLOR: #1f497d; FONT-SIZE: 11pt"></span><span style=3D"FONT-FAMILY: 'Calibr=
+i','sans-serif'; COLOR: #1f497d; FONT-SIZE: 11pt">San Mar=EDn 2811 PA Santa=
+ Fe<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"FONT-FAMILY: 'Calibri','sans-serif'; =
+COLOR: #1f497d; FONT-SIZE: 11pt">CUIT: 30-69238178-1<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"FONT-FAMILY: 'Calibri','sans-serif'; =
+COLOR: #1f497d; FONT-SIZE: 11pt">Responsable Inscripto</span></p>
+<p class=3D"MsoNormal"><span style=3D"FONT-FAMILY: 'Calibri','sans-serif'; =
+COLOR: #1f497d; FONT-SIZE: 11pt">$ 4000</span></p>
+<p class=3D"MsoNormal"><span style=3D"FONT-FAMILY: 'Calibri','sans-serif'; =
+COLOR: #1f497d; FONT-SIZE: 11pt"></span>&nbsp;</p>
+<p class=3D"MsoNormal"><span style=3D"FONT-FAMILY: 'Calibri','sans-serif'; =
+COLOR: #1f497d; FONT-SIZE: 11pt"><span><font color=3D"#000000" size=3D"3" f=
+ace=3D"Times New Roman">BULONERIA SATA FE
+<br>
+CUIT 30681935629<br>
+de Fernando Repetti y Martin Repetti s.h</font></span></span></p>
+<p class=3D"MsoNormal"><span style=3D"FONT-FAMILY: 'Calibri','sans-serif'; =
+COLOR: #1f497d; FONT-SIZE: 11pt"><o:p>RI</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"FONT-FAMILY: 'Calibri','sans-serif'; =
+COLOR: #1f497d; FONT-SIZE: 11pt"><o:p>$ 7000</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"FONT-FAMILY: 'Calibri','sans-serif'; =
+COLOR: #1f497d; FONT-SIZE: 11pt"><o:p></o:p></span>&nbsp;</p>
+<p class=3D"MsoNormal"><span style=3D"FONT-FAMILY: 'Calibri','sans-serif'; =
+COLOR: #1f497d; FONT-SIZE: 11pt"><o:p></o:p></span>&nbsp;</p>
+<p class=3D"MsoNormal"><span style=3D"FONT-FAMILY: 'Calibri','sans-serif'; =
+COLOR: #1f497d; FONT-SIZE: 11pt"><o:p><font color=3D"#000000" size=3D"3">CI=
+NTIA GARNERO</font></p>
+<p>RESPONSABLE INSCRIPTO - CUIT: 27-23747356-1</p>
+<p>DIRECCION: RIVADAVIA 3396, LOCAL 5 Y 6</p>
+<p>$ 2000</p>
+<p><font color=3D"#000000" size=3D"3" face=3D"Arial"></font>&nbsp;</p>
+<font color=3D"#000000" size=3D"3" face=3D"Arial"></font></o:p></span></div=
+>
+<div><span style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FO=
+NT-SIZE: 11pt"><o:p>
+<div>Mar=EDa Soledad Adjad </div>
+<div>Responsable inscripto </div>
+<div>cuit 27242497967</div>
+<div>San Ger=F3nimo 1999</div>
+<div>$ 2000</div>
+<div><font color=3D"#000000" size=3D"3" face=3D"Arial"></font>&nbsp;</div>
+<div><font color=3D"#000000" size=3D"3" face=3D"Arial">PEDRO LUCAS P=C1EZ</=
+font></div>
+<div><font color=3D"#000000" size=3D"3" face=3D"Arial">RESP INSCR</font></d=
+iv>
+<div><font color=3D"#000000" size=3D"3" face=3D"Arial">CUIT 23-23228412-9</=
+font></div>
+<div><font color=3D"#000000" size=3D"3" face=3D"Arial">JUAN DE GARAY 2855</=
+font></div>
+<div><font color=3D"#000000" size=3D"3" face=3D"Arial">$ 2000</font></div>
+<font color=3D"#000000" size=3D"3" face=3D"Arial"></font><font color=3D"#00=
+0000" size=3D"3" face=3D"Arial"></font><font color=3D"#000000" size=3D"3" f=
+ace=3D"Arial"></font><font color=3D"#000000" size=3D"3" face=3D"Arial"></fo=
+nt></o:p></span></div>
+<div><span style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FO=
+NT-SIZE: 11pt"><o:p><font color=3D"#000000" size=3D"3" face=3D"Arial"></fon=
+t><font color=3D"#000000" size=3D"3" face=3D"Arial"></font></o:p></span>&nb=
+sp;</div>
+<span style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FONT-SI=
+ZE: 11pt"><o:p></o:p></span></div>
+<div><span style=3D"FONT-FAMILY: 'Calibri','sans-serif'; COLOR: #1f497d; FO=
+NT-SIZE: 11pt"><o:p><font color=3D"#000000" size=3D"3" face=3D"Arial"></fon=
+t>
+<p><font color=3D"#000000" size=3D"3" face=3D"Arial">Por favor, decime Jos=
+=E9 cu=E1ndo puedo busc=E1rtelos (ponele la semana que viene) as=ED cobro y=
+ luego te llevo la plata.
+</font></p>
+<p><font color=3D"#000000" size=3D"3" face=3D"Arial">&nbsp;&nbsp;&nbsp; Abz=
+o. y muchas gracias </font>
+<br>
+</p>
+</o:p></span></div>
+</div>
+<div><font face=3D"Arial">Pedro Lucas P=E1ez (h)<br>
+Estudio Jur=EDdico P=E1ez - Busaniche<br>
+Tel.: 0054-342-4593030 y rot.<br>
+Juan de Garay 2855<br>
+(S3000CRI) Santa Fe<br>
+<a href=3D"http://www.paez-busaniche.com.ar">www.paez-busaniche.com.ar</a><=
+br>
+</font></div>
+<br>
+<br>
+__________ Informaci=F3n de ESET NOD32 Antivirus, versi=F3n de la base de f=
+irmas de virus 14679 (20161228) __________<br>
+<br>
+ESET NOD32 Antivirus ha comprobado este mensaje.<br>
+<br>
+<a href=3D"http://www.eset.com">http://www.eset.com</a><br>
+<br>
+<br>
+<hr style=3D"BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BACKGROU=
+ND-COLOR: #b0b0b0; WIDTH: 99%; HEIGHT: 1px; COLOR: #909090; BORDER-TOP: med=
+ium none; BORDER-RIGHT: medium none">
+<table style=3D"BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDE=
+R-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none">
+<tbody>
+<tr>
+<td style=3D"BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-=
+BOTTOM: 0px; PADDING-LEFT: 8px; PADDING-RIGHT: 15px; BORDER-TOP: medium non=
+e; BORDER-RIGHT: medium none; PADDING-TOP: 0px">
+<a href=3D"http://www.avast.com/"><img border=3D"0" alt=3D"Avast logo" src=
+=3D"http://static.avast.com/emails/avast-mail-stamp.png">
+</a></td>
+<td>
+<p style=3D"FONT-FAMILY: 'Calibri','Verdana','Arial','Helvetica'; COLOR: #3=
+d4d5a; FONT-SIZE: 12pt">
+El software de antivirus Avast ha analizado este correo electr=F3nico en bu=
+sca de virus.
+<br>
+<a href=3D"http://www.avast.com/">www.avast.com</a> </p>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+__________ Informaci=F3n de ESET NOD32 Antivirus, versi=F3n de la base de f=
+irmas de virus 14683 (20161229) __________<br>
+<br>
+ESET NOD32 Antivirus ha comprobado este mensaje.<br>
+<br>
+<a href=3D"http://www.eset.com">http://www.eset.com</a><br>
+</blockquote>
+</div>
+</body>
+</html>
+
+--_000_BL2PR19MB08845044C26C56D418BABC368A6B0BL2PR19MB0884namp_--

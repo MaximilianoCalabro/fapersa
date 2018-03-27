@@ -1,0 +1,483 @@
+Return-Path: <ggonzalez@redsurcos.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id qZ2QEJNKp1i5ZgAATLP0zA
+	for <jpruata@fapersa.com>; Fri, 17 Feb 2017 16:10:11 -0300
+Return-path: <ggonzalez@redsurcos.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Fri, 17 Feb 2017 16:10:11 -0300
+Received: from mail-qk0-f178.google.com ([209.85.220.178]:34853)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128)
+	(Exim 4.88)
+	(envelope-from <ggonzalez@redsurcos.com>)
+	id 1cenup-0007z8-43
+	for jpruata@fapersa.com; Fri, 17 Feb 2017 16:10:10 -0300
+Received: by mail-qk0-f178.google.com with SMTP id u25so52620070qki.2
+        for <jpruata@fapersa.com>; Fri, 17 Feb 2017 11:09:39 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=redsurcos-com.20150623.gappssmtp.com; s=20150623;
+        h=message-id:reply-to:from:to:references:subject:date:organization
+         :mime-version:disposition-notification-to;
+        bh=bNuahJInLJqy16Ar9UQkwO4hfmM/CfNgVj18l5tyRPM=;
+        b=t0MuD3/tDuqoMNZ2Zwzl2DsB0WhSVp6GffmWSKJ+GKOaK+ZRSpLDzcTzyDlV7Koeak
+         Ao8lM6vXBdeRrb9LGh4Q0NiIZi/++fGIrOY/ygPxrF/f4yxfpAmbSOwOkYLT45CsAKPP
+         NNzdULJMyS8f6cKkhoeRjrd43TN92Xjd4cThyyunIVDMz4TaDq98beMPhvtoiEMgqhwS
+         vq0dQ/gMuv411neM5ZYks/h+jmpGAfp552c1DfetvkPjflJXLneC2KLlhTIevKUbPVfn
+         1cmG6V3kXSU8uweM8Gmx6wT0Drglg342+qS6WkSqoWKcOPEZFWrDHPe/1l/WhXsMrUsj
+         x7kg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:message-id:reply-to:from:to:references:subject
+         :date:organization:mime-version:disposition-notification-to;
+        bh=bNuahJInLJqy16Ar9UQkwO4hfmM/CfNgVj18l5tyRPM=;
+        b=RrYgpe32p7c3AX7qhjxWoSbpO9ot4Mib2qBLMRbsYXSTIwqfwLnHA6Jgi8JUiU485x
+         DvcKISffgghLILJ7dTOoZtBxva6Bj4Kj0Mqfi3A1gOyIrMm1KR4aQnbELaQrCDmqCaFg
+         eB4cxDrdNY2mQymx5T/PrQdF2is7FKbPx7QmO+VhTZHxc2eoHHD46/7MvpaPSivOxwlF
+         vfV7k16TPpW2gZJUc7SXS3Vyq7l8ol2cxZzbVHl8RKyo+cAQu9eCIkfmfqu+OSpPz6iq
+         UWGhhPc74WyEDR/j00Vao7hYvLiAGg78XbwPLPOHYLdiEn87eInXRUPOMRemc0LMJnLH
+         0iiA==
+X-Gm-Message-State: AMke39matrU9IFc7EqPMbFlBT8uj99mrIaHu1G9+US2czIEaVt+vbB+BMiX4TtHpIvTPZSsG
+X-Received: by 10.55.186.67 with SMTP id k64mr9200432qkf.232.1487358558693;
+        Fri, 17 Feb 2017 11:09:18 -0800 (PST)
+Received: from 130Ggonzalez ([190.221.178.149])
+        by smtp.gmail.com with ESMTPSA id z8sm7061681qkz.42.2017.02.17.11.09.17
+        (version=TLS1 cipher=DES-CBC3-SHA bits=112/168);
+        Fri, 17 Feb 2017 11:09:17 -0800 (PST)
+Message-ID: <44DDD32B7B8D4E499B24C944CFF0D34C@130Ggonzalez>
+Reply-To: "Gabriela Gonzalez" <ggonzalez@redsurcos.com>
+From: "Gabriela Gonzalez" <ggonzalez@redsurcos.com>
+To: "FAPERSA" <jpruata@fapersa.com>,
+	<nchamorro@redsurcos.com>
+References: <62B5CE52-5BF6-4C5F-B6EF-885716C00E82@fapersa.com> <83208965-4201-49D1-85A8-FD34A50743F9@fapersa.com>
+Subject: Re: La Turquina
+Date: Fri, 17 Feb 2017 16:34:20 -0300
+Organization: Red Surcos
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+	boundary="----=_NextPart_000_0018_01D2893B.B0B874C0"
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2900.5512
+Disposition-Notification-To: "Gabriela Gonzalez" <ggonzalez@redsurcos.com>
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5512
+X-Spam-Status: No, score=-0.9
+X-Spam-Score: -8
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Hola Juampi. Te paso los precios de los fungicidas y las dosis
+    en el adjunto. - Precio de Lista válido para cheques hasta 90 días, tarjeta
+    hasta 90 y AGRONACION, MACRO, BAPRO. - Para operaciones de contado descontar
+    5% del precio de lista [...] 
+ 
+ Content analysis details:   (-0.9 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: gappssmtp.com]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  1.0 KAM_HTMLNOISE          Spam containing useless HTML padding
+X-Spam-Flag: NO
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0018_01D2893B.B0B874C0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_001_0019_01D2893B.B0B874C0"
+
+
+------=_NextPart_001_0019_01D2893B.B0B874C0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Hola Juampi. Te paso los precios de los fungicidas y las dosis en el =
+adjunto.
+
+- Precio de Lista v=E1lido para cheques hasta 90 d=EDas, tarjeta hasta =
+90 y AGRONACION, MACRO, BAPRO.=20
+
+
+- Para operaciones de contado descontar 5% del precio de lista
+
+
+- Precio 180 v=E1lido para cheques y tarjetas a ese plazo. ( Galicia, =
+Frances,Cabal, Macro, Santander)
+
+Tenemos stock de ambos productos. Ambos son fungicidas para enfermedades =
+para fin de ciclo, Acento es el que tiene la strobirulina, semejante a =
+Amistar u Opera , mas curativo que preventivo.
+
+Cualquier consulta a dispocision
+Saludos
+
+  ----- Original Message -----=20
+  From: FAPERSA=20
+  To: nchamorro@redsurcos.com ; ggonzalez@redsurcos.com=20
+  Sent: Friday, February 17, 2017 12:13 PM
+  Subject: Fwd: La Turquina
+
+
+
+
+
+
+    Inicio del mensaje reenviado:
+
+
+    De: FAPERSA <jpruata@fapersa.com>
+
+    Asunto: La Turquina
+
+    Fecha: 17 de febrero de 2017, 11:53:24 GMT-3
+
+    Para: Rodrigo Ferrero <rferrero@redsurcos.com>
+
+
+
+    Rodrigo como andas
+
+    Te consulto por productos para enfermedades de fin de ciclo para la =
+soja.
+
+    Pasame lo que tenes con especificaciones precio y forma de pagos.
+
+
+    Abrazos.
+
+
+
+------=_NextPart_001_0019_01D2893B.B0B874C0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content=3D"text/html; charset=3Diso-8859-1" =
+http-equiv=3DContent-Type>
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.18702">
+<STYLE></STYLE>
+</HEAD>
+<BODY=20
+style=3D"WORD-WRAP: break-word; -webkit-nbsp-mode: space; =
+-webkit-line-break: after-white-space"=20
+bgColor=3D#ffffff>
+<DIV><FONT size=3D2 face=3DArial>Hola Juampi. Te paso los precios de los =
+fungicidas=20
+y las dosis en el adjunto.</FONT></DIV>
+<DIV><FONT size=3D2 face=3DArial></FONT>&nbsp;</DIV>
+<DIV><FONT size=3D2 face=3DArial>
+<DIV style=3D"FONT-SIZE: 12px"><SPAN=20
+class=3Dgmail-m_147646822573402139gmail-m_300509458420323370gmail-m_81773=
+68712078828447gmail-il>-=20
+Pre</SPAN><SPAN style=3D"FONT-SIZE: 12px"=20
+class=3Dgmail-m_147646822573402139gmail-m_300509458420323370gmail-m_81773=
+68712078828447gmail-il>cio</SPAN><SPAN=20
+style=3D"FONT-SIZE: 12px">&nbsp;de&nbsp;</SPAN><SPAN style=3D"FONT-SIZE: =
+12px"=20
+class=3Dgmail-m_147646822573402139gmail-m_300509458420323370gmail-m_81773=
+68712078828447gmail-il>Lista&nbsp;</SPAN><SPAN=20
+style=3D"FONT-SIZE: 12px">v=E1lido para</SPAN><SPAN=20
+style=3D"FONT-SIZE: 12px">&nbsp;cheques hasta 90 d=EDas, tarjeta hasta =
+90 y=20
+AGRONACION, MACRO, BAPRO.&nbsp;</SPAN></DIV>
+<DIV style=3D"FONT-SIZE: 12px"><BR></DIV>
+<DIV style=3D"FONT-SIZE: 12px">- Para operaciones de contado descontar =
+5% del=20
+precio de lista</DIV>
+<DIV style=3D"FONT-SIZE: 12px"><BR></DIV>
+<DIV style=3D"FONT-SIZE: 12px">-&nbsp;<SPAN=20
+class=3Dgmail-m_147646822573402139gmail-m_300509458420323370gmail-m_81773=
+68712078828447gmail-il>Precio</SPAN>&nbsp;180=20
+v=E1lido para cheques y tarjetas a ese plazo.&nbsp;( Galicia, =
+Frances,Cabal,=20
+Macro, Santander)</DIV>
+<DIV style=3D"FONT-SIZE: 12px">&nbsp;</DIV>
+<DIV style=3D"FONT-SIZE: 12px"><FONT size=3D2>Tenemos stock de ambos =
+productos.=20
+Ambos son fungicidas para enfermedades para fin de ciclo, Acento es el =
+que tiene=20
+la strobirulina, semejante a Amistar u Opera , mas curativo que=20
+preventivo.</FONT></DIV>
+<DIV style=3D"FONT-SIZE: 12px">&nbsp;</DIV>
+<DIV style=3D"FONT-SIZE: 12px"><FONT size=3D2>Cualquier consulta a=20
+dispocision</FONT></DIV>
+<DIV style=3D"FONT-SIZE: 12px"><FONT size=3D2>Saludos</FONT></DIV>
+<DIV style=3D"FONT-SIZE: 12px"><FONT =
+size=3D2></FONT>&nbsp;</DIV></FONT></DIV>
+<BLOCKQUOTE=20
+style=3D"BORDER-LEFT: #000000 2px solid; PADDING-LEFT: 5px; =
+PADDING-RIGHT: 0px; MARGIN-LEFT: 5px; MARGIN-RIGHT: 0px">
+  <DIV style=3D"FONT: 10pt arial">----- Original Message ----- </DIV>
+  <DIV=20
+  style=3D"FONT: 10pt arial; BACKGROUND: #e4e4e4; font-color: =
+black"><B>From:</B>=20
+  <A title=3Djpruata@fapersa.com =
+href=3D"mailto:jpruata@fapersa.com">FAPERSA</A>=20
+  </DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>To:</B> <A =
+title=3Dnchamorro@redsurcos.com=20
+  href=3D"mailto:nchamorro@redsurcos.com">nchamorro@redsurcos.com</A> ; =
+<A=20
+  title=3Dggonzalez@redsurcos.com=20
+  href=3D"mailto:ggonzalez@redsurcos.com">ggonzalez@redsurcos.com</A> =
+</DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>Sent:</B> Friday, February 17, 2017 =
+12:13=20
+  PM</DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>Subject:</B> Fwd: La Turquina</DIV>
+  <DIV><BR></DIV><BR>
+  <DIV><BR>
+  <BLOCKQUOTE type=3D"cite">
+    <DIV>Inicio del mensaje reenviado:</DIV><BR =
+class=3DApple-interchange-newline>
+    <DIV style=3D"MARGIN: 0px"><SPAN=20
+    style=3D"FONT-FAMILY: -webkit-system-font, Helvetica Neue, =
+Helvetica, sans-serif"><B>De:=20
+    </B></SPAN><SPAN=20
+    style=3D"FONT-FAMILY: -webkit-system-font, Helvetica Neue, =
+Helvetica, sans-serif">FAPERSA=20
+    &lt;<A=20
+    =
+href=3D"mailto:jpruata@fapersa.com">jpruata@fapersa.com</A>&gt;<BR></SPAN=
+></DIV>
+    <DIV style=3D"MARGIN: 0px"><SPAN=20
+    style=3D"FONT-FAMILY: -webkit-system-font, Helvetica Neue, =
+Helvetica, sans-serif"><B>Asunto:=20
+    </B></SPAN><SPAN=20
+    style=3D"FONT-FAMILY: -webkit-system-font, Helvetica Neue, =
+Helvetica, sans-serif"><B>La=20
+    Turquina</B><BR></SPAN></DIV>
+    <DIV style=3D"MARGIN: 0px"><SPAN=20
+    style=3D"FONT-FAMILY: -webkit-system-font, Helvetica Neue, =
+Helvetica, sans-serif"><B>Fecha:=20
+    </B></SPAN><SPAN=20
+    style=3D"FONT-FAMILY: -webkit-system-font, Helvetica Neue, =
+Helvetica, sans-serif">17=20
+    de febrero de 2017, 11:53:24 GMT-3<BR></SPAN></DIV>
+    <DIV style=3D"MARGIN: 0px"><SPAN=20
+    style=3D"FONT-FAMILY: -webkit-system-font, Helvetica Neue, =
+Helvetica, sans-serif"><B>Para:=20
+    </B></SPAN><SPAN=20
+    style=3D"FONT-FAMILY: -webkit-system-font, Helvetica Neue, =
+Helvetica, sans-serif">Rodrigo=20
+    Ferrero &lt;<A=20
+    =
+href=3D"mailto:rferrero@redsurcos.com">rferrero@redsurcos.com</A>&gt;<BR>=
+</SPAN></DIV><BR>
+    <DIV>
+    <DIV>Rodrigo como andas<BR><BR>Te consulto por productos para =
+enfermedades=20
+    de fin de ciclo para la soja.<BR><BR>Pasame lo que tenes con=20
+    especificaciones precio y forma de=20
+  =
+pagos.<BR><BR><BR>Abrazos.<BR></DIV></DIV></BLOCKQUOTE></DIV><BR></BLOCKQ=
+UOTE></BODY></HTML>
+
+------=_NextPart_001_0019_01D2893B.B0B874C0--
+
+------=_NextPart_000_0018_01D2893B.B0B874C0
+Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;
+	name="FungicidasLaturquina1.xlsx"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	filename="FungicidasLaturquina1.xlsx"
+
+UEsDBBQABgAIAAAAIQCnlfmZhAEAABQGAAATAN0BW0NvbnRlbnRfVHlwZXNdLnhtbCCi2QEooAAC
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAMxUyW7CMBC9V+o/RL5WxEClqqoSOHQ5tkjQDzDxQCwS2/IMFP6+k1BQqdJI
+NBx6SZTFb5tnJ+NtWUQbCGicTcUg7osIbOa0sctUvM9eevciQlJWq8JZSMUOUIxH11fJbOcBI15t
+MRU5kX+QErMcSoWx82D5y8KFUhE/hqX0KlupJchhv38nM2cJLPWowhCj5AkWal1Q9Lzl13slc2NF
+9Lj/r6JKhfK+MJkiFio3Vv8g6bnFwmSgXbYuGTpGH0BpzAGoLGIfDDOGKRCxMRRylLyx6WA0RBMV
+6FWVzCC3hSR2APvrIGYPnUTUYDcVyu+ESLsCsDPVqd896IG5Id4ABZ5n7WuAMa+sZ4C58djC0J5d
+eyYfLqzmzq0unUrVhrhUxh50N5WAKzQJzqPkwnUWAFWjNeieZ0gIZOCYWRM3F7DyXtcWZX0bdtZw
+Wo0jflsGDTpu/4mO7rvyb3lgrgLoKfFJsrz4dv2O3TaXYzczF+D8gRz2cLW6oZGyPtNHnwAAAP//
+AwBQSwMEFAAGAAgAAAAhALVVMCP1AAAATAIAAAsAzgFfcmVscy8ucmVscyCiygEooAACAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIySz07DMAzG
+70i8Q+T76m5ICKGlu0xIuyFUHsAk7h+1jaMkQPf2hAOCSmPb0fbnzz9b3u7maVQfHGIvTsO6KEGx
+M2J712p4rZ9WD6BiImdpFMcajhxhV93ebF94pJSbYtf7qLKLixq6lPwjYjQdTxQL8exypZEwUcph
+aNGTGahl3JTlPYa/HlAtPNXBaggHeweqPvo8+bK3NE1veC/mfWKXToxAnhM7y3blQ2YLqc/bqJpC
+y0mDFfOc0xHJ+yJjA54m2lxP9P+2OHEiS4nQSODzPN+Kc0Dr64Eun2ip+L3OPOKnhOFNZPhhwcUP
+VF8AAAD//wMAUEsDBBQABgAIAAAAIQDeCf0oAgEAANQDAAAaAAgBeGwvX3JlbHMvd29ya2Jvb2su
+eG1sLnJlbHMgogQBKKAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8k89qwzAMxu+DvYPR
+fXGSbmWUOr2MQa9b9wAmUeLQxDaW9idvP5NDukDJLqEXgyT8fT/Qp/3hp+/EFwZqnVWQJSkItKWr
+Wtso+Di9PjyDINa20p2zqGBAgkNxf7d/w05z/ESm9SSiiiUFhtnvpKTSYK8pcR5tnNQu9JpjGRrp
+dXnWDco8Tbcy/NWAYqYpjpWCcKw2IE6Dj87/a7u6bkt8ceVnj5avWMhvF85kEDmK6tAgK5haJMfJ
+JonEIK/D5DeGyZdgshvDZEsw2zVhyOiA1TuHmEK6rGrWXoJ5WhWGhy6GfgoMjfWS/eOa9hxPCS/u
+YynHd9qHnN1i8QsAAP//AwBQSwMEFAAGAAgAAAAhAGe2OzpfAQAAbQIAAA8AAAB4bC93b3JrYm9v
+ay54bWyMksFPgzAUxu8m/g9N7w4obHHLYIlRs12Mh7mdK32MutKStsj23/tgAafx4Knv9X38+N4H
+y9WpUuQTrJNGpzSahJSAzo2Q+pDSt+3z3T0lznMtuDIaUnoGR1fZ7c2yNfb4bsyRIEC7lJbe14sg
+cHkJFXcTU4PGSWFsxT229hC42gIXrgTwlQpYGM6CiktNL4SF/Q/DFIXM4dHkTQXaXyAWFPdo35Wy
+djRbFlLB7rIR4XX9wiv0fVKUKO78k5AeREoTbE0LPy5sUz80UnXTaTilQTYu+WqJgII3ym9xvYGO
+ebGEsVmn7KLYSWjd90NdS057qYVpU8oSjPY8dMmUkraf7KXwJZLm83i8W4M8lD6l91EcdvDgit7n
+h2/pT6L75dbmg0f4nbpoN2gfa7uQWNiNiDrAbzG7EmM9itlf4vhKjPUojntrg5+cqxxj6o7eAkum
+0bxXDH9K9gUAAP//AwBQSwMEFAAGAAgAAAAhAO5s4OmFBgAAVRsAABMAAAB4bC90aGVtZS90aGVt
+ZTEueG1s7FlNbxtFGL4j8R9Ge29jJ3YaR3Wq2LFbaNNGsVvU43g93p1mdmc1M07qG2qPSEiIgrgg
+ceOAgEqtxKX8mkARFKl/gXdmdtcz8ZokJQIB9SHxzj7v98e8M7567WHC0CERkvK0HdQv1wJE0pCP
+aRq1g7vD/qWNAEmF0zFmPCXtYEZkcG3r3Xeu4k0Vk4QgoE/lJm4HsVLZ5sqKDGEZy8s8Iym8m3CR
+YAWPIloZC3wEfBO2slqrra8kmKYBSnECbIdAg8YE3ZlMaEiCrYJ9j4GMVEm9EDIx0MxJTuNgxwd1
+jZAz2WUCHWLWDkDSmB8NyUMVIIalghftoGY+wcrW1RW8mRMxtYTWoeubT06XE4wPVo1MEY1KofV+
+o3Vlp+RvAEwt4nq9XrdXL/kZAA5DsNTq4vJs9DfqnYKnA7JfF3l3a81aw8c7/NcWdG51Op1mK9fF
+MjUg+7WxgN+orTe2Vz28AVl8cwHf6Gx3u+se3oAsfn0B37/SWm/4eAOKGU0PFtA6oP1+zr2ETDi7
+UQnfAPhGLYfPUZANZXZpEROeqmW5luAHXPQBoIEMK5oiNcvIBIeQx12cjATFWgDeJNh5Y5dCubCk
+ZSEZCpqpdvB+hqEm5vxev/j29Ytn6PWLp8ePnh8/+uH48ePjR99bXh7hDZxGLuGrrz/5/csP0W/P
+vnr15LNqvHTxP3/30U8/floNhAqaa/Ty86e/PH/68ouPf/3mSQV8W+CRCx/ShEh0mxyhfZ6AbcYx
+vuZkJM5HMYwx9ShwDLwrWPdU7AFvzzCrwnWI77x7AppHFfD69IGn6yAWU0UrJN+MEw+4yznrcFHp
+gJtaluPh4TSNqoWLqYvbx/iwSnYXp15oe9MMumaRlJ7vuzHx1NxjOFU4IilRSL/jB4RUWHefUs+v
+uzQUXPKJQvcp6mBa6ZIhHXmJNCe6QROIy6zKZgi155vde6jDWZXVO+TQR0JBYFah/JAwz43X8VTh
+pIrlECfMdfgtrOIqJQczEbq4nlQQ6YgwjnpjImUVzR0B9jpBv4mhX1WGfZfNEh8pFD2o4nkLc+4i
+d/hBN8ZJVoUd0DR2se/JA0hRjPa4qoLvcr9C9DPEAadLw32PEi/cpzeCuzTyVJoniH4zFTqW0Ki9
+/pvQ9M+aMaPQjW0OvG3G7WAbtqaqkrhxogUvw/0LG+8OnqZ7BHJ9ceN523ff9t3gP993l9XyWbvt
+vMFC79XDg52LzZScLB2SJ5SxgZoxckuaOVnCZjHuw6KmM0dEUh6ashi+5s3dw0UCGxokuPqAqngQ
+4wxm7HqgmUQyZx1JlHEJZzuzXMlb42FOV/Zk2NRnBtsPJFa7fGyX1/RycTQo2ZgtJzLnz0LQmmZw
+VmFrV3KmYPabCKtrpc4srW5UM63Ok1aaDDFcNA0WS2/CFIJgdgEvr8MhXYuGswlmZKz9bjfgIiwm
+ChcZIhljuAIwp/emtnsxRnUTpCJXzGUA5E5FjPQ57xSvOdJamu1fkHaWILniGkvEFdH7K1EqMnge
+JV23J8qRpW5xshQdtYNWc7UZoBBn7WACx1r4mmQQdakHP8wiuB0KlbBpf2oxmyqfR7NVGOYXQR1u
+KqzfFwz2+kAmpNrBMrapYV7lKcBSLcnqv9oEt16UATbT30CLtQ1Ihn9MC/CjH1oymZBQucF2VrTv
+7GPeSvlUETGIx0doxKZiH0P4daqCPWMq4XbCdAT9AFdp2tvmld+c86JzL7AMzq5jlsU4b7e6RItK
+tnBTx6UO5slRD2yr1N0Yd35TTMlfkCluGv/PTNH7CVwXrI11BEK4yxUY6XptB1yomEMXymIa9gUM
+DqZ3QLbAdSy8hqSCG2XzX5BD/d/WnOVhyhpOfWqfRkhQ2I9ULAjZg7Zksu8UZvV877IsWc7IZJSj
+rsys2iNySNhQ98B1vbcHKIZUN90kbwMGdzL//Oe8gkaRHnLcevN6SLn32hr4uycfW8xglN+HzUBT
++L9UsWJXtfSGvNh7XUP0i/mY1SiqAoQ5W0ErL/s3VOGcW63tWAsWrzYL5SCKixbDYjkQZXDpg/Qf
+2P+oCJn9cUJvqEO+D70VwW8NmhmkDWT1JTt4IN0g7eIIBie7aJNJs7KuzUcn7bVis77gSbeUe8LZ
+WrOzxPuczi6HM1+cV4sX6ezcw56v7dpSV0NkT5YoLE2Kg4wJjPldy/3hiY8eQKB34Ip/ypQ0yQQ/
+KwkMo+fA1AEUv5VoSLf+AAAA//8DAFBLAwQUAAYACAAAACEAO20yS8EAAABCAQAAIwAAAHhsL3dv
+cmtzaGVldHMvX3JlbHMvc2hlZXQxLnhtbC5yZWxzhI/BisIwFEX3A/5DeHuT1oUMQ1M3IrhV5wNi
++toG25eQ9xT9e7McZcDl5XDP5Tab+zypG2YOkSzUugKF5GMXaLDwe9otv0GxOOrcFAktPJBh0y6+
+mgNOTkqJx5BYFQuxhVEk/RjDfsTZsY4JqZA+5tlJiXkwyfmLG9Csqmpt8l8HtC9Ote8s5H1Xgzo9
+Uln+7I59Hzxuo7/OSPLPhEk5kGA+okg5yEXt8oBiQet39p5rfQ4Epm3My/P2CQAA//8DAFBLAwQU
+AAYACAAAACEA2OOIeSEBAADJAQAAGAAAAHhsL3dvcmtzaGVldHMvc2hlZXQyLnhtbIxRTU/DMAy9
+I/EfIt9pO9AATW0nxDTBAQkhPs5Z4zTRkrhKPAb/nrTTJiQu3Pz8Xp7tl3r55Z34xJgshQZmRQUC
+Q0fKhr6Bt9f1xS2IxDIo6ShgA9+YYNmen9V7ittkEFlkh5AaMMzDoixTZ9DLVNCAITOaopecYezL
+NESUanrkXXlZVdellzbAwWER/+NBWtsOV9TtPAY+mER0kvP+ydghQVsrm7nxIBFRN3A3g7Ktp7Hv
+FvfpVy3GKzZE25F4VA1Uo7T8o11PVzxHsZEJ78l9WMUmx5XTUqjlzvEL7R/Q9oZzd36at5Iss+Eg
+e3ySsbchCYc6a6riBkQ86KeaaZi6cxAbYiZ/RCZHhjmaqrgCoYn4CMZFT5/Q/gAAAP//AwBQSwME
+FAAGAAgAAAAhANjjiHkhAQAAyQEAABgAAAB4bC93b3Jrc2hlZXRzL3NoZWV0My54bWyMUU1PwzAM
+vSPxHyLfaTvQAE1tJ8Q0wQEJIT7OWeM00ZK4SjwG/5600yYkLtz8/F6e7Zd6+eWd+MSYLIUGZkUF
+AkNHyoa+gbfX9cUtiMQyKOkoYAPfmGDZnp/Ve4rbZBBZZIeQGjDMw6IsU2fQy1TQgCEzmqKXnGHs
+yzRElGp65F15WVXXpZc2wMFhEf/jQVrbDlfU7TwGPphEdJLz/snYIUFbK5u58SARUTdwN4Oyraex
+7xb36Vctxis2RNuReFQNVKO0/KNdT1c8R7GRCe/JfVjFJseV01Ko5c7xC+0f0PaGc3d+mreSLLPh
+IHt8krG3IQmHOmuq4gZEPOinmmmYunMQG2Imf0QmR4Y5mqq4AqGJ+AjGRU+f0P4AAAD//wMAUEsD
+BBQABgAIAAAAIQDpD4a8XQIAAEcFAAAYAAAAeGwvd29ya3NoZWV0cy9zaGVldDEueG1sjFRNj9ow
+EL1X6n+wfG++SLKACKvlY9U9VKpKP84mmRBrkzi1DWz763dsQwqEQzkEZ/LevHljj2ePb01NDiAV
+F21GQy+gBNpcFLzdZfTH9+dPY0qUZm3BatFCRv+Aoo/zjx9mRyFfVQWgCWZoVUYrrbup76u8goYp
+T3TQ4pdSyIZpfJU7X3USWGFJTe1HQZD6DeMtdRmm8n9yiLLkOaxEvm+g1S6JhJpprF9VvFN0Pis4
+fjOGiIQyo0/RdB1Tfz6zyj85HNXFmmi23UANuYYCG0CJMbYV4tUAXzAUYEZlASYjyzU/wBLqOqML
+05vfVgOXKOD3Cpfrs9qzbcVXSbZMwVLUv3ihK5TElhdQsn2tv4njZ+C7SmM0MQlzUSMbn6ThZnso
+adibq/JEHlGS75UWzTnbieYI0YmA/0dHiCb3CL4TsuWvmGbzmRRHghuCRNUxs73hNMFG5Cb4ZKK2
+CizUNPwwD2f+AT3nJ8RiiIiuEcshYnSNWA0R8TViPUQ89AgfHfQ2sEt3bJiotdjbCHq6NboYIsIb
+yNJBRrYLUezhqb743Vpy4NiBE28ySdK4hyfX4msHxjPWlzfuEVfu4rvuTDSjyQX9RmAxRKS9gPW/
+dIjU1jv2glFfKy7Cmz1fOfDDCZxGyThKz4TwX+k2Mw6kqe7S3KTXdubcMLnT2LEdfGFyx1tFaiix
+IYH3QIl0s2LXWnQ2ioa3QuNAnN8qvHMAT23gYUNLIfT5BefL5N2A3nekYx3IDf+LVxxOiJAcbxd7
+qWS0E1JLxjXqTXmRUflShHba+ytw/g4AAP//AwBQSwMEFAAGAAgAAAAhALkylJEfAQAA7AEAABQA
+AAB4bC9zaGFyZWRTdHJpbmdzLnhtbHSRz07DMAzG70i8g5Ur2pJWDFVTm2kUOE0MbZ3ENUvNWmlN
+Sp1OG+/EU/BiGA4gOnH099n++U86OzZ7OGBHtXeZiMZKADrry9rtMrEpHkaJAArGlWbvHWbihCRm
++vIiJQrAtY4yUYXQTqUkW2FjaOxbdOy8+K4xgcNuJ6nt0JRUIYZmL2OlbmRjaifA+t4F5kYCele/
+9pj/CDqlWqffkCm1xjKcuxB2BxR6nt8/Fkt4hgksAqQy6FR+pX+X6KfV8m6TF8uhnvum9VRb3nVo
+LWrecihGiYLy493Q0JivbjdrpidMH3oFbnvrIYrhCnLTbZFvB/EERrDOh7klT3PW/Fopa2V1Nk3y
+jz5/88cTxIp5v+y/NMnf0p8AAAD//wMAUEsDBBQABgAIAAAAIQDEOq26vwMAAPcPAAANAAAAeGwv
+c3R5bGVzLnhtbNRXbU/bMBD+Pmn/wTLTPkyDtAUKjKaMMVWaNBASIE0aE3ISJ7Xk2J3jopZfv7Od
+OGnXsCKoxPoltnsvz52fu1wGJ7Oco3uqCiZFiLs7HYyoiGXCRBbim+vR9iFGhSYiIVwKGuI5LfDJ
+8O2bQaHnnF6NKdUITIgixGOtJ5+CoIjHNCfFjpxQAf+kUuVEw1ZlQTFRlCSFUcp50Ot0+kFOmMDD
+gZjmo1wXKJZToUPc80fI/fMtAXD9PYycuTOZAJaf726uvv66RVsft7Y6O50ODipDC1r7i1p36IPX
+uEPHZnu7XZkoD97/nkp9vO0eJyf29PMdMg6CEupwkEpRI94HxOZgOCge0D3hALdrxGPJpUIaUgKA
+7YkgOXUSZ4SzSDEjlpKc8bk77pkDm8VSLmdCKuvbeVjy4+L2Vk8VI/zp0n8hCJrOIgOpCmzJ4WNh
+LBh5hgFrp4A8Mc49S2zO4WA4mBCtqRIj2KByfT2fQMYFkNblwsoZ9UekM0Xm3d7++gqF5CwxN5+d
+2XtmIqEzClzd2zNGouVjYDAcBw24sHOg/gFt2VPJKHsVG3SjsijEI/tz9fUUXzYyuLRIqgQ6TLO4
+3dFwwGmqISOKZWPz1HJi0ia1ljksEkYyKQiHZVBpVE+jCZ0JmlCI9dg2EVdr/g7KZBvB0sNa8haL
+hbKWOECuEK8l74JbHVsZJKQsppxfmeB+pD5vR0C0WdpobdCrTY2a3miWwO1y6XLkNpC7NqXu2krd
+vm2izlevVQ2RyYTPR4DJInI7gFXvvlgq1PtTzjKR06bCpZKaxtq+jyy92+C343iRmBvZ3bCn/y+7
+QZOfjq3PJiqapasZW773Hfl2a/LBrdREBy47fZgRLO8upnlE1chOH+bN2+Sm31luVruKm9W+wc0u
+lB68rB1V0Vgq9gAkN2/5GLhLFTYjlGZx48T0rFnaXnxmlikrFmJaEUgFw5WT3z0fsmmI6wJeoGYD
+MixXQIYbaXSAF4T8tCy3gV6d51cCutFuGnleDbm/qTxvjhoHm4K8SWq8EtANarS956HWqvbpSrBu
+ZqYRmXYNDboxVyxMFb6bI/NxEuJzaDJE0QJBbTiz9pukVQwI68QOzHi7LHZhejCvRCCCaMq4ZsJ3
++9UKtXP3IVVNRCVGZxX1arHdducgBpXkMNrxvs0l8qEcPmLN27LjfIstb6lvZ34vBbeQzOqpzo44
+mkTwMW3mPX8vkKeEpmTK9bX/M8T1+pwmbJofealLdi+1NRHiev3dDNZdh8AOy/aLffgHAAD//wMA
+UEsDBBQABgAIAAAAIQCrUkmzXQIAANghAAAnAAAAeGwvcHJpbnRlclNldHRpbmdzL3ByaW50ZXJT
+ZXR0aW5nczEuYmlu7JbLbtNAFIb/JAWBWJAlUjfdwQYpRYEVm/SCmqhJLDuAt9N4Gls4Hssel4Qn
+4Bl4mr4BayRW3fASSOGMLyEKEagSVQo6E8Uz5+L/zPniS07RgYNj2HgKi9bXHbUd3P2K73vOAvUa
+7uPTg/Y9DzU8hEt2jY4NOnbQvq7wb/JrZczMdbOuHKW/miy7++aqVVl/b36USzUfmw9gvsXw6y/v
+VOv1uVE6LnebsNoNPPm4s0wxnNbH1Zdvn4s6wII+eZ8reb+eYTBs8q4rs/0vEVj/RX26EJz+qGd6
+aNLd5UIigcIMe3T/+hBIc88e3XHPsY8WDvKIQ/m2TFWY6UBFeNFqeXEAS0ykE3yQOJVayyS3bTkx
+GeQSXhBNjr2JBLpRnGknVBqjRMyf4SiLQznDQEUSw0xTsK88aWRnpbRru69TaSVBRMInIjzXlJvS
+6ZkExfKAQ1WpRDqMzEbwSoRpJXcQRHC0V2gboy+9QIzmsUQn08qRoRxrI9RTk/LEQxWGQstlCbPz
+kcr3XyhTdj9Ip0KPfViJmsba6C1dFHbCIHZ8KbWjsmRspMR8H8abGm/RL+UdqguZ5PBW81YDy9Tu
+1DCeKqV9arXcKmUeJeJc/zR76ixvbqCSqQiLxs4GYipBkErTEmn6XiVe7rrhi/hyF3CHtrt+/d1w
+WZa/5QQWi1u+wQ3be0tPRZ0/Ffu0SvBuQ87/7Dqh3kNc0FEjwJgY8GAC2yFg3icLGqvVq/+5q75t
+rvmdt036XJsJMAEmwASYABNgAkyACTABJsAEmAATYAJMgAkwgT8R+AEAAP//AwBQSwMEFAAGAAgA
+AAAhAN0PHBpDAQAAYwIAABEACAFkb2NQcm9wcy9jb3JlLnhtbCCiBAEooAABAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAIySUU/CMBSF3038D0vft65DRZptJGJ4kkgEovGtaS+wuHZNWx38e7sN
+5gw++Nh7Tr+ec9N0epBl8AXGFpXKEIliFIDilSjULkOb9Ty8R4F1TAlWVgoydASLpvn1Vco15ZWB
+pak0GFeADTxJWcp1hvbOaYqx5XuQzEbeoby4rYxkzh/NDmvGP9gOcBLHd1iCY4I5hhtgqHsiOiEF
+75H605QtQHAMJUhQzmISEfzjdWCk/fNCqwycsnBH7Tud4g7Zgndi7z7YojfWdR3VozaGz0/w2+Jp
+1VYNC9XsigPKU8EpN8BcZfLlLFhtXmbPqxQPps0GS2bdwi97W4B4OA6Nl6IntgU6LIjAR6JdgbPy
+Opo9rucoT2IyDuMkJOM1mdCE0GTy3rz9634TsRvIU4L/E2/oLRkQz4A8xRffIv8GAAD//wMAUEsD
+BBQABgAIAAAAIQCt6eO8pgEAAFUDAAAQAAgBZG9jUHJvcHMvYXBwLnhtbCCiBAEooAABAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAJyTwW7bMAyG7wP2DoLujZy0GIZAVjEkLXLY0KBOemdlOtEm
+S4KkGMneZs+yF5tsw43TtZf6RPGnf3wkJX57rDVp0AdlTU6nk4wSNNKWyuxyut3cX32lJEQwJWhr
+MKcnDPRWfP7E19469FFhIMnChJzuY3RzxoLcYw1hkmSTlMr6GmI6+h2zVaUkLq081Ggim2XZF4bH
+iKbE8sq9GNLecd7Ej5qWVrZ84WlzcglY8G/OaSUhpi7FDyW9DbaK5O4oUXM2FnmiK1AevIonkXE2
+PvJCgsZFMhYV6ICcnRN8hdAObQ3KB8GbOG9QRutJUL/T2GaUPEPAFienDXgFJiastqw/dLF2IXqx
+sj8hkBKJ/PtHy4O2nKW6XuvC8S/jWN2I664gBZeFrUHPk4RL0o2KGsNDtQYf3wC/HoN3DD32GXU6
+xnsBbZuYvav0mOOWumEluFc4C1s7MCfxeLckxfZx8VBwNuT4d2V+ha3b2CVEHFZymeTFHjyWaYuD
+fk7wVdqG163JYg9mh+VQ87/QXqCn/pWI6WySpa+7N0OOs/N7EP8AAAD//wMAUEsBAi0AFAAGAAgA
+AAAhAKeV+ZmEAQAAFAYAABMAAAAAAAAAAAAAAAAAAAAAAFtDb250ZW50X1R5cGVzXS54bWxQSwEC
+LQAUAAYACAAAACEAtVUwI/UAAABMAgAACwAAAAAAAAAAAAAAAACSAwAAX3JlbHMvLnJlbHNQSwEC
+LQAUAAYACAAAACEA3gn9KAIBAADUAwAAGgAAAAAAAAAAAAAAAAB+BgAAeGwvX3JlbHMvd29ya2Jv
+b2sueG1sLnJlbHNQSwECLQAUAAYACAAAACEAZ7Y7Ol8BAABtAgAADwAAAAAAAAAAAAAAAADACAAA
+eGwvd29ya2Jvb2sueG1sUEsBAi0AFAAGAAgAAAAhAO5s4OmFBgAAVRsAABMAAAAAAAAAAAAAAAAA
+TAoAAHhsL3RoZW1lL3RoZW1lMS54bWxQSwECLQAUAAYACAAAACEAO20yS8EAAABCAQAAIwAAAAAA
+AAAAAAAAAAACEQAAeGwvd29ya3NoZWV0cy9fcmVscy9zaGVldDEueG1sLnJlbHNQSwECLQAUAAYA
+CAAAACEA2OOIeSEBAADJAQAAGAAAAAAAAAAAAAAAAAAEEgAAeGwvd29ya3NoZWV0cy9zaGVldDIu
+eG1sUEsBAi0AFAAGAAgAAAAhANjjiHkhAQAAyQEAABgAAAAAAAAAAAAAAAAAWxMAAHhsL3dvcmtz
+aGVldHMvc2hlZXQzLnhtbFBLAQItABQABgAIAAAAIQDpD4a8XQIAAEcFAAAYAAAAAAAAAAAAAAAA
+ALIUAAB4bC93b3Jrc2hlZXRzL3NoZWV0MS54bWxQSwECLQAUAAYACAAAACEAuTKUkR8BAADsAQAA
+FAAAAAAAAAAAAAAAAABFFwAAeGwvc2hhcmVkU3RyaW5ncy54bWxQSwECLQAUAAYACAAAACEAxDqt
+ur8DAAD3DwAADQAAAAAAAAAAAAAAAACWGAAAeGwvc3R5bGVzLnhtbFBLAQItABQABgAIAAAAIQCr
+UkmzXQIAANghAAAnAAAAAAAAAAAAAAAAAIAcAAB4bC9wcmludGVyU2V0dGluZ3MvcHJpbnRlclNl
+dHRpbmdzMS5iaW5QSwECLQAUAAYACAAAACEA3Q8cGkMBAABjAgAAEQAAAAAAAAAAAAAAAAAiHwAA
+ZG9jUHJvcHMvY29yZS54bWxQSwECLQAUAAYACAAAACEArenjvKYBAABVAwAAEAAAAAAAAAAAAAAA
+AACcIQAAZG9jUHJvcHMvYXBwLnhtbFBLBQYAAAAADgAOALIDAAB4JAAAAAA=
+
+------=_NextPart_000_0018_01D2893B.B0B874C0--
+

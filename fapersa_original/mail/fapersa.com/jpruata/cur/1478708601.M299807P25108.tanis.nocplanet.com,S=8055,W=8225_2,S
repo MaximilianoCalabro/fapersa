@@ -1,0 +1,170 @@
+Return-Path: <rmelini@hotmail.com.ar>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id MXuTEXlNI1gUYgAATLP0zA
+	for <jpruata@fapersa.com>; Wed, 09 Nov 2016 13:23:21 -0300
+Return-path: <rmelini@hotmail.com.ar>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Wed, 09 Nov 2016 13:23:21 -0300
+Received: from snt004-omc1s29.hotmail.com ([65.55.90.40]:52038)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-SHA384:256)
+	(Exim 4.87)
+	(envelope-from <rmelini@hotmail.com.ar>)
+	id 1c4Vea-0007w6-27
+	for jpruata@fapersa.com; Wed, 09 Nov 2016 13:23:21 -0300
+Received: from NAM02-CY1-obe.outbound.protection.outlook.com ([65.55.90.8]) by SNT004-OMC1S29.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Wed, 9 Nov 2016 08:22:32 -0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=jFVOAqySQtJYgpEYSaEeUx51y8blARDTHCW/j1yvGQY=;
+ b=s8hde4N+0Jhc/pP+pStvqYYoqniWth3xw9Os/hHJcHJKoYeA0TkKWQX1R9cHnya8YiXg8HY1I7bfDzga96p1TeNI/JJIKsmuvOClIpuNDqTKTZ3cP/goaKXnqax+5CzLo03dL2T+NGTu4jCxumcYCbccGLTz+XeDLGCmJWOc5mjTpAvjYvSpON/JolOsBQZz7MXP0NNkotvhWIDvigjU2hsRCRlCuG8dRWNnq6JlubO9hoJAE54m7lqtYirieYENpYZHl25Hiue9Tr69c/G7OOsl87ca2aaOAAymFtkMXSjeDN8zjBLa4IohJQ3Lp4pHUIb22ASdt+qiwHs8Z7EVVQ==
+Received: from BL2NAM02FT010.eop-nam02.prod.protection.outlook.com
+ (10.152.76.54) by BL2NAM02HT207.eop-nam02.prod.protection.outlook.com
+ (10.152.77.187) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.693.6; Wed, 9 Nov
+ 2016 16:22:31 +0000
+Received: from MWHPR19MB1583.namprd19.prod.outlook.com (10.152.76.58) by
+ BL2NAM02FT010.mail.protection.outlook.com (10.152.77.53) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.707.3 via Frontend Transport; Wed, 9 Nov 2016 16:22:31 +0000
+Received: from MWHPR19MB1583.namprd19.prod.outlook.com ([10.173.245.144]) by
+ MWHPR19MB1583.namprd19.prod.outlook.com ([10.173.245.144]) with mapi id
+ 15.01.0707.006; Wed, 9 Nov 2016 16:22:31 +0000
+From: Ricardo Melini <rmelini@hotmail.com.ar>
+To: FAPERSA <jpruata@fapersa.com>
+Subject: Re: FAPERSA
+Thread-Topic: FAPERSA
+Thread-Index: AQHSNtRCJ9yNLijKm06S2bHWRJiN+qDQ3T4+
+Date: Wed, 9 Nov 2016 16:22:31 +0000
+Message-ID: <MWHPR19MB158383B67D126E1CED4D5E738AB90@MWHPR19MB1583.namprd19.prod.outlook.com>
+References: <3489359B-DCE5-4771-BA06-5A808D17288F@fapersa.com>
+In-Reply-To: <3489359B-DCE5-4771-BA06-5A808D17288F@fapersa.com>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: fapersa.com; dkim=none (message not signed)
+ header.d=none;fapersa.com; dmarc=none action=none header.from=hotmail.com.ar;
+x-incomingtopheadermarker: OriginalChecksum:;UpperCasedChecksum:;SizeAsReceived:2354;Count:38
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [xheaEYItZUwaO7zZ/4iGuLBaLOIyjOlP]
+x-incomingheadercount: 38
+x-eopattributedmessage: 0
+x-microsoft-exchange-diagnostics: 1;BL2NAM02HT207;7:QfD9kxWJDnhPILjIi3N8/PbwA0+rFpdotjqjAnYLNDkv+qmjIijeGn0LRCkYniz4M+YbOitCDkoLJLm6wR0p0XMTlAgnRHXz73ZbXTVMRSUxfCHVa0Rk8WRYO7vb2/HL6760ZBB3dx/1Mj1y4j/Yjvgo5GLyrxLjmrj1i/cJrjtDMDIarlo9R17jLK+WkjVNOzeuWDLOtIy/wHv4+Jitidqr5uMXHHnbzeO6XgUAV6t/H7aVp4RBeeBgMvg4uRdT/3vJVEersOaVBXbNUkjHqaPfcra/lONh8HVvI/BS7lCmU7TKenQM+6hmAzvq+SnzPbnlqD3X9wHPMhV+CPbd9m/dDQnWY6xO4q/UpqhWCug=
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(10019020)(98900003);DIR:OUT;SFP:1102;SCL:1;SRVR:BL2NAM02HT207;H:MWHPR19MB1583.namprd19.prod.outlook.com;FPR:;SPF:None;LANG:es;
+x-ms-office365-filtering-correlation-id: 988e1cc1-ca64-46d6-f66c-08d408bc9b04
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:;SRVR:BL2NAM02HT207;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(432015012)(82015046);SRVR:BL2NAM02HT207;BCL:0;PCL:0;RULEID:;SRVR:BL2NAM02HT207;
+x-forefront-prvs: 0121F24F22
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_MWHPR19MB158383B67D126E1CED4D5E738AB90MWHPR19MB1583namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: outlook.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 09 Nov 2016 16:22:31.1868
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BL2NAM02HT207
+X-OriginalArrivalTime: 09 Nov 2016 16:22:32.0145 (UTC) FILETIME=[79037410:01D23AA5]
+X-Spam-Status: No, score=-1.9
+X-Spam-Score: -18
+X-Spam-Bar: -
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Recibido Juampi De: FAPERSA Enviado: viernes, 04 de noviembre
+    de 2016 04:47:12 p.m. Para: Insert Santa Fe Rugby Cc: Ricardo Melini; Martin
+    Galan; Ovidio Russo Asunto: FAPERSA [...] 
+ 
+ Content analysis details:   (-1.9 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (rmelini[at]hotmail.com.ar)
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+X-Spam-Flag: NO
+
+--_000_MWHPR19MB158383B67D126E1CED4D5E738AB90MWHPR19MB1583namp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Recibido Juampi
+
+________________________________
+De: FAPERSA <jpruata@fapersa.com>
+Enviado: viernes, 04 de noviembre de 2016 04:47:12 p.m.
+Para: Insert Santa Fe Rugby
+Cc: Ricardo Melini; Martin Galan; Ovidio Russo
+Asunto: FAPERSA
+
+EMPRESA:        FAPERSA ICSA
+MODULOS:        16   25 X 16 CM
+LOGO:           IDEM a=F1o 2015
+
+
+CONFIRMAR CORREO
+
+--_000_MWHPR19MB158383B67D126E1CED4D5E738AB90MWHPR19MB1583namp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<meta name=3D"Generator" content=3D"Microsoft Exchange Server">
+<!-- converted from text --><style><!-- .EmailQuote { margin-left: 1pt; pad=
+ding-left: 4pt; border-left: #800000 2px solid; } --></style>
+</head>
+<body>
+<meta content=3D"text/html; charset=3DUTF-8">
+<style type=3D"text/css" style=3D"">
+<!--
+p
+	{margin-top:0;
+	margin-bottom:0}
+-->
+</style>
+<div dir=3D"ltr">
+<div id=3D"x_divtagdefaultwrapper" dir=3D"ltr" style=3D"font-size:12pt; col=
+or:#000000; font-family:Calibri,Arial,Helvetica,sans-serif">
+<p>Recibido Juampi<br>
+</p>
+</div>
+<hr tabindex=3D"-1" style=3D"display:inline-block; width:98%">
+<div id=3D"x_divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" =
+color=3D"#000000" style=3D"font-size:11pt"><b>De:</b> FAPERSA &lt;jpruata@f=
+apersa.com&gt;<br>
+<b>Enviado:</b> viernes, 04 de noviembre de 2016 04:47:12 p.m.<br>
+<b>Para:</b> Insert Santa Fe Rugby<br>
+<b>Cc:</b> Ricardo Melini; Martin Galan; Ovidio Russo<br>
+<b>Asunto:</b> FAPERSA</font>
+<div>&nbsp;</div>
+</div>
+</div>
+<font size=3D"2"><span style=3D"font-size:10pt;">
+<div class=3D"PlainText">EMPRESA:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+ FAPERSA ICSA<br>
+MODULOS:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp; 25 X 16 C=
+M<br>
+LOGO:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IDEM a=F1=
+o 2015<br>
+<br>
+<br>
+CONFIRMAR CORREO</div>
+</span></font>
+</body>
+</html>
+
+--_000_MWHPR19MB158383B67D126E1CED4D5E738AB90MWHPR19MB1583namp_--

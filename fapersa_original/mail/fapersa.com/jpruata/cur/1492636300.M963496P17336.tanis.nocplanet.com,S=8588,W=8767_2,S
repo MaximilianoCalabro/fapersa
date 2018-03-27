@@ -1,0 +1,179 @@
+Return-Path: <ingenieria@bioingenieria-aplicada.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id gQQBOYzS91i4QwAATLP0zA
+	for <jpruata@fapersa.com>; Wed, 19 Apr 2017 18:11:40 -0300
+Return-path: <ingenieria@bioingenieria-aplicada.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Wed, 19 Apr 2017 18:11:40 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:41063 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.88)
+	(envelope-from <ingenieria@bioingenieria-aplicada.com>)
+	id 1d0wt1-0005jD-M9
+	for jpruata@fapersa.com; Wed, 19 Apr 2017 18:11:40 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id B8E2B7F220
+	for <jpruata@fapersa.com>; Wed, 19 Apr 2017 18:11:38 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id fMy9CfJe3RbY for <jpruata@fapersa.com>;
+	Wed, 19 Apr 2017 18:11:37 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id D6CD27F231; Wed, 19 Apr 2017 18:11:37 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 34EE07F220
+	for <jpruata@fapersa.com>; Wed, 19 Apr 2017 18:11:34 -0300 (ART)
+Received-SPF: none (bioingenieria-aplicada.com: No applicable sender policy available) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="ingenieria@bioingenieria-aplicada.com"; helo=mail-yw0-f170.google.com; client-ip=209.85.161.170
+Received: from mail-yw0-f170.google.com (mail-yw0-f170.google.com [209.85.161.170])
+	by fw.fapersa.com (Postfix) with ESMTPS id 1598A5FE9D
+	for <jpruata@fapersa.com>; Wed, 19 Apr 2017 18:11:32 -0300 (ART)
+Received: by mail-yw0-f170.google.com with SMTP id u70so24571702ywe.2
+        for <jpruata@fapersa.com>; Wed, 19 Apr 2017 14:11:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=bioingenieria-aplicada-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=3V2xWhlKi022b3RLevijzMDiml+rfpshrPOiLxEH5+Q=;
+        b=dTvWJ37eK2WZd6uCZCT/JLTt8h5sHY+RvOiTXM2cPy5C4KgroS750s7NpVmAeKRdd1
+         IcSnFSBqX1gYKpyBmNPYgEkNufJRdzTqagJOTBoUDsN0wYEdBKqijNO71RV518hx7t8K
+         Feh6eK+oxNVrFt60xqtS3lxnRn6WPRyaxd36ztnLG2UuTl+8PlLsWsxGfVau/yEwnSWN
+         +HkM87SwbGBNVe7bL1IgL15nx0Lmf1zGlVU4bVaVyJFUKmfcK08tzMFriuN2iVwBX2cr
+         bNkBc6QbknKh5og1QtWlg99cS0SAaF+MqNjnwoIJlOSfI5w9QZr4xy1P9eCVITAzaKtd
+         V9Fw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=3V2xWhlKi022b3RLevijzMDiml+rfpshrPOiLxEH5+Q=;
+        b=KESODc8u+p+2J4J4ZI1k/qBJ+hVoK3Ssvtda/KfcACnZAu6lfzZQtYaMnnRxASwp7/
+         vGtTwBSOSkAWQ+5NT/tD5TRTY0GBNgYQC48M1ycz4HBea/wyrCPsvFeu4ad+ZPPLRb5K
+         5D0R2mTcNfvgCWufMfVHknp74bF8mLyb2i3obdxWM7Yd5ngYk6v3LksyfbiGJ+cJhlFM
+         0e+3by4WTHXT00tHRimCENQHd3NJMEPtQz5d2Bo58AnQriqVCIvkoUW910mBUz9Tk/LB
+         J1DM0qdqSHr7ONjb0CnCLiIqQCUZ7YGZ/J7OFBnQhfAYShyY+QXDZBtu9nKgZH27S7JP
+         Plxg==
+X-Gm-Message-State: AN3rC/58q40/mz8sZ+07lbzSAeSuC/IAO7SBiAXehZL+fjr2PzSY96lx
+	GFg4rjLTSRDgy0+g/SYji8b4tzSY9g==
+X-Received: by 10.129.158.143 with SMTP id v137mr4367765ywg.128.1492636290252;
+ Wed, 19 Apr 2017 14:11:30 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.37.52.13 with HTTP; Wed, 19 Apr 2017 14:11:29 -0700 (PDT)
+Received: by 10.37.52.13 with HTTP; Wed, 19 Apr 2017 14:11:29 -0700 (PDT)
+In-Reply-To: <AA7EC877-95CB-49AC-89FA-CC02DF8BF1E8@fapersa.com>
+References: <AA7EC877-95CB-49AC-89FA-CC02DF8BF1E8@fapersa.com>
+From: "Ingenieria (BA)" <ingenieria@bioingenieria-aplicada.com>
+Date: Wed, 19 Apr 2017 18:11:29 -0300
+Message-ID: <CA+nPqg=5HYrczCafA4PG-PPfeVqqiVawUu+WZrsMVCe=0Z+4Vg@mail.gmail.com>
+Subject: Re: ENCUENTRO 13 DE MAYO SFRC
+To: Juan Pablo Ruata <jpruata@fapersa.com>
+Content-Type: multipart/alternative; boundary=94eb2c0b7876dc2af2054d8b7710
+
+--94eb2c0b7876dc2af2054d8b7710
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Perfecto... hagamos reuni=C3=B3n los martes
+
+BioIng. Dechiara, Paulo J.
+_______________________________
+
+BIOINGENIERIA APLICADA SRL
+R. Saenz Pe=C3=B1a 2498 (Esq Tucum=C3=A1n)
+CP: 3000 - Santa Fe - Pcia Santa Fe
+Tel/Fax: +54 342 4811537
+www.bioingenieria-aplicada.com
+info@bioingenieria-aplicada.com
+
+Operador Buenos Aires
+Cordero 427 - R. de Escalada - Lan=C3=BAs - Tel: 011- 3964 5666
+proveedores@bioingenieria-aplicada.com
+
+El 19 abr. 2017 11:06, "FAPERSA" <jpruata@fapersa.com> escribi=C3=B3:
+
+> Gente este es un tema especial que debemos abordar con mucha anticipaci=
+=C3=B3n.
+>
+> Ese d=C3=ADa en el club juegan los juveniles y la primera y nosotros.
+>
+> Seguramente vamos a tener que tener cuidado con el horario de
+> finalizaci=C3=B3n, tenemos hasta las 12:30 para usar las canchas.
+>
+> No nos olvidemos que en el encuentro pasado hubo de escuelita a M10 768
+> jugadores que se hizo en caba=C3=B1a y un=C3=AD.
+>
+> Ademas debemos sumar que al club viene Duende y Provincial.
+>
+> TEMAS SUGERIDOS A TRATAR.
+> >cobranza estacionamiento. quienes????
+> >mesa de control para cobrar las inscripciones. quienes???
+> >mesa de control para organizar fixture, creo que debemos incorporar por
+> lo menos 4 veedores para control de partidos. quienes ?????
+> >info a los clubes, para saber cantidad de equipos, de jugadores, mayores=
+,
+> posicionamiento de las canchas. (enviar invitaciones)
+> >debemos organizar cuantas canchas y donde el armado, con cintas, conos,
+> etc
+> >tercer tiempo mayores y jugadores.
+> >m=C3=A9dicos, ambulancia,
+>
+> Todo o cualquier tema que se le ocurra bienvenido,
+> En mi opini=C3=B3n debemos juntarnos en forma independiente de la reuni=
+=C3=B3n de
+> los mi=C3=A9rcoles.
+>
+> Aguardo comentarios y a no dormirnos.
+>
+>
+> Besos
+
+--94eb2c0b7876dc2af2054d8b7710
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Perfecto... hagamos reuni=C3=B3n los martes<br><br><div d=
+ata-smartmail=3D"gmail_signature">BioIng. Dechiara, Paulo J.<br>___________=
+____________________<br><br>BIOINGENIERIA APLICADA SRL<br>R. Saenz Pe=C3=B1=
+a 2498 (Esq Tucum=C3=A1n)<br>CP: 3000 - Santa Fe - Pcia Santa Fe<br>Tel/Fax=
+: +54 342 4811537<br><a href=3D"http://www.bioingenieria-aplicada.com">www.=
+bioingenieria-aplicada.com</a><br><a href=3D"mailto:info@bioingenieria-apli=
+cada.com">info@bioingenieria-aplicada.com</a><br><br>Operador Buenos Aires=
+=C2=A0<br>Cordero 427 - R. de Escalada - Lan=C3=BAs -=C2=A0Tel: 011- 3964 5=
+666<br><a href=3D"mailto:proveedores@bioingenieria-aplicada.com">proveedore=
+s@bioingenieria-aplicada.com</a></div></div><div class=3D"gmail_extra"><br>=
+<div class=3D"gmail_quote">El 19 abr. 2017 11:06, &quot;FAPERSA&quot; &lt;<=
+a href=3D"mailto:jpruata@fapersa.com">jpruata@fapersa.com</a>&gt; escribi=
+=C3=B3:<br type=3D"attribution"><blockquote class=3D"gmail_quote" style=3D"=
+margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Gente este e=
+s un tema especial que debemos abordar con mucha anticipaci=C3=B3n.<br>
+<br>
+Ese d=C3=ADa en el club juegan los juveniles y la primera y nosotros.<br>
+<br>
+Seguramente vamos a tener que tener cuidado con el horario de finalizaci=C3=
+=B3n, tenemos hasta las 12:30 para usar las canchas.<br>
+<br>
+No nos olvidemos que en el encuentro pasado hubo de escuelita a M10 768 jug=
+adores que se hizo en caba=C3=B1a y un=C3=AD.<br>
+<br>
+Ademas debemos sumar que al club viene Duende y Provincial.<br>
+<br>
+TEMAS SUGERIDOS A TRATAR.<br>
+&gt;cobranza estacionamiento. quienes????<br>
+&gt;mesa de control para cobrar las inscripciones. quienes???<br>
+&gt;mesa de control para organizar fixture, creo que debemos incorporar por=
+ lo menos 4 veedores para control de partidos. quienes ?????<br>
+&gt;info a los clubes, para saber cantidad de equipos, de jugadores, mayore=
+s, posicionamiento de las canchas. (enviar invitaciones)<br>
+&gt;debemos organizar cuantas canchas y donde el armado, con cintas, conos,=
+ etc<br>
+&gt;tercer tiempo mayores y jugadores.<br>
+&gt;m=C3=A9dicos, ambulancia,<br>
+<br>
+Todo o cualquier tema que se le ocurra bienvenido,<br>
+En mi opini=C3=B3n debemos juntarnos en forma independiente de la reuni=C3=
+=B3n de los mi=C3=A9rcoles.<br>
+<br>
+Aguardo comentarios y a no dormirnos.<br>
+<br>
+<br>
+Besos</blockquote></div></div>
+
+--94eb2c0b7876dc2af2054d8b7710--

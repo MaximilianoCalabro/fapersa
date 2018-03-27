@@ -1,0 +1,327 @@
+Return-Path: <reportes-fapersa-bounces@listas.lunix.com.ar>
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id 6aigADdqFFkXOgAATLP0zA
+	; Thu, 11 May 2017 10:42:15 -0300
+Return-path: <reportes-fapersa-bounces@listas.lunix.com.ar>
+Envelope-to: jpruata@fapersa.com,
+ pcalcagno@fapersa.com,
+ rdopazo@fapersa.com
+Delivery-date: Thu, 11 May 2017 10:42:15 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:55021 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <reportes-fapersa-bounces@listas.lunix.com.ar>)
+	id 1d8oMA-0004iW-Cf; Thu, 11 May 2017 10:42:14 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 48B6F7F20A;
+	Thu, 11 May 2017 10:42:14 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id kXJKspyX2rby; Thu, 11 May 2017 10:42:13 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id C61287F232; Thu, 11 May 2017 10:42:13 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 32E837F20A;
+	Thu, 11 May 2017 10:42:13 -0300 (ART)
+Received: from cloud.lunix.com.ar (cloud.lunix.com.ar [207.198.115.213])
+	by fw.fapersa.com (Postfix) with ESMTP id DF5015FE0D;
+	Thu, 11 May 2017 10:42:12 -0300 (ART)
+Received: from localhost (localhost [127.0.0.1])
+	by cloud.lunix.com.ar (Postfix) with ESMTP id 90804C0592;
+	Thu, 11 May 2017 10:42:11 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at cloud.lunix.com.ar
+Received: from cloud.lunix.com.ar ([127.0.0.1])
+	by localhost (cloud.lunix.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id me4O_6NWTqSt; Thu, 11 May 2017 10:42:06 -0300 (ART)
+Received: by cloud.lunix.com.ar (Postfix, from userid 114)
+	id 8330EC05A5; Thu, 11 May 2017 10:42:06 -0300 (ART)
+Received: from cloud.lunix.com.ar (localhost [127.0.0.1])
+	by cloud.lunix.com.ar (Postfix) with ESMTP id 77F7DC0592;
+	Thu, 11 May 2017 10:42:01 -0300 (ART)
+X-Original-To: reportes-fapersa@listas.lunix.com.ar
+Delivered-To: reportes-fapersa@listas.lunix.com.ar
+Received: from localhost (localhost [127.0.0.1])
+ by cloud.lunix.com.ar (Postfix) with ESMTP id C324BC0592
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Thu, 11 May 2017 10:42:00 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at cloud.lunix.com.ar
+Received: from cloud.lunix.com.ar ([127.0.0.1])
+ by localhost (cloud.lunix.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+ with ESMTP id l5tiHEcZHUpD for <reportes-fapersa@listas.lunix.com.ar>;
+ Thu, 11 May 2017 10:41:55 -0300 (ART)
+Received: by cloud.lunix.com.ar (Postfix, from userid 114)
+ id D5480C05A0; Thu, 11 May 2017 10:41:55 -0300 (ART)
+Received: from fapersa.com (mx1.fapersa.com [181.14.247.181])
+ by cloud.lunix.com.ar (Postfix) with ESMTP id 2CA95C0592
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Thu, 11 May 2017 10:41:49 -0300 (ART)
+Received: from localhost (localhost [127.0.0.1])
+ by mail.fapersa.com (Postfix) with ESMTP id DA89A7F225
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Thu, 11 May 2017 10:41:48 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+ by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+ with ESMTP id lh-IP9l4hKLr for <reportes-fapersa@listas.lunix.com.ar>;
+ Thu, 11 May 2017 10:41:48 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+ id 91D197F233; Thu, 11 May 2017 10:41:48 -0300 (ART)
+Received: from BGMovil (unknown [172.22.100.55])
+ by mail.fapersa.com (Postfix) with ESMTPSA id DB05A7F20A;
+ Thu, 11 May 2017 10:41:47 -0300 (ART)
+From: "Bernardo Gonzalez Donna" <bgonzalez@fapersa.com>
+To: <reportes-fapersa@listas.lunix.com.ar>
+Date: Thu, 11 May 2017 10:49:47 -0300
+Message-ID: <000601d2ca5d$7452abf0$5cf803d0$@fapersa.com>
+MIME-Version: 1.0
+X-Mailer: Microsoft Outlook 14.0
+Thread-Index: AdLKXWGedUbzYC2SSpiRFwFVLrZuqg==
+Content-Language: es-ar
+Subject: [Reportes-fapersa] PEDIDO - Fuera de oficina
+X-BeenThere: reportes-fapersa@listas.lunix.com.ar
+X-Mailman-Version: 2.1.18
+Precedence: list
+List-Id: <reportes-fapersa.listas.lunix.com.ar>
+List-Unsubscribe: <http://listas.lunix.com.ar/cgi-bin/mailman/options/reportes-fapersa>, 
+ <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=unsubscribe>
+List-Post: <mailto:reportes-fapersa@listas.lunix.com.ar>
+List-Help: <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=help>
+List-Subscribe: <http://listas.lunix.com.ar/cgi-bin/mailman/listinfo/reportes-fapersa>, 
+ <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=subscribe>
+Reply-To: reportes-fapersa@listas.lunix.com.ar
+Content-Type: multipart/mixed; boundary="===============0009042655794934013=="
+Errors-To: reportes-fapersa-bounces@listas.lunix.com.ar
+Sender: "Reportes-fapersa" <reportes-fapersa-bounces@listas.lunix.com.ar>
+
+This is a multipart message in MIME format.
+
+--===============0009042655794934013==
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0007_01D2CA44.4F07E4F0"
+Content-Language: es-ar
+
+This is a multipart message in MIME format.
+
+------=_NextPart_000_0007_01D2CA44.4F07E4F0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Nacho/Franco:
+
+Necesitar=EDa que me coloquen un aviso de fuera de oficina en mi cuenta.
+Deber=EDa activarse el viernes 12/05/17  al terminar la jornada laboral =
+(aprox
+17 hs) y durar hasta el martes 23/05/17, inclusive.
+
+=20
+
+Abajo les dejo el texto.
+
+Muchas gracias,
+
+=20
+
+Berni
+
+=20
+
+=20
+
+I will be out of office from 12.05.17 to 23.05.17.
+Incoming eMails won't be forwarded and won't be read in my absence.=20
+I will answer after return.=20
+In urgent cases please contact  Mr. Fernando Yori (
+<mailto:fyori@fapersa.com> fyori@fapersa.com) or Mr. Diego Ottonelli (
+<mailto:dottonel@fapersa.com> dottonel@fapersa.com).
+
+Thank you very much,
+
+=20
+
+Bernardo Gonz=E1lez Donna
+
+=20
+
+=20
+
+=20
+
+Bernardo Gonz=E1lez Donna
+
+=20
+
+FAPERSA I.C.S.A.
+
+Aseguramiento de la Calidad / Quality Assurance
+
+Lamadrid 3065 =96 S3000IDW =96 Santa Fe =96 Argentina
+
+Tel: (+54) 342 4810810
+
+Fax: (+54) 342 4000400
+
+E-Mail:  <mailto:bgonzalez@fapersa.com> bgonzalez@fapersa.com
+
+www.fapersa.com <http://www.fapersa.com/>=20
+
+=20
+
+
+------=_NextPart_000_0007_01D2CA44.4F07E4F0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" =
+xmlns=3D"http://www.w3.org/TR/REC-html40"><head><meta =
+http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1"><meta name=3DGenerator content=3D"Microsoft Word =
+14 (filtered medium)"><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+span.EstiloCorreo17
+	{mso-style-type:personal-compose;
+	font-family:"Arial","sans-serif";
+	color:windowtext;
+	font-weight:normal;
+	font-style:normal;
+	text-decoration:none none;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri","sans-serif";
+	mso-fareast-language:EN-US;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body lang=3DES-AR link=3Dblue =
+vlink=3Dpurple><div class=3DWordSection1><p class=3DMsoNormal><span =
+lang=3DES =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-la=
+nguage:ES-AR'>Nacho/Franco:<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DES =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-la=
+nguage:ES-AR'>Necesitar=EDa que me coloquen un aviso de fuera de oficina =
+en mi cuenta. Deber=EDa activarse el viernes 12/05/17 &nbsp;al terminar =
+la jornada laboral (aprox 17 hs) y durar hasta el martes 23/05/17, =
+inclusive.<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DES =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-la=
+nguage:ES-AR'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DES =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-la=
+nguage:ES-AR'>Abajo les dejo el texto.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-GB =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-la=
+nguage:ES-AR'>Muchas gracias,<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-GB =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-la=
+nguage:ES-AR'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-GB =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-la=
+nguage:ES-AR'>Berni<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-GB =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-la=
+nguage:ES-AR'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-GB =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-la=
+nguage:ES-AR'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><b><span =
+lang=3DEN-US =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-la=
+nguage:ES-AR'>I will be out of office from 12.05.17 to =
+23.05.17.<br>Incoming eMails won't be forwarded and won't be read in my =
+absence. <br>I will answer after return. <br>In urgent cases please =
+contact &nbsp;Mr. Fernando Yori (</span></b><u><span lang=3DEN-US =
+style=3D'font-size:12.0pt;font-family:"Times New =
+Roman","serif";color:blue;mso-fareast-language:ES-AR'><a =
+href=3D"mailto:fyori@fapersa.com" =
+title=3D"blocked::mailto:fyori@fapersa.com"><b><span =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";color:blue'>fy=
+ori@fapersa.com</span></b></a></span></u><b><span lang=3DEN-US =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-la=
+nguage:ES-AR'>) or Mr. Diego Ottonelli (<a =
+href=3D"mailto:dottonel@fapersa.com"><span =
+style=3D'color:blue'>dottonel@fapersa.com</span></a>).<o:p></o:p></span><=
+/b></p><p class=3DMsoNormal><b><span lang=3DEN-US =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-la=
+nguage:ES-AR'>Thank you very much,<o:p></o:p></span></b></p><p =
+class=3DMsoNormal><b><span lang=3DEN-US =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-la=
+nguage:ES-AR'><o:p>&nbsp;</o:p></span></b></p><p =
+class=3DMsoNormal><b><span lang=3DEN-US =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-la=
+nguage:ES-AR'>Bernardo Gonz=E1lez Donna</span></b><b><span lang=3DEN-US =
+style=3D'font-size:12.0pt;font-family:"Times New =
+Roman","serif";mso-fareast-language:ES-AR'><o:p></o:p></span></b></p><p =
+class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif";mso-fareast-la=
+nguage:ES-AR'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif"'><o:p>&nbsp;</=
+o:p></span></p><p class=3DMsoNormal><span lang=3DEN-GB =
+style=3D'font-size:10.0pt;font-family:"Arial","sans-serif"'><o:p>&nbsp;</=
+o:p></span></p><p class=3DMsoNormal><span =
+style=3D'mso-fareast-language:ES-AR'>Bernardo Gonz=E1lez =
+Donna<o:p></o:p></span></p><p class=3DMsoNormal><span =
+style=3D'mso-fareast-language:ES-AR'><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span style=3D'mso-fareast-language:ES-AR'>FAPERSA =
+I.C.S.A.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+style=3D'mso-fareast-language:ES-AR'>Aseguramiento de la Calidad / =
+Quality Assurance<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DPT-BR style=3D'mso-fareast-language:ES-AR'>Lamadrid 3065 &#8211; =
+S3000IDW &#8211; Santa Fe &#8211; Argentina<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DPT-BR =
+style=3D'mso-fareast-language:ES-AR'>Tel: (+54) 342 =
+4810810<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DPT-BR =
+style=3D'mso-fareast-language:ES-AR'>Fax: (+54) 342 =
+4000400<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DPT-BR =
+style=3D'mso-fareast-language:ES-AR'>E-Mail: </span><span =
+style=3D'mso-fareast-language:ES-AR'><a =
+href=3D"mailto:bgonzalez@fapersa.com"><span =
+lang=3DPT-BR>bgonzalez@fapersa.com</span></a></span><span lang=3DPT-BR =
+style=3D'mso-fareast-language:ES-AR'><o:p></o:p></span></p><p =
+class=3DMsoNormal><span style=3D'mso-fareast-language:ES-AR'><a =
+href=3D"http://www.fapersa.com/">www.fapersa.com</a><o:p></o:p></span></p=
+><p class=3DMsoNormal><o:p>&nbsp;</o:p></p></div></body></html>
+------=_NextPart_000_0007_01D2CA44.4F07E4F0--
+
+
+--===============0009042655794934013==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+Content-Disposition: inline
+
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KUmVwb3J0ZXMt
+ZmFwZXJzYSBtYWlsaW5nIGxpc3QKUmVwb3J0ZXMtZmFwZXJzYUBsaXN0YXMubHVuaXguY29tLmFy
+Cmh0dHA6Ly9saXN0YXMubHVuaXguY29tLmFyL2NnaS1iaW4vbWFpbG1hbi9saXN0aW5mby9yZXBv
+cnRlcy1mYXBlcnNhCg==
+
+--===============0009042655794934013==--
+

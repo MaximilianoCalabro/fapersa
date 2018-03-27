@@ -1,0 +1,188 @@
+Return-Path: <admlasallejobson@gmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id QakXIleN91g2OAAATLP0zA
+	for <jpruata@fapersa.com>; Wed, 19 Apr 2017 13:16:23 -0300
+Return-path: <admlasallejobson@gmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Wed, 19 Apr 2017 13:16:23 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:38346 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.88)
+	(envelope-from <admlasallejobson@gmail.com>)
+	id 1d0sHG-0004n6-Jm
+	for jpruata@fapersa.com; Wed, 19 Apr 2017 13:16:23 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 341807F220
+	for <jpruata@fapersa.com>; Wed, 19 Apr 2017 13:16:22 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id qhAZjaVUhTsW for <jpruata@fapersa.com>;
+	Wed, 19 Apr 2017 13:16:21 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id E65A17F231; Wed, 19 Apr 2017 13:16:21 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 287D27F220
+	for <jpruata@fapersa.com>; Wed, 19 Apr 2017 13:16:21 -0300 (ART)
+Received-SPF: pass (gmail.com ... _spf.google.com: Sender is authorized to use 'admlasallejobson@gmail.com' in 'mfrom' identity (mechanism 'include:_netblocks.google.com' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="admlasallejobson@gmail.com"; helo=mail-qt0-f193.google.com; client-ip=209.85.216.193
+Received: from mail-qt0-f193.google.com (mail-qt0-f193.google.com [209.85.216.193])
+	by fw.fapersa.com (Postfix) with ESMTPS id 811015FF2E
+	for <jpruata@fapersa.com>; Wed, 19 Apr 2017 13:16:19 -0300 (ART)
+Received: by mail-qt0-f193.google.com with SMTP id y33so3819076qta.1
+        for <jpruata@fapersa.com>; Wed, 19 Apr 2017 09:16:18 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=I+tj2J1gYN3G8fu2RKOWO18s6w5zEYPFmuVRCiUECPk=;
+        b=s4ZmMd9TnyDw3q3sMPdOV7rbdeX2Fii8dzNvjBa0ctgF0gZ6wMUHDLVVR2VkFo7gIY
+         a/GslFIH3BPzI1LMTBtz9ytfL/OxjvANw41jBZgPWmgU3jTDUh71ETi3I7EquF5j3iH0
+         vmM+CaZp6SsY+N/9fOHNGo3Vlg/HK2ZVnzlm17mnqMN6JQ3zoxYcCV+tQs8YUNDp3O4G
+         23CoAh2osQf2KKDlDRiehJXF+1Ji7SvZzbsJyMIPlF8kiH9hCUNPFOTXGoXA5v3X26dD
+         o8800toAvMq1egjKXauQqRSMtiawMaKsXTRLDDtiqTI5Kx5ova1JlNcvhd5HpzNULmrk
+         nWlw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=I+tj2J1gYN3G8fu2RKOWO18s6w5zEYPFmuVRCiUECPk=;
+        b=H6H128K6pkdZAl+n9X8n56UNW6ywxSjuNSjs6B0XJVJSV3q4ZeH18CCJNXJ3/zWQeK
+         rc4Us/XPk8tXK0RW3i1wwAmTzBihzFH1zinm/SibjK3z5Gm1UjP6dVheAcp94X9LHc0r
+         REJKpOfaN5A1T1XIw+8B/RoSD5AqE4k0QBPPhwN8rqp5oFNyGLa+iulWW2z6BO3j7Jec
+         jqUlWBXg04l2mUpNxvNE3fUJlwDn3s1e8RZMHKFJFOPyYSPdAj2WXjhz80mBRS5Lzhsl
+         k8+Cz/PbMIg5QwQvaJIO2l1DSn9ae1A2kdz8XokYeLyz+BV2LFBP5UonDM8xRVdlsBkU
+         D1eA==
+X-Gm-Message-State: AN3rC/4Gd3opcDJv62xshSlFQutlm3dsvAbGy8PrUZy+X+/GrkwaOg/O
+	fC25bnEe3T23BxIJ/Ecb6DX8UzT40g==
+X-Received: by 10.237.62.150 with SMTP id n22mr3361781qtf.70.1492618576947;
+ Wed, 19 Apr 2017 09:16:16 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.12.168.202 with HTTP; Wed, 19 Apr 2017 09:16:16 -0700 (PDT)
+From: La Salle Jobson <admlasallejobson@gmail.com>
+Date: Wed, 19 Apr 2017 13:16:16 -0300
+Message-ID: <CAC0dvPTOpht+0ZxBc4v3XxT3sK2sfkRv-_oRr61CUzy8oQsZ8w@mail.gmail.com>
+Subject: =?UTF-8?Q?BENEFICIOS_BANCO_GALICIA_PARA_PADRES_DEL_COLEGIO_LA_?=
+	=?UTF-8?Q?SALLE_JOBSON=2D7=C2=BA_GRADO?=
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary=001a11409b841075c9054d87587c
+
+--001a11409b841075c9054d87587c
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Estimados Padres:
+
+Buenos d=C3=ADas.
+
+Les informamos que el Banco Galicia presenta como beneficio para los pap=C3=
+=A1s
+que tengan cuenta en dicha Instituci=C3=B3n con paquetes Eminent o Prefer, =
+y se
+adhieran al d=C3=A9bito autom=C3=A1tico de las cuotas del colegio, la bonif=
+icaci=C3=B3n
+total del costo de mantenimiento de la cuenta bancaria durante los primeros
+6 meses, y despu=C3=A9s la bonificaci=C3=B3n del 50% mientras mantengan dic=
+ho d=C3=A9bito
+autom=C3=A1tico.
+
+Esta bonificaci=C3=B3n ser=C3=A1 otorgada tambi=C3=A9n a aquellos pap=C3=A1=
+s que no tengan
+cuenta en el banco y deseen abrirla para adherirse al d=C3=A9bito autom=C3=
+=A1tico de
+las cuotas.
+
+Ante cualquier consulta pueden dirigirse a la Sucursal 380 sita en Bv.
+Galvez 1773 y contactarse con Emanuel Quintana o Candela Dergal, quienes
+son agentes referentes en el tema.
+
+Atentamente.
+
+
+
+
+
+Lic. Alejandra Solis
+
+Administradora
+
+--001a11409b841075c9054d87587c
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><p class=3D"MsoNormal" style=3D"background-image:initial;b=
+ackground-position:initial;background-size:initial;background-repeat:initia=
+l;background-origin:initial;background-clip:initial"><span style=3D"font-si=
+ze:9.5pt;font-family:arial;color:black">Estimados Padres:</span><span style=
+=3D"font-size:9.5pt;font-family:arial"><span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial"><span style=3D"font-size:9.5pt;font-fam=
+ily:arial;color:black">Buenos d=C3=ADas.</span><span style=3D"font-size:9.5=
+pt;font-family:arial"><span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial"><span style=3D"font-size:9.5pt;font-fam=
+ily:arial;color:black">Les informamos que el
+Banco Galicia presenta como beneficio para los pap=C3=A1s que tengan cuenta=
+ en dicha
+Instituci=C3=B3n con paquetes Eminent o Prefer, y se adhieran al d=C3=A9bit=
+o autom=C3=A1tico
+de las cuotas del colegio, la bonificaci=C3=B3n total del costo de mantenim=
+iento de
+la cuenta bancaria durante los primeros 6 meses, y despu=C3=A9s la bonifica=
+ci=C3=B3n del
+50% mientras mantengan dicho d=C3=A9bito autom=C3=A1tico.</span><span style=
+=3D"font-size:9.5pt;font-family:arial"><span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial"><span style=3D"font-size:9.5pt;font-fam=
+ily:arial;color:black">Esta bonificaci=C3=B3n ser=C3=A1
+otorgada tambi=C3=A9n a aquellos pap=C3=A1s que no tengan cuenta en el banc=
+o y deseen
+abrirla para adherirse al d=C3=A9bito autom=C3=A1tico de las cuotas.</span>=
+<span style=3D"font-size:9.5pt;font-family:arial"><span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial"><span style=3D"font-size:9.5pt;font-fam=
+ily:arial;color:black">Ante cualquier consulta
+pueden dirigirse a <span>la
+ Sucursal</span> 380 sita en Bv. Galvez 1773 y contactarse con
+Emanuel Quintana o Candela Dergal, quienes son agentes referentes en el tem=
+a.</span><span style=3D"font-size:9.5pt;font-family:arial"><span></span></s=
+pan></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial"><span style=3D"font-size:9.5pt;font-fam=
+ily:arial;color:black">Atentamente.</span><span style=3D"font-size:9.5pt;fo=
+nt-family:arial"><span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial"><span style=3D"font-size:9.5pt;font-fam=
+ily:arial;color:black">=C2=A0</span><span style=3D"font-size:9.5pt;font-fam=
+ily:arial"><span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial"><span style=3D"font-size:9.5pt;font-fam=
+ily:arial;color:black">=C2=A0</span><span style=3D"font-size:9.5pt;font-fam=
+ily:arial"><span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial"><span style=3D"font-size:9.5pt;font-fam=
+ily:arial;color:black">Lic. Alejandra Solis</span><span style=3D"font-size:=
+9.5pt;font-family:arial"><span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"background-image:initial;background-positio=
+n:initial;background-size:initial;background-repeat:initial;background-orig=
+in:initial;background-clip:initial"><span style=3D"font-size:9.5pt;font-fam=
+ily:arial;color:black">Administradora</span><span style=3D"font-size:9.5pt;=
+font-family:arial"><span></span></span></p>
+
+<p class=3D"MsoNormal"><span>=C2=A0</span></p></div>
+
+--001a11409b841075c9054d87587c--

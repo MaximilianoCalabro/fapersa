@@ -1,0 +1,124 @@
+Return-Path: <marianocordini@hotmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id YZu2Ed+ZIFjRJQAATLP0zA
+	for <jpruata@fapersa.com>; Mon, 07 Nov 2016 12:12:31 -0300
+Return-path: <marianocordini@hotmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Mon, 07 Nov 2016 12:12:31 -0300
+Received: from bay004-omc4s12.hotmail.com ([65.54.190.214]:57784)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-SHA384:256)
+	(Exim 4.87)
+	(envelope-from <marianocordini@hotmail.com>)
+	id 1c3lb3-0002U1-5Q
+	for jpruata@fapersa.com; Mon, 07 Nov 2016 12:12:31 -0300
+Received: from NAM01-BN3-obe.outbound.protection.outlook.com ([65.54.190.201]) by BAY004-OMC4S12.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Mon, 7 Nov 2016 07:11:49 -0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=d8g2rba0UrMpuxTmxLl4IQDyGj1diS4MMBN2ZuI8j6A=;
+ b=grqsART5LlWCW1yZ+8im8X7yi68/35eVPAVU3EUBztYYgb0VtJEMGTmUIhYvkPg1iKCnHEz0nzcJyFZWf8RiDoToAc68IpZVB+x79JL/I+4iSmmnTdMVc0kLO/xdskkgk/eU/IDJTp44CHIBx80hHYLPk2hPnDVfOXzpYAL5GS6yqwOHKEnI4I3VrN46esyH006tJZ6ubuQX//Lw9pyc+5Hc6+g49oeH45kZS3keB5hlDckaBMz6xnOlG9gI0cq+3kLFvZW2qi5A9QSLCLbr3u05bTQKdiqQZu8dukcZamzGFnBr/8Tp6GDGM4N4Wt7MM8sWPF/Yu/IbxTNe3KvgYg==
+Received: from BN3NAM01FT006.eop-nam01.prod.protection.outlook.com
+ (10.152.66.59) by BN3NAM01HT124.eop-nam01.prod.protection.outlook.com
+ (10.152.67.174) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.707.3; Mon, 7 Nov
+ 2016 15:11:48 +0000
+Received: from DM5PR08MB2652.namprd08.prod.outlook.com (10.152.66.51) by
+ BN3NAM01FT006.mail.protection.outlook.com (10.152.66.198) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.707.3 via Frontend Transport; Mon, 7 Nov 2016 15:11:47 +0000
+Received: from DM5PR08MB2652.namprd08.prod.outlook.com ([10.173.221.140]) by
+ DM5PR08MB2652.namprd08.prod.outlook.com ([10.173.221.140]) with mapi id
+ 15.01.0707.006; Mon, 7 Nov 2016 15:11:47 +0000
+From: Mariano Cordini <marianocordini@hotmail.com>
+To: JUAMPI RUATA <jpruata@fapersaicsa.com.ar>, juampi ruata
+	<jpruata@fapersa.com>
+Subject: Imagen  insert
+Thread-Topic: Imagen  insert
+Thread-Index: AQHSOQlCwzWYmmCAOkKDn3CfdCLKJQ==
+Date: Mon, 7 Nov 2016 15:11:47 +0000
+Message-ID: <DM5PR08MB2652743ED174298487C16810CCA70@DM5PR08MB2652.namprd08.prod.outlook.com>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: fapersaicsa.com.ar; dkim=none (message not signed)
+ header.d=none;fapersaicsa.com.ar; dmarc=none action=none
+ header.from=hotmail.com;
+x-incomingtopheadermarker: OriginalChecksum:;UpperCasedChecksum:;SizeAsReceived:2310;Count:36
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [x/1Id5HJkOZtJPEFiavhm4M4Zo8SVyP2Kxv5D7H4pms=]
+x-incomingheadercount: 36
+x-eopattributedmessage: 0
+x-microsoft-exchange-diagnostics: 1;BN3NAM01HT124;7:hp9bGNFzY9YsOJ5SaoKBwb1Zq+LQfYsBmlzAuleBYhAe+PokI2BpXWCMbaEifBiySGdqqhq1dFoX1AdJK+07V/T9yvItf4FWz9EACCExYJIH3L5fu+ixyeBzuawuhsxBx335i9SY5hGhlF18gAssTQdt4/2xa4xSHhMLtkUPJXDrGHnRDDxMDY+uVdKtni1vFHW8W/H28yZXoxSSJCY8NItOa0bq0GyK81zrKEkJUcMsAmxmnG5wIr9HFzIvbMw2YTvlFrPWLgQaAXaTQweaC2uKjHAsSpnErW2GyJIeBLufoDQ/IUBSi0qFiKyRizBuP/zobJY7N05/uTsRpXOAfyRcYdYOIdSqypwwFJOOygc=
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(10019020)(98900003);DIR:OUT;SFP:1102;SCL:1;SRVR:BN3NAM01HT124;H:DM5PR08MB2652.namprd08.prod.outlook.com;FPR:;SPF:None;LANG:es;
+x-ms-office365-filtering-correlation-id: 2eef1f52-93f2-4827-c39e-08d4072064b2
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:;SRVR:BN3NAM01HT124;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(432015012)(82015046);SRVR:BN3NAM01HT124;BCL:0;PCL:0;RULEID:;SRVR:BN3NAM01HT124;
+x-forefront-prvs: 0119DC3B5E
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_DM5PR08MB2652743ED174298487C16810CCA70DM5PR08MB2652namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: hotmail.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 07 Nov 2016 15:11:47.4266
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN3NAM01HT124
+X-OriginalArrivalTime: 07 Nov 2016 15:11:49.0177 (UTC) FILETIME=[432E6A90:01D23909]
+X-Spam-Status: No, score=-4.8
+X-Spam-Score: -47
+X-Spam-Bar: ----
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Hola juampi te envío imagen para el insert 2016 Abrazo Enviado
+    desde mi smartphone Samsung Galaxy. Hola juampi te envío imagen para el
+   insert 2016 [...] 
+ 
+ Content analysis details:   (-4.8 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (marianocordini[at]hotmail.com)
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -2.8 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+                             [65.54.190.214 listed in wl.mailspike.net]
+ -0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+X-Spam-Flag: NO
+
+--_000_DM5PR08MB2652743ED174298487C16810CCA70DM5PR08MB2652namp_
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+SG9sYSBqdWFtcGkgdGUgZW52w61vIGltYWdlbiBwYXJhIGVsIGluc2VydCAgMjAxNg0KQWJyYXpv
+DQoNCg0KRW52aWFkbyBkZXNkZSBtaSBzbWFydHBob25lIFNhbXN1bmcgR2FsYXh5Lg0K
+
+--_000_DM5PR08MB2652743ED174298487C16810CCA70DM5PR08MB2652namp_
+Content-Type: text/html; charset="utf-8"
+Content-ID: <5C245480F5BEBF4D9F1BB55453C8BA50@sct-15-1-659-11-msonline-outlook-7ade0.templateTenant>
+Content-Transfer-Encoding: base64
+
+PGh0bWw+DQo8aGVhZD4NCjxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0i
+dGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04Ij4NCjwvaGVhZD4NCjxib2R5Pg0KPGRpdj5Ib2xhIGp1
+YW1waSB0ZSBlbnbDrW8gaW1hZ2VuIHBhcmEgZWwgaW5zZXJ0ICZuYnNwOzIwMTY8L2Rpdj4NCjxk
+aXY+QWJyYXpvPC9kaXY+DQo8ZGl2Pjxicj4NCjwvZGl2Pg0KPGRpdj48YnI+DQo8L2Rpdj4NCjxk
+aXYgaWQ9ImNvbXBvc2VyX3NpZ25hdHVyZSI+DQo8ZGl2IHN0eWxlPSJmb250LXNpemU6ODUlO2Nv
+bG9yOiM1NzU3NTciPkVudmlhZG8gZGVzZGUgbWkgc21hcnRwaG9uZSBTYW1zdW5nIEdhbGF4eS48
+L2Rpdj4NCjwvZGl2Pg0KPC9ib2R5Pg0KPC9odG1sPg0K
+
+--_000_DM5PR08MB2652743ED174298487C16810CCA70DM5PR08MB2652namp_--

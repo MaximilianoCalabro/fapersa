@@ -1,0 +1,136 @@
+Return-Path: <reportes-fapersa-bounces@listas.lunix.com.ar>
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id cRZJIbHcT1jVbwAATLP0zA
+	; Tue, 13 Dec 2016 08:34:09 -0300
+Return-path: <reportes-fapersa-bounces@listas.lunix.com.ar>
+Envelope-to: dottonel@fapersa.com,
+ fyori@fapersa.com,
+ jpruata@fapersa.com,
+ pcalcagno@fapersa.com,
+ rdopazo@fapersa.com
+Delivery-date: Tue, 13 Dec 2016 08:34:09 -0300
+Received: from cloud.lunix.com.ar ([207.198.115.213]:58479)
+	by tanis.nocplanet.com with esmtp (Exim 4.87)
+	(envelope-from <reportes-fapersa-bounces@listas.lunix.com.ar>)
+	id 1cGlLK-0007NJ-66; Tue, 13 Dec 2016 08:34:09 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by cloud.lunix.com.ar (Postfix) with ESMTP id B34DCC19E1;
+	Tue, 13 Dec 2016 08:31:57 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at cloud.lunix.com.ar
+Received: from cloud.lunix.com.ar ([127.0.0.1])
+	by localhost (cloud.lunix.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id lAnCeagDg0Ci; Tue, 13 Dec 2016 08:31:53 -0300 (ART)
+Received: by cloud.lunix.com.ar (Postfix, from userid 114)
+	id EAACFC19DF; Tue, 13 Dec 2016 08:31:52 -0300 (ART)
+Received: from cloud.lunix.com.ar (localhost [127.0.0.1])
+	by cloud.lunix.com.ar (Postfix) with ESMTP id 3C8C1C0746;
+	Tue, 13 Dec 2016 08:31:48 -0300 (ART)
+X-Original-To: reportes-fapersa@listas.lunix.com.ar
+Delivered-To: reportes-fapersa@listas.lunix.com.ar
+Received: from localhost (localhost [127.0.0.1])
+ by cloud.lunix.com.ar (Postfix) with ESMTP id 4216BC0746
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Tue, 13 Dec 2016 08:31:47 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at cloud.lunix.com.ar
+Received: from cloud.lunix.com.ar ([127.0.0.1])
+ by localhost (cloud.lunix.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+ with ESMTP id pthCkkWJJfJS for <reportes-fapersa@listas.lunix.com.ar>;
+ Tue, 13 Dec 2016 08:31:42 -0300 (ART)
+Received: by cloud.lunix.com.ar (Postfix, from userid 114)
+ id 9CCC7C19DF; Tue, 13 Dec 2016 08:31:42 -0300 (ART)
+Received: from tanis.nocplanet.com (tanis.nocplanet.com [108.170.37.10])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by cloud.lunix.com.ar (Postfix) with ESMTPS id DAE62C0746
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Tue, 13 Dec 2016 08:31:37 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=fapersa.com
+ ; s=default;
+ h=Content-Transfer-Encoding:Content-Type:Subject:To:MIME-Version
+ :From:Date:Message-ID:Sender:Reply-To:Cc:Content-ID:Content-Description:
+ Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+ In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=FOYZ0FAJpY0coUv/BQD3Ily+EsMpT0FrGcuoEll3O9E=; b=ROsZ011cWq3qQd/v7BdriiAnC6
+ /XbyqILz8/bQNfcmF4F155zlTe6LxXNJtFatJAAx6uP4AL4MpRlMDaSxLWi1ax6Upv9FfM7+o05pN
+ Idzp54+l8BL3rr3cjnMBFxzjlX7wjjpHNQEtAJNHSRxNpjDSUd58BU9Dh/7nqc9pq0YB5kCtQftg1
+ BR1jbKZjyFya4K0dNxfWbaabV7Pj9m12nNwxSKDNhcGo626A/5uIKVALE7vixD2u3KfFWCfuHan69
+ YuPTrpYLFPzx3Ag0cbFl0xJE7xJWrAh6S8N/SNcnnjevD6SS34RrQvaSy3rq191Vlp0HH+ZSeUt69
+ bXq8jQWQ==;
+Received: from [181.14.247.181] (port=49235 helo=[172.22.100.53])
+ by tanis.nocplanet.com with esmtpa (Exim 4.87)
+ (envelope-from <dottonel@fapersa.com>) id 1cGlJ0-0007Jc-TE
+ for reportes-fapersa@listas.lunix.com.ar; Tue, 13 Dec 2016 08:31:35 -0300
+Message-ID: <584FCE25.3060303@fapersa.com>
+Date: Tue, 13 Dec 2016 08:32:05 -0200
+From: Diego Ottonelli <dottonel@fapersa.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.1;
+ rv:16.0) Gecko/20121010 Thunderbird/16.0.1
+MIME-Version: 1.0
+To: Reportes-Lunix <reportes-fapersa@listas.lunix.com.ar>
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - tanis.nocplanet.com
+X-AntiAbuse: Original Domain - listas.lunix.com.ar
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - fapersa.com
+X-Get-Message-Sender-Via: tanis.nocplanet.com: authenticated_id:
+ dottonel@fapersa.com
+X-Authenticated-Sender: tanis.nocplanet.com: dottonel@fapersa.com
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+Subject: [Reportes-fapersa] Sin servicio de Internet
+X-BeenThere: reportes-fapersa@listas.lunix.com.ar
+X-Mailman-Version: 2.1.18
+Precedence: list
+List-Id: <reportes-fapersa.listas.lunix.com.ar>
+List-Unsubscribe: <http://listas.lunix.com.ar/cgi-bin/mailman/options/reportes-fapersa>, 
+ <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=unsubscribe>
+List-Post: <mailto:reportes-fapersa@listas.lunix.com.ar>
+List-Help: <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=help>
+List-Subscribe: <http://listas.lunix.com.ar/cgi-bin/mailman/listinfo/reportes-fapersa>, 
+ <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=subscribe>
+Reply-To: reportes-fapersa@listas.lunix.com.ar
+Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="utf-8"; Format="flowed"
+Errors-To: reportes-fapersa-bounces@listas.lunix.com.ar
+Sender: "Reportes-fapersa" <reportes-fapersa-bounces@listas.lunix.com.ar>
+X-Spam-Status: No, score=-4.9
+X-Spam-Score: -48
+X-Spam-Bar: ----
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Estamos sin servicio de Internet. Por favor, chequear y restablecer
+    urgente -- Diego Ottonelli Fapersa I.C.S.A. Reportes-fapersa mailing list
+    Reportes-fapersa@listas.lunix.com.ar http://listas.lunix.com.ar/cgi-bin/mailman/listinfo/reportes-fapersa
+    [...] 
+ 
+ Content analysis details:   (-4.9 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -3.1 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: fapersa.com]
+  0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
+                             domains are different
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+  0.0 T_DKIM_INVALID         DKIM-Signature header exists but is not valid
+X-Spam-Flag: NO
+
+RXN0YW1vcyBzaW4gc2VydmljaW8gZGUgSW50ZXJuZXQuClBvciBmYXZvciwgY2hlcXVlYXIgeSBy
+ZXN0YWJsZWNlciB1cmdlbnRlCgotLSAKRGllZ28gT3R0b25lbGxpCkZhcGVyc2EgSS5DLlMuQS4K
+Cl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fClJlcG9ydGVz
+LWZhcGVyc2EgbWFpbGluZyBsaXN0ClJlcG9ydGVzLWZhcGVyc2FAbGlzdGFzLmx1bml4LmNvbS5h
+cgpodHRwOi8vbGlzdGFzLmx1bml4LmNvbS5hci9jZ2ktYmluL21haWxtYW4vbGlzdGluZm8vcmVw
+b3J0ZXMtZmFwZXJzYQo=

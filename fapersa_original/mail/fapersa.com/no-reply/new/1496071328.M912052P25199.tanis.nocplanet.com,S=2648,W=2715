@@ -1,0 +1,67 @@
+Return-Path: <>
+Delivered-To: no-reply@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id 2UkMNqA8LFlvYgAATLP0zA
+	for <no-reply@fapersa.com>; Mon, 29 May 2017 12:22:08 -0300
+Return-path: <>
+Envelope-to: no-reply@fapersa.com
+Delivery-date: Mon, 29 May 2017 12:22:08 -0300
+Received: from mailnull by tanis.nocplanet.com with local (Exim 4.89)
+	id 1dFMUg-0006jI-Lb
+	for no-reply@fapersa.com; Mon, 29 May 2017 12:22:07 -0300
+X-Failed-Recipients: wendler@arnet.com.ar
+Auto-Submitted: auto-replied
+From: Mail Delivery System <Mailer-Daemon@tanis.nocplanet.com>
+To: no-reply@fapersa.com
+Content-Type: multipart/report; report-type=delivery-status; boundary=1496071326-eximdsn-1718292936
+MIME-Version: 1.0
+Subject: Mail delivery failed: returning message to sender
+Message-Id: <E1dFMUg-0006jI-Lb@tanis.nocplanet.com>
+Date: Mon, 29 May 2017 12:22:06 -0300
+
+--1496071326-eximdsn-1718292936
+Content-type: text/plain; charset=us-ascii
+
+This message was created automatically by mail delivery software.
+
+A message that you sent could not be delivered to one or more of its
+recipients. This is a permanent error. The following address(es) failed:
+
+  wendler@arnet.com.ar
+    host mx-02.arnet.com.ar [200.45.191.214]
+    SMTP error from remote mail server after RCPT TO:<wendler@arnet.com.ar>:
+    550 5.1.1 <wendler@arnet.com.ar>: Recipient address rejected:
+    User unknown in relay recipient table
+
+--1496071326-eximdsn-1718292936
+Content-type: message/delivery-status
+
+Reporting-MTA: dns; tanis.nocplanet.com
+
+Action: failed
+Final-Recipient: rfc822;wendler@arnet.com.ar
+Status: 5.0.0
+Remote-MTA: dns; mx-02.arnet.com.ar
+Diagnostic-Code: smtp; 550 5.1.1 <wendler@arnet.com.ar>: Recipient address rejected: User unknown in relay recipient table
+
+--1496071326-eximdsn-1718292936
+Content-type: text/rfc822-headers
+
+Return-path: <no-reply@fapersa.com>
+Received: from mx1.fapersa.com ([181.14.247.181]:55111 helo=equis.fapersa.int)
+	by tanis.nocplanet.com with esmtpa (Exim 4.89)
+	(envelope-from <no-reply@fapersa.com>)
+	id 1dFMTx-0006bE-TE; Mon, 29 May 2017 12:21:43 -0300
+From: =?Cp1252?Q?Daniel_Ram=EDrez?= <no-reply@fapersa.com>
+To: MARCELO WENDLER <wendlerrepuestos@hotmail.com>, 
+	MARCELO WENDLER <marcelo@aureliowendler.com.ar>, 
+	WENDLER AURELIO Y OTROS SH <wendler@arnet.com.ar>
+Message-ID: <2073590030.5.1496071282644.JavaMail.cmg@equis>
+Subject: Fapersa ICSA - Envio de comprobantes electronicos
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_4_182160398.1496071281300"
+X-Exim-DSN-Information: Due to administrative limits only headers are returned
+
+
+--1496071326-eximdsn-1718292936--

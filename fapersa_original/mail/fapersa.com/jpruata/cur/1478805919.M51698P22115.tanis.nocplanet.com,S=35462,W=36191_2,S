@@ -1,0 +1,729 @@
+Return-Path: <Diego.Medori@bunge.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id SXwBA5/JJFhjVgAATLP0zA
+	for <jpruata@fapersa.com>; Thu, 10 Nov 2016 16:25:19 -0300
+Return-path: <Diego.Medori@bunge.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Thu, 10 Nov 2016 16:25:19 -0300
+Received: from mail-qt0-f226.google.com ([209.85.216.226]:35008)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128)
+	(Exim 4.87)
+	(envelope-from <Diego.Medori@bunge.com>)
+	id 1c4uy7-0006SV-Lh
+	for jpruata@fapersa.com; Thu, 10 Nov 2016 16:25:17 -0300
+Received: by mail-qt0-f226.google.com with SMTP id l20so26083348qta.2
+        for <jpruata@fapersa.com>; Thu, 10 Nov 2016 11:24:43 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=bunge-com.20150623.gappssmtp.com; s=20150623;
+        h=in-reply-to:references:to:cc:mime-version:subject:message-id:from
+         :date;
+        bh=rTKf3ficH+M8n2GJQSQCBOfn4PAvQlR1XQxeQLdzUsE=;
+        b=qp1JCDv/LRaE9PwBPwhCwdnx3vAXPyVG4fh3dTtlc4ngicC75uJ199h5qmHBySmK7c
+         S6s2LcgN5N5gFgafo6ox6IjJPtfWJ3/Ek0SLcZnXqp95KXHgUlSmqCWW5HWunwJljy4L
+         0uWWG+yXeDy+bKh0s/+/3GYlFngPctVdswCVSrHgGoNLixAwNBc69ULRyvGQuJekGoYK
+         aCjPbkOtBESLWCWjP3LUKuc4my6nx602gIXUuJFzF/E4Mn4Xihj//BTiuiM749YOQrfn
+         BCYYqWTNxh2vsOMPXkwotvf4ESJRYUSNmW5Dcn17iReg5Lp+Bnm28xTrWvw24oXJpU1t
+         uDag==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:in-reply-to:references:to:cc:mime-version
+         :subject:message-id:from:date;
+        bh=rTKf3ficH+M8n2GJQSQCBOfn4PAvQlR1XQxeQLdzUsE=;
+        b=GbgmNmW1KIhD0zPKgPzacmA6vWTlqzRG43MgLZMvYsgo8prPa1zE3Ss9IFVIqy0pnX
+         zTvDTklQGvpJPnYfarG/fCrPTx1XS0ToseRGdCKhM69tcEG+B2s6DgnW6ecEl/w7jXVW
+         6/b2g3SmEWKTAanDDAQ/wk0fI+7bALxmDM5uj9Z/mIqCm4Y46ug5aDoT99o+E7ydWZsk
+         5uCecaXz3hn0RlStK9FFNdy99lJa97Q1vNM5EFcC2qIH520UBPWPEbYRHTZJEq/wyT2h
+         DkeITQKjP6595lLjLpfT3N23kJxLlT4+YfzY1uFfD0IAwuHxTh/HZbLO2aFXwQP0Uoqf
+         0UbA==
+X-Gm-Message-State: ABUngvefAMx6cnpXQTkeH2JEbK7/0TWc3nCXjc3ygvvKH2HABVmdfpuqtFb038d+U69QwKfdCfVh30wjvx8fBxoPTcDBHPUAq43wufdcQDdr6ET469Xc8/EZiVadQdHl4Tv64+RHPeJKN1EDr7UNpmO/
+X-Received: by 10.36.237.3 with SMTP id r3mr5435364ith.76.1478805862571;
+        Thu, 10 Nov 2016 11:24:22 -0800 (PST)
+Received: from bnastlg02.na.dir.bunge.com (smtp2.bunge.com. [63.240.146.143])
+        by smtp-relay.gmail.com with ESMTPS id n75sm6943555itb.3.2016.11.10.11.24.22
+        (version=TLS1_2 cipher=AES128-GCM-SHA256 bits=128/128);
+        Thu, 10 Nov 2016 11:24:22 -0800 (PST)
+X-Relaying-Domain: bunge.com
+Received: from bue-lx-smtp.bar.sa.dir.bunge.com ([10.1.4.63])
+          by bnastlg05.na.dir.bunge.com (IBM Domino Release 9.0.1FP4)
+          with ESMTP id 2016111013241777-214291 ;
+          Thu, 10 Nov 2016 13:24:17 -0600 
+Received: from BUE-2K8-LN2.bar.sa.dir.bunge.com (bue-2k8-ln2.bar.sa.dir.bunge.com [10.1.6.24])
+	by bue-lx-smtp.bar.sa.dir.bunge.com (Postfix) with ESMTP id B21652FF4A6;
+	Thu, 10 Nov 2016 16:26:23 -0300 (ART)
+In-Reply-To: <5824CA10.9030502@tacuaritas.com.ar>
+References: <WEB1gO2cZn9pI7QHQRv0002386c@relay.bcr.com.ar> <OF6A67D6F4.15EF27C5-ON03258067.00637BB4-03258067.0063A2AB@bunge.com> <5824CA10.9030502@tacuaritas.com.ar>
+X-Disclaimed: 21890
+To: control@tacuaritas.com.ar
+Cc: "firmadigital@confirma.com.ar" <firmadigital@confirma.com.ar>, "gsieber@fapersa.com" <gsieber@fapersa.com>, "hernan.wust@bunge.com" <hernan.wust@bunge.com>, "jpruata@fapersa.com" <jpruata@fapersa.com>, "pablo.bardes@bunge.com" <pablo.bardes@bunge.com>
+MIME-Version: 1.0
+Subject: =?ISO-8859-1?Q?Re=3A_Anulaci=F3n_de_documentoBCR_cto=2E31=2F93239?=
+X-KeepSent: 211720B0:6F1F83D4-03258067:006A83CA;
+ type=4; flags=0; name=$KeepSent
+X-Mailer: IBM Notes Release 9.0.1FP3 SHF227 March 23, 2015
+Message-ID: <OF211720B0.6F1F83D4-ON03258067.006A83CA-03258067.006A9422@bunge.com>
+From: Diego Medori <Diego.Medori@bunge.com>
+Date: Thu, 10 Nov 2016 16:24:06 -0300
+X-TNEFEvaluated: 1
+Content-Type: multipart/related; boundary="=_related 006A942003258067_="
+X-Spam-Status: No, score=-1.9
+X-Spam-Score: -18
+X-Spam-Bar: -
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Lo vuelvo anular Roberto, asi queda bien el destino Sldos
+   Diego Medori Administracion Comercial Bunge Argentina S.A. (0341) 5123302
+   [...] 
+ 
+ Content analysis details:   (-1.9 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+                             [209.85.216.226 listed in wl.mailspike.net]
+  0.0 T_SPF_TEMPERROR        SPF: test of record failed (temperror)
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+X-Spam-Flag: NO
+
+Este es un mensaje de varios componentes en formato MIME.
+--=_related 006A942003258067_=
+Content-Type: multipart/alternative; boundary="=_alternative 006A942003258067_="
+
+
+--=_alternative 006A942003258067_=
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+Lo vuelvo anular Roberto, asi queda bien el destino
+
+Sldos
+
+
+  Diego Medori
+  Administracion Comercial
+  Bunge Argentina S.A.
+  (0341) 5123302
+=20
+=20
+
+
+
+From:   Roberto <control@tacuaritas.com.ar>
+To:     Diego Medori <Diego.Medori@bunge.com>,=20
+"firmadigital@confirma.com.ar" <firmadigital@confirma.com.ar>
+Cc:     "gsieber@fapersa.com" <gsieber@fapersa.com>,=20
+"hernan.wust@bunge.com" <hernan.wust@bunge.com>, "jpruata@fapersa.com"=20
+<jpruata@fapersa.com>, "pablo.bardes@bunge.com" <pablo.bardes@bunge.com>
+Date:   10/11/2016 16:18
+Subject:        Re: Anulaci=C3=B3n de documentoBCR cto.31/93239
+
+
+
+Hola Diego Gracias:
+Yo no habia visto este mail y solo corregi el + - tn
+Como hacemos?
+
+
+El 10/11/2016 a las 03:08 p.m., Diego Medori escribi=C3=B3:
+Buenas tardes=20
+
+                         =20
+Faltar=C3=ADa el ajuste de cantidad de mercader=C3=ADa como detallamos y la=
+=20
+aclaraci=C3=B3n del destino: Pto San Martin=20
+
+Sldos=20
+
+  Diego Medori
+ Administracion Comercial
+ Bunge Argentina S.A.
+ (0341) 5123302
+
+ =20
+
+
+
+From:        www.confirma.com.ar <firmadigital@confirma.com.ar>=20
+To:        <diego.medori@bunge.com>, <pablo.bardes@bunge.com>,=20
+<hernan.wust@bunge.com>, <control@tacuaritas.com.ar>,=20
+<gsieber@fapersa.com>, <jpruata@fapersa.com>=20
+Date:        10/11/2016 15:05=20
+Subject:        Anulaci=C3=B3n de documentoBCR=20
+
+
+
+
+
+
+Jueves, 10 de Noviembre de 2016=20
+
+
+
+
+Servicio Confirma [Bolsa de Comercio de Rosario]=20
+
+
+
+
+Por medio de la presente le comunicamos que el documento formado por las=20
+partes:=20
+
+LA TURQUINA S A=20
+N=C3=BAmero interno: 44558=20
+
+
+
+LAS TACUARITAS MANDATARIA S.R.L.=20
+N=C3=BAmero interno: 44558=20
+
+
+
+BUNGE ARGENTINA S A=20
+N=C3=BAmero interno: 31/93239=20
+
+
+
+
+
+
+
+ha sido anulado por la empresa BUNGE ARGENTINA S A por el siguiente=20
+motivo:=20
+
+
+
+
+falta ajuste de cantidad de mercader=C3=ADa: mas 2 tn / menos 3 tn=20
+
+
+
+
+
+
+P Antes de imprimir este mensaje por favor piense en su responsabilidad=20
+con el medio ambiente.
+-----------------------------------------
+Este correo electr=C3=B3nico es confidencial. La informaci=C3=B3n contenida=
+ en el=20
+presente mensaje y sus adjuntos son de uso exclusivo del titular de la=20
+direcci=C3=B3n de correo electr=C3=B3nico a la que est=C3=A1 dirigido. Si U=
+sted no es el=20
+destinatario de este mensaje, tenga la amabilidad de informarlo al=20
+remitente y eliminarlo de su sistema.
+El emisor no es responsable por eventuales errores, omisiones o contenido=
+=20
+inexacto de este mensaje o sus adjuntos, ni garantiza su seguridad e=20
+integridad en raz=C3=B3n de que lo transmitido por este medio puede ser obj=
+eto=20
+de alteraci=C3=B3n, obstrucci=C3=B3n y otras irregularidades por parte de t=
+erceros=20
+ajenos al remitente. Muchas gracias.=20
+
+
+
+Este e-mail es confidencial y solamente para uso del destinatario. En caso=
+=20
+de ser recibido indebidamente, por favor elim=C3=ADnelo inmediatamente y=20
+comun=C3=ADqueselo al remitente.
+
+This email is confidential and intended solely for the use of the=20
+addressee. If you have received this email in error, please delete it=20
+immediately and notify the sender.=20
+Este e-mail es confidencial y solamente para uso del destinatario. En caso=
+=20
+de ser recibido indebidamente, por favor elim=EF=BF=BDnelo inmediatamente y=
+=20
+comun=EF=BF=BDqueselo al remitente.
+This email is confidential and intended solely for the use of the=20
+addressee. If you have received this email in error, please delete it=20
+inmediately and notify to the sender.
+Se certific=C3=B3 que el correo no contiene virus.
+Comprobada por AVG - www.avg.com
+Versi=C3=B3n: 2016.0.7859 / Base de datos de virus: 4664/13382 - Fecha de l=
+a=20
+versi=C3=B3n: 10/11/2016
+
+
+
+
+Este e-mail es confidencial y solamente para uso del destinatario. En caso=
+=20
+de ser recibido indebidamente, por favor elim=C3=ADnelo inmediatamente y=20
+comun=C3=ADqueselo al remitente.
+
+This email is confidential and intended solely for the use of the=20
+addressee. If you have received this email in error, please delete it=20
+immediately and notify the sender.
+
+--=20
+Este e-mail es confidencial y solamente para uso del destinatario. En caso=
+=20
+de ser recibido indebidamente, por favor elim=EF=BF=BDnelo inmediatamente y=
+=20
+comun=EF=BF=BDqueselo al remitente.
+This email is confidential and intended solely for the use of the=20
+addressee. If you have received this email in error, please delete it=20
+inmediately and notify to the sender.
+
+--=_alternative 006A942003258067_=
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<font size=3D2 face=3D"sans-serif">Lo vuelvo anular Roberto, asi queda bien
+el destino</font>
+<br>
+<br><font size=3D2 face=3D"sans-serif">Sldos</font>
+<br>
+<br>
+<br><font size=3D2 face=3D"sans-serif">&nbsp; Diego Medori<br>
+ &nbsp;Administracion Comercial<br>
+ &nbsp;Bunge Argentina S.A.<br>
+ &nbsp;(0341) 5123302<br>
+ <br>
+ &nbsp;</font>
+<br>
+<br>
+<br>
+<br><font size=3D1 color=3D#5f5f5f face=3D"sans-serif">From: &nbsp; &nbsp; =
+&nbsp;
+&nbsp;</font><font size=3D1 face=3D"sans-serif">Roberto &lt;control@tacuari=
+tas.com.ar&gt;</font>
+<br><font size=3D1 color=3D#5f5f5f face=3D"sans-serif">To: &nbsp; &nbsp; &n=
+bsp;
+&nbsp;</font><font size=3D1 face=3D"sans-serif">Diego Medori &lt;Diego.Medo=
+ri@bunge.com&gt;,
+&quot;firmadigital@confirma.com.ar&quot; &lt;firmadigital@confirma.com.ar&g=
+t;</font>
+<br><font size=3D1 color=3D#5f5f5f face=3D"sans-serif">Cc: &nbsp; &nbsp; &n=
+bsp;
+&nbsp;</font><font size=3D1 face=3D"sans-serif">&quot;gsieber@fapersa.com&q=
+uot;
+&lt;gsieber@fapersa.com&gt;, &quot;hernan.wust@bunge.com&quot; &lt;hernan.w=
+ust@bunge.com&gt;,
+&quot;jpruata@fapersa.com&quot; &lt;jpruata@fapersa.com&gt;, &quot;pablo.ba=
+rdes@bunge.com&quot;
+&lt;pablo.bardes@bunge.com&gt;</font>
+<br><font size=3D1 color=3D#5f5f5f face=3D"sans-serif">Date: &nbsp; &nbsp; =
+&nbsp;
+&nbsp;</font><font size=3D1 face=3D"sans-serif">10/11/2016 16:18</font>
+<br><font size=3D1 color=3D#5f5f5f face=3D"sans-serif">Subject: &nbsp; &nbs=
+p;
+&nbsp; &nbsp;</font><font size=3D1 face=3D"sans-serif">Re: Anulaci=C3=B3n
+de documentoBCR cto.31/93239</font>
+<br>
+<hr noshade>
+<br>
+<br>
+<br><font size=3D3>Hola Diego Gracias:<br>
+Yo no habia visto este mail y solo corregi el + - tn<br>
+Como hacemos?</font>
+<br><font size=3D3><br>
+</font><img src=3Dcid:_2_0CE431CC0CE42F60006A92D403258067 width=3D228 heigh=
+t=3D102 style=3D"border:0px solid;">
+<br><font size=3D3>El 10/11/2016 a las 03:08 p.m., Diego Medori escribi=C3=
+=B3:</font>
+<br><font size=3D2 face=3D"sans-serif">Buenas tardes</font><font size=3D3> =
+<br>
+</font><font size=3D2 face=3D"sans-serif"><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp=
+;
+&nbsp; &nbsp;</font><font size=3D3> </font><font size=3D2 face=3D"sans-seri=
+f"><br>
+Faltar=C3=ADa el ajuste de cantidad de mercader=C3=ADa como detallamos y la=
+ aclaraci=C3=B3n
+del destino: Pto San Martin</font><font size=3D3> <br>
+</font><font size=3D2 face=3D"sans-serif"><br>
+Sldos</font><font size=3D3> <br>
+</font><font size=3D2 face=3D"sans-serif"><br>
+&nbsp; Diego Medori<br>
+&nbsp;Administracion Comercial<br>
+&nbsp;Bunge Argentina S.A.<br>
+&nbsp;(0341) 5123302<br>
+<br>
+&nbsp;</font><font size=3D3> <br>
+<br>
+<br>
+</font><font size=3D1 color=3D#5f5f5f face=3D"sans-serif"><br>
+From: &nbsp; &nbsp; &nbsp; &nbsp;</font><a href=3Dwww.confirma.com.ar><font=
+ size=3D1 color=3Dblue face=3D"sans-serif"><u>www.confirma.com.ar</u></font=
+></a><font size=3D1 face=3D"sans-serif">
+</font><a href=3Dmailto:firmadigital@confirma.com.ar><font size=3D1 color=
+=3Dblue face=3D"sans-serif"><u>&lt;firmadigital@confirma.com.ar&gt;</u></fo=
+nt></a><font size=3D3>
+</font><font size=3D1 color=3D#5f5f5f face=3D"sans-serif"><br>
+To: &nbsp; &nbsp; &nbsp; &nbsp;</font><a href=3Dmailto:diego.medori@bunge.c=
+om><font size=3D1 color=3Dblue face=3D"sans-serif"><u>&lt;diego.medori@bung=
+e.com&gt;</u></font></a><font size=3D1 face=3D"sans-serif">,
+</font><a href=3Dmailto:pablo.bardes@bunge.com><font size=3D1 color=3Dblue =
+face=3D"sans-serif"><u>&lt;pablo.bardes@bunge.com&gt;</u></font></a><font s=
+ize=3D1 face=3D"sans-serif">,
+</font><a href=3Dmailto:hernan.wust@bunge.com><font size=3D1 color=3Dblue f=
+ace=3D"sans-serif"><u>&lt;hernan.wust@bunge.com&gt;</u></font></a><font siz=
+e=3D1 face=3D"sans-serif">,
+</font><a href=3Dmailto:control@tacuaritas.com.ar><font size=3D1 color=3Dbl=
+ue face=3D"sans-serif"><u>&lt;control@tacuaritas.com.ar&gt;</u></font></a><=
+font size=3D1 face=3D"sans-serif">,
+</font><a href=3Dmailto:gsieber@fapersa.com><font size=3D1 color=3Dblue fac=
+e=3D"sans-serif"><u>&lt;gsieber@fapersa.com&gt;</u></font></a><font size=3D=
+1 face=3D"sans-serif">,
+</font><a href=3Dmailto:jpruata@fapersa.com><font size=3D1 color=3Dblue fac=
+e=3D"sans-serif"><u>&lt;jpruata@fapersa.com&gt;</u></font></a><font size=3D=
+3>
+</font><font size=3D1 color=3D#5f5f5f face=3D"sans-serif"><br>
+Date: &nbsp; &nbsp; &nbsp; &nbsp;</font><font size=3D1 face=3D"sans-serif">=
+10/11/2016
+15:05</font><font size=3D3> </font><font size=3D1 color=3D#5f5f5f face=3D"s=
+ans-serif"><br>
+Subject: &nbsp; &nbsp; &nbsp; &nbsp;</font><font size=3D1 face=3D"sans-seri=
+f">Anulaci=C3=B3n
+de documentoBCR</font><font size=3D3> <br>
+</font>
+<hr noshade><font size=3D3><br>
+</font>
+<table width=3D100% style=3D"border-collapse:collapse;">
+<tr height=3D8>
+<td width=3D50% bgcolor=3Dwhite style=3D"border-style:none none none none;b=
+order-color:#000000;border-width:0px 0px 0px 0px;padding:1px 1px;">
+<td width=3D50% bgcolor=3Dwhite style=3D"border-style:none none none none;b=
+order-color:#000000;border-width:0px 0px 0px 0px;padding:1px 1px;">
+<tr height=3D8>
+<td colspan=3D2 style=3D"border-style:none none none none;border-color:#000=
+000;border-width:0px 0px 0px 0px;padding:1px 1px;"></table>
+<br>
+<table width=3D100% style=3D"border-collapse:collapse;">
+<tr height=3D8>
+<td width=3D74% style=3D"border-style:none none none none;border-color:#000=
+000;border-width:0px 0px 0px 0px;padding:1px 1px;"><font size=3D1 face=3D"A=
+rial"><b>Jueves,
+10 de Noviembre de 2016 </b></font>
+<td width=3D22% style=3D"border-style:none none none none;border-color:#000=
+000;border-width:0px 0px 0px 0px;padding:1px 1px;">
+<td width=3D1% valign=3Dtop style=3D"border-style:none none none none;borde=
+r-color:#000000;border-width:0px 0px 0px 0px;padding:1px 1px;">
+<td width=3D1% valign=3Dtop style=3D"border-style:none none none none;borde=
+r-color:#000000;border-width:0px 0px 0px 0px;padding:1px 1px;">
+<td width=3D1% valign=3Dtop style=3D"border-style:none none none none;borde=
+r-color:#000000;border-width:0px 0px 0px 0px;padding:1px 1px;">
+<tr height=3D8>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;"><font size=3D1 face=3D"Arial"><b>Ser=
+vicio
+Confirma [Bolsa de Comercio de Rosario] </b></font>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td valign=3Dtop style=3D"border-style:none none none none;border-color:#00=
+0000;border-width:0px 0px 0px 0px;padding:1px 1px;">
+<td valign=3Dtop style=3D"border-style:none none none none;border-color:#00=
+0000;border-width:0px 0px 0px 0px;padding:1px 1px;">
+<td valign=3Dtop style=3D"border-style:none none none none;border-color:#00=
+0000;border-width:0px 0px 0px 0px;padding:1px 1px;">
+<tr height=3D8>
+<td colspan=3D4 style=3D"border-style:none none none none;border-color:#000=
+000;border-width:0px 0px 0px 0px;padding:1px 1px;"><font size=3D1 face=3D"A=
+rial">Por
+medio de la presente le comunicamos que el documento formado por las partes=
+:
+</font>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<tr height=3D8>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;"><font size=3D1 face=3D"Arial"><b>LA
+TURQUINA S A</b></font><font size=3D3> </font>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;"><font size=3D1 face=3D"Arial">N=C3=
+=BAmero
+interno: <b>44558</b></font><font size=3D3> </font>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<tr height=3D8>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;"><font size=3D1 face=3D"Arial"><b>LAS
+TACUARITAS MANDATARIA S.R.L. </b></font>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;"><font size=3D1 face=3D"Arial">N=C3=
+=BAmero
+interno: <b>44558</b></font><font size=3D3> </font>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<tr height=3D8>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;"><font size=3D1 face=3D"Arial"><b>BUN=
+GE
+ARGENTINA S A</b></font><font size=3D3> </font>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;"><font size=3D1 face=3D"Arial">N=C3=
+=BAmero
+interno: <b>31/93239</b></font><font size=3D3> </font>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<tr height=3D8>
+<td colspan=3D2 style=3D"border-style:none none none none;border-color:#000=
+000;border-width:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<tr height=3D8>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;"><font size=3D1 face=3D"Arial"><b>ha
+sido anulado por la empresa BUNGE ARGENTINA S A por el siguiente motivo:
+</b></font>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<tr height=3D8>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;"><font size=3D1 face=3D"Arial">falta
+ajuste de cantidad de mercader=C3=ADa: mas 2 tn / menos 3 tn</font><font si=
+ze=3D3>
+</font>
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;">
+<td style=3D"border-style:none none none none;border-color:#000000;border-w=
+idth:0px 0px 0px 0px;padding:1px 1px;"></table>
+<br><font size=3D3><br>
+</font>
+<hr><font size=3D3 color=3D#008000 face=3D"Webdings"><br>
+P </font><font size=3D3 color=3D#008000>Antes de imprimir este mensaje por
+favor piense en <b>su responsabilidad</b> con el medio ambiente.</font><fon=
+t size=3D3 color=3D#000080 face=3D"Arial"><br>
+-----------------------------------------</font><font size=3D3 color=3D#004=
+080 face=3D"Arial"><br>
+Este correo electr=C3=B3nico es confidencial. La informaci=C3=B3n contenida=
+ en el
+presente mensaje y sus adjuntos son de uso exclusivo del titular de la
+direcci=C3=B3n de correo electr=C3=B3nico a la que est=C3=A1 dirigido. Si U=
+sted no es
+el destinatario de este mensaje, tenga la amabilidad de informarlo al remit=
+ente
+y eliminarlo de su sistema.<br>
+El emisor no es responsable por eventuales errores, omisiones o contenido
+inexacto de este mensaje o sus adjuntos, ni garantiza su seguridad e integr=
+idad
+en raz=C3=B3n de que lo transmitido por este medio puede ser objeto de alte=
+raci=C3=B3n,
+obstrucci=C3=B3n y otras irregularidades por parte de terceros ajenos al re=
+mitente.
+Muchas gracias.</font><font size=3D3> <br>
+</font><font size=3D2 face=3D"sans-serif"><br>
+<br>
+<br>
+Este e-mail es confidencial y solamente para uso del destinatario. En caso
+de ser recibido indebidamente, por favor elim=C3=ADnelo inmediatamente y co=
+mun=C3=ADqueselo
+al remitente.<br>
+<br>
+This email is confidential and intended solely for the use of the addressee=
+.
+If you have received this email in error, please delete it immediately
+and notify the sender.</font><font size=3D3> <br>
+Este e-mail es confidencial y solamente para uso del destinatario. En caso
+de ser recibido indebidamente, por favor elim=EF=BF=BDnelo inmediatamente y=
+ comun=EF=BF=BDqueselo
+al remitente.<br>
+This email is confidential and intended solely for the use of the addressee=
+.
+If you have received this email in error, please delete it inmediately
+and notify to the sender.</font>
+<p><font size=3D3>Se certific=C3=B3 que el correo no contiene virus.<br>
+Comprobada por AVG - </font><a href=3Dhttp://www.avg.com/><font size=3D3 co=
+lor=3Dblue><u>www.avg.com</u></font></a><font size=3D3><br>
+Versi=C3=B3n: 2016.0.7859 / Base de datos de virus: 4664/13382 - Fecha de l=
+a
+versi=C3=B3n: 10/11/2016</font>
+<p>
+<p>
+<br><font size=3D2 face=3D"sans-serif"><br>
+<br>
+Este e-mail es confidencial y solamente para uso del destinatario. En caso
+de ser recibido indebidamente, por favor elim=C3=ADnelo inmediatamente y co=
+mun=C3=ADqueselo
+al remitente.<br>
+<br>
+This email is confidential and intended solely for the use of the addressee=
+.
+If you have received this email in error, please delete it immediately
+and notify the sender.</font>
+
+<br>
+Este e-mail es confidencial y solamente para uso del destinatario. En caso =
+de ser recibido indebidamente, por favor elim=EF=BF=BDnelo inmediatamente y=
+ comun=EF=BF=BDqueselo al remitente.<br/>This email is confidential and int=
+ended solely for the use of the addressee. If you have received this email =
+in error, please delete it inmediately and notify to the sender.<br/>
+--=_alternative 006A942003258067_=--
+--=_related 006A942003258067_=
+Content-Transfer-Encoding: base64
+Content-Type: image/jpeg
+Content-ID: <_2_0CE431CC0CE42F60006A92D403258067>
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/4QAWRXhpZgAASUkqAAgAAAAAAAAAAAD/2wBDAAgGBgcGBQgH
+BwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/
+2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy
+MjIyMjIyMjIyMjL/wAARCABmAOQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQF
+BgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS
+0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4
+eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi
+4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREA
+AgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl
+8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImK
+kpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP0
+9fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKQnA5pTTTQAdaQY9a8S8eLa/8LG1x7rQxqwTw
+0WWLZG5hPmY83DcjGeq5b2q/pniLVYLDSdE0/W4jb23hp9ROo+WJBcOhC7Bv/hXnPAbjnFJaq4db
+HqwvrV717NbmE3KIJHgEg3qp6MV6ge9WcivBE8TatNqmqeLIZYtPvR4Xtrx4zEGR23nC/MchW6jn
+PI59elg8YeLdb1DUhpVl5MmnfZSbWTyUQq6LJIZS7B1yC20qMcc55p2A9WyOlG4Y6ivIdX1vxPqu
+ieOJYtYjsrXSJriJFhtv3zoI8qBJuGzB5yASfUVLZeINeSDRdJj1hk3+HjqzX1xEjvKwRQI+RggZ
+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
+KAP/2Q==
+--=_related 006A942003258067_=--

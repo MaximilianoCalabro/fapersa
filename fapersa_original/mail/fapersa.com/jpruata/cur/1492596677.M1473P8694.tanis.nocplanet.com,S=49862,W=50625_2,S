@@ -1,0 +1,763 @@
+Return-Path: <aeropostale@e.aeropostale.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id wYNiO8Q391j2IQAATLP0zA
+	for <jpruata@fapersa.com>; Wed, 19 Apr 2017 07:11:17 -0300
+Return-path: <aeropostale@e.aeropostale.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Wed, 19 Apr 2017 07:11:17 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:35126 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.88)
+	(envelope-from <aeropostale@e.aeropostale.com>)
+	id 1d0mZw-0002ZV-39
+	for jpruata@fapersa.com; Wed, 19 Apr 2017 07:11:16 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id DF1BF7F220
+	for <jpruata@fapersa.com>; Wed, 19 Apr 2017 07:11:15 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id rlwJS2KjwejW for <jpruata@fapersa.com>;
+	Wed, 19 Apr 2017 07:11:15 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 315DE7F231; Wed, 19 Apr 2017 07:11:15 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 0B6847F220
+	for <jpruata@fapersa.com>; Wed, 19 Apr 2017 07:11:14 -0300 (ART)
+Received-SPF: pass (e.aeropostale.com: 8.7.43.21 is authorized to use 'aeropostale@e.aeropostale.com' in 'mfrom' identity (mechanism 'ip4:8.7.43.21' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="aeropostale@e.aeropostale.com"; helo=mta935.chtah.net; client-ip=8.7.43.21
+Received: from mta935.chtah.net (mta935.chtah.net [8.7.43.21])
+	by fw.fapersa.com (Postfix) with ESMTPS id D25AF5FF2E
+	for <jpruata@fapersa.com>; Wed, 19 Apr 2017 07:11:10 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=0; d=e.aeropostale.com;
+ h=Message-ID:List-Unsubscribe:MIME-Version:From:To:Date:Subject:Content-Type; i=aeropostale@e.aeropostale.com;
+ bh=D9N4B8ovh1L+AnVIs7MPwwB8vmg=;
+ b=APSfSpOhs6Sstd7D++N4zPLdXvbCV5FG8ZPwBABRuucNXh137/SqT6Q1GXIiyj73lYHEoZumCV65
+   MPXeZYlH8RsiFe27UHS3WY2wctohEuoFzJZ/JJYp1eFqzYvMxhtDDXZfWLX0dh41eAo8c3lnVmCH
+   4pc96aomwxKN13aXjp0=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=0; d=e.aeropostale.com;
+ b=8fyD0cqCCUYS6Bh0yGlYt/nToFkQkjbz/bpHQUIOkfdPkxVV9U+29d79ovFoBxfUzj+s1SHR0Pi2
+   8kebKjmwlhQBcj/7jnNJB+586P0Nq/2Hrc8OLDSsool4hXmBOQ1Nya3nu3ZvCdqtzDyXXEejR6XR
+   veJvAST2Jl1gYCU/T3Y=;
+Received: from lv3pmer06 (10.24.29.86) by mta935.chtah.net id husrs21p9ncs for <jpruata@fapersa.com>; Wed, 19 Apr 2017 06:11:07 -0400 (envelope-from <aeropostale@e.aeropostale.com>)
+Errors-to: aeropostale@e.aeropostale.com
+Message-ID: <702.4119748.201704191011038884063.0003783065@e.aeropostale.com>
+List-Unsubscribe: <mailto:unsubscribe-0b73643844d8527643c093dcf4e23bc8@e.aeropostale.com?subject=Unsubscribe>
+X-Mailer: XyzMailer
+X-Xyz-cr: 702
+X-Xyz-cn: 548
+X-Xyz-bcn: 529
+X-Xyz-md: 100
+X-Xyz-mg: 4119748
+X-Xyz-et: 112
+X-Xyz-pk: 41433996
+X-Xyz-ct: 2866
+X-Xyz-bct: 2704
+MIME-Version: 1.0
+From: =?utf-8?Q?A=C3=A9ropostale?= <aeropostale@e.aeropostale.com>
+To: "jpruata@fapersa.com" <jpruata@fapersa.com>
+Date: 19 Apr 2017 10:11:07 +0000
+Subject: Spring (Price) Break Sale With 60% Off Everything
+Content-Type: multipart/alternative;
+ boundary=--boundary_3782099_b6ab52f8-7ef7-445f-a85e-d4e7b79e444e
+
+
+----boundary_3782099_b6ab52f8-7ef7-445f-a85e-d4e7b79e444e
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Aeropostale=0A=0Abody {width:100% !important; -webkit-text-size-a=
+djust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;}=0A=0A=
+.ReadMsgBody {width: 100%;}=0A.ExternalClass p,=0A.ExternalClass =
+span,=0A.ExternalClass font,=0A.ExternalClass td=0A{line-height: =
+100%}=0A=0A.gmailfix {=0Adisplay:none;=0Adisplay:none!important;=0A=
+}=0Atable { border-collapse:collapse; mso-table-lspace:0pt; mso-t=
+able-rspace:0pt; padding:0;}=0Atable td {border-collapse: collaps=
+e;}=0Ap{margin:0 auto; text-align:center;}=0A*{-webkit-text-size-=
+adjust:none;-ms-text-size-adjust:none;max-height:1000000px;mso-li=
+ne-height-rule:exactly; line-height: 100%}=0A.appleLinks a {color=
+: #000000 !important; text-decoration: none !important;}=0A=0A@me=
+dia only screen and (max-width: 600px) {=0A*[class=3Dcontenttable=
+] { width:400px !important;}=0A*[class=3Dmobile] { width:380px !i=
+mportant;height: auto !important;}=0A*[class=3Dblock] {display: b=
+lock !important;}=0A*[class=3Dhide] {display: none !important;}=0A=
+*[class=3Dshowmobile]{display:block !important;  margin:auto !imp=
+ortant; width:400px !important; height:auto !important; max-heigh=
+t:inherit !important; overflow:visible !important;}=0A*[class=3Ds=
+howmobile2]{display:block !important;  margin:auto !important; wi=
+dth:400px !important; height:auto !important; max-height:inherit =
+!important; overflow:visible !important; border-bottom:1px solid =
+#000000;}=0A=0A*[class=3Dh20]{height:20px !important;}=0A*[class=3D=
+w54]{width:54px !important;}=0A=0A/*Hamburguer fix IOS9*/=0Abody =
+{=0A-webkit-animation: bugfix infinite 1s;=0A}=0A@-webkit-keyfram=
+es bugfix {=0Afrom {=0Apadding: 0;=0A}=0Ato {=0Apadding: 0;=0A}=0A=
+}=0A/*Hamburguer fix IOS9*/=0A=0A/*Hamburger_nav*/=0A=0A*[class].=
+show {=0Adisplay: block !important;=0Awidth: auto !important;=0Ao=
+verflow: visible !important;=0Afloat: none !important;=0Amax-heig=
+ht: inherit !important;=0Aline-height: inherit !important;=0Awidt=
+h: 278px;=0A}=0A*[class].navbar-checkbox {=0Adisplay: none;=0A}=0A=
+*[class].hamburger, *[class].hamburger > img {=0Adisplay: block;=0A=
+}=0A*[class].close, *[class].close > img {=0Adisplay: none;=0A}=0A=
+*[class].menu {=0Avisibility: hidden;=0Aopacity: 0;=0Aheight: aut=
+o !important;=0Aposition: absolute !important;=0Atop: 59px !impor=
+tant;=0Aleft: 0px !important;=0Atransition: opacity .25s ease-in-=
+out;=0A-moz-transition: opacity .25s ease-in-out;=0A-webkit-trans=
+ition: opacity .25s ease-in-out;=0Aborder-top: none;=0Abackground=
+-color: #ffffff;=0Adisplay: none;=0A}=0A*[class].navbar-checkbox:=
+checked ~ *[class].hamburger {=0Adisplay: none !important;=0A}=0A=
+*[class].navbar-checkbox:checked ~ *[class].close, *[class].navba=
+r-checkbox:checked ~ *[class].close > img {=0Adisplay: block !imp=
+ortant;=0Awidth: auto !important;=0Aoverflow: visible !important;=
+=0Afloat: none !important;=0Amax-height: inherit !important;=0Ali=
+ne-height: inherit !important;=0Aposition: relative !important;=0A=
+top: 0px !important;=0Az-index: 11 !important;/*left: 0px !import=
+ant;*/=0A=0A}=0A*[class].navbar-checkbox:checked ~ *[class].menu =
+{=0Avisibility: visible !important;=0Aopacity: 1;=0Az-index: 10 !=
+important;=0Atransition-delay: 0s;=0Adisplay: block;=0A}=0A*[clas=
+s].hamburger, *[class].close {=0Acursor: pointer !important;=0A}=0A=
+/*Hamburger_nav*/=0A}=0A=0AEnds today.   Don=E2=80=99t miss on $4=
+ tops and $10 bottoms *******************************************=
+*****************************************************************=
+*****************************************************************=
+*****************************************************************=
+**************=0AView this email in a browser.=0A=0A&nbsp; &nbsp;=
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=0A=
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &n=
+bsp; &nbsp;=0A&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &n=
+bsp;=0A=0AEnds today.   Don=E2=80=99t miss on $4 tops and $10 bot=
+toms=0AView this email in a browser. ( http://fm.e.aeropostale.co=
+m/ats/msg.aspx?sg1=3D0b73643844d8527643c093dcf4e23bc8 )=0A=0A( ht=
+tp://l.e.aeropostale.com/rts/go2.aspx?t=3D5406&tp=3Di-H43-BK-8q-H=
+HjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748 )=0A=0A( http://l.e.a=
+eropostale.com/rts/go2.aspx?t=3D5407&tp=3Di-H43-BK-8q-HHjY-1o-2nq=
+sG-1c-CIGZ-26HbXB&x=3D548|4119748 )=0A=0A( http://l.e.aeropostale=
+.com/rts/go2.aspx?t=3D5408&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ=
+-26HbXB&x=3D548|4119748 )=0A=0A( http://l.e.aeropostale.com/rts/g=
+o2.aspx?t=3D5409&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D=
+548|4119748 )=0A=0A( http://l.e.aeropostale.com/rts/go2.aspx?t=3D=
+5410&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|411974=
+8 )=0A=0A( http://l.e.aeropostale.com/rts/go2.aspx?t=3D5406&tp=3D=
+i-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748 )=0A=0A(=
+ http://l.e.aeropostale.com/rts/go2.aspx?t=3D5407&tp=3Di-H43-BK-8=
+q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748 )=0A=0A( http://l.=
+e.aeropostale.com/rts/go2.aspx?t=3D5408&tp=3Di-H43-BK-8q-HHjY-1o-=
+2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748 )=0A=0A( http://l.e.aeropost=
+ale.com/rts/go2.aspx?t=3D5409&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-C=
+IGZ-26HbXB&x=3D548|4119748 )=0A=0A( http://l.e.aeropostale.com/rt=
+s/go2.aspx?t=3D5410&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB=
+&x=3D548|4119748 )=0A=0A( http://l.e.aeropostale.com/rts/go2.aspx=
+?t=3D5406&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4=
+119748 )=0A=0A( http://l.e.aeropostale.com/rts/go2.aspx?t=3D5411&=
+tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748 )=0A=
+=0A( http://l.e.aeropostale.com/rts/go2.aspx?t=3D5411&tp=3Di-H43-=
+BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748 )=0A=0A( http:=
+//l.e.aeropostale.com/rts/go2.aspx?t=3D5412&tp=3Di-H43-BK-8q-HHjY=
+-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748 )=0A=0A( http://l.e.aero=
+postale.com/rts/go2.aspx?t=3D5413&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-=
+1c-CIGZ-26HbXB&x=3D548|4119748 )=0A=0A( http://l.e.aeropostale.co=
+m/rts/go2.aspx?t=3D5413&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26=
+HbXB&x=3D548|4119748 )=0A=0A( http://l.e.aeropostale.com/rts/go2.=
+aspx?t=3D5414&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D5=
+48|4119748 )=0A=0A( http://l.e.aeropostale.com/rts/go2.aspx?t=3D5=
+415&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748=
+ )=0A=0A( http://l.e.aeropostale.com/rts/go2.aspx?t=3D5415&tp=3Di=
+-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748 )=0A=0A( =
+http://l.e.aeropostale.com/rts/go2.aspx?t=3D5416&tp=3Di-H43-BK-8q=
+-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748 )=0A=0A( http://l.e=
+.aeropostale.com/rts/go2.aspx?t=3D5406&tp=3Di-H43-BK-8q-HHjY-1o-2=
+nqsG-1c-CIGZ-26HbXB&x=3D548|4119748 )=0A=0A( http://l.e.aeroposta=
+le.com/rts/go2.aspx?t=3D5411&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CI=
+GZ-26HbXB&x=3D548|4119748 )=0A=0A( http://l.e.aeropostale.com/rts=
+/go2.aspx?t=3D5411&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&=
+x=3D548|4119748 )=0A=0A( http://l.e.aeropostale.com/rts/go2.aspx?=
+t=3D5412&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|41=
+19748 )=0A=0A( http://l.e.aeropostale.com/rts/go2.aspx?t=3D5413&t=
+p=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748 )=0A=
+=0A( http://l.e.aeropostale.com/rts/go2.aspx?t=3D5413&tp=3Di-H43-=
+BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748 )=0A=0A( http:=
+//l.e.aeropostale.com/rts/go2.aspx?t=3D5414&tp=3Di-H43-BK-8q-HHjY=
+-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748 )=0A=0A( http://l.e.aero=
+postale.com/rts/go2.aspx?t=3D5415&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-=
+1c-CIGZ-26HbXB&x=3D548|4119748 )=0A=0A( http://l.e.aeropostale.co=
+m/rts/go2.aspx?t=3D5415&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26=
+HbXB&x=3D548|4119748 )=0A=0A( http://l.e.aeropostale.com/rts/go2.=
+aspx?t=3D5416&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D5=
+48|4119748 )=0A=0A( http://l.e.aeropostale.com/rts/go2.aspx?t=3D5=
+417&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748=
+ )=0A( http://l.e.aeropostale.com/rts/go2.aspx?t=3D5418&tp=3Di-H4=
+3-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748 )=0A( http:/=
+/l.e.aeropostale.com/rts/go2.aspx?t=3D5419&tp=3Di-H43-BK-8q-HHjY-=
+1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748 )=0A=0A( http://l.e.aerop=
+ostale.com/rts/go2.aspx?t=3D5417&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1=
+c-CIGZ-26HbXB&x=3D548|4119748 )=0A=0A( http://l.e.aeropostale.com=
+/rts/go2.aspx?t=3D5418&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26H=
+bXB&x=3D548|4119748 )=0A=0A( http://l.e.aeropostale.com/rts/go2.a=
+spx?t=3D5419&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D54=
+8|4119748 )=0A=0A( http://l.e.aeropostale.com/rts/go2.aspx?t=3D54=
+06&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748 =
+)=0A( http://l.e.aeropostale.com/rts/go2.aspx?t=3D5420&tp=3Di-H43=
+-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748 )=0A( http://=
+l.e.aeropostale.com/rts/go2.aspx?t=3D5421&tp=3Di-H43-BK-8q-HHjY-1=
+o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748 )=0A( http://l.e.aeroposta=
+le.com/rts/go2.aspx?t=3D5422&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CI=
+GZ-26HbXB&x=3D548|4119748 )=0A( http://l.e.aeropostale.com/rts/go=
+2.aspx?t=3D5423&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D=
+548|4119748 )=0A( http://l.e.aeropostale.com/rts/go2.aspx?t=3D542=
+4&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748 )=
+=0A=0A'&#42;Free Shipping on $75 or $5 Flat Rate Standard Shippin=
+g. No minimum purchase required. Discount will be automatically a=
+pplied in checkout. Offer valid through 4/19/2017 at 11:59 PM EST=
+. Not valid on bulk purchases (Purchases of more than 50 items in=
+ a single day) or previous purchases. Shipping offers are not val=
+id outside the U.S. All promotions quoted in U.S. dollars. Valid =
+on Standard Shipping Only.=0AMy Account ( http://l.e.aeropostale.=
+com/rts/go2.aspx?t=3D5417&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-=
+26HbXB&x=3D548|4119748 ) to change your email preferences.=0A=0AT=
+o find answers to your questions or contact us:=0AAttn: A=C3=A9ro=
+postale Customer Service=0A915 S. Babcock St. Melbourne, FL 32901=
+=0A877.289.2376=0A=0AVisit aeropostale.com ( http://l.e.aeroposta=
+le.com/rts/go2.aspx?t=3D5406&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CI=
+GZ-26HbXB&x=3D548|4119748 ) for details regarding promotional off=
+ers.=0A=0A&copy; A=C3=A9ropostale 2003 - 2017. All Rights Reserve=
+d.=0A=0A- - - - - - - - - - - - - - - - - - - - - - - - - - - - -=
+ - - - -=0A=0A
+----boundary_3782099_b6ab52f8-7ef7-445f-a85e-d4e7b79e444e
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "h=
+ttp://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">=0A<html =
+xmlns=3D"http://www.w3.org/1999/xhtml">=0A<head>=0A<meta http-equ=
+iv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8" />=0A<=
+meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-s=
+cale=3D1, maximum-scale=3D1" />=0A<meta name=3D"x-apple-disable-m=
+essage-reformatting">=0A=0A  <title>Aeropostale</title>=0A  <styl=
+e>=0A=0Abody {width:100% !important; -webkit-text-size-adjust:100=
+%; -ms-text-size-adjust:100%; margin:0; padding:0;}=0A=0A.ReadMsg=
+Body {width: 100%;}=0A.ExternalClass p,=0A.ExternalClass span,=0A=
+.ExternalClass font,=0A.ExternalClass td=0A{line-height: 100%}=0A=
+=0A.gmailfix {=0A display:none;=0A display:none!important;=0A}=0A=
+table { border-collapse:collapse; mso-table-lspace:0pt; mso-table=
+-rspace:0pt; padding:0;}=0Atable td {border-collapse: collapse;}=0A=
+p{margin:0 auto; text-align:center;}=0A*{-webkit-text-size-adjust=
+:none;-ms-text-size-adjust:none;max-height:1000000px;mso-line-hei=
+ght-rule:exactly; line-height: 100%}=0A.appleLinks a {color: #000=
+000 !important; text-decoration: none !important;}=0A=0A@media on=
+ly screen and (max-width: 600px) {=0A	*[class=3Dcontenttable] { w=
+idth:400px !important;}=0A	*[class=3Dmobile] { width:380px !impor=
+tant;height: auto !important;}=0A	*[class=3Dblock] {display: bloc=
+k !important;}=0A	*[class=3Dhide] {display: none !important;}=0A*=
+[class=3Dshowmobile]{display:block !important;  margin:auto !impo=
+rtant; width:400px !important; height:auto !important; max-height=
+:inherit !important; overflow:visible !important;}=0A*[class=3Dsh=
+owmobile2]{display:block !important;  margin:auto !important; wid=
+th:400px !important; height:auto !important; max-height:inherit !=
+important; overflow:visible !important; border-bottom:1px solid #=
+000000;}=0A=0A*[class=3Dh20]{height:20px !important;}=0A*[class=3D=
+w54]{width:54px !important;}=0A=0A=0A/*Hamburguer fix IOS9*/=0Abo=
+dy {=0A	-webkit-animation: bugfix infinite 1s;=0A}=0A@-webkit-key=
+frames bugfix {=0Afrom {=0Apadding: 0;=0A}=0Ato {=0Apadding: 0;=0A=
+}=0A}=0A/*Hamburguer fix IOS9*/=0A=0A=0A/*Hamburger_nav*/=0A=0A*[=
+class].show {=0A	display: block !important;=0A	width: auto !impor=
+tant;=0A	overflow: visible !important;=0A	float: none !important;=
+=0A	max-height: inherit !important;=0A	line-height: inherit !impo=
+rtant;=0A	width: 278px;=0A}=0A*[class].navbar-checkbox {=0A	displ=
+ay: none;=0A}=0A*[class].hamburger, *[class].hamburger > img {=0A=
+	display: block;=0A}=0A*[class].close, *[class].close > img {=0A	=
+display: none;=0A}=0A*[class].menu {=0A	visibility: hidden;=0A	op=
+acity: 0;=0A	height: auto !important;=0A	position: absolute !impo=
+rtant;=0A	top: 59px !important;=0A	left: 0px !important;=0A	trans=
+ition: opacity .25s ease-in-out;=0A	-moz-transition: opacity .25s=
+ ease-in-out;=0A	-webkit-transition: opacity .25s ease-in-out;=0A=
+	border-top: none;=0A	background-color: #ffffff;=0A	display: none=
+;=0A}=0A*[class].navbar-checkbox:checked ~ *[class].hamburger {=0A=
+	display: none !important;=0A}=0A*[class].navbar-checkbox:checked=
+ ~ *[class].close, *[class].navbar-checkbox:checked ~ *[class].cl=
+ose > img {=0A	display: block !important;=0A	width: auto !importa=
+nt;=0A	overflow: visible !important;=0A	float: none !important;=0A=
+	max-height: inherit !important;=0A	line-height: inherit !importa=
+nt;=0A	position: relative !important;=0A	top: 0px !important;=0A	=
+z-index: 11 !important;/*left: 0px !important;*/=0A				=0A}=0A*[c=
+lass].navbar-checkbox:checked ~ *[class].menu {=0A	visibility: vi=
+sible !important;=0A	opacity: 1;=0A	z-index: 10 !important;=0A	tr=
+ansition-delay: 0s;=0A	display: block;=0A}=0A*[class].hamburger, =
+*[class].close {=0A	cursor: pointer !important;=0A}=0A/*Hamburger=
+_nav*/=0A}=0A</style>=0A=0A=0A</head>=0A=0A<body style=3D"padding=
+:0 !important;"><img src=3D"http://l.e.aeropostale.com/rts/open.a=
+spx?tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB" height=3D"1" w=
+idth=3D"1" style=3D"display:none">=0A<div style=3D"display: none =
+!important; mso-hide:all; font-size: 0px; line-height: 0px; max-h=
+eight: 0px; max-width: 0px; width: 0px; opacity: 0; overflow: hid=
+den;">=0A    Ends today.   Don=E2=80=99t miss on $4 tops and $10 =
+bottoms *********************************************************=
+*****************************************************************=
+*****************************************************************=
+*****************************************************************=
+=0A<br><br>View this email in a browser.=0A  </div>=0A=0A<!--Star=
+ts NEW Gmail App fix -->=0A<div class=3D"gmailfix" style=3D"white=
+-space:nowrap; font:15px courier; line-height:0;">=0A&nbsp; &nbsp=
+; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; =
+=0A&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=
+ &nbsp; &nbsp; =0A&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp=
+; &nbsp;=0A</div>=0A<!--Ends NEW Gmail App fix -->=0A=0A<table wi=
+dth=3D"640" border=3D"0" align=3D"center"  cellpadding=3D"0" cell=
+spacing=3D"0" class=3D"contenttable">=0A    <tr>=0A      <td alig=
+n=3D"center" valign=3D"top">=0A      =0A      <!--CONTENT-->=0A  =
+     <table width=3D"640" border=3D"0" align=3D"center" cellpaddi=
+ng=3D"0" cellspacing=3D"0" class=3D"contenttable" bgcolor=3D"#e9e=
+9e9">=0A           <tr>=0A             <td width=3D"20" bgcolor=3D=
+"#e9e9e9"><img src=3D"http://i.e.aeropostale.com/wpm/702/ContentU=
+ploads/Template/spacer.gif" alt=3D"" style=3D"display:block;" bor=
+der=3D"0" height=3D"15" width=3D"20"/>=0A               </td>=0A =
+            <td width=3D"600" class=3D"contenttable">=0A 					<!-=
+- PROMOTOP-->  =0A       <table width=3D"600" border=3D"0" align=3D=
+"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"contenttabl=
+e" bgcolor=3D"#e9e9e9">=0A           <tr>=0A                <td c=
+lass=3D"h20"><img src=3D"http://i.e.aeropostale.com/wpm/702/Conte=
+ntUploads/Template/spacer.gif" alt=3D"" style=3D"display:block;" =
+border=3D"0" height=3D"66" width=3D"86" class=3D"h20"/>=0A       =
+        </td>=0A               <td width=3D"428" align=3D"center"=
+ valign=3D"middle" class=3D"hide"><font style=3D"font-family:  Ar=
+ial, 'Helvetica Neue', Helvetica, sans-serif; font-size:12px; col=
+or:#333333;">Ends today.   Don=E2=80=99t miss on $4 tops and $10 =
+bottoms<br>=0A               <a href=3D"http://fm.e.aeropostale.c=
+om/ats/msg.aspx?sg1=3D0b73643844d8527643c093dcf4e23bc8" style=3D"=
+color:#10205f; text-decoration:none; font-weight:bold;">View this=
+ email in a browser.</a> </font>=0A               </td>=0A       =
+       <td class=3D"hide"><img src=3D"http://i.e.aeropostale.com/=
+wpm/702/ContentUploads/Template/spacer.gif" alt=3D"" style=3D"dis=
+play:block;" border=3D"0" height=3D"66" width=3D"86" class=3D"hid=
+e"/>=0A               </td>     =0A           </tr>=0A       </ta=
+ble>=0A       				<!-- PROMOTOP--> =0A					<!-- TOP NAV--> =0A<ta=
+ble width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" class=3D"hide">=0A  <tbody>=0A    <tr>=0A      <td><a href=3D"h=
+ttp://l.e.aeropostale.com/rts/go2.aspx?h=3D5406&tp=3Di-H43-BK-8q-=
+HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748"><img src=3D"http://=
+i.e.aeropostale.com/wpm/702/ContentUploads/Template/20170321_Aero=
+postale_Temp_tn_01.jpg" alt=3D"Aeropostale" style=3D"display:bloc=
+k;" border=3D"0" height=3D"57" width=3D"180"/></a>=0A            =
+   </td>=0A      <td><a href=3D"http://l.e.aeropostale.com/rts/go=
+2.aspx?h=3D5407&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D=
+548|4119748"><img src=3D"http://i.e.aeropostale.com/wpm/702/Conte=
+ntUploads/Template/20170321_Aeropostale_Temp_tn_02.jpg" alt=3D"Gi=
+rls" style=3D"display:block;" border=3D"0" height=3D"57" width=3D=
+"94"/></a>=0A               </td>=0A      <td><a href=3D"http://l=
+.e.aeropostale.com/rts/go2.aspx?h=3D5408&tp=3Di-H43-BK-8q-HHjY-1o=
+-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748"><img src=3D"http://i.e.aer=
+opostale.com/wpm/702/ContentUploads/Template/20170321_Aeropostale=
+_Temp_tn_03.jpg" alt=3D"Guys" style=3D"display:block;" border=3D"=
+0" height=3D"57" width=3D"77"/></a>=0A               </td>=0A    =
+  <td><a href=3D"http://l.e.aeropostale.com/rts/go2.aspx?h=3D5409=
+&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748"><=
+img src=3D"http://i.e.aeropostale.com/wpm/702/ContentUploads/Temp=
+late/20170321_Aeropostale_Temp_tn_04.jpg" alt=3D"Active" style=3D=
+"display:block;" border=3D"0" height=3D"57" width=3D"99" /></a>=0A=
+               </td>=0A      <td><a href=3D"http://l.e.aeropostal=
+e.com/rts/go2.aspx?h=3D5410&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIG=
+Z-26HbXB&x=3D548|4119748"><img src=3D"http://i.e.aeropostale.com/=
+wpm/702/ContentUploads/Template/20170321_Aeropostale_Temp_tn_05.j=
+pg" alt=3D"Clearance" style=3D"display:block;" border=3D"0" heigh=
+t=3D"57" width=3D"150"/></a>=0A               </td>=0A    </tr>=0A=
+  </tbody>=0A</table>=0A<table width=3D"600" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" class=3D"hide">=0A  <tbody>=0A    <t=
+r>=0A        <td height=3D"1" style=3D"font-size:1px; line-height=
+:1px;" bgcolor=3D"#000000"><img src=3D"http://i.e.aeropostale.com=
+/wpm/702/ContentUploads/Template/spacer.gif" alt=3D"" style=3D"di=
+splay:block;" border=3D"0" height=3D"1" width=3D"103"/>=0A       =
+ </td>=0A    </tr>=0A  </tbody>=0A</table>=0A=0A   <!-- hamburgue=
+r menu --> =0A    <!--[if !mso]><!-->=0A    =0A     <div style=3D=
+"display:none; width:0px; max-height:0px; overflow:hidden;" class=
+=3D"showmobile">=0A        <table width=3D"320" border=3D"0" alig=
+n=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"showmob=
+ile2" style=3D"margin: 0 auto; display: none;max-height:0px; over=
+flow:hidden; position:relative;">=0A          <tr>=0A            =
+<td><a href=3D"http://l.e.aeropostale.com/rts/go2.aspx?h=3D5406&t=
+p=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748"><im=
+g src=3D"http://i.e.aeropostale.com/wpm/702/ContentUploads/Templa=
+te/20170321_Aeropostale_Temp_lmob_01.jpg" alt=3D"" style=3D"displ=
+ay:block;" border=3D"0" height=3D"57" width=3D"350"></a></td>=0A =
+           <td align=3D"right" valign=3D"top" bgcolor=3D"#ffffff"=
+>=0A            <form style=3D"border:0 !important;" >=0A        =
+        <input type=3D"checkbox" id=3D"navbar-checkbox" class=3D"=
+navbar-checkbox">=0A                <label for=3D"navbar-checkbox=
+" class=3D"hamburger"> <img alt=3D"" src=3D"http://i.e.aeropostal=
+e.com/wpm/702/ContentUploads/Template/20170321_Aeropostale_Temp_h=
+icon_01.jpg" height=3D"57" width=3D"50" border=3D"0" /></label>=0A=
+                <label for=3D"navbar-checkbox" class=3D"close"> <=
+img alt=3D"" style=3D"display:block !important;" src=3D"http://i.=
+e.aeropostale.com/wpm/702/ContentUploads/Template/20170321_Aeropo=
+stale_Temp_hclose_01.jpg" height=3D"57" width=3D"50" border=3D"0"=
+ /></label>=0A                <div class=3D"menu">=0A            =
+      <table  cellpadding=3D"0" cellspacing=3D"0" border=3D"0" cl=
+ass=3D"show" style=3D"display: none; width: 0px; max-height: 0px;=
+ overflow: hidden;">=0A                    <tr>=0A               =
+       <td bgcolor=3D"#ffffff"><a href=3D"http://l.e.aeropostale.=
+com/rts/go2.aspx?h=3D5407&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-=
+26HbXB&x=3D548|4119748"> <img style=3D"display:block" src=3D"http=
+://i.e.aeropostale.com/wpm/702/ContentUploads/Template/20170321_A=
+eropostale_Temp_hnav_01.jpg" border=3D"0" alt=3D"" width=3D"400" =
+height=3D"56" /></a></td>=0A                    </tr>=0A         =
+         </table>=0A                  <table  cellpadding=3D"0" c=
+ellspacing=3D"0" border=3D"0" class=3D"show" style=3D"display: no=
+ne; width: 0px; max-height: 0px; overflow: hidden;">=0A          =
+          <tr>=0A                      <td bgcolor=3D"#ffffff"><a=
+ href=3D"http://l.e.aeropostale.com/rts/go2.aspx?h=3D5408&tp=3Di-=
+H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748"> <img sty=
+le=3D"display:block" src=3D"http://i.e.aeropostale.com/wpm/702/Co=
+ntentUploads/Template/20170321_Aeropostale_Temp_hnav_02.jpg" bord=
+er=3D"0" alt=3D"" width=3D"400" height=3D"57" /></a></td>=0A     =
+               </tr>=0A                  </table>=0A             =
+      <table  cellpadding=3D"0" cellspacing=3D"0" border=3D"0" cl=
+ass=3D"show" style=3D"display: none; width: 0px; max-height: 0px;=
+ overflow: hidden;">=0A                    <tr>=0A               =
+       <td bgcolor=3D"#ffffff"><a href=3D"http://l.e.aeropostale.=
+com/rts/go2.aspx?h=3D5409&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-=
+26HbXB&x=3D548|4119748"> <img style=3D"display:block" src=3D"http=
+://i.e.aeropostale.com/wpm/702/ContentUploads/Template/20170321_A=
+eropostale_Temp_hnav_03.jpg" border=3D"0" alt=3D"" width=3D"400" =
+height=3D"57" /></a></td>=0A                    </tr>=0A         =
+         </table>=0A                   <table  cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0" class=3D"show" style=3D"display: n=
+one; width: 0px; max-height: 0px; overflow: hidden;">=0A         =
+           <tr>=0A                      <td bgcolor=3D"#ffffff"><=
+a href=3D"http://l.e.aeropostale.com/rts/go2.aspx?h=3D5410&tp=3Di=
+-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748"> <img st=
+yle=3D"display:block" src=3D"http://i.e.aeropostale.com/wpm/702/C=
+ontentUploads/Template/20170321_Aeropostale_Temp_hnav_04.jpg" bor=
+der=3D"0" alt=3D"" width=3D"400" height=3D"62" /></a></td>=0A    =
+                </tr>=0A                  </table>=0A            =
+     =0A                </div>=0A                <input type=3D"h=
+idden" name=3D"__HIDDEN_FIELD_NAMES__" value=3D"__HIDDEN_FIELD_NA=
+MES__">=0A                <input type=3D"hidden" name=3D"charset_=
+" value=3D"UTF-8">=0A              </form>=0A              </td>=0A=
+          </tr>=0A        </table>=0A      </div>=0A      =0A    =
+   <!--<![endif]--> =0A   <!-- hamburguer menu -->    =0A        =
+		<!-- TOP NAV--> =0A        =0A				<!--HERO IMAGE-->=0A        <=
+table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"6=
+00" class=3D"hide">=0A        =0A        <!--hero head-->=0A     =
+   <tr>=0A          <td width=3D"600" class=3D"contenttable" alig=
+n=3D"center"><a href=3D"http://l.e.aeropostale.com/rts/go2.aspx?h=
+=3D5406&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|411=
+9748"> <img src=3D"http://i.e.aeropostale.com/wpm/702/ContentUplo=
+ads/0419_AM/5-FLAT-AND-FS75.jpg" alt=3D"$5 Flat Rate Shipping Or =
+Free Shipping Over $75" style=3D"display:block;" border=3D"0" hei=
+ght=3D"52" width=3D"600" class=3D"mobile"></a></td>=0A        </t=
+r>=0A        =0A        <!--hero head-->=0A        <!--hero image=
+ 1-->        =0A        <tr>=0A          <td width=3D"600" class=3D=
+"contenttable" align=3D"center" style=3D"padding:0px 20px 0px 20p=
+x;; background-color:white"><a href=3D"http://l.e.aeropostale.com=
+/rts/go2.aspx?h=3D5411&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26H=
+bXB&x=3D548|4119748"> <img src=3D"http://i.e.aeropostale.com/wpm/=
+702/ContentUploads/0419_AM/041917-60OFF_TOPS_C4_EX_03_ASPOT.jpg" =
+alt=3D"60% Off Everything Shop Now" style=3D"display:block;" bord=
+er=3D"0" height=3D"469" width=3D"560" class=3D"mobile"></a></td>=0A=
+        </tr>=0A        <!--hero image 1-->=0A        <!--CTA sec=
+tion-->=0A        <tr>=0A          <td width=3D"600" class=3D"con=
+tenttable" align=3D"center" style=3D"padding:16px 20px 5px 20px; =
+background-color:white"><a href=3D"http://l.e.aeropostale.com/rts=
+/go2.aspx?h=3D5411&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&=
+x=3D548|4119748"> <img src=3D"http://i.e.aeropostale.com/wpm/702/=
+ContentUploads/0419_AM/CTA-GIRLS.jpg" alt=3D"60% Off Everything S=
+hop Girls" style=3D"display:block;" border=3D"0" height=3D"55" wi=
+dth=3D"560" class=3D"mobile"></a></td>=0A        </tr>=0A        =
+<tr>=0A          <td width=3D"600" class=3D"contenttable" align=3D=
+"center" style=3D"padding:5px 20px 10px 20px; background-color:wh=
+ite"><a href=3D"http://l.e.aeropostale.com/rts/go2.aspx?h=3D5412&=
+tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748"> <=
+img src=3D"http://i.e.aeropostale.com/wpm/702/ContentUploads/0419=
+_AM/CTA-GUYS.jpg" alt=3D"60% Off Everything Shop Guys" style=3D"d=
+isplay:block;" border=3D"0" height=3D"55" width=3D"560" class=3D"=
+mobile"></a></td>=0A        </tr>=0A        <!--CTA section-->=0A=
+        <!--hero image 2-->=0A        <tr>=0A          <td width=3D=
+"600" class=3D"contenttable" align=3D"center" style=3D"padding:25=
+px 20px 0px 20px; background-color:white"><a href=3D"http://l.e.a=
+eropostale.com/rts/go2.aspx?h=3D5413&tp=3Di-H43-BK-8q-HHjY-1o-2nq=
+sG-1c-CIGZ-26HbXB&x=3D548|4119748"> <img src=3D"http://i.e.aeropo=
+stale.com/wpm/702/ContentUploads/0419_AM/041917-60OFF_TOPS_C4_EX_=
+06_BSPOT.jpg" alt=3D"Tops Starting At $4 Shop Now" style=3D"displ=
+ay:block;" border=3D"0" height=3D"700" width=3D"560" class=3D"mob=
+ile"></a></td>=0A        </tr>=0A        <!--hero image 2-->=0A  =
+      <!--CTA section-->=0A        <tr>=0A          <td width=3D"=
+600" class=3D"contenttable" align=3D"center" style=3D"padding:16p=
+x 20px 5px 20px; background-color:white"><a href=3D"http://l.e.ae=
+ropostale.com/rts/go2.aspx?h=3D5413&tp=3Di-H43-BK-8q-HHjY-1o-2nqs=
+G-1c-CIGZ-26HbXB&x=3D548|4119748"> <img src=3D"http://i.e.aeropos=
+tale.com/wpm/702/ContentUploads/0419_AM/CTA-TOPS-GIRLS.jpg" alt=3D=
+"Tops Starting At $4 Shop Girls" style=3D"display:block;" border=3D=
+"0" height=3D"55" width=3D"560" class=3D"mobile"></a></td>=0A    =
+    </tr>=0A        <tr>=0A          <td width=3D"600" class=3D"c=
+ontenttable" align=3D"center" style=3D"padding:5px 20px 10px 20px=
+; background-color:white"><a href=3D"http://l.e.aeropostale.com/r=
+ts/go2.aspx?h=3D5414&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbX=
+B&x=3D548|4119748"> <img src=3D"http://i.e.aeropostale.com/wpm/70=
+2/ContentUploads/0419_AM/CTA-TOPS-GUYS.jpg" alt=3D"Tops Starting =
+At $4 Shop Guys" style=3D"display:block;" border=3D"0" height=3D"=
+55" width=3D"560" class=3D"mobile"></a></td>=0A        </tr>=0A  =
+      <!--CTA section-->=0A        <!--hero image 3-->=0A        =
+<tr>=0A          <td width=3D"600" class=3D"contenttable" align=3D=
+"center" style=3D"padding:25px 20px 0px 20px; background-color:wh=
+ite"><a href=3D"http://l.e.aeropostale.com/rts/go2.aspx?h=3D5415&=
+tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748"> <=
+img src=3D"http://i.e.aeropostale.com/wpm/702/ContentUploads/0419=
+_AM/041917-60OFF_TOPS_C4_EX_06_CSPOT.jpg" alt=3D"Bottoms Starting=
+ At $10 Shop Now" style=3D"display:block;" border=3D"0" height=3D=
+"700" width=3D"560" class=3D"mobile"></a></td>=0A        </tr>=0A=
+        <!--hero image 3-->=0A        <!--CTA section-->=0A      =
+  <tr>=0A          <td width=3D"600" class=3D"contenttable" align=
+=3D"center" style=3D"padding:16px 20px 5px 20px; background-color=
+:white"><a href=3D"http://l.e.aeropostale.com/rts/go2.aspx?h=3D54=
+15&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748"=
+> <img src=3D"http://i.e.aeropostale.com/wpm/702/ContentUploads/0=
+419_AM/CTA-BOTTOMS-GIRLS.jpg" alt=3D"Bottoms Starting At $10 Shop=
+ Girls" style=3D"display:block;" border=3D"0" height=3D"55" width=
+=3D"560" class=3D"mobile"></a></td>=0A        </tr>=0A        <tr=
+>=0A          <td width=3D"600" class=3D"contenttable" align=3D"c=
+enter" style=3D"padding:5px 20px 25px 20px; background-color:whit=
+e"><a href=3D"http://l.e.aeropostale.com/rts/go2.aspx?h=3D5416&tp=
+=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748"> <im=
+g src=3D"http://i.e.aeropostale.com/wpm/702/ContentUploads/0419_A=
+M/CTA-BOTTOMS-GUYS.jpg" alt=3D"Bottoms Starting At $10 Shop Guys"=
+ style=3D"display:block;" border=3D"0" height=3D"55" width=3D"560=
+" class=3D"mobile"></a></td>=0A        </tr>=0A        <!--CTA se=
+ction-->=0A              =0A      </table>=0A      =0A      <!--[=
+if !mso]><!-->=0A    =0A     <div style=3D"display:none; width:0p=
+x; max-height:0px; overflow:hidden;" class=3D"showmobile">=0A  <t=
+able width=3D"320" border=3D"0" align=3D"center" cellpadding=3D"0=
+" cellspacing=3D"0" class=3D"showmobile" style=3D"margin: 0 auto;=
+ display: none; border: 0; max-height:0px; overflow:hidden;">=0A =
+ <!--hero head mob-->=0A  <tr>=0A    <td width=3D"600" align=3D"c=
+enter"><a href=3D"http://l.e.aeropostale.com/rts/go2.aspx?h=3D540=
+6&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748">=
+ <img src=3D"http://i.e.aeropostale.com/wpm/702/ContentUploads/04=
+19_AM/5-FLAT-AND-FS75_MOBILE.jpg" alt=3D"$5 Flat Rate Shipping Or=
+ Free Shipping Over $75" style=3D"display:block;" border=3D"0" he=
+ight=3D"52" width=3D"400"></a></td>=0A  </tr>=0A  <!--hero head m=
+ob-->=0A  <!--hero image 1 mob-->=0A  <tr>=0A          <td width=3D=
+"600" class=3D"contenttable" align=3D"center" style=3D"padding:0p=
+x 10px 0px 10px; background-color:white"><a href=3D"http://l.e.ae=
+ropostale.com/rts/go2.aspx?h=3D5411&tp=3Di-H43-BK-8q-HHjY-1o-2nqs=
+G-1c-CIGZ-26HbXB&x=3D548|4119748"> <img src=3D"http://i.e.aeropos=
+tale.com/wpm/702/ContentUploads/0419_AM/041917-60OFF_TOPS_C4_EX_0=
+3_ASPOT.jpg" alt=3D"60% Off Everything Shop Now" style=3D"display=
+:block;" border=3D"0" height=3D"469" width=3D"380" class=3D"mobil=
+e"></a></td>=0A        </tr>=0A	<!--hero image 1 mob-->=0A	<!--CT=
+A section mob-->=0A        <tr>=0A          <td width=3D"600" cla=
+ss=3D"contenttable" align=3D"center" style=3D"padding:10px 10px 5=
+px 10px; background-color:white"><a href=3D"http://l.e.aeropostal=
+e.com/rts/go2.aspx?h=3D5411&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIG=
+Z-26HbXB&x=3D548|4119748"> <img src=3D"http://i.e.aeropostale.com=
+/wpm/702/ContentUploads/0419_AM/CTA-GIRLS.jpg" alt=3D"60% Off Eve=
+rything Shop Girls" style=3D"display:block;" border=3D"0" height=3D=
+"55" width=3D"380" class=3D"mobile"></a></td>=0A        </tr>=0A =
+       <tr>=0A          <td width=3D"600" class=3D"contenttable" =
+align=3D"center" style=3D"padding:0px 10px 20px 10px; background-=
+color:white"><a href=3D"http://l.e.aeropostale.com/rts/go2.aspx?h=
+=3D5412&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|411=
+9748"> <img src=3D"http://i.e.aeropostale.com/wpm/702/ContentUplo=
+ads/0419_AM/CTA-GUYS.jpg" alt=3D"60% Off Everything Shop Guys" st=
+yle=3D"display:block;" border=3D"0" height=3D"55" width=3D"380" c=
+lass=3D"mobile"></a></td>=0A        </tr>=0A     <!--CTA section =
+mob-->=0A     <!--hero image 2 mob-->=0A        <tr>=0A          =
+<td width=3D"600" class=3D"contenttable" align=3D"center" style=3D=
+"padding:0px 10px 0px 10px; background-color:white"><a href=3D"ht=
+tp://l.e.aeropostale.com/rts/go2.aspx?h=3D5413&tp=3Di-H43-BK-8q-H=
+HjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748"> <img src=3D"http://=
+i.e.aeropostale.com/wpm/702/ContentUploads/0419_AM/041917-60OFF_T=
+OPS_C4_EX_06_BSPOT.jpg" alt=3D"Tops Starting At $4 Shop Now" styl=
+e=3D"display:block;" border=3D"0" height=3D"700" width=3D"380" cl=
+ass=3D"mobile"></a></td>=0A        </tr>=0A      <!--hero image 2=
+ mob-->=0A      <!--CTA section mob-->=0A        <tr>=0A         =
+ <td width=3D"600" class=3D"contenttable" align=3D"center" style=3D=
+"padding:10px 10px 5px 10px; background-color:white"><a href=3D"h=
+ttp://l.e.aeropostale.com/rts/go2.aspx?h=3D5413&tp=3Di-H43-BK-8q-=
+HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748"> <img src=3D"http:/=
+/i.e.aeropostale.com/wpm/702/ContentUploads/0419_AM/CTA-TOPS-GIRL=
+S.jpg" alt=3D"Tops Starting At $4 Shop Girls" style=3D"display:bl=
+ock;" border=3D"0" height=3D"55" width=3D"380" class=3D"mobile"><=
+/a></td>=0A        </tr>=0A        <tr>=0A          <td width=3D"=
+600" class=3D"contenttable" align=3D"center" style=3D"padding:0px=
+ 10px 20px 10px; background-color:white"><a href=3D"http://l.e.ae=
+ropostale.com/rts/go2.aspx?h=3D5414&tp=3Di-H43-BK-8q-HHjY-1o-2nqs=
+G-1c-CIGZ-26HbXB&x=3D548|4119748"> <img src=3D"http://i.e.aeropos=
+tale.com/wpm/702/ContentUploads/0419_AM/CTA-TOPS-GUYS.jpg" alt=3D=
+"Tops Starting At $4 Shop Guys" style=3D"display:block;" border=3D=
+"0" height=3D"55" width=3D"380" class=3D"mobile"></a></td>=0A    =
+    </tr>=0A      <!--CTA section mob-->=0A      <!--hero image 3=
+ mob-->=0A        <tr>=0A          <td width=3D"600" class=3D"con=
+tenttable" align=3D"center" style=3D"padding:0px 10px 0px 10px;ba=
+ckground-color:white"><a href=3D"http://l.e.aeropostale.com/rts/g=
+o2.aspx?h=3D5415&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D=
+548|4119748"> <img src=3D"http://i.e.aeropostale.com/wpm/702/Cont=
+entUploads/0419_AM/041917-60OFF_TOPS_C4_EX_06_CSPOT.jpg" alt=3D"B=
+ottoms Starting At $10 Shop Now" style=3D"display:block;" border=3D=
+"0" height=3D"700" width=3D"380" class=3D"mobile"></a></td>=0A   =
+     </tr>=0A      <!--hero image 3 mob-->=0A      <!--CTA sectio=
+n mob-->=0A        <tr>=0A          <td width=3D"600" class=3D"co=
+ntenttable" align=3D"center" style=3D"padding:10px 10px 5px 10px;=
+ background-color:white"><a href=3D"http://l.e.aeropostale.com/rt=
+s/go2.aspx?h=3D5415&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB=
+&x=3D548|4119748"> <img src=3D"http://i.e.aeropostale.com/wpm/702=
+/ContentUploads/0419_AM/CTA-BOTTOMS-GIRLS.jpg" alt=3D"Bottoms Sta=
+rting At $10 Shop Girls" style=3D"display:block;" border=3D"0" he=
+ight=3D"55" width=3D"380" class=3D"mobile"></a></td>=0A        </=
+tr>=0A        <tr>=0A          <td width=3D"600" class=3D"content=
+table" align=3D"center" style=3D"padding:0px 10px 20px 10px; back=
+ground-color:white"><a href=3D"http://l.e.aeropostale.com/rts/go2=
+.aspx?h=3D5416&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D=
+548|4119748"> <img src=3D"http://i.e.aeropostale.com/wpm/702/Cont=
+entUploads/0419_AM/CTA-BOTTOMS-GUYS.jpg" alt=3D"Bottoms Starting =
+At $10 Shop Guys" style=3D"display:block;" border=3D"0" height=3D=
+"55" width=3D"380" class=3D"mobile"></a></td>=0A        </tr>=0A =
+     <!--CTA section mob-->=0A      =0A</table>=0A</div>=0A      =
+=0A       <!--<![endif]--> =0A      =0A     			<!--HERO IMAGE-->=0A=
+=0A     			<!-- BOTTOM NAV-->   =0A     	<table border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" width=3D"600" class=3D"hide" bgco=
+lor=3D"#000000">=0A        <tr>=0A          	=0A          <td><a =
+href=3D"http://l.e.aeropostale.com/rts/go2.aspx?h=3D5417&tp=3Di-H=
+43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748"> <img src=3D=
+"http://i.e.aeropostale.com/wpm/702/ContentUploads/Template/20170=
+321_Aeropostale_Temp_bnav_01.jpg" alt=3D"MY ACCOUNT" style=3D"dis=
+play:block;" border=3D"0" height=3D"51" width=3D"167" ></a></td>=0A=
+          <td><a href=3D"http://l.e.aeropostale.com/rts/go2.aspx?=
+h=3D5418&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|41=
+19748"> <img src=3D"http://i.e.aeropostale.com/wpm/702/ContentUpl=
+oads/Template/20170321_Aeropostale_Temp_bnav_02.jpg" alt=3D"CUSTO=
+MER SERVICE" style=3D"display:block;" border=3D"0" height=3D"51" =
+width=3D"243" ></a></td>=0A          <td><a href=3D"http://l.e.ae=
+ropostale.com/rts/go2.aspx?h=3D5419&tp=3Di-H43-BK-8q-HHjY-1o-2nqs=
+G-1c-CIGZ-26HbXB&x=3D548|4119748"> <img src=3D"http://i.e.aeropos=
+tale.com/wpm/702/ContentUploads/Template/Updated_20170321_Aeropos=
+tale_Temp_bnav_03.jpg" alt=3D"STORE LOCATOR" style=3D"display:blo=
+ck;" border=3D"0" height=3D"51" width=3D"190" ></a></td>=0A=0A   =
+     </tr>=0A      </table>=0A      <!--mobile bottom nav-->=0A  =
+    <!--[if !mso]><!-->=0A    =0A     <div style=3D"display:none;=
+ width:0px; max-height:0px; overflow:hidden;" class=3D"showmobile=
+">=0A  <table width=3D"320" border=3D"0" align=3D"center" cellpad=
+ding=3D"0" cellspacing=3D"0" class=3D"showmobile" style=3D"margin=
+: 0 auto; display: none; border: 0; max-height:0px; overflow:hidd=
+en;">=0A  <tr>=0A    <td><a href=3D"http://l.e.aeropostale.com/rt=
+s/go2.aspx?h=3D5417&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB=
+&x=3D548|4119748"> <img src=3D"http://i.e.aeropostale.com/wpm/702=
+/ContentUploads/Template/20170321_Aeropostale_Temp_mbn_01.jpg" al=
+t=3D"MY ACCOUNT" style=3D"display:block;" border=3D"0" height=3D"=
+53" width=3D"400" ></a></td>=0A    </tr>=0A    <tr>=0A    <td><a =
+href=3D"http://l.e.aeropostale.com/rts/go2.aspx?h=3D5418&tp=3Di-H=
+43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748"> <img src=3D=
+"http://i.e.aeropostale.com/wpm/702/ContentUploads/Template/20170=
+321_Aeropostale_Temp_mbn_02.jpg" alt=3D"CUSTOMER SERVICE" style=3D=
+"display:block;" border=3D"0" height=3D"54" width=3D"400" ></a></=
+td>=0A   </tr>=0A    <tr>=0A    <td><a href=3D"http://l.e.aeropos=
+tale.com/rts/go2.aspx?h=3D5419&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-=
+CIGZ-26HbXB&x=3D548|4119748"> <img src=3D"http://i.e.aeropostale.=
+com/wpm/702/ContentUploads/Template/20170321_Aeropostale_Temp_mbn=
+_03.jpg" alt=3D"STORE LOCATOR" style=3D"display:block;" border=3D=
+"0" height=3D"53" width=3D"400" ></a></td>=0A  </tr>=0A</table>=0A=
+</div>=0A      =0A       <!--<![endif]--> =0A      <!--mobile bot=
+tom nav-->=0A				<!-- BOTTOM NAV-->		=0A=0A <!--social icons-->=0A=
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+600" class=3D"contenttable" bgcolor=3D"#ffffff">=0A        <tr>=0A=
+          <td width=3D"101" class=3D"hide"><img src=3D"http://i.e=
+.aeropostale.com/wpm/702/ContentUploads/Template/spacer.gif" alt=3D=
+"" style=3D"display:block;" border=3D"0" height=3D"57" width=3D"1=
+01" class=3D"hide"/></td>=0A          <td width=3D"145"><a href=3D=
+"http://l.e.aeropostale.com/rts/go2.aspx?h=3D5406&tp=3Di-H43-BK-8=
+q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748"><img src=3D"http:=
+//i.e.aeropostale.com/wpm/702/ContentUploads/Template/20170321_Ae=
+ropostale_social_01.jpg" alt=3D"FOLLOW US" style=3D"display:block=
+;" border=3D"0" height=3D"57" width=3D"145" ></a></td>=0A        =
+  <td width=3D"54"><a href=3D"http://l.e.aeropostale.com/rts/go2.=
+aspx?h=3D5420&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D5=
+48|4119748"> <img src=3D"http://i.e.aeropostale.com/wpm/702/Conte=
+ntUploads/Template/20170321_Aeropostale_social_02.jpg" alt=3D"Fac=
+ebook" style=3D"display:block;" border=3D"0" height=3D"57" width=3D=
+"54" ></a></td>=0A          <td width=3D"50"><a href=3D"http://l.=
+e.aeropostale.com/rts/go2.aspx?h=3D5421&tp=3Di-H43-BK-8q-HHjY-1o-=
+2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748"> <img src=3D"http://i.e.aer=
+opostale.com/wpm/702/ContentUploads/Template/20170321_Aeropostale=
+_social_03.jpg" alt=3D"Twiter" style=3D"display:block;" border=3D=
+"0" height=3D"57" width=3D"50" ></a></td>=0A          <td width=3D=
+"45"><a href=3D"http://l.e.aeropostale.com/rts/go2.aspx?h=3D5422&=
+tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748"> <=
+img src=3D"http://i.e.aeropostale.com/wpm/702/ContentUploads/Temp=
+late/20170321_Aeropostale_social_04.jpg" alt=3D"Instagram" style=3D=
+"display:block;" border=3D"0" height=3D"57" width=3D"45" ></a></t=
+d>=0A          <td width=3D"52"><a href=3D"http://l.e.aeropostale=
+.com/rts/go2.aspx?h=3D5423&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ=
+-26HbXB&x=3D548|4119748"> <img src=3D"http://i.e.aeropostale.com/=
+wpm/702/ContentUploads/Template/20170321_Aeropostale_social_05.jp=
+g" alt=3D"You Tube" style=3D"display:block;" border=3D"0" height=3D=
+"57" width=3D"52" ></a></td>=0A          <td width=3D"54"><a href=
+=3D"http://l.e.aeropostale.com/rts/go2.aspx?h=3D5424&tp=3Di-H43-B=
+K-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748"> <img src=3D"h=
+ttp://i.e.aeropostale.com/wpm/702/ContentUploads/Template/2017032=
+1_Aeropostale_social_06.jpg" alt=3D"Snapchat" style=3D"display:bl=
+ock;" border=3D"0" height=3D"57" width=3D"54" ></a></td>=0A      =
+    <td width=3D"97" class=3D"hide"><img src=3D"http://i.e.aeropo=
+stale.com/wpm/702/ContentUploads/Template/spacer.gif" alt=3D"" st=
+yle=3D"display:block;" border=3D"0" height=3D"57" width=3D"97" cl=
+ass=3D"hide"/></td>=0A        </tr>=0A      </table>=0A      <!--=
+social icons-->=0A  <table border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"600" class=3D"contenttable" bgcolor=3D"#e9e9e=
+9">=0A        <tr>=0A          	<td><img src=3D"http://i.e.aeropo=
+stale.com/wpm/702/ContentUploads/Template/spacer.gif" alt=3D"" st=
+yle=3D"display:block;" border=3D"0" height=3D"20" width=3D"20"/>=0A=
+          </td>=0A        </tr>=0A      </table>=0A      <!-- DIS=
+CLAIMER-->=0A      <table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" width=3D"600" class=3D"contenttable" bgcolor=3D"#e9e9e9=
+">=0A        <tr>=0A          <td class=3D"w54"><img src=3D"http:=
+//i.e.aeropostale.com/wpm/702/ContentUploads/Template/spacer.gif"=
+ alt=3D"" style=3D"display:block;" border=3D"0" height=3D"20" wid=
+th=3D"60" class=3D"w54"/></td>=0A            <td width=3D"480" al=
+ign=3D"center" valign=3D"middle"><font style=3D"font-family:  Ari=
+al, 'Helvetica Neue', Helvetica, sans-serif; font-size:12px; colo=
+r:#333333;">=0A            '&#42;Free Shipping on $75 or $5 Flat =
+Rate Standard Shipping. No minimum purchase required. Discount wi=
+ll be automatically applied in checkout. Offer valid through 4/19=
+/2017 at 11:59 PM EST. Not valid on bulk purchases (Purchases of =
+more than 50 items in a single day) or previous purchases. Shippi=
+ng offers are not valid outside the U.S. All promotions quoted in=
+ U.S. dollars. Valid on Standard Shipping Only.<br><br>=0A       =
+     <a href=3D"http://l.e.aeropostale.com/rts/go2.aspx?h=3D5425&=
+tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748" st=
+yle=3D"color:#10205f; font-weight:bold; text-decoration:none;">Un=
+subscribe</a>, <a href=3D"http://l.e.aeropostale.com/rts/go2.aspx=
+?h=3D5426&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4=
+119748" style=3D"color:#10205f; font-weight:bold; text-decoration=
+:none;">Subscribe</a> or log in to <a href=3D"http://l.e.aeropost=
+ale.com/rts/go2.aspx?h=3D5417&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-C=
+IGZ-26HbXB&x=3D548|4119748" style=3D"color:#10205f; font-weight:b=
+old; text-decoration:none;">My Account</a> to change your email p=
+references.<br>=0A<br>=0ATo find answers to your questions or con=
+tact us:<br>=0AAttn: A=C3=A9ropostale Customer Service<br>=0A915 =
+S. Babcock St. Melbourne, FL 32901 <br>=0A877.289.2376=0A<br><br>=
+=0AVisit <a href=3D"http://l.e.aeropostale.com/rts/go2.aspx?h=3D5=
+406&tp=3Di-H43-BK-8q-HHjY-1o-2nqsG-1c-CIGZ-26HbXB&x=3D548|4119748=
+" style=3D"color:#10205f; font-weight:bold; text-decoration:none;=
+">aeropostale.com</a> for details regarding promotional offers.=0A=
+<br><br>=0A&copy; A=C3=A9ropostale 2003 - 2017. All Rights Reserv=
+ed.</font></td>=0A            <td class=3D"w54"><img src=3D"http:=
+//i.e.aeropostale.com/wpm/702/ContentUploads/Template/spacer.gif"=
+ alt=3D"" style=3D"display:block;" border=3D"0" height=3D"20" wid=
+th=3D"60" class=3D"w54"/></td>=0A        </tr>=0A      </table>=0A=
+	<!-- DISCLAIMER-->=0A     <table border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" width=3D"600" class=3D"contenttable" bgcolor=3D=
+"#e9e9e9">=0A        <tr>=0A          	<td><img src=3D"http://i.e=
+.aeropostale.com/wpm/702/ContentUploads/Template/spacer.gif" alt=3D=
+"" style=3D"display:block;" border=3D"0" height=3D"20" width=3D"2=
+0"/>=0A          </td>=0A        </tr>=0A      </table>=0A    =0A=
+    =0A             </td> =0A               =0A               <td=
+ width=3D"20" bgcolor=3D"#e9e9e9"><img src=3D"http://i.e.aeropost=
+ale.com/wpm/702/ContentUploads/Template/spacer.gif" alt=3D"" styl=
+e=3D"display:block;" border=3D"0" height=3D"15" width=3D"20"/>=0A=
+               </td>   =0A           </tr>=0A       </table>=0A  =
+     =0A        <!--CONTENT-->=0A      </td>=0A  </tr>=0A</table>=
+=0A<!--Starts Gmail App fix 2 -->=0A<div style=3D"display:none; w=
+hite-space:nowrap; font:15px courier; color:#ffffff;">=0A- - - - =
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -=0A</div=
+>	=0A<!--Ends Gmail App fix 2 -->=0A</body>=0A</html>=0A<img src=3D=
+"https://aeropostale.sp1.convertro.com/view/vt/v1/aeropostale/1/c=
+vo.gif?cvosrc=3Demail.experian.marketing_SS17AeroPromo&amp;utm_me=
+dium=3Demail&amp;utm_campaign=3D12_aero_sitewide" />=0A
+----boundary_3782099_b6ab52f8-7ef7-445f-a85e-d4e7b79e444e--
+
+
+

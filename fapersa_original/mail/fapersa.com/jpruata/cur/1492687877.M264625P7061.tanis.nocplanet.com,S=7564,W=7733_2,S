@@ -1,0 +1,169 @@
+Return-Path: <reportes-fapersa-bounces@listas.lunix.com.ar>
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id eQFeDwWc+FiVGwAATLP0zA
+	; Thu, 20 Apr 2017 08:31:17 -0300
+Return-path: <reportes-fapersa-bounces@listas.lunix.com.ar>
+Envelope-to: dottonel@fapersa.com,
+ fyori@fapersa.com,
+ jpruata@fapersa.com,
+ pcalcagno@fapersa.com,
+ rdopazo@fapersa.com
+Delivery-date: Thu, 20 Apr 2017 08:31:17 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:47648 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <reportes-fapersa-bounces@listas.lunix.com.ar>)
+	id 1d1AIu-00021y-K4; Thu, 20 Apr 2017 08:31:17 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 047287F21F;
+	Thu, 20 Apr 2017 08:31:16 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id hi1CHxEGUflS; Thu, 20 Apr 2017 08:31:15 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 98FF07F231; Thu, 20 Apr 2017 08:31:15 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id D760C7F21F;
+	Thu, 20 Apr 2017 08:31:14 -0300 (ART)
+Received: from cloud.lunix.com.ar (cloud.lunix.com.ar [207.198.115.213])
+	by fw.fapersa.com (Postfix) with ESMTP id 4773B5FF4A;
+	Thu, 20 Apr 2017 08:31:14 -0300 (ART)
+Received: from localhost (localhost [127.0.0.1])
+	by cloud.lunix.com.ar (Postfix) with ESMTP id 7D903C0D6C;
+	Thu, 20 Apr 2017 08:31:13 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at cloud.lunix.com.ar
+Received: from cloud.lunix.com.ar ([127.0.0.1])
+	by localhost (cloud.lunix.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id HeNap6JojNDY; Thu, 20 Apr 2017 08:31:09 -0300 (ART)
+Received: by cloud.lunix.com.ar (Postfix, from userid 114)
+	id 070DAC0D6F; Thu, 20 Apr 2017 08:31:09 -0300 (ART)
+Received: from cloud.lunix.com.ar (localhost [127.0.0.1])
+	by cloud.lunix.com.ar (Postfix) with ESMTP id 6DC1CC0D6C;
+	Thu, 20 Apr 2017 08:31:04 -0300 (ART)
+X-Original-To: reportes-fapersa@listas.lunix.com.ar
+Delivered-To: reportes-fapersa@listas.lunix.com.ar
+Received: from localhost (localhost [127.0.0.1])
+ by cloud.lunix.com.ar (Postfix) with ESMTP id 67680C0D6C
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Thu, 20 Apr 2017 08:31:03 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at cloud.lunix.com.ar
+Received: from cloud.lunix.com.ar ([127.0.0.1])
+ by localhost (cloud.lunix.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+ with ESMTP id hVmtoiVNsZEv for <reportes-fapersa@listas.lunix.com.ar>;
+ Thu, 20 Apr 2017 08:30:59 -0300 (ART)
+Received: by cloud.lunix.com.ar (Postfix, from userid 114)
+ id 0F9A1C0D6E; Thu, 20 Apr 2017 08:30:59 -0300 (ART)
+Received: from tanis.nocplanet.com (tanis.nocplanet.com [108.170.37.10])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by cloud.lunix.com.ar (Postfix) with ESMTPS id 8F09BC0D6D
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Thu, 20 Apr 2017 08:30:54 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=fapersa.com
+ ; s=default;
+ h=Content-Type:MIME-Version:Date:Message-ID:Subject:From:To:
+ Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:Content-Description:
+ Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+ In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=mjA22zfTnv+l84OnoH9ruLM/5o8BaAazs8p0ZkZPTtk=; b=NA0qqUNTaH5q6sNbdoBn5c0dPW
+ Yywb3OQFqMwdVYnuJDZ/aI0rrIfjhjiGMKu7hh+glffFu6YbE6pG4cnCaFJxn4EVjI2GzFdvdJ2FE
+ /o2f9XtgyqxsXn3D9+lw+3uq52eoQ3fF6to1SYrZ6yILsWL/eWLpFlgx5sO12rsnwOi+kYFcfZAFO
+ VZfLQIWALW4r1V3YuG2zI2fgB1s46orevufuWk91gefEqeirvWxyGLWail08au0ZFazBWf2DIv7iX
+ oJdpgWDRbeRf+TV7/hSkBJPhZ7lVCs2Qeb1y5kITLB7BFe9764R2Yf6MQkbt7oXuKZd5pS2v6mJN7
+ ag9JfGhA==;
+Received: from mx1.fapersa.com ([181.14.247.181]:50796 helo=[172.22.100.89])
+ by tanis.nocplanet.com with esmtpsa (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128)
+ (Exim 4.89) (envelope-from <dottonel@fapersa.com>)
+ id 1d1AIX-0001za-5K
+ for reportes-fapersa@listas.lunix.com.ar; Thu, 20 Apr 2017 08:30:53 -0300
+To: Reportes_Fapersa <reportes-fapersa@listas.lunix.com.ar>
+From: Diego Ottonelli <dottonel@fapersa.com>
+Message-ID: <dd9e96e3-cc87-c7bb-43f7-7915c08bbc0d@fapersa.com>
+Date: Thu, 20 Apr 2017 08:33:29 -0300
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101
+ Thunderbird/45.8.0
+MIME-Version: 1.0
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - tanis.nocplanet.com
+X-AntiAbuse: Original Domain - listas.lunix.com.ar
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - fapersa.com
+X-Get-Message-Sender-Via: tanis.nocplanet.com: authenticated_id:
+ dottonel@fapersa.com
+X-Authenticated-Sender: tanis.nocplanet.com: dottonel@fapersa.com
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+Subject: [Reportes-fapersa] URGENTE - No funciona Equis
+X-BeenThere: reportes-fapersa@listas.lunix.com.ar
+X-Mailman-Version: 2.1.18
+Precedence: list
+List-Id: <reportes-fapersa.listas.lunix.com.ar>
+List-Unsubscribe: <http://listas.lunix.com.ar/cgi-bin/mailman/options/reportes-fapersa>, 
+ <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=unsubscribe>
+List-Post: <mailto:reportes-fapersa@listas.lunix.com.ar>
+List-Help: <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=help>
+List-Subscribe: <http://listas.lunix.com.ar/cgi-bin/mailman/listinfo/reportes-fapersa>, 
+ <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=subscribe>
+Reply-To: reportes-fapersa@listas.lunix.com.ar
+Content-Type: multipart/mixed; boundary="===============0745061262747114280=="
+Errors-To: reportes-fapersa-bounces@listas.lunix.com.ar
+Sender: "Reportes-fapersa" <reportes-fapersa-bounces@listas.lunix.com.ar>
+
+This is a multi-part message in MIME format.
+--===============0745061262747114280==
+Content-Type: multipart/alternative;
+ boundary="------------F280ED744F946896329F7EF7"
+
+This is a multi-part message in MIME format.
+--------------F280ED744F946896329F7EF7
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 8bit
+
+No está funcionando Equis.
+Necesitamos una solución urgente.
+Gracias y saludos
+
+-- 
+Diego Ottonelli
+FAPERSA I.C.S.A
+0054-3424810810
+
+
+--------------F280ED744F946896329F7EF7
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  </head>
+  <body bgcolor="#FFFFFF" text="#000000">
+    <font size="-1">No está funcionando Equis.</font><br>
+    <font size="-1">Necesitamos una solución urgente.</font><br>
+    <font size="-1">Gracias y saludos</font><br>
+    <br>
+    <pre class="moz-signature" cols="72">-- 
+Diego Ottonelli
+FAPERSA I.C.S.A
+0054-3424810810</pre>
+  </body>
+</html>
+
+--------------F280ED744F946896329F7EF7--
+
+--===============0745061262747114280==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+Content-Disposition: inline
+
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KUmVwb3J0ZXMt
+ZmFwZXJzYSBtYWlsaW5nIGxpc3QKUmVwb3J0ZXMtZmFwZXJzYUBsaXN0YXMubHVuaXguY29tLmFy
+Cmh0dHA6Ly9saXN0YXMubHVuaXguY29tLmFyL2NnaS1iaW4vbWFpbG1hbi9saXN0aW5mby9yZXBv
+cnRlcy1mYXBlcnNhCg==
+
+--===============0745061262747114280==--

@@ -1,0 +1,309 @@
+Return-Path: <0100015be8c51e23-4ba9e449-7418-412c-9d58-039676f54847-000000@amazonses.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id KStjEtyUEFnsSAAATLP0zA
+	for <jpruata@fapersa.com>; Mon, 08 May 2017 12:55:08 -0300
+Return-path: <0100015be8c51e23-4ba9e449-7418-412c-9d58-039676f54847-000000@amazonses.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Mon, 08 May 2017 12:55:08 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:51381 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <0100015be8c51e23-4ba9e449-7418-412c-9d58-039676f54847-000000@amazonses.com>)
+	id 1d7kzy-0006an-CG
+	for jpruata@fapersa.com; Mon, 08 May 2017 12:55:07 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id BE8517F220
+	for <jpruata@fapersa.com>; Mon,  8 May 2017 12:54:56 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id oaiL6yR2kfWJ for <jpruata@fapersa.com>;
+	Mon,  8 May 2017 12:54:53 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 3E17D7F231; Mon,  8 May 2017 12:54:53 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id CBC4A7F220
+	for <jpruata@fapersa.com>; Mon,  8 May 2017 12:54:49 -0300 (ART)
+Received-SPF: pass (amazonses.com: 54.240.11.128 is authorized to use '0100015be8c51e23-4ba9e449-7418-412c-9d58-039676f54847-000000@amazonses.com' in 'mfrom' identity (mechanism 'ip4:54.240.0.0/18' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="0100015be8c51e23-4ba9e449-7418-412c-9d58-039676f54847-000000@amazonses.com"; helo=a11-128.smtp-out.amazonses.com; client-ip=54.240.11.128
+Received: from a11-128.smtp-out.amazonses.com (a11-128.smtp-out.amazonses.com [54.240.11.128])
+	by fw.fapersa.com (Postfix) with ESMTPS id 34D7B5FE65
+	for <jpruata@fapersa.com>; Mon,  8 May 2017 12:54:47 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=gfcerpxk33zmonrmq5cu6bgrjfzw2dv2; d=ses.avrilassistance.com;
+	t=1494258884;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Date;
+	bh=QpO+sCmxDSWS73kJzKAZ6vaiN9leL+jt9awBHZhDx5g=;
+	b=PQo38D7TjsE6DO1FPFDfyxFTEPH2QA5cQQyuMLDEEhTM/YOVd5AEINljZ/FRxNVA
+	1+/tgqoeFrHFUq+1b8XcmTtQuz0/6BwXLZltDl+u7X1AKdpx/0f7fgpz7fD1/IstQiT
+	zo5Pdr2ALuxYUqyOLld//AiddSpRrNln/bax7LE4=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=224i4yxa5dv7c2xz3womw6peuasteono; d=amazonses.com; t=1494258884;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Date:Feedback-ID;
+	bh=QpO+sCmxDSWS73kJzKAZ6vaiN9leL+jt9awBHZhDx5g=;
+	b=nszEDonjecYduCDsS7vTFbEQRPRdavy617lMnMlQF6fcGVIgjDDHtpGw9lj1/lnn
+	hU7ZYwo9PTtTHqeIxwX/VazFkKy+USVyZvYqBUzLvY9g86Jr01tShdYVE7sOYOaUJrP
+	nSgzvQPd+BtF2AsXRfWutD8ynFdkYCuGlC3B9c3Q=
+From: =?UTF-8?Q?Avril Assistance?= <no-reply@ses.avrilassistance.com>
+Reply-To: no-reply2@ses.avrilassistance.com
+To: jpruata@fapersa.com
+Subject: 2x1 en tu asistencia al viajero.
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_5408540_1102291426.1494258884133"
+Message-ID: <0100015be8c51e23-4ba9e449-7418-412c-9d58-039676f54847-000000@email.amazonses.com>
+Date: Mon, 8 May 2017 15:54:44 +0000
+X-SES-Outgoing: 2017.05.08-54.240.11.128
+Feedback-ID: 1.us-east-1.DWLlRKmBtI6c0h8XIqGCJwVwQj+b24fD7145ysboAFw=:AmazonSES
+
+------=_Part_5408540_1102291426.1494258884133
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+=C2=BFViaj=C3=A1s? Hacelo seguro y protegido con Avril Assitance.
+
+[S=C3=BAper promo mayo 2017 2x1 PAG=C3=81 1 TARJETA, LLEVATE 2]
+[http://avril.quarcon.com/201705-01/?utm_source=3Demailani&utm_medium=3Dema=
+il&utm_content=3DAvril_Pieza201705_ANIv2&utm_campaign=3DQUARCON-AVRIL&afili=
+ado=3DAni]
+
+llam=C3=A1 ya mismo al
+11.5279.4767
+
+M=C3=81S INFORMACI=C3=93N
+[http://avril.quarcon.com/201705-01/?utm_source=3Demailani&utm_medium=3Dema=
+il&utm_content=3DAvril_Pieza201705_ANIv2&utm_campaign=3DQUARCON-AVRIL&afili=
+ado=3DAni]
+
+Hasta el 31/05, con la contrataci=C3=B3n de una cobertura de viaje de
+nuestra l=C3=ADnea Infinity, llevate otra cobertura GRATIS, v=C3=A1lida en
+todas las modalidades y en todos los productos, para pasajeros que
+inicien su viaje antes del 31/12/2017.
+Viaj=C3=A1 protegido y ahorr=C3=A1!
+
+Avril Assistance.
+La evoluci=C3=B3n en productos de Asistencia al Viajero.
+
+Vigencia de la Promoci=C3=B3n desde el 01/05/2017 hasta el 31/05/2017.
+Promoci=C3=B3n v=C3=A1lida para compras de L=C3=ADnea Infitity, mismo produ=
+cto,
+misma vigencia. Vigencia de las tarjetas emitidas hasta el 31/12/2017.
+Servicios Prestados por AVRIL ASSISTANCE S.A. AVENIDA ALICIA MOREAU DE
+JUSTO 1150 PISO 3 OFICINA A303. Mail: comercial@avril-assistance.com
+WEB: - www.avril-assistance.com
+
+
+------=_Part_5408540_1102291426.1494258884133
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Dutf-8"><title></title></head><body><!DOCTYPE html PUBLIC "-//W3C//DTD HT=
+ML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+ =20
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width">
+
+ =20
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-885=
+9-1">
+
+ =20
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+
+ =20
+ =20
+  <style type=3D"text/css">
+<!--
+a { text-decoration : none !important; outline : none; color : white !impor=
+tant; }
+-->
+  </style>
+</head><body style=3D"margin: 0pt; width: 100% ! important; height: 100%; b=
+ackground-color: rgb(225, 225, 225); font-family: sans-serif ! important;">
+<p style=3D"font-size: 0px; font-weight: 0px;">&iquest;Viaj&aacute;s? Hacel=
+o seguro y protegido con Avril Assitance.</p>
+<!-- [if (gte mso 9)|(IE)]><table width=3D"700" align=3D"center" cellpaddin=
+g=3D"0" cellspacing=3D"0" border=3D"0"><tr><td><![endif]-->
+<table style=3D"margin: 0pt; padding: 0pt; width: 100%; height: 100%; backg=
+round-color: #e1e1e1;" align=3D"center" cellpadding=3D"0" cellspacing=3D"0"=
+>
+<tbody>
+<tr>
+<td style=3D"margin: 0pt auto ! important; padding: 0pt; display: block ! i=
+mportant; max-width: 600px ! important; clear: both ! important; background=
+-color: white; font-family: sans-serif ! important;" align=3D"center" valig=
+n=3D"top">
+<div style=3D"margin: 0pt auto; max-width: 600px;">
+<table style=3D"background-color: white; width: 100%;" border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td style=3D"vertical-align: top;">
+<table style=3D"text-align: left; width: 100%; background-color: #eeeeee;" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td style=3D"vertical-align: top;">
+<table style=3D"text-align: left; width: 100%; margin-left: auto; margin-ri=
+ght: auto;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td style=3D"vertical-align: top; text-align: center; background-color: #46=
+4645;"><a href=3D"http://l.avrilassistance.com/e/c/MlpILzE3RnZYL2xLY2w%3D" =
+target=3D"_blank" rel=3D"noopener noreferrer"><img src=3D"http://l.avrilass=
+istance.com/static/900/11513/Arte_201705-03.png" style=3D"border: 0px solid=
+; width: 100%; display: block; background-color: #0cacdc; color: #fff; font=
+-size: 2em;" alt=3D"S&uacute;per promo mayo 2017 2x1 PAG&Aacute; 1 TARJETA,=
+ LLEVATE 2" height=3D"526" width=3D"600" /></a></td>
+</tr>
+<tr>
+<td height=3D"84" bgcolor=3D"#0096b6" style=3D"vertical-align: top; font-si=
+ze: 2em; text-transform: uppercase; font-weight: 800;" align=3D"center"><a =
+href=3D"http://l.avrilassistance.com/e/c/MlpILzE3RnZYL2xLN2I%3D">llam&aacut=
+e; ya mismo al <br />11.5279.4767</a></td>
+</tr>
+<tr>
+<td style=3D"vertical-align: top;">
+<table style=3D"text-align: left; width: 100%; margin-left: auto; margin-ri=
+ght: auto; background-color: #fafafa;" border=3D"0" cellpadding=3D"15" cell=
+spacing=3D"0">
+<tbody>
+<tr>
+<td style=3D"vertical-align: middle;"></td>
+<td style=3D"vertical-align: middle; text-align: center; width: 300px;">
+<table style=3D"text-align: left; width: 100%; margin-left: auto; margin-ri=
+ght: auto; background-color: #ed7102; height: 40px;" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td style=3D"font-size: 28px; vertical-align: middle; text-align: center; h=
+eight: 44px; background-color: #fbaf3f;"><a href=3D"http://l.avrilassistanc=
+e.com/e/c/MlpILzE3RnZYL2xLY2w%3D" target=3D"_blank" rel=3D"noopener norefer=
+rer"><span style=3D"color: white;">M&Aacute;S INFORMACI&Oacute;N</span></a>=
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td style=3D"vertical-align: top;"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style=3D"vertical-align: top;">
+<table style=3D"text-align: left; width: 100%;" border=3D"0" cellpadding=3D=
+"10" cellspacing=3D"0">
+<tbody>
+<tr>
+<td style=3D"vertical-align: top;">
+<table style=3D"text-align: left; width: 100%; background-color: white;" bo=
+rder=3D"0" cellpadding=3D"15" cellspacing=3D"0">
+<tbody>
+<tr align=3D"center">
+<td style=3D"vertical-align: top;"><span style=3D"font-size: 18px; color: #=
+0861aa;"><span style=3D"color: #666666;"><span style=3D"color: #00acdc;">Ha=
+sta el 31/05</span>, con la contrataci&oacute;n de una cobertura de viaje d=
+e nuestra l&iacute;nea Infinity, <span style=3D"color: #00acdc;">llevate ot=
+ra cobertura GRATIS</span>, v&aacute;lida en todas las modalidades y en tod=
+os los productos, para pasajeros que inicien su viaje antes del 31/12/2017.=
+ <br /> Viaj&aacute; protegido y ahorr&aacute;!<br /> <br /> <span style=3D=
+"color: #00acdc; font-weight: bold;">Avril Assistance</span>.<br /> La evol=
+uci&oacute;n en productos de Asistencia al Viajero.<br /> </span></span></t=
+d>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style=3D"vertical-align: top;">
+<table style=3D"text-align: left; width: 100%; background-color: #464645;" =
+border=3D"0" cellpadding=3D"15" cellspacing=3D"0">
+<tbody>
+<tr>
+<td style=3D"vertical-align: top; background-color: #808284;">
+<table style=3D"text-align: left; width: 100%;" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td style=3D"font-size: 10px; height: 10px; vertical-align: top; text-align=
+: justify;"><span style=3D"color: #999999;"><span style=3D"color: #c8cacc;"=
+></span><span style=3D"color: #c8cacc;"></span><span style=3D"color: #c8cac=
+c;">Vigencia de la Promoci&oacute;n desde el 01/05/2017 hasta el 31/05/2017=
+. </span><span style=3D"color: #c8cacc;"><br /> Promoci&oacute;n v&aacute;l=
+ida para compras de L&iacute;nea Infitity, mismo producto, misma vigencia. =
+Vigencia de las tarjetas emitidas hasta el 31/12/2017. </span><span style=
+=3D"color: #c8cacc;">Servicios Prestados por AVRIL ASSISTANCE S.A. AVENIDA =
+ALICIA MOREAU DE JUSTO 1150 PISO 3 OFICINA A303. Mail: comercial@avril-assi=
+stance.com WEB: - www.avril-assistance.com</span><br /> </span></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- [if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+<p></p>
+</body></html><table width=3D"600" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" align=3D"center">
+                      <tbody>
+                        <tr>
+                          <td align=3D"center" style=3D"font-family:Arial,H=
+elvetica,sans-serif;">
+                          <span style=3D"font-family:Arial,Helvetica,sans-s=
+erif;font-size:12px;color:#999!important;">Para previsualizar este email en=
+ un navegador, hacer click <a style=3D"font-size:12px;color:#000!important"=
+ href=3D"http://l.avrilassistance.com/e/w/MlpILzE3RnZY">aqu=C3=AD</a>.</spa=
+n>
+                        </td>
+                        </tr>
+                      </tbody>
+                    </table><br><br><br><table width=3D"600" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" align=3D"center">
+                              <tbody>
+                                <tr>
+                                  <td align=3D"center" style=3D"font-family=
+:Arial,Helvetica,sans-serif;">
+                                  <span style=3D"font-family:Arial,Helvetic=
+a,sans-serif;font-size:12px;color:#999!important;">Para no recibir m=C3=A1s=
+ comunicaciones de este tipo, usted puede <a style=3D"font-size:12px;color:=
+#000!important" href=3D"http://l.avrilassistance.com/e/u/MlpILzE3RnZY">DESU=
+SCRIBIRSE</a>.</span>
+                                  <br><br>
+                                  <a style=3D"font-size:12px;color:#999!imp=
+ortant" href=3D"http://l.avrilassistance.com/e/a/MlpILzE3RnZY">Reportar abu=
+so en el env=C3=ADo</a> | <span style=3D"font-family:Arial,Helvetica,sans-s=
+erif;font-size:12px;color:#999!important"> Correo enviado a: jpruata@fapers=
+a.com</span>
+                                </td>
+                                </tr>
+                              </tbody>
+                            </table><br><br><img src=3D"http://l.avrilassis=
+tance.com/e/o/MlpILzE3RnZY" style=3D" visibility:hidden; display:none;" alt=
+=3D"" title=3D"" width=3D"1" height=3D"1" /></body></html>
+------=_Part_5408540_1102291426.1494258884133--

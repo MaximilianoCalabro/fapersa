@@ -1,0 +1,412 @@
+Return-Path: <MD-NO--10144-116-AR-PR--jpruata=fapersa.com@bounces.mdrctr.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id eQANIIO6iFgbYQAATLP0zA
+	for <jpruata@fapersa.com>; Wed, 25 Jan 2017 11:47:31 -0300
+Return-path: <MD-NO--10144-116-AR-PR--jpruata=fapersa.com@bounces.mdrctr.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Wed, 25 Jan 2017 11:47:31 -0300
+Received: from mta130.116.mdrctr.com ([62.97.130.116]:33365)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256)
+	(Exim 4.87)
+	(envelope-from <MD-NO--10144-116-AR-PR--jpruata=fapersa.com@bounces.mdrctr.com>)
+	id 1cWOr0-0006Lp-7l
+	for jpruata@fapersa.com; Wed, 25 Jan 2017 11:47:31 -0300
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=md2; d=tizado.com;
+ h=From:Reply-To:To:Date:List-Id:List-Unsubscribe:Subject:MIME-Version:Content-Type:Message-ID; i=jscaraville@tizado.com;
+ bh=lPG2e9HPpf+h45atlqHp7XdNTPA=;
+ b=lGUtSg3H5YAx6FO3EGyboeYY0FHU/Ak3/GE99wLf1VeiLHl8Uyj3hSwTVTWqAEu8gdzSz1KC3NGF
+   jSs9kMFzClhiySubFAcEbI7cEsT2JKTvOf9KIM9TTNKnVQ9vsDsESRyZd/G7X6m+m2Ict8slxjdu
+   RPTAJHS3A+7eRCDzZY4=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=md2; d=tizado.com;
+ b=To2VcKlPx4SHlNbHoPfMZKbIRlhnh7asWa1fQMJ9QNIeZwTJdB0USGlz+mBQHEVynWo+hKwLRRSz
+   7UsLwALfcs6eHerwsZYSm1P6nNhBl5AHXMeIP6roxjG4zaHmHvFL3lEWAlzaDm4tSwybTOzZFQu7
+   JraQA0KMrtyoJyUkZm8=;
+Received: from pmta-senderdaemon.antevenio.local (172.16.18.16) by mta141.220.mdrctr.com id hh2t7e292r8c for <jpruata@fapersa.com>; Wed, 25 Jan 2017 15:45:35 +0100 (envelope-from <MD-NO--10144-116-AR-PR--jpruata=fapersa.com@bounces.mdrctr.com>)
+From: "Tizado Propiedades" <jscaraville@tizado.com>
+Reply-To: "Tizado Tigre" <jscaraville@tizado.com>
+To:  <jpruata@fapersa.com>
+Precedence: bulk
+X-rpcampaign: mdMDNO10144116ARPR
+X-rpcampaignok: mdmdMD-NO--10144-116-AR-PR
+X-reputation: -1
+Date: Wed, 25 Jan 2017 15:45:35 +0100
+Feedback-ID: 10144:116:gmailmdrctr
+List-Id: 10144-1.mdrctr.com
+List-Unsubscribe: <mailto:unsubscribe-md10144-116-1-42049-ebc0ba67abf4507cac828126848efc93@bounces.mdrctr.com>, <http://track.mdrctr.com/track/unsubscribe/empId/10144/subId/116/listId/1/conId/42049/conEmail/jpruata@fapersa.com/type/8/motivo/list-unsubscribe/signature/ebc0ba67abf4507cac828126848efc93>
+X-LU: <mailto:unsubscribe-md10144-116-1-42049-ebc0ba67abf4507cac828126848efc93@bounces.mdrctr.com>, <http://track.mdrctr.com/track/unsubscribe/empId/10144/subId/116/listId/1/conId/42049/conEmail/jpruata@fapersa.com/type/8/motivo/list-unsubscribe/signature/ebc0ba67abf4507cac828126848efc93>
+Subject: TIZADO ultimos lotes al lago central
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="boundaryTagForMixed"
+Message-ID: <0.0.5.675.1D27719AFFE19BA.4DD78E@mta141.220.mdrctr.com>
+X-Spam-Status: No, score=-5.0
+X-Spam-Score: -49
+X-Spam-Bar: -----
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Publicidad Si no ve correctamente el contenido de este e-mail,
+    puede visualizarlo vía web. //track.mdrctr.com/track/display/empId/10144/subId/116/listId/1/conId/42049/signature/ebc0ba67abf4507cac828126848efc93/conEmail/jpruata@fapersa.com/conMovil/-/contactInfo/Y29uSWQ9NDIwNDl%2BfmVtYWlsPWpwcnVhdGFAZmFwZXJzYS5jb21%2Bfm1vdmlsPS1%2BfnN1YklkPTExNn5%2BbGlzdElkPTF%2BfnNuYXBJZD01NjM5N35%2BbWRQYXJ0cz0xfn5tZEVtYWlsTUQ1PTcyZDZkNWI0NDRkYWRlYzRjM2ZiZjdhOGEzNGU5NDBmfn5jb25fbWQ1PWRjZDgzOTM3MGEzYmIxMjA2ZGY4NDk4ZjEwMjM3NmYy
+    [...] 
+ 
+ Content analysis details:   (-5.0 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: mdirector.com]
+  0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
+                             domains are different
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -3.2 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or identical to
+                             background
+  0.2 KAM_TRACKIMAGE         RAW: Message has a remote image explicitly meant for
+                             tracking
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+X-Spam-Flag: NO
+
+--boundaryTagForMixed
+Content-Type: multipart/alternative; boundary="boundaryTagForAlternative"
+
+--boundaryTagForAlternative
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Publicidad
+Si no ve correctamente el contenido de este e-mail, puede visualizarlo vía web.
+//track.mdrctr.com/track/display/empId/10144/subId/116/listId/1/conId/42049/signature/ebc0ba67abf4507cac828126848efc93/conEmail/jpruata@fapersa.com/conMovil/-/contactInfo/Y29uSWQ9NDIwNDl%2BfmVtYWlsPWpwcnVhdGFAZmFwZXJzYS5jb21%2Bfm1vdmlsPS1%2BfnN1YklkPTExNn5%2BbGlzdElkPTF%2BfnNuYXBJZD01NjM5N35%2BbWRQYXJ0cz0xfn5tZEVtYWlsTUQ1PTcyZDZkNWI0NDRkYWRlYzRjM2ZiZjdhOGEzNGU5NDBmfn5jb25fbWQ1PWRjZDgzOTM3MGEzYmIxMjA2ZGY4NDk4ZjEwMjM3NmYy
+
+**********************************************************************
+
+
+ 
+**********************************************************************
+
+Puede proceder a:
+ * darse de baja:
+//track.mdrctr.com/track/pre-unsubscribe/category/EMAIL/empId/10144/subId/116/listId/1/conId/42049/signature/ebc0ba67abf4507cac828126848efc93/conEmail/jpruata@fapersa.com/conMovil/-
+
+
+--boundaryTagForAlternative
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title></title>
+ <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+ <style type="text/css">/* /\/\/\/\/\/\/\/\/ CLIENT-SPECIFIC STYLES /\/\/\/\/\/\/\/\/ */
+ #outlook a{padding:0;} /* Force Outlook to provide a "view in browser" message */
+ .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
+ .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing */
+ body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;} /* Prevent WebKit and Windows mobile changing default text sizes */
+ table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up */
+ img{-ms-interpolation-mode:bicubic;} /* Allow smoother rendering of resized image in Internet Explorer */
+
+ /* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
+ body{margin:0; padding:0;}
+ img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
+ table{border-collapse:collapse !important;}
+ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;}
+
+ /* /\/\/\/\/\/\/\/\/ TEMPLATE STYLES /\/\/\/\/\/\/\/\/ */
+
+ #bodyCell{padding:20px;}
+ #layout{width:600px;}
+
+ /* ========== Page Styles ========== */
+
+ /**
+ * @tab Page
+ * @section background style
+ * @tip Set the background color and top border for your email. You may want to choose colors that match your company's branding.
+ * @theme page
+ */
+
+ #headerImage{
+ height:auto;
+ max-width:600px;
+ }
+
+
+
+ /* /\/\/\/\/\/\/\/\/ MOBILE STYLES /\/\/\/\/\/\/\/\/ */
+
+ @media only screen and (max-width: 480px){
+ /* /\/\/\/\/\/\/ CLIENT-SPECIFIC MOBILE STYLES /\/\/\/\/\/\/ */
+ body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:none !important;} /* Prevent Webkit platforms from changing default text sizes */
+ body{width:100% !important; min-width:100% !important;} /* Prevent iOS Mail from adding padding to the body */
+
+ /* /\/\/\/\/\/\/ MOBILE RESET STYLES /\/\/\/\/\/\/ */
+ #bodyCell{padding:10px !important;}
+
+ /* /\/\/\/\/\/\/ MOBILE TEMPLATE STYLES /\/\/\/\/\/\/ */
+
+ /* ======== Page Styles ======== */
+
+ /**
+ * @tab Mobile Styles
+ * @section template width
+ * @tip Make the template fluid for portrait or landscape view adaptability. If a fluid layout doesn't work for you, set the width to 300px instead.
+ */
+ #layout{
+ max-width:600px !important;
+ /*@editable*/ width:100% !important;
+ }
+
+
+ /* ======== Header Styles ======== */
+
+ #templatePreheader{display:none !important;} /* Hide the template preheader to save space */
+
+ /**
+ * @tab Mobile Styles
+ * @section header image
+ * @tip Make the main header image fluid for portrait or landscape view adaptability, and set the image's original width as the max-width. If a fluid setting doesn't work, set the image width to half its original size instead.
+ */
+ #headerImage{
+ height:auto !important;
+ /*@editable*/ max-width:600px !important;
+ /*@editable*/ width:100% !important;
+ }
+
+ /**
+ * @tab Mobile Styles
+ * @section header text
+ * @tip Make the header content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+ */
+ .headerContent{
+ /*@editable*/ font-size:20px !important;
+ /*@editable*/ line-height:125% !important;
+ }
+
+ /* ======== Body Styles ======== */
+
+ /**
+ * @tab Mobile Styles
+ * @section body image
+ * @tip Make the main body image fluid for portrait or landscape view adaptability, and set the image's original width as the max-width. If a fluid setting doesn't work, set the image width to half its original size instead.
+ */
+ #edit-image-trigger{
+ height:auto !important;
+ /*@editable*/ max-width:560px !important;
+ /*@editable*/ width:100% !important;
+ }
+
+ /**
+ * @tab Mobile Styles
+ * @section body text
+ * @tip Make the body content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+ */
+ .bodyContent{
+ /*@editable*/ font-size:18px !important;
+ /*@editable*/ line-height:125% !important;
+ }
+ .templateSocialContainer{display:inline !important; }
+ /* ======== Footer Styles ======== */
+
+ /**
+ * @tab Mobile Styles
+ * @section footer text
+ * @tip Make the body content text larger in size for better readability on small screens.
+ */
+ .footerContent{
+ /*@editable*/ font-size:14px !important;
+ /*@editable*/ line-height:115% !important;
+ }
+
+ .footerContent a{display:block !important;} /* Place footer social and utility links on their own lines, for easier access */
+ }
+ </style>
+</head>
+<body leftmargin="0" marginheight="0" marginwidth="0" offset="0" topmargin="0"><img src="http://track.mdrctr.com/track/open/key/10144-116-1-42049/signature/ebc0ba67abf4507cac828126848efc93/userid/72d6d5b444dadec4c3fbf7a8a34e940f" style="display:none;" border=0 width=1 height=1 alt=""><table border="0" style="max-width:570px;" cellspacing="4" cellpadding="0"
+	align="center">
+	<tr>
+		<td><font face="Verdana" color="#8c8c8c" size="1">Publicidad</font></td>
+	</tr>
+</table>
+<table border="0" style="max-width:570px;" cellspacing="4" cellpadding="0"
+	align="center">
+	<tr>
+		<td width="100%"><font face="Verdana" color="#8c8c8c" size="1">Si no
+		ve correctamente el contenido de este e-mail, puede <a
+			style="color: #FF8549;" target="_blank"
+			href="http://track.mdrctr.com/track/display/empId/10144/subId/116/listId/1/conId/42049/signature/ebc0ba67abf4507cac828126848efc93/conEmail/jpruata@fapersa.com/conMovil/-/contactInfo/Y29uSWQ9NDIwNDl%2BfmVtYWlsPWpwcnVhdGFAZmFwZXJzYS5jb21%2Bfm1vdmlsPS1%2BfnN1YklkPTExNn5%2BbGlzdElkPTF%2BfnNuYXBJZD01NjM5N35%2BbWRQYXJ0cz0xfn5tZEVtYWlsTUQ1PTcyZDZkNWI0NDRkYWRlYzRjM2ZiZjdhOGEzNGU5NDBmfn5jb25fbWQ1PWRjZDgzOTM3MGEzYmIxMjA2ZGY4NDk4ZjEwMjM3NmYy">visualizarlo v&iacute;a web</a>.</font></td>
+	</tr>
+</table>
+<center>
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="width:600px">
+ <tbody>
+ <tr>
+ <td colspan="3" style="width: 600px; height: 25px; background-color: rgb(102, 102, 102); text-align: center;"><span style="color:#F0FFFF">Puertos / Escobar&nbsp;| Jessica Scaraville | 15 5450 1968 / 11 4871 0200</span></td>
+ </tr>
+ <tr>
+ <td colspan="3" style="text-align: center; vertical-align: bottom; height: 45px; width: 600px; background-color: rgb(241, 86, 93);"><span style="font-size:48px"><span style="color:#FFFFFF"><span border-style:="" solid=""><font face="arial, helvetica, sans-serif"><strong>Costas</strong></font></span></span></span></td>
+ </tr>
+ <tr>
+ <td colspan="3" style="vertical-align: bottom; height: 16px; background-color: rgb(241, 86, 93); text-align: center;">
+ <p><span style="color:#FFFFFF"><span style="font-family:arial,helvetica,sans-serif">&nbsp; &nbsp; &nbsp; Barrio Exclusivo con todos sus lotes al Lago Central </span></span></p>
+
+ <p><span style="color:#FFFFFF"><span style="font-family:arial,helvetica,sans-serif">2&deg; Ciudad de Eduardo Constantini</span></span></p>
+ </td>
+ </tr>
+ <tr>
+ <td colspan="3" style="text-align: center; height: 3px; vertical-align: middle; background-color: rgb(255, 255, 255);"><span style="color:#FFFFFF"><span style="font-family:arial,helvetica,sans-serif">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span></td>
+ </tr>
+ <tr>
+ <td style="background-color: rgb(255, 255, 255);">&nbsp;</td>
+ <td style="text-align: center; vertical-align: middle; background-color: rgb(255, 255, 255);"><span style="color:#A52A2A"><span style="font-size:28px"><span style="font-family:arial,helvetica,sans-serif"><span style="text-align:center"><span style="background-color:#FFFFFF">-130 Lotes vendidos en 2016-</span></span></span></span><br />
+ <span style="font-size:48px"><span style="font-family:arial,helvetica,sans-serif"><span style="text-align:center"><span style="background-color:#FFFFFF">Llevamos 12 lotes vendidos en Enero 2017.</span></span></span></span></span></td>
+ <td style="background-color: rgb(255, 255, 255);">&nbsp;</td>
+ </tr>
+ <tr>
+ <td colspan="3" style="text-align: center; vertical-align: middle; height: 40px; background-color: rgb(255, 255, 255);">
+ <p>&nbsp;</p>
+ </td>
+ </tr>
+ <tr>
+ <td colspan="3" style="text-align: center; vertical-align: middle; height: 40px; background-color: rgb(255, 255, 255);">
+ <table align="center" border="0" cellpadding="1" cellspacing="1" style="width:500px">
+ <tbody>
+ <tr>
+ <td colspan="4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong style="color:rgb(102, 102, 102); font-family:arial,helvetica,sans-serif; font-size:26px">No pagas expensas hasta la entrega</strong>
+ <p><span style="font-size:26px"><font color="#666666" face="arial, helvetica, sans-serif">&nbsp;(Dentro de 2 a&ntilde;os y medio.)</font></span></p>
+
+ <p><span style="font-size:24px"><strong><span style="color:#666666"><span style="font-family:arial,helvetica,sans-serif; text-align:center"><span style="background-color:#FFFFFF">&nbsp;</span></span></span><span style="color:#666666"><span style="font-family:arial,helvetica,sans-serif; text-align:center"><span style="background-color:#FFFFFF">BARRIO CON CLUB HOUSE Y CANCHAS DE TENNIS PRIVADAS</span></span></span></strong></span></p>
+
+ <ul>
+ <li style="text-align: left;">&#8203;<span style="font-size:18px"><span style="color:#666666"><span style="font-family:arial,helvetica,sans-serif; text-align:center"><span style="background-color:#FFFFFF">Restaurante Todos los dias</span></span></span></span></li>
+ <li style="text-align: left;"><span style="font-size:18px"><span style="color:#666666"><span style="font-family:arial,helvetica,sans-serif; text-align:center"><span style="background-color:#FFFFFF">Guarder&iacute;a para ni&ntilde;os</span></span></span></span></li>
+ <li style="text-align: left;"><span style="font-size:18px"><span style="color:#666666"><span style="font-family:arial,helvetica,sans-serif; text-align:center"><span style="background-color:#FFFFFF">Reserva ecol&oacute;gica con actividades todos los fines de semana a caballo y en bicicleta</span></span></span></span></li>
+ <li style="text-align: left;"><span style="font-size:18px"><span style="color:#666666"><span style="font-family:arial,helvetica,sans-serif; text-align:center"><span style="background-color:#FFFFFF">Bicicletas en toda la ciudad.</span></span></span></span></li>
+ <li style="text-align: left;"><span style="font-size:18px"><span style="color:#666666"><span style="font-family:arial,helvetica,sans-serif; text-align:center"><span style="background-color:#FFFFFF">Club deportivo - Canchas de Tennis - Cancha de futbol</span></span></span></span></li>
+ <li style="text-align: left;"><span style="font-size:18px"><span style="color:#666666"><span style="font-family:arial,helvetica,sans-serif; text-align:center"><span style="background-color:#FFFFFF">Hay actividades todos los d&iacute;as de la semana: Clases de Futbol y Tennis.&nbsp;</span></span></span></span></li>
+ <li style="text-align: left;"><span style="font-size:18px"><span style="color:#666666"><span style="font-family:arial,helvetica,sans-serif; text-align:center"><span style="background-color:#FFFFFF">Proveduria completa</span></span></span></span></li>
+ <li style="text-align: left;"><span style="font-size:18px"><span style="color:#666666"><span style="font-family:arial,helvetica,sans-serif; text-align:center"><span style="background-color:#FFFFFF">Atenci&oacute;n medica las 24hs</span></span></span></span></li>
+ <li style="text-align: left;"><span style="font-size:18px"><span style="color:#666666"><span style="font-family:arial,helvetica,sans-serif; text-align:center"><span style="background-color:#FFFFFF">Actividades Nauticas - Kayak - stand up paddle - Windsurf - Remo - KiteSurf</span></span></span></span></li>
+ <li style="text-align: left;"><span style="font-size:18px"><span style="color:#666666"><span style="font-family:arial,helvetica,sans-serif; text-align:center"><span style="background-color:#FFFFFF">&nbsp;Wakepark y Playa sobre el lago</span></span></span></span></li>
+ </ul>
+ </td>
+ </tr>
+ <tr>
+ <td>&nbsp;</td>
+ <td style="width: 15px;">&nbsp;</td>
+ <td style="width: 15px;"><a data-linkid="link_5888b65f36df1" href="http://track.mdrctr.com/track/link/key/10144-116-215-1-42049/signature/ebc0ba67abf4507cac828126848efc93/contactInfo/Y29uSWQ9NDIwNDl%2BfmVtYWlsPWpwcnVhdGFAZmFwZXJzYS5jb21%2Bfm1vdmlsPS1%2BfnN1YklkPTExNn5%2BbGlzdElkPTF%2BfnNuYXBJZD01NjM5N35%2BbWRQYXJ0cz0xfn5tZEVtYWlsTUQ1PTcyZDZkNWI0NDRkYWRlYzRjM2ZiZjdhOGEzNGU5NDBmfn5jb25fbWQ1PWRjZDgzOTM3MGEzYmIxMjA2ZGY4NDk4ZjEwMjM3NmYy/userid/72d6d5b444dadec4c3fbf7a8a34e940f"><img alt="" src="http://static.mdirector.com/files/campanias/34854/userfiles/images/Lago%20Central/Master%20Nuevo%20Barrio.jpg" style="height:200px; width:400px" /></a></td>
+ <td style="text-align: left;"><img alt="" src="http://static.mdirector.com/files/campanias/34854/userfiles/images/35y36.jpg" style="height:200px; width:400px" /></td>
+ </tr>
+ <tr>
+ <td>&nbsp;</td>
+ <td style="width: 15px;">&nbsp;</td>
+ <td colspan="2" rowspan="1" style="width: 15px;"><span style="color:#696969"><strong><span style="font-family:lucida sans unicode,lucida grande,sans-serif">Llamanos y agendamos tu visita:<br />
+ 15 5450 1968</span></strong></span></td>
+ </tr>
+ </tbody>
+ </table>
+ </td>
+ </tr>
+ <tr>
+ <td colspan="3" style="text-align: center; vertical-align: middle; height: 20px; background-color: rgb(241, 86, 93);">&nbsp;</td>
+ </tr>
+ <tr>
+ <td colspan="3" style="background-color: rgb(255, 255, 255);">&nbsp;</td>
+ </tr>
+ <tr>
+ <td colspan="3">
+ <table border="0" cellpadding="0" cellspacing="0" style="width:650px">
+ <tbody>
+ <tr>
+ </tr>
+ </tbody>
+ </table>
+
+ <table align="center" border="0" cellpadding="0" cellspacing="0" style="width:600px">
+ <tbody>
+ <tr>
+ <td align="center" height="110" rowspan="3" valign="bottom" width="92">
+ <table align="center" border="0" cellpadding="1" cellspacing="1">
+ <tbody>
+ <tr>
+ <td rowspan="5">&nbsp;</td>
+ <td rowspan="5"><img alt="" src="http://www.tizado.com/html/Firmas-D/nda/images/foto-jessica.jpg" style="height:85px; width:74px" /></td>
+ </tr>
+ </tbody>
+ </table>
+ </td>
+ <td rowspan="3" style="padding-left:5px" valign="bottom" width="162"><img alt="logo" src="http://static.mdirector.com/files/campanias/10144/userfiles/images/Ciudad%20Pueblo/unnamed%20(4).jpg" style="height:59px; width:149px" /></td>
+ <td height="5">&nbsp;</td>
+ <td>&nbsp;</td>
+ <td>&nbsp;</td>
+ </tr>
+ <tr>
+ <td height="5" width="15">&nbsp;</td>
+ <td rowspan="2" valign="bottom"><span style="font-size:12px"><span style="font-family:arial,helvetica,sans-serif"><strong style="font-size:1.2em; font-weight:bold; text-transform:uppercase">Jessica janet scaraville&nbsp;</strong><br />
+ Recepci&oacute;n</span></span><br />
+ <span style="font-family:arial,helvetica,sans-serif"><span style="font-size:12px"><strong style="color:rgba(226,10,18,1.00); font-size:1.1em; font-weight:bold">4871 0200 | 15 5450 1968</strong>&nbsp;| jessicas@tizado.com</span></span><br />
+ <span style="font-size:12px"><span style="font-family:arial,helvetica,sans-serif">Centro de Informes Puertos/Lago Escobar</span></span><br />
+ <span style="font-size:12px"><span style="font-family:arial,helvetica,sans-serif"><span style="color:rgb(122, 122, 122)">Panamericana ramal Escobar km 44 Pcia.Bs As</span></span></span></td>
+ <td rowspan="2" valign="bottom">&nbsp;</td>
+ </tr>
+ <tr>
+ <td height="51" style="border-left:solid 0.3em rgba(226,9,15,1.00);">&nbsp;</td>
+ </tr>
+ </tbody>
+ </table>
+ </td>
+ </tr>
+ <tr>
+ <td colspan="3" style="height: 20px;">&nbsp;</td>
+ </tr>
+ </tbody>
+</table>
+<!-- // END TEMPLATE --></center>
+<table style="max-width:550px;" width="" border="0" cellpadding="0" cellspacing="0" align="center">
+    <tr>
+        <td style="max-width:6px;" height="6">
+            <img src="http://static.2013.mdirector.com/images/email/footer/esq_sup_izq.gif" alt="">
+        </td>
+        <td style="max-width:538px;" bgcolor="#ffffff"></td>
+        <td style="max-width:6px;" height="6">
+            <img src="http://static.2013.mdirector.com/images/email/footer/esq_sup_dcha.gif" alt="">
+        </td>
+    </tr>
+    <tr>
+        <td style="max-width:6px;" bgcolor="#ffffff"></td>
+        <td style="max-width:538px;" bgcolor="#ffffff" valign="top" align="justify">
+            <font size="1" color="#8c8c8c" face="Verdana">
+            Para dejar de recibir estas comunicaciones haga clic en
+            <a style="color: #FF8549;" href='http://track.mdrctr.com/track/pre-unsubscribe/category/EMAIL/empId/10144/subId/116/listId/1/conId/42049/signature/ebc0ba67abf4507cac828126848efc93/conEmail/jpruata@fapersa.com/conMovil/-'>baja</a>.
+            </font>
+        </td>
+        <td style="max-width:6px;" bgcolor="#ffffff"></td>
+    </tr>
+    <tr>
+        <td style="max-width:6px;" height="6">
+            <img src="http://static.2013.mdirector.com/images/email/footer/esq_inf_izq.gif" alt="">
+        </td>
+        <td style="max-width:538px;" bgcolor="#ffffff"></td>
+        <td style="max-width:6px;" height="6">
+            <img src="http://static.2013.mdirector.com/images/email/footer/esq_inf_dcha.gif" alt="">
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
+
+--boundaryTagForAlternative--
+
+--boundaryTagForMixed--

@@ -1,0 +1,617 @@
+Return-Path: <0100015b58e0ae5e-1ef0b577-67ca-46f2-b6e3-0ba1a120a00a-000000@amazonses.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id mSnbF62+61hmRQAATLP0zA
+	for <jpruata@fapersa.com>; Mon, 10 Apr 2017 14:19:41 -0300
+Return-path: <0100015b58e0ae5e-1ef0b577-67ca-46f2-b6e3-0ba1a120a00a-000000@amazonses.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Mon, 10 Apr 2017 14:19:41 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:52077 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.88)
+	(envelope-from <0100015b58e0ae5e-1ef0b577-67ca-46f2-b6e3-0ba1a120a00a-000000@amazonses.com>)
+	id 1cxcya-00077I-Mn
+	for jpruata@fapersa.com; Mon, 10 Apr 2017 14:19:41 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 4532A7F134
+	for <jpruata@fapersa.com>; Mon, 10 Apr 2017 14:19:40 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id KZVT0CYYpYQY for <jpruata@fapersa.com>;
+	Mon, 10 Apr 2017 14:19:39 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 6304C7F231; Mon, 10 Apr 2017 14:19:39 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 4A95A7F134
+	for <jpruata@fapersa.com>; Mon, 10 Apr 2017 14:19:37 -0300 (ART)
+Received-SPF: pass (amazonses.com: 54.240.11.144 is authorized to use '0100015b58e0ae5e-1ef0b577-67ca-46f2-b6e3-0ba1a120a00a-000000@amazonses.com' in 'mfrom' identity (mechanism 'ip4:54.240.0.0/18' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="0100015b58e0ae5e-1ef0b577-67ca-46f2-b6e3-0ba1a120a00a-000000@amazonses.com"; helo=a11-144.smtp-out.amazonses.com; client-ip=54.240.11.144
+Received: from a11-144.smtp-out.amazonses.com (a11-144.smtp-out.amazonses.com [54.240.11.144])
+	by fw.fapersa.com (Postfix) with ESMTPS id 6DB265FF64
+	for <jpruata@fapersa.com>; Mon, 10 Apr 2017 14:19:34 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=kytmahdeswfyzm5xkif7ggpdux3zbctl; d=viajes.almundoar.com;
+	t=1491844771;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Date;
+	bh=wGu6U3DYdA03JjUONKp/vlTTJnSbkdxmUHpvvSJzsJM=;
+	b=Wvp3FeYk921vDIBufuO1TA9ZELrMkJRWXJ6dzGUv4qIUr/FQ6Lw26G3dO1G4I7Lu
+	sKSZaoHQLI7vEC1BTKpRlApZwjZTESW2sFbEXUnqIq4aQfHo9s1R3U2iWozMx8UKbAC
+	uEvrnn1vD9oqyHiL4XITFcklX4rb7aewv40PzE9c=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=224i4yxa5dv7c2xz3womw6peuasteono; d=amazonses.com; t=1491844771;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Date:Feedback-ID;
+	bh=wGu6U3DYdA03JjUONKp/vlTTJnSbkdxmUHpvvSJzsJM=;
+	b=I1xHe8fA8XzTmZLxNzUjYndOLi0Dnj3ypwsVTjIg3+hOWxdb4lzaEVQjs++MwKF8
+	CdRFn0f1dTY/+Ck/v6BZ7L+5V4cm4oaYOkuD+Iedf9pmd+IVX3JwZDEAyLKCEkq2bbZ
+	rIVc7AN/GJ5iuLH+rMN8ZVK+vyykxAeEUhOROQ5w=
+From: "=?UTF-8?Q?Almundo.com?=" <noresponder@viajes.almundoar.com>
+Reply-To: noresponder@viajes.almundoar.com
+To: jpruata@fapersa.com
+Subject: =?UTF-8?Q?Luciana_Maria,___=C2=A1Cambi=C3=A1_esa_cara_d?=
+ =?UTF-8?Q?e_lunes!_Eleg=C3=AD_viajar_con_Promo_2D.?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1876658_1298254230.1491844771424"
+Message-ID: <0100015b58e0ae5e-1ef0b577-67ca-46f2-b6e3-0ba1a120a00a-000000@email.amazonses.com>
+Date: Mon, 10 Apr 2017 17:19:31 +0000
+X-SES-Outgoing: 2017.04.10-54.240.11.144
+Feedback-ID: 1.us-east-1.DWLlRKmBtI6c0h8XIqGCJwVwQj+b24fD7145ysboAFw=:AmazonSES
+
+------=_Part_1876658_1298254230.1491844771424
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+=C2=A12 destinos al precio de 1!
+
+[Almundo]
+[https://almundo.com.ar?utm_source=3Danigamy&utm_medium=3Demail&utm_term=3D=
+generico&utm_content=3D20170410_promo2d_logo&utm_campaign=3Demail_20170410_=
+promo2d_logo]
+
+[BARCEYORK VUELOS2D NUEVA YORK + BARCELONA]
+[https://almundo.com.ar/promociones/2d?utm_source=3Danigamy&utm_medium=3Dem=
+ail&utm_term=3Dgenerico&utm_content=3D20170410_promo2d_landing&utm_campaign=
+=3Demail_20170410_promo2d_landing]
+
+=C2=A0
+
+[HASTA 50 CUOTAS Y 24 CUOTAS]
+[https://almundo.com.ar/promociones/2d?utm_source=3Danigamy&utm_medium=3Dem=
+ail&utm_term=3Dgenerico&utm_content=3D20170410_promo2d_financiacion&utm_cam=
+paign=3Demail_20170410_promo2d_financiacion]
+
+=C2=A0
+
+[=C2=A1GANA UN VIAJE PARA 4 PERSONAS AL MUNDO DE WALT DISNEY!]
+[https://www.socialtools.me/apps.php?id=3D390919]
+
+=C2=A0
+
+0810 777 2728
+
+50 SUCURSALES. ABIERTO TODOS LOS DIAS EN LOS MEJORES SHOPPINGS DEL
+PAIS
+
+[Abierto todos los d=C3=ADas en los mejores shoppings del pa=C3=ADs]
+[https://almundo.com.ar/sucursales?utm_source=3Danigamy&utm_medium=3Demail&=
+utm_term=3Dgenerico&utm_content=3D20170410_promo2d_sucursales&utm_campaign=
+=3Demail_20170410_promo2d_sucursales]
+
+=C2=A0
+
+
+[https://almundo.com.ar/promociones-bancarias?utm_source=3Danigamy&utm_medi=
+um=3Demail&utm_term=3Dgenerico&utm_content=3D20170410_promo2d_cft&utm_campa=
+ign=3Demail_20170410_promo2d_cft]
+
+=C2=A0
+
+=C2=A0
+
+consulta bases y condiciones de las promociones bancarias en
+www.almundo.com.ar/promociones-bancarias. (1) banco macro: cartera de
+consumo. promocon desde el 01/04/2017 al 30/04/2017 para compras con
+tarjetas de cr=C3=A9dito visa, mastercard y american express de los bancos
+del grupo macro en almundo.com. con los siguientes beneficios: (1)
+hasta 6 cuotas sin inter=C3=A9s. no v=C3=A1lido para tarjetas de cr=C3=A9di=
+to
+empresa y/o agro. no acumulable con otras promociones. tna (tasa
+nominal anual) 0,00%, tea (tasa efectiva anual) 0,00%, cftea (costo
+financiero total efectivo anual) 0,00%. (2) en 9 y 12 cuotas fijas.
+consulte gastos de financiaci=C3=B3n impuestos por el comercio como as=C3=
+=AD
+tambi=C3=A9n monto final de la cuota. no v=C3=A1lido para tarjetas de cr=C3=
+=A9dito
+empresa y/o agro. no acumulable con otras promociones. tna (tasa
+nominal anual) 12,00%, tea (tasa efectiva anual) 12,70%, cft: (costo
+financiero total efectivo anual) 15,54% (3) en 18 y 24 cuotas fijas
+consulte gastos de financiaci=C3=B3n impuestos por el comercio como as=C3=
+=AD
+tambi=C3=A9n monto final de la cuota. no v=C3=A1lido para tarjetas de cr=C3=
+=A9dito
+empresa y/o agro. no acumulable con otras promociones. tna (tasa
+nominal anual) 15,00%, tea (tasa efectiva anual) 16,10%, cft: (costo
+financiero total efectivo anual) 19,75% consulte gastos de
+financiaci=C3=B3n ( tna, tea y cft) impuesto por el comercio como as=C3=AD
+tambi=C3=A9n monto final de la cuota en almundo.com. queda establecido que
+los datos y ofertas indicadas revisten car=C3=A1cter informativo y en modo
+alguno suponen que los establecimientos, productos y/o servicios que
+comercializan o la calidad de los mismos son promocionados o
+garantizados por los bancos del grupo macro, como as=C3=AD tampoco se
+responsabilizan por los cupones presentados fuera de t=C3=A9rmino por los
+comercios. asatej srl =E2=80=93 carlos pellegrini 887 =E2=80=93 piso 9 - ca=
+ba =E2=80=93
+cuit 30-65951462-8 - (leg. n=C2=B0 08362 - disp. 666/2008) para m=C3=A1s
+informaci=C3=B3n comun=C3=ADquese en forma previa a realizar la operaci=C3=
+=B3n
+telef=C3=B3nicamente al: 0810-555-2355 para banco macro o ac=C3=A9rquese a =
+la
+sucursal m=C3=A1s cercana a su domicilio. (2) banco provincia: tasa
+nominal anual para: 12, 24 y 50 cuotas: 19,00%; tasa efectiva anual
+para: (1) 12 cuotas: 20.11%; (2) 24 cuotas: 20,16%; (3) 50 cuotas:
+20,11%. ejemplo representativo: en la compra de un art=C3=ADculo en 50
+cuotas fijas, cuyo precio financiado es de $5.000, el cliente abonar=C3=A1
+50 cuotas de $100. el banco provincia no se responsabiliza por la
+calidad de los productos/servicios adquiridos. banco de la provincia
+de buenos aires. cuit 33-99924210-9. calle 7 n=C2=B0 726, la plata.
+cartera de consumo. (3) banco ciudad: promoci=C3=B3n v=C3=A1lida desde el
+18/02/2017 hasta el 31/03/2017 en la rep=C3=BAblica argentina para todos
+los d=C3=ADas en compras en pesos abonadas =C3=BAnicamente con tarjetas de
+cr=C3=A9dito mastercard, visa y cabal emitidas por el banco ciudad en 50
+cuotas en locales adheridos de almundo. la presente promoci=C3=B3n es
+v=C3=A1lida s=C3=B3lo para las compras de la cartera de consumo de tipo
+familiar no se acumulan a otras promociones vigentes. conforme res.
+51-e/2017. t.n.a.: 19,00%. t.e.a.: 20,11%. c.f.t. (iva incluido):
+26,64% variable. t.n.a.: tasa nominal anual. t.e.a: tasa efectiva
+anual. c.f.t.: costo financiero total expresado en forma de tasa
+efectiva anual con iva. (4) banco nacion: promoci=C3=B3n v=C3=A1lida hasta =
+el
+30/06/2017 abonando en 12, en 24 y en 50 cuotas fijas con tarjetas de
+cr=C3=A9dito nativa visa y nativa mastercard del banco naci=C3=B3n. exclusi=
+vo
+para cartera de consumo. excluye versiones corporativas. se recuerda
+que toda tarjeta visa o mastercard del banco naci=C3=B3n que a=C3=BAn no ha=
+ya
+sido renovada se considera igualmente nativa visa y nativa mastercard.
+tasa nominal anual (tna): 19,00%. tasa efectiva anual (tea): 20,75%.
+costo financiero total (cft) tea: 25,58%. para el c=C3=A1lculo del cft no
+se incluye el iva sobre los intereses, el que podr=C3=A1 ser trasladado al
+precio total financiado y no se consider=C3=B3 el mantenimiento de cuenta.
+el banco de la nacion argentina no se responsabiliza por la calidad de
+los productos/servicios adquiridos. (5) banco comafi: promociones
+v=C3=A1lidas desde el 01/04/2017 al 30/06/2017 abonando con tarjetas de
+cr=C3=A9dito visa y mastercard banco comafi, en la compra de paquetes
+tur=C3=ADsticos, hoteles .quedan excluidas tarjetas proven, provencred.
+promoci=C3=B3n no acumulable con otras promociones. las tarjetas deben
+tener l=C3=ADmite de compra disponible y no encontrarse en mora.(6) ver
+terminos y condiciones en www.almundo.com.ar/promociones-bancarias/.
+consulte con el banco emisor de su tarjeta de cr=C3=A9dito la cantidad de
+cuotas, como as=C3=AD tambi=C3=A9n el cftna, tna, tea y la eventual
+aplicaci=C3=B3n de cargos y/o seguros asociados a la operatoria en cuotas.
+vuelos: tarifas por persona ida y vuelta. vigencia de salidas: nueva
+york+miami: agosto a noviembre de 2017. nueva york+barcelona,
+miami+punta cana y miami+canc=C3=BAn: noviembre de 2017. roma+barcelona y
+roma+barcelona: octubre y noviembre de 2017. paquetes: tarifas por
+persona en habitaci=C3=B3n base doble, incluyen impuestos.
+vacacionesmagicas: http://bit.ly/vacacionesmagicasarg. asatej s.r.l.
+florida 825. evt: almundo.com. leg.n=C2=BA 8362 - disp.n=C2=BA 1350/93. cui=
+t
+n=C2=BA 30-65951462-8
+
+[Facebook] [https://www.facebook.com/almundo.argentina]
+[Twitter] [https://twitter.com/almundo_ar]
+[GOOGLE] [https://plus.google.com/+almundocom/posts]
+[BANNER]
+[https://almundo.com.ar?utm_source=3Danigamy&utm_medium=3Demail&utm_term=3D=
+generico&utm_content=3D20170410_promo2d_logo&utm_campaign=3Demail_20170410_=
+promo2d_logo]
+
+
+------=_Part_1876658_1298254230.1491844771424
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Dutf-8"><title></title></head><body><!DOCTYPE html PUBLIC "-//W3C//DTD XH=
+TML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitio=
+nal.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8">
+      <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scal=
+e=3D1.0">
+      <title>20170410-MKT-NL-ANIGAMY</title>
+      <!--[if gte mso 15]>
+      <style>
+         .tablegral {width:770px !important;}
+         .white {
+            color:#fff !important;
+          }
+         .content {background-color: white !important}
+      </style>
+      <![endif]-->
+         <style type=3D"text/css">
+=09=09body{
+=09=09=09margin:0;
+=09=09=09background:#FFFFFF;
+=09=09=09font-size:13px;
+=09=09=09font-family:arial, sans-serif;
+=09=09}
+=09=09table{
+=09=09=09border-collapse:collapse;
+=09=09}
+=09=09td{
+=09=09=09font-family:arial, sans-serif;
+=09=09=09color:#333333;
+=09=09}
+=09=09h2,h5{
+=09=09=09margin:0;
+=09=09}
+=09=09.fuente{
+=09=09=09font-size:18px !important;
+=09=09}
+=09=09.importantUltimate{
+=09=09=09font-size:12px !important;
+=09=09}
+=09=09a{
+=09=09=09text-decoration:none;
+=09=09}
+=09=09a:link{
+=09=09=09color:white;
+=09=09=09text-decoration:none;
+=09=09}
+=09=09a:visited{
+=09=09=09color:white;
+=09=09=09text-decoration:none;
+=09=09}
+=09=09.grey{
+=09=09=09color:#555 !important;
+=09=09}
+=09=09.white{
+=09=09=09color:#fff !important;
+=09=09}
+=09=09.orange{
+=09=09=09color:#de6700 !important;
+=09=09}
+=09=09.wider{
+=09=09=09table-layout:fixed;
+=09=09}
+=09=09.wider td{
+=09=09=09width:300px;
+=09=09}
+=09=09.wider_{
+=09=09=09table-layout:auto;
+=09=09}
+=09=09.wider_ td:nth-child(1){
+=09=09=09width:125px;
+=09=09}
+=09=09.wider_ td:nth-child(2){
+=09=09=09width:300px;
+=09=09}
+=09=09.wider_4{
+=09=09=09table-layout:auto;
+=09=09}
+=09=09.wider_4 td:nth-child(1){
+=09=09=09width:350px;
+=09=09}
+=09=09.wider_4 td:nth-child(2){
+=09=09=09width:250px;
+=09=09}
+=09=09.wider_2 td:nth-child(1){
+=09=09=09width:380px;
+=09=09}
+=09=09.wider_2 td:nth-child(2){
+=09=09=09width:5px;
+=09=09}
+=09=09.wider_3 td:nth-child(1){
+=09=09=09width:100px;
+=09=09}
+=09=09.wider_3 td:nth-child(2){
+=09=09=09width:200px;
+=09=09=09background-color:red;
+=09=09}
+=09=09.espacio{
+=09=09=09height:30px;
+=09=09}
+=09=09.wider_5{
+=09=09=09table-layout:fixed;
+=09=09}
+=09=09.wider_5 td{
+=09=09=09width:300px;
+=09=09}
+=09=09.espacio_1{
+=09=09=09height:10px;
+=09=09}
+=09=09.titulos p{
+=09=09=09margin-bottom:0px !important;
+=09=09}
+</style></head>
+   <body>
+<p></p>
+<p style=3D"font-size: 0px; line-height: 0px;">&iexcl;2 destinos al precio =
+de 1!</p>
+<table class=3D"content" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0"=
+ border=3D"0" bgcolor=3D"#f2f2f2" align=3D"center">
+<tbody>
+<tr>
+<td>
+<table style=3D"margin: 0 auto;" class=3D"tablegral" width=3D"600" cellspac=
+ing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center">
+<tbody>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td align=3D"center"><a href=3D"http://clicktracker.vacacionesverano.link.a=
+lmundoar.com/e/c/MlhLLzE3RnZYL2xLYms%3D" target=3D"_blank" rel=3D"noopener =
+noreferrer"> <img src=3D"http://clicktracker.vacacionesverano.link.almundoa=
+r.com/static/920/11390/logo-almundo.png" alt=3D"Almundo" style=3D"display: =
+block; width: 254px; height: 74px;" width=3D"254" height=3D"74" border=3D"0=
+" /> </a></td>
+</tr>
+<tr>
+<td class=3D"responsive-image" align=3D"center"><a href=3D"http://clicktrac=
+ker.vacacionesverano.link.almundoar.com/e/c/MlhLLzE3RnZYL2xLYmw%3D" target=
+=3D"_blank" rel=3D"noopener noreferrer"> <img src=3D"http://clicktracker.va=
+cacionesverano.link.almundoar.com/static/920/11390/news_dom_-12.46.55.jpg" =
+style=3D"display: block; width: 100%; background-color: #f58320; color: #ff=
+f; font-size: 2em; font-weight: 600;" alt=3D"BARCEYORK VUELOS2D NUEVA YORK =
++ BARCELONA" width=3D"600" height=3D"" border=3D"0" /> </a></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td class=3D"responsive-image" align=3D"center"><a href=3D"http://clicktrac=
+ker.vacacionesverano.link.almundoar.com/e/c/MlhLLzE3RnZYL2xLYm0%3D" target=
+=3D"_blank" rel=3D"noopener noreferrer"> <img src=3D"http://clicktracker.va=
+cacionesverano.link.almundoar.com/static/920/11390/news_dom_3-4.jpg" alt=3D=
+"HASTA 50 CUOTAS Y 24 CUOTAS" style=3D"display: block; width: 100%; font-si=
+ze: 2em; font-weight: 800; color: #000;" border=3D"0" /> </a></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td class=3D"responsive-image" style=3D"font-size: 0; padding: 0px;" align=
+=3D"center"><a href=3D"http://clicktracker.vacacionesverano.link.almundoar.=
+com/e/c/MlhLLzE3RnZYL2xLYm4%3D" target=3D"_blank" rel=3D"noopener noreferre=
+r"> <img src=3D"http://asanews.s3.amazonaws.com/wp-content/uploads/2017/03/=
+23191621/banner_news_2-1.jpg" alt=3D"&iexcl;GANA UN VIAJE PARA 4 PERSONAS A=
+L MUNDO DE WALT DISNEY!" style=3D"width: 100%; color: #fff; background-colo=
+r: #0f132e;" border=3D"0" /> </a></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td colspan=3D"4" style=3D"padding: 0px;">
+<table width=3D"100%" height=3D"50" cellspacing=3D"0" cellpadding=3D"0" bgc=
+olor=3D"#FFFFFF" align=3D"center">
+<tbody>
+<tr>
+<td><img src=3D"http://clicktracker.vacacionesverano.link.almundoar.com/sta=
+tic/920/11390/c6eb753d-3b02-4a95-b906-1e1b0e8efc03.png" style=3D"padding-le=
+ft: 7px;" border=3D"0" /></td>
+<td style=3D"padding-top: 2px; padding-left: 4px;" width=3D"15%" valign=3D"=
+middle" align=3D"left">
+<p style=3D"font-size: 10px !important; text-align: left; font-family: Aria=
+l,sans-serif;"><a href=3D"#" class=3D"grey" style=3D"cursor: link;">0810 77=
+7 2728</a></p>
+</td>
+<td><img src=3D"http://clicktracker.vacacionesverano.link.almundoar.com/sta=
+tic/920/11390/24926828-dc41-47f4-9fe1-d6c3f241e6cb.png" border=3D"0" /></td=
+>
+<td style=3D"padding-top: 2px; padding-left: 5px;" width=3D"75%" valign=3D"=
+middle" align=3D"left">
+<p style=3D"font-size: 10px !important; text-align: left; color: #5a5a5d; f=
+ont-family: Arial,sans-serif;"><strong>50 SUCURSALES.</strong> ABIERTO TODO=
+S LOS DIAS EN LOS <strong>MEJORES SHOPPINGS DEL PAIS</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td class=3D"responsive-image" style=3D"padding: 0px; margin-bottom: 10px;"=
+ align=3D"center"><a href=3D"http://clicktracker.vacacionesverano.link.almu=
+ndoar.com/e/c/MlhLLzE3RnZYL2xLYm8%3D" target=3D"_blank" rel=3D"noopener nor=
+eferrer"> <img src=3D"http://clicktracker.vacacionesverano.link.almundoar.c=
+om/static/920/11390/sucursales_ago.png" alt=3D"Abierto todos los d&iacute;a=
+s en los mejores shoppings del pa&iacute;s" style=3D"display: block;" width=
+=3D"600" border=3D"0" /> </a></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td class=3D"responsive-image" align=3D"center"><a href=3D"http://clicktrac=
+ker.vacacionesverano.link.almundoar.com/e/c/MlhLLzE3RnZYL2xLYnA%3D" target=
+=3D"_blank" rel=3D"noopener noreferrer"> <img src=3D"http://clicktracker.va=
+cacionesverano.link.almundoar.com/static/920/11390/banner_CFT_1.gif" style=
+=3D"display: block; width: 100%;" border=3D"0" /> </a></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>
+<table width=3D"100%" cellpadding=3D"0" bgcolor=3D"#FFFFFF">
+<tbody>
+<tr>
+<td>
+<table width=3D"600" align=3D"center">
+<tbody>
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td style=3D"padding-left: 20px; padding-right: 20px; font-size: 11px !impo=
+rtant; text-align: justify;">consulta bases y condiciones de las promocione=
+s bancarias en www.almundo.com.ar/promociones-bancarias. (1) banco macro: c=
+artera de consumo. promocon desde el 01/04/2017 al 30/04/2017 para compras =
+con tarjetas de cr&eacute;dito visa, mastercard y american express de los b=
+ancos del grupo macro en almundo.com. con los siguientes beneficios: (1) ha=
+sta 6 cuotas sin inter&eacute;s. no v&aacute;lido para tarjetas de cr&eacut=
+e;dito empresa y/o agro. no acumulable con otras promociones. tna (tasa nom=
+inal anual) 0,00%, tea (tasa efectiva anual) 0,00%, cftea (costo financiero=
+ total efectivo anual) 0,00%. (2) en 9 y 12 cuotas fijas. consulte gastos d=
+e financiaci&oacute;n impuestos por el comercio como as&iacute; tambi&eacut=
+e;n monto final de la cuota. no v&aacute;lido para tarjetas de cr&eacute;di=
+to empresa y/o agro. no acumulable con otras promociones. tna (tasa nominal=
+ anual) 12,00%, tea (tasa efectiva anual) 12,70%, cft: (costo financiero to=
+tal efectivo anual) 15,54% (3) en 18 y 24 cuotas fijas consulte gastos de f=
+inanciaci&oacute;n impuestos por el comercio como as&iacute; tambi&eacute;n=
+ monto final de la cuota. no v&aacute;lido para tarjetas de cr&eacute;dito =
+empresa y/o agro. no acumulable con otras promociones. tna (tasa nominal an=
+ual) 15,00%, tea (tasa efectiva anual) 16,10%, cft: (costo financiero total=
+ efectivo anual) 19,75% consulte gastos de financiaci&oacute;n ( tna, tea y=
+ cft) impuesto por el comercio como as&iacute; tambi&eacute;n monto final d=
+e la cuota en almundo.com. queda establecido que los datos y ofertas indica=
+das revisten car&aacute;cter informativo y en modo alguno suponen que los e=
+stablecimientos, productos y/o servicios que comercializan o la calidad de =
+los mismos son promocionados o garantizados por los bancos del grupo macro,=
+ como as&iacute; tampoco se responsabilizan por los cupones presentados fue=
+ra de t&eacute;rmino por los comercios. asatej srl &ndash; carlos pellegrin=
+i 887 &ndash; piso 9 - caba &ndash; cuit 30-65951462-8 - (leg. n&deg; 08362=
+ - disp. 666/2008) para m&aacute;s informaci&oacute;n comun&iacute;quese en=
+ forma previa a realizar la operaci&oacute;n telef&oacute;nicamente al: 081=
+0-555-2355 para banco macro o ac&eacute;rquese a la sucursal m&aacute;s cer=
+cana a su domicilio. (2) banco provincia: tasa nominal anual para: 12, 24 y=
+ 50 cuotas: 19,00%; tasa efectiva anual para: (1) 12 cuotas: 20.11%; (2) 24=
+ cuotas: 20,16%; (3) 50 cuotas: 20,11%. ejemplo representativo: en la compr=
+a de un art&iacute;culo en 50 cuotas fijas, cuyo precio financiado es de $5=
+.000, el cliente abonar&aacute; 50 cuotas de $100. el banco provincia no se=
+ responsabiliza por la calidad de los productos/servicios adquiridos. banco=
+ de la provincia de buenos aires. cuit 33-99924210-9. calle 7 n&deg; 726, l=
+a plata. cartera de consumo. (3) banco ciudad: promoci&oacute;n v&aacute;li=
+da desde el 18/02/2017 hasta el 31/03/2017 en la rep&uacute;blica argentina=
+ para todos los d&iacute;as en compras en pesos abonadas &uacute;nicamente =
+con tarjetas de cr&eacute;dito mastercard, visa y cabal emitidas por el ban=
+co ciudad en 50 cuotas en locales adheridos de almundo. la presente promoci=
+&oacute;n es v&aacute;lida s&oacute;lo para las compras de la cartera de co=
+nsumo de tipo familiar no se acumulan a otras promociones vigentes. conform=
+e res. 51-e/2017. t.n.a.: 19,00%. t.e.a.: 20,11%. c.f.t. (iva incluido): 26=
+,64% variable. t.n.a.: tasa nominal anual. t.e.a: tasa efectiva anual. c.f.=
+t.: costo financiero total expresado en forma de tasa efectiva anual con iv=
+a. (4) banco nacion: promoci&oacute;n v&aacute;lida hasta el 30/06/2017 abo=
+nando en 12, en 24 y en 50 cuotas fijas con tarjetas de cr&eacute;dito nati=
+va visa y nativa mastercard del banco naci&oacute;n. exclusivo para cartera=
+ de consumo. excluye versiones corporativas. se recuerda que toda tarjeta v=
+isa o mastercard del banco naci&oacute;n que a&uacute;n no haya sido renova=
+da se considera igualmente nativa visa y nativa mastercard. tasa nominal an=
+ual (tna): 19,00%. tasa efectiva anual (tea): 20,75%. costo financiero tota=
+l (cft) tea: 25,58%. para el c&aacute;lculo del cft no se incluye el iva so=
+bre los intereses, el que podr&aacute; ser trasladado al precio total finan=
+ciado y no se consider&oacute; el mantenimiento de cuenta. el banco de la n=
+acion argentina no se responsabiliza por la calidad de los productos/servic=
+ios adquiridos. (5) banco comafi: promociones v&aacute;lidas desde el 01/04=
+/2017 al 30/06/2017 abonando con tarjetas de cr&eacute;dito visa y masterca=
+rd banco comafi, en la compra de paquetes tur&iacute;sticos, hoteles .queda=
+n excluidas tarjetas proven, provencred. promoci&oacute;n no acumulable con=
+ otras promociones. las tarjetas deben tener l&iacute;mite de compra dispon=
+ible y no encontrarse en mora.(6) ver terminos y condiciones en www.almundo=
+.com.ar/promociones-bancarias/. consulte con el banco emisor de su tarjeta =
+de cr&eacute;dito la cantidad de cuotas, como as&iacute; tambi&eacute;n el =
+cftna, tna, tea y la eventual aplicaci&oacute;n de cargos y/o seguros asoci=
+ados a la operatoria en cuotas. vuelos: tarifas por persona ida y vuelta. v=
+igencia de salidas: nueva york+miami: agosto a noviembre de 2017. nueva yor=
+k+barcelona, miami+punta cana y miami+canc&uacute;n: noviembre de 2017. rom=
+a+barcelona y roma+barcelona: octubre y noviembre de 2017. paquetes: tarifa=
+s por persona en habitaci&oacute;n base doble, incluyen impuestos. vacacion=
+esmagicas: http://bit.ly/vacacionesmagicasarg. asatej s.r.l. florida 825. e=
+vt: almundo.com. leg.n&ordm; 8362 - disp.n&ordm; 1350/93. cuit n&ordm; 30-6=
+5951462-8</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width=3D"600" cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+<tbody>
+<tr bgcolor=3D"#fff">
+<td class=3D"responsive-image-icon" style=3D"font-size: 12px; padding-left:=
+ 8px;" width=3D"21" bgcolor=3D"#fff" align=3D"center"><a href=3D"http://cli=
+cktracker.vacacionesverano.link.almundoar.com/e/c/MlhLLzE3RnZYL2xLNGc%3D" t=
+arget=3D"_blank" rel=3D"noopener noreferrer"> <img src=3D"http://clicktrack=
+er.vacacionesverano.link.almundoar.com/static/920/11390/fb.png" alt=3D"Face=
+book" style=3D"display: block;" border=3D"0" /> </a></td>
+<td class=3D"responsive-image-icon" style=3D"font-size: 12px;" width=3D"21"=
+ bgcolor=3D"#fff" align=3D"center"><a href=3D"http://clicktracker.vacacione=
+sverano.link.almundoar.com/e/c/MlhLLzE3RnZYL2xLNGg%3D" target=3D"_blank" re=
+l=3D"noopener noreferrer"> <img src=3D"http://clicktracker.vacacionesverano=
+.link.almundoar.com/static/920/11390/tw.png" alt=3D"Twitter" style=3D"displ=
+ay: block;" border=3D"0" /> </a></td>
+<td class=3D"responsive-image-icon" style=3D"font-size: 12px;" width=3D"21"=
+ bgcolor=3D"#fff" align=3D"center"><a href=3D"http://clicktracker.vacacione=
+sverano.link.almundoar.com/e/c/MlhLLzE3RnZYL2xLNGk%3D" target=3D"_blank" re=
+l=3D"noopener noreferrer"> <img src=3D"http://clicktracker.vacacionesverano=
+.link.almundoar.com/static/920/11390/g.png" alt=3D"GOOGLE" style=3D"display=
+: block;" border=3D"0" /> </a></td>
+<td class=3D"responsive-image-title" style=3D"padding-right: 8px;" width=3D=
+"537" height=3D"66" bgcolor=3D"#fff" align=3D"right"><a href=3D"http://clic=
+ktracker.vacacionesverano.link.almundoar.com/e/c/MlhLLzE3RnZYL2xLYms%3D"> <=
+img src=3D"http://clicktracker.vacacionesverano.link.almundoar.com/static/9=
+20/11390/logo_footer.jpg" alt=3D"BANNER" style=3D"display: block; width: 16=
+6px; height: 44px;" border=3D"0" align=3D"right" /> </a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+</body>
+</html><table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" align=3D"center">
+                      <tbody>
+                        <tr>
+                          <td align=3D"center" style=3D"font-family:Arial,H=
+elvetica,sans-serif;">
+                          <span style=3D"font-family:Arial,Helvetica,sans-s=
+erif;font-size:12px;color:#999!important;">Para previsualizar este email en=
+ un navegador, hacer click <a style=3D"font-size:12px;color:#000!important"=
+ href=3D"http://clicktracker.vacacionesverano.link.almundoar.com/e/w/MlhLLz=
+E3RnZY">aqu=C3=AD</a>.</span>
+                        </td>
+                        </tr>
+                      </tbody>
+                    </table><br><br><br><table width=3D"600" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" align=3D"center">
+                              <tbody>
+                                <tr>
+                                  <td align=3D"center" style=3D"font-family=
+:Arial,Helvetica,sans-serif;">
+                                  <span style=3D"font-family:Arial,Helvetic=
+a,sans-serif;font-size:12px;color:#999!important;">Para no recibir m=C3=A1s=
+ comunicaciones de este tipo, usted puede <a style=3D"font-size:12px;color:=
+#000!important" href=3D"http://clicktracker.vacacionesverano.link.almundoar=
+.com/e/u/MlhLLzE3RnZY">DESUSCRIBIRSE</a>.</span>
+                                  <br><br>
+                                  <a style=3D"font-size:12px;color:#999!imp=
+ortant" href=3D"http://clicktracker.vacacionesverano.link.almundoar.com/e/a=
+/MlhLLzE3RnZY">Reportar abuso en el env=C3=ADo</a> | <span style=3D"font-fa=
+mily:Arial,Helvetica,sans-serif;font-size:12px;color:#999!important"> Corre=
+o enviado a: jpruata@fapersa.com</span>
+                                </td>
+                                </tr>
+                              </tbody>
+                            </table><br><br><img src=3D"http://clicktracker=
+.vacacionesverano.link.almundoar.com/e/o/MlhLLzE3RnZY" style=3D" visibility=
+:hidden; display:none;" alt=3D"" title=3D"" width=3D"1" height=3D"1" /></bo=
+dy></html>
+------=_Part_1876658_1298254230.1491844771424--

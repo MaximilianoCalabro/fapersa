@@ -1,0 +1,783 @@
+Return-Path: <latam@mail.latam.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id MbzjL0U2ClkuKgAATLP0zA
+	for <jpruata@fapersa.com>; Wed, 03 May 2017 16:57:57 -0300
+Return-path: <latam@mail.latam.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Wed, 03 May 2017 16:57:57 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:55384 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <latam@mail.latam.com>)
+	id 1d60PM-0004Ei-Uj
+	for jpruata@fapersa.com; Wed, 03 May 2017 16:57:57 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 15CA47F211
+	for <jpruata@fapersa.com>; Wed,  3 May 2017 16:57:57 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id lFFgubKD273a for <jpruata@fapersa.com>;
+	Wed,  3 May 2017 16:57:56 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 890887F231; Wed,  3 May 2017 16:57:56 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 43C757F211
+	for <jpruata@fapersa.com>; Wed,  3 May 2017 16:57:55 -0300 (ART)
+Received-SPF: pass (mail.latam.com: 12.130.153.143 is authorized to use 'latam@mail.latam.com' in 'mfrom' identity (mechanism 'ip4:12.130.153.0/24' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="latam@mail.latam.com"; helo=omp.mail.latam.com; client-ip=12.130.153.143
+Received: from omp.mail.latam.com (omp.mail.latam.com [12.130.153.143])
+	by fw.fapersa.com (Postfix) with ESMTP id 458AA5FE38
+	for <jpruata@fapersa.com>; Wed,  3 May 2017 16:57:53 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=latam; d=mail.latam.com;
+ h=MIME-Version:Content-Type:Content-Transfer-Encoding:Date:To:From:Reply-To:Subject:List-Unsubscribe:Message-ID; i=latam@mail.latam.com;
+ bh=mOmor8dPDtQYfS4x4DY8HDvsI8U=;
+ b=CK/1D2ilYLmKij9O24njkKkeVnoglP+ZDEJs0AoE/Lj4KMkzXsEot1vvHxJMX+P+F6E8Emchu9LR
+   Sq7XXnwXL4e1wdf/lURRqDprUiZrP2WKvgPLKfx9/SZBh1fYlbCb6mT20xmvUap3e9MF+/Jg2RVR
+   GAspClkclm6OvKqfGEs=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=latam; d=mail.latam.com;
+ b=CVnJsmWYoquCBLVwNTlzitO+XKjhZeByPyFp8amniE4WNTBlHzMxjJ9m8BjNo3trM0BnUmP5dQly
+   Kp6BVjFi/tqGtksOFq0d5javllZNfiJyrSgnRmhMEEcgV4rUHrNPmkNEKyq46/oOjGEkvgALbIpM
+   rWc0GgQZgSAtgaqg/oM=;
+Received: by omp.mail.latam.com id h18r5a161vk1 for <jpruata@fapersa.com>; Wed, 3 May 2017 12:58:11 -0700 (envelope-from <latam@mail.latam.com>)
+X-CSA-Complaints: whitelist-complaints@eco.de
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Date: Wed, 3 May 2017 12:57:52 -0700
+To: jpruata@fapersa.com
+From: "LATAM Airlines" <latam@mail.latam.com>
+Reply-To: "LATAM Airlines" <reply@latam.com>
+Subject: =?UTF-8?B?WSBhIHZvcywgwr9Dw7NtbyB0ZSBndXN0YSB2b2xhcj8=?=
+Feedback-ID: 8075:2195282:oraclersys
+List-Unsubscribe: <http://mail.latam.com/pub/optout/UnsubscribeOneStepConfirmAction?YES=true&_ri_=X0Gzc2X%3DYQpglLjHJlTQGjWaHSzbJNR6bki8brcJB5KWbuuceiA3oAgUzcUrzdsj41zfDzgbdNbs5GWzbdJgzczeNyh&_ei_=EolaGGF4SNMvxFF7KucKuWN0GfaVsvar6FTv2Cgg9puhpJMzeVdVexNSWRLd2777tdNcoDp9lRh-Gw>, <mailto:unsubscribe-YQpglLjHJlTQGjWaHSzbJNR6bki8brcJB5KWbuuceiA3oAgUzcUrzdsj41zfDzgbdNbs5GWzbdJgzczeNyh@imh.rsys2.com?subject=List-Unsubscribe>
+X-sgxh1: rijmHlHxMHiLjkHQJhu
+X-rext: 5.interact2.Er4Ha1qcv0AIspCIjJc7Yd4ImmJLp6Uh6n3X3jZkrWSx9FIKvIkYE4qKcnXVvPo
+X-cid: latam.4495402
+Message-ID: <0.0.12F.15.1D2C44797D37A94.0@omp.mail.latam.com>
+
+<=21DOCTYPE html PUBLIC =22-//W3C//DTD XHTML 1=2E0 Transitional//EN=22 =22h=
+ttp://www=2Ew3=2Eorg/TR/xhtml1/DTD/xhtml1-transitional=2Edtd=22>
+<html hola_ext_inject=3D=22disabled=22 style=3D=22opacity: 1;=22 xmlns=3D=
+=22http://www=2Ew3=2Eorg/1999/xhtml=22>
+<head>
+   <meta content=3D=22text/html; charset=3DISO-8859-1=22 http-equiv=3D=22Co=
+ntent-Type=22 />
+   <meta content=3D=22width=3Ddevice-width, initial-scale=3D1, minimum-scal=
+e=3D1, maximum-scale=3D1=22 name=3D=22viewport=22 />
+   <meta content=3D=22noindex=22 name=3D=22googlebot=22 />
+   <meta content=3D=22noindex=22 name=3D=22robots=22 />
+   <link href=3D=22https://www=2Elatam=2Ecom/construyendo-latam/wp-content/=
+themes/latam-ES/favicon=2Eico=22 rel=3D=22shortcut icon=22 type=3D=22image/=
+png=22 />
+   <style type=3D=22text/css=22>body =7B
+      -webkit-text-size-adjust:none;
+      =7D
+      =40media only screen and (min-device-width : 320px) and (max-device-w=
+idth : 480px), (max-width : 480px) =7B
+        *=5Bclass=5D=2Econtent =7B
+          width: 100%;
+        =7D
+        *=5Bclass=5D=2EmobileTextCenter=7B
+          text-align:center =21important;
+        =7D
+        *=5Bclass=5D=2Ebanner =7B
+          width: 100% =21important;
+          height: auto =21important;
+        =7D
+        *=5Bclass=5D=2Eoferta =7B
+          width: 90% =21important;
+          height: auto =21important;
+        =7D
+        *=5Bclass=5D=2Ecalugaswinback =7B
+          width: 75%;
+          height: auto;
+        =7D
+        *=5Bclass=5D=2EmobileStack =7B
+          display:block;
+          width: 100% =21important;
+          margin-bottom:15px;
+        =7D
+        *=5Bclass=5D=2EmobileFormTexto =7B
+          display:block;
+          width: 100% =21important;
+          margin-bottom:15px;
+          font-size:12px =21important;
+        =7D
+        *=5Bclass=5D=2EmobileBotonera =7B
+          font-size:9px =21important;
+        =7D
+        *=5Bclass=5D=2Emobilemargin =7B
+          text-align:left =21important;
+          padding-left:15px;
+          padding-bottom:15px;
+          font-size:12px =21important;
+        =7D
+        *=5Bclass=5D=2EmobileBanner =7B
+          display:block;
+          width: 100% =21important;
+          margin-bottom:0px;
+        =7D
+        *=5Bclass=5D=2EmobileBanner1 =7B
+          display:block;
+          width: 100% =21important;
+          margin-bottom:0px;
+          text-align:left =21important;
+          margin-left:15px;
+        =7D
+        *=5Bclass=5D=2EmobileBanner2 =7B
+          display:block;
+          width: 100% =21important;
+          margin-bottom:0px;
+          text-align:left =21important;
+          margin-left:35px;
+        =7D
+        *=5Bclass=5D=2Eheader-mobile =7B
+          display:block;
+          width: 100% =21important;
+          font-size:5px;
+        =7D
+        *=5Bclass=5D=2EmobileHide =7B
+          display:none =21important;
+        =7D
+        *=5Bclass=5D=2Elogontime =7B
+          width: 60%;
+          =21important;
+          height: auto =21important;
+        =7D
+        *=5Bclass=5D=2Eontime =7B
+          text-align:center =21important;
+        =7D
+   </style>
+   <style type=3D=22text/css=22>a=2Edisabled =7B
+      pointer-events: none =21important;
+      cursor: default =21important;
+      =7D
+      a:link =7B
+        text-decoration:none;
+      =7D
+      /* Link no visitado*/
+      a:visited =7B
+        text-decoration:none;
+      =7D
+      /*Link visitado*/
+      a:active =7B
+        text-decoration:none;
+      =7D
+      /*Link activo*/
+      a:hover =7B
+        text-decoration:underline;
+      =7D
+      /*Mause sobre el link*/
+   </style>
+   <title>LATAM Airlines</title>
+</head>
+<body bgcolor=3D=22=23ededed=22><table cellpadding=3D=220=22 cellspacing=3D=
+=220=22 style=3D=22border: 0px; padding: 0px; margin: 0px; position: absolu=
+te; display: none; float: left=22>
+<tr>
+<td height=3D=221=22 style=3D=22font-size: 1px; line-height: 1px; padding: =
+0px;=22>
+<img height=3D=221=22 width=3D=221=22 style=3D =22padding: 0px 0px; =21impo=
+rtant; margin: 0px 0px; font-size: 1px; line-height: 1px;=22 src=3D=22http:=
+//mail=2Elatam=2Ecom/pub/as?_ri_=3DX0Gzc2X%3DYQpglLjHJlTQGjWaHSzbJNR6bki8br=
+cJB5KWbuuceiA3oAgUzcUrzdsj41zfDzgbdNbs5GWzbdJgzczeNyhVXHkMX%3Dw&_ei_=3DEola=
+GGF4SNMvxFF7KucKuWN0GfaVsvar6FTv2Cgg9puhpJMzeVdVexNSWRLd2777tdNcoDp9lRh-Gw=
+=2E=22></img>
+</td>
+</tr>
+</table>
+<table bgcolor=3D=22=23ededed=22 border=3D=220=22 cellspacing=3D=220=22 wid=
+th=3D=22100%=22>
+   <tbody>
+      <tr>
+         <td>
+         <table align=3D=22center=22 border=3D=220=22 cellpadding=3D=220=22=
+ cellspacing=3D=220=22 class=3D=22content=22 width=3D=22600=22>
+            <tbody>
+               <tr>
+                  <td data-content-region-name=3D=22Header01=22>
+<table align=3D=22center=22 bgcolor=3D=22=23ededed=22 border=3D=220=22 cell=
+padding=3D=220=22 cellspacing=3D=220=22 class=3D=22banner=22 width=3D=22600=
+=22>
+   <tbody>
+      <tr>
+         <td align=3D=22center=22 style=3D=22font-family:'Trebuchet MS', Ar=
+ial, Helvetica, sans-serif; color:=23929292; font-size:12px; padding:5px;=
+=22><strong>Nos contaste y te escuchamos=2E</strong></td>
+      </tr>
+   </tbody>
+</table>
+</td>
+               </tr>
+               <tr>
+                  <td bgcolor=3D=22=23FFFFFF=22 data-content-region-name=3D=
+=22Header02=22>
+<=21--
+	PREHEADER
+-->
+<table border=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22 width=
+=3D=22100%=22>
+   <tbody>
+      <tr>
+         <td width=3D=2225=22></td>
+         <td class=3D=22mobileHide=22 style=3D=22font-family:'Trebuchet MS'=
+, Arial, Helvetica, sans-serif; font-size:11px; color:=23808285; text-align=
+:left; padding-bottom:10px;=22 width=3D=22275=22>Agreg&aacute; <a style=3D=
+=22color:=23808285; text-decoration:underline;=22>latam=40mail=2Elatam=2Eco=
+m</a> a tu lista de contactos</td>
+         <td class=3D=22mobileTextCenter=22 style=3D=22color:=23808285; tex=
+t-align:right; padding-bottom:10px;=22 width=3D=22275=22><a href=3D=22http:=
+//mail=2Elatam=2Ecom/pub/cc?_ri_=3DX0Gzc2X%3DYQpglLjHJlTQGjWaHSzbJNR6bki8br=
+cJB5KWbuuceiA3oAgUzcUrzdsj41zfDzgbdNbs5GWzbdJgzczeNyhVXtpKX%3DTRBSUTT&_ei_=
+=3DEpBjffNaEnMcpJV16WZrvIS-8xsFD9EFy3TFYkNNW88VwkZqVEbKooVtB5GSKdisU27HQnD6=
+o1TlzODNvBk9APAj1_-omooGSrm9HWhDesKrrZFgmjVRg4NjvaYPQoVlLk9Bu7_2GVGWVcbwOPY=
+4sxHRM7ApKinUW47Jf1HgJAA3oct42RugXrpZRs9ra0_LqvppZBMpUoj7HXcHB9EkIiH_6bAH5B=
+mv9M3hCbfQKVIspWxGnNXk4QDBSfDXMtwDomzq2BHXar8Ee1hewbTdoq6mfJn-f9KTzom3cLg79=
+W5IvGj2d0nncFxK=2E=22 style=3D=22font-family:'Trebuchet MS', Arial, Helveti=
+ca, sans-serif; font-size:11px; color:=23808285; text-decoration:none;=22 t=
+arget=3D=22_blank=22 title=3D=22Ver online=22>Ver online</a> =7C <a href=3D=
+=22http://mail=2Elatam=2Ecom/pub/cc?_ri_=3DX0Gzc2X%3DYQpglLjHJlTQGjWaHSzbJN=
+R6bki8brcJB5KWbuuceiA3oAgUzcUrzdsj41zfDzgbdNbs5GWzbdJgzczeNyhVXtpKX%3DTRBSU=
+WT&_ei_=3DEiwPQ42l-mBFJGD0ZPxQdvkJluwKno_Rqu2AflhfDAE8BrGdzBjcNJnoPFRXtKytG=
+sDV0iE97yY_vJdT3n9wI6QB8xD4vaEI-ClrtUWMEzxQMmIgcQ1oa08iuivWi-eaXR57rtJb7rRV=
+4Wsc_1gGOKc6a0W5l9-V8AnSxLPru7fqGGeKy41aC8XHZ0AKD6bwx9s7rKqsVS9cc8HEsBRkNr7=
+4CJUnNvW58KpfI54B2mPPqyxfpxQTBz7o6J8fyBo7U356hhuS5ReLJmKtdWiIemc-EDhVBKLiLj=
+Ya0DOMm01kychuOU-UpqtZwU0z9EbMhXfNEmTV8R-wo_dnmYJH7ufa28H_1GIX7C2VBiVHT5_Q2=
+UzPsKRpl6TKk3b6mrfJl0IFaI8qOEMWK7bfQ7G8zoaLQDvRPExO-oB1-y-l4fFyFrkv4l3dsmNy=
+IvInLig=2E=22 style=3D=22font-family:'Trebuchet MS', Arial, Helvetica, sans=
+-serif; font-size:11px; color:=23808285; text-decoration:none;=22 target=3D=
+=22_blank=22 title=3D=22Anular Suscripci=C3=B3n=22>Anular Suscripci&oacute;=
+n</a></td>
+         <td width=3D=2225=22></td>
+      </tr>
+   </tbody>
+</table>
+<=21--
+	PREHEADER
+--><=21--
+	HEADER
+-->
+
+<table align=3D=22center=22 bgcolor=3D=22=23ededed=22 border=3D=220=22 cell=
+padding=3D=220=22 cellspacing=3D=220=22 class=3D=22mobileHide=22 width=3D=
+=22600=22>
+   <tbody>
+      <tr>
+         <td>
+         <table border=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=
+=22 width=3D=22100%=22>
+            <tbody>
+               <tr>
+                  <td align=3D=22center=22><img border=3D=220=22 class=3D=
+=22oferta=22 height=3D=221=22 src=3D=22http://static=2Ecdn=2Eresponsys=2Ene=
+t/i2/responsysimages/latam/contentlibrary/ar/bloques/estaticos/header_latam=
+/Files/H1=2Ejpg=22 style=3D=22display:block;=22 width=3D=22300=22 /></td>
+               </tr>
+            </tbody>
+         </table>
+         </td>
+         <td>
+         <table border=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=
+=22 width=3D=22100%=22>
+            <tbody>
+               <tr>
+                  <td align=3D=22center=22><img border=3D=220=22 class=3D=
+=22oferta=22 height=3D=221=22 src=3D=22http://static=2Ecdn=2Eresponsys=2Ene=
+t/i2/responsysimages/latam/contentlibrary/ar/bloques/estaticos/header_latam=
+/Files/H2=2Ejpg=22 style=3D=22display:block;=22 width=3D=22300=22 /></td>
+               </tr>
+            </tbody>
+         </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+
+<table bgcolor=3D=22=231B0088=22 border=3D=220=22 cellpadding=3D=220=22 cel=
+lspacing=3D=220=22 height=3D=2280=22 width=3D=22100%=22>
+   <tbody>
+      <tr>
+         <td>
+         <table border=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=
+=22 width=3D=22100%=22>
+            <tbody>
+               <tr>
+                  <td class=3D=22mobileHide=22 width=3D=2225=22></td>
+                  <td align=3D=22center=22 class=3D=22mobileBanner=22 width=
+=3D=22143=22><a href=3D=22http://mail=2Elatam=2Ecom/pub/cc?_ri_=3DX0Gzc2X%3=
+DYQpglLjHJlTQGjWaHSzbJNR6bki8brcJB5KWbuuceiA3oAgUzcUrzdsj41zfDzgbdNbs5GWzbd=
+JgzczeNyhVXtpKX%3DTRBSUAT&_ei_=3DEpBjffNaEnMcpJV16WZrvIS-8xsFD9EFy3TFYkNNW8=
+8VwkZqVEbKooVtB5GSKdisU27HQnD6o1TlzODNvBk9APAj1_-omooGSrm9HWhDesKrrZFgmjVRg=
+4NjvaYPQoVlLk9Bu7_2GVGWVcbwOPY4sxHRM7ApKinUW47Jf1HgJAA3oct42RugXrpZRs9ra0_L=
+qvppZBMpUoj7HXcHB9EkIiH_6bAH5Bmv9M3hCbfQKVIspWxGnNXk4QDBSfDXMtwDomzq2BHXar8=
+Ee1hewbTdoq6mfJn-f9KTzom3cLg79W5IvGj2d0nncFxK=2E=22 target=3D=22_blank=22 t=
+itle=3D=22LATAM Airlines=22><img alt=3D=22LATAM Airlines=22 border=3D=220=
+=22 height=3D=2280=22 src=3D=22http://static=2Ecdn=2Eresponsys=2Enet/i2/res=
+ponsysimages/latam/contentlibrary/ar/bloques/estaticos/header_latam/Files/l=
+ogo_latam-airlines=2Epng=22 style=3D=22font-family:'Trebuchet MS', Arial, H=
+elvetica, sans-serif; color:=23FFF; font-size:18px;=22 title=3D=22LATAM Air=
+lines=22 width=3D=22143=22 /></a></td>
+                  <td class=3D=22mobileHide=22 width=3D=22370=22></td>
+                  <td class=3D=22mobileHide=22 width=3D=2237=22><a href=3D=
+=22http://mail=2Elatam=2Ecom/pub/cc?_ri_=3DX0Gzc2X%3DYQpglLjHJlTQGjWaHSzbJN=
+R6bki8brcJB5KWbuuceiA3oAgUzcUrzdsj41zfDzgbdNbs5GWzbdJgzczeNyhVXtpKX%3DTRBSU=
+AT&_ei_=3DEpBjffNaEnMcpJV16WZrvIS-8xsFD9EFy3TFYkNNW88VwkZqVEbKooVtB5GSKdisU=
+27HQnD6o1TlzODNvBk9APAj1_-omooGSrm9HWhDesKrrZFgmjVRg4NjvaYPQoVlLk9Bu7_2GVGW=
+VcbwOPY4sxHRM7ApKinUW47Jf1HgJAA3oct42RugXrpZRs9ra0_LqvppZBMpUoj7HXcHB9EkIiH=
+_6bAH5Bmv9M3hCbfQKVIspWxGnNXk4QDBSfDXMtwDomzq2BHXar8Ee1hewbTdoq6mfJn-f9KTzo=
+m3cLg79W5IvGj2d0nncFxK=2E=22 target=3D=22_blank=22 title=3D=22LATAM Airline=
+s=22><img alt=3D=22oneworld=22 border=3D=220=22 height=3D=2237=22 src=3D=22=
+http://static=2Ecdn=2Eresponsys=2Enet/i2/responsysimages/latam/contentlibra=
+ry/ar/bloques/estaticos/header_latam/Files/logo_ow=2Epng=22 title=3D=22onew=
+orld=22 width=3D=2237=22 /></a></td>
+                  <td class=3D=22mobileHide=22 width=3D=2225=22></td>
+               </tr>
+            </tbody>
+         </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<=21--
+	HEADER
+--><=21--
+	CONTENIDO FINAL
+-->
+</td>
+               </tr>
+               <tr>
+                  <td bgcolor=3D=22=23FFFFFF=22 data-content-region-name=3D=
+=22Content01=22>
+<=21-- BANNER 600X504 -->
+<table align=3D=22center=22 border=3D=220=22 cellpadding=3D=220=22 cellspac=
+ing=3D=220=22 class=3D=22banner=22 width=3D=22600=22>
+   <tbody>
+      <tr>
+         <td align=3D=22center=22 class=3D=22mobileBanner=22 valign=3D=22to=
+p=22 width=3D=22100%=22>
+         <table border=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=
+=22 width=3D=22100%=22>
+            <tbody>
+               <tr>
+                  <td align=3D=22center=22 class=3D=22mobileBanner=22 width=
+=3D=22100%=22><a href=3D=22http://mail=2Elatam=2Ecom/pub/cc?_ri_=3DX0Gzc2X%=
+3DYQpglLjHJlTQGjWaHSzbJNR6bki8brcJB5KWbuuceiA3oAgUzcUrzdsj41zfDzgbdNbs5GWzb=
+dJgzczeNyhVXtpKX%3DTSSWBCT&_ei_=3DEpBjffNaEnMcpJV16WZrvIS-8xsFD9EFy3TFYkNNW=
+88VwkZqVEbKooVtB5GSKdisU27HQnD6o1TlzODNvBk9APAj1_-omooGSrm9HWhDesKrrZFgmjVR=
+g4NjvaYPQoVlLk9Bu7_2GVGWVcbwOPY4sxHRM7ApKinUW47Jf1HgJAA3oct42RugXrpZRs9ra0_=
+LqvppZBMpUoj7HXcHB9EkIiH_6bAH5Bmv9M3hCbfQKVIspWxGnNXk4QDBSfDXMtwDomzq2BHXar=
+8Ee1hewbTdoq6mfJn-f9KTzom3cLg79W5IvGj2d0nncFxK=2E=22><img align=3D=22center=
+=22 alt=3D=22LibreVolador=22 border=3D=220=22 class=3D=22banner=22 height=
+=3D=22504=22 src=3D=22http://static=2Ecdn=2Eresponsys=2Enet/i2/responsysima=
+ges/latam/contentlibrary/ar/campanas/2017/04/25/mail_manifesto/Files/Img_pp=
+al_mfsto_AR=2Ejpg=22 style=3D=22display:block;=22 title=3D=22LibreVolador=
+=22 width=3D=22600=22 /></a></td>
+               </tr>
+            </tbody>
+         </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<=21-- BANNER 600X504 -->
+
+<table align=3D=22center=22 border=3D=220=22 cellpadding=3D=220=22 cellspac=
+ing=3D=220=22 class=3D=22banner=22 width=3D=22600=22>
+   <tbody>
+      <tr>
+         <td style=3D=22text-align:left; padding: 20px 20px 10px 20px; font=
+-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size: 16px; colo=
+r: =235c5c5c; background-color: =23FFFFFF;=22><strong>Hola Juan,</strong></=
+td>
+      </tr>
+      <tr>
+         <td style=3D=22text-align:justify; padding: 0px 20px 10px 20px; fo=
+nt-family:'Trebuchet MS', Arial, Helvetica, sans-serif,Verdana, Geneva; fon=
+t-size: 14px; color: =235c5c5c; background-color: =23FFFFFF;=22>
+         <p>Durante el 2016 m&aacute;s de 60 millones de personas volaron c=
+on nosotros y nos contaron c&oacute;mo les gusta volar=2E &iexcl;Los escuch=
+amos=21
+         </p>
+         Entendimos que quer&eacute;s tener m&aacute;s y mejores opciones p=
+ara elegir c&oacute;mo viajar=2E Ahora te invitamos a ser parte de los LIBR=
+EVOLADORES=2E Aquellos que manejan cada aspecto de su vuelo y aprovechan of=
+ertas incre&iacute;bles=2E
+
+         <p>y vos, &iquest;Sos un =23Librevolador?
+         </p>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<=21-- 1 BOTON DERECHO CORAL -->
+
+<table align=3D=22center=22 border=3D=220=22 cellpadding=3D=220=22 cellspac=
+ing=3D=220=22 class=3D=22banner=22 width=3D=22600=22>
+   <tbody>
+      <tr>
+         <td>
+         <table border=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=
+=22 width=3D=22100%=22>
+            <tbody>
+               <tr>
+                  <td bgcolor=3D=22=23ffffff=22 height=3D=2230=22></td>
+               </tr>
+            </tbody>
+         </table>
+
+         <table align=3D=22center=22 bgcolor=3D=22=23FFFFFF=22 border=3D=22=
+0=22 cellpadding=3D=220=22 cellspacing=3D=220=22 width=3D=22100%=22>
+            <tbody>
+            </tbody>
+            <tbody>
+               <tr>
+                  <td class=3D=22mobileStack=22 width=3D=22300=22>
+                  <table align=3D=22center=22 bgcolor=3D=22=23ed1650=22 bor=
+der=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22 style=3D=22border=
+-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-bord=
+er-radius: 5px 5px 5px 5px; border: 0px;=22 width=3D=22250=22>
+                     <tbody>
+                        <tr>
+                           <td style=3D=22font-family:'Trebuchet MS', Arial=
+, Helvetica, sans-serif; font-weight:bold; font-size:16px; color:=23fff; pa=
+dding:10px; text-align:center;=22><strong><a href=3D=22http://mail=2Elatam=
+=2Ecom/pub/cc?_ri_=3DX0Gzc2X%3DYQpglLjHJlTQGjWaHSzbJNR6bki8brcJB5KWbuuceiA3=
+oAgUzcUrzdsj41zfDzgbdNbs5GWzbdJgzczeNyhVXtpKX%3DTSSWCRT&_ei_=3DEpBjffNaEnMc=
+pJV16WZrvIS-8xsFD9EFy3TFYkNNW88VwkZqVEbKooVtB5GSKdisU27HQnD6o1TlzODNvBk9APA=
+j1_-omooGSrm9HWhDesKrrZFgmjVRg4NjvaYPQoVlLk9Bu7_2GVGWVcbwOPY4sxHRM7ApKinUW4=
+7Jf1HgJAA3oct42RugXrpZRs9ra0_LqvppZBMpUoj7HXcHB9EkIiH_6bAH5Bmv9M3hCbfQKVIsp=
+WxGnNXk4QDBSfDXMtwDomzq2BHXar8Ee1hewbTdoq6mfJn-f9KTzom3cLg79W5IvGj2d0nncFxK=
+=2E=22 style=3D=22text-decoration:none; color:=23ffffff;=22 target=3D=22_bl=
+ank=22>&iexcl;Conoc&eacute; m&aacute;s=21</a></strong></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </td>
+                  <td class=3D=22mobileHide=22 width=3D=22300=22></td>
+               </tr>
+            </tbody>
+         </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+
+<table align=3D=22center=22 border=3D=220=22 cellpadding=3D=220=22 cellspac=
+ing=3D=220=22 class=3D=22banner=22 width=3D=22600=22>
+   <tbody>
+      <tr>
+         <td bgcolor=3D=22=23FFFFFF=22 height=3D=2230=22 style=3D=22text-al=
+ign:justify; padding: 30px 20px 30px 20px; font-family:'Trebuchet MS', Aria=
+l, Helvetica, sans-serif,Verdana, Geneva; font-size: 14px; color: =235c5c5c=
+; background-color: =23FFFFFF;=22>Atentamente,<br />
+         <br />
+         <strong>Equipo LATAM</strong></td>
+      </tr>
+   </tbody>
+</table>
+<=21-- 1 BOTON DERECHO CORAL -->
+</td>
+               </tr>
+               <tr>
+                  <td bgcolor=3D=22=23FFFFFF=22 title=3D=22=22></td>
+               </tr>
+               <tr>
+                  <td bgcolor=3D=22=23FFFFFF=22 data-content-region-name=3D=
+=22Content02=22>
+</td>
+               </tr>
+               <tr>
+                  <td bgcolor=3D=22=23FFFFFF=22 title=3D=22=22></td>
+               </tr>
+               <tr>
+                  <td bgcolor=3D=22=23FFFFFF=22 data-content-region-name=3D=
+=22Content03=22>
+</td>
+               </tr>
+               <tr>
+                  <td data-content-region-name=3D=22l=22>
+</td>
+               </tr>
+               <tr>
+                  <td bgcolor=3D=22=23FFFFFF=22 data-content-region-name=3D=
+=22Content04=22>
+</td>
+               </tr>
+               <tr>
+                  <td bgcolor=3D=22=23FFFFFF=22 title=3D=22=22></td>
+               </tr>
+               <tr>
+                  <td bgcolor=3D=22=23FFFFFF=22 data-content-region-name=3D=
+=22Content05=22>
+</td>
+               </tr>
+               <tr>
+                  <td title=3D=22=22></td>
+               </tr>
+               <tr>
+                  <td bgcolor=3D=22=23FFFFFF=22 data-content-region-name=3D=
+=22Content06=22>
+</td>
+               </tr>
+               <tr>
+                  <td bgcolor=3D=22=23FFFFFF=22 title=3D=22=22></td>
+               </tr>
+               <tr>
+                  <td bgcolor=3D=22=23FFFFFF=22 data-content-region-name=3D=
+=22Content07=22>
+</td>
+               </tr>
+               <tr>
+                  <td bgcolor=3D=22=23FFFFFF=22 title=3D=22=22></td>
+               </tr>
+               <tr>
+                  <td bgcolor=3D=22=23FFFFFF=22 data-content-region-name=3D=
+=22Content08=22>
+</td>
+               </tr>
+               <tr>
+                  <td bgcolor=3D=22=23FFFFFF=22 title=3D=22=22></td>
+               </tr>
+               <tr>
+                  <td bgcolor=3D=22=23FFFFFF=22 data-content-region-name=3D=
+=22Content09=22>
+</td>
+               </tr>
+               <tr>
+                  <td bgcolor=3D=22=23FFFFFF=22 title=3D=22=22></td>
+               </tr>
+               <tr>
+                  <td data-content-region-name=3D=22Footer01=22>
+<table align=3D=22center=22 bgcolor=3D=22=231b0088=22 border=3D=220=22 cell=
+padding=3D=220=22 cellspacing=3D=220=22 width=3D=22100%=22>
+   <tbody>
+      <tr>
+         <td style=3D=22font-family:'Trebuchet MS', Arial, Helvetica, sans-=
+serif; font-size:16px; color:=23FFF; padding:10px 25px; text-align:center; =
+display:block;=22><a href=3D=22http://mail=2Elatam=2Ecom/pub/cc?_ri_=3DX0Gz=
+c2X%3DYQpglLjHJlTQGjWaHSzbJNR6bki8brcJB5KWbuuceiA3oAgUzcUrzdsj41zfDzgbdNbs5=
+GWzbdJgzczeNyhVXtpKX%3DTRBSWTT&_ei_=3DEpBjffNaEnMcpJV16WZrvIS-8xsFD9EFy3TFY=
+kNNW88VwkZqVEbKooVtB5GSKdisU27HQnD6o1TlzODNvBk9APAj1_-omooGSrm9HWhDesKrrZFg=
+mjVRg4NjvaYPQoVlLk9Bu7_2GVGWVcbwOPY4sxHRM7ApKinUW47Jf1HgJAA3oct42RugXrpZRs9=
+ra0_LqvppZBMpUoj7HXcHB9EkIiH_6bAH5Bmv9M3hCbfQKVIspWxGnNXk4QDBSfDXMtwDomzq2B=
+HXar8Ee1hewbTdoq6mfJn-f9KTzom3cLg79W5IvGj2d0nncFxK=2E=22 style=3D=22color:=
+=23FFF; text-decoration:none;=22 target=3D=22_blank=22>Juntos, m&aacute;s l=
+ejos=2E</a></td>
+      </tr>
+   </tbody>
+</table>
+
+<table bgcolor=3D=22=23FFFFFF=22 border=3D=220=22 cellpadding=3D=220=22 cel=
+lspacing=3D=220=22 width=3D=22100%=22>
+   <tbody>
+      <tr>
+         <td class=3D=22mobileBanner=22 style=3D=22padding:10px 0px 25px 0p=
+x;=22 valign=3D=22top=22 width=3D=2250%=22>
+         <table border=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=
+=22 width=3D=22100%=22>
+            <tbody>
+               <tr>
+                  <td style=3D=22font-family:Trebuchet, sans-serif; font-si=
+ze:11px; color:=23a7a9ac; text-align:center; padding:10px;=22>Seguinos</td>
+               </tr>
+               <tr>
+                  <td>
+                  <table align=3D=22center=22 border=3D=220=22 cellpadding=
+=3D=220=22 cellspacing=3D=220=22>
+                     <tbody>
+                        <tr>
+                           <td style=3D=22text-align: center;=22 width=3D=
+=2255=22><a href=3D=22http://mail=2Elatam=2Ecom/pub/cc?_ri_=3DX0Gzc2X%3DYQp=
+glLjHJlTQGjWaHSzbJNR6bki8brcJB5KWbuuceiA3oAgUzcUrzdsj41zfDzgbdNbs5GWzbdJgzc=
+zeNyhVXtpKX%3DTRBSWWT&_ei_=3DEpBjffNaEnMcpJV16WZrvIS-8xsFD9EFy3TFYkNNW88Vwk=
+ZqVEbKooVtB5GSKdisU27HQnD6o1TlzODNvBk9APAj1_-omooGSrm9HWhDesKrrZFgmjVRg4Njv=
+aYPQoVlLk9Bu7_2GVGWVcbwOPY4sxHRM7ApKinUW47Jf1HgJAA3oct42RugXrpZRs9ra0_Lqvpp=
+ZBMpUoj7HXcHB9EkIiH_6bAH5Bmv9M3hCbfQKVIspWxGnNXk4QDBSfDXMtwDomzq2BHXar8Ee1h=
+ewbTdoq6mfJn-f9KTzom3cLg79W5IvGj2d0nncFxK=2E=22 style=3D=22display:block;=
+=22 target=3D=22_blank=22><img alt=3D=22Facebook=22 border=3D=220=22 height=
+=3D=2232=22 src=3D=22http://static=2Ecdn=2Eresponsys=2Enet/i2/responsysimag=
+es/latam/contentlibrary/ar/bloques/estaticos/footer_latam/Files/facebook-ic=
+on-footer=2Epng=22 title=3D=22Facebook=22 width=3D=2232=22 /></a></td>
+                           <td style=3D=22text-align: center;=22 width=3D=
+=2255=22><a href=3D=22http://mail=2Elatam=2Ecom/pub/cc?_ri_=3DX0Gzc2X%3DYQp=
+glLjHJlTQGjWaHSzbJNR6bki8brcJB5KWbuuceiA3oAgUzcUrzdsj41zfDzgbdNbs5GWzbdJgzc=
+zeNyhVXtpKX%3DTRBSWAT&_ei_=3DEpBjffNaEnMcpJV16WZrvIS-8xsFD9EFy3TFYkNNW88Vwk=
+ZqVEbKooVtB5GSKdisU27HQnD6o1TlzODNvBk9APAj1_-omooGSrm9HWhDesKrrZFgmjVRg4Njv=
+aYPQoVlLk9Bu7_2GVGWVcbwOPY4sxHRM7ApKinUW47Jf1HgJAA3oct42RugXrpZRs9ra0_Lqvpp=
+ZBMpUoj7HXcHB9EkIiH_6bAH5Bmv9M3hCbfQKVIspWxGnNXk4QDBSfDXMtwDomzq2BHXar8Ee1h=
+ewbTdoq6mfJn-f9KTzom3cLg79W5IvGj2d0nncFxK=2E=22 style=3D=22display:block;=
+=22 target=3D=22_blank=22><img alt=3D=22Twitter=22 border=3D=220=22 height=
+=3D=2232=22 src=3D=22http://static=2Ecdn=2Eresponsys=2Enet/i2/responsysimag=
+es/latam/contentlibrary/ar/bloques/estaticos/footer_latam/Files/twitter-ico=
+n-footer=2Epng=22 title=3D=22Twitter=22 width=3D=2232=22 /></a></td>
+                           <td style=3D=22text-align: center;=22 width=3D=
+=2255=22><a href=3D=22http://mail=2Elatam=2Ecom/pub/cc?_ri_=3DX0Gzc2X%3DYQp=
+glLjHJlTQGjWaHSzbJNR6bki8brcJB5KWbuuceiA3oAgUzcUrzdsj41zfDzgbdNbs5GWzbdJgzc=
+zeNyhVXtpKX%3DTRBSWCT&_ei_=3DEpBjffNaEnMcpJV16WZrvIS-8xsFD9EFy3TFYkNNW88Vwk=
+ZqVEbKooVtB5GSKdisU27HQnD6o1TlzODNvBk9APAj1_-omooGSrm9HWhDesKrrZFgmjVRg4Njv=
+aYPQoVlLk9Bu7_2GVGWVcbwOPY4sxHRM7ApKinUW47Jf1HgJAA3oct42RugXrpZRs9ra0_Lqvpp=
+ZBMpUoj7HXcHB9EkIiH_6bAH5Bmv9M3hCbfQKVIspWxGnNXk4QDBSfDXMtwDomzq2BHXar8Ee1h=
+ewbTdoq6mfJn-f9KTzom3cLg79W5IvGj2d0nncFxK=2E=22 style=3D=22display:block;=
+=22 target=3D=22_blank=22><img alt=3D=22YouTube=22 border=3D=220=22 height=
+=3D=2232=22 src=3D=22http://static=2Ecdn=2Eresponsys=2Enet/i2/responsysimag=
+es/latam/contentlibrary/ar/bloques/estaticos/footer_latam/Files/youtube-ico=
+n-footer=2Epng=22 title=3D=22YouTube=22 width=3D=2232=22 /></a></td>
+                           <td style=3D=22text-align: center;=22 width=3D=
+=2255=22><a href=3D=22http://mail=2Elatam=2Ecom/pub/cc?_ri_=3DX0Gzc2X%3DYQp=
+glLjHJlTQGjWaHSzbJNR6bki8brcJB5KWbuuceiA3oAgUzcUrzdsj41zfDzgbdNbs5GWzbdJgzc=
+zeNyhVXtpKX%3DTRBSYRT&_ei_=3DEpBjffNaEnMcpJV16WZrvIS-8xsFD9EFy3TFYkNNW88Vwk=
+ZqVEbKooVtB5GSKdisU27HQnD6o1TlzODNvBk9APAj1_-omooGSrm9HWhDesKrrZFgmjVRg4Njv=
+aYPQoVlLk9Bu7_2GVGWVcbwOPY4sxHRM7ApKinUW47Jf1HgJAA3oct42RugXrpZRs9ra0_Lqvpp=
+ZBMpUoj7HXcHB9EkIiH_6bAH5Bmv9M3hCbfQKVIspWxGnNXk4QDBSfDXMtwDomzq2BHXar8Ee1h=
+ewbTdoq6mfJn-f9KTzom3cLg79W5IvGj2d0nncFxK=2E=22 style=3D=22display:block;=
+=22 target=3D=22_blank=22><img alt=3D=22Google+=22 border=3D=220=22 height=
+=3D=2232=22 src=3D=22http://static=2Ecdn=2Eresponsys=2Enet/i2/responsysimag=
+es/latam/contentlibrary/ar/bloques/estaticos/footer_latam/Files/googleplus-=
+icon-footer=2Epng=22 title=3D=22Google+=22 width=3D=2232=22 /></a></td>
+                           <td style=3D=22text-align: center;=22 width=3D=
+=2255=22><a href=3D=22http://mail=2Elatam=2Ecom/pub/cc?_ri_=3DX0Gzc2X%3DYQp=
+glLjHJlTQGjWaHSzbJNR6bki8brcJB5KWbuuceiA3oAgUzcUrzdsj41zfDzgbdNbs5GWzbdJgzc=
+zeNyhVXtpKX%3DTRBSYTT&_ei_=3DEpBjffNaEnMcpJV16WZrvIS-8xsFD9EFy3TFYkNNW88Vwk=
+ZqVEbKooVtB5GSKdisU27HQnD6o1TlzODNvBk9APAj1_-omooGSrm9HWhDesKrrZFgmjVRg4Njv=
+aYPQoVlLk9Bu7_2GVGWVcbwOPY4sxHRM7ApKinUW47Jf1HgJAA3oct42RugXrpZRs9ra0_Lqvpp=
+ZBMpUoj7HXcHB9EkIiH_6bAH5Bmv9M3hCbfQKVIspWxGnNXk4QDBSfDXMtwDomzq2BHXar8Ee1h=
+ewbTdoq6mfJn-f9KTzom3cLg79W5IvGj2d0nncFxK=2E=22 style=3D=22display:block;=
+=22 target=3D=22_blank=22><img alt=3D=22Instagram=22 border=3D=220=22 heigh=
+t=3D=2232=22 src=3D=22http://static=2Ecdn=2Eresponsys=2Enet/i2/responsysima=
+ges/latam/contentlibrary/ar/bloques/estaticos/footer_latam/Files/instagram-=
+icon-footer=2Epng=22 title=3D=22Instagram=22 width=3D=2232=22 /></a></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         </td>
+         <td class=3D=22mobileBanner=22 style=3D=22padding:10px 0px 25px 0p=
+x;=22 valign=3D=22top=22 width=3D=2250%=22>
+         <table border=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=
+=22 width=3D=22100%=22>
+            <tbody>
+               <tr>
+                  <td style=3D=22font-family:Trebuchet, sans-serif; font-si=
+ze:11px; color:=23a7a9ac; text-align:center; padding:10px;=22>Descarga nues=
+tra App</td>
+               </tr>
+               <tr>
+                  <td>
+                  <table align=3D=22center=22 border=3D=220=22 cellpadding=
+=3D=220=22 cellspacing=3D=220=22>
+                     <tbody>
+                        <tr>
+                           <td height=3D=2234=22 width=3D=22113=22><a href=
+=3D=22http://mail=2Elatam=2Ecom/pub/cc?_ri_=3DX0Gzc2X%3DYQpglLjHJlTQGjWaHSz=
+bJNR6bki8brcJB5KWbuuceiA3oAgUzcUrzdsj41zfDzgbdNbs5GWzbdJgzczeNyhVXtpKX%3DTR=
+BSYWT&_ei_=3DEpBjffNaEnMcpJV16WZrvIS-8xsFD9EFy3TFYkNNW88VwkZqVEbKooVtB5GSKd=
+isU27HQnD6o1TlzODNvBk9APAj1_-omooGSrm9HWhDesKrrZFgmjVRg4NjvaYPQoVlLk9Bu7_2G=
+VGWVcbwOPY4sxHRM7ApKinUW47Jf1HgJAA3oct42RugXrpZRs9ra0_LqvppZBMpUoj7HXcHB9Ek=
+IiH_6bAH5Bmv9M3hCbfQKVIspWxGnNXk4QDBSfDXMtwDomzq2BHXar8Ee1hewbTdoq6mfJn-f9K=
+Tzom3cLg79W5IvGj2d0nncFxK=2E=22 style=3D=22display:block;=22 target=3D=22_b=
+lank=22><img alt=3D=22App Store=22 border=3D=220=22 height=3D=2234=22 src=
+=3D=22http://static=2Ecdn=2Eresponsys=2Enet/i2/responsysimages/latam/conten=
+tlibrary/ar/bloques/estaticos/footer_latam/Files/appstore_footer_latam_ES=
+=2Epng=22 title=3D=22App Store=22 width=3D=22113=22 /></a></td>
+                           <td width=3D=2210=22></td>
+                           <td height=3D=2234=22 width=3D=22113=22><a href=
+=3D=22http://mail=2Elatam=2Ecom/pub/cc?_ri_=3DX0Gzc2X%3DYQpglLjHJlTQGjWaHSz=
+bJNR6bki8brcJB5KWbuuceiA3oAgUzcUrzdsj41zfDzgbdNbs5GWzbdJgzczeNyhVXtpKX%3DTR=
+BSYAT&_ei_=3DEpBjffNaEnMcpJV16WZrvIS-8xsFD9EFy3TFYkNNW88VwkZqVEbKooVtB5GSKd=
+isU27HQnD6o1TlzODNvBk9APAj1_-omooGSrm9HWhDesKrrZFgmjVRg4NjvaYPQoVlLk9Bu7_2G=
+VGWVcbwOPY4sxHRM7ApKinUW47Jf1HgJAA3oct42RugXrpZRs9ra0_LqvppZBMpUoj7HXcHB9Ek=
+IiH_6bAH5Bmv9M3hCbfQKVIspWxGnNXk4QDBSfDXMtwDomzq2BHXar8Ee1hewbTdoq6mfJn-f9K=
+Tzom3cLg79W5IvGj2d0nncFxK=2E=22 style=3D=22display:block;=22 target=3D=22_b=
+lank=22><img alt=3D=22Google Play=22 border=3D=220=22 height=3D=2234=22 src=
+=3D=22http://static=2Ecdn=2Eresponsys=2Enet/i2/responsysimages/latam/conten=
+tlibrary/ar/bloques/estaticos/footer_latam/Files/googleplay_footer_latam_ES=
+=2Epng=22 title=3D=22Google Play=22 width=3D=22113=22 /></a></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+
+<table border=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22 width=
+=3D=22100%=22>
+   <tbody>
+      <tr>
+         <td style=3D=22 font-family:Trebuchet, sans-serif; font-size:11px;=
+ text-align:center; color:=23808285;padding:20px 25px;=22>LATAM Airlines Gr=
+oup S=2EA=2E Av=2E Rafael Obligado s/n y Salguero=2E Complejo Costa Salguer=
+o=2E<br />
+         Buenos Aires=2E Argentina=2E<br />
+         Est&aacute;s suscrito con la siguiente direcci&oacute;n: jpruata=
+=40fapersa=2Ecom=2E Por favor, no respondas a este correo electr&oacute;nic=
+o=2E<br />
+         Para consultas vis&iacute;tanos en <a href=3D=22http://mail=2Elata=
+m=2Ecom/pub/cc?_ri_=3DX0Gzc2X%3DYQpglLjHJlTQGjWaHSzbJNR6bki8brcJB5KWbuuceiA=
+3oAgUzcUrzdsj41zfDzgbdNbs5GWzbdJgzczeNyhVXtpKX%3DTRBSYCT&_ei_=3DEpBjffNaEnM=
+cpJV16WZrvIS-8xsFD9EFy3TFYkNNW88VwkZqVEbKooVtB5GSKdisU27HQnD6o1TlzODNvBk9AP=
+Aj1_-omooGSrm9HWhDesKrrZFgmjVRg4NjvaYPQoVlLk9Bu7_2GVGWVcbwOPY4sxHRM7ApKinUW=
+47Jf1HgJAA3oct42RugXrpZRs9ra0_LqvppZBMpUoj7HXcHB9EkIiH_6bAH5Bmv9M3hCbfQKVIs=
+pWxGnNXk4QDBSfDXMtwDomzq2BHXar8Ee1hewbTdoq6mfJn-f9KTzom3cLg79W5IvGj2d0nncFx=
+K=2E=22 style=3D=22color:=23808285; text-decoration:none;=22 target=3D=22_b=
+lank=22 title=3D=22www=2Elatam=2Ecom=22>www=2Elatam=2Ecom</a></td>
+      </tr>
+   </tbody>
+</table>
+
+<table border=3D=220=22 cellpadding=3D=220=22 cellspacing=3D=220=22 width=
+=3D=22100%=22>
+   <tbody>
+      <tr>
+         <td class=3D=22mobileHide=22 width=3D=2225=22></td>
+         <td class=3D=22mobileBanner mobileTextCenter=22 style=3D=22font-fa=
+mily:Trebuchet, sans-serif; font-size:11px; text-align:left; color:=2380828=
+5;padding:10px 0px;=22 width=3D=22385=22>&copy; 2017 LATAM AIRLINES GROUP S=
+=2EA=2E - Todos los derechos reservados=2E</td>
+         <td class=3D=22mobileBanner mobileTextCenter=22 style=3D=22font-fa=
+mily:Trebuchet, sans-serif; font-size:11px; text-align:right; color:=238082=
+85;padding:10px 0px;=22 width=3D=22165=22><a href=3D=22http://mail=2Elatam=
+=2Ecom/pub/cc?_ri_=3DX0Gzc2X%3DYQpglLjHJlTQGjWaHSzbJNR6bki8brcJB5KWbuuceiA3=
+oAgUzcUrzdsj41zfDzgbdNbs5GWzbdJgzczeNyhVXtpKX%3DTRBSUWT&_ei_=3DEiwPQ42l-mBF=
+JGD0ZPxQdvkJluwKno_Rqu2AflhfDAE8BrGdzBjcNJnoPFRXtKytGsDV0iE97yY_vJdT3n9wI6Q=
+B8xD4vaEI-ClrtUWMEzxQMmIgcQ1oa08iuivWi-eaXR57rtJb7rRV4Wsc_1gGOKc6a0W5l9-V8A=
+nSxLPru7fqGGeKy41aC8XHZ0AKD6bwx9s7rKqsVS9cc8HEsBRkNr74CJUnNvW58KpfI54B2mPPq=
+yxfpxQTBz7o6J8fyBo7U356hhuS5ReLJmKtdWiIemc-EDhVBKLiLjYa0DOMm01kychuOU-UpqtZ=
+wU0z9EbMhXfNEmTV8R-wo_dnmYJH7ufa28H_1GIX7C2VBiVHT5_Q2UzPsKRpl6TKk3b6mrfJl0I=
+FaI8qOEMWK7bfQ7G8zoaLQDvRPExO-oB1-y-l4fFyFrkv4l3dsmNyIvInLig=2E=22 style=3D=
+=22color:=23808285; text-decoration:underline;=22 target=3D=22_blank=22 tit=
+le=3D=22Anular Suscripci=C3=B3n=22>Anular suscripci&oacute;n</a></td>
+         <td class=3D=22mobileHide=22 width=3D=2225=22></td>
+      </tr>
+   </tbody>
+</table>
+</td>
+               </tr>
+               <tr>
+                  <td data-content-region-name=3D=22Footer02=22>
+</td>
+               </tr>
+            </tbody>
+         </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<img height=3D=221=22 src=3D=22https://pixel=2Emonitor1=2Ereturnpath=2Enet/=
+pixel=2Egif&r=3D0c5fedf82ebe6d09de8f1ff164bb60e301d4792b&s=3D&c=3D20170503_=
+Informative_
+                         20170425_Mail_Manifesto_TOKEN_=7Calias=3D&quot;Seg=
+mentGroup=2ESEGMENTOS_MERCADOS&quot;=7C_LATAM_AR=22 width=3D=221=22 /> <=21=
+--rpcampaign:=22 LATAMARInformative20170425_Mail_ManifestoTOKEN_=7Calias=3D=
+&quot;SegmentGroup=2ESEGMENTOS_MERCADOS&quot;=7CLATAM 20170503=22--></body>
+</html>
+
+

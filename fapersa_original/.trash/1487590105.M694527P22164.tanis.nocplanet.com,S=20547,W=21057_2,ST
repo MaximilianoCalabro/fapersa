@@ -1,0 +1,510 @@
+Return-Path: <estudiodelorenzo@hotmail.com>
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id 2aWkKNnSqliUVgAATLP0zA
+	; Mon, 20 Feb 2017 08:28:25 -0300
+Return-path: <estudiodelorenzo@hotmail.com>
+Envelope-to: acarboni@fapersa.com,
+ comext@fapersa.com,
+ rdopazo@fapersa.com
+Delivery-date: Mon, 20 Feb 2017 08:28:25 -0300
+Received: from bay004-omc1s12.hotmail.com ([65.54.190.23]:64997)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-SHA384:256)
+	(Exim 4.88)
+	(envelope-from <estudiodelorenzo@hotmail.com>)
+	id 1cfm8c-0006YW-AA; Mon, 20 Feb 2017 08:28:25 -0300
+Received: from NAM04-BN3-obe.outbound.protection.outlook.com ([65.54.190.60]) by BAY004-OMC1S12.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Mon, 20 Feb 2017 03:26:54 -0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=ZG8dro0PTyEpsgeiSjBTifCGnPhBo6/yUihgVvmdgic=;
+ b=copZqUNUoNgG7qqFYNvMHDVzj7ezJI2mnKe5t07zq1VI8u+t43RcFib/O3k2OskowaVQAHmsjz87J3uQGGoqwL0o14DIGKwfomFbKTBbP++z1tzskWdLdElI2dKVP/UEtQs39/5yNGBzfceWKzCoYPB5GdZcKaE1qH+KnIsBq9md6NRjV1N7vtG9Jf1PvkxmUCK3t/4FeoLJyGSHu9KUrvlV2GSmk0bRLBNgji6PPgaR/c/2Bvc1BEc8BQ4vNhapm1zkQWUCZvVAzrGF+yqvr/rJa/6Dxms/IEzO1iBpeWN5Hk1lHxrx1fKW4MG5HRO74MKxcp5AQi1pb1MovkjCEA==
+Received: from CO1NAM04FT020.eop-NAM04.prod.protection.outlook.com
+ (10.152.90.58) by CO1NAM04HT043.eop-NAM04.prod.protection.outlook.com
+ (10.152.90.145) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.919.10; Mon, 20
+ Feb 2017 11:26:50 +0000
+Received: from MWHPR20MB1647.namprd20.prod.outlook.com (10.152.90.54) by
+ CO1NAM04FT020.mail.protection.outlook.com (10.152.90.63) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.919.10 via Frontend Transport; Mon, 20 Feb 2017 11:26:50 +0000
+Received: from MWHPR20MB1647.namprd20.prod.outlook.com ([10.171.150.17]) by
+ MWHPR20MB1647.namprd20.prod.outlook.com ([10.171.150.17]) with mapi id
+ 15.01.0919.018; Mon, 20 Feb 2017 11:26:50 +0000
+From: Estudio De Lorenzo <estudiodelorenzo@hotmail.com>
+To: Marcela Triszcz <comext@fapersa.com>
+CC: Dopazo <rdopazo@fapersa.com>, =?iso-8859-1?Q?Andr=E9s_Carboni?=
+	<acarboni@fapersa.com>
+Subject: Re: RV: Impo SUSIN mediados febr
+Thread-Topic: RV: Impo SUSIN mediados febr
+Thread-Index: AQHSiQuldqTXWJ6YSkWSenh3rdE1tqFtE+8agASuW4CAAAPPKg==
+Date: Mon, 20 Feb 2017 11:26:50 +0000
+Message-ID: <MWHPR20MB16471DB037D1B1E0BBE0B2B2D45E0@MWHPR20MB1647.namprd20.prod.outlook.com>
+References: <!&!AAAAAAAAAAAuAAAAAAAAAK0CAb3LVORGrFBwB/Ye0IMBALdqeBaJvCBLt/57Bups5P4AAACM4zoAABAAAACCzozsIjgvSb/AMWpiYmyrAQAAAAA=@transrodassrl.com.ar>
+ <58A6D55E.6000700@fapersa.com>
+ <MWHPR20MB1647BE0B04DBE1CAE518AF60D45D0@MWHPR20MB1647.namprd20.prod.outlook.com>,<58AACF0F.7050603@fapersa.com>
+In-Reply-To: <58AACF0F.7050603@fapersa.com>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator:
+authentication-results: fapersa.com; dkim=none (message not signed)
+ header.d=none;fapersa.com; dmarc=none action=none header.from=hotmail.com;
+x-incomingtopheadermarker: OriginalChecksum:F420EB071D4C267DDDC6EC2C425CD358EF165E760A2361AB9A93F74EEA75E1DD;UpperCasedChecksum:924B0BB4A5ED42763F9C31E3DCACA07AD7EB104BCE517F44BE3C4465234867AC;SizeAsReceived:8070;Count:40
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [UnD6ykTOEFxYZXvgbuN1LV1hkhZoRNL+]
+x-incomingheadercount: 40
+x-eopattributedmessage: 0
+x-microsoft-exchange-diagnostics: 1;CO1NAM04HT043;7:DfuIytFqpS5M+b1oXbF+5qN+rqJcD89WmbhxLHa/5yUmR0tU4QwNuzzTvnraXjebOH6hoGBxn22c/e3UrjBIK43SvLRtJAjVtBi2/UyGmFlfOafPYHjAWfRpUcEB1hnv77j+uaTJRXYpo8gXK39xmF2UfSfpjnNwzwj0tFLhtH7Jt764+m0EQJY9VxNwqdvUQ8T0Cv7DqH0ni4zPtfC2sJy9MubDrFFBI7os4rWYnmfuYHMltWTMa5iLU4puRPK8EAmLYMqPcjButTp/79gEA9HU+7EUhPZTqCFL1VBgYDnfrglHXO23taY7e4vZkLOjp7SulNk+MSxQMzJrCrwxjA==
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(10019020)(98900012);DIR:OUT;SFP:1102;SCL:1;SRVR:CO1NAM04HT043;H:MWHPR20MB1647.namprd20.prod.outlook.com;FPR:;SPF:None;LANG:es;
+x-ms-office365-filtering-correlation-id: 69636a53-c3f5-4109-eac5-08d459835d1b
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(201702061074)(5061506426)(5061507331)(1603103135)(1601125107)(1603101373)(1701031045);SRVR:CO1NAM04HT043;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(432015087)(444000031);SRVR:CO1NAM04HT043;BCL:0;PCL:0;RULEID:;SRVR:CO1NAM04HT043;
+x-forefront-prvs: 02243C58C6
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/related;
+	boundary="_005_MWHPR20MB16471DB037D1B1E0BBE0B2B2D45E0MWHPR20MB1647namp_";
+	type="multipart/alternative"
+MIME-Version: 1.0
+X-OriginatorOrg: hotmail.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 20 Feb 2017 11:26:50.1379
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CO1NAM04HT043
+X-OriginalArrivalTime: 20 Feb 2017 11:26:54.0146 (UTC) FILETIME=[3CE3DA20:01D28B6C]
+X-Spam-Status: No, score=-2.0
+X-Spam-Score: -19
+X-Spam-Bar: --
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Marcela nunca me pasaron CRT ni CO de esta carga solo factura
+    el viernes pasado , no tengo como calcular slds. [...] 
+ 
+ Content analysis details:   (-2.0 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: fapersa.com]
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (estudiodelorenzo[at]hotmail.com)
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+X-Spam-Flag: NO
+
+--_005_MWHPR20MB16471DB037D1B1E0BBE0B2B2D45E0MWHPR20MB1647namp_
+Content-Type: multipart/alternative;
+	boundary="_000_MWHPR20MB16471DB037D1B1E0BBE0B2B2D45E0MWHPR20MB1647namp_"
+
+--_000_MWHPR20MB16471DB037D1B1E0BBE0B2B2D45E0MWHPR20MB1647namp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Marcela
+
+nunca me pasaron CRT ni CO de esta carga solo factura el viernes pasado , n=
+o tengo como calcular
+
+slds.
+
+
+________________________________
+De: Marcela Triszcz <comext@fapersa.com>
+Enviado: lunes, 20 de febrero de 2017 08:12 a.m.
+Para: Estudio De Lorenzo
+Cc: Dopazo; Andr=E9s Carboni
+Asunto: Re: RV: Impo SUSIN mediados febr
+
+Ra=FAl:
+
+Ten=E9s el importe a garantizar?
+Saludos.
+
+
+
+
+
+[cid:part1.08010506.00080207@fapersa.com]
+Marcela Triszcz
+Compras / Comercio Exterior
+Tel: +54 342 4810810
+Lamadrid 3065
+CP 3000 Santa Fe, Argentina.
+comext@fapersa.com<mailto:comext@fapersa.com>
+El 17/02/2017 a las 08:43 a.m., Estudio De Lorenzo escribi=F3:
+
+Marcela
+
+si bien vienen mercaderias de menos la factura esta Ok
+
+slds.
+
+
+________________________________
+De: Marcela Triszcz <comext@fapersa.com><mailto:comext@fapersa.com>
+Enviado: viernes, 17 de febrero de 2017 07:50 a.m.
+Para: Estudio De Lorenzo
+Cc: Dopazo
+Asunto: Fwd: RV: Impo SUSIN mediados febr
+
+Buen dia Ra=FAl:
+
+Envio documentos por el embarque de Susin.
+Saludos.
+
+
+
+[cid:part2.08070606.01080808@fapersa.com]
+Marcela Triszcz
+Compras / Comercio Exterior
+Tel: +54 342 4810810
+Lamadrid 3065
+CP 3000 Santa Fe, Argentina.
+comext@fapersa.com<mailto:comext@fapersa.com>
+
+
+-------- Mensaje reenviado --------
+Asunto:         RV: Impo SUSIN mediados febr
+Fecha:  Thu, 16 Feb 2017 17:17:13 -0300
+De:     Info <info@transrodassrl.com.ar><mailto:info@transrodassrl.com.ar>
+A:      'Marcela Triszcz' <comext@fapersa.com><mailto:comext@fapersa.com>
+
+
+
+Hola Marcela
+
+Te envio la documentaci=F3n del embarque que se estar=E1 realizando.
+
+saludos
+
+
+
+
+
+
+Sandra M. Otaz=FA / Gerente
+maxitrans@transrodassrl.com.ar<mailto:maxitrans@transrodassrl.com.ar>
+Maxitrans Transportes & Log=EDstica Internacional Ltda.
+Trans Rodas S.R.L.
+Office: + 54 11 4687-6713 / 0716
+Nextel ID: 167*2308-15-5307-4744 - Skype: sandrarodas333
+Fragata La Argentina 1633 Dto. 2(1440)
+Cap. Fed. Buenos Aires Rep Argentina
+www.transrodassrl.com.ar<http://www.transrodassrl.com.ar> / www.maxitrans.c=
+om.br<http://www.maxitrans.com.br>
+
+
+
+
+
+---
+El software de antivirus Avast ha analizado este correo electr=F3nico en bu=
+sca de virus.
+https://www.avast.com/antivirus
+
+
+
+
+
+
+--_000_MWHPR20MB16471DB037D1B1E0BBE0B2B2D45E0MWHPR20MB1647namp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt;color:#000000;font=
+-family:Calibri,Arial,Helvetica,sans-serif;" dir=3D"ltr">
+<p>Marcela</p>
+<p>nunca me pasaron CRT ni CO de esta carga solo factura el viernes pasado =
+, no tengo como calcular</p>
+<p>slds.</p>
+<br>
+<br>
+<div style=3D"color: rgb(0, 0, 0);">
+<hr tabindex=3D"-1" style=3D"display:inline-block; width:98%">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" co=
+lor=3D"#000000" style=3D"font-size:11pt"><b>De:</b> Marcela Triszcz &lt;com=
+ext@fapersa.com&gt;<br>
+<b>Enviado:</b> lunes, 20 de febrero de 2017 08:12 a.m.<br>
+<b>Para:</b> Estudio De Lorenzo<br>
+<b>Cc:</b> Dopazo; Andr=E9s Carboni<br>
+<b>Asunto:</b> Re: RV: Impo SUSIN mediados febr</font>
+<div>&nbsp;</div>
+</div>
+<div>Ra=FAl:<br>
+<br>
+Ten=E9s el importe a garantizar?<br>
+Saludos.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class=3D"moz-signature"><img naturalheight=3D"34" naturalwidth=3D"109"=
+ aria-expanded=3D"false" tabindex=3D"0" style=3D"-webkit-user-select: none;=
+" src=3D"cid:part1.08010506.00080207@fapersa.com">
+<table border=3D"0">
+<tbody>
+<tr>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Marcela Triszcz</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Compras / Comercio Exterior</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Tel: &#43;54 342 4810810</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Lamadrid 3065</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>CP 3000 Santa Fe, Argentina.</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:8pt">
+<td><a class=3D"moz-txt-link-abbreviated" href=3D"mailto:comext@fapersa.com=
+">comext@fapersa.com</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"moz-cite-prefix">El 17/02/2017 a las 08:43 a.m., Estudio De L=
+orenzo escribi=F3:<br>
+</div>
+<blockquote type=3D"cite">
+<div id=3D"divtagdefaultwrapper" dir=3D"ltr" style=3D"font-size:12pt; color=
+:#000000; font-family:Calibri,Arial,Helvetica,sans-serif">
+<p>Marcela</p>
+<p>si bien vienen mercaderias de menos la factura esta Ok</p>
+<p>slds.</p>
+<br>
+<br>
+<div style=3D"color:rgb(0,0,0)">
+<hr tabindex=3D"-1" style=3D"display:inline-block; width:98%">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font color=3D"#000000" face=3D"Calib=
+ri, sans-serif" style=3D"font-size:11pt"><b>De:</b> Marcela Triszcz
+<a class=3D"moz-txt-link-rfc2396E" href=3D"mailto:comext@fapersa.com">&lt;c=
+omext@fapersa.com&gt;</a><br>
+<b>Enviado:</b> viernes, 17 de febrero de 2017 07:50 a.m.<br>
+<b>Para:</b> Estudio De Lorenzo<br>
+<b>Cc:</b> Dopazo<br>
+<b>Asunto:</b> Fwd: RV: Impo SUSIN mediados febr</font>
+<div>&nbsp;</div>
+</div>
+<div>Buen dia Ra=FAl:<br>
+<br>
+Envio documentos por el embarque de Susin.<br>
+Saludos.<br>
+<br>
+<br>
+<div class=3D"moz-forward-container"><br>
+<div class=3D"moz-signature"><img naturalheight=3D"34" naturalwidth=3D"109"=
+ tabindex=3D"0" style=3D"-webkit-user-select: none;" aria-expanded=3D"false=
+" src=3D"cid:part2.08070606.01080808@fapersa.com">
+<table border=3D"0">
+<tbody>
+<tr>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Marcela Triszcz</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Compras / Comercio Exterior</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Tel: &#43;54 342 4810810</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Lamadrid 3065</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>CP 3000 Santa Fe, Argentina.</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:8pt">
+<td><a class=3D"moz-txt-link-abbreviated" href=3D"mailto:comext@fapersa.com=
+">comext@fapersa.com</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<br>
+-------- Mensaje reenviado --------
+<table class=3D"moz-email-headers-table" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0">
+<tbody>
+<tr>
+<th align=3D"RIGHT" nowrap=3D"nowrap" valign=3D"BASELINE">Asunto: </th>
+<td>RV: Impo SUSIN mediados febr</td>
+</tr>
+<tr>
+<th align=3D"RIGHT" nowrap=3D"nowrap" valign=3D"BASELINE">Fecha: </th>
+<td>Thu, 16 Feb 2017 17:17:13 -0300</td>
+</tr>
+<tr>
+<th align=3D"RIGHT" nowrap=3D"nowrap" valign=3D"BASELINE">De: </th>
+<td>Info <a class=3D"moz-txt-link-rfc2396E" href=3D"mailto:info@transrodass=
+rl.com.ar">
+&lt;info@transrodassrl.com.ar&gt;</a></td>
+</tr>
+<tr>
+<th align=3D"RIGHT" nowrap=3D"nowrap" valign=3D"BASELINE">A: </th>
+<td>'Marcela Triszcz' <a class=3D"moz-txt-link-rfc2396E" href=3D"mailto:com=
+ext@fapersa.com">
+&lt;comext@fapersa.com&gt;</a></td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<pre>Hola Marcela=0A=
+=0A=
+Te envio la documentaci=F3n del embarque que se estar=E1 realizando.=0A=
+=0A=
+saludos=0A=
+=0A=
+=0A=
+&nbsp;=0A=
+=0A=
+=0A=
+=0A=
+Sandra M. Otaz=FA / Gerente =0A=
+<a class=3D"moz-txt-link-abbreviated" href=3D"mailto:maxitrans@transrodassr=
+l.com.ar">maxitrans@transrodassrl.com.ar</a> =0A=
+Maxitrans Transportes &amp; Log=EDstica Internacional Ltda. =0A=
+Trans Rodas S.R.L. =0A=
+Office: &#43; 54 11 4687-6713 / 0716 =0A=
+Nextel ID: 167*2308-15-5307-4744 - Skype: sandrarodas333 =0A=
+Fragata La Argentina 1633 Dto. 2(1440) =0A=
+Cap. Fed. Buenos Aires Rep Argentina =0A=
+<a class=3D"moz-txt-link-abbreviated" href=3D"http://www.transrodassrl.com.=
+ar">www.transrodassrl.com.ar</a> / <a class=3D"moz-txt-link-abbreviated" hr=
+ef=3D"http://www.maxitrans.com.br">www.maxitrans.com.br</a> =0A=
+=0A=
+=0A=
+=0A=
+=0A=
+=0A=
+---=0A=
+El software de antivirus Avast ha analizado este correo electr=F3nico en bu=
+sca de virus.=0A=
+<a class=3D"moz-txt-link-freetext" href=3D"https://www.avast.com/antivirus"=
+>https://www.avast.com/antivirus</a>=0A=
+=0A=
+</pre>
+<br>
+</div>
+<br>
+</div>
+</div>
+</div>
+</blockquote>
+<br>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+--_000_MWHPR20MB16471DB037D1B1E0BBE0B2B2D45E0MWHPR20MB1647namp_--
+
+--_005_MWHPR20MB16471DB037D1B1E0BBE0B2B2D45E0MWHPR20MB1647namp_
+Content-Type: image/jpeg; name="fapersa.jpg"
+Content-Description: fapersa.jpg
+Content-Disposition: inline; filename="fapersa.jpg"; size=1543;
+	creation-date="Mon, 20 Feb 2017 11:12:25 GMT";
+	modification-date="Mon, 20 Feb 2017 11:12:25 GMT"
+Content-ID: <part1.08010506.00080207@fapersa.com>
+Content-Transfer-Encoding: base64
+
+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
+iL//2Q==
+
+--_005_MWHPR20MB16471DB037D1B1E0BBE0B2B2D45E0MWHPR20MB1647namp_
+Content-Type: image/jpeg; name="ATT00001.jpg"
+Content-Description: ATT00001.jpg
+Content-Disposition: inline; filename="ATT00001.jpg"; size=1543;
+	creation-date="Mon, 20 Feb 2017 11:12:25 GMT";
+	modification-date="Mon, 20 Feb 2017 11:12:25 GMT"
+Content-ID: <part2.08070606.01080808@fapersa.com>
+Content-Transfer-Encoding: base64
+
+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
+iL//2Q==
+
+--_005_MWHPR20MB16471DB037D1B1E0BBE0B2B2D45E0MWHPR20MB1647namp_--

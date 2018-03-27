@@ -1,0 +1,305 @@
+Return-Path: <estudiodelorenzo@hotmail.com>
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id WTBoN62LrVjCegAATLP0zA
+	; Wed, 22 Feb 2017 10:01:33 -0300
+Return-path: <estudiodelorenzo@hotmail.com>
+Envelope-to: acarboni@fapersa.com,
+ comext@fapersa.com,
+ rdopazo@fapersa.com,
+ sgonzalez@fapersa.com
+Delivery-date: Wed, 22 Feb 2017 10:01:33 -0300
+Received: from col004-omc1s1.hotmail.com ([65.55.34.11]:58034)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-SHA384:256)
+	(Exim 4.88)
+	(envelope-from <estudiodelorenzo@hotmail.com>)
+	id 1cgWXs-0000UF-ER; Wed, 22 Feb 2017 10:01:33 -0300
+Received: from NAM03-BY2-obe.outbound.protection.outlook.com ([65.55.34.9]) by COL004-OMC1S1.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Wed, 22 Feb 2017 04:59:43 -0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=fAMcq1NIfZ9GU/2XpUEY8dPoXLP0VmAqLjn7brsHQp4=;
+ b=IgQLklrFgZj2eE4MBjWdP5Jg5khM3aR12JeYKVeORcOPiRsT0p5fcZl196Or9oMprpcF6YGJFJ0LU4KpRnWVclkSU5yBVabMWGGBZ31OWdAjk1VOuizX6WKxsp5X2XVbZieQhYNJKh9/puexqcOUILlrOQxrHqGwyjvNgG/Uyysgq7s8MvLZCq0ajmCoXsQKCE9/eyM/85CJFnsYYNHYVawvydETQ90hO8apqeKTlm/H8ajMROOaUgbwUxAOekF8fXadnGy7vGLBCqYEM5FRm0lCDvtdxzzz6pYg0xOP9EpXVwcD6rX7MLcbeIyAJdDLuxMSx66/zQvYaWpkvBvaZg==
+Received: from BY2NAM03FT018.eop-NAM03.prod.protection.outlook.com
+ (10.152.84.59) by BY2NAM03HT013.eop-NAM03.prod.protection.outlook.com
+ (10.152.84.80) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.933.11; Wed, 22
+ Feb 2017 12:59:42 +0000
+Received: from MWHPR20MB1647.namprd20.prod.outlook.com (10.152.84.52) by
+ BY2NAM03FT018.mail.protection.outlook.com (10.152.84.231) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.933.11 via Frontend Transport; Wed, 22 Feb 2017 12:59:42 +0000
+Received: from MWHPR20MB1647.namprd20.prod.outlook.com ([10.171.150.17]) by
+ MWHPR20MB1647.namprd20.prod.outlook.com ([10.171.150.17]) with mapi id
+ 15.01.0919.018; Wed, 22 Feb 2017 12:59:42 +0000
+From: Estudio De Lorenzo <estudiodelorenzo@hotmail.com>
+To: Andres Carboni <acarboni@fapersa.com>, Silvina Miretti
+	<comext@fapersa.com>, roberto dopazo <rdopazo@fapersa.com>, santiago gonzalez
+	<sgonzalez@fapersa.com>
+Subject: Re: arribo de cargas
+Thread-Topic: arribo de cargas
+Thread-Index: AQHSjPWNpV24Ymp5kkevCpq/IyW6b6F0+PQAgAAD/vI=
+Date: Wed, 22 Feb 2017 12:59:42 +0000
+Message-ID: <MWHPR20MB16474ABDE4C9168B6D469D07D4500@MWHPR20MB1647.namprd20.prod.outlook.com>
+References: <MWHPR20MB16479750EB6AAC5A4D533DEAD4500@MWHPR20MB1647.namprd20.prod.outlook.com>,<3da678aa-e3b9-d1ff-253c-f6949b024f1f@fapersa.com>
+In-Reply-To: <3da678aa-e3b9-d1ff-253c-f6949b024f1f@fapersa.com>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator:
+authentication-results: fapersa.com; dkim=none (message not signed)
+ header.d=none;fapersa.com; dmarc=none action=none header.from=hotmail.com;
+x-incomingtopheadermarker: OriginalChecksum:FB1220EAA8B996A004ED3DCEB6C533978405C8C8BF2AB992D6896230634AFEF8;UpperCasedChecksum:F238CBF7803699381B3A985F1AAB38957C7774A7FDF00AA733519F64251F3DBE;SizeAsReceived:7935;Count:39
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [E1YsOnz9YwdNBGuFomaTVv274qMBmnJ2]
+x-incomingheadercount: 39
+x-eopattributedmessage: 0
+x-microsoft-exchange-diagnostics: 1;BY2NAM03HT013;5:snfqSnwBz9La7C/oMMtwc0YCCZ6mnHURTIUaSTfIhwUXEnF6MtiCh7rOl6Xl9+UDHCscG0p7O7sPKOvjw4iknRLGzdtOlhM85ILYieElUg1C754vynfXsQvcyjW9Wv20j2lJ8nOND+VxULTGW0qj/g==;24:VDCp6HSNeDOmSJmjW8/YtWYJCQl7aapfYbfHXOL5Pn7dkilfyJhOcdsRb90WiYZ+chhT63CRDFfv/DviPHiO/qipzWOGI4kesl1nxkkusU8=;7:W5ZacsUhoXK0cNve2OsOyIxFOTuHdxxD/octM+6Ob7y22z4zcU+1I6Sr/75cxUig1hB/ij+L0iONPBY9CATQSYVp/1iTbIHVPn5E7vKvmjTI47GZq21YlixN7IfKgaIThbBP1O7uafg83m3L1+RRFrm6PyDWRX6XOsx761cUy5rAwCcL3XjiabaK64sihsIIwxuMiarxpzqq7R27ZNpVb8nAUiGysJR5nmxFzIpSiOblewCQiZn3VMZ9WCBCZrPhrqxTcqAJZvcFNaive3mq7fO9YAzn6Ow7M8T6Ww3M4oX7adJUPLyI1IKDZiV/uMQx
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(10019020)(98900012);DIR:OUT;SFP:1102;SCL:1;SRVR:BY2NAM03HT013;H:MWHPR20MB1647.namprd20.prod.outlook.com;FPR:;SPF:None;LANG:es;
+x-ms-office365-filtering-correlation-id: c4ed32f1-5312-44d4-b47f-08d45b22ab18
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(201702061074)(5061506561)(5061507331)(1603103135)(1601125242)(1603101406)(1701031045);SRVR:BY2NAM03HT013;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(432015087)(444000031);SRVR:BY2NAM03HT013;BCL:0;PCL:0;RULEID:;SRVR:BY2NAM03HT013;
+x-forefront-prvs: 022649CC2C
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/related;
+	boundary="_004_MWHPR20MB16474ABDE4C9168B6D469D07D4500MWHPR20MB1647namp_";
+	type="multipart/alternative"
+MIME-Version: 1.0
+X-OriginatorOrg: hotmail.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 22 Feb 2017 12:59:42.2130
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BY2NAM03HT013
+X-OriginalArrivalTime: 22 Feb 2017 12:59:43.0993 (UTC) FILETIME=[899A8E90:01D28D0B]
+X-Spam-Status: No, score=-0.6
+X-Spam-Score: -5
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Andrés Ok hasta el momento no llegaron, te aviso apenas sepa
+    algo slds. [...] 
+ 
+ Content analysis details:   (-0.6 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+ -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+                             [65.55.34.11 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (estudiodelorenzo[at]hotmail.com)
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  1.4 HTML_IMAGE_ONLY_28     BODY: HTML: images with 2400-2800 bytes of words
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: fapersa.com]
+ -0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+X-Spam-Flag: NO
+
+--_004_MWHPR20MB16474ABDE4C9168B6D469D07D4500MWHPR20MB1647namp_
+Content-Type: multipart/alternative;
+	boundary="_000_MWHPR20MB16474ABDE4C9168B6D469D07D4500MWHPR20MB1647namp_"
+
+--_000_MWHPR20MB16474ABDE4C9168B6D469D07D4500MWHPR20MB1647namp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Andr=E9s
+
+Ok hasta el momento no llegaron, te aviso apenas sepa algo
+
+slds.
+
+
+________________________________
+De: Andres Carboni <acarboni@fapersa.com>
+Enviado: mi=E9rcoles, 22 de febrero de 2017 09:44 a.m.
+Para: Estudio De Lorenzo; Silvina Miretti; roberto dopazo; santiago gonzale=
+z
+Asunto: Re: arribo de cargas
+
+
+Perd=F3n Banco Frances (017)
+
+El 22/02/2017 a las 07:23 a.m., Estudio De Lorenzo escribi=F3:
+
+Andr=E9s
+
+Necesito saber que van hacer apenas arribe los camones con SUSIN Y KS y los=
+ bancos a declarar
+
+El de susin si no me cambiaron la orden debe ser liberado temprano para pod=
+er hacer la exportaci=F3n a Brasil
+
+Apenas arriben te aviso
+
+Favor de agilizar tr=E1mites
+
+slds.
+
+--
+[cid:part1.ECCD9978.DCF11E6F@fapersa.com]
+C.P.N. Carboni, Andr=E9s
+Administraci=F3n y Finanzas
+Tel: +54 342 4810810
+Lamadrid 3065
+Santa Fe, Argentina.
+acarboni@fapersa.com<mailto:acarboni@fapersa.com>
+
+--_000_MWHPR20MB16474ABDE4C9168B6D469D07D4500MWHPR20MB1647namp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt;color:#000000;font=
+-family:Calibri,Arial,Helvetica,sans-serif;" dir=3D"ltr">
+<p>Andr=E9s</p>
+<p>Ok hasta el momento no llegaron, te aviso apenas sepa algo</p>
+<p>slds.</p>
+<br>
+<br>
+<div style=3D"color: rgb(0, 0, 0);">
+<hr tabindex=3D"-1" style=3D"display:inline-block; width:98%">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" co=
+lor=3D"#000000" style=3D"font-size:11pt"><b>De:</b> Andres Carboni &lt;acar=
+boni@fapersa.com&gt;<br>
+<b>Enviado:</b> mi=E9rcoles, 22 de febrero de 2017 09:44 a.m.<br>
+<b>Para:</b> Estudio De Lorenzo; Silvina Miretti; roberto dopazo; santiago =
+gonzalez<br>
+<b>Asunto:</b> Re: arribo de cargas</font>
+<div>&nbsp;</div>
+</div>
+<div>
+<p>Perd=F3n Banco Frances <font color=3D"#3333ff">(017)</font><br>
+</p>
+<br>
+<div class=3D"moz-cite-prefix">El 22/02/2017 a las 07:23 a.m., Estudio De L=
+orenzo escribi=F3:<br>
+</div>
+<blockquote type=3D"cite">
+<div id=3D"divtagdefaultwrapper" dir=3D"ltr" style=3D"font-size:12pt; color=
+:#000000; font-family:Calibri,Arial,Helvetica,sans-serif">
+<p>Andr=E9s</p>
+<p>Necesito saber que van hacer apenas arribe los camones con SUSIN Y KS y =
+los bancos a declarar</p>
+<p>El de susin si no me cambiaron la orden debe ser liberado temprano para =
+poder hacer la exportaci=F3n a Brasil</p>
+<p>Apenas arriben te aviso</p>
+<p>Favor de agilizar tr=E1mites</p>
+<p>slds.</p>
+</div>
+</blockquote>
+<br>
+<div class=3D"moz-signature">-- <br>
+<img naturalheight=3D"41" naturalwidth=3D"123" aria-expanded=3D"false" tabi=
+ndex=3D"0" style=3D"-webkit-user-select: none;" src=3D"cid:part1.ECCD9978.D=
+CF11E6F@fapersa.com">
+<table border=3D"0">
+<tbody>
+<tr>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>C.P.N. Carboni, Andr=E9s</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Administraci=F3n y Finanzas</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Tel: &#43;54 342 4810810</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Lamadrid 3065</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Santa Fe, Argentina.</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:8pt">
+<td><a class=3D"moz-txt-link-abbreviated" href=3D"mailto:acarboni@fapersa.c=
+om">acarboni@fapersa.com</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+--_000_MWHPR20MB16474ABDE4C9168B6D469D07D4500MWHPR20MB1647namp_--
+
+--_004_MWHPR20MB16474ABDE4C9168B6D469D07D4500MWHPR20MB1647namp_
+Content-Type: image/jpeg; name="logo.jpg"
+Content-Description: logo.jpg
+Content-Disposition: inline; filename="logo.jpg"; size=2446;
+	creation-date="Wed, 22 Feb 2017 12:43:39 GMT";
+	modification-date="Wed, 22 Feb 2017 12:43:39 GMT"
+Content-ID: <part1.ECCD9978.DCF11E6F@fapersa.com>
+Content-Transfer-Encoding: base64
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/4QAWRXhpZgAASUkqAAgAAAAAAAAAAAD/2wBDAAgGBgcGBQgH
+BwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/
+2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy
+MjIyMjIyMjIyMjL/wAARCAApAHsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQF
+BgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS
+0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4
+eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi
+4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREA
+AgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl
+8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImK
+kpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP0
+9fb3+Pn6/9oADAMBAAIRAxEAPwD2bxT4ksvCmhy6pfB2RWCJHHjdI56KM/ifoDXlzfH8hiB4ZXHb
+dqGD/wCi62PjsT/wiGnDPH9or/6KkrF+Hfi/wVong6G11me3jvhLI8gayeQkFjtJYIc8Y71006cf
+Z8zVzlqVJe05U7I7jwP4y1TxlFJeP4fXT9NXKpctdmQyuOoVdgyB3OcZ4GecdpXD+Nbjxc1hDYeD
+dLISRAz3oliQIvZUVmBz6kjgdOeR5hrOqfFPwpBDe6rfXdvC8nlo7PDKpbBOCBnsD19KlUufWNl5
+FOr7NWkm/Ox9D0V4t4n8fazd/DHQtbsrtrG9nu2guTB0YqHHfPBwDjtmuatdX+KF7ov9s2l3qc+n
+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
+
+--_004_MWHPR20MB16474ABDE4C9168B6D469D07D4500MWHPR20MB1647namp_--

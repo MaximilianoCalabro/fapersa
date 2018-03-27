@@ -1,0 +1,148 @@
+Return-Path: <admlasallejobson@gmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id 8fC3NOBh4liVdQAATLP0zA
+	for <jpruata@fapersa.com>; Mon, 03 Apr 2017 11:53:20 -0300
+Return-path: <admlasallejobson@gmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Mon, 03 Apr 2017 11:53:20 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:58205 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.88)
+	(envelope-from <admlasallejobson@gmail.com>)
+	id 1cv3M8-00014q-53
+	for jpruata@fapersa.com; Mon, 03 Apr 2017 11:53:20 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 7F8E37F220
+	for <jpruata@fapersa.com>; Mon,  3 Apr 2017 11:53:19 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id BqaJmlZKcELn for <jpruata@fapersa.com>;
+	Mon,  3 Apr 2017 11:53:18 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id E31067F233; Mon,  3 Apr 2017 11:53:18 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 10B087F216
+	for <jpruata@fapersa.com>; Mon,  3 Apr 2017 11:53:14 -0300 (ART)
+Received-SPF: pass (gmail.com ... _spf.google.com: Sender is authorized to use 'admlasallejobson@gmail.com' in 'mfrom' identity (mechanism 'include:_netblocks.google.com' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="admlasallejobson@gmail.com"; helo=mail-qk0-f194.google.com; client-ip=209.85.220.194
+Received: from mail-qk0-f194.google.com (mail-qk0-f194.google.com [209.85.220.194])
+	by fw.fapersa.com (Postfix) with ESMTPS id 90AFC5FDAF
+	for <jpruata@fapersa.com>; Mon,  3 Apr 2017 11:53:11 -0300 (ART)
+Received: by mail-qk0-f194.google.com with SMTP id p22so19635229qka.0
+        for <jpruata@fapersa.com>; Mon, 03 Apr 2017 07:53:11 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=oDf+TbVsbspGsAiZuHRBuNSjAYDGrkuFSoN5bdZoT8A=;
+        b=tgbPITqw+egKTh7DnfeU56AcPvL1ewYW7joK70+qx5ZiNq4dq1dwM89zUptPNl4V6P
+         Z84caZbf7RLcN4YaWP8vHbTtT5g6oiw/hWaCKKYGOBB9sIvGiI6eWZgEQXCtqRHMS9SL
+         46N2fAfvCdFLWy9v0CjvzNlABelmXWmlOyEmGSRyJsD3uG2J7B5vZqd4Fv4iwo7O95u5
+         I1Ro8Qaerfx9MA6Ty/bwEo8yJgHTrTonAnLoJLfiz1/5Zg5AMPMmDfydOpnQuA9CRHdr
+         wPUOsR7PvYNqT3k5q17j+q0J3Teiv/Q65iHj7WqsWHlNfVA0EV2TR0pkSjEPiDxwKCD7
+         6zfw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=oDf+TbVsbspGsAiZuHRBuNSjAYDGrkuFSoN5bdZoT8A=;
+        b=PofaN4MdZjrJXj5fT4LAYIfcMbwqHD5aQ34JLBFFXlLt2abpVZDMeJ8q3uu53R7CQm
+         gvU1VoiEE83vkZ1CR3bNtP8dJVyY6l4095nQg3C+PWDGeJlAX2qVlzIg7RFtogI6U89B
+         PWcijxMddbthcbhns8925vFIW1DdKGrj+N2PH1Dwt6Rt00fQzFp6+w70Pd9+IxA9aNgX
+         WbXccFprSm7AKr1kUeDt3YYhichCNMC1E80sNuyJHgI/u4yhYyluAC3eHoxupo3csBAL
+         bocEKXXU8ahU6VTpSk7lZ8shs9aDe5MUmeMllHjzsopELlPxAsca6vdLk+CVOyGbwGba
+         wdOQ==
+X-Gm-Message-State: AFeK/H2AJAelI7cH01FThxcVt1GuLNYaJedtDaxZ+zPB5BqBQw6ZkkB9NJHEDA1ONb3HHVLynTSybMb1kZoINg==
+X-Received: by 10.55.147.129 with SMTP id v123mr15826842qkd.230.1491231190357;
+ Mon, 03 Apr 2017 07:53:10 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.12.183.161 with HTTP; Mon, 3 Apr 2017 07:53:09 -0700 (PDT)
+From: La Salle Jobson <admlasallejobson@gmail.com>
+Date: Mon, 3 Apr 2017 11:53:09 -0300
+Message-ID: <CAC0dvPS26R2+zRtnfOXXHwYzpr71BT7vai_XW=c8CokBz0bf-w@mail.gmail.com>
+Subject: =?UTF-8?Q?D=C3=89BITO_DE_LA_CUOTA_2_ABRIL=2D7=C2=BA_GRADO?=
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary=94eb2c08bb62611c56054c4451c0
+
+--94eb2c08bb62611c56054c4451c0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Estimadas Familias:
+
+
+
+Me comunico por este medio para informarles que la fecha
+del d=C3=A9bito autom=C3=A1tico de la cuota 2 de ABRIL es el 07/04. Por fav=
+or,
+revisen las cuentas bancarias para confirmar los d=C3=A9bitos. Cualquier
+inconveniente, les agradecer=C3=ADa que me lo comuniquen.
+
+Saludos cordiales,
+
+
+
+
+
+Lic. Alejandra Solis
+
+   Administradora
+
+--94eb2c08bb62611c56054c4451c0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;lin=
+e-height:normal;background-image:initial;background-position:initial;backgr=
+ound-size:initial;background-repeat:initial;background-origin:initial;backg=
+round-clip:initial"><span style=3D"font-size:16pt;font-family:arial">Estima=
+das Familias:<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal;b=
+ackground-image:initial;background-position:initial;background-size:initial=
+;background-repeat:initial;background-origin:initial;background-clip:initia=
+l"><span style=3D"font-size:16pt;font-family:arial">=C2=A0<span></span></sp=
+an></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal;b=
+ackground-image:initial;background-position:initial;background-size:initial=
+;background-repeat:initial;background-origin:initial;background-clip:initia=
+l"><span style=3D"font-size:16pt;font-family:arial">Me comunico por este me=
+dio para informarles
+que la fecha del=C2=A0d=C3=A9bito=C2=A0autom=C3=A1tico de la cuota 2 de=C2=
+=A0</span><span style=3D"font-size:16pt;font-family:arial;color:black">ABRI=
+L</span><span style=3D"font-size:16pt;font-family:arial">=C2=A0es el 07/04.=
+ Por favor, revisen las cuentas
+bancarias para confirmar los=C2=A0d=C3=A9bitos. Cualquier inconveniente, le=
+s
+agradecer=C3=ADa que me lo comuniquen.<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal;b=
+ackground-image:initial;background-position:initial;background-size:initial=
+;background-repeat:initial;background-origin:initial;background-clip:initia=
+l"><span style=3D"font-size:16pt;font-family:arial">Saludos cordiales,<span=
+></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal;b=
+ackground-image:initial;background-position:initial;background-size:initial=
+;background-repeat:initial;background-origin:initial;background-clip:initia=
+l"><span style=3D"font-size:16pt;font-family:arial">=C2=A0<span></span></sp=
+an></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal;b=
+ackground-image:initial;background-position:initial;background-size:initial=
+;background-repeat:initial;background-origin:initial;background-clip:initia=
+l"><span style=3D"font-size:16pt;font-family:arial;color:black"><span>=C2=
+=A0</span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal;b=
+ackground-image:initial;background-position:initial;background-size:initial=
+;background-repeat:initial;background-origin:initial;background-clip:initia=
+l"><span style=3D"font-size:16pt;font-family:arial;color:black">Lic. Alejan=
+dra Solis<span></span></span></p>
+
+<p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal;b=
+ackground-image:initial;background-position:initial;background-size:initial=
+;background-repeat:initial;background-origin:initial;background-clip:initia=
+l"><span style=3D"font-size:16pt;font-family:arial;color:black">=C2=A0=C2=
+=A0 Administradora<span></span></span></p></div>
+
+--94eb2c08bb62611c56054c4451c0--

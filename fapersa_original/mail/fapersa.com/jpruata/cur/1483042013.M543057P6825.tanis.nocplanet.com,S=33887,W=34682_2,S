@@ -1,0 +1,795 @@
+Return-Path: <CTruzzi@albanesi.com.ar>
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id CVqSH91sZVipGgAATLP0zA
+	; Thu, 29 Dec 2016 17:06:53 -0300
+Return-path: <CTruzzi@albanesi.com.ar>
+Envelope-to: dottonel@fapersa.com,
+ fyori@fapersa.com,
+ jpruata@fapersa.com
+Delivery-date: Thu, 29 Dec 2016 17:06:53 -0300
+Received: from mail-dm3nam03on0061.outbound.protection.outlook.com ([104.47.41.61]:55712 helo=NAM03-DM3-obe.outbound.protection.outlook.com)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-SHA384:256)
+	(Exim 4.87)
+	(envelope-from <CTruzzi@albanesi.com.ar>)
+	id 1cMgyI-0002X9-As; Thu, 29 Dec 2016 17:06:53 -0300
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=gemedi.onmicrosoft.com; s=selector1-albanesi-com-ar;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=K7S6lWXKibVCH1uwrlHJLD1u8CUiNI5VPwOkwKnsdbQ=;
+ b=e6Ro2TO0Cyu9gMo4xJgt/tlV6zKpfaY2iOab98f35+DnF5+rEJgVJh+YrlU3ugeL1UDeuL6rDQ2vVYIGu6hocBsQpZ37kFQJiwnfYfRKrQ8DDYgTGe8PvdLXeEEc0TlpolISRq0iZF2ydFLTdX8dl7jsiFZ+flGD9KTrGslXxqY=
+Received: from CY4PR11MB1863.namprd11.prod.outlook.com (10.175.61.137) by
+ CY4PR11MB1864.namprd11.prod.outlook.com (10.175.61.138) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.817.10; Thu, 29 Dec 2016 20:05:19 +0000
+Received: from CY4PR11MB1863.namprd11.prod.outlook.com ([10.175.61.137]) by
+ CY4PR11MB1863.namprd11.prod.outlook.com ([10.175.61.137]) with mapi id
+ 15.01.0817.009; Thu, 29 Dec 2016 20:05:20 +0000
+From: Carolina Truzzi <CTruzzi@albanesi.com.ar>
+To: "Ing. Fernando Yori" <fyori@fapersa.com>
+CC: Diego Ottonelli <dottonel@fapersa.com>, Juan Pablo Ruata
+	<jpruata@fapersa.com>
+Subject: =?iso-8859-1?Q?RE:_Presentaci=F3n?=
+Thread-Topic: =?iso-8859-1?Q?Presentaci=F3n?=
+Thread-Index: AdJHMdlUSAYXvN7OSOmdmg5CbxCRYwAF/4cABBk6NXABBfXigAFiWDmAAB/BlOAADlMUgAABMl9A
+Disposition-Notification-To: Carolina Truzzi <CTruzzi@albanesi.com.ar>
+Date: Thu, 29 Dec 2016 20:05:19 +0000
+Message-ID: <CY4PR11MB1863BF1B5D393295CB0CDBE3EE6B0@CY4PR11MB1863.namprd11.prod.outlook.com>
+References: <CY4PR11MB1863C52AD46F090E2DE0C59CEE890@CY4PR11MB1863.namprd11.prod.outlook.com>
+ <ef7cd24c-e3eb-a0e3-c6a1-476fa012784c@fapersa.com>
+ <CY4PR11MB186305F63AA60C6ED76D640EEE9C0@CY4PR11MB1863.namprd11.prod.outlook.com>
+ <CY4PR11MB1863331B10EC274B492D58F7EE930@CY4PR11MB1863.namprd11.prod.outlook.com>
+ <71ccbecb-c3f3-8ead-56e6-7238c931fa54@fapersa.com>
+ <CY4PR11MB186362A5E1108626B9DCE49EEE6B0@CY4PR11MB1863.namprd11.prod.outlook.com>
+ <cdf9a5da-a337-5ab9-b2a9-5f297fbd6eb0@fapersa.com>
+In-Reply-To: <cdf9a5da-a337-5ab9-b2a9-5f297fbd6eb0@fapersa.com>
+Accept-Language: es-AR, en-US
+Content-Language: es-ES
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: spf=none (sender IP is )
+ smtp.mailfrom=CTruzzi@albanesi.com.ar; 
+x-originating-ip: [190.210.40.11]
+x-ms-office365-filtering-correlation-id: 3fa12c68-9bad-4f2a-cc1c-08d430260406
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001);SRVR:CY4PR11MB1864;
+x-microsoft-exchange-diagnostics: 1;CY4PR11MB1864;7:pKgfu0kt3zj5oIPqlgTzcuruKgoH1cQUcIWqxq7uhfEhaeinbrUq62r0M/T0oaLKQyRlYJ1ra5eEQmU1kN9pONWx78i41GPEIat3giRTPpOyzXIyt9G1MZ/sxJmRM145zU4vJPaKSlJY6Ti103mAAjRtM/JQ8kkiBTG9O9D667OWKaECYEm4bbKqSa0ir8nEDuktOURx2EyPxrhmM7G91Vkow8tC7yDCjDKckenawcyyFQrZ05S+pYZZop6K2n3kSFQUxY6X78dFEx1oBtXAUsxmZXxhxrK3qFi6iLbnLSbMSDYZazfTKdoD57DYVKhaX8ZjkXak7moWfmQVp0yDESEDiZFsFunihyQy6cSzGw3ry7wh7VbYgmtmOrZbPib5pXFfVGUGwM/C7CFHKtdKnSKnIRWk52r2REo1n+v6Fl9FC74tn96dLGHQf/IllnClnMEdcm+YkReL4Wlk8KtI+w==
+x-microsoft-antispam-prvs: <CY4PR11MB18648F5E34AF6EC8D8D3C122EE6B0@CY4PR11MB1864.namprd11.prod.outlook.com>
+x-exchange-antispam-report-test: UriScan:(21748063052155);
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(6040375)(601004)(2401047)(8121501046)(5005006)(3002001)(10201501046)(6041248)(20161123564025)(20161123562025)(20161123555025)(20161123560025)(6072148);SRVR:CY4PR11MB1864;BCL:0;PCL:0;RULEID:;SRVR:CY4PR11MB1864;
+x-forefront-prvs: 01713B2841
+x-forefront-antispam-report: SFV:NSPM;SFS:(10009020)(7916002)(39450400003)(377454003)(24454002)(199003)(189002)(102836003)(74316002)(6116002)(790700001)(3846002)(55016002)(122556002)(74482002)(50986999)(3280700002)(93886004)(450100001)(4326007)(81156014)(81166006)(2906002)(86362001)(66066001)(8936002)(7696004)(9686002)(5660300001)(110136003)(6916009)(2950100002)(42882006)(76176999)(105586002)(224303003)(101416001)(106356001)(224313004)(92566002)(229853002)(54356999)(7736002)(189998001)(97736004)(80792005)(3660700001)(38730400001)(25786008)(77096006)(2900100001)(33656002)(6436002)(6506006)(68736007)(99286003)(19627235001);DIR:OUT;SFP:1101;SCL:1;SRVR:CY4PR11MB1864;H:CY4PR11MB1863.namprd11.prod.outlook.com;FPR:;SPF:None;PTR:InfoNoRecords;A:0;MX:1;LANG:es;
+received-spf: None (protection.outlook.com: albanesi.com.ar does not designate
+ permitted sender hosts)
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_CY4PR11MB1863BF1B5D393295CB0CDBE3EE6B0CY4PR11MB1863namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: albanesi.com.ar
+X-MS-Exchange-CrossTenant-originalarrivaltime: 29 Dec 2016 20:05:19.9656
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: ae5b5a8f-5fc0-457b-98ba-97d62efa2aa2
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CY4PR11MB1864
+X-Spam-Status: No, score=-1.9
+X-Spam-Score: -18
+X-Spam-Bar: -
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Buenas tardes Fernando, Con la nota ya estaríamos, en estos
+    días le estará llegando la carta oferta original, ya la pasé a la firma.
+   Muchas gracias por todo y feliz año nuevo. [...] 
+ 
+ Content analysis details:   (-1.9 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: fapersa.com]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 T_KAM_HTML_FONT_INVALID BODY: Test for Invalidly Named or Formatted
+                             Colors in HTML
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+X-Spam-Flag: NO
+
+--_000_CY4PR11MB1863BF1B5D393295CB0CDBE3EE6B0CY4PR11MB1863namp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Buenas tardes Fernando,
+
+Con la nota ya estar=EDamos, en estos d=EDas le estar=E1 llegando la carta =
+oferta original, ya la pas=E9 a la firma.
+
+Muchas gracias por todo y feliz a=F1o nuevo.
+
+Saludos.-
+
+
+Carolina Truzzi
+Rafael G. Albanesi S.A.
+Av. Leandro N. Alem 855 Piso 14=B0 (C1001AAD)
+Cdad. de Buenos Aires
+Tel: (54-11) 4313-6790
+Cel.: 153-561-3524
+Fax: (54-11) 4311-5286
+CTruzzi@albanesi.com.ar<mailto:CTruzzi@albanesi.com.ar>
+
+
+De: Ing. Fernando Yori [mailto:fyori@fapersa.com]
+Enviado el: jueves, 29 de diciembre de 2016 04:18 p.m.
+Para: Carolina Truzzi <CTruzzi@albanesi.com.ar>
+CC: Diego Ottonelli <dottonel@fapersa.com>; Juan Pablo Ruata <jpruata@faper=
+sa.com>
+Asunto: Re: Presentaci=F3n
+
+Estimada Carolina:
+Te adjunto escaneada la nota de nominaci=F3n solicitando el gas para el 1 d=
+e Enero de 2017.
+Comentame si hiciera falta algo m=E1s.
+
+Saludos y felicidades!
+
+Fernando Yori
+Fapersa I.C.S.A.
+On 29/12/2016 09:29 a.m., Carolina Truzzi wrote:
+Buenos d=EDas Ing. Fernando Yori,
+
+
+Perfecto, le env=EDo adjunto el modelo de carta oferta para el per=EDodo En=
+ero - Diciembre 2017 para que lo vea, a su vez imprimo el original para hac=
+erlo firmar y envi=E1rselo, ese original que le enviar=E9 es para que quede=
+ en poder de Ustedes, para dar por aceptada la carta oferta deber=E1 enviar=
+nos una nota de nominaci=F3n solicitando el gas para el 1 de Enero del 2017=
+, adjunto tambi=E9n modelo de nota de aceptaci=F3n, la misma deber=E1 ser e=
+nviada en hoja membrete y firmada, podr=E1 ser enviada v=EDa mail escaneada=
+.
+
+
+
+Cualquier consulta estoy a su disposici=F3n.
+
+
+
+Muchas gracias por todo.
+
+
+
+Saludos.-
+
+
+Carolina Truzzi
+Rafael G. Albanesi S.A.
+Av. Leandro N. Alem 855 Piso 14=B0 (C1001AAD)
+Cdad. de Buenos Aires
+Tel: (54-11) 4313-6790
+Cel.: 153-561-3524
+Fax: (54-11) 4311-5286
+CTruzzi@albanesi.com.ar<mailto:CTruzzi@albanesi.com.ar>
+
+
+De: Ing. Fernando Yori [mailto:fyori@fapersa.com]
+Enviado el: mi=E9rcoles, 28 de diciembre de 2016 06:19 p.m.
+Para: Carolina Truzzi <CTruzzi@albanesi.com.ar><mailto:CTruzzi@albanesi.com=
+.ar>
+CC: Diego Ottonelli <dottonel@fapersa.com><mailto:dottonel@fapersa.com>; Ju=
+an Pablo Ruata <jpruata@fapersa.com><mailto:jpruata@fapersa.com>
+Asunto: Re: Presentaci=F3n
+
+Carolina:
+Te confirmamos la primer opci=F3n.
+
+Saludos
+
+Fernando Yori
+Fapersa I.C.S.A.
+On 21/12/2016 05:35 p.m., Carolina Truzzi wrote:
+Estimados Fernando / Diego,
+
+Seg=FAn lo conversado telef=F3nicamente, les env=EDo a continuaci=F3n la me=
+jora solicitada:
+
+1=B0 Opci=F3n:
+Enero - Diciembre 2017: U$S 178.00 dam3
+
+2=B0 Opci=F3n:
+Enero - Abril 2017: U$S 160.00 dam3
+Mayo - Septiembre 2017: U$S 203.00 dam3
+Octubre - Diciembre 2017: U$S 160.00 dam3
+
+La verdad que estamos haciendo nuestros mejores esfuerzos para acompa=F1arl=
+os en este momento complicado que nos toca atravesar.
+
+Cualquier cosa vamos charlando.
+
+Muchas gracias.
+
+Saludos.-
+
+
+Carolina Truzzi
+Rafael G. Albanesi S.A.
+Av. Leandro N. Alem 855 Piso 14=B0 (C1001AAD)
+Cdad. de Buenos Aires
+Tel: (54-11) 4313-6790
+Cel.: 153-561-3524
+Fax: (54-11) 4311-5286
+CTruzzi@albanesi.com.ar<mailto:CTruzzi@albanesi.com.ar>
+
+
+De: Carolina Truzzi
+Enviado el: viernes, 16 de diciembre de 2016 12:46 p.m.
+Para: 'Ing. Fernando Yori' <fyori@fapersa.com><mailto:fyori@fapersa.com>
+CC: Diego Ottonelli <dottonel@fapersa.com><mailto:dottonel@fapersa.com>
+Asunto: RE: Presentaci=F3n
+
+Buenos d=EDas Ing. Fernando Yori,
+
+Le env=EDo adjunta la propuesta de gas natural para el per=EDodo Enero - Di=
+ciembre 2017.
+
+Aviseme por favor que le parece la misma.
+
+Muchas gracias.
+
+Saludos.-
+
+
+Carolina Truzzi
+Rafael G. Albanesi S.A.
+Av. Leandro N. Alem 855 Piso 14=B0 (C1001AAD)
+Cdad. de Buenos Aires
+Tel: (54-11) 4313-6790
+Cel.: 153-561-3524
+Fax: (54-11) 4311-5286
+CTruzzi@albanesi.com.ar<mailto:CTruzzi@albanesi.com.ar>
+
+
+De: Ing. Fernando Yori [mailto:fyori@fapersa.com]
+Enviado el: viernes, 25 de noviembre de 2016 03:29 p.m.
+Para: Carolina Truzzi <CTruzzi@albanesi.com.ar<mailto:CTruzzi@albanesi.com.=
+ar>>
+CC: Diego Ottonelli <dottonel@fapersa.com<mailto:dottonel@fapersa.com>>
+Asunto: Re: Presentaci=F3n
+
+Estimada Carolina:
+Muchas gracias por el contacto. Esperamos realmente que se puedan mejorar s=
+ignificativamente las tarifas del 2016, ya que la baja en d=F3lares fue ins=
+ignificante despu=E9s de la devaluaci=F3n.
+Atentamente,
+
+Ing. Fernando Yori
+
+Fapersa I.C.S.A.
+Lamadrid 3065
+3000 Santa Fe
+Tel: 0342-4810810
+Cel: 0342-154-792552
+On 25/11/2016 12:36 p.m., Carolina Truzzi wrote:
+Estimado Fernando,
+
+Me presento, mi nombre es Carolina Truzzi, le comento que a partir de la pr=
+=F3xima renovaci=F3n del contrato voy a ser la responsable de la cuenta de =
+ustedes, Andr=E9s Kloster, si bien sigue en la empresa, ha cambiado de sect=
+or. En estos d=EDas me voy a comunicar con Usted para pasarle las nuevas ta=
+rifas para el a=F1o 2017.
+
+Cualquier inquietud, duda o lo que necesiten estoy a su disposici=F3n.
+
+Muchas gracias.
+
+Saludos.-
+
+
+
+Carolina Truzzi
+Rafael G. Albanesi S.A.
+Av. Leandro N. Alem 855 Piso 14=B0 (C1001AAD)
+Cdad. de Buenos Aires
+Tel: (54-11) 4313-6790
+Cel.: 153-561-3524
+Fax: (54-11) 4311-5286
+CTruzzi@albanesi.com.ar<mailto:CTruzzi@albanesi.com.ar>
+
+
+
+
+
+
+--_000_CY4PR11MB1863BF1B5D393295CB0CDBE3EE6B0CY4PR11MB1863namp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Bookman Old Style";
+	panose-1:2 5 6 4 5 5 5 2 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	color:black;
+	mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#954F72;
+	text-decoration:underline;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{mso-style-priority:99;
+	mso-style-link:"Texto sin formato Car";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	color:black;
+	mso-fareast-language:EN-US;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+span.TextosinformatoCar
+	{mso-style-name:"Texto sin formato Car";
+	mso-style-priority:99;
+	mso-style-link:"Texto sin formato";
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+span.EstiloCorreo20
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+span.EstiloCorreo21
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+span.EstiloCorreo22
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+span.EstiloCorreo23
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+span.EstiloCorreo24
+	{mso-style-type:personal-reply;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body bgcolor=3D"white" lang=3D"ES-AR" link=3D"#0563C1" vlink=3D"#954F72">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">Buenas tardes Ferna=
+ndo,<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">Con la nota ya esta=
+r=EDamos, en estos d=EDas le estar=E1 llegando la carta oferta original, ya=
+ la pas=E9 a la firma.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">Muchas gracias por =
+todo y feliz a=F1o nuevo.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">Saludos.-<o:p></o:p=
+></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext"><o:p>&nbsp;</o:p></=
+span></p>
+<div>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt;font-family:&quot=
+;Bookman Old Style&quot;,serif;color:windowtext;mso-fareast-language:ES-AR"=
+>Carolina Truzzi</span></b><span style=3D"font-size:12.0pt;color:windowtext=
+;mso-fareast-language:ES-AR"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt;font-family:&quot=
+;Bookman Old Style&quot;,serif;color:windowtext;mso-fareast-language:ES-AR"=
+>Rafael G. Albanesi S.A.</span></b><span style=3D"color:windowtext;mso-fare=
+ast-language:ES-AR"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt;font-family:&quot;Boo=
+kman Old Style&quot;,serif;color:windowtext;mso-fareast-language:ES-AR">Av.=
+ Leandro N. Alem 855 Piso 14=B0 (C1001AAD)</span><span style=3D"color:windo=
+wtext;mso-fareast-language:ES-AR"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt;font-family:&quot;Boo=
+kman Old Style&quot;,serif;color:windowtext;mso-fareast-language:ES-AR">Cda=
+d. de Buenos Aires
+</span><span style=3D"color:windowtext;mso-fareast-language:ES-AR"><o:p></o=
+:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt;font-family:&quot;Boo=
+kman Old Style&quot;,serif;color:windowtext;mso-fareast-language:ES-AR">Tel=
+: (54-11) 4313-6790<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt;font-family:&quot;Boo=
+kman Old Style&quot;,serif;color:windowtext;mso-fareast-language:ES-AR">Cel=
+.: 153-561-3524</span><span style=3D"color:windowtext;mso-fareast-language:=
+ES-AR"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt;font-family:&quot;Boo=
+kman Old Style&quot;,serif;color:windowtext;mso-fareast-language:ES-AR">Fax=
+: (54-11) 4311-5286</span><span style=3D"color:windowtext;mso-fareast-langu=
+age:ES-AR"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt;font-family:&quot;Boo=
+kman Old Style&quot;,serif;color:windowtext;mso-fareast-language:ES-AR"><a =
+href=3D"mailto:CTruzzi@albanesi.com.ar"><span style=3D"color:blue">CTruzzi@=
+albanesi.com.ar</span></a></span><span style=3D"color:windowtext;mso-fareas=
+t-language:ES-AR"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext;mso-fareast-language=
+:ES-AR">&nbsp;</span><span style=3D"color:windowtext;mso-fareast-language:E=
+S-AR"><o:p></o:p></span></p>
+</div>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext"><o:p>&nbsp;</o:p></=
+span></p>
+<div>
+<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0cm =
+0cm 0cm">
+<p class=3D"MsoNormal"><b><span lang=3D"ES" style=3D"color:windowtext;mso-f=
+areast-language:ES-AR">De:</span></b><span lang=3D"ES" style=3D"color:windo=
+wtext;mso-fareast-language:ES-AR"> Ing. Fernando Yori [mailto:fyori@fapersa=
+.com]
+<br>
+<b>Enviado el:</b> jueves, 29 de diciembre de 2016 04:18 p.m.<br>
+<b>Para:</b> Carolina Truzzi &lt;CTruzzi@albanesi.com.ar&gt;<br>
+<b>CC:</b> Diego Ottonelli &lt;dottonel@fapersa.com&gt;; Juan Pablo Ruata &=
+lt;jpruata@fapersa.com&gt;<br>
+<b>Asunto:</b> Re: Presentaci=F3n<o:p></o:p></span></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt">Estimada Carolina:<br=
+>
+Te adjunto escaneada la nota de nominaci=F3n solicitando el gas para el 1 d=
+e Enero de 2017.<br>
+Comentame si hiciera falta algo m=E1s.<br>
+<br>
+Saludos y felicidades!<br>
+<br>
+Fernando Yori<br>
+Fapersa I.C.S.A.<span style=3D"font-size:12.0pt;mso-fareast-language:ES-AR"=
+><o:p></o:p></span></p>
+<div>
+<p class=3D"MsoNormal">On 29/12/2016 09:29 a.m., Carolina Truzzi wrote:<o:p=
+></o:p></p>
+</div>
+<blockquote style=3D"margin-top:5.0pt;margin-bottom:5.0pt">
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">Buenos d=EDas Ing. =
+Fernando Yori,</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">&nbsp;</span><o:p><=
+/o:p></p>
+<p class=3D"MsoPlainText">Perfecto, le env=EDo adjunto el modelo de carta o=
+ferta para el per=EDodo Enero &#8211; Diciembre 2017 para que lo vea, a su =
+vez imprimo el original para hacerlo firmar y envi=E1rselo, ese original qu=
+e le enviar=E9 es para que quede en poder de Ustedes,
+ para dar por aceptada la carta oferta deber=E1 enviarnos una nota de nomin=
+aci=F3n solicitando el gas para el 1 de Enero del 2017, adjunto tambi=E9n m=
+odelo de nota de aceptaci=F3n, la misma deber=E1 ser enviada en hoja membre=
+te y firmada, podr=E1 ser enviada v=EDa mail escaneada.<o:p></o:p></p>
+<p class=3D"MsoPlainText">&nbsp;<o:p></o:p></p>
+<p class=3D"MsoPlainText">Cualquier consulta estoy a su disposici=F3n.<o:p>=
+</o:p></p>
+<p class=3D"MsoPlainText">&nbsp;<o:p></o:p></p>
+<p class=3D"MsoPlainText">Muchas gracias por todo.<o:p></o:p></p>
+<p class=3D"MsoPlainText">&nbsp;<o:p></o:p></p>
+<p class=3D"MsoPlainText">Saludos.-<o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">&nbsp;</span><o:p><=
+/o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">&nbsp;</span><o:p><=
+/o:p></p>
+<div>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt">Carolina Truzzi<=
+/span></b><o:p></o:p></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt">Rafael G. Albane=
+si S.A.</span></b><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt">Av. Leandro N. Alem =
+855 Piso 14=B0 (C1001AAD)</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt">Cdad. de Buenos Aire=
+s </span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt">Tel: (54-11) 4313-67=
+90</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt">Cel.: 153-561-3524</=
+span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt">Fax: (54-11) 4311-52=
+86</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt"><a href=3D"mailto:CT=
+ruzzi@albanesi.com.ar"><span style=3D"color:blue">CTruzzi@albanesi.com.ar</=
+span></a></span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext;mso-fareast-language=
+:ES-AR">&nbsp;</span><o:p></o:p></p>
+</div>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">&nbsp;</span><o:p><=
+/o:p></p>
+<div>
+<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0cm =
+0cm 0cm">
+<p class=3D"MsoNormal"><b><span lang=3D"ES" style=3D"color:windowtext;mso-f=
+areast-language:ES-AR">De:</span></b><span lang=3D"ES" style=3D"color:windo=
+wtext;mso-fareast-language:ES-AR"> Ing. Fernando Yori [<a href=3D"mailto:fy=
+ori@fapersa.com">mailto:fyori@fapersa.com</a>]
+<br>
+<b>Enviado el:</b> mi=E9rcoles, 28 de diciembre de 2016 06:19 p.m.<br>
+<b>Para:</b> Carolina Truzzi <a href=3D"mailto:CTruzzi@albanesi.com.ar">&lt=
+;CTruzzi@albanesi.com.ar&gt;</a><br>
+<b>CC:</b> Diego Ottonelli <a href=3D"mailto:dottonel@fapersa.com">&lt;dott=
+onel@fapersa.com&gt;</a>; Juan Pablo Ruata
+<a href=3D"mailto:jpruata@fapersa.com">&lt;jpruata@fapersa.com&gt;</a><br>
+<b>Asunto:</b> Re: Presentaci=F3n</span><o:p></o:p></p>
+</div>
+</div>
+<p class=3D"MsoNormal">&nbsp;<o:p></o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt">Carolina:<br>
+Te confirmamos la primer opci=F3n.<br>
+<br>
+Saludos<br>
+<br>
+Fernando Yori<br>
+Fapersa I.C.S.A.<o:p></o:p></p>
+<div>
+<p class=3D"MsoNormal">On 21/12/2016 05:35 p.m., Carolina Truzzi wrote:<o:p=
+></o:p></p>
+</div>
+<blockquote style=3D"margin-top:5.0pt;margin-bottom:5.0pt">
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">Estimados Fernando =
+/ Diego,</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">&nbsp;</span><o:p><=
+/o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">Seg=FAn lo conversa=
+do telef=F3nicamente, les env=EDo a continuaci=F3n la mejora solicitada:</s=
+pan><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">&nbsp;</span><o:p><=
+/o:p></p>
+<p class=3D"MsoNormal"><b><u><span style=3D"color:windowtext">1=B0 Opci=F3n=
+:</span></u></b><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">Enero &#8211; Dicie=
+mbre 2017: <b>U$S 178.00 dam3</b></span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">&nbsp;</span><o:p><=
+/o:p></p>
+<p class=3D"MsoNormal"><b><u><span style=3D"color:windowtext">2=B0 Opci=F3n=
+:</span></u></b><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">Enero &#8211; Abril=
+ 2017: <b>U$S 160.00 dam3</b></span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">Mayo &#8211; Septie=
+mbre 2017: <b>U$S 203.00 dam3</b></span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">Octubre &#8211; Dic=
+iembre 2017: <b>
+U$S 160.00 dam3</b></span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">&nbsp;</span><o:p><=
+/o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">La verdad que estam=
+os haciendo nuestros mejores esfuerzos para acompa=F1arlos en este momento =
+complicado que nos toca atravesar.</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">&nbsp;</span><o:p><=
+/o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">Cualquier cosa vamo=
+s charlando.</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">&nbsp;</span><o:p><=
+/o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">Muchas gracias.</sp=
+an><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">&nbsp;</span><o:p><=
+/o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">Saludos.-</span><o:=
+p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">&nbsp;</span><o:p><=
+/o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">&nbsp;</span><o:p><=
+/o:p></p>
+<div>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt">Carolina Truzzi<=
+/span></b><o:p></o:p></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt">Rafael G. Albane=
+si S.A.</span></b><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt">Av. Leandro N. Alem =
+855 Piso 14=B0 (C1001AAD)</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt">Cdad. de Buenos Aire=
+s </span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt">Tel: (54-11) 4313-67=
+90</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt">Cel.: 153-561-3524</=
+span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt">Fax: (54-11) 4311-52=
+86</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt"><a href=3D"mailto:CT=
+ruzzi@albanesi.com.ar"><span style=3D"color:blue">CTruzzi@albanesi.com.ar</=
+span></a></span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext;mso-fareast-language=
+:ES-AR">&nbsp;</span><o:p></o:p></p>
+</div>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">&nbsp;</span><o:p><=
+/o:p></p>
+<div>
+<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0cm =
+0cm 0cm">
+<p class=3D"MsoNormal"><b><span lang=3D"ES" style=3D"color:windowtext;mso-f=
+areast-language:ES-AR">De:</span></b><span lang=3D"ES" style=3D"color:windo=
+wtext;mso-fareast-language:ES-AR"> Carolina Truzzi
+<br>
+<b>Enviado el:</b> viernes, 16 de diciembre de 2016 12:46 p.m.<br>
+<b>Para:</b> 'Ing. Fernando Yori' <a href=3D"mailto:fyori@fapersa.com">&lt;=
+fyori@fapersa.com&gt;</a><br>
+<b>CC:</b> Diego Ottonelli <a href=3D"mailto:dottonel@fapersa.com">&lt;dott=
+onel@fapersa.com&gt;</a><br>
+<b>Asunto:</b> RE: Presentaci=F3n</span><o:p></o:p></p>
+</div>
+</div>
+<p class=3D"MsoNormal">&nbsp;<o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">Buenos d=EDas Ing. =
+Fernando Yori,</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">&nbsp;</span><o:p><=
+/o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">Le env=EDo adjunta =
+la propuesta de gas natural para el per=EDodo Enero &#8211; Diciembre 2017.=
+</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">&nbsp;</span><o:p><=
+/o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">Aviseme por favor q=
+ue le parece la misma.</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">&nbsp;</span><o:p><=
+/o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">Muchas gracias.</sp=
+an><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">&nbsp;</span><o:p><=
+/o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">Saludos.-</span><o:=
+p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">&nbsp;</span><o:p><=
+/o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">&nbsp;</span><o:p><=
+/o:p></p>
+<div>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt">Carolina Truzzi<=
+/span></b><o:p></o:p></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt">Rafael G. Albane=
+si S.A.</span></b><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt">Av. Leandro N. Alem =
+855 Piso 14=B0 (C1001AAD)</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt">Cdad. de Buenos Aire=
+s </span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt">Tel: (54-11) 4313-67=
+90</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt">Cel.: 153-561-3524</=
+span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt">Fax: (54-11) 4311-52=
+86</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt"><a href=3D"mailto:CT=
+ruzzi@albanesi.com.ar"><span style=3D"color:blue">CTruzzi@albanesi.com.ar</=
+span></a></span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext;mso-fareast-language=
+:ES-AR">&nbsp;</span><o:p></o:p></p>
+</div>
+<p class=3D"MsoNormal"><span style=3D"color:windowtext">&nbsp;</span><o:p><=
+/o:p></p>
+<div>
+<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0cm =
+0cm 0cm">
+<p class=3D"MsoNormal"><b><span lang=3D"ES" style=3D"color:windowtext;mso-f=
+areast-language:ES-AR">De:</span></b><span lang=3D"ES" style=3D"color:windo=
+wtext;mso-fareast-language:ES-AR"> Ing. Fernando Yori [<a href=3D"mailto:fy=
+ori@fapersa.com">mailto:fyori@fapersa.com</a>]
+<br>
+<b>Enviado el:</b> viernes, 25 de noviembre de 2016 03:29 p.m.<br>
+<b>Para:</b> Carolina Truzzi &lt;<a href=3D"mailto:CTruzzi@albanesi.com.ar"=
+>CTruzzi@albanesi.com.ar</a>&gt;<br>
+<b>CC:</b> Diego Ottonelli &lt;<a href=3D"mailto:dottonel@fapersa.com">dott=
+onel@fapersa.com</a>&gt;<br>
+<b>Asunto:</b> Re: Presentaci=F3n</span><o:p></o:p></p>
+</div>
+</div>
+<p class=3D"MsoNormal">&nbsp;<o:p></o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt">Estimada Carolina:<br=
+>
+Muchas gracias por el contacto. Esperamos realmente que se puedan mejorar s=
+ignificativamente las tarifas del 2016, ya que la baja en d=F3lares fue ins=
+ignificante despu=E9s de la devaluaci=F3n.<br>
+Atentamente,<br>
+<br>
+Ing. Fernando Yori<br>
+<br>
+Fapersa I.C.S.A.<br>
+Lamadrid 3065<br>
+3000 Santa Fe<br>
+Tel: 0342-4810810<br>
+Cel: 0342-154-792552<o:p></o:p></p>
+<div>
+<p class=3D"MsoNormal">On 25/11/2016 12:36 p.m., Carolina Truzzi wrote:<o:p=
+></o:p></p>
+</div>
+<blockquote style=3D"margin-top:5.0pt;margin-bottom:5.0pt">
+<p class=3D"MsoNormal">Estimado Fernando,<o:p></o:p></p>
+<p class=3D"MsoNormal">&nbsp;<o:p></o:p></p>
+<p class=3D"MsoNormal">Me presento, mi nombre es Carolina Truzzi, le coment=
+o que a partir de la pr=F3xima renovaci=F3n del contrato voy a ser la respo=
+nsable de la cuenta de ustedes, Andr=E9s Kloster, si bien sigue en la empre=
+sa, ha cambiado de sector. En estos d=EDas
+ me voy a comunicar con Usted para pasarle las nuevas tarifas para el a=F1o=
+ 2017.<o:p></o:p></p>
+<p class=3D"MsoNormal">&nbsp;<o:p></o:p></p>
+<p class=3D"MsoNormal">Cualquier inquietud, duda o lo que necesiten estoy a=
+ su disposici=F3n.<o:p></o:p></p>
+<p class=3D"MsoNormal">&nbsp;<o:p></o:p></p>
+<p class=3D"MsoNormal">Muchas gracias.<o:p></o:p></p>
+<p class=3D"MsoNormal">&nbsp;<o:p></o:p></p>
+<p class=3D"MsoNormal">Saludos.-<o:p></o:p></p>
+<p class=3D"MsoNormal">&nbsp;<o:p></o:p></p>
+<p class=3D"MsoNormal">&nbsp;<o:p></o:p></p>
+<p class=3D"MsoNormal">&nbsp;<o:p></o:p></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt">Carolina Truzzi<=
+/span></b><o:p></o:p></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt">Rafael G. Albane=
+si S.A.</span></b><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt">Av. Leandro N. Alem =
+855 Piso 14=B0 (C1001AAD)</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt">Cdad. de Buenos Aire=
+s </span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt">Tel: (54-11) 4313-67=
+90</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt">Cel.: 153-561-3524</=
+span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt">Fax: (54-11) 4311-52=
+86</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt"><a href=3D"mailto:CT=
+ruzzi@albanesi.com.ar"><span style=3D"color:blue">CTruzzi@albanesi.com.ar</=
+span></a></span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:ES-AR">&nbsp;</s=
+pan><o:p></o:p></p>
+<p class=3D"MsoNormal">&nbsp;<o:p></o:p></p>
+</blockquote>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt">&nbsp;</span><o:p><=
+/o:p></p>
+</blockquote>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt">&nbsp;</span><o:p><=
+/o:p></p>
+</blockquote>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ti=
+mes New Roman&quot;,serif;mso-fareast-language:ES-AR"><o:p>&nbsp;</o:p></sp=
+an></p>
+</div>
+</body>
+</html>
+
+--_000_CY4PR11MB1863BF1B5D393295CB0CDBE3EE6B0CY4PR11MB1863namp_--

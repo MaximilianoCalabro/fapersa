@@ -1,0 +1,294 @@
+Return-Path: <reportes-fapersa-bounces@listas.lunix.com.ar>
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id wVwsERClGVlXOQAATLP0zA
+	; Mon, 15 May 2017 09:54:40 -0300
+Return-path: <reportes-fapersa-bounces@listas.lunix.com.ar>
+Envelope-to: jpruata@fapersa.com,
+ pcalcagno@fapersa.com
+Delivery-date: Mon, 15 May 2017 09:54:40 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:45158 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <reportes-fapersa-bounces@listas.lunix.com.ar>)
+	id 1dAFWJ-0004rb-Aj; Mon, 15 May 2017 09:54:40 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 8C7957F209;
+	Mon, 15 May 2017 09:54:38 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id wTy0GNN57efL; Mon, 15 May 2017 09:54:38 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 152807F232; Mon, 15 May 2017 09:54:38 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 7BBD07F209;
+	Mon, 15 May 2017 09:54:37 -0300 (ART)
+Received: from cloud.lunix.com.ar (cloud.lunix.com.ar [207.198.115.213])
+	by fw.fapersa.com (Postfix) with ESMTP id E0DE95FE0D;
+	Mon, 15 May 2017 09:54:36 -0300 (ART)
+Received: from localhost (localhost [127.0.0.1])
+	by cloud.lunix.com.ar (Postfix) with ESMTP id 483A9C1ECF;
+	Mon, 15 May 2017 09:54:36 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at cloud.lunix.com.ar
+Received: from cloud.lunix.com.ar ([127.0.0.1])
+	by localhost (cloud.lunix.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id mBRh1fNgFjVo; Mon, 15 May 2017 09:54:30 -0300 (ART)
+Received: by cloud.lunix.com.ar (Postfix, from userid 114)
+	id ECA03C1EC5; Mon, 15 May 2017 09:54:30 -0300 (ART)
+Received: from cloud.lunix.com.ar (localhost [127.0.0.1])
+	by cloud.lunix.com.ar (Postfix) with ESMTP id E3FEFC1EC5;
+	Mon, 15 May 2017 09:54:25 -0300 (ART)
+X-Original-To: reportes-fapersa@listas.lunix.com.ar
+Delivered-To: reportes-fapersa@listas.lunix.com.ar
+Received: from localhost (localhost [127.0.0.1])
+ by cloud.lunix.com.ar (Postfix) with ESMTP id 1C2D8C1D70
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Mon, 15 May 2017 09:26:01 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at cloud.lunix.com.ar
+Received: from cloud.lunix.com.ar ([127.0.0.1])
+ by localhost (cloud.lunix.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+ with ESMTP id NvwXAriXfyp0 for <reportes-fapersa@listas.lunix.com.ar>;
+ Mon, 15 May 2017 09:25:56 -0300 (ART)
+Received: by cloud.lunix.com.ar (Postfix, from userid 114)
+ id 54F6FC1D7C; Mon, 15 May 2017 09:25:56 -0300 (ART)
+Received: from fapersa.com (mx1.fapersa.com [181.14.247.181])
+ by cloud.lunix.com.ar (Postfix) with ESMTP id E25F4C1D70
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Mon, 15 May 2017 09:25:50 -0300 (ART)
+Received: from localhost (localhost [127.0.0.1])
+ by mail.fapersa.com (Postfix) with ESMTP id 070D07F209
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Mon, 15 May 2017 09:25:50 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+ by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+ with ESMTP id LrnNZDOc05cs for <reportes-fapersa@listas.lunix.com.ar>;
+ Mon, 15 May 2017 09:25:49 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+ id C6B6A7F232; Mon, 15 May 2017 09:25:49 -0300 (ART)
+Received: from [172.22.100.89] (unknown [172.22.100.89])
+ by mail.fapersa.com (Postfix) with ESMTPSA id 3FD087F209
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Mon, 15 May 2017 09:25:49 -0300 (ART)
+References: <5919979B.5070003@fapersa.com>
+To: Reportes_Fapersa <reportes-fapersa@listas.lunix.com.ar>
+From: Diego Ottonelli <dottonelli@fapersa.com>
+X-Forwarded-Message-Id: <5919979B.5070003@fapersa.com>
+Message-ID: <94dea2d0-941f-d146-fd28-0dfde972aa52@fapersa.com>
+Date: Mon, 15 May 2017 09:26:01 -0300
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101
+ Thunderbird/45.8.0
+MIME-Version: 1.0
+In-Reply-To: <5919979B.5070003@fapersa.com>
+X-Mailman-Approved-At: Mon, 15 May 2017 09:54:23 -0300
+Subject: [Reportes-fapersa] Fwd: Reclamo UNIX
+X-BeenThere: reportes-fapersa@listas.lunix.com.ar
+X-Mailman-Version: 2.1.18
+Precedence: list
+List-Id: <reportes-fapersa.listas.lunix.com.ar>
+List-Unsubscribe: <http://listas.lunix.com.ar/cgi-bin/mailman/options/reportes-fapersa>, 
+ <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=unsubscribe>
+List-Post: <mailto:reportes-fapersa@listas.lunix.com.ar>
+List-Help: <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=help>
+List-Subscribe: <http://listas.lunix.com.ar/cgi-bin/mailman/listinfo/reportes-fapersa>, 
+ <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=subscribe>
+Reply-To: reportes-fapersa@listas.lunix.com.ar
+Content-Type: multipart/mixed; boundary="===============4127555903577534270=="
+Errors-To: reportes-fapersa-bounces@listas.lunix.com.ar
+Sender: "Reportes-fapersa" <reportes-fapersa-bounces@listas.lunix.com.ar>
+
+This is a multi-part message in MIME format.
+--===============4127555903577534270==
+Content-Type: multipart/alternative;
+ boundary="------------429D0BD146882A9BF3196335"
+
+This is a multi-part message in MIME format.
+--------------429D0BD146882A9BF3196335
+Content-Type: text/plain; charset=windows-1252; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Por favor, solucionar  problema en el puesto de Marcela.
+
+
+
+-------- Mensaje reenviado --------
+Asunto: 	Reclamo UNIX
+Fecha: 	Mon, 15 May 2017 08:57:15 -0300
+De: 	Comext <comext@fapersa.com>
+Para: 	Diego Ottonelli <dottonel@fapersa.com>
+
+
+
+
+Diego:
+
+No puedo abrir los archivos compartidos, no me detecta la red: ej. 
+Planilla "Comercio Exterior", planilla viajes Pocovi "Comext2013"
+
+Por favor transmitir mi reclamo a quien corresponda.
+Saludos.
+
+
+
+-- 
+Marcela Triszcz
+Compras / Comercio Exterior
+Tel: +54 342 4810810
+Lamadrid 3065
+CP 3000 Santa Fe, Argentina.
+comext@fapersa.com
+
+
+-- 
+
+Diego Ottonelli
+FAPERSA I.C.S.A
+0054-3424810810
+
+
+--------------429D0BD146882A9BF3196335
+Content-Type: multipart/related;
+ boundary="------------4C8B9C2D1C9D66D1FB55CCDA"
+
+
+--------------4C8B9C2D1C9D66D1FB55CCDA
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: 8bit
+
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  </head>
+  <body bgcolor="#FFFFFF" text="#000000">
+    <p><font size="-1">Por favor, solucionar  problema en el puesto de
+        Marcela.</font><br>
+    </p>
+    <div class="moz-forward-container"><br>
+      <br>
+      -------- Mensaje reenviado --------
+      <table class="moz-email-headers-table" border="0" cellpadding="0"
+        cellspacing="0">
+        <tbody>
+          <tr>
+            <th align="RIGHT" nowrap="nowrap" valign="BASELINE">Asunto:
+            </th>
+            <td>Reclamo UNIX</td>
+          </tr>
+          <tr>
+            <th align="RIGHT" nowrap="nowrap" valign="BASELINE">Fecha: </th>
+            <td>Mon, 15 May 2017 08:57:15 -0300</td>
+          </tr>
+          <tr>
+            <th align="RIGHT" nowrap="nowrap" valign="BASELINE">De: </th>
+            <td>Comext <a class="moz-txt-link-rfc2396E" href="mailto:comext@fapersa.com">&lt;comext@fapersa.com&gt;</a></td>
+          </tr>
+          <tr>
+            <th align="RIGHT" nowrap="nowrap" valign="BASELINE">Para: </th>
+            <td>Diego Ottonelli <a class="moz-txt-link-rfc2396E" href="mailto:dottonel@fapersa.com">&lt;dottonel@fapersa.com&gt;</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      <meta http-equiv="content-type" content="text/html;
+        charset=windows-1252">
+      <br>
+      Diego:<br>
+      <br>
+      No puedo abrir los archivos compartidos, no me detecta la red: ej.
+      Planilla "Comercio Exterior", planilla viajes Pocovi "Comext2013"<br>
+      <br>
+      Por favor transmitir mi reclamo a quien corresponda.<br>
+      Saludos.<br>
+      <br>
+      <br>
+      <br>
+      <div class="moz-signature">-- <br>
+        <img src="cid:part1.54182CE1.4E1D4861@fapersa.com">
+        <table border="0">
+          <tbody>
+            <tr>
+            </tr>
+            <tr style="font-family: arial; font-size: 10pt">
+              <td>Marcela Triszcz</td>
+            </tr>
+            <tr style="font-family: arial; font-size: 10pt">
+              <td>Compras / Comercio Exterior</td>
+            </tr>
+            <tr style="font-family: arial; font-size: 10pt">
+              <td> Tel: +54 342 4810810</td>
+            </tr>
+            <tr style="font-family: arial; font-size: 10pt">
+              <td>Lamadrid 3065</td>
+            </tr>
+            <tr style="font-family: arial; font-size: 10pt">
+              <td>CP 3000 Santa Fe, Argentina.</td>
+            </tr>
+            <tr style="font-family: arial; font-size: 8pt">
+              <td><a moz-do-not-send="true"
+                  class="moz-txt-link-abbreviated"
+                  href="mailto:comext@fapersa.com">comext@fapersa.com</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <br>
+    <pre class="moz-signature" cols="72">-- 
+
+Diego Ottonelli
+FAPERSA I.C.S.A
+0054-3424810810</pre>
+  </body>
+</html>
+
+--------------4C8B9C2D1C9D66D1FB55CCDA
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-ID: <part1.54182CE1.4E1D4861@fapersa.com>
+
+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
+--------------4C8B9C2D1C9D66D1FB55CCDA--
+
+--------------429D0BD146882A9BF3196335--
+
+--===============4127555903577534270==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+Content-Disposition: inline
+
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KUmVwb3J0ZXMt
+ZmFwZXJzYSBtYWlsaW5nIGxpc3QKUmVwb3J0ZXMtZmFwZXJzYUBsaXN0YXMubHVuaXguY29tLmFy
+Cmh0dHA6Ly9saXN0YXMubHVuaXguY29tLmFyL2NnaS1iaW4vbWFpbG1hbi9saXN0aW5mby9yZXBv
+cnRlcy1mYXBlcnNhCg==
+
+--===============4127555903577534270==--

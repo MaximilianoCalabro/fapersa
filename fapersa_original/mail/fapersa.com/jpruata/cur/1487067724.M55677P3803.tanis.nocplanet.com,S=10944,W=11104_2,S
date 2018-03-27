@@ -1,0 +1,160 @@
+Return-Path: <sergioparado@hotmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id EfYKA0zaoljbDgAATLP0zA
+	for <jpruata@fapersa.com>; Tue, 14 Feb 2017 07:22:04 -0300
+Return-path: <sergioparado@hotmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Tue, 14 Feb 2017 07:22:04 -0300
+Received: from bay004-omc4s18.hotmail.com ([65.54.190.220]:51140)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-SHA384:256)
+	(Exim 4.88)
+	(envelope-from <sergioparado@hotmail.com>)
+	id 1cdaFB-0001fZ-TI
+	for jpruata@fapersa.com; Tue, 14 Feb 2017 07:22:03 -0300
+Received: from NAM03-CO1-obe.outbound.protection.outlook.com ([65.54.190.199]) by BAY004-OMC4S18.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Tue, 14 Feb 2017 02:21:17 -0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=73UDL6kAHWzPBpiS9F3yIwPndaYbUEislpNKMfXkvas=;
+ b=tF5daeDnq6M/5P0hEb1oWN/YEFQzSUHA+8i0FtCdYhVOgGmaOLc2bN9kDrXwapJNFuI3gvKNyb5koz6vk3hMVyhC4EyAZ/8n2cpqDk+RC/+3DSFwdumbaKie3FhdfwmPY8/IOExQtLTkeUuyXKzjmXptq6JHSLJLHk61zaQcA9j0FbAsozYz7Lt5ncjkh+2OakDP/mA8GsM2gN+TFDU3zJS/ENGVS9FiLUoW4euTnEwWrEdbS6q7qcC9fXajWcYzKAlQJqmJ8yGpfYPboSD/+OvHc7F4Y776m3qlCCOQmNBQLUW9Odjah2SG7wEhLSaStzwxrjwmZpnYhJ8XZjPKBg==
+Received: from CO1NAM03FT048.eop-NAM03.prod.protection.outlook.com
+ (10.152.80.58) by CO1NAM03HT164.eop-NAM03.prod.protection.outlook.com
+ (10.152.81.5) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.904.16; Tue, 14
+ Feb 2017 10:21:16 +0000
+Received: from BN6PR2001MB0977.namprd20.prod.outlook.com (10.152.80.51) by
+ CO1NAM03FT048.mail.protection.outlook.com (10.152.81.49) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.904.16 via Frontend Transport; Tue, 14 Feb 2017 10:21:16 +0000
+Received: from BN6PR2001MB0977.namprd20.prod.outlook.com ([10.172.109.135]) by
+ BN6PR2001MB0977.namprd20.prod.outlook.com ([10.172.109.135]) with mapi id
+ 15.01.0888.030; Tue, 14 Feb 2017 10:21:15 +0000
+From: sergio parado <sergioparado@hotmail.com>
+To: juampi fapersa <jpruata@fapersa.com>
+Subject: Sistemas del tambo
+Thread-Topic: Sistemas del tambo
+Thread-Index: AQHShqwSL1cb5FsJT0G7bjIft1RKCA==
+Date: Tue, 14 Feb 2017 10:21:15 +0000
+Message-ID: <BN6PR2001MB097793B88FC503B6B61C7D47C3580@BN6PR2001MB0977.namprd20.prod.outlook.com>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: fapersa.com; dkim=none (message not signed)
+ header.d=none;fapersa.com; dmarc=none action=none header.from=hotmail.com;
+x-incomingtopheadermarker: OriginalChecksum:C23486291A270FCC0765DC9566A4074E08840645532AA025EA3CFDC19474B573;UpperCasedChecksum:25E894623993A1DE662217BAFC63259B8DBD9F742BAC53630D431447FF1B478C;SizeAsReceived:7603;Count:37
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [CWOwQsd5LWjDayR9YF8jR6NEuKLjTffuEMoe+4z6aV4=]
+x-incomingheadercount: 37
+x-eopattributedmessage: 0
+x-microsoft-exchange-diagnostics: 1;CO1NAM03HT164;7:C0dtVJ0MXjjYU0CQHCUuBC5zF3u97M4rNDzQy4uenNXMqsGnjdso6v4tgn6MN1lJS8mAiNoAjDseCThbJ0eyKox5DSSkfbYbgr/bn2ZlHJkr7q/U37lOXFGa/LEs49qkn1LJT76PSAJhiu/W/SWVtHsO5SWrvL3nL7VGzRVuLjRu/wNvlh5NiocyIlwMQt36z88AOjoAxZwVH7aN4nmLrTYLUW1pr8hUTzpw7Z0WgC6ePcXjon8CCgETGKCNMvtkbDgdSG+YvEDhet7aVSFFE2LhC9FBIrVDG0k8i518it9gfoLu9qPEl/0uuuIRWlH5A1dg7AF5G8KmfeMoY2jsKkzf0nTsMZlf/EtIoDCMfLg1+rVbU5FfXUdFYMYOIv6Mnz5DiVQ15CxoLw5rc3Peu3/qCTzKqdzTmIGMi9KGVPGi8+6ZCo9Ze+YQCV2SQbRQy5HN0AcVCV5XFWRPhs/ypws9ILTKCYzvvKZh0HS/ciNSRPEb2qGv32uXT5MEACH+DIFdfuDIJN6A+SRd2MeB/g==
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(10019020)(6009001)(7916002)(450100001)(4000100100001)(55016002)(54896002)(122556002)(77096006)(7696004)(102836003)(99286003)(189998001)(9686003)(6916009)(6436002)(110136004)(87572001)(50986999)(25786008)(86362001)(6506006)(86152003)(106116001)(20460500001)(3480700004)(83332001)(8676002)(3660700001)(626004)(82202002)(33656002)(8936002)(2900100001)(92566002)(5660300001)(2690700001)(73972006)(3280700002)(54356999)(7116003)(74316002)(104016004)(81003)(15852004);DIR:OUT;SFP:1102;SCL:1;SRVR:CO1NAM03HT164;H:BN6PR2001MB0977.namprd20.prod.outlook.com;FPR:;SPF:None;MLV:nspm;PTR:InfoNoRecords;LANG:es;
+x-ms-office365-filtering-correlation-id: 9f09a74c-39c1-46f7-07bc-08d454c33534
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(5061506506)(5061507331)(1603103135)(1603101373)(1601125187)(1701031045);SRVR:CO1NAM03HT164;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(432015086)(82015046);SRVR:CO1NAM03HT164;BCL:0;PCL:0;RULEID:;SRVR:CO1NAM03HT164;
+x-forefront-prvs: 0218A015FA
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_BN6PR2001MB097793B88FC503B6B61C7D47C3580BN6PR2001MB0977_"
+MIME-Version: 1.0
+X-OriginatorOrg: hotmail.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 14 Feb 2017 10:21:15.0497
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CO1NAM03HT164
+X-OriginalArrivalTime: 14 Feb 2017 10:21:17.0864 (UTC) FILETIME=[14346280:01D286AC]
+X-Spam-Status: No, score=-2.0
+X-Spam-Score: -19
+X-Spam-Bar: --
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Juampi necesito que resolvemos este tema dado que el sistema
+    funciona con la acumulación de datos diarios y corridos . 1 luego de cambiar
+    la placa madre se nos desconecta el sistema . Sugiero cambiar la placa por
+    una como la que tenía. [...] 
+ 
+ Content analysis details:   (-2.0 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+                             [65.54.190.220 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (sergioparado[at]hotmail.com)
+ -0.0 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+ -0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+X-Spam-Flag: NO
+
+--_000_BN6PR2001MB097793B88FC503B6B61C7D47C3580BN6PR2001MB0977_
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+DQpKdWFtcGkgbmVjZXNpdG8gcXVlIHJlc29sdmVtb3MgZXN0ZSB0ZW1hIGRhZG8gcXVlIGVsIHNp
+c3RlbWEgZnVuY2lvbmEgY29uIGxhIGFjdW11bGFjacOzbiBkZSBkYXRvcyBkaWFyaW9zIHkgY29y
+cmlkb3MgLg0KDQoxIGx1ZWdvIGRlIGNhbWJpYXIgbGEgcGxhY2EgbWFkcmUgc2Ugbm9zIGRlc2Nv
+bmVjdGEgZWwgc2lzdGVtYSAuIFN1Z2llcm8gY2FtYmlhciBsYSBwbGFjYSBwb3IgdW5hIGNvbW8g
+bGEgcXVlIHRlbsOtYS4NCg0KMiBlbiBjYXNhIGNvcnRlIGRlIGx1eiBlbCBzaXN0ZW1hIG5vIHNl
+IGxldmFudGEgY3VhbmRvIHJlZ3Jlc2EgbGEgbHV6IHkgZGVwZW5kZW1vcyBkZWwgVGFtYmVybyBv
+IHF1ZSBjYWxsYW1vcyBwZXJzb25hbG1lbnRlIGEgY2FzYSBjYWRhIG9yZGXDsWFyIHBhcmEgdmVy
+aWZpY2FyIGVsIGVzdGFkbyBkZSBsYSBtw6FxdWluYS4NClN1Z2VyZW5jaWEgdW5hIHVwcyBjb24g
+Y2FwYWNpZGFkIGRlIDEgaG9yYSBjb24gcG9zaWJpbGlkYWQgZGUgY29uZWN0YXIgdG9ycmVzIGRl
+IGJhdGVyw61hcyB5IHF1ZSBwdWVkYSBhcGFnYXIgZW4gZm9ybWEgY29ycmVjdGEgbGFzIGJhc2Vz
+IGRlIGRhdG9zIGFsIHRlbmVyIDEwICUgZGUgY2FyZ2EgeSBhbCB2ZW5pciBsYSBsdXogcXVlIGxh
+IHBjIHNlIGluaWNpZSBzb2xhIC4NCg0KRXN0ZSBwcm9ibGVtYSBsbyBlc3RhbW9zIGFycmFzdHJh
+bmRvIGhhY2UgbcOhcyBkZSB1biBtZXMgcGVybyBob3kgZXN0YW1vcyBlbiBwbGVub3MgcGFydG9z
+IHkgc2kgbm8gc2UgcmVzdWVsdmUgdG9kYSBsYSBpbnZlcnNpw7NuIGRlbCBUYW1ibyB2YSBhIHRl
+cm1pbmFyIHNpZW5kbyBpbsO6dGlsDQoNCkdyYWNpYXMgdGUgbG8gcGFzbyBhIHZvcyBwb3JxdWUg
+bm8gcHVlZG8gcmVzb2x2ZXJsby4NCg0KT3BjacOzbiBsYSBnZW50ZSBkZSBUZWNubyBUYW1ibyB0
+aWVuZSBzdSB0w6ljbmljbyBwYXJhIHJlc29sdmVyIHRvZG8gZXN0byBpbm1lZGlhdGFtZW50ZSAu
+DQoNClNlcmdpbw0KDQoNCkVudmlhZG8gZGVzZGUgbWkgU2Ftc3VuZyBNb2JpbGUgZGUgQ2xhcm8N
+Cg==
+
+--_000_BN6PR2001MB097793B88FC503B6B61C7D47C3580BN6PR2001MB0977_
+Content-Type: text/html; charset="utf-8"
+Content-ID: <4FF216CEC4FC584E8DC88A61116D9181@sct-15-1-789-14-msonline-outlook-ade8c.templateTenant>
+Content-Transfer-Encoding: base64
+
+PGh0bWw+DQo8aGVhZD4NCjxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0i
+dGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04Ij4NCjwvaGVhZD4NCjxib2R5Pg0KPGRpdj48YnI+DQo8
+L2Rpdj4NCjxkaXY+SnVhbXBpIG5lY2VzaXRvIHF1ZSByZXNvbHZlbW9zIGVzdGUgdGVtYSBkYWRv
+IHF1ZSBlbCBzaXN0ZW1hIGZ1bmNpb25hIGNvbiBsYSBhY3VtdWxhY2nDs24gZGUgZGF0b3MgZGlh
+cmlvcyB5IGNvcnJpZG9zIC48L2Rpdj4NCjxkaXY+PGJyPg0KPC9kaXY+DQo8ZGl2PjEgbHVlZ28g
+ZGUgY2FtYmlhciBsYSBwbGFjYSBtYWRyZSBzZSBub3MgZGVzY29uZWN0YSBlbCBzaXN0ZW1hIC4g
+U3VnaWVybyBjYW1iaWFyIGxhIHBsYWNhIHBvciB1bmEgY29tbyBsYSBxdWUgdGVuw61hLjwvZGl2
+Pg0KPGRpdj48YnI+DQo8L2Rpdj4NCjxkaXY+MiBlbiBjYXNhIGNvcnRlIGRlIGx1eiBlbCBzaXN0
+ZW1hIG5vIHNlIGxldmFudGEgY3VhbmRvIHJlZ3Jlc2EgbGEgbHV6IHkgZGVwZW5kZW1vcyBkZWwg
+VGFtYmVybyBvIHF1ZSBjYWxsYW1vcyBwZXJzb25hbG1lbnRlIGEgY2FzYSBjYWRhIG9yZGXDsWFy
+IHBhcmEgdmVyaWZpY2FyIGVsIGVzdGFkbyBkZSBsYSBtw6FxdWluYS48L2Rpdj4NCjxkaXY+U3Vn
+ZXJlbmNpYSB1bmEgdXBzIGNvbiBjYXBhY2lkYWQgZGUgMSBob3JhIGNvbiBwb3NpYmlsaWRhZCBk
+ZSBjb25lY3RhciB0b3JyZXMgZGUgYmF0ZXLDrWFzIHkgcXVlIHB1ZWRhIGFwYWdhciBlbiBmb3Jt
+YSBjb3JyZWN0YSBsYXMgYmFzZXMgZGUgZGF0b3MgYWwgdGVuZXIgMTAgJSBkZSBjYXJnYSB5IGFs
+IHZlbmlyIGxhIGx1eiBxdWUgbGEgcGMgc2UgaW5pY2llIHNvbGEgLjwvZGl2Pg0KPGRpdj48YnI+
+DQo8L2Rpdj4NCjxkaXY+RXN0ZSBwcm9ibGVtYSBsbyBlc3RhbW9zIGFycmFzdHJhbmRvIGhhY2Ug
+bcOhcyBkZSB1biBtZXMgcGVybyBob3kgZXN0YW1vcyBlbiBwbGVub3MgcGFydG9zIHkgc2kgbm8g
+c2UgcmVzdWVsdmUgdG9kYSBsYSBpbnZlcnNpw7NuIGRlbCBUYW1ibyB2YSBhIHRlcm1pbmFyIHNp
+ZW5kbyBpbsO6dGlsJm5ic3A7PC9kaXY+DQo8ZGl2Pjxicj4NCjwvZGl2Pg0KPGRpdj5HcmFjaWFz
+IHRlIGxvIHBhc28gYSB2b3MgcG9ycXVlIG5vIHB1ZWRvIHJlc29sdmVybG8uPC9kaXY+DQo8ZGl2
+Pjxicj4NCjwvZGl2Pg0KPGRpdj5PcGNpw7NuIGxhIGdlbnRlIGRlIFRlY25vIFRhbWJvIHRpZW5l
+IHN1IHTDqWNuaWNvIHBhcmEgcmVzb2x2ZXIgdG9kbyBlc3RvIGlubWVkaWF0YW1lbnRlIC48L2Rp
+dj4NCjxkaXY+PGJyPg0KPC9kaXY+DQo8ZGl2PlNlcmdpbyZuYnNwOzwvZGl2Pg0KPGRpdj48YnI+
+DQo8L2Rpdj4NCjxkaXY+PGJyPg0KPC9kaXY+DQo8ZGl2IGlkPSJjb21wb3Nlcl9zaWduYXR1cmUi
+Pg0KPGRpdiBzdHlsZT0iZm9udC1zaXplOjg1JTtjb2xvcjojNTc1NzU3IiBkaXI9ImF1dG8iPkVu
+dmlhZG8gZGVzZGUgbWkgU2Ftc3VuZyBNb2JpbGUgZGUgQ2xhcm88L2Rpdj4NCjwvZGl2Pg0KPC9i
+b2R5Pg0KPC9odG1sPg0K
+
+--_000_BN6PR2001MB097793B88FC503B6B61C7D47C3580BN6PR2001MB0977_--

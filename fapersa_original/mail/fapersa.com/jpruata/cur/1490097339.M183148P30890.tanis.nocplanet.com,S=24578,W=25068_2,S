@@ -1,0 +1,490 @@
+Return-Path: <oficinadiegosales@hotmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id iWKcCrsU0ViqeAAATLP0zA
+	for <jpruata@fapersa.com>; Tue, 21 Mar 2017 08:55:39 -0300
+Return-path: <oficinadiegosales@hotmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Tue, 21 Mar 2017 08:55:39 -0300
+Received: from snt004-omc4s8.hotmail.com ([65.55.90.211]:57017)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-SHA384:256)
+	(Exim 4.88)
+	(envelope-from <oficinadiegosales@hotmail.com>)
+	id 1cqINs-00086Z-Le
+	for jpruata@fapersa.com; Tue, 21 Mar 2017 08:55:38 -0300
+Received: from NAM04-BN3-obe.outbound.protection.outlook.com ([65.55.90.201]) by SNT004-OMC4S8.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Tue, 21 Mar 2017 04:54:41 -0700
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=0CXrYArNNEX1wj2GUQOZSs3AgipTH/WLYoUVDs+WZy8=;
+ b=CjE0gD6U4fb1o2skcV9x594380e5/AT66vEgv4Vayp2oMBCdoEgacCsi2LI2tqMbhTHLtY8SAs2FjXql/o8K1QyivF8VZ1CE+M0bVaZANtYQcN+ibHVTrC8OU2S68SiF6J+UD7lQNIFMcTdJpPXgg0c0R07OcFtsXVop+czi+fWyTuYxWQnvp6n6VlH1TkuKwGnXbh2DOCZuWI/hGw4aPUZf9y4vFNA7Gf/bpA+5PR1+mYIU4FdzTpnJvnoQgCCEyBS4BGHm8PM2/qFn0bpER5RGUwNw2Q/t6SIg2cODsHvq2A1goSIjNopImcYVOdAPa+TpKK/gGhKtzm/DDYCtHg==
+Received: from CO1NAM04FT021.eop-NAM04.prod.protection.outlook.com
+ (10.152.90.52) by CO1NAM04HT018.eop-NAM04.prod.protection.outlook.com
+ (10.152.91.25) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.977.7; Tue, 21 Mar
+ 2017 11:54:40 +0000
+Received: from CO2PR01MB2007.prod.exchangelabs.com (10.152.90.56) by
+ CO1NAM04FT021.mail.protection.outlook.com (10.152.90.141) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.977.7 via Frontend Transport; Tue, 21 Mar 2017 11:54:40 +0000
+Received: from CO2PR01MB2007.prod.exchangelabs.com ([10.166.90.148]) by
+ CO2PR01MB2007.prod.exchangelabs.com ([10.166.90.148]) with mapi id
+ 15.01.0947.025; Tue, 21 Mar 2017 11:54:40 +0000
+From: Oficina Sales <oficinadiegosales@hotmail.com>
+To: FAPERSA <jpruata@fapersa.com>
+Subject: Re: stro.2001600422 / Re Luciana
+Thread-Topic: stro.2001600422 / Re Luciana
+Thread-Index: AQHSnmY5bbitju4Cokia5g+PJWaoK6Gd4AiAgAFWuKc=
+Date: Tue, 21 Mar 2017 11:54:40 +0000
+Message-ID: <CO2PR01MB200702C39E71584BA4E63AD1A23D0@CO2PR01MB2007.prod.exchangelabs.com>
+References: <CO2PR01MB2007D6A4CBF3604EA95D56CEA2260@CO2PR01MB2007.prod.exchangelabs.com>,<C2BC1E7D-B442-4E93-A819-FF700847B678@fapersa.com>
+In-Reply-To: <C2BC1E7D-B442-4E93-A819-FF700847B678@fapersa.com>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: fapersa.com; dkim=none (message not signed)
+ header.d=none;fapersa.com; dmarc=none action=none header.from=hotmail.com;
+x-incomingtopheadermarker: OriginalChecksum:C45488336D78BF5E9B54846752D765C13661121E738B3F9898A0DBF952333E21;UpperCasedChecksum:C34A930F989AF2D78CFE83283F7FEFD714D5FB99F27A5DCAC860194553794ABE;SizeAsReceived:7726;Count:39
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [5kqkz/PNNnB0K74p4gpv07vgKsCh2/WN]
+x-incomingheadercount: 39
+x-eopattributedmessage: 0
+x-microsoft-exchange-diagnostics: 1;CO1NAM04HT018;5:kMWh6SvCx3gqfB6qhQ5SUVZtdvAA9IvRNXOfL7qNsm3P1rxxQxAKQtz0tps0VjbERscZg/Wb+ws055qQ6XismscKBV3Sxmx6OqiH18cG/GOqwQFZNEGpMi4EabMcYW4v2oIwTWFMJisJQqUmVJPRuA==;24:w9C4aJLQ/WHXZ883JswKn3PERAfJfkREE3GSh/F2Nd70n1zD0kUvp5XHHnco5pnvM2uTHzlE/TMxcaICdp5JdWZNAek0WWsSEUJn64P4bCQ=;7:XwGEyTy/5tKsUGOnA9yw0fcMd/RDZYE5TR5eHD7JlJXtsYrzLiCK10aB2GmkoL4xLwDLVz6QAh1Ad+0sT9V5CTGoy/dSiUjZpuJxi5X4fqGh7UXGtv5QLh2bUotcP/aDM8+G6lHABn2SnibGyiRrdd7mp7OjaUsGErydN6jtmn/hFduHx7NBQHNxSmCCY6s5IvXow7wFJ+1dASdmtWwP0IrfIAsGWPa7j2/FYrEz9gMC084Gv+nujyujNXdJR83Iv3LNOl60U/kfVmAk/iN+TIubRYSFNVu6nbk/yjwze7QgZFim0CRUOxx8fiXU1mg2
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(10019020)(98900017);DIR:OUT;SFP:1102;SCL:1;SRVR:CO1NAM04HT018;H:CO2PR01MB2007.prod.exchangelabs.com;FPR:;SPF:None;LANG:es;
+x-ms-office365-filtering-correlation-id: 3c2434bc-3ab5-45e6-eb6e-08d470510ea0
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(201702061074)(5061506573)(5061507331)(1603103135)(1601125254)(1603101448)(1701031045);SRVR:CO1NAM04HT018;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(432015281)(444000031);SRVR:CO1NAM04HT018;BCL:0;PCL:0;RULEID:;SRVR:CO1NAM04HT018;
+x-forefront-prvs: 02530BD3AA
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_CO2PR01MB200702C39E71584BA4E63AD1A23D0CO2PR01MB2007prod_"
+MIME-Version: 1.0
+X-OriginatorOrg: hotmail.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 21 Mar 2017 11:54:40.4169
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CO1NAM04HT018
+X-OriginalArrivalTime: 21 Mar 2017 11:54:41.0856 (UTC) FILETIME=[ECE6F400:01D2A239]
+X-Spam-Status: No, score=-1.0
+X-Spam-Score: -9
+X-Spam-Bar: -
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Buenos días, el dorso del título no se lee. Por favor enviar
+    una copia que sea legible o acercarla en papel a la oficina. Gracias María
+    José Paroli [...] 
+ 
+ Content analysis details:   (-1.0 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: arnet.com.ar]
+ -0.0 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (oficinadiegosales[at]hotmail.com)
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+  1.0 FREEMAIL_REPLY         From and body contain different freemails
+X-Spam-Flag: NO
+
+--_000_CO2PR01MB200702C39E71584BA4E63AD1A23D0CO2PR01MB2007prod_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Buenos d=EDas, el dorso del t=EDtulo no se lee. Por favor enviar una copia =
+que sea legible o acercarla en papel a la oficina.
+
+
+Gracias
+
+
+Mar=EDa Jos=E9 Paroli
+
+
+DIEGO F. SALES
+
+Secci=F3n SINIESTROS
+
+Tel: (0342) 4534182
+
+25 DE MAYO 2868 - SANTA FE
+
+diegosales@arnet.com.ar<mailto:diegosales@arnet.com.ar>
+
+oficinadiegosales@hotmail.com
+
+
+Horario de Atenci=F3n Administrativa SINIESTROS:
+
+Lunes a Viernes de 08:00 hs. a 12:00 hs.
+
+L=EDneas Rotativas para Denuncias: 0800 777 4643
+
+
+
+________________________________
+De: FAPERSA <jpruata@fapersa.com>
+Enviado: lunes, 20 de marzo de 2017 12:26 p.m.
+Para: Oficina Sales
+Asunto: Re: stro.2001600422 / Re Luciana
+
+Maria Jose buenos d=EDas,
+Te adjunto el titulo solicitado.
+
+Saludos.
+
+
+
+
+
+
+
+El 16 mar. 2017, a las 12:03, Oficina Sales <oficinadiegosales@hotmail.com<=
+mailto:oficinadiegosales@hotmail.com>> escribi=F3:
+
+Buenos d=EDas, no logr=E9 comunicarme telef=F3nicamente.
+Con respecto al stro. de referencia se determin=F3 la Destrucci=F3n Total d=
+el veh=EDculo.
+Necesito copia del t=EDtulo del automotor (frente y dorso) para confecciona=
+r el formulario 04D y comenzar el tr=E1mite para dar de baja a la unidad.
+
+Quedo al aguardo de la documentaci=F3n.
+
+A disposici=F3n por cualquier consulta.
+
+Gracias.
+
+Saludos
+
+
+Mar=EDa Jos=E9 Paroli
+
+DIEGO F. SALES
+Secci=F3n SINIESTROS
+Tel: (0342) 4534182
+25 DE MAYO 2868 - SANTA FE
+diegosales@arnet.com.ar<mailto:diegosales@arnet.com.ar>
+oficinadiegosales@hotmail.com<mailto:oficinadiegosales@hotmail.com>
+
+Horario de Atenci=F3n Administrativa SINIESTROS:
+Lunes a Viernes de 08:00 hs. a 12:00 hs.
+L=EDneas Rotativas para Denuncias: 0800 777 4643
+
+--_000_CO2PR01MB200702C39E71584BA4E63AD1A23D0CO2PR01MB2007prod_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt;color:#000000;font=
+-family:Calibri,Arial,Helvetica,sans-serif;" dir=3D"ltr">
+<p>Buenos d=EDas, el dorso del t=EDtulo no se lee. Por favor enviar una cop=
+ia que sea legible o acercarla en papel a la oficina.</p>
+<p><br>
+</p>
+<p>Gracias</p>
+<p><br>
+</p>
+<div id=3D"Signature">
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:14pt; color:#000000; ba=
+ckground-color:#FFFFFF; font-family:Arial,Helvetica,sans-serif">
+<p class=3D"ecxMsoNormal"></p>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<span style=3D"font-size:10pt; color:rgb(189,19,152); font-family:Corbel,sa=
+ns-serif"><b><span style=3D"font-size:12pt; color:rgb(0,0,0)">Mar=EDa Jos=
+=E9 Paroli</span></b></span></p>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<i><span style=3D"font-size:10pt; color:rgb(189,19,152); font-family:Corbel=
+,sans-serif"><b><span style=3D"font-size:12pt"><br>
+</span></b></span></i></p>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<i><span style=3D"font-size:10pt; color:rgb(189,19,152); font-family:Corbel=
+,sans-serif"><b><span style=3D"font-size:12pt">DIEGO F. SALES&nbsp;</span><=
+/b></span></i></p>
+<span style=3D"font-size:18.6667px; font-family:Corbel,sans-serif; color:rg=
+b(189,19,152)"></span><span style=3D"font-size:18.6667px; font-family:'Fran=
+klin Gothic Medium',sans-serif"></span><span style=3D"font-size:18.6667px; =
+font-family:Corbel,sans-serif; color:rgb(189,19,152)"></span><span style=3D=
+"font-family:Arial,Helvetica,sans-serif; font-size:18.6667px"></span>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<i><span style=3D"color:rgb(189,19,152); font-family:Corbel,sans-serif; fon=
+t-size:11pt">Secci=F3n SINIESTROS&nbsp;</span></i></p>
+<span style=3D"font-family:Corbel,sans-serif; color:rgb(189,19,152); font-s=
+ize:11pt"></span><span style=3D"font-size:18.6667px; font-family:'Franklin =
+Gothic Medium',sans-serif"></span><span style=3D"font-family:Corbel,sans-se=
+rif; color:rgb(189,19,152); font-size:11pt"></span><span style=3D"font-fami=
+ly:Arial,Helvetica,sans-serif; font-size:18.6667px"></span>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<i><span style=3D"color:rgb(189,19,152); font-family:Corbel,sans-serif; fon=
+t-size:11pt">Tel: (0342) 4534182</span><span style=3D"font-family:'Franklin=
+ Gothic Medium',sans-serif"></span></i></p>
+<span style=3D"font-family:Corbel,sans-serif; color:rgb(189,19,152); font-s=
+ize:11pt"></span><span style=3D"font-size:18.6667px; font-family:'Franklin =
+Gothic Medium',sans-serif"></span><span style=3D"font-family:Corbel,sans-se=
+rif; color:rgb(189,19,152); font-size:11pt"></span><span style=3D"font-fami=
+ly:Arial,Helvetica,sans-serif; font-size:18.6667px"></span>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<i><span style=3D"color:rgb(102,0,51)"><span style=3D"font-family:Corbel,sa=
+ns-serif; color:rgb(189,19,152); font-size:11pt">25 DE MAYO 2868 -&nbsp;</s=
+pan><span style=3D"font-family:Corbel,sans-serif; color:rgb(189,19,152); fo=
+nt-size:11pt">SANTA FE</span></span></i></p>
+<span style=3D"font-family:Corbel,sans-serif; color:rgb(189,19,152); font-s=
+ize:11pt"></span><span style=3D"font-family:Arial,Helvetica,sans-serif; fon=
+t-size:18.6667px"></span>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<i><span style=3D"color:rgb(102,0,51)"><a href=3D"mailto:diegosales@arnet.c=
+om.ar" target=3D"_blank" id=3D"LPNoLP"><span style=3D"font-family:Corbel,sa=
+ns-serif; color:rgb(189,19,152); font-size:11pt">diegosales@arnet.com.ar</s=
+pan></a></span></i></p>
+<span style=3D"font-family:Corbel,sans-serif; color:rgb(189,19,152); font-s=
+ize:11pt"></span><span style=3D"font-family:Arial,Helvetica,sans-serif; fon=
+t-size:18.6667px"></span>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<i><span style=3D"color:rgb(189,19,152); font-family:Corbel,sans-serif; fon=
+t-size:11pt">oficinadiegosales@hotmail.com</span></i></p>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<br>
+</p>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<i style=3D"line-height:20.8267px; color:rgb(68,68,68); font-size:14.6667px=
+"><span style=3D"line-height:18.9333px; font-size:10pt; color:rgb(102,0,51)=
+"><font face=3D"Arial"><span style=3D"color:rgb(0,0,0)">Horario de Atenci=
+=F3n Administrativa&nbsp;SINIESTROS:&nbsp;</span></font></span></i></p>
+<span style=3D"font-family:Arial,Helvetica,sans-serif; font-size:18.6667px"=
+></span><span style=3D"font-family:Arial,Helvetica,sans-serif; font-size:18=
+.6667px"></span>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<i style=3D"line-height:20.8267px; color:rgb(68,68,68); font-size:14.6667px=
+"><span style=3D"line-height:18.9333px; font-size:10pt; color:rgb(102,0,51)=
+"><font face=3D"Arial"><span style=3D"color:rgb(0,0,0)">Lunes a Viernes de =
+08:00 hs.&nbsp;a&nbsp;12:00 hs.</span></font></span></i></p>
+<p class=3D"x_ecxMsoNormal" style=3D"font-family:Arial,Helvetica,sans-serif=
+; font-size:18.6667px">
+<i style=3D"line-height:20.8267px; color:rgb(68,68,68); font-size:14.6667px=
+"><span style=3D"line-height:18.9333px; font-size:10pt; color:rgb(102,0,51)=
+"><font face=3D"Arial"><span style=3D"color:rgb(0,0,0)">L=EDneas Rotativas =
+para Denuncias: 0800 777 4643</span></font></span></i></p>
+<br>
+<p></p>
+<p class=3D"ecxMsoNormal"><font size=3D"1"></font></p>
+<font face=3D"Times New Roman" size=3D"3"></font></div>
+</div>
+<br>
+<br>
+<div style=3D"color: rgb(0, 0, 0);">
+<hr tabindex=3D"-1" style=3D"display:inline-block; width:98%">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" co=
+lor=3D"#000000" style=3D"font-size:11pt"><b>De:</b> FAPERSA &lt;jpruata@fap=
+ersa.com&gt;<br>
+<b>Enviado:</b> lunes, 20 de marzo de 2017 12:26 p.m.<br>
+<b>Para:</b> Oficina Sales<br>
+<b>Asunto:</b> Re: stro.2001600422 / Re Luciana</font>
+<div>&nbsp;</div>
+</div>
+<div>
+<div class=3D"" style=3D"word-wrap:break-word">
+<div class=3D"">Maria Jose buenos d=EDas,</div>
+<div class=3D"">Te adjunto el titulo solicitado.</div>
+<div class=3D""><br class=3D"">
+</div>
+<div class=3D"">Saludos.</div>
+<div class=3D""><br class=3D"">
+</div>
+<div class=3D""><br class=3D"">
+</div>
+<div class=3D""><br class=3D"">
+</div>
+<div class=3D""><br class=3D"">
+</div>
+<div class=3D""><br class=3D"">
+</div>
+<div class=3D""><br class=3D"">
+</div>
+<br class=3D"">
+<div>
+<blockquote type=3D"cite" class=3D"">
+<div class=3D"">El 16 mar. 2017, a las 12:03, Oficina Sales &lt;<a href=3D"=
+mailto:oficinadiegosales@hotmail.com" class=3D"">oficinadiegosales@hotmail.=
+com</a>&gt; escribi=F3:</div>
+<br class=3D"x_Apple-interchange-newline">
+<div class=3D"">
+<div id=3D"x_divtagdefaultwrapper" dir=3D"ltr" class=3D"" style=3D"font-sty=
+le:normal; font-weight:normal; letter-spacing:normal; orphans:auto; text-al=
+ign:start; text-indent:0px; text-transform:none; white-space:normal; widows=
+:auto; word-spacing:0px; font-size:12pt; font-family:Calibri,Arial,Helvetic=
+a,sans-serif">
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px">Buenos d=EDas, =
+no logr=E9 comunicarme telef=F3nicamente.</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px">Con respecto al=
+ stro. de referencia se determin=F3 la Destrucci=F3n Total del veh=EDculo.<=
+/div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px">Necesito copia =
+del t=EDtulo del automotor (frente y dorso) para confeccionar el formulario=
+ 04D y comenzar el tr=E1mite para dar de baja a la unidad.</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px"><br class=3D"">
+</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px">Quedo al aguard=
+o de la documentaci=F3n.</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px"><br class=3D"">
+</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px">A disposici=F3n=
+ por cualquier consulta.</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px"><br class=3D"">
+</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px">Gracias.</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px"><br class=3D"">
+</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px">Saludos</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px"><br class=3D"">
+</div>
+<div id=3D"x_Signature" class=3D"">
+<div id=3D"x_divtagdefaultwrapper" class=3D"" style=3D"font-size:14pt; back=
+ground-color:rgb(255,255,255); font-family:Arial,Helvetica,sans-serif">
+<p class=3D"x_ecxMsoNormal" style=3D"margin-top:0px; margin-bottom:0px"></p=
+>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<span class=3D"" style=3D"font-size:10pt; color:rgb(189,19,152); font-famil=
+y:Corbel,sans-serif"><b class=3D""><span class=3D"" style=3D"font-size:12pt=
+">Mar=EDa Jos=E9 Paroli</span></b></span></div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<i class=3D""><span class=3D"" style=3D"font-size:10pt; color:rgb(189,19,15=
+2); font-family:Corbel,sans-serif"><b class=3D""><span class=3D"" style=3D"=
+font-size:12pt"><br class=3D"">
+</span></b></span></i></div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<i class=3D""><span class=3D"" style=3D"font-size:10pt; color:rgb(189,19,15=
+2); font-family:Corbel,sans-serif"><b class=3D""><span class=3D"" style=3D"=
+font-size:12pt">DIEGO F. SALES&nbsp;</span></b></span></i></div>
+<span class=3D"" style=3D"font-size:18.6667px; font-family:Corbel,sans-seri=
+f; color:rgb(189,19,152)"></span><span class=3D"" style=3D"font-size:18.666=
+7px; font-family:'Franklin Gothic Medium',sans-serif"></span><span class=3D=
+"" style=3D"font-size:18.6667px; font-family:Corbel,sans-serif; color:rgb(1=
+89,19,152)"></span><span class=3D"" style=3D"font-family:Arial,Helvetica,sa=
+ns-serif; font-size:18.6667px"></span>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<i class=3D""><span class=3D"" style=3D"color:rgb(189,19,152); font-family:=
+Corbel,sans-serif; font-size:11pt">Secci=F3n SINIESTROS&nbsp;</span></i></d=
+iv>
+<span class=3D"" style=3D"font-family:Corbel,sans-serif; color:rgb(189,19,1=
+52); font-size:11pt"></span><span class=3D"" style=3D"font-size:18.6667px; =
+font-family:'Franklin Gothic Medium',sans-serif"></span><span class=3D"" st=
+yle=3D"font-family:Corbel,sans-serif; color:rgb(189,19,152); font-size:11pt=
+"></span><span class=3D"" style=3D"font-family:Arial,Helvetica,sans-serif; =
+font-size:18.6667px"></span>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<i class=3D""><span class=3D"" style=3D"color:rgb(189,19,152); font-family:=
+Corbel,sans-serif; font-size:11pt">Tel: (0342) 4534182</span><span class=3D=
+"" style=3D"font-family:'Franklin Gothic Medium',sans-serif"></span></i></d=
+iv>
+<span class=3D"" style=3D"font-family:Corbel,sans-serif; color:rgb(189,19,1=
+52); font-size:11pt"></span><span class=3D"" style=3D"font-size:18.6667px; =
+font-family:'Franklin Gothic Medium',sans-serif"></span><span class=3D"" st=
+yle=3D"font-family:Corbel,sans-serif; color:rgb(189,19,152); font-size:11pt=
+"></span><span class=3D"" style=3D"font-family:Arial,Helvetica,sans-serif; =
+font-size:18.6667px"></span>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<i class=3D""><span class=3D"" style=3D"color:rgb(102,0,51)"><span class=3D=
+"" style=3D"font-family:Corbel,sans-serif; color:rgb(189,19,152); font-size=
+:11pt">25 DE MAYO 2868 -&nbsp;</span><span class=3D"" style=3D"font-family:=
+Corbel,sans-serif; color:rgb(189,19,152); font-size:11pt">SANTA
+ FE</span></span></i></div>
+<span class=3D"" style=3D"font-family:Corbel,sans-serif; color:rgb(189,19,1=
+52); font-size:11pt"></span><span class=3D"" style=3D"font-family:Arial,Hel=
+vetica,sans-serif; font-size:18.6667px"></span>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<i class=3D""><span class=3D"" style=3D"color:rgb(102,0,51)"><a href=3D"mai=
+lto:diegosales@arnet.com.ar" target=3D"_blank" id=3D"LPNoLP" class=3D""><sp=
+an class=3D"" style=3D"font-family:Corbel,sans-serif; color:rgb(189,19,152)=
+; font-size:11pt">diegosales@arnet.com.ar</span></a></span></i></div>
+<span class=3D"" style=3D"font-family:Corbel,sans-serif; color:rgb(189,19,1=
+52); font-size:11pt"></span><span class=3D"" style=3D"font-family:Arial,Hel=
+vetica,sans-serif; font-size:18.6667px"></span>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<i class=3D""><span class=3D"" style=3D"color:rgb(189,19,152); font-family:=
+Corbel,sans-serif; font-size:11pt"><a href=3D"mailto:oficinadiegosales@hotm=
+ail.com" class=3D"">oficinadiegosales@hotmail.com</a></span></i></div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<br class=3D"">
+</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<i class=3D"" style=3D"line-height:20.8267px; color:rgb(68,68,68); font-siz=
+e:14.6667px"><span class=3D"" style=3D"line-height:18.9333px; font-size:10p=
+t; color:rgb(102,0,51)"><font face=3D"Arial" class=3D""><span class=3D"" st=
+yle=3D"">Horario de Atenci=F3n Administrativa&nbsp;SINIESTROS:&nbsp;</span>=
+</font></span></i></div>
+<span class=3D"" style=3D"font-family:Arial,Helvetica,sans-serif; font-size=
+:18.6667px"></span><span class=3D"" style=3D"font-family:Arial,Helvetica,sa=
+ns-serif; font-size:18.6667px"></span>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<i class=3D"" style=3D"line-height:20.8267px; color:rgb(68,68,68); font-siz=
+e:14.6667px"><span class=3D"" style=3D"line-height:18.9333px; font-size:10p=
+t; color:rgb(102,0,51)"><font face=3D"Arial" class=3D""><span class=3D"" st=
+yle=3D"">Lunes a Viernes de 08:00 hs.&nbsp;a&nbsp;12:00 hs.</span></font></=
+span></i></div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Ari=
+al,Helvetica,sans-serif; font-size:18.6667px">
+<i class=3D"" style=3D"line-height:20.8267px; color:rgb(68,68,68); font-siz=
+e:14.6667px"><span class=3D"" style=3D"line-height:18.9333px; font-size:10p=
+t; color:rgb(102,0,51)"><font face=3D"Arial" class=3D""><span class=3D"" st=
+yle=3D"">L=EDneas Rotativas para Denuncias: 0800 777
+ 4643</span></font></span></i></div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+<div class=3D"" style=3D"word-wrap:break-word"></div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+--_000_CO2PR01MB200702C39E71584BA4E63AD1A23D0CO2PR01MB2007prod_--

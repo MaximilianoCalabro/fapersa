@@ -1,0 +1,676 @@
+Return-Path: <bo-b31p9zhbfemwx5aurfjzfbyyq7txdu@b.em.disneyjunior.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id iScUCu3sJlkxVwAATLP0zA
+	for <jpruata@fapersa.com>; Thu, 25 May 2017 11:40:45 -0300
+Return-path: <bo-b31p9zhbfemwx5aurfjzfbyyq7txdu@b.em.disneyjunior.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Thu, 25 May 2017 11:40:45 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:56605 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <bo-b31p9zhbfemwx5aurfjzfbyyq7txdu@b.em.disneyjunior.com>)
+	id 1dDtwS-0005zE-BS
+	for jpruata@fapersa.com; Thu, 25 May 2017 11:40:44 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 11AF47F232
+	for <jpruata@fapersa.com>; Thu, 25 May 2017 11:40:44 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id z5EtD72podZy for <jpruata@fapersa.com>;
+	Thu, 25 May 2017 11:40:42 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id CB66C7F235; Thu, 25 May 2017 11:40:42 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 67C267F232
+	for <jpruata@fapersa.com>; Thu, 25 May 2017 11:40:39 -0300 (ART)
+Received-SPF: pass (b.em.disneyjunior.com: 66.77.119.228 is authorized to use 'bo-b31p9zhbfemwx5aurfjzfbyyq7txdu@b.em.disneyjunior.com' in 'mfrom' identity (mechanism 'ip4:66.77.119.228' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="bo-b31p9zhbfemwx5aurfjzfbyyq7txdu@b.em.disneyjunior.com"; helo=mta883.em.waltdisneypictures.com; client-ip=66.77.119.228
+Received: from mta883.em.waltdisneypictures.com (mta883.em.waltdisneypictures.com [66.77.119.228])
+	by fw.fapersa.com (Postfix) with ESMTPS id CFBE66010C
+	for <jpruata@fapersa.com>; Thu, 25 May 2017 11:40:35 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=em.disneyjunior.com;
+	s=20131129193211; t=1495723232; x=1511620832;
+	bh=9CFuPeu7GIvaH8muNQYDfs813ldL3zUfO2Eoyjik8Yk=; h=From:Reply-To;
+	b=PSWQAjt4BuREKscN6eEuvIIR1d+Ea8DUj2tfimje4mKCLmO4rlykHFW4wwt7zrK9a
+	 wHdfSu2tu+HIhW5u+Z0cK81YL5K7CFseLQmYibFFJx9zTNrBwMqyU1THj2xNkHjRcH
+	 rExssXqq3CZO4rLgmBlD06iAigiLLA/z7mxU8z0ps1ze/l4hS971ZbLSfryuSq5wA2
+	 9rufAIvHVEAAzE6Bm9chr1o9hmp0+Apm5V2g/rsSXdhqSNVMyA5b5WIpYAeOn+ydld
+	 zf3jlzZH03fUbbbCTYjv4DxfPq7osfRkd+7jOBRMMvBkpybvWDfjW7PklPP5d0yFmG
+	 E4+pUhKPEIYdw==
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws;
+  s=200505; d=em.disneyjunior.com;
+  b=mF8WjB6sN+vCGOwzkMaFdKsgdEsjb/qHHb+WC8nMyZZIeklTjnzN4xxb/z8pAmX2twtPzxrx/TPUq3Ol0jvPSbjpMdKKwEXQbcYUohog5voatGVN2+McAwR/RXcM9Krx8mMg8GbSW4Ami97dg/dVUyJWcjbyJJ6b+kZQrgNy3ZM=;
+ h=Date:Message-ID:List-Unsubscribe:From:To:Subject:MIME-Version:Reply-To:Content-type;
+Date: Thu, 25 May 2017 14:40:32 -0000
+Message-ID: <b31p9zhbfemwx5aurfjzfbyyq7txdu.27519788.1991@mta883.em.disneyjunior.com>
+List-Unsubscribe: <mailto:rm-0b31p9zhbfemwx5aurfjzfbyyq7txdu@em.disneyjunior.com>
+From: "Disney Junior" <disneyjunior@em.disneyjunior.com>
+To: jpruata@fapersa.com
+Subject: Download the PREMIERE Mickey and the Roadster Racers Appisode for the Long Weekend!
+MIME-Version: 1.0
+Reply-To: "no-reply@em.disneyjunior.com" <support-b31p9zhbfemwx5aurfjzfbyyq7txdu@em.disneyjunior.com>
+Content-type: multipart/alternative; boundary="=b31p9zhbfemwx5aurfjzfbyyq7txdu"
+
+
+--=b31p9zhbfemwx5aurfjzfbyyq7txdu
+Content-Type: text/plain; charset="iso-8859-1"
+Content-transfer-encoding: 8bit
+
+
+This e-mail was sent to you by Disney Junior. To ensure delivery
+to your inbox folder, please add disneyjunior@em.disneyjunior.com
+to your address book.
+
+---------------------------------------------------------------
+
+Dear Viewer,
+
+This email is created with HTML graphics and images, but you are
+receiving this text version because your email client does not
+support this format.  To view the HTML version of the newsletter
+in a web browser, click here:
+http://em.disneyjunior.com/a/tBZJugzB82eV6B9cBVHABo$ss68/viewonline-0?t_params=oNIeF6YqHmmntfo1qRQlD71-jb9C$S2UgHlhVuX3DvEw0E04NRNFay49dYxjwodREcL8wXLqxQiuvjVOLS51LGR-t7TwX3gTYSBe0VZ9J1xmJPd1C-OYDhHKkerRNT-RW4OLob44Bd1eoWlKtD7MHaaBAr-1Z$YfpvDoPcph-mFft3mjdGTiQOMgySkYqNXFi0mFtdiktjOCdtYhVgXEqxRr2BTluxvQOe8v6juDOpVwbPfmqvIDKfb8ozA8vpoVbiUCT
+ 
+---------------------------------------------------------------
+Apps available in U.S. only subject to additional restrictions. 
+
+Clicking on the Download button, "Available on the App Store", Android
+App on Google Play" and "Available at Amazon" links will take you away
+from our Disney site where different terms of use and privacy policy
+apply.
+
+Apple, the Apple logo, iPad, iPhone and iPod touch are trademarks of
+Apple, Inc., registered in the U.S. and other countries. App Store is a
+service mark of Apple Inc.
+
+Google Play is a trademark of Google, Inc. Android is a trademark of
+Google Inc.
+
+Amazon, Kindle, Kindle Fire, and the Amazon Kindle logo are trademarks
+of Amazon.com, Inc. or its affiliates.
+
+This e-mail was sent to: jpruata@fapersa.com 
+Please do not reply to this e-mail as this address is not monitored.
+
+Add me to Disney Channel's Do Not E-mail list
+This e-mail contains an advertisement from:
+Disney Channel | 500 Buena Vista Street | Burbank, CA 91521.
+
+To unsubscribe from all types of future commercial e-mail from
+Disney Channel regarding its products or services, please go to:
+http://em.disneyjunior.com/a/tBZJugzB82eV6B9cBVHABo$ss68/optout-0?CLIENTID=506&CHANNEL_EMAIL=Ald9EAT_Wpg59clMId8N0A&ENCODED_EMAIL=lATBDRa-JvJW9k0DA2MdYvQcuYD757IuF_2TkL1z_ps
+
+(C)Disney. All rights reserved.
+
+
+--=b31p9zhbfemwx5aurfjzfbyyq7txdu
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8" />
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1,=
+ maximum-scale=3D1" />
+<!--<meta name=3D"viewport" content=3D"width=3D320, initial-scale=3D0.29">-=
+->
+<!--<meta name=3D"viewport" content=3D"width=3D1024">-->
+
+<title>Disney Junior</title>
+<style type=3D"text/css">
+body {
+	width: 100% !important;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	margin: 0;
+	padding: 0;
+}
+.ReadMsgBody {
+	width: 100%;
+}
+.ExternalClass p,  .ExternalClass span,  .ExternalClass font,  .ExternalCla=
+ss td {
+	line-height: 100%
+}
+table {
+	border-collapse: collapse;
+	mso-table-lspace: 0pt;
+	mso-table-rspace: 0pt;
+	padding: 0;
+}
+table td {
+	border-collapse: collapse;
+}
+p {
+	margin: 0 auto;
+	text-align: center;
+}
+.appleLinks a {
+	color: #000000 !important;
+	text-decoration: none !important;
+}
+
+/*Media iPhone & Regular mobile size 320*/=09
+@media only screen and (max-width: 480px) {
+*[class=3Dcontenttable] {
+	width: 320px !important;
+}
+*[class=3Dcontenttable2] {
+	width: 280px !important;
+}
+*[class=3Dmobile] {
+	width: 320px !important;
+	height: auto !important;
+}
+*[class=3Dmobile2] {
+	width: 320px !important;
+}
+*[class=3Dhide] {
+	display: none !important;
+}
+*[class=3Dblock] {
+	display: block !important;
+}
+*[class=3Dblocktable] {
+	display: block !important;
+	width: 320px !important;
+}
+	*[class=3Dheadertxt] {
+   width: 184px !important;
+}
+*[class=3Dshowmobile] {
+	display: block !important;
+	margin: auto !important;
+	width: 320px !important;
+	height: auto !important;
+	max-height: inherit !important;
+	overflow: visible !important;
+}
+	*[class=3Dshowmobile2] {
+	display: block !important;
+	margin: auto !important;
+	width: 184px !important;
+	height: auto !important;
+	max-height: inherit !important;
+	overflow: visible !important;
+}
+
+*[class=3Dshowmobile_logo] {
+	display: block !important;
+	margin: auto !important;
+	width: 97px !important;
+	height: auto !important;
+	max-height: inherit !important;
+	overflow: visible !important;
+}
+*[class=3Dheadertext] {
+	width: 177px !important;
+}
+*[class=3Ddisclaimertext] {
+	font-size:10px !important;
+}
+
+*[class=3Dlogo] {
+	width: 97px !important;
+	height:57px !important;
+}
+
+*[class=3Dlogo] {
+	width: 97px !important;
+	height:57px !important;
+}
+
+*[class=3Dheadercontent] {
+	display:block;
+    background-image:url(051617_MRR_Email_Desk_02.jpg) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    width: 446px !important;
+    height: 115px !important;
+}
+
+*[class=3Dheadercontenttable] {
+    width: 223px !important;
+	display:block;
+}
+
+*[class=3Ddisclaimertext] {
+	font-size:10px !important;
+}
+
+*[class=3Dtxtcontent] {
+	padding-top: 18px !important;
+	display: block;
+	font-size:12px !important;
+}
+
+}
+
+@media yahoo {
+.yahootest {
+	width: 200px !important;
+	border: 1px solid red !important;
+	display: block !important;
+}
+}
+</style>
+  <style type=3D"text/css">
+.gmailfix {
+display:none;
+display:none!important;
+}
+</style>
+</head>
+
+<body><img src=3D"http://em.disneyjunior.com/a/hBZJugzB82eV6B9cBVHABo$ss68/=
+spacer-0.gif" width=3D"1" height=3D"1" style=3D"display:none !important; ma=
+x-height:1px !important; max-width:1px !important; border:0 !important; bac=
+kground-color:transparent !important; padding:0 !important; outline:0 !impo=
+rtant; min-height:1px !important; min-width:1px !important; height:1px !imp=
+ortant; width:1px !important;" alt=3D"">
+  <p style=3D"color:#ffffff; display:none;"></p>
+  <div class=3D"gmailfix" style=3D"white-space:nowrap; font:15px courier; l=
+ine-height:0;">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</div>
+<table width=3D"640" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"contenttable" align=3D"center">
+  <tr>
+    <td>
+    <!--****************Starts Hero ******************** -->
+    <table width=3D"640" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" c=
+lass=3D"contenttable" align=3D"center" bgcolor=3D"#ffffff">
+        <tr>
+          <td width=3D"640"><img src=3D"http://f.email.disneyfamilymovies.c=
+om/i/10/2095268567/spacer.gif" width=3D"640" height=3D"25" style=3D"display=
+:block;" border=3D"0" alt=3D"Disney" class=3D"mobile2" /></td>
+        </tr>
+      </table>
+      <table width=3D"640" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ class=3D"contenttable" align=3D"center" bgcolor=3D"#ffffff">
+        <tr>
+        <td style=3D"font-size:1px; line-height:1px;" class=3D"hide"><img s=
+rc=3D"http://mail.watchabc.com/p/cp/c38c650431f55d61/o.gif?mi_u=3Djpruata@f=
+apersa.com" border=3D"0" style=3D"display:block;" height=3D"1" width=3D"2" =
+/></td>
+          <td><img src=3D"http://f.email.disneyfamilymovies.com/i/10/209526=
+8567/spacer.gif" width=3D"18" height=3D"20" style=3D"display:block;" border=
+=3D"0" alt=3D"Disney" /></td>
+          <td width=3D"600" align=3D"center" valign=3D"top"><font style=3D"=
+font-family:Helvetica, Arial, sans-serif; font-size:11px; color:#0C090A;" c=
+lass=3D"disclaimertext">
+=20=20=20=20=20=20=20=20=20=20
+      Having trouble viewing this email? <a href=3D"http://em.disneyjunior.=
+com/a/hBZJugzB82eV6B9cBVHABo$ss68/viewonline-0?t_sparams=3DoNIeF6YqHmmntfo1=
+qRQlD71-jb9C$S2UgHlhVuX3DvEw0E04NRNFay49dYxjwodREcL8wXLqxQiuvjVOLS51LGR-t7T=
+wX3gTYSBe0VZ9J1xmJPd1C-OYDhHKkerRNT-RW4OLob44Bd1eoWlKtD7MHaaBAr-1Z$YfpvDoPc=
+ph-mFft3mjdGTiQOMgySkYqNXFi0mFtdiktjOCdtYhVgXEqxRr2BTluxvQOe8v6juDOpVwbPfmq=
+vIDKfb8ozA8vpoVbiUCT" style=3D"color:#0C090A;">Click here</a>.<br /><br /><=
+/font></td>
+          <td><img src=3D"http://f.email.disneyfamilymovies.com/i/10/209526=
+8567/spacer.gif" width=3D"20" height=3D"20" style=3D"display:block;" border=
+=3D"0" alt=3D"Disney" /></td>
+        </tr>
+      </table>
+      <table width=3D"640" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ class=3D"contenttable" align=3D"center" bgcolor=3D"#ffffff">
+        <tr>
+          <td width=3D"640"><img src=3D"http://f.email.disneyfamilymovies.c=
+om/i/10/2095268567/spacer.gif" width=3D"640" height=3D"15" style=3D"display=
+:block;" border=3D"0" alt=3D"Disney" class=3D"mobile2" /></td>
+        </tr>
+      </table>
+     <table width=3D"640" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+class=3D"hide" align=3D"center" bgcolor=3D"#1A59C8">
+        <tr>
+          <td valign=3D"bottom" style=3D"font-size:0px; line-height:0px;">
+          <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"=
+center" class=3D"hide">
+            <tr>
+              <td><a href=3D"http://em.disneyjunior.com/a/hBZJugzB82eV6B9cB=
+VHABo$ss68/disneylogo-0"><img src=3D"http://f.em.disneyjunior.com/i/25/2094=
+654842/051617_MRR_Email_Desk_01.jpg" width=3D"194" height=3D"115" style=3D"=
+display:block;" border=3D"0" alt=3D"Disney" class=3D"logo" /></a></td>
+            </tr>
+        </table>
+=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20
+          </td>
+          <td background=3D"http://f.em.disneyjunior.com/i/25/2094654842/05=
+1617_MRR_Email_Desk_02.jpg" bgcolor=3D"#1A59C8" width=3D"446" height=3D"115=
+" valign=3D"top" style=3D"background-repeat:no-repeat !important;">
+  <!--[if gte mso 9]>
+  <v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"true" stroke=3D=
+"false" style=3D"width:446px;height:115px;">
+    <v:fill type=3D"frame" src=3D"http://f.em.disneyjunior.com/i/25/2094654=
+842/051617_MRR_Email_Desk_02.jpg" color=3D"#1A59C8" />
+    <v:textbox inset=3D"0,0,0,0">
+  <![endif]-->
+  <div>
+  <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"hide" al=
+ign=3D"center">
+        <tr>
+          <td style=3D"line-height:0px;font-size:0px;"><img src=3D"http://f=
+.email.disneyfamilymovies.com/i/10/2095268567/spacer.gif" width=3D"1" heigh=
+t=3D"37" style=3D"display:block;" border=3D"0" alt=3D"Disney" /></td>
+        </tr>
+      </table>
+  	<table width=3D"446" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" cl=
+ass=3D"headercontenttable">
+      <tbody>
+        <tr>
+          <td align=3D"right" valign=3D"top" class=3D"txtcontent" style=3D"=
+mso-line-height-rule:exactly;line-height:20px;font-size:20px;"><a href=3D"h=
+ttp://em.disneyjunior.com/a/hBZJugzB82eV6B9cBVHABo$ss68/apple-0" style=3D"t=
+ext-decoration:none"><font style=3D"font-family:Helvetica, Arial, sans-seri=
+f; font-size:20px;line-height:20px;  color:#ffffff; text-decoration:none;" =
+class=3D"disclaimertext">PREMIERE Appisode! Disney Junior's<br>Hit Show, Mi=
+ckey and the Roadster Racers!</font></a></td>
+<td style=3D"line-height:0px;font-size:0px;"><img src=3D"http://f.email.dis=
+neyfamilymovies.com/i/10/2095268567/spacer.gif" width=3D"20" height=3D"10" =
+style=3D"display:block;" border=3D"0" alt=3D"" /></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  <!--[if gte mso 9]>
+    </v:textbox>
+  </v:rect>
+  <![endif]-->
+</td>
+        </tr>
+      </table>
+      <table width=3D"640" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ class=3D"hide" align=3D"center">
+        <tr>
+          <td style=3D"font-size:0px; line-height:0px;"><a href=3D"http://e=
+m.disneyjunior.com/a/hBZJugzB82eV6B9cBVHABo$ss68/apple-0"><img src=3D"http:=
+//f.em.disneyjunior.com/i/25/2094654842/051617_MRR_Email_Desk_03.jpg" width=
+=3D"640" height=3D"385" style=3D"display:block;" border=3D"0" alt=3D"Enter =
+Now" class=3D"hide" /></a></td>
+        </tr>
+      </table>
+      <table width=3D"640" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ class=3D"hide" align=3D"center">
+        <tr>
+          <td style=3D"font-size:0px; line-height:0px;"><a href=3D"http://e=
+m.disneyjunior.com/a/hBZJugzB82eV6B9cBVHABo$ss68/apple-0"><img src=3D"http:=
+//f.em.disneyjunior.com/i/25/2094654842/051617_MRR_Email_Desk_04.jpg" width=
+=3D"320" height=3D"199" style=3D"display:block;" border=3D"0" alt=3D"" clas=
+s=3D"hide" /></a></td>
+          <td style=3D"font-size:0px; line-height:0px;"><a href=3D"http://e=
+m.disneyjunior.com/a/hBZJugzB82eV6B9cBVHABo$ss68/apple-0"><img src=3D"http:=
+//f.em.disneyjunior.com/i/25/2094654842/051617_MRR_Email_Desk_05.gif" width=
+=3D"320" height=3D"199" style=3D"display:block;" border=3D"0" alt=3D"" clas=
+s=3D"hide" /></a></td>
+        </tr>
+      </table>
+      <table width=3D"640" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ class=3D"hide" align=3D"center">
+        <tr>
+          <td style=3D"font-size:0px; line-height:0px;"><a href=3D"http://e=
+m.disneyjunior.com/a/hBZJugzB82eV6B9cBVHABo$ss68/apple-0"><img src=3D"http:=
+//f.em.disneyjunior.com/i/25/2094654842/051617_MRR_Email_Desk_06.jpg" width=
+=3D"640" height=3D"145" style=3D"display:block;" border=3D"0" alt=3D"Enter =
+Now" class=3D"hide" /></a></td>
+        </tr>
+      </table>
+      <table width=3D"640" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ class=3D"hide" align=3D"center" bgcolor=3D"#6CCDF7">
+        <tr>
+          <td style=3D"font-size:0px; line-height:0px;"><a href=3D"http://e=
+m.disneyjunior.com/a/hBZJugzB82eV6B9cBVHABo$ss68/freetime-0"><img src=3D"ht=
+tp://f.em.disneyjunior.com/i/25/2094654842/051617_MRR_Email_Desk_07.jpg" wi=
+dth=3D"279" height=3D"76" style=3D"display:block;" border=3D"0" alt=3D"" />=
+</a></td>
+          <td style=3D"font-size:0px; line-height:0px;"><a href=3D"http://e=
+m.disneyjunior.com/a/hBZJugzB82eV6B9cBVHABo$ss68/apple-0"><img src=3D"http:=
+//f.em.disneyjunior.com/i/25/2094654842/051617_MRR_Email_Desk_08.jpg" width=
+=3D"114" height=3D"76" style=3D"display:block;" border=3D"0" alt=3D"" /></a=
+></td>
+          <td style=3D"font-size:0px; line-height:0px;"><a href=3D"http://e=
+m.disneyjunior.com/a/hBZJugzB82eV6B9cBVHABo$ss68/google-0"><img src=3D"http=
+://f.em.disneyjunior.com/i/25/2094654842/051617_MRR_Email_Desk_09.jpg" widt=
+h=3D"97" height=3D"76" style=3D"display:block;" border=3D"0" alt=3D"" /></a=
+></td>
+          <td style=3D"font-size:0px; line-height:0px;"><a href=3D"http://e=
+m.disneyjunior.com/a/hBZJugzB82eV6B9cBVHABo$ss68/amazon-0"><img src=3D"http=
+://f.em.disneyjunior.com/i/25/2094654842/051617_MRR_Email_Desk_10.jpg" widt=
+h=3D"150" height=3D"76" style=3D"display:block;" border=3D"0" alt=3D"" /></=
+a></td>
+        </tr>
+      </table>
+      <!--****************Ends Hero ******************** -->=20
+=20=20=20=20=20=20
+      <!--Mobile Starts-->
+=20=20=20=20=20=20
+      <div style=3D"display:none; width:0px; max-height:0px; overflow:hidde=
+n;" class=3D"showmobile">=20=20=20=20=20=20
+<table width=3D"320" align=3D"center" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"showmobile" style=3D"margin:0 auto; display:none; bord=
+er:0;" bgcolor=3D"#1B58C5">
+    <tr>
+      <td><a href=3D"http://em.disneyjunior.com/a/hBZJugzB82eV6B9cBVHABo$ss=
+68/disneylogo-0"><img src=3D"http://f.em.disneyjunior.com/i/25/2094654842/0=
+51617_MRR_Email_Mob_01.jpg" width=3D"101" height=3D"49" alt=3D"" border=3D"=
+0" style=3D"display:block;"/></a>
+      </td>
+       <td>
+          <img src=3D"http://f.em.disneyjunior.com/i/25/2094654842/051617_M=
+RR_Email_Mob_02.jpg" width=3D"35" height=3D"49" alt=3D"" border=3D"0" style=
+=3D"display:block;"/>
+          </td>
+           <td>
+           <table width=3D"184" align=3D"center" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0"  style=3D"margin:0 auto;display:none; border:0;" b=
+gcolor=3D"#1B58C5" class=3D"showmobile2">
+           <tr>
+           	<td>
+           		<img src=3D"http://f.em.disneyjunior.com/i/25/2094654842/05161=
+7_MRR_Email_Mob_03.jpg" width=3D"184" height=3D"21" alt=3D"" border=3D"0" s=
+tyle=3D"display:block;"/>
+=20=20=20=20=20=20=20=20=20=20=20=09=09
+           	</td>=20=20=20=20=20=20=09
+           </tr>
+           <tr>
+           	<td>
+          			 <table width=3D"184" align=3D"center" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0"  style=3D"margin:0 auto;display:none; border:0;" =
+bgcolor=3D"#1B58C5" class=3D"showmobile2">
+          			 <tr>
+          			 <td style=3D"line-height:10px;font-size:20px;" width=3D"177" =
+height=3D"28" align=3D"right">
+           		<a href=3D"http://em.disneyjunior.com/a/hBZJugzB82eV6B9cBVHABo=
+$ss68/apple-0" style=3D"text-decoration:none"><font style=3D"font-family:He=
+lvetica, Arial, sans-serif; font-size:20px;line-height:10px;  color:#ffffff=
+; text-decoration:none;" class=3D"disclaimertext">PREMIERE Appisode! Disney=
+ Junior's<br> Hit Show, Mickey and the Roadster Racers!</font></a>
+           	</td>
+           	  	<td width=3D"7" height=3D"28">
+           			<img src=3D"http://f.em.disneyjunior.com/i/25/2094654842/0516=
+17_MRR_Email_Mob_05.jpg" width=3D"7" height=3D"28" alt=3D"" border=3D"0" st=
+yle=3D"display:block;"/>
+           	</td>
+           </tr>
+				</table>
+			   </td>
+			   </tr>
+=09=09=09=20=20=20
+			   </table>
+           </td>
+    </tr>
+</table>
+<table width=3D"320" align=3D"center" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"showmobile" style=3D"margin:0 auto; display:none; bord=
+er:0;" bgcolor=3D"#1B58C5">
+    <tr>
+      <td><a href=3D"http://em.disneyjunior.com/a/hBZJugzB82eV6B9cBVHABo$ss=
+68/apple-0"><img src=3D"http://f.em.disneyjunior.com/i/25/2094654842/051617=
+_MRR_Email_Mob_06_06.jpg" width=3D"320" height=3D"212" alt=3D"" border=3D"0=
+" style=3D"display:block;"/></a></td>
+    </tr>
+</table>
+<table width=3D"320" align=3D"center" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"showmobile" style=3D"margin:0 auto; display:none; bord=
+er:0;" bgcolor=3D"#1B58C5">
+    <tr>
+      <td><a href=3D"http://em.disneyjunior.com/a/hBZJugzB82eV6B9cBVHABo$ss=
+68/apple-0"><img src=3D"http://f.em.disneyjunior.com/i/25/2094654842/051617=
+_MRR_Email_Mob_08.jpg" width=3D"320" height=3D"29" alt=3D"" border=3D"0" st=
+yle=3D"display:block;"/></a></td>
+    </tr>
+</table>
+<table width=3D"320" align=3D"center" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"showmobile" style=3D"margin:0 auto; display:none; bord=
+er:0;" bgcolor=3D"#317BD4">
+    <tr>
+      <td><a href=3D"http://em.disneyjunior.com/a/hBZJugzB82eV6B9cBVHABo$ss=
+68/apple-0"><img src=3D"http://f.em.disneyjunior.com/i/25/2094654842/051617=
+_MRR_Email_Mob_09.gif" width=3D"320" height=3D"236" alt=3D"" border=3D"0" s=
+tyle=3D"display:block;"/></a></td>
+    </tr>
+</table>
+
+<table width=3D"320" align=3D"center" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"showmobile" style=3D"margin:0 auto; display:none; bord=
+er:0;" bgcolor=3D"#59B2EA">
+    <tr>
+      <td><a href=3D"http://em.disneyjunior.com/a/hBZJugzB82eV6B9cBVHABo$ss=
+68/apple-0"><img src=3D"http://f.em.disneyjunior.com/i/25/2094654842/051617=
+_MRR_Email_Mob_10.jpg" width=3D"320" height=3D"205" alt=3D"" border=3D"0" s=
+tyle=3D"display:block;"/></a></td>
+    </tr>
+</table>
+<table width=3D"320" align=3D"center" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"showmobile" style=3D"margin:0 auto; display:none; bord=
+er:0;" bgcolor=3D"#67C8F3">
+    <tr>
+      <td><a href=3D"http://em.disneyjunior.com/a/hBZJugzB82eV6B9cBVHABo$ss=
+68/apple-0"><img src=3D"http://f.em.disneyjunior.com/i/25/2094654842/051617=
+_MRR_Email_Mob_11.jpg" width=3D"320" height=3D"93" alt=3D"" border=3D"0" st=
+yle=3D"display:block;"/></a></td>
+    </tr>
+</table>
+<table width=3D"320" align=3D"center" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"showmobile" style=3D"margin:0 auto; display:none; bord=
+er:0;" bgcolor=3D"#69CAF5">
+    <tr>
+      <td><a href=3D"http://em.disneyjunior.com/a/hBZJugzB82eV6B9cBVHABo$ss=
+68/apple-0"><img src=3D"http://f.em.disneyjunior.com/i/25/2094654842/051617=
+_MRR_Email_Mob_12.jpg" width=3D"129" height=3D"28" alt=3D"" border=3D"0" st=
+yle=3D"display:block;"/></a></td>
+      <td><a href=3D"http://em.disneyjunior.com/a/hBZJugzB82eV6B9cBVHABo$ss=
+68/google-0"><img src=3D"http://f.em.disneyjunior.com/i/25/2094654842/05161=
+7_MRR_Email_Mob_13.jpg" width=3D"70" height=3D"28" alt=3D"" border=3D"0" st=
+yle=3D"display:block;"/></a></td>
+      <td><a href=3D"http://em.disneyjunior.com/a/hBZJugzB82eV6B9cBVHABo$ss=
+68/amazon-0"><img src=3D"http://f.em.disneyjunior.com/i/25/2094654842/05161=
+7_MRR_Email_Mob_14.jpg" width=3D"121" height=3D"28" alt=3D"" border=3D"0" s=
+tyle=3D"display:block;"/></a></td>
+    </tr>
+</table>
+<table width=3D"320" align=3D"center" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"showmobile" style=3D"margin:0 auto; display:none; bord=
+er:0;" bgcolor=3D"#6BCCF6">
+    <tr>
+      <td><a href=3D"http://em.disneyjunior.com/a/hBZJugzB82eV6B9cBVHABo$ss=
+68/freetime-0"><img src=3D"http://f.em.disneyjunior.com/i/25/2094654842/051=
+617_MRR_Email_Mob_15.jpg" width=3D"320" height=3D"26" alt=3D"" border=3D"0"=
+ style=3D"display:block;"/></a></td>
+    </tr>
+</table>
+<table width=3D"320" align=3D"center" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" class=3D"showmobile" style=3D"margin:0 auto; display:none; bord=
+er:0;" bgcolor=3D"#6BCCF6">
+    <tr>
+      <td><img src=3D"http://f.em.disneyjunior.com/i/25/2094654842/051617_M=
+RR_Email_Mob_16.jpg" width=3D"320" height=3D"22" alt=3D"" border=3D"0" styl=
+e=3D"display:block;"/></td>
+    </tr>
+</table>
+</div>
+=20=20=20=20=20=20
+      <!--Mobile Ends-->
+      <table width=3D"640" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ class=3D"contenttable" align=3D"center" bgcolor=3D"#ffffff">
+        <tr>
+          <td width=3D"640"><img src=3D"http://f.email.disneyfamilymovies.c=
+om/i/10/2095268567/spacer.gif" width=3D"640" height=3D"25" style=3D"display=
+:block;" border=3D"0" alt=3D"Disney" class=3D"mobile2" /></td>
+        </tr>
+      </table>
+      <table width=3D"640" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ class=3D"contenttable" align=3D"center" bgcolor=3D"#ffffff">
+        <tr>
+          <td><img src=3D"http://f.email.disneyfamilymovies.com/i/10/209526=
+8567/spacer.gif" width=3D"20" height=3D"20" style=3D"display:block;" border=
+=3D"0" alt=3D"Disney" /></td>
+          <td align=3D"left" valign=3D"top" style=3D"width: 600px" class=3D=
+"contenttable2">
+          <font style=3D"font-family:Helvetica, Arial, sans-serif; font-siz=
+e:11px; color:#2b2b2b;" class=3D"disclaimertext">=20=20
+Apps available in U.S. only subject to additional restrictions.<br><br>
+
+Clicking on the Download button, "Available on the App Store", Android
+App on Google Play" and "Available at Amazon" links will take you away
+from our Disney site where different terms of use and privacy policy
+apply.<br> <br>
+
+Apple, the Apple logo, iPad, iPhone and iPod touch are trademarks of
+Apple, Inc., registered in the U.S. and other countries. App Store is a
+service mark of Apple Inc.<br> <br>
+
+Google Play is a trademark of Google, Inc. Android is a trademark of
+Google Inc.<br> <br>
+
+Amazon, Kindle, Kindle Fire, and the Amazon Kindle logo are trademarks
+of Amazon.com, Inc. or its affiliates.<br> <br>
+
+This e-mail was sent to: jpruata@fapersa.com <br><br>
+Please do not reply to this e-mail as this address is not monitored.<br> <b=
+r>
+
+<b>Add me to Disney Channel's Do Not E-mail list</b> <br>
+This e-mail contains an advertisement from:<br>
+Disney Channel | 500 Buena Vista Street | Burbank, CA 91521.
+<br>
+<br>
+
+<a href=3D"http://em.disneyjunior.com/a/hBZJugzB82eV6B9cBVHABo$ss68/optout-=
+0?CLIENTID=3D506&CHANNEL_EMAIL=3DAld9EAT_Wpg59clMId8N0A&ENCODED_EMAIL=3DlAT=
+BDRa-JvJW9k0DA2MdYvQcuYD757IuF_2TkL1z_ps" title=3D"" target=3D"_blank" styl=
+e=3D"color:#0C090A;"><strong><u>Unsubscribe</u></strong></a> from all types=
+ of future commercial e-mail from Disney Channel regarding its products or =
+services.<br>
+<br>
+&copy;Disney. All rights reserved.<br><br>
+
+</font>
+</td>
+          <td><img src=3D"http://f.email.disneyfamilymovies.com/i/10/209526=
+8567/spacer.gif" width=3D"20" height=3D"20" style=3D"display:block;" border=
+=3D"0" alt=3D"Disney" /></td>
+        </tr>
+      </table>
+      </td>
+  </tr>
+</table>
+
+<!--Starts Gmail App fix -->
+<div style=3D"display:none; white-space:nowrap; font:15px courier; line-hei=
+ght:0;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div>
+<!--Ends Gmail App fix -->
+<img src=3D"http://pxl.disney-ympxl.com/log.gif?cid=3Dcebfa26a2f&mid=3D1705=
+17401&uuid=3Djpruata@fapersa.com" style=3D"display:none"/>
+</body>
+</html>=
+
+
+--=b31p9zhbfemwx5aurfjzfbyyq7txdu--
+

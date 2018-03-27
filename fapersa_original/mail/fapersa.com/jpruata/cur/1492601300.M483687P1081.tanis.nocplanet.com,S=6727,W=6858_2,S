@@ -1,0 +1,131 @@
+Return-Path: <baragiolasrl@yahoo.com.ar>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id mUp5HNRJ91g5BAAATLP0zA
+	for <jpruata@fapersa.com>; Wed, 19 Apr 2017 08:28:20 -0300
+Return-path: <baragiolasrl@yahoo.com.ar>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Wed, 19 Apr 2017 08:28:20 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:35767 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.88)
+	(envelope-from <baragiolasrl@yahoo.com.ar>)
+	id 1d0nmV-0000S1-Q4
+	for jpruata@fapersa.com; Wed, 19 Apr 2017 08:28:20 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 700167F21B
+	for <jpruata@fapersa.com>; Wed, 19 Apr 2017 08:28:19 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id RPeFemCxSEzB for <jpruata@fapersa.com>;
+	Wed, 19 Apr 2017 08:28:14 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id B0C2A7F231; Wed, 19 Apr 2017 08:28:14 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id EE8AF7F21B
+	for <jpruata@fapersa.com>; Wed, 19 Apr 2017 08:28:09 -0300 (ART)
+Received-SPF: pass (yahoo.com.ar ... _spf.mail.yahoo.com: 98.136.218.222 is authorized to use 'baragiolasrl@yahoo.com.ar' in 'mfrom' identity (mechanism 'ptr:yahoo.com' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="baragiolasrl@yahoo.com.ar"; helo=nm13-vm3.bullet.mail.gq1.yahoo.com; client-ip=98.136.218.222
+Received: from nm13-vm3.bullet.mail.gq1.yahoo.com (nm13-vm3.bullet.mail.gq1.yahoo.com [98.136.218.222])
+	by fw.fapersa.com (Postfix) with ESMTPS id D7BFE5FE9D
+	for <jpruata@fapersa.com>; Wed, 19 Apr 2017 08:28:07 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com.ar; s=s2048; t=1492601284; bh=Mt+lPQ6Ezh3lxUntV0LI3vjqoHbKCYfT+BSCbQEJqKc=; h=Subject:To:References:From:Date:In-Reply-To:From:Subject; b=rVrP/kxgDlbbVitFYLNG5xVMUPskFJu728zegguucaeF22Q6N2F1M7b4+JhZVFTGkp7TIkmjQuL7ICiC9GNrjhHptUF/G73dVlZui9gERFJN7mPuh9Sj0aNV2eBsJIcq//7V8WF6ZKozIiuPS4E/+LwOcHx+RjnbYtbtKVILOQX+XK9BGOxzzW7/ff4LgrNE6+q9ZnlJQdNoEe3evSi3UXWTxyDI+gr0O7i0wwBB1Bvo7/SHNBfPTk5OAxLq0H7eGBndcccFbLfwhEHvz8paQiGtwboPyX0I50wvv9HwtKBfp8D2LRt1a40/UnxJi4zBBwOJUIbaEZ3ML7DcSGIcKw==
+Received: from [98.137.12.59] by nm13.bullet.mail.gq1.yahoo.com with NNFMP; 19 Apr 2017 11:28:04 -0000
+Received: from [208.71.42.208] by tm4.bullet.mail.gq1.yahoo.com with NNFMP; 19 Apr 2017 11:28:04 -0000
+Received: from [127.0.0.1] by smtp219.mail.gq1.yahoo.com with NNFMP; 19 Apr 2017 11:28:04 -0000
+X-Yahoo-Newman-Id: 638913.19393.bm@smtp219.mail.gq1.yahoo.com
+X-Yahoo-Newman-Property: ymail-3
+X-YMail-OSG: xUGdkJkVM1lypergX8IHf6JZ3apJ1xbQ4Bkhz5VVsrTb.Kd
+ hAsfvoRgI7ZEAZTT8Ue3gtT3hfgBc4j3kpSZPf_v5BVgea9p5zvMg4s.FlzY
+ ggtfX_DDoNK.GDDW93JQzoQcFXt13j5zGVk4BP3xUUZUDjbNc2axUFGlyHG_
+ 5WuUHonpV7dhSoeT.b9fa_Nst7OBg3EMjBcVLmRVUR51RtCTzBe5hqyDMgOA
+ QGGxNDW2NgIxoDyHOAtASsP_H7ExrB_UagDOH7Y1qSIlzGhBZ6cDIgBSArNV
+ 6shkCHdltuE7Gi1wQunPN5clm76Gq_eLk45_P.h9nWqPWqaCmXGpNHIIGHfg
+ cJOpeSFCrcCyDjcnKmb1xsiLPfHHEqdIEnyZPbWEyUkDk6X_23u35KQMoW_k
+ X_yuR0KSG1ZGmx4ZiXK4JpqsCx02ah6sAoB9ZO0eToiY1lFGkuR1eCpUlY1D
+ GdDye3iqjkNrBqygPjOSBrH5RJkRWCbuOeydAmkrJ7Tbj7BWrlkJZhzDDKQP
+ Aij5pJxzRfteEfLubj8cpL.se95sd2JqJtYDDsFNQCWlI0.Dclg--
+X-Yahoo-SMTP: g2bxVDiswBD0CZ8HIL4vUC22iSlParofCg--
+Subject: Re: carta comuna
+To: FAPERSA <jpruata@fapersa.com>, Martin Galan <martin@marathona.com.ar>
+References: <6C41579F-4002-4F89-9041-64363C997B25@fapersa.com>
+From: BARAGIOLA SRL <baragiolasrl@yahoo.com.ar>
+Message-ID: <ea14842e-4bda-6882-4a9d-e4c4946ad0de@yahoo.com.ar>
+Date: Wed, 19 Apr 2017 08:27:55 -0300
+User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101
+ Thunderbird/45.8.0
+MIME-Version: 1.0
+In-Reply-To: <6C41579F-4002-4F89-9041-64363C997B25@fapersa.com>
+Content-Type: multipart/alternative;
+ boundary="------------9240B6DC3384CEFEB6D07E65"
+X-Antivirus: Avast (VPS 170419-0, 19/04/2017), Outbound message
+X-Antivirus-Status: Clean
+
+This is a multi-part message in MIME format.
+--------------9240B6DC3384CEFEB6D07E65
+Content-Type: text/plain; charset=windows-1252; format=flowed
+Content-Transfer-Encoding: 8bit
+
+Juampi, cuando la presentes, te pido que hables abiertamente lo de OSDE 
+que vence a fin de mes.
+saludos
+
+El 18/04/2017 a las 06:11 p.m., FAPERSA escribió:
+> Ricardo / Martin, esta es la carta que hizo chirola para Uliambre, por favor léanla si esta todo ok Richard necesitaría que me firmes dos así uso una como copia.
+>
+>
+>
+> Gracias.
+>
+>
+>
+
+
+
+---
+El software de antivirus Avast ha analizado este correo electrónico en busca de virus.
+https://www.avast.com/antivirus
+
+--------------9240B6DC3384CEFEB6D07E65
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: 8bit
+
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252"
+      http-equiv="Content-Type">
+  </head>
+  <body bgcolor="#FFFFFF" text="#000000">
+    Juampi, cuando la presentes, te pido que hables abiertamente lo de
+    OSDE que vence a fin de mes.<br>
+    saludos<br>
+    <br>
+    <div class="moz-cite-prefix">El 18/04/2017 a las 06:11 p.m., FAPERSA
+      escribió:<br>
+    </div>
+    <blockquote
+      cite="mid:6C41579F-4002-4F89-9041-64363C997B25@fapersa.com"
+      type="cite">
+      <pre wrap="">Ricardo / Martin, esta es la carta que hizo chirola para Uliambre, por favor léanla si esta todo ok Richard necesitaría que me firmes dos así uso una como copia.
+
+
+
+Gracias.
+
+</pre>
+      <br>
+      <fieldset class="mimeAttachmentHeader"></fieldset>
+      <br>
+      <pre wrap="">
+</pre>
+    </blockquote>
+    <br>
+  <div id="DAB4FAD8-2DD7-40BB-A1B8-4E2AA1F9FDF2"><br /> <table style="border-top: 1px solid #D3D4DE;">
+	<tr>
+      <td style="width: 55px; padding-top: 18px;"><a href="https://www.avast.com/sig-email?utm_medium=email&utm_source=link&utm_campaign=sig-email&utm_content=emailclient" target="_blank"><img src="https://ipmcdn.avast.com/images/icons/icon-envelope-tick-round-orange-animated-no-repeat-v1.gif" width="46" height="29" style="width: 46px; height: 29px;" /></a></td>
+		<td style="width: 470px; padding-top: 17px; color: #41424e; font-size: 13px; font-family: Arial, Helvetica, sans-serif; line-height: 18px;">Libre de virus. <a href="https://www.avast.com/sig-email?utm_medium=email&utm_source=link&utm_campaign=sig-email&utm_content=emailclient" target="_blank" style="color: #4453ea;">www.avast.com</a> 		</td>
+	</tr>
+</table>
+<a href="#DAB4FAD8-2DD7-40BB-A1B8-4E2AA1F9FDF2" width="1" height="1"> </a></div></body>
+</html>
+
+--------------9240B6DC3384CEFEB6D07E65--

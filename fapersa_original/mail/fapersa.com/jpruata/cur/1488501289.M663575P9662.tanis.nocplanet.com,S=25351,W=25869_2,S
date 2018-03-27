@@ -1,0 +1,518 @@
+Return-Path: <rmelini@hotmail.com.ar>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id 2YxGJym6uFi+JQAATLP0zA
+	for <jpruata@fapersa.com>; Thu, 02 Mar 2017 21:34:49 -0300
+Return-path: <rmelini@hotmail.com.ar>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Thu, 02 Mar 2017 21:34:49 -0300
+Received: from snt004-omc2s22.hotmail.com ([65.55.90.97]:49857)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-SHA384:256)
+	(Exim 4.88)
+	(envelope-from <rmelini@hotmail.com.ar>)
+	id 1cjbB9-0002vq-Co
+	for jpruata@fapersa.com; Thu, 02 Mar 2017 21:34:49 -0300
+Received: from NAM04-CO1-obe.outbound.protection.outlook.com ([65.55.90.72]) by SNT004-OMC2S22.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Thu, 2 Mar 2017 16:33:58 -0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=ydMIZS7oA/QtEWXfXjtoXm0vMTFAQSRlbFUNfZ1rGDk=;
+ b=qBg6Wr4rYjVZ0F3UPn860jZ0+ONRkjHsdcCJgwIjkU6k8hEOzdF8+45USVjbRg/JDsnliczyXwnKQKahaFrSBMXUX0ciDdsDy2p4xoI0VbJ4U75H3BkcCQEAwRYBIPhY2yUGHYT+S7ZMB6b5pktgBYhCnPtca4rh3qtJy4NbzM1CQXbXhxQe2gcLqqWYerb3hC8zDaLJjG77WUH0nP1Ai44OhVap1xssXzDIa7chztGV8QobuO72UHGu5LgcKoAt5qUuOHYQuBzWLGXdR44skzmmXGFhxrQ6zwiEm2YkoB+lSi7HSxy6q34QuRHqHVSOie9uMy36DhX8iBNTwV+YZw==
+Received: from SN1NAM04FT031.eop-NAM04.prod.protection.outlook.com
+ (10.152.88.57) by SN1NAM04HT166.eop-NAM04.prod.protection.outlook.com
+ (10.152.89.233) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.933.11; Fri, 3 Mar
+ 2017 00:33:57 +0000
+Received: from BY2PR19MB0358.namprd19.prod.outlook.com (10.152.88.53) by
+ SN1NAM04FT031.mail.protection.outlook.com (10.152.88.153) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.933.11 via Frontend Transport; Fri, 3 Mar 2017 00:33:57 +0000
+Received: from BY2PR19MB0358.namprd19.prod.outlook.com ([10.163.194.148]) by
+ BY2PR19MB0358.namprd19.prod.outlook.com ([10.163.194.148]) with mapi id
+ 15.01.0947.012; Fri, 3 Mar 2017 00:33:57 +0000
+From: Ricardo Melini <rmelini@hotmail.com.ar>
+To: "jpruata@fapersa.com" <jpruata@fapersa.com>
+Subject: Re: INSERT COBRADOS A LA FECHA
+Thread-Topic: INSERT COBRADOS A LA FECHA
+Thread-Index: AQHSkuTUS3II65MoOkazqCt6q1qa6qGBv+MAgACGA1A=
+Date: Fri, 3 Mar 2017 00:33:57 +0000
+Message-ID: <BY2PR19MB0358DE3B3CCD9C7F687DF8798A2B0@BY2PR19MB0358.namprd19.prod.outlook.com>
+References: <C86433B409BB4D0AB53193E84F723090@CuiseNote>
+ <409DD0AFB3D846DFA75F09FEA98877F2@POSTVENTA>
+ <SN1PR19MB036696A8F7B6EC68985D18838A510@SN1PR19MB0366.namprd19.prod.outlook.com>
+ <2DA8BD4A706846908B76C56382E5F309@POSTVENTA>
+ <BY2PR19MB0358B89037E0C7D661D96BCA8A290@BY2PR19MB0358.namprd19.prod.outlook.com>,<ACB5DB7F-FC74-4579-9156-15ECA440A1EA@fapersa.com>
+In-Reply-To: <ACB5DB7F-FC74-4579-9156-15ECA440A1EA@fapersa.com>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: fapersa.com; dkim=none (message not signed)
+ header.d=none;fapersa.com; dmarc=none action=none header.from=hotmail.com.ar;
+x-incomingtopheadermarker: OriginalChecksum:C1ED8F1B10D08BF9EFF3E1A3D77C0F83F4D1888CE89741ADE6BFA08170D36ED8;UpperCasedChecksum:AA5C524EC3DEA136439A52703173631CEA572FF32B387E1DEBCB53427252E9D2;SizeAsReceived:8036;Count:39
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [1pwXGI/oBsmWQQpt8+qfcq1Ywal+9xzz]
+x-incomingheadercount: 39
+x-eopattributedmessage: 0
+x-microsoft-exchange-diagnostics: 1;SN1NAM04HT166;5:2d5x7odcP6McBBkevwMz19jtk5K/tv3Mx6kyvRmVDa9IGTkCwFwcG6ce6D48l3IeR/hkRRcCw+zCxRq3l0TQ4qXiOKBFcetmygDrwkK3svBtXMapy3VK4cOKgjHo0eLppKokwS/J+ZniddqrlGCzIA==;24:7WkvYILF4umvj6vGWek+i/5MHT9+N0ek8YlMheIorLD4oY9NNJByTXY6Beq55/LT4pDCriFW9WMvms+XFkCdIYIrp3LCDZNSl7wrR28d50E=;7:yf0Z7dt12XbI0o6aP9qdhWn35YRurKrHYUpzr/TKR7VLrzx4AcCdSemrN4Nj5l0b0FXDacD2mIXZlsQpnxFo//lVj5TEsrxgt7AqJXh4S06rcHVMGmI+DW2EgVFMdi5sXxAMsgI46gCBO+jLSy2OX3SgKrmGbQwqr/k99wBYwX50XiuMUBc3CgFITSn4B0y5P6/G6R2vou1SirHUtUbwNj9t9LJJRLMdq+7wLxWON5horimbWr37PqKwG5HJATQseKiOHYPmdIEaSNnnCIoTGPgP7kQ1YPXRJnqcuj4fY8qsfXD4JuRQw55m2LwzPcPZ
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(10019020)(98900013);DIR:OUT;SFP:1102;SCL:1;SRVR:SN1NAM04HT166;H:BY2PR19MB0358.namprd19.prod.outlook.com;FPR:;SPF:None;LANG:es;
+x-ms-office365-filtering-correlation-id: 35ac7843-c935-4d9c-38ba-08d461ccfad9
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(201702061074)(5061506573)(5061507331)(1603103135)(201702181095)(1603101448)(1601125254)(1701031045);SRVR:SN1NAM04HT166;
+x-ms-exchange-slblob-mailprops: 7MJMDUNTCtwE6KWZuxTYBG7p4W6GvI+H8/MD02I+o/3xbRZmSultRqXOS6gv54sz0v2/nzq6CcaiVp0+EXS8ufdezZH17fI58fSs2x2TC9LwLC0YiCjQLKZWItrCtR6uXHoHW//v5Xs6Hd57OEk4dJrL0mDbQfcodRmMoQZXJKrBC91c3z5qzYybCY37t0NBfVjo7GseNQAujgjYA69GbqjmJkPCtXBI4Vzh/GqY8e1gYQQzEAJQ52FBdb9iJYIBZJobK+4w4OFyNVGBCl7BeAILCjC2+/tXJz+bwEkp2ltfl7naHSoblpksIRlwArFMQeNwYKVp2SUP9Ip733PQoQrYEQUjgim1CNCAHSTmn7r8tQec+JhQK+KpOach6IX6MHBcZlFSO7XxcQcFPKrQHA57WX6MIAaRwMmlSCRyrRtVu3VQgMADkgFxtdGspQq8sssFuoDDjVqGukn7xiv1nNxqqRi7kJvqP7AuXb84uE39XEOwSZRk3ucRnNVSo4REmr12HQUVO7T7vyPhU40HIK1plXykkjUM4xAWpsszAJRNCwo6+P0zRPnlmjbLjrHrBw9r4kbv8yhew0d+cKVyCtMarv4kwRrjg3J4URmem9K1CDojqEcXvB6823/aCvCn/jKhNNywqCcO3eZ1pLlfhDN5Vi1bFH5XLS82QrhjxmdQABRELhgL+8E9jnexbspNOjpkjv0c+wugkdfKjhvECHNzModxBxjc32qTN1wz/rqSbN2sQqomHg==
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(432015087)(444000031);SRVR:SN1NAM04HT166;BCL:0;PCL:0;RULEID:;SRVR:SN1NAM04HT166;
+x-forefront-prvs: 0235CBE7D0
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_BY2PR19MB0358DE3B3CCD9C7F687DF8798A2B0BY2PR19MB0358namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: outlook.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 03 Mar 2017 00:33:57.3657
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN1NAM04HT166
+X-OriginalArrivalTime: 03 Mar 2017 00:33:59.0092 (UTC) FILETIME=[D9483F40:01D293B5]
+X-Spam-Status: No, score=-0.4
+X-Spam-Score: -3
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Pero pagas todo vos Juampi!! No le cobramos a nadie?? Te mando
+    un abrazo!!! [...] 
+ 
+ Content analysis details:   (-0.4 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: hotmail.com.ar]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (rmelini[at]hotmail.com.ar)
+  1.5 SUBJ_ALL_CAPS          Subject is all capitals
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  0.0 T_REMOTE_IMAGE         Message contains an external image
+X-Spam-Flag: NO
+
+--_000_BY2PR19MB0358DE3B3CCD9C7F687DF8798A2B0BY2PR19MB0358namp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Pero pagas todo vos Juampi!!
+
+
+No le cobramos a nadie??
+
+
+Te mando un abrazo!!!
+
+
+Enviado desde Personal LG D390
+
+
+------ Mensaje original------
+
+Desde: FAPERSA
+
+Fecha: jue, 2 mar 2017 13:34
+
+Para: Ricardo Melini;
+
+Cc:Martin Galan;Cesar Maragno;Fernando Ariel B=C1EZ;Pedro Eduardo BENET;Ovi=
+dio Russo;Carlos Gorla;Jos=E9 Ignacio David;ricardobaragiola@gmail.com;Fede=
+rico Gorla;Rodolfo Benavides;
+
+Asunto:Re: INSERT COBRADOS A LA FECHA
+
+
+Ricardo te corrijo algunos.
+>ESCRIBANIA GARMENDIA es canje habla con Carlitos para ver forma de pago, e=
+l ya tiene todo
+>ALKEMY, ya pago le di el cheque a Carlos G.
+>SPULLER pago Carlos G. tengo una diferencia pero arreglo con carlos.
+>Rolon Andres ya pago. Carlos G.
+
+saludos,
+
+
+
+El 1 mar. 2017, a las 20:37, Ricardo Melini <rmelini@hotmail.com.ar<mailto:=
+rmelini@hotmail.com.ar>> escribi=F3:
+
+Va archivo de cobranzas actualizado.
+
+Saludos
+________________________________
+De: RUSSO OVIDIO <orusso@amiun.com.ar<mailto:orusso@amiun.com.ar>>
+Enviado: martes, 21 de febrero de 2017 09:52:50 a.m.
+Para: Ricardo Melini; Mart=EDn; Juan Pablo Ruata; Cesar Maragno; Fernando A=
+riel B=C1EZ; Pedro Eduardo BENET
+Cc: Carlos Gorla; Jos=E9 Ignacio David; ricardobaragiola@gmail.com<mailto:r=
+icardobaragiola@gmail.com>; Yeye Gorla; Fito Benavides
+Asunto: Re: INSERT COBRADOS POR MI
+
+Ricardo: CUDAIO ya pago. Hoy rendimos PRONO, CIRCULO ITALIANO, PROMOFIESTA =
+Y CEREALES LA PELADA. Te aviso cuando entreguen la guita.
+Abz
+
+
+From: Ricardo Melini<mailto:rmelini@hotmail.com.ar>
+Sent: Tuesday, February 21, 2017 1:10 AM
+To: RUSSO OVIDIO<mailto:orusso@amiun.com.ar> ; Mart=EDn<mailto:martin@marat=
+hona.com.ar> ; Juan Pablo Ruata<mailto:jpruata@fapersa.com> ; Cesar Maragno=
+<mailto:cmaragno@frsf.utn.edu.ar> ; Fernando Ariel B=C1EZ<mailto:fernandoab=
+aez@hotmail.com> ; Pedro Eduardo BENET<mailto:ingbenet@hotmail.com>
+Cc: Carlos Gorla<mailto:cgorla@amiun.com.ar> ; Jos=E9 Ignacio David<mailto:=
+josedavid@contadoresdavid.com.ar> ; ricardobaragiola@gmail.com<mailto:ricar=
+dobaragiola@gmail.com> ; Yeye Gorla<mailto:yeyegorla@hotmail.com> ; Fito Be=
+navides<mailto:ribenavides2000@hotmail.com>
+Subject: Re: INSERT COBRADOS POR MI
+
+Estimados:
+
+Env=EDo estado actualizado de las cobranzas del SFRC Insert 2016.
+
+Por favor controlar y corregir omisiones u errores.
+
+Saludos
+
+
+________________________________
+De: RUSSO OVIDIO <orusso@amiun.com.ar<mailto:orusso@amiun.com.ar>>
+Enviado: lunes, 20 de febrero de 2017 10:01 a.m.
+Para: RICARDO MELINI
+Cc: Carlos Gorla; Jos=E9 Ignacio David; ricardobaragiola@gmail.com<mailto:r=
+icardobaragiola@gmail.com>
+Asunto: Re: INSERT COBRADOS POR MI
+
+Ricardo: fijate si pod=E9s actualizar tu archivo y enviarlo antes de la reu=
+ni=F3n de ma=F1ana as=ED seguimos apurando la cobranza.
+Abz
+
+
+
+From: Jos=E9 Ignacio David<mailto:josedavid@contadoresdavid.com.ar>
+Sent: Monday, February 20, 2017 11:04 AM
+To: RICARDO MELINI<mailto:rmelini@hotmail.com.ar>
+Cc: Carlos Gorla<mailto:cgorla@amiun.com.ar> ; Ovidio Russo<mailto:orusso@a=
+miun.com.ar>
+Subject: INSERT COBRADOS POR MI
+
+Ricardo,
+Te paso los inserts que pasaron por mi a la fecha, as=ED actualizas tu arch=
+ivo de cobranzas.
+Copio a Carlitos y a Lagarsa por si tienen algo que agregar.
+
+Un abrazo!!
+
+
+________________________________
+[Avast logo]<http://www.avast.com/>
+El software de antivirus Avast ha analizado este correo electr=F3nico en bu=
+sca de virus.
+www.avast.com<http://www.avast.com/>
+
+
+<Copia de Sponsors Insert 2016_Marzo_01.xlsx>
+
+
+--_000_BY2PR19MB0358DE3B3CCD9C7F687DF8798A2B0BY2PR19MB0358namp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<meta content=3D"text/html; charset=3Dutf-8">
+</head>
+<body class=3D"" style=3D"word-wrap:break-word">
+<div style=3D"font-size:10pt">
+<p dir=3D"ltr" style=3D"margin-top:0; margin-bottom:0">Pero pagas todo vos =
+Juampi!!</p>
+<p dir=3D"ltr" style=3D"margin-top:0; margin-bottom:0"><br>
+</p>
+<p dir=3D"ltr" style=3D"margin-top:0; margin-bottom:0">No le cobramos a nad=
+ie??</p>
+<p dir=3D"ltr" style=3D"margin-top:0; margin-bottom:0"><br>
+</p>
+<p dir=3D"ltr" style=3D"margin-top:0; margin-bottom:0">Te mando un abrazo!!=
+!</p>
+<p dir=3D"ltr" style=3D"margin-top:0; margin-bottom:0"><br>
+</p>
+<div id=3D"SignatureBox" dir=3D"ltr" style=3D"margin-top:0; margin-bottom:0=
+">Enviado desde Personal LG D390</div>
+</div>
+<div style=3D"font-size:10pt">
+<p dir=3D"auto" style=3D"margin-top:0; margin-bottom:0"><br>
+</p>
+<p dir=3D"auto" style=3D"margin-top:0; margin-bottom:0">------ Mensaje orig=
+inal------</p>
+<p dir=3D"auto" style=3D"margin-top:0; margin-bottom:0"><b>Desde: </b>FAPER=
+SA </p>
+<p dir=3D"auto" style=3D"margin-top:0; margin-bottom:0"><b>Fecha: </b>jue, =
+2 mar 2017 13:34</p>
+<p dir=3D"auto" style=3D"margin-top:0; margin-bottom:0"><b>Para: </b>Ricard=
+o Melini;</p>
+<p dir=3D"auto" style=3D"margin-top:0; margin-bottom:0"><b>Cc:</b>Martin Ga=
+lan;Cesar Maragno;Fernando Ariel B=C1EZ;Pedro Eduardo BENET;Ovidio Russo;Ca=
+rlos Gorla;Jos=E9 Ignacio David;ricardobaragiola@gmail.com;Federico Gorla;R=
+odolfo Benavides;</p>
+<p dir=3D"auto" style=3D"margin-top:0; margin-bottom:0"><b>Asunto:</b>Re: I=
+NSERT COBRADOS A LA FECHA</p>
+<p dir=3D"auto" style=3D"margin-top:0; margin-bottom:0"><br>
+</p>
+</div>
+<div>Ricardo te corrijo algunos.
+<div class=3D"">&gt;ESCRIBANIA GARMENDIA<span class=3D"Apple-tab-span" styl=
+e=3D"white-space:pre">
+</span>es canje habla con Carlitos para ver forma de pago, el ya tiene todo=
+</div>
+<div class=3D"">&gt;ALKEMY, ya pago le di el cheque a Carlos G.</div>
+<div class=3D"">&gt;SPULLER<span class=3D"Apple-tab-span" style=3D"white-sp=
+ace:pre"> </span>
+pago Carlos G. tengo una diferencia pero arreglo con carlos.</div>
+<div class=3D"">&gt;Rolon Andres<span class=3D"Apple-tab-span" style=3D"whi=
+te-space:pre"> </span>
+ya pago. Carlos G.</div>
+<div class=3D""><br class=3D"">
+</div>
+<div class=3D"">saludos,</div>
+<div class=3D""><br class=3D"">
+</div>
+<div class=3D""><br class=3D"">
+</div>
+<div class=3D""><br class=3D"">
+<div>
+<blockquote type=3D"cite" class=3D"">
+<div class=3D"">El 1 mar. 2017, a las 20:37, Ricardo Melini &lt;<a href=3D"=
+mailto:rmelini@hotmail.com.ar" class=3D"">rmelini@hotmail.com.ar</a>&gt; es=
+cribi=F3:</div>
+<br class=3D"Apple-interchange-newline">
+<div class=3D"">
+<div id=3D"divtagdefaultwrapper" dir=3D"ltr" class=3D"" style=3D"font-style=
+:normal; font-weight:normal; letter-spacing:normal; orphans:auto; text-alig=
+n:start; text-indent:0px; text-transform:none; white-space:normal; widows:a=
+uto; word-spacing:0px; font-size:12pt; font-family:Calibri,Arial,Helvetica,=
+sans-serif">
+<div id=3D"divtagdefaultwrapper" dir=3D"ltr" class=3D"" style=3D"font-size:=
+12pt; font-family:Calibri,Arial,Helvetica,sans-serif,'Apple Color Emoji','S=
+egoe UI Emoji',NotoColorEmoji,'Segoe UI Symbol','Android Emoji',EmojiSymbol=
+s">
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px">Va archivo de c=
+obranzas actualizado.</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px"><br class=3D"">
+</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px">Saludos</div>
+</div>
+<hr tabindex=3D"-1" class=3D"" style=3D"display:inline-block; width:820.25p=
+x">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr" class=3D""><font face=3D"Calibri, san=
+s-serif" class=3D"" style=3D"font-size:11pt"><b class=3D"">De:</b><span cla=
+ss=3D"Apple-converted-space">&nbsp;</span>RUSSO OVIDIO &lt;<a href=3D"mailt=
+o:orusso@amiun.com.ar" class=3D"">orusso@amiun.com.ar</a>&gt;<br class=3D""=
+>
+<b class=3D"">Enviado:</b><span class=3D"Apple-converted-space">&nbsp;</spa=
+n>martes, 21 de febrero de 2017 09:52:50 a.m.<br class=3D"">
+<b class=3D"">Para:</b><span class=3D"Apple-converted-space">&nbsp;</span>R=
+icardo Melini; Mart=EDn; Juan Pablo Ruata; Cesar Maragno; Fernando Ariel B=
+=C1EZ; Pedro Eduardo BENET<br class=3D"">
+<b class=3D"">Cc:</b><span class=3D"Apple-converted-space">&nbsp;</span>Car=
+los Gorla; Jos=E9 Ignacio David;
+<a href=3D"mailto:ricardobaragiola@gmail.com" class=3D"">ricardobaragiola@g=
+mail.com</a>; Yeye Gorla; Fito Benavides<br class=3D"">
+<b class=3D"">Asunto:</b><span class=3D"Apple-converted-space">&nbsp;</span=
+>Re: INSERT COBRADOS POR MI</font>
+<div class=3D"">&nbsp;</div>
+</div>
+<div class=3D"">
+<div class=3D""><font face=3D"Calibri" class=3D"">Ricardo: CUDAIO ya pago. =
+Hoy rendimos PRONO, CIRCULO ITALIANO, PROMOFIESTA Y CEREALES LA PELADA. Te =
+aviso cuando entreguen la guita.</font></div>
+<div class=3D""><font face=3D"Calibri" class=3D"">Abz</font></div>
+<div class=3D"">&nbsp;</div>
+<div class=3D"" style=3D"font-style:normal; font-weight:normal; font-size:1=
+0pt; line-height:normal; font-family:Tahoma">
+<div class=3D""><br class=3D"">
+</div>
+<div class=3D"" style=3D"background-color:rgb(245,245,245)">
+<div class=3D""><b class=3D"">From:</b><span class=3D"Apple-converted-space=
+">&nbsp;</span><a title=3D"rmelini@hotmail.com.ar" href=3D"mailto:rmelini@h=
+otmail.com.ar" class=3D"">Ricardo Melini</a></div>
+<div class=3D""><b class=3D"">Sent:</b><span class=3D"Apple-converted-space=
+">&nbsp;</span>Tuesday, February 21, 2017 1:10 AM</div>
+<div class=3D""><b class=3D"">To:</b><span class=3D"Apple-converted-space">=
+&nbsp;</span><a title=3D"orusso@amiun.com.ar" href=3D"mailto:orusso@amiun.c=
+om.ar" class=3D"">RUSSO OVIDIO</a><span class=3D"Apple-converted-space">&nb=
+sp;</span>;<span class=3D"Apple-converted-space">&nbsp;</span><a title=3D"m=
+artin@marathona.com.ar" href=3D"mailto:martin@marathona.com.ar" class=3D"">=
+Mart=EDn</a><span class=3D"Apple-converted-space">&nbsp;</span>;<span class=
+=3D"Apple-converted-space">&nbsp;</span><a title=3D"jpruata@fapersa.com" hr=
+ef=3D"mailto:jpruata@fapersa.com" class=3D"">Juan
+ Pablo Ruata</a><span class=3D"Apple-converted-space">&nbsp;</span>;<span c=
+lass=3D"Apple-converted-space">&nbsp;</span><a title=3D"cmaragno@frsf.utn.e=
+du.ar" href=3D"mailto:cmaragno@frsf.utn.edu.ar" class=3D"">Cesar Maragno</a=
+><span class=3D"Apple-converted-space">&nbsp;</span>;<span class=3D"Apple-c=
+onverted-space">&nbsp;</span><a title=3D"fernandoabaez@hotmail.com" href=3D=
+"mailto:fernandoabaez@hotmail.com" class=3D"">Fernando
+ Ariel B=C1EZ</a><span class=3D"Apple-converted-space">&nbsp;</span>;<span =
+class=3D"Apple-converted-space">&nbsp;</span><a title=3D"ingbenet@hotmail.c=
+om" href=3D"mailto:ingbenet@hotmail.com" class=3D"">Pedro Eduardo BENET</a>=
+</div>
+<div class=3D""><b class=3D"">Cc:</b><span class=3D"Apple-converted-space">=
+&nbsp;</span><a title=3D"cgorla@amiun.com.ar" href=3D"mailto:cgorla@amiun.c=
+om.ar" class=3D"">Carlos Gorla</a><span class=3D"Apple-converted-space">&nb=
+sp;</span>;<span class=3D"Apple-converted-space">&nbsp;</span><a title=3D"j=
+osedavid@contadoresdavid.com.ar" href=3D"mailto:josedavid@contadoresdavid.c=
+om.ar" class=3D"">Jos=E9
+ Ignacio David</a><span class=3D"Apple-converted-space">&nbsp;</span>;<span=
+ class=3D"Apple-converted-space">&nbsp;</span><a title=3D"ricardobaragiola@=
+gmail.com" href=3D"mailto:ricardobaragiola@gmail.com" class=3D"">ricardobar=
+agiola@gmail.com</a><span class=3D"Apple-converted-space">&nbsp;</span>;<sp=
+an class=3D"Apple-converted-space">&nbsp;</span><a title=3D"yeyegorla@hotma=
+il.com" href=3D"mailto:yeyegorla@hotmail.com" class=3D"">Yeye
+ Gorla</a><span class=3D"Apple-converted-space">&nbsp;</span>;<span class=
+=3D"Apple-converted-space">&nbsp;</span><a title=3D"ribenavides2000@hotmail=
+.com" href=3D"mailto:ribenavides2000@hotmail.com" class=3D"">Fito Benavides=
+</a></div>
+<div class=3D""><b class=3D"">Subject:</b><span class=3D"Apple-converted-sp=
+ace">&nbsp;</span>Re: INSERT COBRADOS POR MI</div>
+</div>
+</div>
+<div class=3D""><br class=3D"">
+</div>
+<div dir=3D"ltr" id=3D"divtagdefaultwrapper" class=3D"" style=3D"font-famil=
+y:Calibri,Arial,Helvetica,sans-serif,'Apple Color Emoji','Segoe UI Emoji',N=
+otoColorEmoji,'Segoe UI Symbol','Android Emoji',EmojiSymbols,'Apple Color E=
+moji','Segoe UI Emoji',NotoColorEmoji,'Segoe UI Symbol','Android Emoji',Emo=
+jiSymbols; font-size:12pt">
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px">Estimados:</div=
+>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px"><br class=3D"">
+</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px">Env=EDo estado =
+actualizado de las cobranzas del SFRC&nbsp;Insert 2016.</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px"><br class=3D"">
+</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px">Por favor contr=
+olar y corregir omisiones u errores.</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px"><br class=3D"">
+</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px">Saludos</div>
+<br class=3D"">
+<br class=3D"">
+<div class=3D"" style=3D"">
+<hr tabindex=3D"-1" class=3D"" style=3D"width:820.25px; display:inline-bloc=
+k">
+<div dir=3D"ltr" id=3D"divRplyFwdMsg" class=3D""><font face=3D"Calibri, san=
+s-serif" class=3D"" style=3D"font-size:11pt"><b class=3D"">De:</b><span cla=
+ss=3D"Apple-converted-space">&nbsp;</span>RUSSO OVIDIO &lt;<a href=3D"mailt=
+o:orusso@amiun.com.ar" class=3D"">orusso@amiun.com.ar</a>&gt;<br class=3D""=
+>
+<b class=3D"">Enviado:</b><span class=3D"Apple-converted-space">&nbsp;</spa=
+n>lunes, 20 de febrero de 2017 10:01 a.m.<br class=3D"">
+<b class=3D"">Para:</b><span class=3D"Apple-converted-space">&nbsp;</span>R=
+ICARDO MELINI<br class=3D"">
+<b class=3D"">Cc:</b><span class=3D"Apple-converted-space">&nbsp;</span>Car=
+los Gorla; Jos=E9 Ignacio David;<span class=3D"Apple-converted-space">&nbsp=
+;</span><a href=3D"mailto:ricardobaragiola@gmail.com" class=3D"">ricardobar=
+agiola@gmail.com</a><br class=3D"">
+<b class=3D"">Asunto:</b><span class=3D"Apple-converted-space">&nbsp;</span=
+>Re: INSERT COBRADOS POR MI</font>
+<div class=3D"">&nbsp;</div>
+</div>
+<div class=3D"">
+<div class=3D""><font face=3D"Calibri" class=3D"">Ricardo: fijate si pod=E9=
+s actualizar tu archivo y enviarlo antes de la reuni=F3n de ma=F1ana as=ED =
+seguimos apurando la cobranza.</font></div>
+<div class=3D""><font face=3D"Calibri" class=3D"">Abz</font></div>
+<div class=3D""><font face=3D"Calibri" class=3D""></font>&nbsp;</div>
+<div class=3D"">&nbsp;</div>
+<div class=3D"" style=3D"font-style:normal; font-weight:normal; font-size:1=
+0pt; line-height:normal; font-family:Tahoma">
+<div class=3D""><br class=3D"">
+</div>
+<div class=3D"" style=3D"background-color:rgb(245,245,245)">
+<div class=3D""><b class=3D"">From:</b><span class=3D"Apple-converted-space=
+">&nbsp;</span><a title=3D"josedavid@contadoresdavid.com.ar" href=3D"mailto=
+:josedavid@contadoresdavid.com.ar" class=3D"">Jos=E9 Ignacio David</a></div=
+>
+<div class=3D""><b class=3D"">Sent:</b><span class=3D"Apple-converted-space=
+">&nbsp;</span>Monday, February 20, 2017 11:04 AM</div>
+<div class=3D""><b class=3D"">To:</b><span class=3D"Apple-converted-space">=
+&nbsp;</span><a title=3D"rmelini@hotmail.com.ar" href=3D"mailto:rmelini@hot=
+mail.com.ar" class=3D"">RICARDO MELINI</a></div>
+<div class=3D""><b class=3D"">Cc:</b><span class=3D"Apple-converted-space">=
+&nbsp;</span><a title=3D"cgorla@amiun.com.ar" href=3D"mailto:cgorla@amiun.c=
+om.ar" class=3D"">Carlos Gorla</a><span class=3D"Apple-converted-space">&nb=
+sp;</span>;<span class=3D"Apple-converted-space">&nbsp;</span><a title=3D"o=
+russo@amiun.com.ar" href=3D"mailto:orusso@amiun.com.ar" class=3D"">Ovidio
+ Russo</a></div>
+<div class=3D""><b class=3D"">Subject:</b><span class=3D"Apple-converted-sp=
+ace">&nbsp;</span>INSERT COBRADOS POR MI</div>
+</div>
+</div>
+<div class=3D""><br class=3D"">
+</div>
+<div class=3D""><font color=3D"#000080" face=3D"Calibri" class=3D"">Ricardo=
+,</font></div>
+<div class=3D""><font color=3D"#000080" face=3D"Calibri" class=3D"">Te paso=
+ los inserts que pasaron por mi a la fecha, as=ED actualizas tu archivo de =
+cobranzas.</font></div>
+<div class=3D""><font color=3D"#000080" face=3D"Calibri" class=3D"">Copio a=
+ Carlitos y a Lagarsa por si tienen algo que agregar.</font></div>
+<div class=3D""><font color=3D"#000080" face=3D"Calibri" class=3D""></font>=
+&nbsp;</div>
+<div class=3D""><font color=3D"#000080" face=3D"Calibri" class=3D"">Un abra=
+zo!!</font></div>
+<br class=3D"">
+<br class=3D"">
+<hr class=3D"" style=3D"border:medium none; background-color:rgb(176,176,17=
+6); width:828.625px; height:1px; color:rgb(144,144,144)">
+<table class=3D"" style=3D"border:medium none; border-collapse:collapse">
+<tbody class=3D"">
+<tr class=3D"">
+<td class=3D"" style=3D"border:medium none; padding:0px 15px 0px 8px"><a hr=
+ef=3D"http://www.avast.com/" class=3D""><img border=3D"0" alt=3D"Avast logo=
+" src=3D"http://static.avast.com/emails/avast-mail-stamp.png" class=3D""></=
+a></td>
+<td class=3D"">
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Cal=
+ibri,Verdana,Arial,Helvetica; color:rgb(61,77,90); font-size:12pt">
+El software de antivirus Avast ha analizado este correo electr=F3nico en bu=
+sca de virus.<span class=3D"Apple-converted-space">&nbsp;</span><br class=
+=3D"">
+<a href=3D"http://www.avast.com/" class=3D"">www.avast.com</a></div>
+</td>
+</tr>
+</tbody>
+</table>
+<br class=3D"">
+</div>
+</div>
+</div>
+</div>
+</div>
+<span id=3D"cid:8C546B82-50B0-4EA7-A2C9-D56D4C715E5D@fapersa.int">&lt;Copia=
+ de Sponsors Insert 2016_Marzo_01.xlsx&gt;</span></div>
+</blockquote>
+</div>
+<br class=3D"">
+</div>
+</div>
+</body>
+</html>
+
+--_000_BY2PR19MB0358DE3B3CCD9C7F687DF8798A2B0BY2PR19MB0358namp_--

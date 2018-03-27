@@ -1,0 +1,515 @@
+Return-Path: <josekoko2009@hotmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id sQc6CdmkblhEaAAATLP0zA
+	for <jpruata@fapersa.com>; Thu, 05 Jan 2017 16:56:09 -0300
+Return-path: <josekoko2009@hotmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Thu, 05 Jan 2017 16:56:09 -0300
+Received: from col004-omc1s13.hotmail.com ([65.55.34.23]:62143)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-SHA384:256)
+	(Exim 4.87)
+	(envelope-from <josekoko2009@hotmail.com>)
+	id 1cPE8o-0007WM-Ab
+	for jpruata@fapersa.com; Thu, 05 Jan 2017 16:56:08 -0300
+Received: from NAM03-DM3-obe.outbound.protection.outlook.com ([65.55.34.7]) by COL004-OMC1S13.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Thu, 5 Jan 2017 11:55:22 -0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=e/zFWuKvwixX9JP/VBvBRkWhBFZ8IC46qVQ000oTpzg=;
+ b=CxGC60gyFuSz1r4SdO9MYulzicQLAykxt79w63W9Ov7lSw8/MjNcWpskjFixZE9II7Y0+0jVuoQtf8PH0lxBmYEl/dJZ8l60Ss+WpaMm5gM5QYVTywy16SF8pMNvjOIxVBEyRjx6DVkytedh/hCgPvLRCPfh7/TQ9yAVZORCcOD3LLay+DOh/QNMMunsXa7ZoED1XlaIfqk73Jr5MyvaYESCIq8l3Jsobs6w6iQsgmA0yOKcWDy2XIew2BBkEOKwwBaMhdfalkIlVh2buVUc0Duxk8BEOYTfryjxg1BojU0EjLd6RprxZ32MaocPG14smKRTFCe4qHJod/PGQbKAMQ==
+Received: from BY2NAM03FT035.eop-NAM03.prod.protection.outlook.com
+ (10.152.84.52) by BY2NAM03HT245.eop-NAM03.prod.protection.outlook.com
+ (10.152.85.160) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.803.8; Thu, 5 Jan
+ 2017 19:55:20 +0000
+Received: from DM5PR13MB0923.namprd13.prod.outlook.com (10.152.84.52) by
+ BY2NAM03FT035.mail.protection.outlook.com (10.152.84.223) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.803.8 via Frontend Transport; Thu, 5 Jan 2017 19:55:20 +0000
+Received: from DM5PR13MB0923.namprd13.prod.outlook.com ([10.168.239.10]) by
+ DM5PR13MB0923.namprd13.prod.outlook.com ([10.168.239.10]) with mapi id
+ 15.01.0829.007; Thu, 5 Jan 2017 19:55:20 +0000
+From: jose kokoyaczuk <josekoko2009@hotmail.com>
+To: Juan Pablo Ruata <jpruata@fapersa.com>
+Subject: =?iso-8859-1?Q?RV:_Importe_exacto_cheques_(para_compensar_factura_ma=EDz_?=
+ =?iso-8859-1?Q?segunda_a=F1o_pasado)?=
+Thread-Topic: =?iso-8859-1?Q?Importe_exacto_cheques_(para_compensar_factura_ma=EDz_segu?=
+ =?iso-8859-1?Q?nda_a=F1o_pasado)?=
+Thread-Index: AQHSZ4yKdt+1PrS9IkyCC5xuhZLvPKEqTAgX
+Date: Thu, 5 Jan 2017 19:55:20 +0000
+Message-ID: <DM5PR13MB092339CD284118967C3F4168D7600@DM5PR13MB0923.namprd13.prod.outlook.com>
+References: <DM5PR13MB0923D49AFC8349A0905A5138D7600@DM5PR13MB0923.namprd13.prod.outlook.com>,<DM5PR06MB239539DCE20BAB767A7CF42DB6600@DM5PR06MB2395.namprd06.prod.outlook.com>,<DM5PR13MB0923A42DE7DDE2AEF9C64BF2D7600@DM5PR13MB0923.namprd13.prod.outlook.com>
+In-Reply-To: <DM5PR13MB0923A42DE7DDE2AEF9C64BF2D7600@DM5PR13MB0923.namprd13.prod.outlook.com>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: fapersa.com; dkim=none (message not signed)
+ header.d=none;fapersa.com; dmarc=none action=none header.from=hotmail.com;
+x-incomingtopheadermarker: OriginalChecksum:8ABEB2146F9C524D37DAD4E24DB3C89A865B833D3177B9F4C027303A35A3AED1;UpperCasedChecksum:5FDC73F29C72E4806C6BA34476EF235F99219D89D6389632D3F2B60DFE0FE5C7;SizeAsReceived:7691;Count:39
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [7SRoQrLfbxqZmtSbRIVPF8npTiLzDhdS]
+x-incomingheadercount: 39
+x-eopattributedmessage: 0
+x-microsoft-exchange-diagnostics: 1;BY2NAM03HT245;7:AkCj3AfFqt17Z7GURKDmiP/on3e92wEiXVN8xBqNVjPSyIJC9IpmRDU4tFJemGAsR2GqWrUb4eDtNNQWyY7OV+M+7HzfkO5Usjb+6w2dPtxbM9xwdrjhE7VNl8O6OUxG3roHprjEYXfwGIkzJQ76n9KwY43suJTUSzUOVqt1UHoBYpvRo0XTzqr/luVSnE7V/nnNXp2pAS91dw/V4FxnSKempGb+J5IGO76+4fmb5T/QQd5C9Mxc7jLmbvh73JgFJnLKh3C6plVmcJnH8MP0HjTRkZQ9PDOlT/AtZuHCs8gNfpDKRFEzZHp5w6nIdHEB+pyF2Gjcn3gQLPxRAx2CV7WYBVmRigOXKgLNxRh+HW4QgUmcM1E7rbK86RiqlzN18oD+sTu6v7N+RzFkeAomtiQwyICk0j7U4aVGbYWfhrg9hi6iYpiEzmIR4s53ZjNlih+dhQ2qw9vMUFIPnvQWZQ==
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(10019020)(98900003);DIR:OUT;SFP:1102;SCL:1;SRVR:BY2NAM03HT245;H:DM5PR13MB0923.namprd13.prod.outlook.com;FPR:;SPF:None;LANG:es;
+x-ms-office365-filtering-correlation-id: 8b7f1953-4425-471e-6ece-08d435a4c7ac
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(1601124038)(5061506293)(5061507293)(1603103113)(1603101340)(1601125047)(1701031013);SRVR:BY2NAM03HT245;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(444111334)(444112120)(432015012)(82015046);SRVR:BY2NAM03HT245;BCL:0;PCL:0;RULEID:;SRVR:BY2NAM03HT245;
+x-forefront-prvs: 0178184651
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_DM5PR13MB092339CD284118967C3F4168D7600DM5PR13MB0923namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: hotmail.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 05 Jan 2017 19:55:20.5606
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BY2NAM03HT245
+X-OriginalArrivalTime: 05 Jan 2017 19:55:22.0301 (UTC) FILETIME=[A62A5ED0:01D2678D]
+X-Spam-Status: No, score=-6.1
+X-Spam-Score: -60
+X-Spam-Bar: ------
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  reenvio.. De: jose kokoyaczuk Enviado: jueves, 05 de enero
+    de 2017 04:47 p.m. Para: Juan Pablo Ruata Asunto: Importe exacto cheques
+   (para compensar factura maíz segunda año pasado) [...] 
+ 
+ Content analysis details:   (-6.1 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -1.2 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+                             [65.55.34.23 listed in wl.mailspike.net]
+  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends in
+                             digit (josekoko2009[at]hotmail.com)
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (josekoko2009[at]hotmail.com)
+ -3.2 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  0.0 LOTS_OF_MONEY          Huge... sums of money
+X-Spam-Flag: NO
+
+--_000_DM5PR13MB092339CD284118967C3F4168D7600DM5PR13MB0923namp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+
+reenvio..
+
+________________________________
+De: jose kokoyaczuk <josekoko2009@hotmail.com>
+Enviado: jueves, 05 de enero de 2017 04:47 p.m.
+Para: Juan Pablo Ruata
+Asunto: Importe exacto cheques (para compensar factura ma=EDz segunda a=F1o=
+ pasado)
+
+
+Juan Pablo, buenas tardes,
+
+
+Me avisaron reci=E9n desde la administraci=F3n que hoy te emitieron los com=
+probantes que faltaban ( y ya te lo enviaron por correo electr=F3nico), par=
+a cancelar esa factura vieja del ma=EDz de segunda del a=F1o pasado.
+
+
+El saldo total exacto es de =E9sa factura canje de ma=EDz es: $ 197569.95 f=
+inal con IVA incluido;( que es la sumatoria de 3 comprobantes: Saldo Factur=
+a canje  19240: $ 93160.80+ Nota debito 12672: $ 77129.80 + Nota debito 126=
+73: $27279.35. Tomando el dolar del d=EDa de hoy $ 16.30).Dividido en 3 che=
+ques de $ 65856 cada uno (Febrero, Marzo y Abril).
+
+
+Tambi=E9n fijate que desde la administraci=F3n te pasaron un correo con un =
+listado de facturas pendientes que hay en la cuenta de La Turquina, por fav=
+or miralo, y si te parece semana que viene, nos juntamos par ver como arreg=
+larlo. Lo que si si pod=E9s =E9sta semana sacame estos cheques del ma=EDz d=
+e segunda del a=F1o pasado, que es lo m=E1s atrasado que tenemos, y es con =
+lo que m=E1s me est=E1n hinchando las bolas.
+
+
+Cualquier duda, o consulta, por favor avisame..
+
+
+Saludos, Jose.
+
+
+________________________________
+De: Juan Pablo Ruata <juampiruata@hotmail.com>
+Enviado: jueves, 05 de enero de 2017 01:10 p.m.
+Para: Jose Coco
+Cc: Sergio Parado
+Asunto: Re: Presupuesto graminicidas..y saldo en $ factura ma=EDz pendiente=
+ del a=F1o pasado..
+
+Jose te paso el pedido por ahora de CLETODIN necesitamos 70 lts para hacer =
+en 70 ha.
+
+Por favor no se si eso va con coadyuvante o con aceite pero agr=E9game.
+
+Forma de pago con un cheque al 30/06.
+
+
+Para ma=F1ana te preparo los cheques del ma=EDz pendiente.
+
+
+Gracias.
+
+
+El 5 ene. 2017, a las 12:06, jose kokoyaczuk <josekoko2009@hotmail.com<mail=
+to:josekoko2009@hotmail.com>> escribi=F3:
+
+Juanpi, buen d=EDa, te paso los precios de los graminicidas, que me pediste=
+, y te los estaba debiendo:
+
+Cletodin......U$S 13.50 por litro. (dosis: 0.7 a 1 lt/ ha)
+
+Haloxifop 54% (Galant HL)........U$S 36.00 por litro.(dosis: 0.2 a  0.3 lt/=
+ ha)
+
+Charge (Fluozifop)..............U$S 20.00 por litro.(dosis: 0.4 a  0.5 lt/ =
+ha)
+
+Alternativas de FORMAS DE PAGO GRAMINICIDAS:
+
+1) Con entrega de cheque a 30 y 60  pesificado y sin inter=E9s (se pesifica=
+ el d=EDa de entrega del cheque).
+
+2) Tarjetas rurales (-Agronaci=F3n: pesificado; con d=EDas libres hasta 180=
+, 270 y hasta 365 d=EDas; contasa anual del banco bonificada en un 6%. Macr=
+o: pesificado; con 180 d=EDas libres, sin inter=E9s y con 4 % de gastos. Sa=
+nta Fe, Franc=E9s o Santander Rio: pesificado, 180 d=EDas libres, sin gasto=
+s, y sin intereses. Galicia: hasta el 28/05/2017, sin gastos, y sin interes=
+es.
+
+3) Con entrega de 6  cheques, pesificado, (30-60-90-120-150-180 d=EDas),  (=
+se pesifica el d=EDa de entrega de los cheques); a los precios dados hay qu=
+e sumarle un 5.25% de financiaci=F3n total; (en pesos).
+
+4) Con entrega de 6  cheques, pesificado,con 3 meses de gracia  (Primer cuo=
+ta en Abril; =FAltima cuota en Setiembre (90-120-150-180-210 y 240 d=EDas),=
+  (se pesifica el d=EDa de entrega de los cheques); a los precios dados hay=
+ que sumarle un 7.65 % de financiaci=F3n total; (en pesos).
+
+5) Con entrega de 1  cheque, pesificado, al 30/06/2017 (se pesifica el d=ED=
+a de entrega del cheque); a los precios dados hay que sumarle un 7.5 % de f=
+inanciaci=F3n total; (en pesos).
+
+5) Canje con soja  a Mayo 2017, a fijar precio,( se puede fijar precio de l=
+a soja hasta el 30/04/2017); a los precios dados hay que sumarle una financ=
+iaci=F3n total del 3.2%.
+
+
+Tamb=EDen te paso el saldo, que hab=EDa quedado pendiente de la factura de =
+ma=EDz del a=F1o pasado, (y deb=EDa ir con canje ma=EDz de segunda de la ca=
+mpa=F1a pasada..):
+
+El total es: $ 191163.81; que se puede hacer, en 3 cheques (como vos me hab=
+=EDas pedido): $ 63721.27 cada uno ( Febrero, Marzo, Abril). Con =E9so deja=
+r=EDamos cancelada, =E9sa factura vieja.. Fijate, si me lo pod=E9s preparar=
+ =E9sta semana, ser=EDa un golazo..
+
+Saludos, Jos=E9.
+
+
+--_000_DM5PR13MB092339CD284118967C3F4168D7600DM5PR13MB0923namp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt;color:#000000;font=
+-family:Calibri,Arial,Helvetica,sans-serif;" dir=3D"ltr">
+<p><br>
+</p>
+reenvio..<br>
+<br>
+<div style=3D"color: rgb(0, 0, 0);">
+<hr tabindex=3D"-1" style=3D"display:inline-block; width:98%">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" co=
+lor=3D"#000000" style=3D"font-size:11pt"><b>De:</b> jose kokoyaczuk &lt;jos=
+ekoko2009@hotmail.com&gt;<br>
+<b>Enviado:</b> jueves, 05 de enero de 2017 04:47 p.m.<br>
+<b>Para:</b> Juan Pablo Ruata<br>
+<b>Asunto:</b> Importe exacto cheques (para compensar factura ma=EDz segund=
+a a=F1o pasado)</font>
+<div>&nbsp;</div>
+</div>
+<div>
+<div id=3D"divtagdefaultwrapper" dir=3D"ltr" style=3D"font-size:12pt; color=
+:#000000; font-family:Calibri,Arial,Helvetica,sans-serif">
+<p>Juan Pablo, buenas tardes,&nbsp;</p>
+<p><br>
+</p>
+<p>Me avisaron reci=E9n desde la administraci=F3n que hoy te emitieron los =
+comprobantes que faltaban ( y ya te lo enviaron por correo electr=F3nico), =
+para cancelar esa factura vieja del ma=EDz de segunda del a=F1o pasado.</p>
+<p><br>
+</p>
+<p>El saldo total exacto es de =E9sa factura canje de ma=EDz es: <b>$&nbsp;=
+197569.95 final con IVA incluido</b>;( que es la sumatoria de 3 comprobante=
+s: Saldo Factura canje &nbsp;19240: $ 93160.80&#43; Nota debito 12672: $ 77=
+129.80 &#43; Nota debito 12673: $27279.35. Tomando el
+ dolar del d=EDa de hoy $ 16.30).<b>Dividido en 3 cheques de $ 65856 cada u=
+no (Febrero, Marzo y Abril).</b></p>
+<p><b><br>
+</b></p>
+<p>Tambi=E9n fijate que desde la administraci=F3n te pasaron un correo con =
+un listado de facturas pendientes que hay en la cuenta de La Turquina, por =
+favor miralo, y si te parece semana que viene, nos juntamos par ver como ar=
+reglarlo. Lo que si si pod=E9s =E9sta semana
+ sacame estos cheques del ma=EDz de segunda del a=F1o pasado, que es lo m=
+=E1s atrasado que tenemos, y es con lo que m=E1s me est=E1n hinchando las b=
+olas.</p>
+<p><br>
+</p>
+<p>Cualquier duda, o consulta, por favor avisame..</p>
+<p><br>
+</p>
+<p>Saludos, Jose.</p>
+<br>
+<br>
+<div style=3D"color:rgb(0,0,0)">
+<hr tabindex=3D"-1" style=3D"display:inline-block; width:98%">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" co=
+lor=3D"#000000" style=3D"font-size:11pt"><b>De:</b> Juan Pablo Ruata &lt;ju=
+ampiruata@hotmail.com&gt;<br>
+<b>Enviado:</b> jueves, 05 de enero de 2017 01:10 p.m.<br>
+<b>Para:</b> Jose Coco<br>
+<b>Cc:</b> Sergio Parado<br>
+<b>Asunto:</b> Re: Presupuesto graminicidas..y saldo en $ factura ma=EDz pe=
+ndiente del a=F1o pasado..</font>
+<div>&nbsp;</div>
+</div>
+<div>Jose te paso el pedido por ahora de CLETODIN necesitamos 70 lts para h=
+acer en 70 ha.
+<div class=3D""><br class=3D"">
+</div>
+<div class=3D"">Por favor no se si eso va con coadyuvante o con aceite pero=
+ agr=E9game.</div>
+<div class=3D""><br class=3D"">
+</div>
+<div class=3D"">Forma de pago con un cheque al 30/06.</div>
+<div class=3D""><br class=3D"">
+</div>
+<div class=3D""><br class=3D"">
+</div>
+<div class=3D"">Para ma=F1ana te preparo los cheques del ma=EDz pendiente.<=
+/div>
+<div class=3D""><br class=3D"">
+</div>
+<div class=3D""><br class=3D"">
+</div>
+<div class=3D"">Gracias.</div>
+<div class=3D""><br class=3D"">
+</div>
+<div class=3D""><br class=3D"">
+<div>
+<blockquote type=3D"cite" class=3D"">
+<div class=3D"">El 5 ene. 2017, a las 12:06, jose kokoyaczuk &lt;<a href=3D=
+"mailto:josekoko2009@hotmail.com" class=3D"">josekoko2009@hotmail.com</a>&g=
+t; escribi=F3:</div>
+<br class=3D"Apple-interchange-newline">
+<div class=3D"">
+<div id=3D"divtagdefaultwrapper" dir=3D"ltr" class=3D"" style=3D"font-famil=
+y:Helvetica; font-style:normal; font-weight:normal; letter-spacing:normal; =
+orphans:auto; text-align:start; text-indent:0px; text-transform:none; white=
+-space:normal; widows:auto; word-spacing:0px; font-size:12pt">
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Cal=
+ibri,Arial,Helvetica,sans-serif">
+Juanpi, buen d=EDa, te paso los precios de los graminicidas, que me pediste=
+, y te los estaba debiendo:</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Cal=
+ibri,Arial,Helvetica,sans-serif">
+<br class=3D"">
+</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Cal=
+ibri,Arial,Helvetica,sans-serif">
+Cletodin......U$S 13.50 por litro. (dosis: 0.7 a 1 lt/ ha)</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Cal=
+ibri,Arial,Helvetica,sans-serif">
+<br class=3D"">
+</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Cal=
+ibri,Arial,Helvetica,sans-serif">
+Haloxifop 54% (Galant HL)........U$S 36.00 por litro.<span class=3D"" style=
+=3D"font-family:Calibri,Arial,Helvetica,sans-serif,'Apple Color Emoji','Seg=
+oe UI Emoji',NotoColorEmoji,'Segoe UI Symbol','Android Emoji',EmojiSymbols;=
+ font-size:16px">(dosis: 0.2 a &nbsp;0.3
+ lt/ ha)</span></div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Cal=
+ibri,Arial,Helvetica,sans-serif">
+<br class=3D"">
+</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Cal=
+ibri,Arial,Helvetica,sans-serif">
+Charge (Fluozifop)..............U$S 20.00 por litro.<span class=3D"" style=
+=3D"font-family:Calibri,Arial,Helvetica,sans-serif,'Apple Color Emoji','Seg=
+oe UI Emoji',NotoColorEmoji,'Segoe UI Symbol','Android Emoji',EmojiSymbols;=
+ font-size:16px">(dosis: 0.4 a &nbsp;0.5 lt/
+ ha)</span></div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px"><br class=3D"">
+<span class=3D"" style=3D"font-family:Calibri,Arial,Helvetica,sans-serif,'A=
+pple Color Emoji','Segoe UI Emoji',NotoColorEmoji,'Segoe UI Symbol','Androi=
+d Emoji',EmojiSymbols; font-size:16px"></span></div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-size:16px;=
+ font-family:calibri,arial,helvetica,sans-serif">
+<span class=3D"" style=3D"font-size:12pt; color:rgb(68,68,68); line-height:=
+22.72px"><b class=3D"" style=3D"line-height:22.72px"><u class=3D"" style=3D=
+"line-height:22.72px">Alternativas de&nbsp;F</u></b></span><strong class=3D=
+"" style=3D"color:rgb(68,68,68); font-size:15px; line-height:21.3px"><u cla=
+ss=3D"" style=3D"line-height:21.3px">ORMAS
+ DE PAGO GRAMINICIDAS</u></strong><span class=3D"" style=3D"color:rgb(68,68=
+,68); font-size:15px; line-height:21.3px">:</span></div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:cal=
+ibri,arial,helvetica,sans-serif">
+<font color=3D"#444444" class=3D""><span class=3D"" style=3D"font-size:15px=
+; line-height:21.3px"><br class=3D"">
+</span></font><span class=3D"" style=3D"color:rgb(68,68,68); font-size:15px=
+; line-height:21.3px"></span></div>
+<div dir=3D"ltr" class=3D"" style=3D"color:rgb(68,68,68); font-family:calib=
+ri,arial,helvetica,sans-serif; font-size:15px; line-height:21.3px">
+1) Con entrega de cheque a 30 y 60&nbsp; pesificado y sin inter=E9s&nbsp;(s=
+e pesifica el d=EDa de entrega del cheque).</div>
+<div dir=3D"ltr" class=3D"" style=3D"color:rgb(68,68,68); font-family:calib=
+ri,arial,helvetica,sans-serif; font-size:15px; line-height:21.3px">
+<br class=3D"">
+</div>
+<div dir=3D"ltr" class=3D"" style=3D"color:rgb(68,68,68); font-family:calib=
+ri,arial,helvetica,sans-serif; font-size:15px; line-height:21.3px">
+<span class=3D"" style=3D"line-height:21.3px">2)&nbsp;</span><strong class=
+=3D"" style=3D"line-height:21.3px">Tarjetas rurales&nbsp;</strong><span cla=
+ss=3D"" style=3D"line-height:21.3px">(-</span><b class=3D"" style=3D"line-h=
+eight:21.3px">Agronaci=F3n:</b><span class=3D"" style=3D"line-height:21.3px=
+">&nbsp;</span><span class=3D"" style=3D"line-height:21.3px">pesificado;
+ con d=EDas libres hasta 180, 270 y hasta&nbsp;</span><span class=3D"" styl=
+e=3D"line-height:21.3px">365 d=EDas; con<u class=3D"">tasa anual del banco =
+bonificada en un&nbsp;6%</u>.<b class=3D"">&nbsp;Macro</b>:&nbsp;<span clas=
+s=3D"" style=3D"line-height:21.3px">pesificado; con&nbsp;</span>180 d=EDas
+ libres, sin inter=E9s y con 4 % de gastos.&nbsp;<b class=3D"">Santa Fe, Fr=
+anc=E9s o Santander&nbsp;Rio</b>:&nbsp;</span><u class=3D"">pesificado, 180=
+ d=EDas libres, sin gastos, y sin intereses.</u>&nbsp;<b class=3D"">Galicia=
+:</b>&nbsp;<u class=3D"">hasta el 28/05/2017, sin gastos, y sin intereses.<=
+/u></div>
+<div dir=3D"ltr" class=3D"" style=3D"color:rgb(68,68,68); font-family:calib=
+ri,arial,helvetica,sans-serif; font-size:15px; line-height:21.3px">
+<span class=3D"" style=3D"line-height:21.3px"><br class=3D"">
+</span></div>
+<div dir=3D"ltr" class=3D"" style=3D"color:rgb(68,68,68); font-family:calib=
+ri,arial,helvetica,sans-serif; font-size:15px; line-height:21.3px">
+<div dir=3D"ltr" class=3D"" style=3D"line-height:21.3px">
+<div dir=3D"ltr" class=3D"" style=3D"line-height:21.3px">
+<div dir=3D"ltr" class=3D"" style=3D"line-height:21.3px"><span class=3D"" s=
+tyle=3D"line-height:21.3px">3) Con entrega de 6</span><b class=3D"" style=
+=3D"line-height:21.3px">&nbsp; cheques,&nbsp;pesificado, (30-60-90-120-150-=
+180 d=EDas),</b><span class=3D"" style=3D"line-height:21.3px">&nbsp;&nbsp;(=
+se
+ pesifica el d=EDa de entrega de los cheques); a los precios dados hay que&=
+nbsp;</span><b class=3D"" style=3D"line-height:21.3px">sumarle un 5.25% de =
+financiaci=F3n total; (en pesos).</b></div>
+<div dir=3D"ltr" class=3D"" style=3D"line-height:21.3px"><span class=3D"" s=
+tyle=3D"line-height:21.3px"><br class=3D"" style=3D"line-height:21.3px">
+</span></div>
+<div dir=3D"ltr" class=3D"" style=3D"line-height:21.3px"><span class=3D"" s=
+tyle=3D"line-height:21.3px">4) Con entrega de 6</span><b class=3D"" style=
+=3D"line-height:21.3px">&nbsp; cheques,&nbsp;pesificado,<u class=3D"" style=
+=3D"line-height:21.3px">con 3&nbsp;meses de gracia</u>&nbsp; (Primer cuota
+ en Abril; =FAltima cuota en Setiembre (90-120-150-180-210 y 240 d=EDas),</=
+b><span class=3D"" style=3D"line-height:21.3px">&nbsp;&nbsp;(se pesifica el=
+ d=EDa de entrega de los cheques); a los precios dados hay que&nbsp;</span>=
+<b class=3D"" style=3D"line-height:21.3px">sumarle un 7.65 %
+ de financiaci=F3n total; (en pesos).</b></div>
+<div dir=3D"ltr" class=3D"" style=3D"line-height:21.3px"><b class=3D"" styl=
+e=3D"line-height:21.3px"><br class=3D"">
+</b></div>
+<div dir=3D"ltr" class=3D"" style=3D"line-height:21.3px"><b class=3D"" styl=
+e=3D"line-height:21.3px"><span class=3D"" style=3D"line-height:21.3px">5) C=
+on entrega de 1</span><b class=3D"" style=3D"line-height:21.3px">&nbsp; che=
+que,&nbsp;pesificado,</b><span class=3D"" style=3D"line-height:21.3px">&nbs=
+p;al
+ 30/06/2017 (se pesifica el d=EDa de entrega del cheque); a los precios dad=
+os hay que&nbsp;</span><b class=3D"" style=3D"line-height:21.3px">sumarle u=
+n 7.5&nbsp;% de financiaci=F3n total; (en pesos).</b></b></div>
+<div dir=3D"ltr" class=3D"" style=3D"line-height:21.3px"><span class=3D"" s=
+tyle=3D"line-height:21.3px"><br class=3D"" style=3D"line-height:21.3px">
+</span></div>
+<div dir=3D"ltr" class=3D"" style=3D"line-height:21.3px"><span class=3D"" s=
+tyle=3D"font-family:calibri,arial,helvetica,sans-serif,'apple color emoji',=
+'segoe ui emoji',notocoloremoji,'segoe ui symbol','android emoji',emojisymb=
+ols; font-size:12pt; line-height:21.3px">5)
+ Canje con soja &nbsp;a Mayo 2017, a fijar precio,( se puede fijar precio d=
+e la soja hasta el 30/04/2017); a los precios dados hay que sumarle una fin=
+anciaci=F3n total del 3.2%.</span><br class=3D"">
+<b class=3D"" style=3D"line-height:21.3px"></b></div>
+<div class=3D""><span class=3D"" style=3D"font-family:calibri,arial,helveti=
+ca,sans-serif,'apple color emoji','segoe ui emoji',notocoloremoji,'segoe ui=
+ symbol','android emoji',emojisymbols; font-size:12pt; line-height:21.3px">=
+<br class=3D"">
+</span></div>
+</div>
+</div>
+</div>
+<p class=3D"" style=3D"margin-top:0px; margin-bottom:0px"></p>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Cal=
+ibri,Arial,Helvetica,sans-serif">
+<br class=3D"">
+</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Cal=
+ibri,Arial,Helvetica,sans-serif">
+<b class=3D"">Tamb=EDen te paso el saldo, que hab=EDa quedado pendiente de =
+la factura de ma=EDz del a=F1o pasado, (y deb=EDa ir con canje ma=EDz de se=
+gunda de la campa=F1a pasada..):</b></div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Cal=
+ibri,Arial,Helvetica,sans-serif">
+<br class=3D"">
+</div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Cal=
+ibri,Arial,Helvetica,sans-serif">
+<b class=3D"">El total es: $ 191163.81; que se puede hacer, en 3 cheques (c=
+omo vos me hab=EDas pedido): $ 63721.27 cada uno ( Febrero, Marzo, Abril). =
+Con =E9so dejar=EDamos cancelada, =E9sa factura vieja.. Fijate, si me lo po=
+d=E9s preparar =E9sta semana, ser=EDa un golazo..</b></div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Cal=
+ibri,Arial,Helvetica,sans-serif">
+<b class=3D""><br class=3D"">
+</b></div>
+<div class=3D"" style=3D"margin-top:0px; margin-bottom:0px; font-family:Cal=
+ibri,Arial,Helvetica,sans-serif">
+<b class=3D"">Saludos, Jos=E9.</b></div>
+</div>
+</div>
+</blockquote>
+</div>
+<br class=3D"">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+--_000_DM5PR13MB092339CD284118967C3F4168D7600DM5PR13MB0923namp_--

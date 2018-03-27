@@ -1,0 +1,196 @@
+Return-Path: <ingenieria@bioingenieria-aplicada.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id UTjGEAOa+FgdDAAATLP0zA
+	for <jpruata@fapersa.com>; Thu, 20 Apr 2017 08:22:43 -0300
+Return-path: <ingenieria@bioingenieria-aplicada.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Thu, 20 Apr 2017 08:22:43 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:47565 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <ingenieria@bioingenieria-aplicada.com>)
+	id 1d1AAc-00018u-Ks
+	for jpruata@fapersa.com; Thu, 20 Apr 2017 08:22:43 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id B14397F21F
+	for <jpruata@fapersa.com>; Thu, 20 Apr 2017 08:22:41 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id hXmbzx1u5VQ9 for <jpruata@fapersa.com>;
+	Thu, 20 Apr 2017 08:22:38 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 48BDD7F231; Thu, 20 Apr 2017 08:22:38 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id EAD417F21F
+	for <jpruata@fapersa.com>; Thu, 20 Apr 2017 08:22:34 -0300 (ART)
+Received-SPF: none (bioingenieria-aplicada.com: No applicable sender policy available) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="ingenieria@bioingenieria-aplicada.com"; helo=mail-yw0-f178.google.com; client-ip=209.85.161.178
+Received: from mail-yw0-f178.google.com (mail-yw0-f178.google.com [209.85.161.178])
+	by fw.fapersa.com (Postfix) with ESMTPS id 5F44A5FF4A
+	for <jpruata@fapersa.com>; Thu, 20 Apr 2017 08:22:32 -0300 (ART)
+Received: by mail-yw0-f178.google.com with SMTP id j9so36781154ywj.3
+        for <jpruata@fapersa.com>; Thu, 20 Apr 2017 04:22:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=bioingenieria-aplicada-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=94cAm5YF2L6RrpFPw0L7V9dCLOyvAeM6huJ7Etkhnlc=;
+        b=eq/JbVPZVaZsHQstpvdyqL3+yiNCBx1ti3tJeDYkF1WxFoptvUn9kLNbK4/G7Gb0rI
+         ZvF0pd0ZwaFu0AKOoq4NNIFJlW/rR+bvM7dn4uAv7kf1TzqeClv7xjORd0GqRzefjt4c
+         LLSHC2HY5KrAZscZSCPTTWCgddjmTCGlQ431ED7YJIDH10jggLlf6ZdIvy7sWBJX60Mc
+         te/3isGCKL6jgNrLCRhb87QOKN9sxO5FalAoNLi30RGH09waF44yhNdYCZgSnvLaknIj
+         gDvyR1NDaevLdY3xHDh9AVDnlslYupuRmFtfjP1linARY3X2j4m8mpSiv7KD+50bJZM5
+         +XbA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=94cAm5YF2L6RrpFPw0L7V9dCLOyvAeM6huJ7Etkhnlc=;
+        b=dqnSxWQLyBK8TrnYucrNWE+ttvgK/PKDCyeAf3KiGRLgQ3FOUzEqsalK9/Il5+3bud
+         80iNccSII8VvSp3Wwy0kJCXUOhOJVCuf/oPC4/VwHgKCk3wiM3C/liO9D5Ep9HZBHg+9
+         bAp5v1LN29HxxUl2YaovQ+6x3gCBLtrmt7cGM3TkEpnpUGC/XdpeGRnZc417e9Wq61e7
+         eJyzAavQykQ4cCWWxnwYC0lUf7Yc2NZDV5/rVc24cMZhESM5/p3pvFCqJA8b86AGX8e8
+         JM5b2dB2EGRFP5NOrUMIxKEdvlo09d24mjvY7R6BCF7csL9DuKU5MUMMqspsYSJQJ6l4
+         pQEw==
+X-Gm-Message-State: AN3rC/4j1SgSwHOlqMp9hMr46Jv7d/ceTivQFl3M9tD3KKBkgKsKnx9q
+	iZGl306Z8bo7iDABAGDRReD2P2EJGQ==
+X-Received: by 10.129.108.20 with SMTP id h20mr5974575ywc.50.1492687350637;
+ Thu, 20 Apr 2017 04:22:30 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.37.52.13 with HTTP; Thu, 20 Apr 2017 04:22:30 -0700 (PDT)
+Received: by 10.37.52.13 with HTTP; Thu, 20 Apr 2017 04:22:30 -0700 (PDT)
+In-Reply-To: <A8E9B71D-A131-4316-AA45-5A7D10684DE9@fapersa.com>
+References: <DM5PR06MB23953B07708BF33D7B130E80B61B0@DM5PR06MB2395.namprd06.prod.outlook.com>
+ <A8E9B71D-A131-4316-AA45-5A7D10684DE9@fapersa.com>
+From: "Ingenieria (BA)" <ingenieria@bioingenieria-aplicada.com>
+Date: Thu, 20 Apr 2017 08:22:30 -0300
+Message-ID: <CA+nPqg=CvNGQHw6vmn50B6WJ7HdPdDpDqwS2HZi-O7wbERUQmg@mail.gmail.com>
+Subject: Re: Fwd: PROVINCIAL M12
+To: Juan Pablo Ruata <jpruata@fapersa.com>
+Content-Type: multipart/alternative; boundary=001a114dd3224bc1b9054d975bed
+
+--001a114dd3224bc1b9054d975bed
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Ok. Le paso la planilla al manager para que la complete en el viaje
+
+BioIng. Dechiara, Paulo J.
+_______________________________
+
+BIOINGENIERIA APLICADA SRL
+R. Saenz Pe=C3=B1a 2498 (Esq Tucum=C3=A1n)
+CP: 3000 - Santa Fe - Pcia Santa Fe
+Tel/Fax: +54 342 4811537
+www.bioingenieria-aplicada.com
+info@bioingenieria-aplicada.com
+
+Operador Buenos Aires
+Cordero 427 - R. de Escalada - Lan=C3=BAs - Tel: 011- 3964 5666
+proveedores@bioingenieria-aplicada.com
+
+El 20 abr. 2017 7:54, "FAPERSA" <jpruata@fapersa.com> escribi=C3=B3:
+
+>
+>
+> Inicio del mensaje reenviado:
+>
+> *De: *Juan Pablo Ruata <juampiruata@hotmail.com>
+> *Asunto: **PROVINCIAL M12*
+> *Fecha: *20 de abril de 2017, 07:43:25 GMT-3
+> *Para: *Daniel De La Torre <danieldelat@yahoo.com.ar>, Justo Giombi <
+> justo_ramone@hotmail.com>, Felipe Bonfanti <martinbonfanti@hotmail.com>,
+> Jose Filinov <jfilonov@intramed.net>
+> *Cc: *Rauli Freyre <raf@freyre-iturraspe.com.ar>, Paulo De Chiara <
+> ingenieria@bioingienieria-aplicada.com>
+>
+> Gente les comparto info del torneo del s=C3=A1bado.
+>
+> Abrazos.
+>
+>
+>
+>
+>
+>
+>
+
+--001a114dd3224bc1b9054d975bed
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Ok. Le paso la planilla al manager para que la complete e=
+n el viaje<br><br><div data-smartmail=3D"gmail_signature">BioIng. Dechiara,=
+ Paulo J.<br>_______________________________<br><br>BIOINGENIERIA APLICADA =
+SRL<br>R. Saenz Pe=C3=B1a 2498 (Esq Tucum=C3=A1n)<br>CP: 3000 - Santa Fe - =
+Pcia Santa Fe<br>Tel/Fax: +54 342 4811537<br><a href=3D"http://www.bioingen=
+ieria-aplicada.com">www.bioingenieria-aplicada.com</a><br><a href=3D"mailto=
+:info@bioingenieria-aplicada.com">info@bioingenieria-aplicada.com</a><br><b=
+r>Operador Buenos Aires=C2=A0<br>Cordero 427 - R. de Escalada - Lan=C3=BAs =
+-=C2=A0Tel: 011- 3964 5666<br><a href=3D"mailto:proveedores@bioingenieria-a=
+plicada.com">proveedores@bioingenieria-aplicada.com</a></div></div><div cla=
+ss=3D"gmail_extra"><br><div class=3D"gmail_quote">El 20 abr. 2017 7:54, &qu=
+ot;FAPERSA&quot; &lt;<a href=3D"mailto:jpruata@fapersa.com">jpruata@fapersa=
+.com</a>&gt; escribi=C3=B3:<br type=3D"attribution"><blockquote class=3D"gm=
+ail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-le=
+ft:1ex"><div style=3D"word-wrap:break-word"><br><div><br><blockquote type=
+=3D"cite"><div>Inicio del mensaje reenviado:</div><br class=3D"m_3411269043=
+91258857Apple-interchange-newline"><div style=3D"margin-top:0px;margin-righ=
+t:0px;margin-bottom:0px;margin-left:0px"><span style=3D"font-family:-webkit=
+-system-font,Helvetica Neue,Helvetica,sans-serif;color:rgba(0,0,0,1.0)"><b>=
+De: </b></span><span style=3D"font-family:-webkit-system-font,Helvetica Neu=
+e,Helvetica,sans-serif">Juan Pablo Ruata &lt;<a href=3D"mailto:juampiruata@=
+hotmail.com" target=3D"_blank">juampiruata@hotmail.com</a>&gt;<br></span></=
+div><div style=3D"margin-top:0px;margin-right:0px;margin-bottom:0px;margin-=
+left:0px"><span style=3D"font-family:-webkit-system-font,Helvetica Neue,Hel=
+vetica,sans-serif;color:rgba(0,0,0,1.0)"><b>Asunto: </b></span><span style=
+=3D"font-family:-webkit-system-font,Helvetica Neue,Helvetica,sans-serif"><b=
+>PROVINCIAL M12</b><br></span></div><div style=3D"margin-top:0px;margin-rig=
+ht:0px;margin-bottom:0px;margin-left:0px"><span style=3D"font-family:-webki=
+t-system-font,Helvetica Neue,Helvetica,sans-serif;color:rgba(0,0,0,1.0)"><b=
+>Fecha: </b></span><span style=3D"font-family:-webkit-system-font,Helvetica=
+ Neue,Helvetica,sans-serif">20 de abril de 2017, 07:43:25 GMT-3<br></span><=
+/div><div style=3D"margin-top:0px;margin-right:0px;margin-bottom:0px;margin=
+-left:0px"><span style=3D"font-family:-webkit-system-font,Helvetica Neue,He=
+lvetica,sans-serif;color:rgba(0,0,0,1.0)"><b>Para: </b></span><span style=
+=3D"font-family:-webkit-system-font,Helvetica Neue,Helvetica,sans-serif">Da=
+niel De La Torre &lt;<a href=3D"mailto:danieldelat@yahoo.com.ar" target=3D"=
+_blank">danieldelat@yahoo.com.ar</a>&gt;, Justo Giombi &lt;<a href=3D"mailt=
+o:justo_ramone@hotmail.com" target=3D"_blank">justo_ramone@hotmail.com</a>&=
+gt;, Felipe Bonfanti &lt;<a href=3D"mailto:martinbonfanti@hotmail.com" targ=
+et=3D"_blank">martinbonfanti@hotmail.com</a>&gt;, Jose Filinov &lt;<a href=
+=3D"mailto:jfilonov@intramed.net" target=3D"_blank">jfilonov@intramed.net</=
+a>&gt;<br></span></div><div style=3D"margin-top:0px;margin-right:0px;margin=
+-bottom:0px;margin-left:0px"><span style=3D"font-family:-webkit-system-font=
+,Helvetica Neue,Helvetica,sans-serif;color:rgba(0,0,0,1.0)"><b>Cc: </b></sp=
+an><span style=3D"font-family:-webkit-system-font,Helvetica Neue,Helvetica,=
+sans-serif">Rauli Freyre &lt;<a href=3D"mailto:raf@freyre-iturraspe.com.ar"=
+ target=3D"_blank">raf@freyre-iturraspe.com.ar</a>&gt;, Paulo De Chiara &lt=
+;<a href=3D"mailto:ingenieria@bioingienieria-aplicada.com" target=3D"_blank=
+">ingenieria@bioingienieria-<wbr>aplicada.com</a>&gt;<br></span></div><br><=
+div>
+
+
+
+<div>
+<div class=3D"m_341126904391258857BodyFragment"><font size=3D"2"><span styl=
+e=3D"font-size:10pt">
+<div class=3D"m_341126904391258857PlainText">Gente les comparto info del to=
+rneo del s=C3=A1bado.<br>
+<br>
+Abrazos.<br>
+<br>
+<br>
+</div>
+</span></font></div>
+<div class=3D"m_341126904391258857BodyFragment"><font size=3D"2"><span styl=
+e=3D"font-size:10pt">
+<div class=3D"m_341126904391258857PlainText"><br>
+</div>
+</span></font></div>
+</div>
+
+</div></blockquote></div></div><br><div style=3D"word-wrap:break-word"><div=
+><blockquote type=3D"cite"><div></div></blockquote></div><br></div><br></bl=
+ockquote></div></div>
+
+--001a114dd3224bc1b9054d975bed--

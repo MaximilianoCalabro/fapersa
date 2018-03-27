@@ -1,0 +1,261 @@
+Return-Path: <reportes-fapersa-bounces@listas.lunix.com.ar>
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id mUBMCD67yliNRwAATLP0zA
+	; Thu, 16 Mar 2017 13:20:14 -0300
+Return-path: <reportes-fapersa-bounces@listas.lunix.com.ar>
+Envelope-to: dottonel@fapersa.com,
+ fyori@fapersa.com,
+ jpruata@fapersa.com,
+ pcalcagno@fapersa.com,
+ rdopazo@fapersa.com
+Delivery-date: Thu, 16 Mar 2017 13:20:14 -0300
+Received: from cloud.lunix.com.ar ([207.198.115.213]:60089)
+	by tanis.nocplanet.com with esmtp (Exim 4.88)
+	(envelope-from <reportes-fapersa-bounces@listas.lunix.com.ar>)
+	id 1coY8B-0004WB-8Y; Thu, 16 Mar 2017 13:20:13 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by cloud.lunix.com.ar (Postfix) with ESMTP id 074EDC1D4F;
+	Thu, 16 Mar 2017 13:18:03 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at cloud.lunix.com.ar
+Received: from cloud.lunix.com.ar ([127.0.0.1])
+	by localhost (cloud.lunix.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 6WHReGS2zrMy; Thu, 16 Mar 2017 13:17:58 -0300 (ART)
+Received: by cloud.lunix.com.ar (Postfix, from userid 114)
+	id 4669DC1D55; Thu, 16 Mar 2017 13:17:58 -0300 (ART)
+Received: from cloud.lunix.com.ar (localhost [127.0.0.1])
+	by cloud.lunix.com.ar (Postfix) with ESMTP id 8C87EC1D4F;
+	Thu, 16 Mar 2017 13:17:53 -0300 (ART)
+X-Original-To: reportes-fapersa@listas.lunix.com.ar
+Delivered-To: reportes-fapersa@listas.lunix.com.ar
+Received: from localhost (localhost [127.0.0.1])
+ by cloud.lunix.com.ar (Postfix) with ESMTP id B5ED4C1D4F
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Thu, 16 Mar 2017 13:17:52 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at cloud.lunix.com.ar
+Received: from cloud.lunix.com.ar ([127.0.0.1])
+ by localhost (cloud.lunix.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+ with ESMTP id sRCNQiRMokDj for <reportes-fapersa@listas.lunix.com.ar>;
+ Thu, 16 Mar 2017 13:17:48 -0300 (ART)
+Received: by cloud.lunix.com.ar (Postfix, from userid 114)
+ id 3C4B1C1D51; Thu, 16 Mar 2017 13:17:48 -0300 (ART)
+Received: from tanis.nocplanet.com (tanis.nocplanet.com [108.170.37.10])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by cloud.lunix.com.ar (Postfix) with ESMTPS id BFB37C1D4F
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Thu, 16 Mar 2017 13:17:43 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=fapersa.com
+ ; s=default;
+ h=Content-Type:MIME-Version:Date:Subject:References:To:From:
+ Message-ID:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=L2rEgGCNE7QngT0PlDzyQUYq4CIjTTwLMF2LQjl7E6Q=; b=BsNv5Zctl/RnW0leCZK89uL9U7
+ TDi9+c+bK4OT42fid0xO1YiQn/8vpNOuZxXRN+gWd8sz081xoWQ7Iao74n+RkPamfjf2RDaYdfFam
+ pMB7YDHF7KoV7cuBP7bh2mczRz7KVEL46nTEUTofQywScOZ72h2FvS+W7w6DpPviGzF/Ir83cu0GX
+ 9zd8rleew7CeW38alBkmcn7iEWHmolbpYYNev9Wz5C44QKKyMxTERf9Wt7u8yh6VKQRhVFxEC+oQZ
+ OnMbNm5kVDtdiWcIgqNi8s6szOl+dWBYBcu/LSXt/iVYLqOdU1WZgTsWNxtAndJsv/2I2RSv/XTec
+ +PtnqblQ==;
+Received: from mx1.fapersa.com ([181.14.247.181]:1563 helo=faprd)
+ by tanis.nocplanet.com with esmtpa (Exim 4.88)
+ (envelope-from <rdopazo@fapersa.com>) id 1coY5t-0004UE-9D
+ for reportes-fapersa@listas.lunix.com.ar; Thu, 16 Mar 2017 13:17:41 -0300
+Message-ID: <225D2AAE1E4E472CB4DA0A84AF355D25@faprd>
+From: "Roberto Dopazo" <rdopazo@fapersa.com>
+To: <reportes-fapersa@listas.lunix.com.ar>
+References: <A0bKtQa-ETo0CIgiD-BgAAAPwHAABV-@36d9df6754>
+Date: Thu, 16 Mar 2017 13:19:40 -0300
+MIME-Version: 1.0
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2900.5931
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.6157
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - tanis.nocplanet.com
+X-AntiAbuse: Original Domain - listas.lunix.com.ar
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - fapersa.com
+X-Get-Message-Sender-Via: tanis.nocplanet.com: authenticated_id:
+ rdopazo@fapersa.com
+X-Authenticated-Sender: tanis.nocplanet.com: rdopazo@fapersa.com
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+Subject: [Reportes-fapersa] email
+X-BeenThere: reportes-fapersa@listas.lunix.com.ar
+X-Mailman-Version: 2.1.18
+Precedence: list
+List-Id: <reportes-fapersa.listas.lunix.com.ar>
+List-Unsubscribe: <http://listas.lunix.com.ar/cgi-bin/mailman/options/reportes-fapersa>, 
+ <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=unsubscribe>
+List-Post: <mailto:reportes-fapersa@listas.lunix.com.ar>
+List-Help: <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=help>
+List-Subscribe: <http://listas.lunix.com.ar/cgi-bin/mailman/listinfo/reportes-fapersa>, 
+ <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=subscribe>
+Reply-To: reportes-fapersa@listas.lunix.com.ar
+Content-Type: multipart/mixed; boundary="===============8072832654263606235=="
+Errors-To: reportes-fapersa-bounces@listas.lunix.com.ar
+Sender: "Reportes-fapersa" <reportes-fapersa-bounces@listas.lunix.com.ar>
+X-Spam-Status: No, score=0.3
+X-Spam-Score: 3
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Hola Pablo... No estoy recibiendo email, lo podrás solucionar...?
+    Necesito hacer unos trabajos lo antes posible. Espero tu comentario. Saludos.
+    Roberto Dopazo Departamento de Compras Tel: +54 342 4810810 Lamadrid 3065
+    CP 3000 Santa Fe, Argentina. rdopazo@fapersa.com [...] 
+ 
+ Content analysis details:   (0.3 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: lunix.com.ar]
+ -0.0 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+  0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
+                             domains are different
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  1.1 HTML_IMAGE_ONLY_16     BODY: HTML: images with 1200-1600 bytes of words
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+  0.0 T_DKIM_INVALID         DKIM-Signature header exists but is not valid
+  1.0 KAM_HTMLNOISE          Spam containing useless HTML padding
+X-Spam-Flag: NO
+
+This is a multi-part message in MIME format.
+
+--===============8072832654263606235==
+Content-Type: multipart/related;
+	type="multipart/alternative";
+	boundary="----=_NextPart_000_002C_01D29E57.F80869D0"
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_002C_01D29E57.F80869D0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_001_002D_01D29E57.F80869D0"
+
+
+------=_NextPart_001_002D_01D29E57.F80869D0
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hola Pablo...
+No estoy recibiendo email, lo podr=C3=A1s solucionar...?
+Necesito hacer unos trabajos lo antes posible.
+Espero tu comentario.
+Saludos.
+     =20
+      Roberto Dopazo=20
+      Departamento de Compras=20
+      Tel: +54 342 4810810=20
+      Lamadrid 3065=20
+      CP 3000 Santa Fe, Argentina.=20
+      rdopazo@fapersa.com=20
+
+------=_NextPart_001_002D_01D29E57.F80869D0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content=3D"text/html; charset=3Dutf-8" http-equiv=3DContent-Type>
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.23588">
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT size=3D2 face=3DArial>Hola Pablo...</FONT></DIV>
+<DIV><FONT size=3D2 face=3DArial>No estoy recibiendo email, lo =
+podr=C3=A1s=20
+solucionar...?</FONT></DIV>
+<DIV><FONT size=3D2 face=3DArial>Necesito hacer unos trabajos lo antes=20
+posible.</FONT></DIV>
+<DIV><FONT size=3D2 face=3DArial>Espero tu comentario.</FONT></DIV>
+<DIV><FONT size=3D2 face=3DArial>Saludos.</FONT></DIV>
+<DIV>
+<TABLE border=3D0>
+  <TBODY>
+  <TR><IMG src=3D"cid:383371C058E34CD9B3D243D111532CE2@faprd"> </TR>
+  <TR style=3D"FONT-FAMILY: arial; FONT-SIZE: 10pt">
+    <TD>Roberto Dopazo</TD></TR>
+  <TR style=3D"FONT-FAMILY: arial; FONT-SIZE: 10pt">
+    <TD>Departamento de Compras</TD></TR>
+  <TR style=3D"FONT-FAMILY: arial; FONT-SIZE: 10pt">
+    <TD>Tel: +54 342 4810810</TD></TR>
+  <TR style=3D"FONT-FAMILY: arial; FONT-SIZE: 10pt">
+    <TD>Lamadrid 3065</TD></TR>
+  <TR style=3D"FONT-FAMILY: arial; FONT-SIZE: 10pt">
+    <TD>CP 3000 Santa Fe, Argentina.</TD></TR>
+  <TR style=3D"FONT-FAMILY: arial; FONT-SIZE: 8pt">
+    =
+<TD>rdopazo@fapersa.com</TD></TR></TBODY></TABLE></DIV></BODY></HTML>
+
+------=_NextPart_001_002D_01D29E57.F80869D0--
+
+------=_NextPart_000_002C_01D29E57.F80869D0
+Content-Type: image/jpeg;
+	name="fapersa.jpg"
+Content-Transfer-Encoding: base64
+Content-ID: <383371C058E34CD9B3D243D111532CE2@faprd>
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAiAG0DASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+q9z
+f2dmQLq7ggLdBLIFz+ZqxXzzqdlpWvfGDWLfxJqbWlkjuBKZVTG3AVQWBAFaU4c7d+hlVqciVlue
+9warp11KIre/tZpDyEjmVifwBq3XmUSaP4E0cXngzRLvXbi+Pyz26tOoRTggyKpAGQeBznr0qvpf
+xbv28S2eka54cl043TrGCxZXUscKdrKMjPFP2Tesdg9tFaS3PVaK8iuvi9rA16/0yw8NC9e0mkT9
+0zsxVW27iApx2/Otfwh8WLLXpbu31W2XS5raJpi7SZQqv3uoBBGeneh0ZpXsCr027Jno1FeTXnxh
+vraQajH4blk8PSTeVDdsxVpMcEjjGeDge3WruvfFkaVrelW9pp32uyv7eG4EgY+ZtdiMBcctgdPW
+j2M+we3p9z0yivKbz4ra1pumW89/4XeC7vJjHa2zs6swXGWIK55LKAAOefbOhofjXxnrOqw2b+DZ
+LGJjmS4uhJGiL3PKjJ9AOv60OjNK4KtBu36Ho1FcD4n8d63pepta6P4S1LUIowRJcG2lVC3+zheR
+79PT1p/gL4i/8Jhe3mn3Wn/Yr22XfsDlty5weCAQQSPzpeyly83QftYc3LfU7uiiiszQK8GstA07
+xJ8bNbsNUhM1tumfaHK8gjHIIPevearpYWcVy1zHaQJcNndKsYDHPXJ61pTqcl7dTOpTU7X6Hhfx
+Jt08Na9oujRSX9p4cht9yx20hLZaRjIVLHluR1PGRXOKliPHPhyXTjqzWs01u6Pqm3zG/fEZXaSN
+vH55r6ant4LqPy7iGOVP7sihh+RqJtMsHkikextmeIBY2MSkoB0AOOMVrHEWVrGMsNd3ueA+HfFN
+l4R+KHiC+vYLmZJpLm3RLZQzbjMCOCRx8pqXxF8PNRl8O6t4unt5YLu4u2ulsAMtDAzMTu9xuBx2
+AOfbp/h34Yum8feIdeu7RPsP2i4igaVclpPOB3KD6bSM+p+teuVVStyS93yJp0eeD5vOx8xaQ3hn
+UNJtrLU9X8Qrcbgn2SFBLGWzxsGffpjOa3Nb0xNH+JvgzT4zMUgWzVfPAD489jhscZ5r3ZNL0+O4
+FwlharMDkSLCoYH64zT5bCznuUuJbSCSdMbZXjBZccjBxkVLxGt7FfV9LXPOPivN4OumsrLXr26i
+vYdzx/Y1DuinGQwPGDgY78V5lpj21l4z0mPwXf6nM0syCQTIEyd3IIU8rjOcjgZr6Pl0fTJ5Wll0
+60kkY5Z3gUkn3OKlttPsrMk2tpbwE9TFGFz+QpQrKMeUqdBylzf8OfOE9+tx4y1WLxPda+J2uWSK
+LTyC27cQFwxHGMYArf8Ag7EsHxK1iFVnVY7SZQs+PMAE0Y+bHG71969ye0tpJ1ne3iaZOVkZAWX6
+Gmw2FnbzvPBaQRTPndIkYVmycnJAyeabrpxcbCWHakpXLFFFFcx0hRRRQAUUUUAIAFGAAB7UtFFA
+BRRRQAUUUUAFFFFABRRRQB//2Q==
+
+------=_NextPart_000_002C_01D29E57.F80869D0--
+
+
+--===============8072832654263606235==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+Content-Disposition: inline
+
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KUmVwb3J0ZXMt
+ZmFwZXJzYSBtYWlsaW5nIGxpc3QKUmVwb3J0ZXMtZmFwZXJzYUBsaXN0YXMubHVuaXguY29tLmFy
+Cmh0dHA6Ly9saXN0YXMubHVuaXguY29tLmFyL2NnaS1iaW4vbWFpbG1hbi9saXN0aW5mby9yZXBv
+cnRlcy1mYXBlcnNhCg==
+
+--===============8072832654263606235==--
+

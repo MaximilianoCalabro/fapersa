@@ -1,0 +1,337 @@
+Return-Path: <01000159cd563701-233aee6c-9eca-47e9-b042-5028773e2672-000000@amazonses.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id uX3ZLK98hli4TQAATLP0zA
+	for <jpruata@fapersa.com>; Mon, 23 Jan 2017 18:59:11 -0300
+Return-path: <01000159cd563701-233aee6c-9eca-47e9-b042-5028773e2672-000000@amazonses.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Mon, 23 Jan 2017 18:59:11 -0300
+Received: from a11-109.smtp-out.amazonses.com ([54.240.11.109]:50648)
+	by tanis.nocplanet.com with esmtps (TLSv1:ECDHE-RSA-AES128-SHA:128)
+	(Exim 4.87)
+	(envelope-from <01000159cd563701-233aee6c-9eca-47e9-b042-5028773e2672-000000@amazonses.com>)
+	id 1cVmdd-0006Dj-Ki
+	for jpruata@fapersa.com; Mon, 23 Jan 2017 18:59:11 -0300
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=gfcerpxk33zmonrmq5cu6bgrjfzw2dv2; d=ses.avrilassistance.com;
+	t=1485208696;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Date;
+	bh=VGi0lec31FFk9gobFPqghNr5xxp39NJWlL2R5LxN+eI=;
+	b=SCgyTUjk+hPvRes5naOXle6jNAf5cUtfm7xIoakU4zX/NNb+Y00atWhYtb18BMAE
+	1e6BKWno+3oVlWPucAsXDaYPHGZSZ+3Iai0pYXBHCIdWlHLqINvKOyb5G48hbXpaJXY
+	aei6DCAM6C1WhXJQTvHUUuSHEFPcODjrWOgEjmR4=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1485208696;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Date:Feedback-ID;
+	bh=VGi0lec31FFk9gobFPqghNr5xxp39NJWlL2R5LxN+eI=;
+	b=SvtKCT2VbyhMalY/+4kRLWu3bQCp/+MKH4XErsiuw93hDWBhoJ6ZEk1VbLKnhZfA
+	whdGpCtO+jPv0oq7sAFMiotLBwN5r+71Ip0eFNfoP3kJOZFI9V5ryNFR6JKOF+JAsXx
+	DUWIdDdgR7PZY5MBeMZ1t6L/87Q7yGSv68V9+Q+k=
+From: =?UTF-8?Q?Avril Assistance?= <no-reply@ses.avrilassistance.com>
+Reply-To: no-reply2@ses.avrilassistance.com
+To: jpruata@fapersa.com
+Subject: =?UTF-8?Q?Viaj=C3=A1_seguro,_2x1_por_tiempo_limitado?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_9037751_1219514951.1485208696580"
+Message-ID: <01000159cd563701-233aee6c-9eca-47e9-b042-5028773e2672-000000@email.amazonses.com>
+Date: Mon, 23 Jan 2017 21:58:16 +0000
+X-SES-Outgoing: 2017.01.23-54.240.11.109
+Feedback-ID: 1.us-east-1.DWLlRKmBtI6c0h8XIqGCJwVwQj+b24fD7145ysboAFw=:AmazonSES
+X-Spam-Status: No, score=-6.3
+X-Spam-Score: -62
+X-Spam-Bar: ------
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Viajá seguro, tranquilo y protegido con Avril Assitance.
+   [AVRIL ASSISTANCE] [La evolución en productos de Asistencia al Viajero] Llamá
+    ya mismo al: 11.5279.4767 [...] 
+ 
+ Content analysis details:   (-6.3 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: amazonses.com]
+  0.0 BAD_ENC_HEADER         Message has bad MIME encoding in the header
+ -1.2 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+                             [54.240.11.109 listed in wl.mailspike.net]
+  0.0 T_SPF_TEMPERROR        SPF: test of record failed (temperror)
+  0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
+                             domains are different
+ -3.2 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or identical to
+                             background
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+X-Spam-Flag: NO
+
+------=_Part_9037751_1219514951.1485208696580
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Viaj=C3=A1 seguro, tranquilo y protegido con Avril Assitance.
+
+ =09=09[AVRIL ASSISTANCE]
+
+ =09=09[La evoluci=C3=B3n en productos de Asistencia al Viajero]=20
+Llam=C3=A1 ya mismo al:
+11.5279.4767=20
+
+ =09=09O dej=C3=A1 tus datos y te contactaremos
+
+ =09=09DEJAR DATOS
+[http://avril.quarcon.com/?utm_source=3Demailani&utm_medium=3Demail&utm_con=
+tent=3DAvril_Pieza201701_v3&utm_campaign=3DQUARCON-AVRIL&afiliado=3DAni]
+
+ =09=09Contrat=C3=A1 tu seguro de viaje antes del 31/01 y recib=C3=AD una s=
+egunda
+asistencia sin cargo.
+
+Avril Assistance.
+La evoluci=C3=B3n en productos de Asistencia al Viajero.
+
+ =09=09Promoci=C3=B3n 2 x 1 valida para CABA y GBA. Campa=C3=B1a valida par=
+a la
+emisi=C3=B3n de tarjetas que posean la misma Vigencia y el mismo Producto.
+Vigencia de la Promoci=C3=B3n desde el 23/01/2017 hasta el 28/02/2017.
+Vigencia de las tarjetas emitidas hasta el 31/12/2017. Servicios
+Prestados por AVRIL ASSISTANCE S.A. AVENIDA ALICIA MOREAU DE JUSTO
+1150 PISO 3 OFICINA A303. Mail: comercial@avril-assistance.com WEB: -
+www.avril-assistance.com
+------=_Part_9037751_1219514951.1485208696580
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<title></title>
+</head>
+<body>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/htm=
+l4/strict.dtd">
+<html><head>
+
+ =20
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width">
+
+ =20
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-885=
+9-1">
+
+ =20
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+ =20
+
+ =20
+ =20
+  <style type=3D"text/css">
+<!--
+a { text-decoration : none !important; outline : none; color : white !impor=
+tant; }
+-->
+  </style></head><body style=3D"margin: 0pt; width: 100% ! important; heigh=
+t: 100%; background-color: rgb(225, 225, 225); font-family: sans-serif ! im=
+portant;">
+<p style=3D"font-size: 0px;">Viaj&aacute; seguro, tranquilo y protegido con=
+ Avril Assitance.</p>
+<!-- [if (gte mso 9)|(IE)]><table width=3D"700" align=3D"center" cellpaddin=
+g=3D"0" cellspacing=3D"0" border=3D"0"><tr><td><![endif]-->
+<table style=3D"margin: 0pt; padding: 0pt; width: 100%; height: 100%; backg=
+round-color: #e1e1e1;" align=3D"center" cellpadding=3D"0" cellspacing=3D"0"=
+>
+<tbody>
+<tr>
+<td style=3D"margin: 0pt auto ! important; padding: 0pt; display: block ! i=
+mportant; max-width: 600px ! important; clear: both ! important; background=
+-color: white; font-family: sans-serif ! important;" align=3D"center" valig=
+n=3D"top">
+<div style=3D"text-align: center;"></div>
+<div style=3D"margin: 0pt auto; max-width: 600px;">
+<table style=3D"background-color: white; width: 100%;" border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td style=3D"vertical-align: top;">
+<table style=3D"text-align: left; width: 100%; background-color: #eeeeee;" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td style=3D"vertical-align: top;">
+<table style=3D"text-align: left; width: 100%; margin-left: auto; margin-ri=
+ght: auto;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td style=3D"vertical-align: top; background-color: #00acdc;">
+<table style=3D"text-align: left; width: 100%;" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td style=3D"vertical-align: top;"></td>
+<td style=3D"vertical-align: top; width: 200px; text-align: center;"><img s=
+tyle=3D"width: 200px; height: 68px; color: #fff; font-size: 15px;" alt=3D"A=
+VRIL ASSISTANCE" src=3D"http://l.avrilassistance.com/static/900/11142/Arte_=
+201701_Logo3-13.png" /></td>
+<td style=3D"vertical-align: top;"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"417" style=3D"vertical-align: top; text-align: center; backgr=
+ound-color: #00acdc;"><a href=3D"http://l.avrilassistance.com/e/c/MlRJLzE3R=
+nZYL2xLN2I%3D" style=3D"text-decoration: none; color: #fff;"><img style=3D"=
+border: 0px solid; width: 100%; height: 310px; font-size: 25px; font-weight=
+: 600;" alt=3D"La evoluci&oacute;n en productos de Asistencia al Viajero" s=
+rc=3D"http://l.avrilassistance.com/static/900/11142/Arte_201701_Portada-14.=
+png" /> <br /><span style=3D"font-size: 25px;">Llam&aacute; ya mismo al:</s=
+pan><br /> <span style=3D"font-size: 40px; font-weight: 600;">11.5279.4767<=
+/span> </a></td>
+</tr>
+<tr>
+<td style=3D"vertical-align: top;">
+<table style=3D"text-align: left; width: 100%; margin-left: auto; margin-ri=
+ght: auto; background-color: #fafafa;" border=3D"0" cellpadding=3D"10" cell=
+spacing=3D"0">
+<tbody>
+<tr>
+<td style=3D"vertical-align: middle;"><span style=3D"color: #666666;">O dej=
+&aacute; tus datos y te contactaremos</span></td>
+<td style=3D"vertical-align: middle; text-align: center; width: 50%;">
+<table style=3D"text-align: left; width: 100%; margin-left: auto; margin-ri=
+ght: auto; background-color: #ed7102; height: 40px;" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td style=3D"font-size: 25px; vertical-align: middle; text-align: center; h=
+eight: 44px; background-color: #00acdc; font-weight: 600;"><a href=3D"http:=
+//l.avrilassistance.com/e/c/MlRJLzE3RnZYL2xLN2M%3D" target=3D"_blank" rel=
+=3D"noopener noreferrer"><span style=3D"color: white;">DEJAR DATOS</span></=
+a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style=3D"vertical-align: top;">
+<table style=3D"text-align: left; width: 100%;" border=3D"0" cellpadding=3D=
+"15" cellspacing=3D"0">
+<tbody>
+<tr>
+<td style=3D"vertical-align: top;">
+<table style=3D"text-align: left; width: 100%; background-color: white;" bo=
+rder=3D"0" cellpadding=3D"15" cellspacing=3D"0">
+<tbody>
+<tr align=3D"center">
+<td style=3D"vertical-align: top;"><span style=3D"font-size: 18px; color: #=
+0861aa;"><span style=3D"color: #666666;">Contrat&aacute; tu seguro de viaje=
+ antes del 31/01 y recib&iacute; una segunda asistencia sin cargo.<br /> <b=
+r /> <span style=3D"color: #00acdc;">Avril Assistance</span>.<br /> La evol=
+uci&oacute;n en productos de Asistencia al Viajero.<br /> </span></span></t=
+d>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style=3D"vertical-align: top;">
+<table style=3D"text-align: left; width: 100%; background-color: #464645;" =
+border=3D"0" cellpadding=3D"20" cellspacing=3D"0">
+<tbody>
+<tr>
+<td style=3D"vertical-align: top; background-color: #808284;">
+<table style=3D"text-align: left; width: 100%;" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td style=3D"font-size: 10px; height: 10px; vertical-align: top; text-align=
+: justify;"><span style=3D"color: #999999;"><span style=3D"color: #c8cacc;"=
+>Promoci&oacute;n 2 x 1 valida para CABA y GBA. </span><span style=3D"color=
+: #c8cacc;">Campa&ntilde;a valida para la emisi&oacute;n de tarjetas que po=
+sean la misma Vigencia y el mismo Producto. </span><span style=3D"color: #c=
+8cacc;">Vigencia de la Promoci&oacute;n desde el 23/01/2017 hasta el 28/02/=
+2017. </span><span style=3D"color: #c8cacc;">Vigencia de las tarjetas emiti=
+das hasta el 31/12/2017. </span><span style=3D"color: #c8cacc;">Servicios P=
+restados por AVRIL ASSISTANCE S.A. AVENIDA ALICIA MOREAU DE JUSTO 1150 PISO=
+ 3 OFICINA A303. Mail: comercial@avril-assistance.com WEB: - www.avril-assi=
+stance.com</span><br /> </span></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- [if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+<p></p>
+</body></html>
+<div style=3D"text-align:center;" id=3D"webview_link">
+                           <font face=3D"Arial, Helvetica, sans-serif" size=
+=3D"1" color=3D"#999" style=3D"font-size:12px;">
+                               Para previsualizar este email en un navegado=
+r, hacer click <a href=3D"http://l.avrilassistance.com/e/w/MlRJLzE3RnZY">aq=
+u=C3=AD</a>
+                           </font>
+                       </div><div style=3D"text-align:center;padding-top:15=
+px">
+                         <font face=3D"Arial, Helvetica, sans-serif" color=
+=3D"#999" style=3D"font-size:12px;">
+                             Para no recibir m=C3=A1s comunicaciones de est=
+e tipo, usted puede <a href=3D"http://l.avrilassistance.com/e/u/MlRJLzE3RnZ=
+Y">DESUSCRIBIRSE</a>.
+                         </font></div>
+                        <div style=3D"text-align:center;padding-top:15px">
+                         <font face=3D"Arial, Helvetica, sans-serif"color=
+=3D"#999" style=3D"font-size:10px;">
+                             Correo enviado a: jpruata@fapersa.com  |  <a h=
+ref=3D"http://l.avrilassistance.com/e/a/MlRJLzE3RnZY">Reportar abuso en el =
+env=C3=ADo</a>
+                         </font></div>
+<img src=3D"http://l.avrilassistance.com/e/o/MlRJLzE3RnZY" style=3D"display=
+:none; visibility:hidden" width=3D"1" height=3D"1" alt=3D"" title=3D"" />
+</body>
+</html>
+
+------=_Part_9037751_1219514951.1485208696580--

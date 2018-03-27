@@ -1,0 +1,67 @@
+Return-Path: <>
+Delivered-To: no-reply@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id 2br4D4Xr41g+RAAATLP0zA
+	for <no-reply@fapersa.com>; Tue, 04 Apr 2017 15:52:53 -0300
+Return-path: <>
+Envelope-to: no-reply@fapersa.com
+Delivery-date: Tue, 04 Apr 2017 15:52:53 -0300
+Received: from mailnull by tanis.nocplanet.com with local (Exim 4.88)
+	id 1cvTZU-0006Kl-Ty
+	for no-reply@fapersa.com; Tue, 04 Apr 2017 15:52:53 -0300
+X-Failed-Recipients: rect-sendrosh@concordia.com.ar
+Auto-Submitted: auto-replied
+From: Mail Delivery System <Mailer-Daemon@tanis.nocplanet.com>
+To: no-reply@fapersa.com
+Content-Type: multipart/report; report-type=delivery-status; boundary=1491331972-eximdsn-2124790542
+MIME-Version: 1.0
+Subject: Mail delivery failed: returning message to sender
+Message-Id: <E1cvTZU-0006Kl-Ty@tanis.nocplanet.com>
+Date: Tue, 04 Apr 2017 15:52:52 -0300
+
+--1491331972-eximdsn-2124790542
+Content-type: text/plain; charset=us-ascii
+
+This message was created automatically by mail delivery software.
+
+A message that you sent could not be delivered to one or more of its
+recipients. This is a permanent error. The following address(es) failed:
+
+  rect-sendrosh@concordia.com.ar
+    host ls1.concordia.com.ar [200.43.13.98]
+    SMTP error from remote mail server after end of data:
+    550-RFC compliant date required.Es requerida la RFC date dentro del cuerpo del
+    550 mensaje.READ/LEA http://mail.concordia.com.ar/dnsbl/deslistar.html.
+
+--1491331972-eximdsn-2124790542
+Content-type: message/delivery-status
+
+Reporting-MTA: dns; tanis.nocplanet.com
+
+Action: failed
+Final-Recipient: rfc822;rect-sendrosh@concordia.com.ar
+Status: 5.0.0
+Remote-MTA: dns; ls1.concordia.com.ar
+Diagnostic-Code: smtp; 550-RFC compliant date required.Es requerida la RFC date dentro del cuerpo del
+ 550 mensaje.READ/LEA http://mail.concordia.com.ar/dnsbl/deslistar.html.
+
+--1491331972-eximdsn-2124790542
+Content-type: text/rfc822-headers
+
+Return-path: <no-reply@fapersa.com>
+Received: from mx1.fapersa.com ([181.14.247.181]:57483 helo=equis.fapersa.int)
+	by tanis.nocplanet.com with esmtpa (Exim 4.88)
+	(envelope-from <no-reply@fapersa.com>)
+	id 1cvTYs-0006Fz-PG; Tue, 04 Apr 2017 15:52:17 -0300
+From: =?Cp1252?Q?Daniel_Ram=EDrez?= <no-reply@fapersa.com>
+To: Corporativo <rect-sendrosh@concordia.com.ar>, 
+	=?Cp1252?Q?Administraci=F3n?= <rect-sendrosh@concordia.com.ar>
+Message-ID: <1457971767.35.1491331752425.JavaMail.cmg@equis>
+Subject: Fapersa ICSA - Envio de comprobantes electronicos
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_34_195183063.1491331751605"
+X-Exim-DSN-Information: Due to administrative limits only headers are returned
+
+
+--1491331972-eximdsn-2124790542--

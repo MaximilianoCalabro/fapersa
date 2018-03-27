@@ -1,0 +1,1318 @@
+Return-Path: <nlencina@clubdecampoelpaso.com.ar>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id eXw6HBJsNFh6SQAATLP0zA
+	for <jpruata@fapersa.com>; Tue, 22 Nov 2016 13:02:26 -0300
+Return-path: <nlencina@clubdecampoelpaso.com.ar>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Tue, 22 Nov 2016 13:02:26 -0300
+Received: from mail-qk0-f181.google.com ([209.85.220.181]:36686)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128)
+	(Exim 4.87)
+	(envelope-from <nlencina@clubdecampoelpaso.com.ar>)
+	id 1c9DWR-0005qz-BU
+	for jpruata@fapersa.com; Tue, 22 Nov 2016 13:02:26 -0300
+Received: by mail-qk0-f181.google.com with SMTP id n21so30672550qka.3
+        for <jpruata@fapersa.com>; Tue, 22 Nov 2016 08:01:55 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=clubdecampoelpaso-com-ar.20150623.gappssmtp.com; s=20150623;
+        h=from:to:subject:date:message-id:mime-version:thread-index
+         :content-language;
+        bh=0L2xoYmKDZVvZlmTz/Vte9yNAvJCKSwcIMeqL+T4qEA=;
+        b=pQZe9iDEJOwXU8ovyRimISvNlpMHCLPMIx2zMHfE1uNKE0f8jACImXcnxDJ60f3wyb
+         e77pjNO2jFNNw/eLNUsFkSl64KjxU8bRX6T/Q1V6b1lhGBGx33oN2QJJRVFsjJmDYnvZ
+         LI4GJqlcJjpZhVsIRD9BzEDWU4ekZ7oV6NuaYyPCF8M2gHFrZHU3d6dnwrGw5Cb1x1nQ
+         qiKfhApZMcwrRYNDSEnIG9Lp10rYsHABu/XwcIuUo5oVrMjL9lnlRVPJ1MZbz0WgBC8x
+         BTIvK5p4sB8nimv7dhVY9i7tU+vi+pqyKrJ12sTuEEbHkbvwe0Jd7/i0aS3GZ9weh+fX
+         vbRg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:to:subject:date:message-id:mime-version
+         :thread-index:content-language;
+        bh=0L2xoYmKDZVvZlmTz/Vte9yNAvJCKSwcIMeqL+T4qEA=;
+        b=X2WVQ4ZVRKRuGPBpFPK2QFzLjY8AkR4d8bnXM9zwajKZBRG2W36A5c5vOhNo5w6TIw
+         u/eK2JNeaBJcA4aygPRUIoyjON4ZLRMfHBBxTug/UtivAAhh8CjzlWgoSWXKU+jXeR2L
+         S5g6f9rsjmhpcV8Sc263f2RHWkbz1iY893kZmKvl44KIRmyn8aUT2hiOr8Jx/TSTKCsg
+         iBlytjPUKf9zmaZ6/rdxZILqDRJPMX5JMzSgdxLZrpk4Z9D0wbVV1FTWhHIu99irWvnN
+         utyu87DQuRfJChWDKouR00ifR/3VIfUC/NDlpHkAoy3X4MOAcxLSu40kIBjFkBA23QQV
+         tW7g==
+X-Gm-Message-State: AKaTC03SpWTYKBlZ8BgX3HWCgnMfmaH3vF8QQMgdpBUuitbuUtLjkCNPRQNhQA+5IONgTQ==
+X-Received: by 10.55.207.134 with SMTP id v6mr25301941qkl.105.1479830494339;
+        Tue, 22 Nov 2016 08:01:34 -0800 (PST)
+Received: from NORMAPC (host6.181-15-184.telecom.net.ar. [181.15.184.6])
+        by smtp.gmail.com with ESMTPSA id j64sm14058776qkc.24.2016.11.22.08.01.33
+        for <jpruata@fapersa.com>
+        (version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Tue, 22 Nov 2016 08:01:33 -0800 (PST)
+From: "Norma Lencina" <nlencina@clubdecampoelpaso.com.ar>
+To: <jpruata@fapersa.com>
+Subject: Cargos Pendientes
+Date: Tue, 22 Nov 2016 13:01:03 -0300
+Message-ID: <013c01d244d9$a12f0150$e38d03f0$@com.ar>
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+	boundary="----=_NextPart_000_013D_01D244C0.7BE1C950"
+X-Mailer: Microsoft Office Outlook 12.0
+Thread-Index: AdJE2aA/ky5KOezhR+Wq0N5KVEY/OQ==
+Content-Language: es-ar
+X-Spam-Status: No, score=-1.9
+X-Spam-Score: -18
+X-Spam-Bar: -
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Sr. Consorcista: adjuntamos detalle de cargos pendientes.
+   Atte. Administracion Complejo Resid. El Paso Sr. Consorcista: adjuntamos detalle
+    de cargos pendientes. Atte. Administracion Complejo Resid. El Paso [...] 
+ 
+ Content analysis details:   (-1.9 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+                             [209.85.220.181 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+X-Spam-Flag: NO
+
+Este es un mensaje con varias partes en formato MIME.
+
+------=_NextPart_000_013D_01D244C0.7BE1C950
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_001_013E_01D244C0.7BE1C950"
+
+
+------=_NextPart_001_013E_01D244C0.7BE1C950
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+Sr. Consorcista: adjuntamos detalle de cargos pendientes. 
+Atte. 
+Administracion Complejo Resid. El Paso 
+
+
+------=_NextPart_001_013E_01D244C0.7BE1C950
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii">
+<META NAME=3D"Generator" CONTENT=3D"MS Exchange Server version =
+08.00.0681.000">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+<!-- Converted from text/rtf format -->
+
+<P><FONT FACE=3D"Calibri">Sr. Consorcista: adjuntamos detalle de cargos =
+pendientes.</FONT>
+
+<BR><FONT FACE=3D"Calibri">Atte.</FONT>
+
+<BR><FONT FACE=3D"Calibri">Administracion Complejo Resid. El Paso</FONT>
+</P>
+
+</BODY>
+</HTML>
+------=_NextPart_001_013E_01D244C0.7BE1C950--
+
+------=_NextPart_000_013D_01D244C0.7BE1C950
+Content-Type: application/pdf;
+	name="CargosPendientes.pdf"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: attachment;
+	filename="CargosPendientes.pdf"
+
+%PDF-1.3
+%=C5=ADo=81
+1 0 obj
+<<
+/Type /Catalog
+/Pages 3 0 R
+/Outlines 2 0 R
+/ViewerPreferences << /HideToolbar false /FitWindow true >>
+>>
+endobj
+2 0 obj
+<<
+/Type /Outlines
+/Count 0
+>>
+endobj
+3 0 obj
+<<
+/Type /Pages
+/Count 1
+/Kids [4 0 R]
+/MediaBox [0 0 595 841]
+/Resources <<=20
+/Font <<=20
+  /F00 6 0 R=20
+  /F01 8 0 R=20
+  /F02 10 0 R=20
+  /F03 12 0 R=20
+  >>
+/ProcSet 15 0 R
+>>
+>>
+endobj
+4 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Contents 5 0 R
+/MediaBox [0 0 595 841]
+>>
+endobj
+5 0 obj
+<< /Length 17900 >>
+stream
+1.00 w
+1.00 1.00 1.00 rg
+28 727 538 77 re f
+1.00 w
+1.00 1.00 1.00 rg
+411 775 154 28 re f
+1.00 w
+0.00 0.00 0.00 RG
+411 775 154 28 re s
+1.00 w
+1.00 1.00 1.00 rg
+28 729 537 17 re f
+1.00 w
+0.00 0.00 0.00 RG
+28 729 537 17 re s
+1.00 w
+1.00 1.00 1.00 rg
+28 727 538 0 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 710 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 693 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 676 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 658 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 641 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 624 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 607 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 589 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 572 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 555 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 537 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 526 538 11 re f
+1.00 w
+0.85 0.85 0.85 rg
+470 529 95 7 re f
+1.00 w
+0.85 0.85 0.85 rg
+348 529 114 7 re f
+ 1 w
+0.50 0.50 0.50 RG
+29 527 m 566 527 l s
+ 1 w
+0.50 0.50 0.50 RG
+29 527 m 566 527 l s
+1.00 w
+1.00 1.00 1.00 rg
+28 526 538 0 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 508 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 491 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 474 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 457 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 439 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 422 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 405 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 388 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 370 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 353 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 336 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 319 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 301 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 284 538 17 re f
+1.00 w
+1.00 1.00 1.00 rg
+28 273 538 11 re f
+1.00 w
+0.85 0.85 0.85 rg
+470 276 95 7 re f
+1.00 w
+0.85 0.85 0.85 rg
+348 276 114 7 re f
+ 1 w
+0.50 0.50 0.50 RG
+29 275 m 566 275 l s
+ 1 w
+0.50 0.50 0.50 RG
+29 275 m 566 275 l s
+1.00 w
+1.00 1.00 1.00 rg
+28 256 538 16 re f
+1.00 w
+0.75 0.75 0.75 rg
+164 258 124 12 re f
+1.00 w
+0.00 0.00 0.00 RG
+164 258 124 12 re s
+1.00 w
+0.75 0.75 0.75 rg
+294 258 124 12 re f
+1.00 w
+0.00 0.00 0.00 RG
+294 258 124 12 re s
+1.00 w
+0.75 0.75 0.75 rg
+440 258 124 12 re f
+1.00 w
+0.00 0.00 0.00 RG
+440 258 124 12 re s
+BT
+0.00 0.00 0.00 rg
+/F00 14 Tf
+ 1 0 0 1 35 769 Tm (Resumen de Cargos Pendientes) Tj
+0.00 0.00 0.00 rg
+/F01 8 Tf
+ 1 0 0 1 470 782 Tm (22/11/2016 01:01:03 p.m.) Tj
+0.00 0.00 0.00 rg
+/F01 8 Tf
+ 1 0 0 1 415 782 Tm (Fecha y Hora:) Tj
+0.00 0.00 0.00 rg
+/F01 10 Tf
+ 1 0 0 1 35 790 Tm (	El Paso	Consorcio                      ) Tj
+0.00 0.00 0.00 rg
+/F01 10 Tf
+ 1 0 0 1 32 734 Tm (Socio) Tj
+0.00 0.00 0.00 rg
+/F01 10 Tf
+ 1 0 0 1 65 734 Tm (Nombre) Tj
+0.00 0.00 0.00 rg
+/F01 10 Tf
+ 1 0 0 1 193 734 Tm (Concepto) Tj
+0.00 0.00 0.00 rg
+/F01 10 Tf
+ 1 0 0 1 368 734 Tm (Per=EDodo) Tj
+0.00 0.00 0.00 rg
+/F01 10 Tf
+ 1 0 0 1 534 734 Tm (Deuda) Tj
+0.00 0.00 0.00 rg
+/F01 10 Tf
+ 1 0 0 1 425 734 Tm (Manzana) Tj
+0.00 0.00 0.00 rg
+/F01 8 Tf
+ 1 0 0 1 512 794 Tm (Hoja:) Tj
+0.00 0.00 0.00 rg
+/F01 8 Tf
+ 1 0 0 1 560 794 Tm (1) Tj
+0.00 0.00 0.00 rg
+/F01 10 Tf
+ 1 0 0 1 35 752 Tm (\(06834-00\) RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 8 Tf
+ 1 0 0 1 415 794 Tm (Usuario:) Tj
+0.00 0.00 0.00 rg
+/F01 10 Tf
+ 1 0 0 1 448 792 Tm (4) Tj
+0.00 0.00 0.00 rg
+/F01 10 Tf
+ 1 0 0 1 470 734 Tm (Lote) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 718 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 718 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 718 Tm (\(CLTE\) SERVICIO CLOACAS TERREN) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 718 Tm (10-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 546 718 Tm (70.42) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 718 Tm (1) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 718 Tm (328 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 713 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 701 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 701 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 701 Tm (\(CLTE\) SERVICIO CLOACAS TERREN) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 701 Tm (10-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 546 701 Tm (70.42) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 701 Tm (1) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 701 Tm (329 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 695 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 684 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 684 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 684 Tm (\(CLED\) SERVICIO CLOACAS EDIFIC) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 684 Tm (10-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 542 684 Tm (142.27) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 684 Tm (1) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 684 Tm (329 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 678 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 666 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 666 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 666 Tm (\(AP07\) AGUA POT.BIM.4-S.B. M=CDN) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 666 Tm (10-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 542 666 Tm (135.36) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 666 Tm (1) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 666 Tm (328 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 661 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 649 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 649 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 649 Tm (\(EX  \) EXPENSA PURA) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 649 Tm (10-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 536 649 Tm (3,503.56) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 649 Tm (1) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 649 Tm (328 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 644 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 632 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 632 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 632 Tm (\(EX  \) EXPENSA PURA) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 632 Tm (10-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 536 632 Tm (3,503.56) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 632 Tm (1) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 632 Tm (329 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 626 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 615 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 615 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 615 Tm (\(FO\) FONDO ESPECIAL OPERATIVO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 615 Tm (10-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 542 615 Tm (414.78) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 615 Tm () Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 615 Tm (328 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 609 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 597 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 597 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 597 Tm (\(FO\) FONDO ESPECIAL OPERATIVO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 597 Tm (10-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 542 597 Tm (414.78) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 597 Tm () Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 597 Tm (329 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 592 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 580 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 580 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 580 Tm (\(TA\) TASA INMUEBLES MUNIC.CTA.) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 580 Tm (10-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 542 580 Tm (565.18) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 580 Tm () Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 580 Tm (328 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 575 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 563 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 563 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 563 Tm (\(TA\) TASA INMUEBLES MUNIC.CTA.) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 563 Tm (10-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 542 563 Tm (565.18) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 563 Tm () Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 563 Tm (329 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 557 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 545 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 545 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 545 Tm (\(PU  \) RECARGOS) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 545 Tm (10-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 542 545 Tm (281.57) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 545 Tm () Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 545 Tm (    ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 539 Tm (\(% 3.0000\),hasta 10-2016-M) Tj
+0.00 0.00 0.00 rg
+/F03 7 Tf
+ 1 0 0 1 434 530 Tm (9,667.08) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 348 531 Tm (Total del Per=EDodo) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 470 530 Tm (Acumulado) Tj
+0.00 0.00 0.00 rg
+/F03 7 Tf
+ 1 0 0 1 536 530 Tm (9,667.08) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 516 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 516 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 516 Tm (\(CLED\) SERVICIO CLOACAS EDIFIC) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 516 Tm (11-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 542 516 Tm (142.27) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 516 Tm (1) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 516 Tm (329 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 511 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 499 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 499 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 499 Tm (\(CLTE\) SERVICIO CLOACAS TERREN) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 499 Tm (11-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 546 499 Tm (70.42) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 499 Tm (1) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 499 Tm (328 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 494 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 482 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 482 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 482 Tm (\(CLTE\) SERVICIO CLOACAS TERREN) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 482 Tm (11-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 546 482 Tm (70.42) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 482 Tm (1) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 482 Tm (329 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 476 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 465 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 465 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 465 Tm (\(EX  \) EXPENSA PURA) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 465 Tm (11-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 536 465 Tm (3,494.19) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 465 Tm (1) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 465 Tm (328 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 459 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 447 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 447 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 447 Tm (\(EX  \) EXPENSA PURA) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 447 Tm (11-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 536 447 Tm (3,494.19) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 447 Tm (1) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 447 Tm (329 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 442 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 430 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 430 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 430 Tm (\(FO\) FONDO ESPECIAL OPERATIVO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 430 Tm (11-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 542 430 Tm (414.78) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 430 Tm () Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 430 Tm (328 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 425 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 413 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 413 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 413 Tm (\(FO\) FONDO ESPECIAL OPERATIVO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 413 Tm (11-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 542 413 Tm (414.78) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 413 Tm () Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 413 Tm (329 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 407 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 396 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 396 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 396 Tm (\(TA\) TASA INMUEBLES MUNIC.CTA.) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 396 Tm (11-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 542 396 Tm (565.18) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 396 Tm () Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 396 Tm (329 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 390 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 378 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 378 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 378 Tm (\(TA\) TASA INMUEBLES MUNIC.CTA.) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 378 Tm (11-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 542 378 Tm (565.18) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 378 Tm () Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 378 Tm (328 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 373 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 361 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 361 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 361 Tm (\(LU\) LUZ DOM.CONS.AGO./SEP.`16) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 361 Tm (11-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 536 361 Tm (3,742.93) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 361 Tm (1) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 361 Tm (328 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 356 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 344 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 344 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 344 Tm (\(IM\) IMP.INM.ED-CUOTA:6/6-A=D1O ) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 344 Tm (11-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 536 344 Tm (4,404.59) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 344 Tm (1) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 344 Tm (329 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 338 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 327 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 327 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 327 Tm (\(IT\) IMP.INM.TE-CUOTA:6/6-A=D1O ) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 327 Tm (11-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 546 327 Tm (63.76) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 327 Tm () Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 327 Tm (328 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 321 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 309 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 309 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 309 Tm (\(IT\) IMP.INM.TE-CUOTA:6/6-A=D1O ) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 309 Tm (11-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 546 309 Tm (63.76) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 309 Tm () Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 309 Tm (329 ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 304 Tm (Fact. Autom=E1tica) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 32 292 Tm (06834-00) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 65 292 Tm (RUATA JUAN PABLO) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 192 292 Tm (\(PU  \) RECARGOS) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 371 292 Tm (11-2016) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 542 292 Tm (525.19) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 437 292 Tm () Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 477 292 Tm (    ) Tj
+0.00 0.00 0.00 rg
+/F02 5 Tf
+ 1 0 0 1 193 287 Tm (\(% 3.0000\),hasta 11-2016-M) Tj
+0.00 0.00 0.00 rg
+/F03 7 Tf
+ 1 0 0 1 431 277 Tm (18,031.64) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 348 278 Tm (Total del Per=EDodo) Tj
+0.00 0.00 0.00 rg
+/F01 7 Tf
+ 1 0 0 1 470 277 Tm (Acumulado) Tj
+0.00 0.00 0.00 rg
+/F03 7 Tf
+ 1 0 0 1 533 277 Tm (27,698.72) Tj
+0.00 0.00 0.00 rg
+/F03 10 Tf
+ 1 0 0 1 443 260 Tm (Total) Tj
+0.00 0.00 0.00 rg
+/F01 10 Tf
+ 1 0 0 1 520 260 Tm (27,698.72) Tj
+0.25 0.25 0.25 rg
+/F03 10 Tf
+ 1 0 0 1 295 260 Tm (Punitorios) Tj
+0.25 0.25 0.25 rg
+/F03 10 Tf
+ 1 0 0 1 167 260 Tm (Capital) Tj
+0.00 0.00 0.00 rg
+/F01 10 Tf
+ 1 0 0 1 386 260 Tm (806.76) Tj
+0.00 0.00 0.00 rg
+/F01 10 Tf
+ 1 0 0 1 244 260 Tm (26,891.96) Tj
+ET
+endstream
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/Name /F00
+/BaseFont /Arial,BoldItalic
+/FirstChar 0
+/LastChar 255
+/Widths [=20
+768 768 768 768 768 768 768 768 768 768 768 768 768 768 768 768 768 768 =
+768 768 768 768 768 768 768 768 768 768 768 768 768 768 285 341 486 570 =
+570 911 740 244 341 341 399 598 285 341 285 285 570 570 570 570 570 570 =
+570 570 570 570 341 341 598 598 598 626 999 740 740 740 740 683 626 797 =
+740 285 570 740 626 853 740 797 683 797 740 683 626 740 683 967 683 683 =
+626 341 285 341 598 570 341 570 626 570 626 570 341 626 626 285 285 570 =
+285 911 626 626 626 626 399 570 341 626 570 797 570 570 512 399 287 399 =
+598 768 570 768 285 570 512 1024 570 570 341 1024 683 341 1024 768 626 =
+768 768 285 285 512 512 359 570 1024 341 1024 570 341 967 768 512 683 =
+285 341 570 570 570 570 287 570 341 755 379 570 598 341 755 566 410 562 =
+341 341 341 590 570 341 341 341 374 570 854 854 854 626 740 740 740 740 =
+740 740 1024 740 683 683 683 683 285 285 285 285 740 740 797 797 797 797 =
+797 598 797 740 740 740 740 683 683 626 570 570 570 570 570 570 911 570 =
+570 570 570 570 285 285 285 285 626 626 626 626 626 626 626 562 626 626 =
+626 626 626 570 626 570  ]
+/Encoding  <</Type/Encoding /Differences [ 2 =
+/space/space/space/space/space/space/space/space/space/space/space/space/=
+space/space/space/space/space/space/space/space/space/space/space/space/s=
+pace/space/space/space/space/space/space/exclam/quotedbl/numbersign/dolla=
+r/percent/ampersand/quotesingle/parenleft/parenright/asterisk/plus/comma/=
+hyphen/period/slash/zero/one/two/three/four/five/six/seven/eight/nine/col=
+on/semicolon/less/equal/greater/question/at/A/B/C/D/E/F/G/H/I/J/K/L/M/N/O=
+/P/Q/R/S/T/U/V/W/X/Y/Z/bracketleft/backslash/bracketright/asciicircum/und=
+erscore/grave/a/b/c/d/e/f/g/h/i/j/k/l/m/n/o/p/q/r/s/t/u/v/w/x/y/z/bracele=
+ft/bar/braceright/asciitilde/space/Euro/space/quotesinglbase/florin/quote=
+dblbase/ellipsis/dagger/daggerdbl/circumflex/perthousand/Scaron/guilsingl=
+left/OE/space/Zcaron/space/space/quoteleft/quoteright/quotedblleft/quoted=
+blright/bullet/endash/emdash/tilde/trademark/scaron/guilsinglright/oe/spa=
+ce/zcaron/Ydieresis/space/exclamdown/cent/sterling/currency/yen/brokenbar=
+/section/dieresis/copyright/ordfeminine/guillemotleft/logicalnot/hyphen/r=
+egistered/macron/degree/plusminus/twosuperior/threesuperior/acute/mu/para=
+graph/periodcentered/cedilla/onesuperior/ordmasculine/guillemotright/oneq=
+uarter/onehalf/threequarters/questiondown/Agrave/Aacute/Acircumflex/Atild=
+e/Adieresis/Aring/AE/Ccedilla/Egrave/Eacute/Ecircumflex/Edieresis/Igrave/=
+Iacute/Icircumflex/Idieresis/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/=
+Odieresis/multiply/Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute/Thor=
+n/germandbls/agrave/aacute/acircumflex/atilde/adieresis/aring/ae/ccedilla=
+/egrave/eacute/ecircumflex/edieresis/igrave/iacute/icircumflex/idieresis/=
+eth/ntilde/ograve/oacute/ocircumflex/otilde/odieresis/divide/oslash/ugrav=
+e/uacute/ucircumflex/udieresis/yacute/thorn/ydieresis]>>
+/FontDescriptor 7 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 746
+/Descent -216
+/Flags 32
+/FontBBox [ -1146 -771 2847 2084 ]
+/FontName /F00
+/ItalicAngle -120
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/Name /F01
+/BaseFont /Arial
+/FirstChar 0
+/LastChar 255
+/Widths [=20
+768 768 768 768 768 768 768 768 768 768 768 768 768 768 768 768 768 768 =
+768 768 768 768 768 768 768 768 768 768 768 768 768 768 285 285 364 570 =
+570 911 683 196 341 341 399 598 285 341 285 285 570 570 570 570 570 570 =
+570 570 570 570 285 285 598 598 598 570 1040 683 683 740 740 683 626 797 =
+740 285 512 683 570 853 740 797 683 797 740 683 626 740 683 967 683 683 =
+626 285 285 285 481 570 341 570 570 512 570 570 285 570 570 228 228 512 =
+228 853 570 570 570 570 341 512 285 570 512 740 512 512 512 342 266 342 =
+598 768 570 768 228 570 341 1024 570 570 341 1024 683 341 1024 768 626 =
+768 768 228 228 341 341 359 570 1024 341 1024 512 341 967 768 512 683 =
+285 341 570 570 570 570 266 570 341 755 379 570 598 341 755 566 410 562 =
+341 341 341 590 550 341 341 341 374 570 854 854 854 626 683 683 683 683 =
+683 683 1024 740 683 683 683 683 285 285 285 285 740 740 797 797 797 797 =
+797 598 797 740 740 740 740 683 683 626 570 570 570 570 570 570 911 512 =
+570 570 570 570 285 285 285 285 570 570 570 570 570 570 570 562 626 570 =
+570 570 570 512 570 512  ]
+/Encoding  <</Type/Encoding /Differences [ 2 =
+/space/space/space/space/space/space/space/space/space/space/space/space/=
+space/space/space/space/space/space/space/space/space/space/space/space/s=
+pace/space/space/space/space/space/space/exclam/quotedbl/numbersign/dolla=
+r/percent/ampersand/quotesingle/parenleft/parenright/asterisk/plus/comma/=
+hyphen/period/slash/zero/one/two/three/four/five/six/seven/eight/nine/col=
+on/semicolon/less/equal/greater/question/at/A/B/C/D/E/F/G/H/I/J/K/L/M/N/O=
+/P/Q/R/S/T/U/V/W/X/Y/Z/bracketleft/backslash/bracketright/asciicircum/und=
+erscore/grave/a/b/c/d/e/f/g/h/i/j/k/l/m/n/o/p/q/r/s/t/u/v/w/x/y/z/bracele=
+ft/bar/braceright/asciitilde/space/Euro/space/quotesinglbase/florin/quote=
+dblbase/ellipsis/dagger/daggerdbl/circumflex/perthousand/Scaron/guilsingl=
+left/OE/space/Zcaron/space/space/quoteleft/quoteright/quotedblleft/quoted=
+blright/bullet/endash/emdash/tilde/trademark/scaron/guilsinglright/oe/spa=
+ce/zcaron/Ydieresis/space/exclamdown/cent/sterling/currency/yen/brokenbar=
+/section/dieresis/copyright/ordfeminine/guillemotleft/logicalnot/hyphen/r=
+egistered/macron/degree/plusminus/twosuperior/threesuperior/acute/mu/para=
+graph/periodcentered/cedilla/onesuperior/ordmasculine/guillemotright/oneq=
+uarter/onehalf/threequarters/questiondown/Agrave/Aacute/Acircumflex/Atild=
+e/Adieresis/Aring/AE/Ccedilla/Egrave/Eacute/Ecircumflex/Edieresis/Igrave/=
+Iacute/Icircumflex/Idieresis/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/=
+Odieresis/multiply/Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute/Thor=
+n/germandbls/agrave/aacute/acircumflex/atilde/adieresis/aring/ae/ccedilla=
+/egrave/eacute/ecircumflex/edieresis/igrave/iacute/icircumflex/idieresis/=
+eth/ntilde/ograve/oacute/ocircumflex/otilde/odieresis/divide/oslash/ugrav=
+e/uacute/ucircumflex/udieresis/yacute/thorn/ydieresis]>>
+/FontDescriptor 9 0 R
+>>
+endobj
+9 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 746
+/Descent -216
+/Flags 32
+/FontBBox [ -1361 -665 4096 2060 ]
+/FontName /F01
+/ItalicAngle 0
+>>
+endobj
+10 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/Name /F02
+/BaseFont /Arial,Italic
+/FirstChar 0
+/LastChar 255
+/Widths [=20
+768 768 768 768 768 768 768 768 768 768 768 768 768 768 768 768 768 768 =
+768 768 768 768 768 768 768 768 768 768 768 768 768 768 285 285 364 570 =
+570 911 683 196 341 341 399 598 285 341 285 285 570 570 570 570 570 570 =
+570 570 570 570 285 285 598 598 598 570 1040 683 683 740 740 683 626 797 =
+740 285 512 683 570 853 740 797 683 797 740 683 626 740 683 967 683 683 =
+626 285 285 285 481 570 341 570 570 512 570 570 285 570 570 228 228 512 =
+228 853 570 570 570 570 341 512 285 570 512 740 512 512 512 342 266 342 =
+598 768 570 768 228 570 341 1024 570 570 341 1024 683 341 1024 768 626 =
+768 768 228 228 341 341 359 570 1024 341 1024 512 341 967 768 512 683 =
+285 341 570 570 570 570 266 570 341 755 379 570 598 341 755 566 410 562 =
+341 341 341 590 550 341 341 341 374 570 854 854 854 626 683 683 683 683 =
+683 683 1024 740 683 683 683 683 285 285 285 285 740 740 797 797 797 797 =
+797 598 797 740 740 740 740 683 683 626 570 570 570 570 570 570 911 512 =
+570 570 570 570 285 285 285 285 570 570 570 570 570 570 570 562 626 570 =
+570 570 570 512 570 512  ]
+/Encoding  <</Type/Encoding /Differences [ 2 =
+/space/space/space/space/space/space/space/space/space/space/space/space/=
+space/space/space/space/space/space/space/space/space/space/space/space/s=
+pace/space/space/space/space/space/space/exclam/quotedbl/numbersign/dolla=
+r/percent/ampersand/quotesingle/parenleft/parenright/asterisk/plus/comma/=
+hyphen/period/slash/zero/one/two/three/four/five/six/seven/eight/nine/col=
+on/semicolon/less/equal/greater/question/at/A/B/C/D/E/F/G/H/I/J/K/L/M/N/O=
+/P/Q/R/S/T/U/V/W/X/Y/Z/bracketleft/backslash/bracketright/asciicircum/und=
+erscore/grave/a/b/c/d/e/f/g/h/i/j/k/l/m/n/o/p/q/r/s/t/u/v/w/x/y/z/bracele=
+ft/bar/braceright/asciitilde/space/Euro/space/quotesinglbase/florin/quote=
+dblbase/ellipsis/dagger/daggerdbl/circumflex/perthousand/Scaron/guilsingl=
+left/OE/space/Zcaron/space/space/quoteleft/quoteright/quotedblleft/quoted=
+blright/bullet/endash/emdash/tilde/trademark/scaron/guilsinglright/oe/spa=
+ce/zcaron/Ydieresis/space/exclamdown/cent/sterling/currency/yen/brokenbar=
+/section/dieresis/copyright/ordfeminine/guillemotleft/logicalnot/hyphen/r=
+egistered/macron/degree/plusminus/twosuperior/threesuperior/acute/mu/para=
+graph/periodcentered/cedilla/onesuperior/ordmasculine/guillemotright/oneq=
+uarter/onehalf/threequarters/questiondown/Agrave/Aacute/Acircumflex/Atild=
+e/Adieresis/Aring/AE/Ccedilla/Egrave/Eacute/Ecircumflex/Edieresis/Igrave/=
+Iacute/Icircumflex/Idieresis/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/=
+Odieresis/multiply/Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute/Thor=
+n/germandbls/agrave/aacute/acircumflex/atilde/adieresis/aring/ae/ccedilla=
+/egrave/eacute/ecircumflex/edieresis/igrave/iacute/icircumflex/idieresis/=
+eth/ntilde/ograve/oacute/ocircumflex/otilde/odieresis/divide/oslash/ugrav=
+e/uacute/ucircumflex/udieresis/yacute/thorn/ydieresis]>>
+/FontDescriptor 11 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 746
+/Descent -213
+/Flags 32
+/FontBBox [ -1059 -665 2783 2043 ]
+/FontName /F02
+/ItalicAngle -120
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/Name /F03
+/BaseFont /Arial,Bold
+/FirstChar 0
+/LastChar 255
+/Widths [=20
+768 768 768 768 768 768 768 768 768 768 768 768 768 768 768 768 768 768 =
+768 768 768 768 768 768 768 768 768 768 768 768 768 768 285 341 486 570 =
+570 911 740 244 341 341 399 598 285 341 285 285 570 570 570 570 570 570 =
+570 570 570 570 341 341 598 598 598 626 999 740 740 740 740 683 626 797 =
+740 285 570 740 626 853 740 797 683 797 740 683 626 740 683 967 683 683 =
+626 341 285 341 598 570 341 570 626 570 626 570 341 626 626 285 285 570 =
+285 911 626 626 626 626 399 570 341 626 570 797 570 570 512 399 287 399 =
+598 768 570 768 285 570 512 1024 570 570 341 1024 683 341 1024 768 626 =
+768 768 285 285 512 512 359 570 1024 341 1024 570 341 967 768 512 683 =
+285 341 570 570 570 570 287 570 341 755 379 570 598 341 755 566 410 562 =
+341 341 341 590 570 341 341 341 374 570 854 854 854 626 740 740 740 740 =
+740 740 1024 740 683 683 683 683 285 285 285 285 740 740 797 797 797 797 =
+797 598 797 740 740 740 740 683 683 626 570 570 570 570 570 570 911 570 =
+570 570 570 570 285 285 285 285 626 626 626 626 626 626 626 562 626 626 =
+626 626 626 570 626 570  ]
+/Encoding  <</Type/Encoding /Differences [ 2 =
+/space/space/space/space/space/space/space/space/space/space/space/space/=
+space/space/space/space/space/space/space/space/space/space/space/space/s=
+pace/space/space/space/space/space/space/exclam/quotedbl/numbersign/dolla=
+r/percent/ampersand/quotesingle/parenleft/parenright/asterisk/plus/comma/=
+hyphen/period/slash/zero/one/two/three/four/five/six/seven/eight/nine/col=
+on/semicolon/less/equal/greater/question/at/A/B/C/D/E/F/G/H/I/J/K/L/M/N/O=
+/P/Q/R/S/T/U/V/W/X/Y/Z/bracketleft/backslash/bracketright/asciicircum/und=
+erscore/grave/a/b/c/d/e/f/g/h/i/j/k/l/m/n/o/p/q/r/s/t/u/v/w/x/y/z/bracele=
+ft/bar/braceright/asciitilde/space/Euro/space/quotesinglbase/florin/quote=
+dblbase/ellipsis/dagger/daggerdbl/circumflex/perthousand/Scaron/guilsingl=
+left/OE/space/Zcaron/space/space/quoteleft/quoteright/quotedblleft/quoted=
+blright/bullet/endash/emdash/tilde/trademark/scaron/guilsinglright/oe/spa=
+ce/zcaron/Ydieresis/space/exclamdown/cent/sterling/currency/yen/brokenbar=
+/section/dieresis/copyright/ordfeminine/guillemotleft/logicalnot/hyphen/r=
+egistered/macron/degree/plusminus/twosuperior/threesuperior/acute/mu/para=
+graph/periodcentered/cedilla/onesuperior/ordmasculine/guillemotright/oneq=
+uarter/onehalf/threequarters/questiondown/Agrave/Aacute/Acircumflex/Atild=
+e/Adieresis/Aring/AE/Ccedilla/Egrave/Eacute/Ecircumflex/Edieresis/Igrave/=
+Iacute/Icircumflex/Idieresis/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/=
+Odieresis/multiply/Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute/Thor=
+n/germandbls/agrave/aacute/acircumflex/atilde/adieresis/aring/ae/ccedilla=
+/egrave/eacute/ecircumflex/edieresis/igrave/iacute/icircumflex/idieresis/=
+eth/ntilde/ograve/oacute/ocircumflex/otilde/odieresis/divide/oslash/ugrav=
+e/uacute/ucircumflex/udieresis/yacute/thorn/ydieresis]>>
+/FontDescriptor 13 0 R
+>>
+endobj
+13 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 746
+/Descent -216
+/Flags 32
+/FontBBox [ -1286 -771 4096 2084 ]
+/FontName /F03
+/ItalicAngle 0
+>>
+endobj
+14 0 obj
+<<
+/CreationDate (22/11/2016 01:01:03 p.m.)
+/Producer (QuickReports PDF Export)
+/Subject ( )
+/Creator (QuickReports)
+/Title ()
+/Author ()
+>>
+endobj
+15 0 obj
+[/PDF /Text]
+endobj
+xref
+0 16
+0000000000 65535 f
+0000000017 00000 n
+0000000150 00000 n
+0000000202 00000 n
+0000000407 00000 n
+0000000502 00000 n
+0000018459 00000 n
+0000021438 00000 n
+0000021596 00000 n
+0000024565 00000 n
+0000024720 00000 n
+0000027698 00000 n
+0000027857 00000 n
+0000030832 00000 n
+0000030988 00000 n
+0000031155 00000 n
+trailer
+<<
+/Size 16
+/Root 1 0 R
+/Info 14 0 R
+>>
+startxref
+31187
+%%EOF
+
+------=_NextPart_000_013D_01D244C0.7BE1C950--
+

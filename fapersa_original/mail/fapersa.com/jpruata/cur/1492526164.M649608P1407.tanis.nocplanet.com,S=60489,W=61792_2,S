@@ -1,0 +1,1303 @@
+Return-Path: <jrebaudino@amiun.com.ar>
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id mf8KJlQk9lh/BQAATLP0zA
+	; Tue, 18 Apr 2017 11:36:04 -0300
+Return-path: <jrebaudino@amiun.com.ar>
+Envelope-to: acarboni@fapersa.com,
+ jpruata@fapersa.com
+Delivery-date: Tue, 18 Apr 2017 11:36:04 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:54093 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.88)
+	(envelope-from <jrebaudino@amiun.com.ar>)
+	id 1d0UEd-0000lk-D3; Tue, 18 Apr 2017 11:36:04 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 1ED527F21C;
+	Tue, 18 Apr 2017 11:36:03 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id L4xwF5qbQhCz; Tue, 18 Apr 2017 11:36:02 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 2F9D87F231; Tue, 18 Apr 2017 11:36:02 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id D241E7F21C;
+	Tue, 18 Apr 2017 11:36:00 -0300 (ART)
+Received-SPF: pass (amiun.com.ar: 174.138.162.154 is authorized to use 'jrebaudino@amiun.com.ar' in 'mfrom' identity (mechanism 'a' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="jrebaudino@amiun.com.ar"; helo=atlantis.centernoc.com; client-ip=174.138.162.154
+Received: from atlantis.centernoc.com (x3440-22150.securedservers.com [174.138.162.154])
+	by fw.fapersa.com (Postfix) with ESMTPS id D3F0A5FE81;
+	Tue, 18 Apr 2017 11:35:57 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=amiun.com.ar; s=default; h=Content-Type:MIME-Version:Date:Subject:
+	In-Reply-To:References:Cc:To:From:Message-ID:Sender:Reply-To:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
+	List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+	 bh=JBz5RmxG30RzFZzHr78o1H08Y4mN9qjD8h+qXoLEXqA=; b=mC6X6mDRMAmB/RuqKVs156sbZ
+	7BrCKeHCedFLCDd5NR1Idqq1KwRQPSTHKApxuRmMEeKEaChnFwtc7LYfgrhyM2hJyurTH821Xq0T7
+	8YRTu4kaH+Dh7fWlZMgATCWJyemlU6phWG26hvB9gA6lQp4dDXWHSRIn6AGh7ltdnTYys=;
+Received: from 200-127-154-226.net.prima.net.ar ([200.127.154.226]:51242 helo=UsuarioPC)
+	by atlantis.centernoc.com with esmtpa (Exim 4.89)
+	(envelope-from <jrebaudino@amiun.com.ar>)
+	id 1d0UER-0003eQ-VF; Tue, 18 Apr 2017 11:35:53 -0300
+Message-ID: <F7D6C9F25D9C4F5883821EF8D6A541A2@UsuarioPC>
+From: "Juan Jose Rebaudino" <jrebaudino@amiun.com.ar>
+To: "Eduardo R Paredes" <Eduardo.Paredes@bancogalicia.com.ar>
+Cc: "Martin Fruttero" <mfruttero@amiun.com.ar>,
+	"Hugo Hrycuk" <hhrycuk@amiun.com.ar>,
+	"Santiago Hiller" <shiller@amiun.com.ar>,
+	"Manuel Villagra" <Manuel.Villagra@bancogalicia.com.ar>,
+	"Juan Pablo Ruata" <jpruata@fapersa.com>,
+	"Andres Carboni" <acarboni@fapersa.com>
+References: <7BBBD1DF159C463CA958B27B8B7253AC@UsuarioPC> <OFD589D1F4.8BC2E1AD-ON032580EB.006D8694-032580EB.006E91A6@bancogalicia.com.ar> <64cfeec9-7074-4af6-bec1-42edb9973898@fapersa.com> <E5F3ECA09D054227A454B526BFE80BCD@UsuarioPC> <b61e177e-4c4d-74a2-1203-a7ca2a574aeb@fapersa.com> <95DE0C9AADFC4F6598D9544E5AB1DE3F@UsuarioPC> <b4d06037-00d7-4a0e-0895-41f2c8917256@fapersa.com> <A9D273C555844A82AFA4ED6F708D14E2@UsuarioPC> <d309af62-4dfa-c7c6-3ba8-a6d5947ae681@fapersa.com>
+In-Reply-To: <d309af62-4dfa-c7c6-3ba8-a6d5947ae681@fapersa.com>
+Subject: Re: Leasing - Cliente: LA TURQUINA SA - Documentacion para facturar y formularios 01 y 12
+Date: Tue, 18 Apr 2017 11:33:42 -0300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="multipart/alternative";
+	boundary="----=_NextPart_000_01D3_01D2B837.A1984A30"
+X-Priority: 3
+X-MSMail-Priority: Normal
+Importance: Normal
+X-Mailer: Microsoft Windows Live Mail 14.0.8050.1202
+Disposition-Notification-To: "Juan Jose Rebaudino" <jrebaudino@amiun.com.ar>
+X-MimeOLE: Produced By Microsoft MimeOLE V14.0.8050.1202
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - atlantis.centernoc.com
+X-AntiAbuse: Original Domain - fapersa.com
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - amiun.com.ar
+X-Get-Message-Sender-Via: atlantis.centernoc.com: authenticated_id: jrebaudino@amiun.com.ar
+X-Authenticated-Sender: atlantis.centernoc.com: jrebaudino@amiun.com.ar
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+
+Éste es un mensaje de varias partes en formato MIME.
+------=_NextPart_000_01D3_01D2B837.A1984A30
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_001_01D4_01D2B837.A19ABB30"
+
+
+------=_NextPart_001_01D4_01D2B837.A19ABB30
+Content-Type: text/plain;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+Eduardo, buenos d=EDas.
+Quer=EDa consultarte en que estado se encuentra el tramite del =
+patentamiento del cliente La Turquina SA.
+Quedo a disposici=F3n por cualquier consulta.
+Atte.
+Juan Jos=E9 Rebaudino
+Administraci=F3n de Ventas
+Amiun S.A.
+Te.:0342-4554242 - Int. 107
+
+
+From: Andres Carboni=20
+Sent: Tuesday, April 11, 2017 10:59 AM
+To: Juan Jose Rebaudino ; Eduardo R Paredes ; Manuel Villagra ; Juan =
+Pablo Ruata=20
+Cc: Martin Fruttero ; Hugo Hrycuk ; Santiago Hiller=20
+Subject: Re: Leasing - Cliente: LA TURQUINA SA - Documentacion para =
+facturar y formularios 01 y 12
+
+
+Eduardo - Juan Jos=E9,=20
+
+
+Ya pasaron diez d=EDas m=E1s!! Por favor me podr=EDan indicar en que =
+estado se encuentra este tr=E1mite?
+
+Saludos
+
+
+=20
+      C.P.N. Carboni, Andr=E9s=20
+      Administraci=F3n y Finanzas=20
+      Tel: +54 342 4810810=20
+      Lamadrid 3065=20
+      Santa Fe, Argentina.=20
+      acarboni@fapersa.com=20
+
+El 31/03/2017 a las 08:37 a.m., Juan Jose Rebaudino escribi=F3:
+
+  Eduardo, buenos d=EDas.
+  El d=EDa martes 28/03 despachamos la documentaci=F3n correspondiente a =
+la facturaci=F3n de la unidad adquirida por Leasing por el cliente La =
+Turquina SA.=20
+  Quisiera saber cuando estar=EDan las chapas de la unidad y la =
+respectiva transferencia por el pago de la misma.
+  Quedo a disposici=F3n por cualquier consulta.
+  Atte.
+  Juan Jos=E9 Rebaudino
+  Administraci=F3n de Ventas
+  Amiun S.A.
+  Te.:0342-4554242 - Int. 107
+
+
+  From: Andres Carboni=20
+  Sent: Thursday, March 30, 2017 4:30 PM
+  To: Juan Jose Rebaudino ; Eduardo R Paredes ; Manuel Villagra ; Juan =
+Pablo Ruata=20
+  Subject: Re: Leasing - Cliente: LA TURQUINA SA - Documentacion para =
+facturar y formularios 01 y 12
+
+
+  Juan Jos=E9, buenas tardes.
+
+  Hoy nos informaron desde el Banco que ya han transferido el importe =
+por el pago de la unidad.
+
+
+  A su vez me comentaron que Amiun tiene que completar una =
+documentaci=F3n y enviarla a la sucursal del banco para la gesti=F3n de =
+las chapas patentes de la unidad.
+
+  Pongo en copia a los responsables de las gestiones del leasing del =
+banco Galicia
+
+  Pongo en copia tambi=E9n al titular de la empresa para que est=E9 al =
+tanto de la marcha de la operaci=F3n.
+
+  Por favor les solicitamos el m=E1ximo compromiso con esta operaci=F3n, =
+necesitamos poder hacer uso del bien con urgencia. Les recuerdo que =
+hicimos el pedido del leasing el d=EDa 25-01-2017.=20
+
+
+  Saludos.
+
+
+  =20
+        C.P.N. Carboni, Andr=E9s=20
+        Administraci=F3n y Finanzas=20
+        Tel: +54 342 4810810=20
+        Lamadrid 3065=20
+        Santa Fe, Argentina.=20
+        acarboni@fapersa.com=20
+
+  El 30/03/2017 a las 04:01 p.m., Juan Jose Rebaudino escribi=F3:
+
+    Andr=E9s, buenas tardes.
+    Estamos al aguardo de que el banco nos deposite el importe y =
+te=F3ricamente les avisen a Ustedes que est=E1n las chapas de la unidad.
+    Quedo a disposici=F3n por cualquier consulta.
+    Atte.
+    Juan Jos=E9 Rebaudino
+    Administraci=F3n de Ventas
+    Amiun S.A.
+    Te.:0342-4554242 - Int. 107
+
+
+    From: Andres Carboni=20
+    Sent: Thursday, March 30, 2017 12:09 PM
+    To: Juan Jose Rebaudino=20
+    Cc: Eduardo R Paredes ; Manuel Villagra=20
+    Subject: Re: Leasing - Cliente: LA TURQUINA SA - Documentacion para =
+facturar y formularios 01 y 12
+
+
+    Estimados, buen d=EDa!
+
+    Por favor diganme que hoy podemos buscar la camioneta.=20
+
+
+    Aguardo novedades. Saludos!
+
+
+       =20
+
+
+    =20
+          C.P.N. Carboni, Andr=E9s=20
+          Administraci=F3n y Finanzas=20
+          Tel: +54 342 4810810=20
+          Lamadrid 3065=20
+          Santa Fe, Argentina.=20
+          acarboni@fapersa.com=20
+
+    El 28/03/2017 a las 04:01 p.m., Juan Jose Rebaudino escribi=F3:
+
+      Andr=E9s, buenas tardes.
+      El dia 23/03 se facturo la unidad. Y en el dia de hoy se entrego =
+en la sucursal del banco Galicia la documentaci=F3n, as=ED la env=EDan a =
+Buenos Aires.
+      Quedo a disposici=F3n por cualquier consulta.
+      Atte.
+      Juan Jos=E9 Rebaudino
+      Administraci=F3n de Ventas
+      Amiun S.A.
+      Te.:0342-4554242 - Int. 107
+
+
+      From: Andres Carboni=20
+      Sent: Tuesday, March 28, 2017 2:47 PM
+      To: Eduardo R Paredes ; GTE0079@bancogalicia.com.ar ; =
+SUC0079@bancogalicia.com.ar=20
+      Cc: Santiago Hiller ; Juan Jose Rebaudino=20
+      Subject: Re: Leasing - Cliente: LA TURQUINA SA - Documentacion =
+para facturar y formularios 01 y 12
+
+
+      Estimados, buenas tardes!
+
+      Que novedades hay?
+
+      Quedo a la espera. Saludos.
+
+
+      =20
+            C.P.N. Carboni, Andr=E9s=20
+            Administraci=F3n y Finanzas=20
+            Tel: +54 342 4810810=20
+            Lamadrid 3065=20
+            Santa Fe, Argentina.=20
+            acarboni@fapersa.com=20
+
+      El 22/03/2017 a las 05:07 p.m., Eduardo R Paredes escribi=F3:
+
+        Buenas tardes, en la fecha remito sobre a la sucursal con la =
+documentaci=F3n solicitada por el proveedor Amiun SA del leasing de =
+referencia a quien copio a fin de que lo pase a retirar.=20
+        Saludos.=20
+
+
+        Juan: adjunto archivo con la informaci=F3n para confeccionar los =
+formularios 01 y 12.=20
+
+
+
+        Saludos=20
+        =20
+        Eduardo R Paredes=20
+        CONTROL INSTRUMENTAL=20
+        PROC. CREDITICIO Y FINANCIERO - OPERACIONES=20
+        Productos Crediticios Empresas=20
+        Tel.: (011)-6329-2163 FAX (011)6329-6644=20
+        Pte Peron 407 esq. Reconquista piso 6=B0=20
+        Ciudad Autonoma de Buenos Aires=20
+        Eduardo.R.Paredes@bancogalicia.com.ar=20
+
+
+
+
+
+        De:        "Juan Jose Rebaudino" <jrebaudino@amiun.com.ar>=20
+        Para:        <Eduardo.R.Paredes@bancogalicia.com.ar>=20
+        cc:        "Santiago Hiller" <shiller@amiun.com.ar>=20
+        Fecha:        21/03/2017 11:34=20
+        Asunto:        Leasing - Cliente: LA TURQUINA SA - Documentacion =
+para facturar y formularios 01 y 12=20
+
+------------------------------------------------------------------------
+
+
+
+        Eduardo, buenos d=EDas.=20
+         =20
+        Soy Juan Jos=E9 Rebaudino, del =E1rea de Administraci=F3n de =
+Ventas de Amiun S.A.=20
+        Por el presente correo, solicitamos que nos env=EDen completos, =
+los siguientes formularios UIF que se adjuntan. Los concesionarios son =
+SUJETOS OBLIGADOS ANTE LA UIF para informar las operaciones realizadas. =
+Los mismos deben estar completos con todos los datos solicitados, y =
+deben anexar copia de estatuto, acta de designaci=F3n de autoridades.=20
+         =20
+        Solicito, adem=E1s, los DNI de la o las personas autorizadas a =
+firmar por el Banco Galicia, para lo que son operaciones Leasing, ya que =
+se necesitan esos datos para poder confeccionar los formularios 01 y 12. =
+Esto se debe a los cambios realizados por el RNPA a partir del mes de =
+diciembre de 2016.-=20
+        Quedo a disposici=F3n por cualquier consulta.=20
+         =20
+        Atte.=20
+        Juan Jos=E9 Rebaudino
+        Administraci=F3n de Ventas
+        Amiun S.A.
+        Te.:0342-4554242 - Int. 107=20
+
+        From: Santiago Hiller - AMIUN S.A.=20
+        Sent: Monday, March 20, 2017 4:24 PM=20
+        To: Rebaudino Juan Jose=20
+        Subject: Fw: Leasing - Cliente: LA TURQUINA SA - orden de compra =
+
+
+         =20
+
+        From: Amiun S.A.=20
+        Sent: Monday, March 20, 2017 12:34 PM=20
+        To: SANTIAGO HILLER=20
+        Subject: Fw: Leasing - Cliente: LA TURQUINA SA - orden de compra =
+
+
+         =20
+         =20
+        From: Eduardo R Paredes=20
+        Sent: Monday, March 20, 2017 11:17 AM=20
+        To: amiun@amiun.com.ar=20
+        Cc: Andres Carboni ; Manuel Villagra=20
+        Subject: Leasing - Cliente: LA TURQUINA SA - orden de compra=20
+         =20
+        Buenas tardes, les remito la orden de compra para que puedan =
+facturar el bien solicitado por el cliente de referencia. La copia de la =
+factura la pueden enviar a mi mail, luego el original enviarlo a mi =
+nombre a la direcci=F3n Reconquista 228 piso 6, con referencia al =
+leasing.=20
+        Al momento de facturar deben estar tanto las facturas del bien =
+como la de los gastos para que pasemos a pagar la mismas.=20
+        Ante cualquier consulta, quedo a su disposici=F3n.=20
+        Saluda Atte.=20
+
+
+
+
+
+
+        Eduardo R Paredes=20
+        CONTROL INSTRUMENTAL=20
+        PROC. CREDITICIO Y FINANCIERO - OPERACIONES=20
+        Productos Crediticios Empresas=20
+        Tel.: (011)-6329-2163 FAX (011)6329-6644=20
+        Pte Peron 407 esq. Reconquista piso 6=B0=20
+        Ciudad Autonoma de Buenos Aires=20
+        Eduardo.R.Paredes@bancogalicia.com.ar=20
+              EN BANCO GALICIA CUIDAMOS EL MEDIO AMBIENTE, QUE ES =
+RESPONSABILIDAD DE TODOS.
+
+              Este mensaje y sus anexos son confidenciales y de uso =
+exclusivo de las personas a las que est=E1 dirigido. En caso de que Ud. =
+recibiera este correo por error no podr=E1 modificar, copiar o =
+distribuir parte o la totalidad del mismo; asimismo le solicitamos que =
+tenga a bien eliminarlo de su sistema .
+              El emisor no acepta responsabilidades por errores u =
+omisiones en el contenido de este correo dado que internet no garantiza =
+la seguridad e integridad de las comunicaciones.
+              Las opiniones vertidas en este correo son exclusivas de su =
+autor y no representan la opini=F3n del Banco Galicia.=20
+
+------------------------------------------------------------------------
+
+        No se encontraron virus en este mensaje.
+        Comprobado por AVG - www.avg.com
+        Versi=F3n: 2016.0.8007 / Base de datos de virus: 4756/14149 - =
+Fecha de publicaci=F3n: 03/20/17=20
+
+EN BANCO GALICIA CUIDAMOS EL MEDIO AMBIENTE, QUE ES RESPONSABILIDAD DE =
+TODOS.
+
+Este mensaje y sus anexos son confidenciales y de uso exclusivo de las =
+personas a las que est=E1 dirigido. En caso de que Ud. recibiera este =
+correo por error no podr=E1 modificar, copiar o distribuir parte o la =
+totalidad del mismo; asimismo le solicitamos que tenga a bien eliminarlo =
+de su sistema .
+El emisor no acepta responsabilidades por errores u omisiones en el =
+contenido de este correo dado que internet no garantiza la seguridad e =
+integridad de las comunicaciones.
+Las opiniones vertidas en este correo son exclusivas de su autor y no =
+representan la opini=F3n del Banco Galicia.=20
+
+
+
+
+      No se encontraron virus en este mensaje.
+      Comprobado por AVG - www.avg.com
+      Versi=F3n: 2016.0.8007 / Base de datos de virus: 4769/14197 - =
+Fecha de publicaci=F3n: 03/28/17
+
+
+
+    No se encontraron virus en este mensaje.
+    Comprobado por AVG - www.avg.com
+    Versi=F3n: 2016.0.8007 / Base de datos de virus: 4769/14210 - Fecha =
+de publicaci=F3n: 03/30/17
+
+
+
+  No se encontraron virus en este mensaje.
+  Comprobado por AVG - www.avg.com
+  Versi=F3n: 2016.0.8007 / Base de datos de virus: 4769/14210 - Fecha de =
+publicaci=F3n: 03/30/17
+
+
+
+No se encontraron virus en este mensaje.
+Comprobado por AVG - www.avg.com
+Versi=F3n: 2016.0.8012 / Base de datos de virus: 4769/14289 - Fecha de =
+publicaci=F3n: 04/11/17
+
+------=_NextPart_001_01D4_01D2B837.A19ABB30
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content=3Dtext/html;charset=3DWindows-1252 =
+http-equiv=3DContent-Type>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.17842"></HEAD>
+<BODY id=3DMailContainerBody=20
+style=3D"PADDING-TOP: 15px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" =
+leftMargin=3D0=20
+topMargin=3D0 bgColor=3D#ffffff text=3D#000000 CanvasTabStop=3D"true"=20
+name=3D"Compose message area">
+<DIV><FONT face=3DCalibri>Eduardo, buenos d=EDas.</FONT></DIV>
+<DIV><FONT face=3DCalibri>Quer=EDa consultarte en que estado se =
+encuentra el tramite=20
+del patentamiento del cliente La Turquina SA.</FONT></DIV>
+<DIV><FONT face=3DCalibri>Quedo a disposici=F3n por cualquier =
+consulta.</FONT></DIV>
+<DIV><FONT face=3DCalibri>Atte.</FONT></DIV>
+<DIV><FONT face=3DCalibri>Juan Jos=E9 Rebaudino<BR>Administraci=F3n de =
+Ventas<BR>Amiun=20
+S.A.<BR>Te.:0342-4554242 - Int. 107</FONT></DIV>
+<DIV style=3D"FONT: 10pt Tahoma">
+<DIV><BR></DIV>
+<DIV style=3D"BACKGROUND: #f5f5f5">
+<DIV style=3D"font-color: black"><B>From:</B> <A=20
+title=3D"mailto:acarboni@fapersa.com&#10;CTRL + clic para seguir el =
+v=EDnculo"=20
+href=3D"mailto:acarboni@fapersa.com">Andres Carboni</A> </DIV>
+<DIV><B>Sent:</B> Tuesday, April 11, 2017 10:59 AM</DIV>
+<DIV><B>To:</B> <A=20
+title=3D"mailto:jrebaudino@amiun.com.ar&#10;CTRL + clic para seguir el =
+v=EDnculo"=20
+href=3D"mailto:jrebaudino@amiun.com.ar">Juan Jose Rebaudino</A> ; <A=20
+title=3D"mailto:Eduardo.Paredes@bancogalicia.com.ar&#10;CTRL + clic para =
+seguir el v=EDnculo"=20
+href=3D"mailto:Eduardo.Paredes@bancogalicia.com.ar">Eduardo R =
+Paredes</A> ; <A=20
+title=3DManuel.Villagra@bancogalicia.com.ar=20
+href=3D"mailto:Manuel.Villagra@bancogalicia.com.ar">Manuel Villagra</A> =
+; <A=20
+title=3Djpruata@fapersa.com href=3D"mailto:jpruata@fapersa.com">Juan =
+Pablo Ruata</A>=20
+</DIV>
+<DIV><B>Cc:</B> <A=20
+title=3D"mailto:mfruttero@amiun.com.ar&#10;CTRL + clic para seguir el =
+v=EDnculo"=20
+href=3D"mailto:mfruttero@amiun.com.ar">Martin Fruttero</A> ; <A=20
+title=3Dhhrycuk@amiun.com.ar href=3D"mailto:hhrycuk@amiun.com.ar">Hugo =
+Hrycuk</A> ;=20
+<A title=3D"mailto:shiller@amiun.com.ar&#10;CTRL + clic para seguir el =
+v=EDnculo"=20
+href=3D"mailto:shiller@amiun.com.ar">Santiago Hiller</A> </DIV>
+<DIV><B>Subject:</B> Re: Leasing - Cliente: LA TURQUINA SA - =
+Documentacion para=20
+facturar y formularios 01 y 12</DIV></DIV></DIV>
+<DIV><BR></DIV>
+<P>Eduardo - Juan Jos=E9, <BR></P>
+<P>Ya pasaron diez d=EDas m=E1s!! Por favor me podr=EDan indicar en que =
+estado se=20
+encuentra este tr=E1mite?</P>
+<P>Saludos<BR></P>
+<DIV class=3Dmoz-signature><IMG=20
+src=3D"cid:326D29D10489414ABF4754FF72ABA271@UsuarioPC">=20
+<TABLE border=3D0>
+  <TBODY>
+  <TR></TR>
+  <TR style=3D"FONT-SIZE: 10pt; FONT-FAMILY: arial">
+    <TD>C.P.N. Carboni, Andr=E9s</TD></TR>
+  <TR style=3D"FONT-SIZE: 10pt; FONT-FAMILY: arial">
+    <TD>Administraci=F3n y Finanzas</TD></TR>
+  <TR style=3D"FONT-SIZE: 10pt; FONT-FAMILY: arial">
+    <TD>Tel: +54 342 4810810</TD></TR>
+  <TR style=3D"FONT-SIZE: 10pt; FONT-FAMILY: arial">
+    <TD>Lamadrid 3065</TD></TR>
+  <TR style=3D"FONT-SIZE: 10pt; FONT-FAMILY: arial">
+    <TD>Santa Fe, Argentina.</TD></TR>
+  <TR style=3D"FONT-SIZE: 8pt; FONT-FAMILY: arial">
+    <TD><A class=3Dmoz-txt-link-abbreviated=20
+      =
+href=3D"mailto:acarboni@fapersa.com">acarboni@fapersa.com</A></TD></TR></=
+TBODY></TABLE></DIV>
+<DIV class=3Dmoz-cite-prefix>El 31/03/2017 a las 08:37 a.m., Juan Jose =
+Rebaudino=20
+escribi=F3:<BR></DIV>
+<BLOCKQUOTE cite=3Dmid:A9D273C555844A82AFA4ED6F708D14E2@UsuarioPC =
+type=3D"cite">
+  <META name=3DGENERATOR content=3D"MSHTML 11.00.9600.17842">
+  <DIV><FONT face=3DCalibri>Eduardo, buenos d=EDas.</FONT></DIV>
+  <DIV><FONT face=3DCalibri>El d=EDa martes 28/03 despachamos la =
+documentaci=F3n=20
+  correspondiente a la facturaci=F3n de la unidad adquirida por Leasing =
+por el=20
+  cliente La Turquina SA. </FONT></DIV>
+  <DIV><FONT face=3DCalibri>Quisiera saber cuando estar=EDan las chapas =
+de la unidad=20
+  y la respectiva transferencia por el pago de la misma.</FONT></DIV>
+  <DIV><FONT face=3DCalibri>Quedo a disposici=F3n por cualquier=20
+  consulta.</FONT></DIV>
+  <DIV><FONT face=3DCalibri>Atte.</FONT></DIV>
+  <DIV><FONT face=3DCalibri>Juan Jos=E9 Rebaudino<BR>Administraci=F3n de =
+
+  Ventas<BR>Amiun S.A.<BR>Te.:0342-4554242 - Int. 107</FONT></DIV>
+  <DIV style=3D"FONT: 10pt Tahoma">
+  <DIV><BR></DIV>
+  <DIV style=3D"BACKGROUND: #f5f5f5">
+  <DIV style=3D"font-color: black"><B>From:</B> <A=20
+  title=3D"mailto:acarboni@fapersa.com&#13;&#10;              CTRL + =
+clic para seguir el v=EDnculo"=20
+  href=3D"mailto:acarboni@fapersa.com" moz-do-not-send=3D"true">Andres =
+Carboni</A>=20
+  </DIV>
+  <DIV><B>Sent:</B> Thursday, March 30, 2017 4:30 PM</DIV>
+  <DIV><B>To:</B> <A=20
+  title=3D"mailto:jrebaudino@amiun.com.ar&#13;&#10;              CTRL + =
+clic para seguir el v=EDnculo"=20
+  href=3D"mailto:jrebaudino@amiun.com.ar" moz-do-not-send=3D"true">Juan =
+Jose=20
+  Rebaudino</A> ; <A=20
+  title=3D"mailto:Eduardo.Paredes@bancogalicia.com.ar&#13;&#10;          =
+    CTRL + clic para seguir el v=EDnculo"=20
+  href=3D"mailto:Eduardo.Paredes@bancogalicia.com.ar"=20
+  moz-do-not-send=3D"true">Eduardo R Paredes</A> ; <A=20
+  title=3D"mailto:Manuel.Villagra@bancogalicia.com.ar&#13;&#10;          =
+    CTRL + clic para seguir el v=EDnculo"=20
+  href=3D"mailto:Manuel.Villagra@bancogalicia.com.ar"=20
+  moz-do-not-send=3D"true">Manuel Villagra</A> ; <A=20
+  title=3D"mailto:jpruata@fapersa.com&#13;&#10;              CTRL + clic =
+para seguir el v=EDnculo"=20
+  href=3D"mailto:jpruata@fapersa.com" moz-do-not-send=3D"true">Juan =
+Pablo Ruata</A>=20
+  </DIV>
+  <DIV><B>Subject:</B> Re: Leasing - Cliente: LA TURQUINA SA - =
+Documentacion=20
+  para facturar y formularios 01 y 12</DIV></DIV></DIV>
+  <DIV><BR></DIV>
+  <P>Juan Jos=E9, buenas tardes.</P>
+  <P>Hoy nos informaron desde el Banco que ya han transferido el importe =
+por el=20
+  pago de la unidad.<BR></P>
+  <P>A su vez me comentaron que Amiun tiene que completar una =
+documentaci=F3n y=20
+  enviarla a la sucursal del banco para la gesti=F3n de las chapas =
+patentes de la=20
+  unidad.</P>
+  <P>Pongo en copia a los responsables de las gestiones del leasing del =
+banco=20
+  Galicia</P>
+  <P>Pongo en copia tambi=E9n al titular de la empresa para que est=E9 =
+al tanto de=20
+  la marcha de la operaci=F3n.</P>
+  <P>Por favor les solicitamos el m=E1ximo compromiso con esta =
+operaci=F3n,=20
+  necesitamos poder hacer uso del bien con urgencia. Les recuerdo que =
+hicimos el=20
+  pedido del leasing el d=EDa 25-01-2017. <BR></P>
+  <P>Saludos.<BR></P>
+  <DIV class=3Dmoz-signature><IMG=20
+  src=3D"cid:6D6F202937004C3384083A27E1CE3F7E@UsuarioPC">=20
+  <TABLE border=3D0>
+    <TBODY>
+    <TR></TR>
+    <TR style=3D"FONT-SIZE: 10pt; FONT-FAMILY: arial">
+      <TD>C.P.N. Carboni, Andr=E9s</TD></TR>
+    <TR style=3D"FONT-SIZE: 10pt; FONT-FAMILY: arial">
+      <TD>Administraci=F3n y Finanzas</TD></TR>
+    <TR style=3D"FONT-SIZE: 10pt; FONT-FAMILY: arial">
+      <TD>Tel: +54 342 4810810</TD></TR>
+    <TR style=3D"FONT-SIZE: 10pt; FONT-FAMILY: arial">
+      <TD>Lamadrid 3065</TD></TR>
+    <TR style=3D"FONT-SIZE: 10pt; FONT-FAMILY: arial">
+      <TD>Santa Fe, Argentina.</TD></TR>
+    <TR style=3D"FONT-SIZE: 8pt; FONT-FAMILY: arial">
+      <TD><A class=3Dmoz-txt-link-abbreviated =
+href=3D"mailto:acarboni@fapersa.com"=20
+        =
+moz-do-not-send=3D"true">acarboni@fapersa.com</A></TD></TR></TBODY></TABL=
+E></DIV>
+  <DIV class=3Dmoz-cite-prefix>El 30/03/2017 a las 04:01 p.m., Juan Jose =
+Rebaudino=20
+  escribi=F3:<BR></DIV>
+  <BLOCKQUOTE cite=3Dmid:95DE0C9AADFC4F6598D9544E5AB1DE3F@UsuarioPC =
+type=3D"cite">
+    <META name=3DGENERATOR content=3D"MSHTML 11.00.9600.17842">
+    <DIV><FONT face=3DCalibri>Andr=E9s, buenas tardes.</FONT></DIV>
+    <DIV><FONT face=3DCalibri>Estamos al aguardo de que el banco nos =
+deposite el=20
+    importe y te=F3ricamente les avisen a Ustedes que est=E1n las chapas =
+de la=20
+    unidad.</FONT></DIV>
+    <DIV><FONT face=3DCalibri>Quedo a disposici=F3n por cualquier=20
+    consulta.</FONT></DIV>
+    <DIV><FONT face=3DCalibri>Atte.</FONT></DIV>
+    <DIV><FONT face=3DCalibri>Juan Jos=E9 Rebaudino<BR>Administraci=F3n =
+de=20
+    Ventas<BR>Amiun S.A.<BR>Te.:0342-4554242 - Int. 107</FONT></DIV>
+    <DIV style=3D"FONT: 10pt Tahoma">
+    <DIV><BR></DIV>
+    <DIV style=3D"BACKGROUND: #f5f5f5">
+    <DIV style=3D"font-color: black"><B>From:</B> <A =
+title=3Dacarboni@fapersa.com=20
+    href=3D"mailto:acarboni@fapersa.com" moz-do-not-send=3D"true">Andres =
+Carboni</A>=20
+    </DIV>
+    <DIV><B>Sent:</B> Thursday, March 30, 2017 12:09 PM</DIV>
+    <DIV><B>To:</B> <A title=3Djrebaudino@amiun.com.ar=20
+    href=3D"mailto:jrebaudino@amiun.com.ar" =
+moz-do-not-send=3D"true">Juan Jose=20
+    Rebaudino</A> </DIV>
+    <DIV><B>Cc:</B> <A title=3DEduardo.Paredes@bancogalicia.com.ar=20
+    href=3D"mailto:Eduardo.Paredes@bancogalicia.com.ar"=20
+    moz-do-not-send=3D"true">Eduardo R Paredes</A> ; <A=20
+    title=3DManuel.Villagra@bancogalicia.com.ar=20
+    href=3D"mailto:Manuel.Villagra@bancogalicia.com.ar"=20
+    moz-do-not-send=3D"true">Manuel Villagra</A> </DIV>
+    <DIV><B>Subject:</B> Re: Leasing - Cliente: LA TURQUINA SA - =
+Documentacion=20
+    para facturar y formularios 01 y 12</DIV></DIV></DIV>
+    <DIV><BR></DIV>
+    <P>Estimados, buen d=EDa!</P>
+    <P>Por favor diganme que hoy podemos buscar la camioneta. <BR></P>
+    <P>Aguardo novedades. Saludos!<BR></P>
+    <P>&nbsp;&nbsp;&nbsp; <BR></P>
+    <DIV class=3Dmoz-signature><IMG=20
+    src=3D"cid:8953FD17F04544F1A703A9AF3925D781@UsuarioPC">=20
+    <TABLE border=3D0>
+      <TBODY>
+      <TR></TR>
+      <TR style=3D"FONT-SIZE: 10pt; FONT-FAMILY: arial">
+        <TD>C.P.N. Carboni, Andr=E9s</TD></TR>
+      <TR style=3D"FONT-SIZE: 10pt; FONT-FAMILY: arial">
+        <TD>Administraci=F3n y Finanzas</TD></TR>
+      <TR style=3D"FONT-SIZE: 10pt; FONT-FAMILY: arial">
+        <TD>Tel: +54 342 4810810</TD></TR>
+      <TR style=3D"FONT-SIZE: 10pt; FONT-FAMILY: arial">
+        <TD>Lamadrid 3065</TD></TR>
+      <TR style=3D"FONT-SIZE: 10pt; FONT-FAMILY: arial">
+        <TD>Santa Fe, Argentina.</TD></TR>
+      <TR style=3D"FONT-SIZE: 8pt; FONT-FAMILY: arial">
+        <TD><A class=3Dmoz-txt-link-abbreviated=20
+          href=3D"mailto:acarboni@fapersa.com"=20
+          =
+moz-do-not-send=3D"true">acarboni@fapersa.com</A></TD></TR></TBODY></TABL=
+E></DIV>
+    <DIV class=3Dmoz-cite-prefix>El 28/03/2017 a las 04:01 p.m., Juan =
+Jose=20
+    Rebaudino escribi=F3:<BR></DIV>
+    <BLOCKQUOTE cite=3Dmid:E5F3ECA09D054227A454B526BFE80BCD@UsuarioPC=20
+      type=3D"cite"><META name=3DGENERATOR content=3D"MSHTML =
+11.00.9600.17842">
+      <DIV><FONT face=3DCalibri>Andr=E9s, buenas tardes.</FONT></DIV>
+      <DIV><FONT face=3DCalibri>El dia 23/03 se facturo la unidad. Y en =
+el dia de=20
+      hoy se entrego en la sucursal del banco Galicia la =
+documentaci=F3n, as=ED la=20
+      env=EDan a Buenos Aires.</FONT></DIV>
+      <DIV><FONT face=3DCalibri>Quedo a disposici=F3n por cualquier=20
+      consulta.</FONT></DIV>
+      <DIV><FONT face=3DCalibri>Atte.</FONT></DIV>
+      <DIV><FONT face=3DCalibri>Juan Jos=E9 =
+Rebaudino<BR>Administraci=F3n de=20
+      Ventas<BR>Amiun S.A.<BR>Te.:0342-4554242 - Int. 107</FONT></DIV>
+      <DIV style=3D"FONT: 10pt Tahoma">
+      <DIV><BR></DIV>
+      <DIV style=3D"BACKGROUND: #f5f5f5">
+      <DIV style=3D"font-color: black"><B>From:</B> <A=20
+      title=3D"mailto:acarboni@fapersa.com&#13;&#10; CTRL + clic =
+para&#13;&#10;&#13;&#10;                  seguir el v=EDnculo"=20
+      href=3D"mailto:acarboni@fapersa.com" =
+moz-do-not-send=3D"true">Andres=20
+      Carboni</A> </DIV>
+      <DIV><B>Sent:</B> Tuesday, March 28, 2017 2:47 PM</DIV>
+      <DIV><B>To:</B> <A=20
+      =
+title=3D"mailto:Eduardo.Paredes@bancogalicia.com.ar&#13;&#10;&#13;&#10;  =
+                CTRL&#13;&#10; + clic para seguir el v=EDnculo"=20
+      href=3D"mailto:Eduardo.Paredes@bancogalicia.com.ar"=20
+      moz-do-not-send=3D"true">Eduardo R Paredes</A> ; <A=20
+      title=3DGTE0079@bancogalicia.com.ar=20
+      href=3D"mailto:GTE0079@bancogalicia.com.ar"=20
+      moz-do-not-send=3D"true">GTE0079@bancogalicia.com.ar</A> ; <A=20
+      title=3D"mailto:SUC0079@bancogalicia.com.ar&#13;&#10; CTRL =
++&#13;&#10;                  clic&#13;&#10; para seguir el v=EDnculo"=20
+      href=3D"mailto:SUC0079@bancogalicia.com.ar"=20
+      moz-do-not-send=3D"true">SUC0079@bancogalicia.com.ar</A> </DIV>
+      <DIV><B>Cc:</B> <A=20
+      title=3D"mailto:shiller@amiun.com.ar&#13;&#10;&#13;&#10;           =
+       CTRL&#13;&#10; + clic para seguir el v=EDnculo"=20
+      href=3D"mailto:shiller@amiun.com.ar" =
+moz-do-not-send=3D"true">Santiago=20
+      Hiller</A> ; <A title=3Djrebaudino@amiun.com.ar=20
+      href=3D"mailto:jrebaudino@amiun.com.ar" =
+moz-do-not-send=3D"true">Juan Jose=20
+      Rebaudino</A> </DIV>
+      <DIV><B>Subject:</B> Re: Leasing - Cliente: LA TURQUINA SA - =
+Documentacion=20
+      para facturar y formularios 01 y 12</DIV></DIV></DIV>
+      <DIV><BR></DIV>
+      <P>Estimados, buenas tardes!</P>
+      <P>Que novedades hay?</P>
+      <P>Quedo a la espera. Saludos.<BR></P>
+      <DIV class=3Dmoz-signature><IMG=20
+      src=3D"cid:5B522909485C4EA3AB225A0A0A417894@UsuarioPC">=20
+      <TABLE border=3D0>
+        <TBODY>
+        <TR></TR>
+        <TR style=3D"FONT-SIZE: 10pt; FONT-FAMILY: arial">
+          <TD>C.P.N. Carboni, Andr=E9s</TD></TR>
+        <TR style=3D"FONT-SIZE: 10pt; FONT-FAMILY: arial">
+          <TD>Administraci=F3n y Finanzas</TD></TR>
+        <TR style=3D"FONT-SIZE: 10pt; FONT-FAMILY: arial">
+          <TD>Tel: +54 342 4810810</TD></TR>
+        <TR style=3D"FONT-SIZE: 10pt; FONT-FAMILY: arial">
+          <TD>Lamadrid 3065</TD></TR>
+        <TR style=3D"FONT-SIZE: 10pt; FONT-FAMILY: arial">
+          <TD>Santa Fe, Argentina.</TD></TR>
+        <TR style=3D"FONT-SIZE: 8pt; FONT-FAMILY: arial">
+          <TD><A class=3Dmoz-txt-link-abbreviated=20
+            href=3D"mailto:acarboni@fapersa.com"=20
+            =
+moz-do-not-send=3D"true">acarboni@fapersa.com</A></TD></TR></TBODY></TABL=
+E></DIV>
+      <DIV class=3Dmoz-cite-prefix>El 22/03/2017 a las 05:07 p.m., =
+Eduardo R=20
+      Paredes escribi=F3:<BR></DIV>
+      <BLOCKQUOTE=20
+      =
+cite=3Dmid:OFD589D1F4.8BC2E1AD-ON032580EB.006D8694-032580EB.006E91A6@banc=
+ogalicia.com.ar=20
+      type=3D"cite"><FONT size=3D2 face=3Dsans-serif>Buenas tardes, en =
+la fecha=20
+        remito sobre a la sucursal con la documentaci=F3n solicitada por =
+el=20
+        proveedor Amiun SA del leasing de referencia a quien copio a fin =
+de que=20
+        lo pase a retirar.</FONT> <BR><FONT size=3D2=20
+        face=3Dsans-serif>Saludos.</FONT> <BR><BR><BR><FONT size=3D2=20
+        face=3Dsans-serif>Juan: adjunto archivo con la informaci=F3n =
+para=20
+        confeccionar los formularios 01 y 12.</FONT> <BR><FONT size=3D2=20
+        face=3Dsans-serif><BR></FONT><BR><BR><FONT size=3D2=20
+        face=3Dsans-serif>Saludos</FONT> <BR><IMG=20
+        style=3D"BORDER-TOP: 0px solid; BORDER-RIGHT: 0px solid; =
+BORDER-BOTTOM: 0px solid; BORDER-LEFT: 0px solid"=20
+        src=3D"cid:58005723AE2D4711A1048EF6D7FAD608@UsuarioPC"> =
+<BR><FONT size=3D2=20
+        face=3DArial><B>Eduardo R Paredes</B></FONT> <BR><FONT size=3D2=20
+        face=3DArial>CONTROL INSTRUMENTAL</FONT> <BR><FONT size=3D2 =
+face=3DArial>PROC.=20
+        CREDITICIO Y FINANCIERO - OPERACIONES</FONT> <BR><FONT size=3D2=20
+        face=3DArial>Productos Crediticios Empresas</FONT> <BR><FONT =
+size=3D2=20
+        face=3DArial>Tel.: (011)-6329-2163 FAX (011)6329-6644</FONT> =
+<BR><FONT=20
+        size=3D2 face=3DArial>Pte Peron 407 esq. Reconquista piso =
+6=B0</FONT>=20
+        <BR><FONT size=3D2 face=3DArial>Ciudad Autonoma de Buenos =
+Aires</FONT>=20
+        <BR><FONT color=3D#a00000 size=3D2 face=3DArial><B><A=20
+        class=3Dmoz-txt-link-abbreviated=20
+        href=3D"mailto:Eduardo.R.Paredes@bancogalicia.com.ar"=20
+        =
+moz-do-not-send=3D"true">Eduardo.R.Paredes@bancogalicia.com.ar</A></B></F=
+ONT>=20
+        <BR><BR><BR><BR><BR><BR><FONT color=3D#5f5f5f size=3D1 =
+face=3Dsans-serif>De:=20
+        &nbsp; &nbsp; &nbsp; &nbsp;</FONT><FONT size=3D1 =
+face=3Dsans-serif>"Juan=20
+        Jose Rebaudino" <A class=3Dmoz-txt-link-rfc2396E=20
+        href=3D"mailto:jrebaudino@amiun.com.ar"=20
+        =
+moz-do-not-send=3D"true">&lt;jrebaudino@amiun.com.ar&gt;</A></FONT>=20
+        <BR><FONT color=3D#5f5f5f size=3D1 face=3Dsans-serif>Para: =
+&nbsp; &nbsp;=20
+        &nbsp; &nbsp;</FONT><FONT size=3D1 face=3Dsans-serif><A=20
+        class=3Dmoz-txt-link-rfc2396E=20
+        href=3D"mailto:Eduardo.R.Paredes@bancogalicia.com.ar"=20
+        =
+moz-do-not-send=3D"true">&lt;Eduardo.R.Paredes@bancogalicia.com.ar&gt;</A=
+></FONT>=20
+        <BR><FONT color=3D#5f5f5f size=3D1 face=3Dsans-serif>cc: &nbsp; =
+&nbsp; &nbsp;=20
+        &nbsp;</FONT><FONT size=3D1 face=3Dsans-serif>"Santiago Hiller" =
+<A=20
+        class=3Dmoz-txt-link-rfc2396E =
+href=3D"mailto:shiller@amiun.com.ar"=20
+        moz-do-not-send=3D"true">&lt;shiller@amiun.com.ar&gt;</A></FONT> =
+<BR><FONT=20
+        color=3D#5f5f5f size=3D1 face=3Dsans-serif>Fecha: &nbsp; &nbsp; =
+&nbsp;=20
+        &nbsp;</FONT><FONT size=3D1 face=3Dsans-serif>21/03/2017 =
+11:34</FONT>=20
+        <BR><FONT color=3D#5f5f5f size=3D1 face=3Dsans-serif>Asunto: =
+&nbsp; &nbsp;=20
+        &nbsp; &nbsp;</FONT><FONT size=3D1 face=3Dsans-serif>Leasing - =
+Cliente: LA=20
+        TURQUINA SA - Documentacion para facturar y formularios 01 y =
+12</FONT>=20
+        <BR>
+        <HR noShade>
+        <BR><BR><BR><FONT size=3D3 face=3DCalibri>Eduardo, buenos =
+d=EDas.</FONT>=20
+        <BR><FONT size=3D3>&nbsp;</FONT> <BR><FONT size=3D3 =
+face=3DCalibri>Soy Juan=20
+        Jos=E9 Rebaudino, del =E1rea de Administraci=F3n de Ventas de =
+Amiun=20
+        S.A.</FONT> <BR><FONT size=3D3 face=3DCalibri>Por el presente =
+correo,=20
+        solicitamos que nos env=EDen completos, los siguientes =
+formularios UIF que=20
+        se adjuntan. Los concesionarios son SUJETOS OBLIGADOS ANTE LA =
+UIF para=20
+        informar las operaciones realizadas. Los mismos deben estar =
+completos=20
+        con todos los datos solicitados, y deben anexar copia de =
+estatuto, acta=20
+        de designaci=F3n de autoridades.</FONT> <BR><FONT =
+size=3D3>&nbsp;</FONT>=20
+        <BR><FONT size=3D3 face=3DCalibri>Solicito, adem=E1s, <B><U>los =
+DNI de la o=20
+        las personas autorizadas a firmar por el Banco Galicia, para lo =
+que son=20
+        operaciones Leasing</U></B>, ya que se necesitan esos datos para =
+
+        <B><U>poder confeccionar los formularios 01 y 12</U></B>. Esto =
+se debe a=20
+        los cambios realizados por el RNPA a partir del mes de diciembre =
+de=20
+        2016.-</FONT> <BR><FONT size=3D3 face=3DCalibri>Quedo a =
+disposici=F3n por=20
+        cualquier consulta.</FONT> <BR><FONT size=3D3>&nbsp;</FONT> =
+<BR><FONT=20
+        size=3D3 face=3DCalibri>Atte.</FONT> <BR><FONT size=3D3 =
+face=3DCalibri>Juan Jos=E9=20
+        Rebaudino<BR>Administraci=F3n de Ventas<BR>Amiun =
+S.A.<BR>Te.:0342-4554242=20
+        - Int. 107</FONT> <BR><BR><FONT size=3D3><B>From:</B> </FONT><A=20
+        href=3D"mailto:shiller@amiun.com.ar" =
+moz-do-not-send=3D"true"><FONT=20
+        color=3Dblue size=3D3><U>Santiago Hiller - AMIUN =
+S.A.</U></FONT></A><FONT=20
+        size=3D3> </FONT><BR><FONT size=3D3><B>Sent:</B> Monday, March =
+20, 2017 4:24=20
+        PM</FONT> <BR><FONT size=3D3><B>To:</B> </FONT><A=20
+        href=3D"mailto:jrebaudino@amiun.com.ar" =
+moz-do-not-send=3D"true"><FONT=20
+        color=3Dblue size=3D3><U>Rebaudino Juan Jose</U></FONT></A><FONT =
+size=3D3>=20
+        </FONT><BR><FONT size=3D3><B>Subject:</B> Fw: Leasing - Cliente: =
+LA=20
+        TURQUINA SA - orden de compra</FONT> <BR><BR><FONT =
+size=3D3>&nbsp;</FONT>=20
+        <BR><BR><FONT size=3D3><B>From:</B> </FONT><A=20
+        href=3D"mailto:amiun@amiun.com.ar" =
+moz-do-not-send=3D"true"><FONT color=3Dblue=20
+        size=3D3><U>Amiun S.A.</U></FONT></A><FONT size=3D3> =
+</FONT><BR><FONT=20
+        size=3D3><B>Sent:</B> Monday, March 20, 2017 12:34 PM</FONT> =
+<BR><FONT=20
+        size=3D3><B>To:</B> </FONT><A =
+href=3D"mailto:shiller@amiun.com.ar"=20
+        moz-do-not-send=3D"true"><FONT color=3Dblue size=3D3><U>SANTIAGO =
+
+        HILLER</U></FONT></A><FONT size=3D3> </FONT><BR><FONT=20
+        size=3D3><B>Subject:</B> Fw: Leasing - Cliente: LA TURQUINA SA - =
+orden de=20
+        compra</FONT> <BR><BR><FONT size=3D2 face=3DArial>&nbsp;</FONT> =
+<BR><FONT=20
+        size=3D2 face=3DCalibri>&nbsp;</FONT> <BR><FONT size=3D2=20
+        face=3DCalibri><B>From:</B> </FONT><A=20
+        href=3D"mailto:Eduardo.Paredes@bancogalicia.com.ar"=20
+        moz-do-not-send=3D"true"><FONT color=3Dblue size=3D2 =
+face=3DCalibri><U>Eduardo R=20
+        Paredes</U></FONT></A><FONT size=3D2 face=3DCalibri> =
+</FONT><BR><FONT size=3D2=20
+        face=3DCalibri><B>Sent:</B> Monday, March 20, 2017 11:17 =
+AM</FONT>=20
+        <BR><FONT size=3D2 face=3DCalibri><B>To:</B> </FONT><A=20
+        href=3D"mailto:amiun@amiun.com.ar" =
+moz-do-not-send=3D"true"><FONT color=3Dblue=20
+        size=3D2 =
+face=3DCalibri><U>amiun@amiun.com.ar</U></FONT></A><FONT size=3D2=20
+        face=3DCalibri> </FONT><BR><FONT size=3D2 =
+face=3DCalibri><B>Cc:</B> </FONT><A=20
+        href=3D"mailto:acarboni@fapersa.com" =
+moz-do-not-send=3D"true"><FONT=20
+        color=3Dblue size=3D2 face=3DCalibri><U>Andres =
+Carboni</U></FONT></A><FONT=20
+        size=3D2 face=3DCalibri> ; </FONT><A=20
+        href=3D"mailto:Manuel.Villagra@bancogalicia.com.ar"=20
+        moz-do-not-send=3D"true"><FONT color=3Dblue size=3D2 =
+face=3DCalibri><U>Manuel=20
+        Villagra</U></FONT></A><FONT size=3D2 face=3DCalibri> =
+</FONT><BR><FONT=20
+        size=3D2 face=3DCalibri><B>Subject:</B> Leasing - Cliente: LA =
+TURQUINA SA -=20
+        orden de compra</FONT> <BR><FONT size=3D2 =
+face=3DCalibri>&nbsp;</FONT>=20
+        <BR><FONT size=3D2 face=3Dsans-serif>Buenas tardes, les remito =
+la orden de=20
+        compra para que puedan facturar el bien solicitado por el =
+cliente de=20
+        referencia. La copia de la factura la pueden enviar a mi mail, =
+luego el=20
+        original enviarlo a mi nombre a la direcci=F3n Reconquista 228 =
+piso 6, con=20
+        referencia al leasing. <BR>Al momento de facturar deben estar =
+tanto las=20
+        facturas del bien como la de los gastos para que pasemos a pagar =
+la=20
+        mismas. <BR>Ante cualquier consulta, quedo a su disposici=F3n. =
+<BR>Saluda=20
+        Atte.</FONT><FONT size=3D2 face=3DCalibri>=20
+        <BR><BR><BR><BR><BR><BR></FONT><FONT size=3D2 =
+face=3DArial><B><BR>Eduardo R=20
+        Paredes</B></FONT><FONT size=3D2 face=3DCalibri> </FONT><FONT =
+size=3D2=20
+        face=3DArial><BR>CONTROL INSTRUMENTAL</FONT><FONT size=3D2 =
+face=3DCalibri>=20
+        </FONT><FONT size=3D2 face=3DArial><BR>PROC. CREDITICIO Y =
+FINANCIERO -=20
+        OPERACIONES</FONT><FONT size=3D2 face=3DCalibri> </FONT><FONT =
+size=3D2=20
+        face=3DArial><BR>Productos Crediticios Empresas</FONT><FONT =
+size=3D2=20
+        face=3DCalibri> </FONT><FONT size=3D2 face=3DArial><BR>Tel.: =
+(011)-6329-2163=20
+        FAX (011)6329-6644</FONT><FONT size=3D2 face=3DCalibri> =
+</FONT><FONT size=3D2=20
+        face=3DArial><BR>Pte Peron 407 esq. Reconquista piso =
+6=B0</FONT><FONT size=3D2=20
+        face=3DCalibri> </FONT><FONT size=3D2 face=3DArial><BR>Ciudad =
+Autonoma de=20
+        Buenos Aires</FONT><FONT size=3D2 face=3DCalibri> </FONT><FONT =
+color=3D#a00000=20
+        size=3D2 face=3DArial><B><BR><A class=3Dmoz-txt-link-abbreviated =
+
+        href=3D"mailto:Eduardo.R.Paredes@bancogalicia.com.ar"=20
+        =
+moz-do-not-send=3D"true">Eduardo.R.Paredes@bancogalicia.com.ar</A></B></F=
+ONT><FONT=20
+        size=3D2 face=3DCalibri> <BR></FONT>
+        <TABLE style=3D"BORDER-COLLAPSE: collapse" width=3D1748>
+          <TBODY>
+          <TR height=3D8>
+            <TD=20
+            style=3D"BORDER-TOP: #000000 0px; BORDER-RIGHT: #000000 0px; =
+BORDER-BOTTOM: #000000 0px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; =
+PADDING-LEFT: 1px; BORDER-LEFT: #000000 0px; PADDING-RIGHT: 1px"=20
+            bgColor=3Dwhite width=3D1746><TT><FONT size=3D3>EN BANCO =
+GALICIA=20
+              CUIDAMOS EL MEDIO AMBIENTE, QUE ES RESPONSABILIDAD DE=20
+              TODOS.<BR><BR>Este mensaje y sus anexos son confidenciales =
+y de=20
+              uso exclusivo de las personas a las que est=E1 dirigido. =
+En caso de=20
+              que Ud. recibiera este correo por error no podr=E1 =
+modificar, copiar=20
+              o distribuir parte o la totalidad del mismo; asimismo le=20
+              solicitamos que tenga a bien eliminarlo de su sistema =
+.<BR>El=20
+              emisor no acepta responsabilidades por errores u omisiones =
+en el=20
+              contenido de este correo dado que internet no garantiza la =
+
+              seguridad e integridad de las comunicaciones.<BR>Las =
+opiniones=20
+              vertidas en este correo son exclusivas de su autor y no=20
+              representan la opini=F3n del Banco=20
+        Galicia.</FONT></TT></TD></TR></TBODY></TABLE>
+        <HR>
+
+        <P><FONT size=3D3>No se encontraron virus en este =
+mensaje.<BR>Comprobado=20
+        por AVG - </FONT><A href=3D"http://www.avg.com/email-signature"=20
+        moz-do-not-send=3D"true"><FONT color=3Dblue=20
+        size=3D3><U>www.avg.com</U></FONT></A><FONT =
+size=3D3><BR>Versi=F3n:=20
+        2016.0.8007 / Base de datos de virus: 4756/14149 - Fecha de =
+publicaci=F3n:=20
+        03/20/17</FONT> </P>
+        <P>
+        <TABLE>
+          <TBODY>
+          <TR>
+            <TD bgColor=3D#ffffff><FONT color=3D#000000><PRE>EN BANCO =
+GALICIA CUIDAMOS EL MEDIO AMBIENTE, QUE ES RESPONSABILIDAD DE TODOS.
+
+Este mensaje y sus anexos son confidenciales y de uso exclusivo de las =
+personas a las que est=E1 dirigido. En caso de que Ud. recibiera este =
+correo por error no podr=E1 modificar, copiar o distribuir parte o la =
+totalidad del mismo; asimismo le solicitamos que tenga a bien eliminarlo =
+de su sistema .
+El emisor no acepta responsabilidades por errores u omisiones en el =
+contenido de este correo dado que internet no garantiza la seguridad e =
+integridad de las comunicaciones.
+Las opiniones vertidas en este correo son exclusivas de su autor y no =
+representan la opini=F3n del Banco =
+Galicia.</PRE></FONT></TD></TR></TBODY></TABLE></P></BLOCKQUOTE><BR>
+      <P align=3Dleft avgcert??=3D"" color=3D"#000000">No se encontraron =
+virus en este=20
+      mensaje.<BR>Comprobado por AVG - <A=20
+      href=3D"http://www.avg.com/email-signature"=20
+      moz-do-not-send=3D"true">www.avg.com</A><BR>Versi=F3n: 2016.0.8007 =
+/ Base de=20
+      datos de virus: 4769/14197 - Fecha de publicaci=F3n:=20
+    03/28/17</P></BLOCKQUOTE><BR>
+    <P align=3Dleft avgcert??=3D"" color=3D"#000000">No se encontraron =
+virus en este=20
+    mensaje.<BR>Comprobado por AVG - <A=20
+    href=3D"http://www.avg.com/email-signature"=20
+    moz-do-not-send=3D"true">www.avg.com</A><BR>Versi=F3n: 2016.0.8007 / =
+Base de=20
+    datos de virus: 4769/14210 - Fecha de publicaci=F3n:=20
+  03/30/17</P></BLOCKQUOTE><BR>
+  <P align=3Dleft avgcert??=3D"" color=3D"#000000">No se encontraron =
+virus en este=20
+  mensaje.<BR>Comprobado por AVG - <A =
+href=3D"http://www.avg.com/email-signature"=20
+  moz-do-not-send=3D"true">www.avg.com</A><BR>Versi=F3n: 2016.0.8007 / =
+Base de datos=20
+  de virus: 4769/14210 - Fecha de publicaci=F3n:=20
+03/30/17</P></BLOCKQUOTE><BR><A></A>
+<P align=3Dleft avgcert?? color=3D"#000000">No se encontraron virus en =
+este=20
+mensaje.<BR>Comprobado por AVG - <A=20
+href=3D"http://www.avg.com/email-signature">www.avg.com</A><BR>Versi=F3n:=
+=20
+2016.0.8012 / Base de datos de virus: 4769/14289 - Fecha de =
+publicaci=F3n:=20
+04/11/17</P></BODY></HTML>
+
+------=_NextPart_001_01D4_01D2B837.A19ABB30--
+
+------=_NextPart_000_01D3_01D2B837.A1984A30
+Content-Type: image/jpeg;
+	name="logo.jpg"
+Content-Transfer-Encoding: base64
+Content-ID: <326D29D10489414ABF4754FF72ABA271@UsuarioPC>
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/4QAWRXhpZgAASUkqAAgAAAAAAAAAAAD/2wBDAAgGBgcGBQgH
+BwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/
+2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy
+MjIyMjIyMjIyMjL/wAARCAApAHsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQF
+BgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS
+0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4
+eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi
+4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREA
+AgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl
+8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImK
+kpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP0
+9fb3+Pn6/9oADAMBAAIRAxEAPwD2bxT4ksvCmhy6pfB2RWCJHHjdI56KM/ifoDXlzfH8hiB4ZXHb
+dqGD/wCi62PjsT/wiGnDPH9or/6KkrF+Hfi/wVong6G11me3jvhLI8gayeQkFjtJYIc8Y71006cf
+Z8zVzlqVJe05U7I7jwP4y1TxlFJeP4fXT9NXKpctdmQyuOoVdgyB3OcZ4GecdpXD+Nbjxc1hDYeD
+dLISRAz3oliQIvZUVmBz6kjgdOeR5hrOqfFPwpBDe6rfXdvC8nlo7PDKpbBOCBnsD19KlUufWNl5
+FOr7NWkm/Ox9D0V4t4n8fazd/DHQtbsrtrG9nu2guTB0YqHHfPBwDjtmuatdX+KF7ov9s2l3qc+n
+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
+
+------=_NextPart_000_01D3_01D2B837.A1984A30
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-ID: <6D6F202937004C3384083A27E1CE3F7E@UsuarioPC>
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/4QAWRXhpZgAASUkqAAgAAAAAAAAAAAD/2wBDAAgGBgcGBQgH
+BwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/
+2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy
+MjIyMjIyMjIyMjL/wAARCAApAHsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQF
+BgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS
+0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4
+eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi
+4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREA
+AgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl
+8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImK
+kpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP0
+9fb3+Pn6/9oADAMBAAIRAxEAPwD2bxT4ksvCmhy6pfB2RWCJHHjdI56KM/ifoDXlzfH8hiB4ZXHb
+dqGD/wCi62PjsT/wiGnDPH9or/6KkrF+Hfi/wVong6G11me3jvhLI8gayeQkFjtJYIc8Y71006cf
+Z8zVzlqVJe05U7I7jwP4y1TxlFJeP4fXT9NXKpctdmQyuOoVdgyB3OcZ4GecdpXD+Nbjxc1hDYeD
+dLISRAz3oliQIvZUVmBz6kjgdOeR5hrOqfFPwpBDe6rfXdvC8nlo7PDKpbBOCBnsD19KlUufWNl5
+FOr7NWkm/Ox9D0V4t4n8fazd/DHQtbsrtrG9nu2guTB0YqHHfPBwDjtmuatdX+KF7ov9s2l3qc+n
+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
+
+------=_NextPart_000_01D3_01D2B837.A1984A30
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-ID: <8953FD17F04544F1A703A9AF3925D781@UsuarioPC>
+
+R0lGODlhaQBuAOYAAP///+BYKIgAIOBQKPjo4OBQIIgAGOhwQPjYyOBIIOhoOOBAINg4GPCgeOiI
+YNi4sPDAqJAAIOBAGOh4UPjw8OBYMOiAWPDAoPjw6NhAGNhAIOhgMPCogPjo2NgwEJggMOBIKOhw
+OOiAUPC4mPjg0Pj48OiQYOiQaPDg4PCwkKA4QLBoWODIwPCYcJgYMMiQgOhwSOiIWOjQwPDIsPDQ
+uPjg2KAwQLhwYMCAcNgwGNiwqOiYcPCQaPCoiPDo4PDo6PjYwJAQKNgoENiwoODAuOhoMOjQyPDQ
+wPDYyPjgyPjo6IgAEJgoOLBYUOC4sODQwOh4SPCYePC4kPDYwPDw8KhISLBgULhoWMiIgNCgkNCo
+mNg4EODAsPCQcPCggPCwiPDIqPDg2PDw6PjQwPjw4IAAEIgIIJAIKJAYKJggOJgwOKBAQLh4YMCA
+eMiIeNAYCNAgENCYkNCooNi4qOBYIODIuODQyOiQcOigeOiogOioiOjIwOjQ0OjY0Ojg4PC4oCwA
+AAAAaQBuAEAI/wABCBxIsKDBgwgTKlzIsKHDhxAjSpxIsaLFixgzatzIsaPHjyBDihxJsmTIBwYE
+qFwpIGXLPThSGjAQYaUBHABKWEgQIMAAnz2D+tQgoUDPBBJ4Bv0pNEACC0AQnEgAwkKDA0x7/twa
+oICDHRWyNh3bVQEBAChZqjWgRaAVl2pbMqEyI4HYASCA5JyQIIEIAoAJkMAaoAIDIW9OCDSRw4HA
+BgwUdAAAQUIAEgAoOGDAYMGABBMEctBQOIMHOBUwABixoOkAs2jhxm35oolslQZU/EjRWizZviEs
+WICxQcMCowkqiOA7YIOCnhWKFAkbwPmGngUSbBBhIUTfARUUKP+4nn2CiAoLrI99fdak+/fw48uf
+T7++/fv48+vfz7+///8ABhhfWjbJNtOBBphxBQsCYbAZCNkVMEABFFZo4YUYZqjhhhxyCKGEfW0w
+GYFxzbSEE2yUMZNKNdn0AgBfMCAUUwmAIVAHDhSQwQIL2MXUABJkkMCOPy1gwmMZDHBYb0dlIMEC
+QvqUgwdKDaDBjhJI4Bt2sJE4mw0AzHEbSwYQgQQIrnUVQnsjFMCABFtAAAAG2wl0ghBCWCBQFx44
+BgBkklG2xZGrMdBXUqCJpkENAFzggQcLYHZBazN2mVKLLcYVhA03DOEDBDBQGlQFZJVq6qmopqqq
+VrAJ6OqrsMb/KuustNZq66245qrrrrz26uuvwAYr7LC4UhCGDygkmyyyKDDrQwkGYVBDYNRWa+21
+2Gar7bbcBqYEtATWlGlLKoihQ4kr/AAACQooteq7S2klr6kDbPXjquzFtpYKFFBQRxYs6DAEHwDo
+YOAKABDgnVb3JnDADAc14FmaPS3gJ6CTXWBXmnT4BS0Hos7IVVAFWDobbi/+UAVNAmCKG5hHSBiv
+BikIlIKMXWUHoVMxqEZQDxpocDEDRUwGQWsaREEBQTeHBgAHkSFQEA0VGLVUyWd5udYNAIThwskt
+NfFnBkAFlYCcALRAtgIOOEADAEocIAEUbxfEgweEQiYiZR40/yCQA5bROAG0eTBQwQhLEzSpayaD
+bYARboyJmw4kdJUVVwMswAFCGIQQgNQJZ7Yn3o9FxujRErQwEAXQApHo0znUPOfSSy9e6VlOSM6S
+C2e03PJM6V4Awpbw2lv2evQyfHzypeZL7PPQRy/99NRXb/312Gev/fbcd+/99+CHL/745Jdv/vno
+p6/++uy37/778BMRhAsf1E9//fi7wIQKK7xgxEBKOEEADkDAA4SggAhMoAIXyMAGOvCBDAwBDHAn
+uUx9IAhkEkAbloYBC1CKePA6lfHmhTyKpSpfWmORXAAwBJdEoEUGWMHSWFO8euGrXjTSAJpEmICJ
+gXA9jVOLCv8+YIAlaGEFSxDAGj6gQpUQYTUhI2FfYjCCKSAACTSQwk6WVzYN5C0yGfNRvH4CmqWN
+hoRlEwvW9KUWF3BhCDhYARdecAMssAALY3oCAE4QRewcADMCmcIIUnABGhzAXfci48UkUJUGhOBe
+Y0nAVzZwueStMYUsQQMVssCy2RjACpSxjLw+E4MGiYABVhOZAk4wAgiMwAR2kWTpKsCDBsQATZmD
+Qg8gcAEv8EUBUWjABNBUgRjogZcNqNpYLqk7JwokJmBLAxWmgMOlJGAMAomBXSpAwAMqoAKgqcEF
+GtACzGAABgwY2t4ggBTFZAYCPbjABDLgNA4kaQZH4EALIAb/gB1sDCjMdNyLKKCCMbVIDQD4Q5JG
+mQC9AEAEfdHTQMjwyL6IoAUcQNvdvhgoCDBAojezF2g+piUNwIAHXvgCGRoVRRQ20wBiMwLYWoIT
+voxFA34DAAImlDkPyElhFZAaAThgFYG0oE+l66gH8PA3sgnuYzmQgkAu4AALMMp2SwnibILwgzhc
+qkRVAEAURDmyAEhgBwNBQgMccAKpKUEBIhBIDwIwgSMI5A5I/RMD1pmBQJWgBzCAwgksIIF6agAz
+NBCPVFnKuKw1syU6uIHkDMA1B0zMhBKwwAx8RoEaQIAHThEB6MBggSRggDEOIAAGdkC0MWBgBDxJ
+QAsmM6cZqjgANCTAgN7QRgIHXIACvGksG8dlkyvYoEQq8AMEKMRFstSrLxuz12d8VE0c/siGP+pL
+Kq2rle/4RGbGc+lMyTQTG8hBt6i0rnrVK6H1Vte9PIVvfNfb3vayt77WlRBsxMACFhhBBjKwA4Cf
+AGAWPIEFfUgcAY4QFQQ4+MEQjrCEH5wEBFRYwkiYsIYjfOENe9jBJEgc/EZM4hKb+MQoTrGKV8zi
+FrsYewEBADs=
+
+------=_NextPart_000_01D3_01D2B837.A1984A30
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-ID: <5B522909485C4EA3AB225A0A0A417894@UsuarioPC>
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/4QAWRXhpZgAASUkqAAgAAAAAAAAAAAD/2wBDAAgGBgcGBQgH
+BwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/
+2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy
+MjIyMjIyMjIyMjL/wAARCAApAHsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQF
+BgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS
+0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4
+eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi
+4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREA
+AgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl
+8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImK
+kpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP0
+9fb3+Pn6/9oADAMBAAIRAxEAPwD2bxT4ksvCmhy6pfB2RWCJHHjdI56KM/ifoDXlzfH8hiB4ZXHb
+dqGD/wCi62PjsT/wiGnDPH9or/6KkrF+Hfi/wVong6G11me3jvhLI8gayeQkFjtJYIc8Y71006cf
+Z8zVzlqVJe05U7I7jwP4y1TxlFJeP4fXT9NXKpctdmQyuOoVdgyB3OcZ4GecdpXD+Nbjxc1hDYeD
+dLISRAz3oliQIvZUVmBz6kjgdOeR5hrOqfFPwpBDe6rfXdvC8nlo7PDKpbBOCBnsD19KlUufWNl5
+FOr7NWkm/Ox9D0V4t4n8fazd/DHQtbsrtrG9nu2guTB0YqHHfPBwDjtmuatdX+KF7ov9s2l3qc+n
+gMfOj8tuFJB+X73BB7dqFh5NXbSCWIinZJs+jqK8b+HHxUu725uLDxPdwtGkDTx3rqEIC8srYAB4
+5BAB4PXIqG/8R+N/H13PdeDUntdIsnMaMJEjed8Z53Hrgj5egyM8nhewkpWehSrxcbrU9qorx74a
+/EjVdY1CbQtckEtwYXe3uCgR9yjlGAAB4yQcA/Kc5zxyHhfxx461O9msrK7utSvbi0dIUZkAib5c
+yZOBwM4ycZI69Kf1eV2uwvrELJrqfSFFeEa34i8ceCvDVsuq6jKNX1SWQqZDHL9lhi2jAwCu5y+c
+84AHQ1DbQ/F+8t4ri3ubuSOZBJGftduCVIyDjdnoaFQdr3QniFe1nc99orkdAsfEeg+GprnU7i61
+3WZFDC1EqIiHsis2B35Y+nA7Hz29tfjNc3U1ztnhDsWEMFxbhEHoo3E4/M/U1EafM3qi5VOVLRnu
+FFeNfCn4ha1rHiB9F1q6N2skLPBK6Krqy4JU4AyCMnnnIr2WlUg4OzKp1FUjzI8s+O//ACKOnf8A
+YQX/ANFyVifD74aeHvE/g631LUBd/aJJJEby5towGIHGPSvTvF3hCx8Z6bBY389zDHDMJla3ZQxO
+1lwdynj5jVjwx4ctfCuiRaTZzTywRuzh5yC2WJJ6ADv6VoqtqfKnqZOjzVeZrSx4P8RbhtW+Jr6T
+qd+1rptrJFbxtIpdYEKKS+3uTknP05wKzfFHhnwzoumRXGi+J4dUuWmEbQoigqm1iW4PqAPxr3Lx
+T8NtA8W3i3t4txb3m0K09q4UuB03Agg49cZ7Z4FUX+EXhw+Gl0VHvIk+0i5kukZPOlYBlAYlcbQH
+OAAPzJzrGvFJGUsPJuXmeTaj/wAkV0X/ALC03/oLV3vw68beHPD/AMOLWLUdVgiuIGmdrcHMnMjE
+AKO5BH51k/E/w1aeE/h/pOl2U08sC6i0gacqWyyMT0AH6Ve+E/gLRrvSNP8AFF0Jbi83ybIZCphR
+lkKqwXGSRjuSMnOMgYc3GVO72uKCnGrZdjhrv4dahp/gGfxNqEb28nmRmK0xykTNjc/cHJXA6gdf
+QVvCOl2mrwzRXHjNNBkjbKxT5VJAQPmDb1Gc8Y69Pw+nrq1gvbSW1uYklgmQpJG4yGUjBBrzif4G
++GJZmeO71WBSciNJkZV9gWQn8yaUcTdNSHLDWacDD8GeBdL03xVBqVn410zVZ7aOaRra22l3DRsh
+PEhIALg5xXOfBD/ke/8Atwk/9CSvbPDPg7SfCelyWOmxtmb/AF1xIQZZTzjcQAMDPAAAH1JzkeFP
+hfpHhDV/7SsL2/mm8lodtw6FcEg5+VAc8CodZNSTe5aotOLS2D4k+HdC8QaXarq+sW+kTRSH7LdT
+yKq5IG5cMRuBAB4IPA9wfGNe8D6JpGkzXlv400bUZkxttrcKXkye212x69Me4r2LxD8LNO8Uaq+o
+6prOrvIeEjWSIJEv91R5fA/U9yawW+DfhCGW5WXV9WH2VFkm3PGAqnOOfL9j0p0qqgkub8BVaUpt
+tR/E4S28Ua3D8Jby0W8n8n+0orVZC53LE0Tu0YbqBlF49GI6GofDvhHwhqejQ3eqeL7ewu3Lb7Zo
+gDHgkDknnIwc+/tXtaeHPCUXgwaL9jcaVLJgK0cnmyS9dw43luOo7DHQYrF0z4Z+EPDd1Fr8k19N
+HCQ0aXoG1Hzw2wIGJB6Z+vYGq9vGztoT7Cd1fU80+EIx8SrEA5Ajm5/4Aa+la4Tw18LNG8Na7DrN
+lf6hNMisAszxlCGBB6ID39a7usa81OV0bUKbhGzCiiisTcKKKKAOQ8eeD5PGcOl2Pn/Z7WG6864k
+H3tm0jCj+8Sep4HJ56HpNL0yy0bTYNP0+3S3tYF2xxr279epJOSSeSTmrdFU5Nrl6EqKT5uoUUUV
+JQUUUUAFZN5ogu7i7kNy6JdRojoqjjbnaQfqc/hWtRQBkXOkXN7B5N1fJOmQcSWykZGefrUSeHf9
+Ht7Wa+mktoMlEwAd2CM5/wCBHA7cVuUUAVNOs5LG2W3e5aZEVUj3KAVUDHbrVuiigD//2Q==
+
+------=_NextPart_000_01D3_01D2B837.A1984A30
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-ID: <58005723AE2D4711A1048EF6D7FAD608@UsuarioPC>
+
+R0lGODlhaQBuAOYAAP///+BYKIgAIOBQKPjo4OBQIIgAGOhwQPjYyOBIIOhoOOBAINg4GPCgeOiI
+YNi4sPDAqJAAIOBAGOh4UPjw8OBYMOiAWPDAoPjw6NhAGNhAIOhgMPCogPjo2NgwEJggMOBIKOhw
+OOiAUPC4mPjg0Pj48OiQYOiQaPDg4PCwkKA4QLBoWODIwPCYcJgYMMiQgOhwSOiIWOjQwPDIsPDQ
+uPjg2KAwQLhwYMCAcNgwGNiwqOiYcPCQaPCoiPDo4PDo6PjYwJAQKNgoENiwoODAuOhoMOjQyPDQ
+wPDYyPjgyPjo6IgAEJgoOLBYUOC4sODQwOh4SPCYePC4kPDYwPDw8KhISLBgULhoWMiIgNCgkNCo
+mNg4EODAsPCQcPCggPCwiPDIqPDg2PDw6PjQwPjw4IAAEIgIIJAIKJAYKJggOJgwOKBAQLh4YMCA
+eMiIeNAYCNAgENCYkNCooNi4qOBYIODIuODQyOiQcOigeOiogOioiOjIwOjQ0OjY0Ojg4PC4oCwA
+AAAAaQBuAEAI/wABCBxIsKDBgwgTKlzIsKHDhxAjSpxIsaLFixgzatzIsaPHjyBDihxJsmTIBwYE
+qFwpIGXLPThSGjAQYaUBHABKWEgQIMAAnz2D+tQgoUDPBBJ4Bv0pNEACC0AQnEgAwkKDA0x7/twa
+oICDHRWyNh3bVQEBAChZqjWgRaAVl2pbMqEyI4HYASCA5JyQIIEIAoAJkMAaoAIDIW9OCDSRw4HA
+BgwUdAAAQUIAEgAoOGDAYMGABBMEctBQOIMHOBUwABixoOkAs2jhxm35oolslQZU/EjRWizZviEs
+WICxQcMCowkqiOA7YIOCnhWKFAkbwPmGngUSbBBhIUTfARUUKP+4nn2CiAoLrI99fdak+/fw48uf
+T7++/fv48+vfz7+///8ABhhfWjbJNtOBBphxBQsCYbAZCNkVMEABFFZo4YUYZqjhhhxyCKGEfW0w
+GYFxzbSEE2yUMZNKNdn0AgBfMCAUUwmAIVAHDhSQwQIL2MXUABJkkMCOPy1gwmMZDHBYb0dlIMEC
+QvqUgwdKDaDBjhJI4Bt2sJE4mw0AzHEbSwYQgQQIrnUVQnsjFMCABFtAAAAG2wl0ghBCWCBQFx44
+BgBkklG2xZGrMdBXUqCJpkENAFzggQcLYHZBazN2mVKLLcYVhA03DOEDBDBQGlQFZJVq6qmopqqq
+VrAJ6OqrsMb/KuustNZq66245qrrrrz26uuvwAYr7LC4UhCGDygkmyyyKDDrQwkGYVBDYNRWa+21
+2Gar7bbcBqYEtATWlGlLKoihQ4kr/AAACQooteq7S2klr6kDbPXjquzFtpYKFFBQRxYs6DAEHwDo
+YOAKABDgnVb3JnDADAc14FmaPS3gJ6CTXWBXmnT4BS0Hos7IVVAFWDobbi/+UAVNAmCKG5hHSBiv
+BikIlIKMXWUHoVMxqEZQDxpocDEDRUwGQWsaREEBQTeHBgAHkSFQEA0VGLVUyWd5udYNAIThwskt
+NfFnBkAFlYCcALRAtgIOOEADAEocIAEUbxfEgweEQiYiZR40/yCQA5bROAG0eTBQwQhLEzSpayaD
+bYARboyJmw4kdJUVVwMswAFCGIQQgNQJZ7Yn3o9FxujRErQwEAXQApHo0znUPOfSSy9e6VlOSM6S
+C2e03PJM6V4Awpbw2lv2evQyfHzypeZL7PPQRy/99NRXb/312Gev/fbcd+/99+CHL/745Jdv/vno
+p6/++uy37/778BMRhAsf1E9//fi7wIQKK7xgxEBKOEEADkDAA4SggAhMoAIXyMAGOvCBDAwBDHAn
+uUx9IAhkEkAbloYBC1CKePA6lfHmhTyKpSpfWmORXAAwBJdEoEUGWMHSWFO8euGrXjTSAJpEmICJ
+gXA9jVOLCv8+YIAlaGEFSxDAGj6gQpUQYTUhI2FfYjCCKSAACTSQwk6WVzYN5C0yGfNRvH4CmqWN
+hoRlEwvW9KUWF3BhCDhYARdecAMssAALY3oCAE4QRewcADMCmcIIUnABGhzAXfci48UkUJUGhOBe
+Y0nAVzZwueStMYUsQQMVssCy2RjACpSxjLw+E4MGiYABVhOZAk4wAgiMwAR2kWTpKsCDBsQATZmD
+Qg8gcAEv8EUBUWjABNBUgRjogZcNqNpYLqk7JwokJmBLAxWmgMOlJGAMAomBXSpAwAMqoAKgqcEF
+GtACzGAABgwY2t4ggBTFZAYCPbjABDLgNA4kaQZH4EALIAb/gB1sDCjMdNyLKKCCMbVIDQD4Q5JG
+mQC9AEAEfdHTQMjwyL6IoAUcQNvdvhgoCDBAojezF2g+piUNwIAHXvgCGRoVRRQ20wBiMwLYWoIT
+voxFA34DAAImlDkPyElhFZAaAThgFYG0oE+l66gH8PA3sgnuYzmQgkAu4AALMMp2SwnibILwgzhc
+qkRVAEAURDmyAEhgBwNBQgMccAKpKUEBIhBIDwIwgSMI5A5I/RMD1pmBQJWgBzCAwgksIIF6agAz
+NBCPVFnKuKw1syU6uIHkDMA1B0zMhBKwwAx8RoEaQIAHThEB6MBggSRggDEOIAAGdkC0MWBgBDxJ
+QAsmM6cZqjgANCTAgN7QRgIHXIACvGksG8dlkyvYoEQq8AMEKMRFstSrLxuz12d8VE0c/siGP+pL
+Kq2rle/4RGbGc+lMyTQTG8hBt6i0rnrVK6H1Vte9PIVvfNfb3vayt77WlRBsxMACFhhBBjKwA4Cf
+AGAWPIEFfUgcAY4QFQQ4+MEQjrCEH5wEBFRYwkiYsIYjfOENe9jBJEgc/EZM4hKb+MQoTrGKV8zi
+FrsYewEBADs=
+
+------=_NextPart_000_01D3_01D2B837.A1984A30--
+

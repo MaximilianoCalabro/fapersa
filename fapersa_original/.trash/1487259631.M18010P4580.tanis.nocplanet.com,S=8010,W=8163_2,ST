@@ -1,0 +1,153 @@
+Return-Path: <robertoldopazo@hotmail.com>
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id ibp2AO/HpVjkEQAATLP0zA
+	; Thu, 16 Feb 2017 12:40:31 -0300
+Return-path: <robertoldopazo@hotmail.com>
+Envelope-to: rdopazo@fapersa.com,
+ auberto@fapersa.com
+Delivery-date: Thu, 16 Feb 2017 12:40:31 -0300
+Received: from blu004-omc1s15.hotmail.com ([65.55.116.26]:51248)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-SHA384:256)
+	(Exim 4.88)
+	(envelope-from <robertoldopazo@hotmail.com>)
+	id 1ceOAX-0002NW-Be; Thu, 16 Feb 2017 12:40:30 -0300
+Received: from NAM03-BY2-obe.outbound.protection.outlook.com ([65.55.116.7]) by BLU004-OMC1S15.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Thu, 16 Feb 2017 07:39:28 -0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=42MGyEZItYK/q17Eng80A+gAkOEd3bMQgQ20jf0XnOs=;
+ b=CNTDKdmzFLLCdM56uKhAtsLR2VGjvh4582tK/RCEU4CCDCRoEncs0wNl4kSy2z3xnZ8hGb2/m7KjGEw4dMG+8oLiIRuAtqBG4j/Y6PFuV6EKeOkJujmfL2KsoKKA3MfIE/6G2O76ROIo5LKdjSZ65eX/s9l+dhc6UTi222LNPmluPf/M/WSDxRoPJnFDr1IvhBl79aod5ik+9hhY6r0L25TG2kvDXcZcCUTt8+TMDiXtFZ4yEcxjp5kRAqY6S4ZgYtuHjKfxbE5+dMTY+1NX8U6cKBamFU2CxT/2S9C3ye90TnlMccJI3E3uw/R1fJgQCFk73e21jM9AaC15Dbg3fg==
+Received: from CO1NAM03FT062.eop-NAM03.prod.protection.outlook.com
+ (10.152.80.52) by CO1NAM03HT071.eop-NAM03.prod.protection.outlook.com
+ (10.152.80.236) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.919.10; Thu, 16
+ Feb 2017 15:39:26 +0000
+Received: from BN6PR06MB3041.namprd06.prod.outlook.com (10.152.80.60) by
+ CO1NAM03FT062.mail.protection.outlook.com (10.152.81.50) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.919.10 via Frontend Transport; Thu, 16 Feb 2017 15:39:26 +0000
+Received: from BN6PR06MB3041.namprd06.prod.outlook.com ([10.173.143.23]) by
+ BN6PR06MB3041.namprd06.prod.outlook.com ([10.173.143.23]) with mapi id
+ 15.01.0888.030; Thu, 16 Feb 2017 15:39:26 +0000
+From: Roberto Dopazo <robertoldopazo@hotmail.com>
+To: "mengqian@chinarm.com" <mengqian@chinarm.com>, "auberto@fapersa.com"
+	<auberto@fapersa.com>
+CC: "rdopazo@fapersa.com" <rdopazo@fapersa.com>
+Subject: Order 3 and 4
+Thread-Topic: Order 3 and 4
+Thread-Index: AQHSiGqQHBjO1vX3hESaDmKbzWk2lw==
+Date: Thu, 16 Feb 2017 15:39:25 +0000
+Message-ID: <BN6PR06MB304184082872A87F5E43847DDF5A0@BN6PR06MB3041.namprd06.prod.outlook.com>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: fapersa.com; dkim=none (message not signed)
+ header.d=none;fapersa.com; dmarc=none action=none header.from=hotmail.com;
+x-incomingtopheadermarker: OriginalChecksum:0307EC6AA8051370607768EEF6C59238723C2DE9A7EA98BD6FAE6011FB9BC860;UpperCasedChecksum:F5639BF1AC57423FE59B14E3095C488194F3A17EA01624DE3C5E3D188D6D4A30;SizeAsReceived:7668;Count:38
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [OAjx1XErDPfYGh56bVawBi58XhnVky6Z]
+x-incomingheadercount: 38
+x-eopattributedmessage: 0
+x-microsoft-exchange-diagnostics: 1;CO1NAM03HT071;5:cRZ1ruoNozsXbzK7NPG3Tn/1b2VCK2Ezlcw571vEs4HwJCcc4SQlB+QpsY4C+PgoYBcpBrWNptI8lXqmsi1YmFexhF0lCuYffJC8aD3reDa3klLP9tE8ZoaH6tDeRgUMaaH+KhR4tzXNtqLFnzXf4w==;24:CbwsZP60hrh3DPXpqAguji2jz5ba8nz8mVm6rPuZkL6+xzWqFl+GB9HvwTvglAx5vfV8RLjQ7N6g3E8OVv5OYR9QVJwg9OgfuGoWZlYF3qc=;7:y1Q5/HH67al074HBnsSSpj3SQIyi7iWQHsuJOcqDOlFvStGwJtpShsDvcOEjV6s9zwxfMc/g0bL6+hiHC2Qp+DweDHE1SQc99CDIWI1mHWGTaYKXt3x1CbLYvrLFd4jJoL7QWaaWzBFrlL5IlWKYmqitxhbEjbEDfQh3+QgGoOh1z1GvMHrzS5EzXXNF7VAtFTCqlz5yE7fUJL6dyc5qYKExD7LLSLbnutyPdv52CZmQf+rF/o0kxfcroqsYlNGVQ8LaowhOWBcruOZYD2ucQOlqPkr4fZP1HbuRzOPWTkenMM8R0Yy9j6A4oiR62VFt
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(10019020)(98900011);DIR:OUT;SFP:1102;SCL:1;SRVR:CO1NAM03HT071;H:BN6PR06MB3041.namprd06.prod.outlook.com;FPR:;SPF:None;MLV:ovr;LANG:en;
+x-ms-office365-filtering-correlation-id: d38deba7-88b3-458c-821f-08d45681fcec
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(201702061044)(5061506526)(5061507331)(1603103135)(1601125207)(1603101373)(1701031045);SRVR:CO1NAM03HT071;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(432015087)(444000031);SRVR:CO1NAM03HT071;BCL:0;PCL:0;RULEID:;SRVR:CO1NAM03HT071;
+x-forefront-prvs: 0220D4B98D
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_BN6PR06MB304184082872A87F5E43847DDF5A0BN6PR06MB3041namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: hotmail.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 16 Feb 2017 15:39:25.8609
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CO1NAM03HT071
+X-OriginalArrivalTime: 16 Feb 2017 15:39:28.0626 (UTC) FILETIME=[DC02FD20:01D2886A]
+X-Spam-Status: No, score=-2.0
+X-Spam-Score: -19
+X-Spam-Bar: --
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Dear Nancy, We will take this into account for orders n °
+   5 / n ° 6. Unfortunately for orders n ° 3 / n ° 4 we can not make changes,
+    our Customs Broker had already presented the authorization process. [...]
+    
+ 
+ Content analysis details:   (-2.0 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (robertoldopazo[at]hotmail.com)
+ -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+                             [65.55.116.26 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+X-Spam-Flag: NO
+
+--_000_BN6PR06MB304184082872A87F5E43847DDF5A0BN6PR06MB3041namp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Nancy,
+
+We will take this into account for orders n =B0 5 / n =B0 6.
+
+Unfortunately for orders n =B0 3 / n =B0 4 we can not make changes, our Cus=
+toms Broker had already presented the authorization process.
+
+Best regards.
+
+Robert Dopazo
+fapersa icsa
+
+
+--_000_BN6PR06MB304184082872A87F5E43847DDF5A0BN6PR06MB3041namp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt;color:#000000;font=
+-family:Calibri,Arial,Helvetica,sans-serif;" dir=3D"ltr">
+<p></p>
+<div>Dear Nancy,<br>
+<br>
+We will take this into account for orders n =B0 5 / n =B0 6.<br>
+<br>
+Unfortunately for orders n =B0 3 / n =B0 4 we can not make changes, our Cus=
+toms Broker had already presented the authorization process.<br>
+<br>
+Best regards.<br>
+<br>
+Robert Dopazo</div>
+<div>fapersa icsa</div>
+<br>
+<p></p>
+</div>
+</body>
+</html>
+
+--_000_BN6PR06MB304184082872A87F5E43847DDF5A0BN6PR06MB3041namp_--

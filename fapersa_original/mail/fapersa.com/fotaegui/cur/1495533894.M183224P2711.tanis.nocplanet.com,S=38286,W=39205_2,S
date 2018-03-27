@@ -1,0 +1,919 @@
+Return-Path: <bounces+711109-0a6a-fotaegui=fapersa.com@e.lumosity.com>
+Delivered-To: fotaegui@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id AUS5AkYJJFmXCgAATLP0zA
+	for <fotaegui@fapersa.com>; Tue, 23 May 2017 07:04:54 -0300
+Return-path: <bounces+711109-0a6a-fotaegui=fapersa.com@e.lumosity.com>
+Envelope-to: fotaegui@fapersa.com
+Delivery-date: Tue, 23 May 2017 07:04:54 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:56141 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <bounces+711109-0a6a-fotaegui=fapersa.com@e.lumosity.com>)
+	id 1dD6gP-00010Y-4u
+	for fotaegui@fapersa.com; Tue, 23 May 2017 07:04:53 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 04D3E7F224
+	for <fotaegui@fapersa.com>; Tue, 23 May 2017 07:04:53 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id iM4DhzF57rOU for <fotaegui@fapersa.com>;
+	Tue, 23 May 2017 07:04:52 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 3D56C7F232; Tue, 23 May 2017 07:04:52 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id BF54A7F224
+	for <fotaegui@fapersa.com>; Tue, 23 May 2017 07:04:50 -0300 (ART)
+Received-SPF: pass (e.lumosity.com: Sender is authorized to use 'bounces+711109-0a6a-fotaegui=fapersa.com@e.lumosity.com' in 'mfrom' identity (mechanism 'include:sendgrid.net' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="bounces+711109-0a6a-fotaegui=fapersa.com@e.lumosity.com"; helo=o14.e.lumosity.com; client-ip=167.89.45.54
+Received: from o14.e.lumosity.com (o14.e.lumosity.com [167.89.45.54])
+	by fw.fapersa.com (Postfix) with ESMTPS id 87EFA5FEDF
+	for <fotaegui@fapersa.com>; Tue, 23 May 2017 07:04:46 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=lumosity.com; 
+	h=from:reply-to:to:subject:mime-version:content-type:content-transfer-encoding:list-unsubscribe; 
+	s=smtpapi; bh=cLqt6PIdM2O/Pj+VR0+jxHOXCys=; b=rzEmsWGUzN6jNWvnhP
+	A2Dbl75JZ6Gzlvl9Js4CTKyU8qNBf8jFQZoaQcR6HxMP6DjDXC713kXueWmWmQMs
+	S5NyttYc8gFBpHzmXw2ojRnvwKLiPClPSgCSli1+UjBo+ihxRapjeWzeHVx95K+U
+	FpzWnHWwsRPZl0mwduHZV/990=
+Received: by filter0534p1mdw1.sendgrid.net with SMTP id filter0534p1mdw1-20737-59240935-2
+        2017-05-23 10:04:37.042069648 +0000 UTC
+Received: from lumoslabs.com (ec2-52-71-65-54.compute-1.amazonaws.com [52.71.65.54])
+	by ismtpd0005p1iad1.sendgrid.net (SG) with ESMTP id U54KTMM3RM6L0dGeqG9FLw
+	for <fotaegui@fapersa.com>; Tue, 23 May 2017 10:04:36.990 +0000 (UTC)
+Date: Tue, 23 May 2017 10:04:36 +0000
+From: Lumosity <newsletter@email.lumosity.com>
+Reply-To: Lumosity <newsletter@email.lumosity.com>
+To: fotaegui@fapersa.com
+Message-ID: <59240934daab0_711a510c28561b3@lumosity-resque-worker-2765137175-f7m69.mail>
+Subject: El Human Cognition Project y el futuro del entrenamiento Lumosity
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_59240934da122_711a510c2856040";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+List-Unsubscribe: <https://www.lumosity.com/account/mail_preferences?ll_ch=sendgrid&ll_src=t%3DRMKTG_HCP_2016%7Csd%3D2017-05-23%7Cm%3DNewsletter_Free_HCP_VC_Initial_2017.05.23&promo_codes=35RNLG-L-GEN&send_day=2017-05-23&token=88c1586d-86f9-16ec-69ae-1698ae2e199a>,
+ <mailto:info@unsubscribe.lumosity.com>
+X-SG-EID: S+fCLGe++YGE208ldecadRODvL7YUIc690PPEjWfakZkKFrf2K/4IkalHGHHezgGifDetqW2lALrS0
+ 3GWla0rk2k0FaBF50as7M+nMKr81vX+h/p/pbPTGwke1fyGudWCfWXgFRlA+jxZj/FYJvxe80uR7ZS
+ +r85MwmMsz2pcgp4JtsmpJw6bjN4vrZYwRQ8skQ3dRwYx+eyUSLjfpmw+2KHOKGCcHBz8IMlVP9NcV
+ w=
+X-SG-ID: mcTyqcYTtmn56LU3ATD1f58p77Z0riA733p6P6+lQAP7Fayznc1rz95dkguDtfreNuA0hOhrikSwaE
+ KMZS30m7idHrpPtQW/djY99n8MYAZOndqInDzvDmrR4LM5AGLQlkNDgUTPwt3yjizipXGuUKu5ah51
+ gD/qcc6Zxwkf98Rw5mPOIlUtuvKDaNE3YF2NIo1ahaA5SXUKhlUggFH4GKpj4AnE26vRGL2/z/RxiP
+ sMER3bnzM7k4q6R39sJPGi9l5h8vb3WGsmQyWEvp0ofBMfzuW2g0Kfhiz1UZArHxG9yBP+LtbQhxce
+ JUonoHliP1UIhpGNE9XRY1sY8mJjjoH8ks9QE7gZlHWexOlvDaRSGS9dl7phMOdHfvweNEA/1xiAxu
+ V3x8RfGOgY/onIekEzaTPDGywS+ooY5+G1VQzzxgs6RwxHE/uT6oiZ7xgl
+
+----==_mimepart_59240934da122_711a510c2856040
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+
+
+El Human Cognition Project y el futuro del entrenamiento Lumosity
+
+Los cient=C3=ADficos de Lumosity est=C3=A1n enfocados en ampliar el conocim=
+iento sobre el entrenamiento cerebral y las habilidades cognitivas en human=
+os. Para acelerar este esfuerzo, hemos creado el Human Cognition Project (H=
+CP), una colaboraci=C3=B3n entre cient=C3=ADficos e <b>investigadores de m=
+=C3=A1s de 60 universidades de todo el mundo. </b><br><br>El HCP cuenta con=
+ colaboradores del =C3=A1mbito acad=C3=A9mico, investigadores, cl=C3=ADnico=
+s y educadores. Tras revisar propuestas de investigaci=C3=B3n, el equipo ci=
+ent=C3=ADfico de Lumosity puede permitir que los colaboradores accedan de f=
+orma gratuita a nuestras herramientas, adem=C3=A1s de a partes limitadas de=
+ datos sobre desempe=C3=B1o en juegos cognitivos. De esta manera, nuestros =
+colaboradores pueden usar estas herramientas y datos en sus propios experim=
+entos.
+
+Este concepto est=C3=A1 contribuyendo a ampliar los temas de investigaci=C3=
+=B3n en marcha del HCP, incluyendo estudios sobre el proceso normal del env=
+ejecimiento, ciertas condiciones m=C3=A9dicas y la relaci=C3=B3n entre el e=
+jercicio f=C3=ADsico y el entrenamiento de Lumosity.<br><br> EL HCP es una =
+importante plataforma de investigaci=C3=B3n de Lumosity, que permite a nues=
+tros cient=C3=ADficos aumentar su conocimiento gracias a la experiencia col=
+ectiva.<b>Cuanto m=C3=A1s podamos aprender, mejor ser=C3=A1 el entrenamient=
+o de Lumosity.</b> El campo del entrenamiento cognitivo es relativamente nu=
+evo, por lo que se trata de un =C3=A1rea de investigaci=C3=B3n sumamente in=
+teresante.=20
+
+P=C3=A1sate a Lumosity Premium hoy mismo.
+
+Obt=C3=A9n Premium - 35% de descuento
+https://www.lumosity.com/purchase?ll_ch=3Dsendgrid&ll_src=3Dt%3DRMKTG_HCP_2=
+016%7Csd%3D2017-05-23%7Cm%3DNewsletter_Free_HCP_VC_Initial_2017.05.23&promo=
+tion_code=3D35RNLG-L-GEN&send_day=3D2017-05-23&spDate=3D23%2F5%2F2017&token=
+=3D88c1586d-86f9-16ec-69ae-1698ae2e199a
+
+-------------------------------------------------------------------=20
+
+M=C3=81S INFORMACI=C3=93N
+
+ Centro de Ayuda / Preguntas frecuentes:
+https://www.lumosity.com/help?ll_ch=3Dsendgrid&ll_src=3Dt%3DRMKTG_HCP_2016%=
+7Csd%3D2017-05-23%7Cm%3DNewsletter_Free_HCP_VC_Initial_2017.05.23&send_day=
+=3D2017-05-23
+
+Acerca de Lumosity:=20
+https://www.lumosity.com?ll_ch=3Dsendgrid&ll_src=3Dt%3DRMKTG_HCP_2016%7Csd%=
+3D2017-05-23%7Cm%3DNewsletter_Free_HCP_VC_Initial_2017.05.23&send_day=3D201=
+7-05-23
+
+Cont=C3=A1ctanos:
+https://www.lumosity.com/help?ll_ch=3Dsendgrid&ll_src=3Dt%3DRMKTG_HCP_2016%=
+7Csd%3D2017-05-23%7Cm%3DNewsletter_Free_HCP_VC_Initial_2017.05.23&send_day=
+=3D2017-05-23=20
+
+-------------------------------------------------------------------=20
+
+Mantente al tanto de las =C3=BAltimas actualizaciones de Lumosity:
+=20
+Hazte fan en Facebook:
+https://www.facebook.com/Lumosity?ll_ch=3Dsendgrid&ll_src=3Dt%3DRMKTG_HCP_2=
+016%7Csd%3D2017-05-23%7Cm%3DNewsletter_Free_HCP_VC_Initial_2017.05.23&send_=
+day=3D2017-05-23
+
+S=C3=ADguenos en Twitter:
+http://twitter.com/lumosity?ll_ch=3Dsendgrid&ll_src=3Dt%3DRMKTG_HCP_2016%7C=
+sd%3D2017-05-23%7Cm%3DNewsletter_Free_HCP_VC_Initial_2017.05.23&send_day=3D=
+2017-05-23
+
+Suscr=C3=ADbete a nosotros en YouTube:
+http://www.youtube.com/lumosity?ll_ch=3Dsendgrid&ll_src=3Dt%3DRMKTG_HCP_201=
+6%7Csd%3D2017-05-23%7Cm%3DNewsletter_Free_HCP_VC_Initial_2017.05.23&send_da=
+y=3D2017-05-23
+
+-------------------------------------------------------------------=20
+No podemos responder los mensajes enviados a esta direcci=C3=B3n de correo =
+electr=C3=B3nico automatizado.
+ Para contactarnos, env=C3=ADa tu pregunta aqu=C3=AD:=20
+https://www.lumosity.com/help?ll_ch=3Dsendgrid&ll_src=3Dt%3DRMKTG_HCP_2016%=
+7Csd%3D2017-05-23%7Cm%3DNewsletter_Free_HCP_VC_Initial_2017.05.23&send_day=
+=3D2017-05-23
+
+Lumos Labs, Inc. | 140 New Montgomery, Fl 19 | San Francisco, CA 94105
+=20
+-------------------------------------------------------------------
+
+La direcci=C3=B3n de correo electr=C3=B3nico asociada a tu cuenta es fotaeg=
+ui@fapersa.com. Actualiza tus preferencias de correo electr=C3=B3nico o dat=
+e de baja para dejar de recibirlos:=20
+
+https://www.lumosity.com/purchase?ll_ch=3Dsendgrid&ll_src=3Dt%3DRMKTG_HCP_2=
+016%7Csd%3D2017-05-23%7Cm%3DNewsletter_Free_HCP_VC_Initial_2017.05.23&send_=
+day=3D2017-05-23&token=3D
+
+ Ten en cuenta que aunque te des de baja, te seguiremos enviando
+ algunos correos electr=C3=B3nicos relacionados con tu cuenta, como detalle=
+s de tus compras
+ o solicitudes de restablecimiento de contrase=C3=B1a.=20=
+
+----==_mimepart_59240934da122_711a510c2856040
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+
+
+<html>
+<head>
+  <meta http-equiv=3D'Content-Type' content=3D'text/html;charset=3Dutf-8'>
+  <meta name=3D'viewport' content=3D'width=3D480,initial-scale=3D1,user-sca=
+lable=3Dyes'>
+  <meta name=3D'format-detection' content=3D'telephone=3Dno'>
+  <title>Lumosity</title>
+  <!--[if !mso]><!-->
+  <style type=3D"text/css">
+    @import url(https://s3.amazonaws.com/content.lumosity.com/email/css/fon=
+ts_20160325.css?family=3DMuseo+Sans);
+  </style>
+<!--<![endif]-->
+
+<style type=3D'text/css'>
+
+  h1 {
+    font-family:'Museo Sans', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: normal;
+    margin-bottom: .5em;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h2 {
+    font-family:'Museo Sans', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: normal;
+    margin-bottom: .5em;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h3 {
+    font-family:'Museo Sans', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: normal;
+    margin-bottom: .5em;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  p {
+    font-family:'Museo Sans','Lucida Grande','Lucida Sans Unicode', Verdana=
+, sans-serif;
+    font-size: 15px;
+    line-height: 23px;
+    margin-bottom: 1em;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h5 {
+    font-family:'Museo Sans','Lucida Grande','Lucida Sans Unicode', Verdana=
+, sans-serif;
+    font-size: 13px;
+    line-height: 19px;
+    margin-bottom: 0;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h6 {
+    font-family:'Museo Sans','Lucida Grande','Lucida Sans Unicode', Verdana=
+, sans-serif;
+    font-size: 15px;
+    line-height: 40px;
+    margin-bottom: 0;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a span {
+    font-family:'Museo Sans','Lucida Grande','Lucida Sans Unicode', Verdana=
+, sans-serif;
+    font-size:15px;
+    color:#FFFFFF !important;
+    font-weight: normal !important;
+    text-decoration:none !important;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    min-width: 584px;
+    padding: 0;
+    margin: 0;
+    width: 100% !important;
+    font-family: 'Museo Sans','Lucida Grande','Lucida Sans Unicode',Verdana=
+,sans-serif;
+    color: #333333;
+    background-color: #EEEEEE;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  td {
+    vertical-align: top;
+    border-collapse: collapse;
+  }
+
+  img {
+    display:block;
+    -ms-interpolation-mode:bicubic;
+    border:0 none;
+    line-height:100%;
+    outline:none;
+    text-decoration:none;
+  }
+
+  a img {
+    border:0 none;
+  }
+
+  .button{
+    border: 1px solid;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display:inline-block;
+    text-decoration: none !important;
+    padding: 8px 13px;
+  }
+
+  a.button span {
+    font-size: 12px;
+  }
+
+  a span.dark-blue{
+    color:#0a5960 !important;
+  }=20
+
+  a span.white{
+    color:#FFFFFF !important;
+  }
+
+  @media only screen and (max-device-width: 480px) {
+    .h1 {
+      font-size: 21px !important;
+      line-height: 27px !important;
+      font-weight: normal !important;
+    }
+
+    .h2 {
+      font-size: 19px !important;
+      line-height: 24px !important;
+      font-weight: normal !important;
+    }
+
+    .h3 {
+      font-size: 19px !important;
+      line-height: 24px !important;
+      font-weight: normal !important;
+    }
+
+    .p {
+      font-size: 14px !important;
+      line-height: 21px !important;
+    }
+
+    .h5 {
+      font-size: 12px !important;
+      line-height: 16.5px !important;
+      font-weight: normal !important;
+    }
+
+    .h6 {
+      font-size: 12px !important;
+      line-height: 31.5px !important;
+      font-weight: normal !important;
+    }
+
+    .td {
+      padding: 24px 0px 24px 0px !important;
+    }
+
+    .table {
+      width: 85% !important;
+    }
+
+    .column {
+      width: 100% !important;
+    }
+
+    .img {
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    .hide {
+      min-height: 0px !important;=20
+      max-height: 0px !important;=20
+      max-width: 0px !important;=20
+      display: none !important;=20
+      overflow: hidden !important;
+      font-size: 0px !important;
+    }
+
+
+    #body {
+      min-width: 0px !important;
+    }
+
+    #logo {
+      height: 18px !important;
+      width: auto !important;
+    }
+
+    #train_now {
+      height: 22px !important;
+      width: auto !important;
+    }
+
+    #topbar {
+      padding: 13px 14px 13px 14px !important;
+    }
+
+    #topbar_minwidth {
+      min-width: 192px !important;
+    }
+
+    .button{
+      padding: 6px 9px !important;
+    }
+
+    a.button span {
+      font-size: 11px !important;
+    }
+
+  }
+
+</style>
+
+<!--[if gte mso 9]>
+  <style type=3D'text/css'>
+    div {font-family:Lucida Grande,Lucida Sans Unicode,Verdana,sans-serif !=
+important;}
+  </style>
+<![endif]-->
+
+</head>
+
+<body id=3D'body'>
+
+<!-- PRE-HEADER -->
+  <div style=3D'display:none;visibility:hidden;color:#000000;font-size:0px;=
+'>
+    Los cient=C3=ADficos de Lumosity est=C3=A1n enfocados en ampliar el con=
+ocimiento sobre el entrenamiento cerebral y las habilidades cognitivas en h=
+umanos.
+  </div>
+
+  <div style=3D'margin:0;padding:0'>
+
+
+<!-- TOP BAR // Light BG -->
+    <table width=3D'100%' cellspacing=3D'0'>
+      <tr>
+        <td id=3D'topbar' bgcolor=3D'#112733' align=3D'center' style=3D'pad=
+ding:18px 40px 35px 40px'>
+          <table id=3D'topbar_minwidth' width=3D'100%' style=3D'min-width:5=
+84px;'>
+            <tr>
+              <td>
+                <a target=3D'_blank' href=3D"https://e.lumosity.com/mpss/c/=
+4wA/xdkKAA/t.27k/9qUkllTlSq6W6O9yR77N3A/h0/FrfOYoWjCcRRKh-2BXvSgQoBqvg5pAB6=
+uHNwQ6I818M5mzR40itJgTZgxiy1Ax70LnRQEwjempVtHZhzNe1Lu1g1rTu7AaoNjsTJgVTZqSx=
+W9RznqruWEs26Uep6FoEpsyPe8-2Fq-2Bzx9-2F3FyOy-2FtFkXtuBxkHhlPu5lyVCR3vPxX5Io=
+EBnviLbQmIYzfHL9ZWF8TjQ0Uf7CELe-2FkkBWSU2FYSIs8Qhw58jwNzNxko3dp1A-3D">
+                  <img alt=3D"Lumosity" id=3D"logo" src=3D"https://asset.lu=
+mosity.com/assets%2Fmf1459271820270-c5o1ofbvpto1gl1g-ea7372ecdf57b9cd75ef1a=
+7ed287a585%2Flogo_wordmark_white%402x.png" width=3D"109" height=3D"32" />
+                </a>
+              </td>
+              <td align=3D'right'>
+                <a target=3D'_blank' href=3D"https://e.lumosity.com/mpss/c/=
+4wA/xdkKAA/t.27k/9qUkllTlSq6W6O9yR77N3A/h1/FrfOYoWjCcRRKh-2BXvSgQoBqvg5pAB6=
+uHNwQ6I818M5mzR40itJgTZgxiy1Ax70LnRQEwjempVtHZhzNe1Lu1g1rTu7AaoNjsTJgVTZqSx=
+W9RznqruWEs26Uep6FoEpsyPe8-2Fq-2Bzx9-2F3FyOy-2FtFkXtuBxkHhlPu5lyVCR3vPxX5Io=
+EBnviLbQmIYzfHL9ZWF8TjQ0Uf7CELe-2FkkBWSU2FYSIs8Qhw58jwNzNxko3dp1A-3D">
+                  <img alt=3D"Train Now" id=3D"train_now" src=3D"https://as=
+set.lumosity.com/assets%2Fmf1463089353354-dhzzoohbqam3fbpg-79518567e0cc63b3=
+53da307a79bff596%2Fwhite_es%402x.png" width=3D"102" height=3D"32" />
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+<!-- HERO (HEADER+IMAGE) -->
+    <table width=3D'100%' cellspacing=3D'0'>
+      <tr>
+        <td align=3D'center' bgcolor=3D'#112733' style=3D'padding:54px 15px=
+ 54px 15px' class=3D'td'>
+          <table width=3D'584' class=3D'table'>
+            <tr>
+              <td align=3D'center'>
+                <h1 class=3D'h1' style=3D"color:white;">El Human Cognition =
+Project y el futuro del entrenamiento Lumosity</h1>
+                <p class=3D'p'><img class=3D"img" alt=3D"Obt=C3=A9n Premium=
+ - 35% de descuento" src=3D"https://asset.lumosity.com/assets%2Fmf146594036=
+1883-uh5dzs2z20gr3ega-ab9351569a85b8533b5206ae38b2ebb3%2Fhcp_hero2%402x.png=
+" width=3D"584" height=3D"218" /></p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+=20=20=20=20
+<!-- IMAGE COUPON -->
+    <table width=3D'100%'>
+      <tr>
+        <td align=3D'center' bgcolor=3D'#0A5960' style=3D'padding:54px 15px=
+ 54px 15px' class=3D'td'>
+          <table width=3D'584' class=3D'table'>
+            <tr>
+              <td>
+                <!-- COUPON IMAGE -->
+                <table width=3D'182' align=3D'left' style=3D'float:left;' c=
+lass=3D'hide'>
+                  <tr>
+                    <td align=3D'center' style=3D'padding-bottom:20px'>
+                      <img src=3D"https://asset.lumosity.com/assets%2Fmf146=
+3787456833-4a4he4a0643521j2-158de491ff88c61ffa0f344fa9157d1f%2Fneural_head%=
+402x.png" width=3D"182" height=3D"122" />
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- COUPON COPY -->
+                <table width=3D'382' align=3D'right' style=3D'float:right;'=
+ class=3D'column'>
+                  <tr>
+                    <td style=3D"color:white;">
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                      <h3 class=3D'h3'>Desbloquea tu programa de entrenamie=
+nto</h3>
+                      <p class=3D'hide'>Tu programa de entrenamiento Premiu=
+m te est=C3=A1 esperando. Disfruta de m=C3=A1s de 25 juegos que pondr=C3=A1=
+n a prueba tus habilidades cognitivas con un descuento del 35%.</p>
+
+                      <!-- ORANGE CTA -->
+                      <br />
+                      <table style=3D'border-collapse:separate'>
+                        <tr>
+                          <td bgcolor=3D'#F1693C' style=3D'border-bottom:2p=
+x solid #CB4728;-webkit-border-radius:5px;-moz-border-radius:5px;border-rad=
+ius:5px;background-color:#F1693C;'>
+                            <a href=3D"https://e.lumosity.com/mpss/c/4wA/xd=
+kKAA/t.27k/9qUkllTlSq6W6O9yR77N3A/h2/FrfOYoWjCcRRKh-2BXvSgQoDeH8crM23ztxof8=
+-2Fy5ymLzGnz-2BeGqoh0kBIBAneh99TjqdUnDkWtCiJZ3MMnKoNj0hNRqoSObUKAnqnV9HEP17=
+reU57Jcol3v8o6K4xdlSes3FxWJxo0IAbuyXtINnxbyIAXVROvPVmyAJVJnfljMcR9uEiRC27BG=
+J7UgHOpyXF-2FJrH3aY57-2B6Bk-2FScWBfgdMkpd8xmFAoFW-2FsGbBgeqZLkRJhZceEW88zKx=
+vR3u8gqfcERq4EPQ-2BbsTfqqzV2jC6M3hGiPSa-2BexExvuREFY09jD0UkHMuaYPsPXRdcNtSG=
+kiI1E5-2B4j1Rfasv0tqMAdQ-3D-3D" target=3D'_blank' style=3D'color:white !imp=
+ortant;font-weight:normal !important;text-decoration:none !important;displa=
+y:inline-block;-webkit-border-radius:5px;-moz-border-radius:5px;border-radi=
+us:5px;padding:14px 36px;border:1px solid #F1693C;text-decoration:none;'>
+                              <span>
+                                Obt=C3=A9n Premium - 35% de descuento
+                           <!--     <img style=3D"display:inline-block;" sr=
+c=3D"https://asset.lumosity.com/assets/mf/btn_arrow_77da291c6e.gif" alt=3D"=
+Btn arrow 77da291c6e" width=3D"16" height=3D"11" /> -->
+                              </span>
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>=20=20=20=20
+
+<!-- BODY // PARAGRAPHS WITH IMAGE(S) -->
+    <table width=3D'100%' cellspacing=3D'0'>
+      <tr>
+        <td align=3D'center' bgcolor=3D'#F6F7F8' style=3D'padding:54px 15px=
+ 80px 15px' class=3D'td'>
+          <table width=3D'584' class=3D'table'>
+            <tr>
+              <td>
+                <p class=3D'p'>Los cient=C3=ADficos de Lumosity est=C3=A1n =
+enfocados en ampliar el conocimiento sobre el entrenamiento cerebral y las =
+habilidades cognitivas en humanos. Para acelerar este esfuerzo, hemos cread=
+o el Human Cognition Project (HCP), una colaboraci=C3=B3n entre cient=C3=AD=
+ficos e <b>investigadores de m=C3=A1s de 60 universidades de todo el mundo.=
+ </b><br><br>El HCP cuenta con colaboradores del =C3=A1mbito acad=C3=A9mico=
+, investigadores, cl=C3=ADnicos y educadores. Tras revisar propuestas de in=
+vestigaci=C3=B3n, el equipo cient=C3=ADfico de Lumosity puede permitir que =
+los colaboradores accedan de forma gratuita a nuestras herramientas, adem=
+=C3=A1s de a partes limitadas de datos sobre desempe=C3=B1o en juegos cogni=
+tivos. De esta manera, nuestros colaboradores pueden usar estas herramienta=
+s y datos en sus propios experimentos.</p>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                <br />
+                <a href=3D"https://e.lumosity.com/mpss/c/4wA/xdkKAA/t.27k/9=
+qUkllTlSq6W6O9yR77N3A/h3/FrfOYoWjCcRRKh-2BXvSgQoLA0Ld4fKZCS-2FBTF3zR-2FyWI-=
+3D">
+                  <p class=3D'p'><img class=3D"img" alt=3D"Obt=C3=A9n Premi=
+um - 35% de descuento" src=3D"https://asset.lumosity.com/assets%2Fmf1465940=
+384929-lwcqxmzeffa3qqv9-63b05d8b535b89db4e27702e804442b4%2FhcpLogo%402x.png=
+" width=3D"470" height=3D"120" /></p>
+                </a>
+                <br />
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                <p class=3D'p'>Este concepto est=C3=A1 contribuyendo a ampl=
+iar los temas de investigaci=C3=B3n en marcha del HCP, incluyendo estudios =
+sobre el proceso normal del envejecimiento, ciertas condiciones m=C3=A9dica=
+s y la relaci=C3=B3n entre el ejercicio f=C3=ADsico y el entrenamiento de L=
+umosity.<br><br> EL HCP es una importante plataforma de investigaci=C3=B3n =
+de Lumosity, que permite a nuestros cient=C3=ADficos aumentar su conocimien=
+to gracias a la experiencia colectiva.<b>Cuanto m=C3=A1s podamos aprender, =
+mejor ser=C3=A1 el entrenamiento de Lumosity.</b> El campo del entrenamient=
+o cognitivo es relativamente nuevo, por lo que se trata de un =C3=A1rea de =
+investigaci=C3=B3n sumamente interesante. </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+<!-- COUPON (HEADER-CTA) -->
+    <table width=3D'100%' cellspacing=3D'0'>
+      <tr>
+        <td align=3D'center' bgcolor=3D'#EEEEEE' style=3D'padding:54px 15px=
+ 50px 15px' class=3D'td'>
+          <table width=3D'584' class=3D'table'>
+            <tr>
+              <td align=3D'center'>
+                <h2 class=3D'h2'>P=C3=A1sate a Lumosity Premium hoy mismo.<=
+/h2>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                <!-- ORANGE CTA -->
+                <br />
+                <table style=3D'border-collapse:separate'>
+                  <tr>
+                    <td bgcolor=3D'#F1693C' style=3D'border-bottom:2px soli=
+d #CB4728;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5p=
+x;background-color:#F1693C;'>
+                      <a href=3D"https://e.lumosity.com/mpss/c/4wA/xdkKAA/t=
+.27k/9qUkllTlSq6W6O9yR77N3A/h4/FrfOYoWjCcRRKh-2BXvSgQoDeH8crM23ztxof8-2Fy5y=
+mLzGnz-2BeGqoh0kBIBAneh99TjqdUnDkWtCiJZ3MMnKoNj0hNRqoSObUKAnqnV9HEP17reU57J=
+col3v8o6K4xdlSes3FxWJxo0IAbuyXtINnxbyIAXVROvPVmyAJVJnfljMcR9uEiRC27BGJ7UgHO=
+pyXF-2FJrH3aY57-2B6Bk-2FScWBfgdMkpd8xmFAoFW-2FsGbBgeqZLkRJhZceEW88zKxvR3u8g=
+qfcERq4EPQ-2BbsTfqqzV2jC6M3hGiPSa-2BexExvuREFY09jD0UkHMuaYPsPXRdcNtSGkiI1E5=
+-2B4j1Rfasv0tqMAdQ-3D-3D" target=3D'_blank' style=3D'color:white !important=
+;font-weight:normal !important;text-decoration:none !important;display:inli=
+ne-block;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px=
+;padding:14px 36px;border:1px solid #F1693C;text-decoration:none;'>
+                        <span>
+                          Obt=C3=A9n Premium - 35% de descuento
+                    <!--      <img style=3D"display:inline-block;" src=3D"h=
+ttps://asset.lumosity.com/assets/mf/btn_arrow_77da291c6e.gif" alt=3D"Btn ar=
+row 77da291c6e" width=3D"16" height=3D"11" /> -->
+                        </span>
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+<!-- SIDEBAR -->
+    <table width=3D'100%'  cellspacing=3D'0'>
+  <tr>
+    <td align=3D'center' bgcolor=3D'#0B5A61' style=3D'padding:54px 15px 40p=
+x 15px' class=3D'td'>
+      <table width=3D'584' class=3D'table'>
+        <tr>
+          <td>
+            <!-- LEFT COL -->
+            <table width=3D'282' align=3D'left' style=3D'float:left' class=
+=3D'column'>
+              <tr>
+                <td align=3D'center'>
+                  <a target=3D'_blank' href=3D"https://e.lumosity.com/mpss/=
+c/4wA/xdkKAA/t.27k/9qUkllTlSq6W6O9yR77N3A/h5/FrfOYoWjCcRRKh-2BXvSgQoDeH8crM=
+23ztxof8-2Fy5ymLyyBZRKjMJ0YTcZjYH3K-2FB134EKAEy0oG29i0wuwYzcMsh8UYWqRaxy7Xb=
+0YxC4EMs3C-2By7EeBP77y85pzakQAIKSbvnUoQC1tfpdbHD8VW9rtj76yPyEXCm0AQed2BHo47=
+vH-2BbKijM048vW1gbOLjYt7kC-2Fw7zPpPD0w2I5RDQLmEUuqaypxYzD4MQQJMhyXvuZZAtAl3=
+cqPf7LuGRYKkubJ4U6Ch9oXaRrmJhj9hz-2BNkhPYV7YTxi9GrE6CC6t8-2BlRuEIDsZ-2FYRM2=
+eGA0bjDpMsfpnXw1ff4XZH67L6dqjg-3D-3D">
+                    <img class=3D"img" src=3D"https://asset.lumosity.com/as=
+sets%2Fmf1463594078774-elgnpnxmgk7wfeg9-5b10561991a98fc961ebf55e448cb31f%2F=
+familyPlan%402x.png" width=3D"282" height=3D"160" />
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td style=3D'padding-bottom:40px;color:white;'>
+                  <h3 class=3D'h3'>Plan familiar</h3>
+                  <p class=3D'p'>El Plan familiar de Lumosity te permite a=
+=C3=B1adir hasta 4 amigos o familiares a tu cuenta</p>
+                  <p class=3D'p'>
+                    <a target=3D'_blank' style=3D'color:white;text-decorati=
+on:underline;' href=3D"https://e.lumosity.com/mpss/c/4wA/xdkKAA/t.27k/9qUkl=
+lTlSq6W6O9yR77N3A/h6/FrfOYoWjCcRRKh-2BXvSgQoDeH8crM23ztxof8-2Fy5ymLyyBZRKjM=
+J0YTcZjYH3K-2FB134EKAEy0oG29i0wuwYzcMsh8UYWqRaxy7Xb0YxC4EMs3C-2By7EeBP77y85=
+pzakQAIKSbvnUoQC1tfpdbHD8VW9rtj76yPyEXCm0AQed2BHo47vH-2BbKijM048vW1gbOLjYt7=
+kC-2Fw7zPpPD0w2I5RDQLmEUuqaypxYzD4MQQJMhyXvuZZAtAl3cqPf7LuGRYKkubJ4U6Ch9oXa=
+RrmJhj9hz-2BNkhPYV7YTxi9GrE6CC6t8-2BlRuEIDsZ-2FYRM2eGA0bjDpMsfpnXw1ff4XZH67=
+L6dqjg-3D-3D">
+                      M=C3=A1s informaci=C3=B3n
+                    </a>
+                  </p>
+                </td>
+              </tr>
+            </table>
+
+            <!-- RIGHT COL -->
+            <table width=3D'282' align=3D'right' style=3D'float:right' clas=
+s=3D'column'>
+              <tr>
+                <td align=3D'center'>
+                  <a target=3D'_blank' style=3D'color:white;text-decoration=
+:underline;' href=3D"https://e.lumosity.com/mpss/c/4wA/xdkKAA/t.27k/9qUkllT=
+lSq6W6O9yR77N3A/h7/FrfOYoWjCcRRKh-2BXvSgQoBqvg5pAB6uHNwQ6I818M5mzR40itJgTZg=
+xiy1Ax70LnRQEwjempVtHZhzNe1Lu1g1rTu7AaoNjsTJgVTZqSxW9RznqruWEs26Uep6FoEpsyP=
+e8-2Fq-2Bzx9-2F3FyOy-2FtFkXtuBxkHhlPu5lyVCR3vPxX5IoEBnviLbQmIYzfHL9ZWF87uyn=
+E-2FJq1EWxQEqxOWRWOnsF19sm7oNyiWczz5KLsoDMo6TxuyUd9alXHhfpc4AJ9TBzAdUV9keJg=
+G4lax7jAsXHrCfxcpyVCAAP0Gt-2B6QaF3WDUFMbkK7UMjDiaBNsYY5dFWwzxDXQNf-2FFFBDTV=
+xQ-3D-3D">
+                    <img class=3D"img" src=3D"https://asset.lumosity.com/as=
+sets%2Fmf1463594710768-6avxyv6kzk4sfy27-0ffaa8e5d441239428499b054d12b4b2%2F=
+mobile%402x.png" width=3D"282" height=3D"160" />
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td style=3D'padding-bottom:40px;color:white;'>
+                  <h3 class=3D'h3'>Aplicaciones m=C3=B3viles de Lumosity</h=
+3>
+                  <p class=3D'p'>Entrenamiento cerebral donde quiera que es=
+t=C3=A9s. Para iOS y Android.</p>
+                  <p class=3D'p'>
+                    <a target=3D'_blank' style=3D'color:white;text-decorati=
+on:underline;' href=3D"https://e.lumosity.com/mpss/c/4wA/xdkKAA/t.27k/9qUkl=
+lTlSq6W6O9yR77N3A/h8/FrfOYoWjCcRRKh-2BXvSgQoBqvg5pAB6uHNwQ6I818M5mzR40itJgT=
+Zgxiy1Ax70LnRQEwjempVtHZhzNe1Lu1g1rTu7AaoNjsTJgVTZqSxW9RznqruWEs26Uep6FoEps=
+yPe8-2Fq-2Bzx9-2F3FyOy-2FtFkXtuBxkHhlPu5lyVCR3vPxX5IoEBnviLbQmIYzfHL9ZWF87u=
+ynE-2FJq1EWxQEqxOWRWOnsF19sm7oNyiWczz5KLsoDMo6TxuyUd9alXHhfpc4AJ9TBzAdUV9ke=
+JgG4lax7jAsXHrCfxcpyVCAAP0Gt-2B6QaF3WDUFMbkK7UMjDiaBNsYY5dFWwzxDXQNf-2FFFBD=
+TVxQ-3D-3D">
+                      M=C3=A1s informaci=C3=B3n
+                    </a>
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<!-- FOOTER -->
+        <table width=3D'100%' cellspacing=3D'0'>
+      <tr>
+        <td align=3D'center' bgcolor=3D'#333333' style=3D'padding:44px 15px=
+ 140px 15px;' class=3D'td'>
+          <table width=3D'354' class=3D'table'>
+            <tr>
+              <td>
+                <table width=3D'110' align=3D'left' style=3D'float:left;' c=
+lass=3D'column'>
+                  <tr>
+                    <td align=3D'center' style=3D'padding-bottom:20px'>
+                      <a target=3D'_blank' href=3D"https://e.lumosity.com/m=
+pss/c/4wA/xdkKAA/t.27k/9qUkllTlSq6W6O9yR77N3A/h9/FrfOYoWjCcRRKh-2BXvSgQoHXh=
+s-2BPNypKUbhQydOcHTyRKozZsP-2F-2FFNMOHr8fmBn3zbNvttdvYA9WHqCd0d4JS24WaQ-2BK=
+MrhqABp7d8rrOC3zsYGxY-2FGbWoFuYG0USjVeLNJZDlQG8f-2F5KSuy0ReTLy-2Fb0JAV-2FKJ=
+4YlqAP14pCxsMOx5e2gCG2AJCq8dEj59DHaixRmIZi1xXaDUd9NtLt8g-3D-3D">
+                        <img alt=3D"Lumosity" src=3D"https://asset.lumosity=
+.com/assets%2Fmf1459271820270-c5o1ofbvpto1gl1g-ea7372ecdf57b9cd75ef1a7ed287=
+a585%2Flogo_wordmark_white%402x.png" width=3D"109" height=3D"32" />
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+                <table width=3D'209' align=3D'right' style=3D'float:right;'=
+ class=3D'column'>
+                  <tr>
+                    <td align=3D'center' style=3D'padding-bottom:20px'>
+                      <img usemap=3D"#socialmap" src=3D"https://asset.lumos=
+ity.com/assets%2Fmf1459358987166-mmvcf1m7c4bw8ub9-a00579554ffb7a82ec8dc2238=
+4b3117d%2Ficons_social%402x.png" alt=3D"Assets%2fmf1459358987166 mmvcf1m7c4=
+bw8ub9 a00579554ffb7a82ec8dc22384b3117d%2ficons social%402x" width=3D"209" =
+height=3D"29" />
+                      <map name=3D'socialmap'>
+                        <area shape=3D'circle' coords=3D'15 15 15' target=
+=3D'_blank' href=3D"https://e.lumosity.com/mpss/c/4wA/xdkKAA/t.27k/9qUkllTl=
+Sq6W6O9yR77N3A/h10/eAc2-2B5JiIBe4Rx1zyL0vROoreEDUfNp-2FHHEoG20MlCMQIZhGgN2V=
+j-2B5fkM5El5Tzo3kEzgONdYWIm3jbfCZE4b32f13Mu3ZgXeUIo5e8v2jkXaVrCMe3d85aggERK=
+hXV77jQWDXv6v2HPSU0FGMv-2BW-2Bge6-2BLO9wK0Olg3R-2FmED-2F5KFzq7xeOUpjOlmLub7=
+LA2-2BxVCvjoREdT3SVMvT4ivw-3D-3D" alt=3D'Lumosity on Facebook'>
+                        <area shape=3D'circle' coords=3D'51 15 15' target=
+=3D'_blank' href=3D"https://e.lumosity.com/mpss/c/4wA/xdkKAA/t.27k/9qUkllTl=
+Sq6W6O9yR77N3A/h11/VE2atosPJwyp5yA4oN-2FSaoaYHg81mJ1-2Bx-2FYby0bMlepejKMVve=
+-2B5ptB6lW6bz6zrlUQlMu-2F3RkmkJiiVezIEzyuWBYpke57ywYfW8B1iIAtES1RroA0ym1OYs=
+kzw79DxOGCHO87pkV7u5-2BFy-2BhIFPsZSp0BCpzSMa54e2ekN5lTldRFsjNaD6TJuyVBrFtGG=
+U9kqt5wC1GEp68moUZ8-2B3A-3D-3D" alt=3D'Lumosity on Twitter'>
+                        <area shape=3D'circle' coords=3D'87 15 15' target=
+=3D'_blank' href=3D"https://e.lumosity.com/mpss/c/4wA/xdkKAA/t.27k/9qUkllTl=
+Sq6W6O9yR77N3A/h12/HpF-2FgN2L-2BTd3XbGhi4PFtRR5ElDQi7Mqur-2B7x2rifNHlVNd4hW=
+z70O9rpMRawUkPe1-2FRHkQQ1i5VPhAF6jGteFVuX-2FwX-2FVt5EfCs3XlEqh0qSjSNsCA63Xh=
+X4MwxLi7dvzcT4-2BeYAqNdkSiAfH8Q978e3Z5M-2B3jeA-2FFncoB-2BysFBVN486j6xJxp1Io=
+alTmvrQXNioWoPVDx09UwPQVC1NvvoCV7QXXfQSReUuR7hHmI-3D" alt=3D'Lumosity on Go=
+ogle+'>
+                        <area shape=3D'circle' coords=3D'123 15 15' target=
+=3D'_blank' href=3D"https://e.lumosity.com/mpss/c/4wA/xdkKAA/t.27k/9qUkllTl=
+Sq6W6O9yR77N3A/h13/i41K-2FvbQBVKuIVW29rFpYtyJAWnL3D1YPFVDCrDI7V7dz10IdT-2BK=
+YCrmcMr8X6A-2Bk0uHrTPHFmE5hVShgBV6atpY-2FSLewzFSG4X7ue0Q2POTFVSizBsOCIZeBDh=
+AF1W9v8ZQZvHuWjFEXH5qazZhVhXcSvTDHJ7cwFR9OCaoY3paJbDd2VVivYLon-2BovkdF4OXec=
+UoaKHIBtUD5tZUZLHb1PKHfltD53UgDvbQ1V0Ac-3D" alt=3D'Lumosity on Pinterest'>
+                        <area shape=3D'circle' coords=3D'159 15 15' target=
+=3D'_blank' href=3D"https://e.lumosity.com/mpss/c/4wA/xdkKAA/t.27k/9qUkllTl=
+Sq6W6O9yR77N3A/h14/i9eHV9-2FAOlB39uP5DeK-2FKsaFu4EpF1ffqMmWN8M2ucHxt6H6L6lH=
+WzgtasRN0gTvnKbwGsgleBzE7zVnq9lQJm6ddi8l75g5xlUTyerBnwiENU-2FVv8VWXMCIV9byl=
+9RRloNxvIE8a-2Fir1kaYWYTA0nws6TO4WdHHt5ANP-2BRNbWuS8X1tHNun9950C7McxKij70iP=
+kK9nV9H0-2BiF4uSiFBg-3D-3D" alt=3D'Lumosity on YouTube'>
+                        <area shape=3D'circle' coords=3D'195 15 15' target=
+=3D'_blank' href=3D"https://e.lumosity.com/mpss/c/4wA/xdkKAA/t.27k/9qUkllTl=
+Sq6W6O9yR77N3A/h15/4ydtLfolQ9FtxbDCPcML1SSOnIO0V-2FvNdUf5a2eBZ3zAH6Z1tAwSJ5=
+HjRJJSfkE1oHryLfz9f8i0MJPjF7kMZJN-2FemdamJwdCEwW8GBiIpdn0lzONzv4LuE03BNYYW7=
+kdg5ElMmgYpPffnFMXtfqWXmj-2BYM8zxzUAt8jGaQ7ickxn-2Bo6tMInCbyv2s-2BQP0Cy3Mms=
+A8oxj-2Fr0RXPqgypEBQ-3D-3D" alt=3D'Lumosity on Pinterest'>
+                      </map>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <table width=3D'584' class=3D'table'>
+            <tr>
+              <td align=3D'center' style=3D'padding-bottom:20px'>
+                <h5 class=3D'h5'>
+                  <a target=3D'_blank' style=3D'color:white;text-decoration=
+:underline;' href=3D"https://e.lumosity.com/mpss/c/4wA/xdkKAA/t.27k/9qUkllT=
+lSq6W6O9yR77N3A/h16/O0QHwRuE1ZGk5byChXHmAoUG2B9A94489GWKm5kXdg5a8VGFE1ITubE=
+5SnKuzeG-2BGXnqYKS-2F5fdpvz9-2B2sC31TArMKeoxmoeUbCImFDuG-2BYfzbLYaFnbEh2xjr=
+7kz3e3hS8TdMRie7UTQ6t9PuhyAo-2FkmL5-2B8OXwCMyUHDIsFYAD-2Fw0pKeDs0wZ7AdnZtfp=
+HqfdBdIhpEZE95-2BRvEjRMvQ-3D-3D">Human Cognition Project</a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a target=3D'_blank' style=3D'color:white;text-decoration=
+:underline;' href=3D"https://e.lumosity.com/mpss/c/4wA/xdkKAA/t.27k/9qUkllT=
+lSq6W6O9yR77N3A/h17/YibFWwT2pwfhiIILRPZ3N4OFIGHls15RxBaSyIlWpEqtMGdN7bXbDwO=
+8fE5NIDEchU-2Bum4RxQIPW2Z9-2FmpgM4ioI6NWWH0KWbvCikHvLXlqKTEZ8ITFSlR40Fn3FD4=
+X4dRsJYN0RsDuwmJ8Z1ebIetzjFJCREC1eo8fYHZh1sIo6yTcx8qEg3fj1KLFrm5CXCkDE5r-2F=
+6j77KQO8OX1YmWw-3D-3D">Acerca de</a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a target=3D'_blank' style=3D'color:white;text-decoration=
+:underline;' href=3D"https://e.lumosity.com/mpss/c/4wA/xdkKAA/t.27k/9qUkllT=
+lSq6W6O9yR77N3A/h18/1Gw3AVjwbl8fg6ghqJKaYUfV62HIEH4qU9bEqDHaE7d9aZbUjcp3Af4=
+cNV3JYvg9jWtht27Y9Wza8FZiJf4cPIHhMKqNGeU5eaX7N2El72IihrTI9j-2BcCi8Ttg3EcK3X=
+dSyBJL2ngksLxI7xuZ5H-2BByMH2IHKpR3xS6yfYcZMRKZ0RFZRd-2B7HGTcBhyfDBOH0u-2BJ0=
+Qccyfw56AiR5kQbmw-3D-3D">Legal</a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a target=3D'_blank' style=3D'color:white;text-decoration=
+:underline;' href=3D"https://e.lumosity.com/mpss/c/4wA/xdkKAA/t.27k/9qUkllT=
+lSq6W6O9yR77N3A/h19/FrfOYoWjCcRRKh-2BXvSgQoCoYE853xJbTG1qE78Xg-2BpEHcuxZPiT=
+oBiX8lAn6Thau1Wxa-2B8CvLmYRzXiTRvx4AKXYvO9afHccemMw2I8DzlPpwVmUf6KC0Z4rOzJL=
+zeJBl0PlOXjJPViz45diLmLsxVttIL7dQ-2BvNBwLxPYdp9RCf5cVIfa3fccV68PkodYGXtVO5s=
+bqubAeSiB6N01OvPg-3D-3D">
+                    Ayuda
+                  </a>
+                </h5>
+              </td>
+            </tr>
+            <tr>
+                <td align=3D'center' style=3D'color:white;'>
+                  <h5 class=3D'h5'>
+                    <a target=3D'_blank' style=3D'color:white;text-decorati=
+on:underline;' href=3D"https://e.lumosity.com/mpss/c/4wA/xdkKAA/t.27k/9qUkl=
+lTlSq6W6O9yR77N3A/h20/FrfOYoWjCcRRKh-2BXvSgQoN2Om3IQgC-2BFffqzGdBj9OtruXwpK=
+v0fiJL4fUVSK0qwJkd6Oq0pBzlH-2B-2BiQ-2Fc2pxeTmuh7oRlkqHx-2FFw-2B2h9mpyrUP46B=
+piQVbdiqERxAPF1PfhDjKvR0w8DXZr0zZXOFbfA-2FcPIsu8cf03IW4XRal0LJ-2FR7pudc5Toa=
+pETiMmLH-2Fa-2FKuN-2Fb-2FQj6g6SeXcXvLs7eaURpetNXdgyHXlY2I7HNqKB0MUMe-2BiAHe=
+N3rxTDhpwWvZ0HyycnXYipEp-2BHIqp41U-2FsIN7Zldt-2FpctxlaY-3D">Haz clic aqu=C3=
+=AD</a> para actualizar tus preferencias de correo electr=C3=B3nico o darte=
+ de baja para dejar de recibirlos. <br />Ten en cuenta que aunque te des de=
+ baja, te seguiremos enviando algunos correos electr=C3=B3nicos relacionado=
+s con tu cuenta, como detalles de tus compras o solicitudes de restablecimi=
+ento de contrase=C3=B1a.
+                  </h5>
+                  <h5 class=3D'h5'>
+                    La direcci=C3=B3n de correo electr=C3=B3nico asociada a=
+ tu cuenta de Lumosity es <a href=3D"mailto:fotaegui@fapersa.com" target=3D=
+'_top' style=3D'color:white !important;text-decoration:underline !important=
+;'>fotaegui@fapersa.com</a>.
+                    <br />
+                    =C2=BFTienes preguntas? =C2=A1Estamos aqu=C3=AD para ay=
+udarte! <a target=3D'_blank' style=3D'color:white;text-decoration:underline=
+;' href=3D"https://e.lumosity.com/mpss/c/4wA/xdkKAA/t.27k/9qUkllTlSq6W6O9yR=
+77N3A/h21/FrfOYoWjCcRRKh-2BXvSgQoCoYE853xJbTG1qE78Xg-2BpEHcuxZPiToBiX8lAn6T=
+hau1Wxa-2B8CvLmYRzXiTRvx4AKXYvO9afHccemMw2I8DzlPpwVmUf6KC0Z4rOzJLzeJBl0PlOX=
+jJPViz45diLmLsxVttIL7dQ-2BvNBwLxPYdp9RCf5cVIfa3fccV68PkodYGXtVO5sbqubAeSiB6=
+N01OvPg-3D-3D">Cont=C3=A1ctanos</a> en cualquier momento.
+                    <br />
+                    Lumos Labs, Inc. | 140 New Montgomery, Floor 19 | San F=
+rancisco, CA 94105
+                  </h5>
+                </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+<img src=3D"https://e.lumosity.com/mpss/o/4wA/xdkKAA/t.27k/9qUkllTlSq6W6O9y=
+R77N3A/o.gif" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"heigh=
+t:1px !important;width:1px !important;border-width:0 !important;margin-top:=
+0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-le=
+ft:0 !important;padding-top:0 !important;padding-bottom:0 !important;paddin=
+g-right:0 !important;padding-left:0 !important;"/>
+</body>
+</html>
+
+----==_mimepart_59240934da122_711a510c2856040--

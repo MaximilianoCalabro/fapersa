@@ -1,0 +1,496 @@
+Return-Path: <josekoko2009@hotmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id YdOJEL32R1gKGwAATLP0zA
+	for <jpruata@fapersa.com>; Wed, 07 Dec 2016 08:47:09 -0300
+Return-path: <josekoko2009@hotmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Wed, 07 Dec 2016 08:47:09 -0300
+Received: from blu004-omc2s32.hotmail.com ([65.55.111.107]:52693)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-SHA384:256)
+	(Exim 4.87)
+	(envelope-from <josekoko2009@hotmail.com>)
+	id 1cEagi-00026n-EG
+	for jpruata@fapersa.com; Wed, 07 Dec 2016 08:47:09 -0300
+Received: from NAM04-BN3-obe.outbound.protection.outlook.com ([65.55.111.71]) by BLU004-OMC2S32.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Wed, 7 Dec 2016 03:46:24 -0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=OHEOeHwf66kd1nSzSIUWbj7igpPkxf68+eDmKBoaJJY=;
+ b=tqleyGRKvZ/YENpVGGjAAX5JwJC7T02zpkykcTk5YR6Se6eYBthYhc/nqFpkCMhzMVS+4Pzwvtcbn6cG81Ok9Hc4NJ5G+k93L5JzoSSYukkMN4YYB6FPMKvcqDuJmdjH1CrYIL5WUS6m+q27UcBxinfr+sASVh4EyPUw16obDr9oGKIGTEEq4Wqenk2hu3FyX1H+2g766pgnnaS6NGFShgZFonobudEd/lLlcZY2wjygLt7UtypRvDazUl/CNcGbbCdH5klZVayzPtM4sDHIm6mMvo6eyORRo3hFZwkfeprHYeUNX6EdDL4w1U+/VL/qXltwju4HuyvHeI+F+4G8CA==
+Received: from CO1NAM04FT046.eop-NAM04.prod.protection.outlook.com
+ (10.152.90.54) by CO1NAM04HT062.eop-NAM04.prod.protection.outlook.com
+ (10.152.91.199) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.734.4; Wed, 7 Dec
+ 2016 11:46:23 +0000
+Received: from DM5PR13MB0923.namprd13.prod.outlook.com (10.152.90.53) by
+ CO1NAM04FT046.mail.protection.outlook.com (10.152.91.117) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.761.6 via Frontend Transport; Wed, 7 Dec 2016 11:46:22 +0000
+Received: from DM5PR13MB0923.namprd13.prod.outlook.com ([10.168.239.10]) by
+ DM5PR13MB0923.namprd13.prod.outlook.com ([10.168.239.10]) with mapi id
+ 15.01.0771.008; Wed, 7 Dec 2016 11:46:22 +0000
+From: jose kokoyaczuk <josekoko2009@hotmail.com>
+To: Juan Pablo Ruata <jpruata@fapersa.com>
+CC: "juampiruata@hotmail.com" <juampiruata@hotmail.com>
+Subject: =?iso-8859-1?Q?Presupuesto_semilla_y_ferilizante__ma=EDz_segunda?=
+Thread-Topic: =?iso-8859-1?Q?Presupuesto_semilla_y_ferilizante__ma=EDz_segunda?=
+Thread-Index: AQHSUHOUc5y/OlRG9UKRxk7gRjTbaw==
+Date: Wed, 7 Dec 2016 11:46:22 +0000
+Message-ID: <DM5PR13MB092398DCA3B458C287E4B022D7850@DM5PR13MB0923.namprd13.prod.outlook.com>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-slblob-mailprops: qY7UPrLqMbaURk94qKbF9+KDGf8/ZU6IwZwYVn6/5/irQ6QoHY4ccuknYY5yCTNvma1JnTYZ32fy15Q9DAWIWrBx89Cc5wWvTjvR3gpdAlaBFBNa9j11riftNBTozdWebGgToy3gRMLR22FpJH6vOX6OZCDjWIPtfhdVlKykoNKfn9Q9Xnth/aBqr+PdeTISoglz7cQ2neT0XybNaB65x6aZPuXSYbAIbkGpjl2i+a0XQie3rNxPV7kjRdLB8+ScAE3oZb2DyKzzj9Sbj4goZhgG5YQS73X1hhzsFRTbWVzbBf8G4FeWWrY/v3NC3+u0XoUxyFPBDuzzptug9goqPAvTIf3cArstOHkAMDmUKSftn8FRXtlgYAX2JPEtFqLkbjngTd004RGp7AjClqHzpUxEMwCG1Joc0UN2i6U6QNddMzSYp9zHRVIr5/7P2oYAeY1rmCujK+4nJ1bPbG/sxQxTWTtwhaqlIgmW2Qk1H0NsPb2Qvi+ktn68fxeeHHt0OeVgMOfs7Cn5sqhlXRYhbL2aDT4O/doYd0ebVRjAUu3GON4jIGgc5xJuMqsdF4fAIKJgQjKbBGVDdyGE/uoOAYXT81x6Tg3E13g4kypzcW55n4TpkkZvktXKuOM+jRPBO2YUv071gOUQJ6Tnr8behmtjNEoiNmxgTXTJoza/LzsISY4YSzn4UuUMO49k1/4X1Z6zWRP2OZ8HXFoer3rqww==
+authentication-results: hotmail.com; dkim=none (message not signed)
+ header.d=none;hotmail.com; dmarc=none action=none header.from=hotmail.com;
+x-incomingtopheadermarker: OriginalChecksum:FD82E96209BF859A2275BF65ECEBB796E7FD9B896DE72A99073F2BA4A4327EE6;UpperCasedChecksum:226E3FF8A379B8585250593AFA7390891D8A9FC3FB76455921C00E3D7D1D3439;SizeAsReceived:8133;Count:39
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [LVwVQlszDlQSHF3/RKqHOP08xlZKJB9u]
+x-incomingheadercount: 39
+x-eopattributedmessage: 0
+x-microsoft-exchange-diagnostics: 1;CO1NAM04HT062;5:pyxLJYKfPzHmBikj5aImRprl5xRzGX55hppyA+5S1C1DK2ERlSNGEPIY1XV4tsS+RHPo3mBvUNw/Pm0GSAxwBChdOC2tm5ddy8Mv/7Asd3DSUiBk78joPeqU87GQ3tla/NHwa1tkN878fGirdoE9ag==;24:pdh2beVX57u692ZFTPM6v46zqlAUdfHYvy9ZQLoRpuYgehoLHmk+j1JQjgMHegzSvGZDcmgE3QCvK92R88NJ7RVj6COQVv+YeyCtc0LcZGE=;7:wNbJJq1jqhiVMV1qJfLLC7rN2JanRwx5ZGi7SucJlw5iCNrxKNPIPuuP2l2F0gKjan/zqIXWsw6gSSAv+A+LwqWprd/5BBQWN7VbXDdo1K55H+z8qVOzmWsKbkl8rJjl1wITCOELajPbPNgxmbeolAwZpuD+n5HJh/g58xCyZKexYae6v9x1XdBcWGuX5So+a/hWEVds07UeBzRs4Y0cngFzS5i+5DlF3gdzthEHSA9mf5y3fX+Tu/ufY5S5OadKSrc+6QTkjSjdyQv0NLkmRvijd59Iz0g9y+RP/4K7+nLFAcXxZgyhxyUTalSYgh9ztRLIEgR07auKn2dAnmaZoTOBBzDTFV+zrHuFNEaFEEk=
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(10019020)(98900003);DIR:OUT;SFP:1102;SCL:1;SRVR:CO1NAM04HT062;H:DM5PR13MB0923.namprd13.prod.outlook.com;FPR:;SPF:None;LANG:es;
+x-ms-office365-filtering-correlation-id: e7950d20-aed1-4f87-5605-08d41e96ab08
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(1601124038)(5061506293)(5061507293)(1603103113)(1603101340)(1601125047);SRVR:CO1NAM04HT062;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(432015012)(82015046);SRVR:CO1NAM04HT062;BCL:0;PCL:0;RULEID:;SRVR:CO1NAM04HT062;
+x-forefront-prvs: 01494FA7F7
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_DM5PR13MB092398DCA3B458C287E4B022D7850DM5PR13MB0923namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: hotmail.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 07 Dec 2016 11:46:22.6047
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CO1NAM04HT062
+X-OriginalArrivalTime: 07 Dec 2016 11:46:24.0872 (UTC) FILETIME=[89B73680:01D2507F]
+X-Spam-Status: No, score=-4.8
+X-Spam-Score: -47
+X-Spam-Bar: ----
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Juanpi, buen día, te paso el presupuesto de los maíces de
+   segunda, que tengo disponibles, que me habías pedido, y te lo estaba debiendo:
+    Semilla de Maíz Duo28 Power CordUSS 167 por bolsa 80000 semillas (densidad
+    de siembra 0.8 a 0.9 bolsa por hectarea). [...] 
+ 
+ Content analysis details:   (-4.8 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+                             [65.55.111.107 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends in
+                             digit (josekoko2009[at]hotmail.com)
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (josekoko2009[at]hotmail.com)
+ -3.0 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+X-Spam-Flag: NO
+
+--_000_DM5PR13MB092398DCA3B458C287E4B022D7850DM5PR13MB0923namp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Juanpi, buen d=EDa,
+
+
+
+te paso el presupuesto de los ma=EDces de segunda, que tengo disponibles, q=
+ue me hab=EDas pedido, y te lo estaba debiendo:
+
+
+
+Semilla de Ma=EDz Duo28 Power Cord...........USS 167 por bolsa 80000  semil=
+las (densidad de siembra 0.8 a 0.9 bolsa por hectarea).
+
+
+Semilla de Ma=EDz La Tijereta 626 VT Triple Pro...........USS 183 por bolsa=
+ 80000  semillas (densidad de siembra 0.8 a 0.9 bolsa por hectarea).
+
+
+Semilla de Ma=EDz La Tijereta 623 VT Triple Pro...........USS 170 por bolsa=
+ 80000  semillas (densidad de siembra 0.8 a 0.9 bolsa por hectarea).
+
+
+Semilla de Ma=EDz La Tijereta 621 RR(refugio)...........USS 102 por bolsa 8=
+0000  semillas (densidad de siembra 0.8 a 0.9 bolsa por hectarea).
+
+
+
+
+Precios + IVA (21%)
+
+
+
+Fosfato diam=F3nico (18N,46P); (granel).................U$S 499 por tonelad=
+a, puesto en el campo.
+
+
+Super fosfato Triple Calcio (0N,46P); (granel)......U$S 446 por tonelada, p=
+uesto en el campo.
+
+
+Urea granulada (46N,0P); (granel).......................U$S 385 por tonelad=
+a, puesto en el campo.
+
+
+
+
+Precios + IVA (10.5%).
+
+
+
+
+Alternativas de FORMAS DE PAGO:
+
+
+ 1) Con entrega de cheque a 30 y 60  d=EDas  pesificado y sin inter=E9s (se=
+ pesifica el d=EDa de entrega de los cheques).
+
+2) Tarjetas rurales (-Agronaci=F3n: pesificado; con d=EDas libres hasta 180=
+, 270 y hasta 365 d=EDas; con tasa anual bonificada en un 6%.-  Macro: pesi=
+ficado; con 180 d=EDas libres, sin inter=E9s y con 4 % de gastos.
+
+3) Con entrega de 6  cheques, pesificado, (30-60-90-120-150-180 d=EDas),  (=
+se pesifica el d=EDa de entrega de los cheques); a los precios dados hay qu=
+e sumarle un 5.25 % de financiaci=F3n total; (en pesos).
+
+4) Con entrega de 6  cheques, pesificado,con 2 meses de gracia  (Primer cuo=
+ta en Febrero)  (se pesifica el d=EDa de entrega de los cheques); a los pre=
+cios dados hay que sumarle un 7.25 % de financiaci=F3n total; (en pesos).
+
+5) Con entrega de 12 cheques, pesificado, (30-60-90-120-150-180-210-240-270=
+-300-330-360 d=EDas),  (se pesifica el d=EDa de entrega de los cheques); a =
+los precios dados hay que sumarle un 9.75% de financiaci=F3n total; (en pes=
+os).
+
+6) Con entrega de 1 cheque, pesificado, hasta  el 30/06/2017, con una tasa =
+del 1.5 % mensual. (9% de tasa total- al 30/06/2017).
+
+7) Con entrega de 1 cheque, pesificado, hasta  el 30/11/17, con una tasa de=
+l 2% mensual.
+
+8) Canje con soja  a Mayo 2017, a fijar precio,( se puede fijar precio de l=
+a soja hasta el 30/04/2017); a los precios dados hay que sumarle una financ=
+iaci=F3n total del 4%.
+
+
+
+Por cualquier duda, consulta, o si est=E1 faltando algo, por favor avisame.
+
+Saludos, Jose.
+
+
+
+--_000_DM5PR13MB092398DCA3B458C287E4B022D7850DM5PR13MB0923namp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"divtagdefaultwrapper" dir=3D"ltr" style=3D"font-size: 12pt; colo=
+r: rgb(0, 0, 0);">
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif;">Juanpi, bu=
+en d=EDa,</p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif;"><br>
+</p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif;"><br>
+</p>
+<p></p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size: =
+16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, '=
+Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'A=
+ndroid Emoji', EmojiSymbols;">te paso
+ el presupuesto de los ma=EDces de segunda, que tengo disponibles, que me h=
+ab=EDas pedido, y te lo estaba debiendo:</span></p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size: =
+16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, '=
+Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'A=
+ndroid Emoji', EmojiSymbols;"><br>
+</span></p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size: =
+16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, '=
+Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'A=
+ndroid Emoji', EmojiSymbols;"><br>
+</span></p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size: =
+16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, '=
+Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'A=
+ndroid Emoji', EmojiSymbols;">Semilla
+ de Ma=EDz Duo28 Power Cord...........USS 167 por bolsa 80000 &nbsp;semilla=
+s (densidad de siembra 0.8 a 0.9 bolsa por hectarea).</span><br>
+</p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size: =
+16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, '=
+Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'A=
+ndroid Emoji', EmojiSymbols;"><br>
+</span></p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size: =
+16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, '=
+Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'A=
+ndroid Emoji', EmojiSymbols;">Semilla
+ de Ma=EDz La Tijereta 626 VT Triple Pro...........USS 183 por bolsa 80000 =
+&nbsp;semillas (densidad de siembra 0.8 a 0.9 bolsa por hectarea).</span></=
+p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size: =
+16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, '=
+Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'A=
+ndroid Emoji', EmojiSymbols;"><br>
+</span></p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size: =
+16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, '=
+Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'A=
+ndroid Emoji', EmojiSymbols;">Semilla
+ de Ma=EDz La Tijereta 623 VT Triple Pro...........USS 170 por bolsa 80000 =
+&nbsp;semillas (densidad de siembra 0.8 a 0.9 bolsa por hectarea).</span></=
+p>
+<p style=3D"font-size: 16px;"><br>
+<span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, 'Apple C=
+olor Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android =
+Emoji', EmojiSymbols;"></p>
+<p style=3D"font-size: 16px; font-family: Calibri, Arial, Helvetica, sans-s=
+erif;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, '=
+Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'A=
+ndroid Emoji', EmojiSymbols;">Semilla
+ de Ma=EDz La Tijereta 621 RR(refugio)...........USS 102 por bolsa 80000 &n=
+bsp;semillas (densidad de siembra 0.8 a 0.9 bolsa por hectarea).</span></p>
+<div><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, 'Ap=
+ple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'And=
+roid Emoji', EmojiSymbols;"><br>
+</span></div>
+</span>
+<p></p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size: =
+16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, '=
+Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'A=
+ndroid Emoji', EmojiSymbols;"><br>
+</span></p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size: =
+16px;"><br>
+</p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size: =
+16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, '=
+Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'A=
+ndroid Emoji', EmojiSymbols;">Precios
+ &#43; IVA (21%)</span></p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size: =
+16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, '=
+Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'A=
+ndroid Emoji', EmojiSymbols;"><br>
+</span></p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size: =
+16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, '=
+Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'A=
+ndroid Emoji', EmojiSymbols;"><br>
+</span></p>
+<p style=3D"font-size: 16px;">Fosfato diam=F3nico (18N,46P); (granel)......=
+...........U$S 499 por tonelada, puesto en el campo.</p>
+<p style=3D"font-size: 16px;"><br>
+</p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, 'Apple Colo=
+r Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emo=
+ji', EmojiSymbols; font-size: 16px;">
+Super fosfato Triple Calcio (0N,46P);&nbsp;(granel)......U$S 446 por tonela=
+da, puesto en el campo.</p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, 'Apple Colo=
+r Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emo=
+ji', EmojiSymbols; font-size: 16px;">
+<span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, 'Apple C=
+olor Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android =
+Emoji', EmojiSymbols; font-size: 16px;"><br>
+</span></p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, 'Apple Colo=
+r Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emo=
+ji', EmojiSymbols; font-size: 16px;">
+<span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, 'Apple C=
+olor Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android =
+Emoji', EmojiSymbols; font-size: 16px;">Urea granulada (46N,0P);&nbsp;</spa=
+n><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, 'Apple=
+ Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Androi=
+d Emoji', EmojiSymbols; font-size: 16px;">(granel).......................U$=
+S
+ 385 por tonelada, puesto en el campo.</span></p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, 'Apple Colo=
+r Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emo=
+ji', EmojiSymbols; font-size: 16px;">
+<span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, 'Apple C=
+olor Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android =
+Emoji', EmojiSymbols; font-size: 16px;"><br>
+</span></p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, 'Apple Colo=
+r Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emo=
+ji', EmojiSymbols; font-size: 16px;">
+<br>
+</p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, 'Apple Colo=
+r Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emo=
+ji', EmojiSymbols; font-size: 16px;">
+<span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, 'Apple C=
+olor Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android =
+Emoji', EmojiSymbols; font-size: 16px;"><br>
+</span></p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, 'Apple Colo=
+r Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emo=
+ji', EmojiSymbols; font-size: 16px;">
+<span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, 'Apple C=
+olor Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android =
+Emoji', EmojiSymbols; font-size: 16px;">Precios &#43; IVA (10.5%).</span></=
+p>
+<div><br>
+</div>
+<p></p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size: =
+16px;"><span style=3D"font-family: Calibri, Arial, Helvetica, sans-serif, '=
+Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'A=
+ndroid Emoji', EmojiSymbols;"><br>
+</span></p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size: =
+16px;"><br>
+</p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size: =
+16px;"><span style=3D"font-size: 12pt; color: rgb(68, 68, 68); line-height:=
+ 22.72px;"><b style=3D"line-height: 22.72px;"><u style=3D"line-height: 22.7=
+2px;">Alternativas de&nbsp;F</u></b></span><strong style=3D"color: rgb(68, =
+68, 68); font-size: 15px; line-height: 21.3px;"><u style=3D"line-height: 21=
+.3px;">ORMAS
+ DE PAGO</u></strong><span style=3D"color: rgb(68, 68, 68); font-size: 15px=
+; line-height: 21.3px;">:</span><br>
+</p>
+<div dir=3D"ltr" style=3D"font-family: Calibri, Arial, Helvetica, sans-seri=
+f; line-height: 21.3px; color: rgb(68, 68, 68); font-size: 15px;">
+<strong style=3D"line-height: 21.3px;"><u style=3D"line-height: 21.3px;"></=
+u></strong>&nbsp;</div>
+<div dir=3D"ltr" style=3D"font-family: Calibri, Arial, Helvetica, sans-seri=
+f; line-height: 21.3px; color: rgb(68, 68, 68); font-size: 15px;">
+<strong style=3D"line-height: 21.3px;"><u style=3D"line-height: 21.3px;"></=
+u></strong>&nbsp;1) Con entrega de cheque a 30 y 60 &nbsp;d=EDas&nbsp; pesi=
+ficado y sin inter=E9s&nbsp;(se pesifica el d=EDa de entrega de los cheques=
+).</div>
+<div dir=3D"ltr" style=3D"font-family: Calibri, Arial, Helvetica, sans-seri=
+f; line-height: 21.3px; color: rgb(68, 68, 68); font-size: 15px;">
+<br>
+</div>
+<div dir=3D"ltr" style=3D"font-family: Calibri, Arial, Helvetica, sans-seri=
+f; line-height: 21.3px; color: rgb(68, 68, 68); font-size: 15px;">
+<span style=3D"line-height: 21.3px;">2)&nbsp;</span><strong style=3D"line-h=
+eight: 21.3px;">Tarjetas rurales&nbsp;</strong><span style=3D"line-height: =
+21.3px;">(-</span><b style=3D"line-height: 21.3px;">Agronaci=F3n:</b><span =
+class=3D"x_x_x_x_x_x_x_x_x_x_x_x_ecxApple-converted-space" style=3D"line-he=
+ight: 21.3px;">&nbsp;</span><span style=3D"line-height: 21.3px;">pesificado=
+;
+ con d=EDas libres hasta 180, 270 y hasta&nbsp;</span><span style=3D"line-h=
+eight: 21.3px;">365 d=EDas; con tasa anual bonificada en un&nbsp;6%.-&nbsp;=
+<b>&nbsp;Macro</b>:&nbsp;<span style=3D"line-height: 21.3px;">pesificado; c=
+on&nbsp;</span>180 d=EDas libres, sin inter=E9s y con 4 % de gastos.</span>=
+<br>
+</div>
+<div dir=3D"ltr" style=3D"font-family: Calibri, Arial, Helvetica, sans-seri=
+f; line-height: 21.3px; color: rgb(68, 68, 68); font-size: 15px;">
+<div dir=3D"ltr" style=3D"line-height: 21.3px;">
+<div dir=3D"ltr" style=3D"line-height: 21.3px;">
+<div dir=3D"ltr" style=3D"line-height: 21.3px;"><br>
+</div>
+<div dir=3D"ltr" style=3D"line-height: 21.3px;"><span style=3D"line-height:=
+ 21.3px;">3) Con entrega de 6</span><b style=3D"line-height: 21.3px;">&nbsp=
+; cheques,&nbsp;pesificado, (30-60-90-120-150-180 d=EDas),</b><span style=
+=3D"line-height: 21.3px;">&nbsp;&nbsp;(se pesifica el d=EDa de entrega
+ de los cheques); a los precios dados hay que&nbsp;</span><b style=3D"line-=
+height: 21.3px;">sumarle un 5.25 % de financiaci=F3n total; (en pesos).</b>=
+</div>
+<div dir=3D"ltr" style=3D"line-height: 21.3px;"><span style=3D"line-height:=
+ 21.3px;"><br style=3D"line-height: 21.3px;">
+</span></div>
+<div dir=3D"ltr" style=3D"line-height: 21.3px;"><span style=3D"line-height:=
+ 21.3px;">4) Con entrega de 6</span><b style=3D"line-height: 21.3px;">&nbsp=
+; cheques,&nbsp;pesificado,<u style=3D"line-height: 21.3px;">con 2&nbsp;mes=
+es de gracia</u>&nbsp; (Primer cuota en Febrero)</b><span style=3D"line-hei=
+ght: 21.3px;">&nbsp;
+ (se pesifica el d=EDa de entrega de los cheques); a los precios dados hay =
+que&nbsp;</span><b style=3D"line-height: 21.3px;">sumarle un 7.25 % de fina=
+nciaci=F3n total; (en pesos).</b></div>
+<div dir=3D"ltr" style=3D"line-height: 21.3px;"><span style=3D"line-height:=
+ 21.3px;"><br style=3D"line-height: 21.3px;">
+</span></div>
+<div dir=3D"ltr" style=3D"line-height: 21.3px;"><span style=3D"line-height:=
+ 21.3px;">5) Con entrega de 12</span><b style=3D"line-height: 21.3px;">&nbs=
+p;cheques,&nbsp;pesificado, (30-60-90-120-150-180-210-240-270-300-330-360 d=
+=EDas),</b><span style=3D"line-height: 21.3px;">&nbsp;&nbsp;(se
+ pesifica el d=EDa de entrega de los cheques); a los precios dados hay que&=
+nbsp;</span><b style=3D"line-height: 21.3px;">sumarle un 9.75% de financiac=
+i=F3n total; (en pesos).</b></div>
+<div dir=3D"ltr" style=3D"line-height: 21.3px;"><b><br>
+</b><b style=3D"line-height: 21.3px;">
+<div dir=3D"ltr" style=3D"line-height: 21.3px;"><b style=3D"line-height: 21=
+.3px;"><span style=3D"line-height: 21.3px;">6) Con entrega de 1</span><b st=
+yle=3D"line-height: 21.3px;">&nbsp;cheque,&nbsp;pesificado,&nbsp;<u>hasta &=
+nbsp;el 30/06/2017</u>, con una tasa del 1.5&nbsp;% mensual. (9% de
+ tasa total- al 30/06/2017).</b></b></div>
+<div dir=3D"ltr" style=3D"line-height: 21.3px;"><br>
+<b style=3D"line-height: 21.3px;"><b style=3D"line-height: 21.3px;"><b styl=
+e=3D"line-height: 21.3px;">
+<div dir=3D"ltr" style=3D"line-height: 21.3px;"><b style=3D"line-height: 21=
+.3px;"><span style=3D"line-height: 21.3px;">7) Con entrega de 1</span><b st=
+yle=3D"line-height: 21.3px;">&nbsp;cheque,&nbsp;pesificado,&nbsp;<u>hasta &=
+nbsp;el 30/11/17</u>, con una tasa del 2% mensual.&nbsp;</b></b></div>
+</b></b><b style=3D"line-height: 21.3px;"></b></b></div>
+<div dir=3D"ltr" style=3D"line-height: 21.3px;"><b style=3D"line-height: 21=
+.3px;"><br>
+</b></div>
+<div dir=3D"ltr" style=3D"line-height: 21.3px;"><b style=3D"line-height: 21=
+.3px;">8) Canje con soja &nbsp;a Mayo 2017, a fijar precio,( se puede fijar=
+ precio de la soja hasta el 30/04/2017); a los precios dados hay que sumarl=
+e una financiaci=F3n total del 4%.</b></div>
+<div><b style=3D"line-height: 21.3px;"><br>
+</b></div>
+</b></div>
+<div dir=3D"ltr" style=3D"line-height: 21.3px;"><b style=3D"line-height: 21=
+.3px;"><br style=3D"line-height: 21.3px;">
+</b></div>
+<div dir=3D"ltr" style=3D"line-height: 21.3px;"><br>
+</div>
+<div dir=3D"ltr" style=3D"line-height: 21.3px;">
+<div dir=3D"ltr" style=3D"line-height: 21.3px;"><span style=3D"line-height:=
+ 21.3px;">Por cualquier duda, consulta, o si est=E1 faltando algo, por favo=
+r avisame.</span><br>
+</div>
+<div dir=3D"ltr" style=3D"line-height: 21.3px;"><span style=3D"line-height:=
+ 21.3px;"><br>
+</span></div>
+<div dir=3D"ltr" style=3D"line-height: 21.3px;"><span style=3D"line-height:=
+ 21.3px;">Saludos, Jose.</span></div>
+</div>
+</div>
+</div>
+</div>
+<br>
+<p></p>
+<p style=3D"font-family: Calibri, Arial, Helvetica, sans-serif;"><br>
+</p>
+</div>
+</body>
+</html>
+
+--_000_DM5PR13MB092398DCA3B458C287E4B022D7850DM5PR13MB0923namp_--

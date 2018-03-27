@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Circular Content Carousel with jQuery" />
+    <meta name="keywords" content="jquery, conent slider, content carousel, circular, expanding, sliding, css3" />
+	<meta name="author" content="Codrops" />
+	<title>FAPERSA Fábrica</title>
+	
+	<!-- Main CSS file -->
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css" media="all" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" />
+	<link rel="stylesheet" href="css/font-awesome.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="images/icon/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icon/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icon/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icon/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="images/icon/apple-touch-icon-57-precomposed.png">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Coustard:900' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Rochester' rel='stylesheet' type='text/css' />
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	
+</head>
+<body>
+
+	<!-- PRELOADER -->
+	<div id="st-preloader">
+		<div id="pre-status">
+			<div class="preload-placeholder"></div>
+		</div>
+	</div>
+	<!-- /PRELOADER -->
+
+	
+	<!-- HEADER -->
+	<header id="header">
+		<nav class="navbar st-navbar navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#st-navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+				    	<span class="icon-bar"></span>
+				    	<span class="icon-bar"></span>
+				    	<span class="icon-bar"></span>
+					</button>
+					<a class="logo" href="index.html"><img src="images/logo.png" alt=""></a>
+				</div>
+
+				<!-- <div class="collapse navbar-collapse" id="st-navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+				    	<li><a href="#header">Inicio</a></li>
+				    	<li><a href="#empresa">La Empresa</a></li>
+				    	<li><a href="#calidad">Sistema de Calidad</a></li>
+				    	<li><a href="#marc">Marcas</a></li>
+				    	<li><a href="#contact">Contacto</a></li>
+					</ul>
+				</div> --><!-- /.navbar-collapse -->
+			</div><!-- /.container -->
+		</nav>
+	</header>
+	<!-- /HEADER -->
+
+	<!-- IMAGEN -->
+	<section id="imagen">		
+		<div class="section-img">
+			<img class="img-responsive" width="100%" src="images/1.jpg" alt="">
+		</div>
+	</section>
+	<!-- /IMAGEN -->
+	
+	<!-- EMPRESA -->
+	<section id="empresa">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-title">
+						<h1>La Empresa</h1>
+					</div>
+				</div>
+
+				<div class="col-md-12 col-sm-12 st-service">
+					<h2><i class="fa fa-cogs"></i> Capacidad Productiva</h2>
+					<p>Hoy en día, la empresa tiene una capacidad productiva de aproximadamente 700.000 piezas mensuales, equivalentes a 120 toneladas de piezas terminadas, variando estas cantidades con la distribución del diámetro de las piezas fabricadas.
+
+					Tenemos capacidad de máquinaria para obtener las tolerancias dimensionales de 0,0015 mm de diámetro exterior, 0,0005 mm en la redondez y 0,05 um de rugosidad de diámetro exterior.</p>
+				</div>
+
+				<div class="col-md-6 col-sm-6 st-service">
+					<h2><i class="fa fa-male"></i> Clientes</h2>
+					<p>Tenemos 40 años de experiencia en proveedores de partes a los mercados de equipos originales y de reemplazo, el suministro de algunos de los coches grandes y los fabricantes de pistones.
+
+					En todos estos años, ha desarrollado Fapersa clientes en el mercado local e internacional.
+
+					Fapersa exporta más que el 70% de la producción de pernos de pistón.
+
+					Los destinos más importantes son: EE.UU., Brasil, Uruguay, Venezuela, México, Sudáfrica, así como en Europa y áfrica del Norte.</p>
+				</div>
+
+				<div class="col-md-6 col-sm-6 st-service">	
+					<img class="img-responsive" width="100%" src="images/mapa.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- /EMPRESA -->
+
+	<!-- SIST CALIDAD -->
+	<section id="calidad">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="section-title" style="text-align: center">
+					<h1>SISTEMA DE CALIDAD</h1>
+				</div>
+				<div class="col-sm-12">
+					<div class="calidad text-center">
+						<p>Nuestra empresa fue certificada ISO 9002 en abril de 1999 con Det Norske Veritas,
+						y luego, siguiendo con nuestra política de mejora continua, en el año 2005,
+						 Fapersa certificó ISO TS 16949, el nivel internacional más alto en estándares de calidad
+						 para compañías automotrices en todo el mundo.    
+						Nuestros proveedores de materias primas son todos certificados ISO 9001 Y / O ISO TS 16949.</p>
+						<a hsrc="images/ISOCertificate.jpg" class="btn btn-send" data-toggle="modal" data-target="#iso"">Ver Certificado</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade product_view" id="iso">
+			<div class="modal-content">
+                <div class="modal-header">
+                    <a href="#" data-dismiss="modal" class="pull-right"><span class="xxx glyphicon glyphicon-remove"></span></a>
+                </div>
+                <div class="modal-body" style="max-height: 75px">
+                    <div class="row">
+                        <div class="col-md-12">
+                        	<center>
+								<img class="isoc" src="images/ISOCertificate.jpg">
+							</center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</section>
+	<!-- /SIST CALIDAD -->
+
+	<!-- MARCAS -->
+	<section id="marc">
+	<div>
+	<h1>MARCAS</h1>
+	<br>
+		<ul id="flexisel">
+		    <li><img src="images/marcas/chevrolet.png" /></li>
+		    <li><img src="images/marcas/ford.png" /></li>
+		    <li><img src="images/marcas/aston-martin.png" /></li>
+		    <li><img src="images/marcas/lamborghini.png" /></li>
+		    <li><img src="images/marcas/ferrari.png" /></li>                                                 
+		</ul> 
+	</div>
+	</section>
+	<!-- /MARCAS-->
+	
+	<!-- CONTACT -->
+	<section id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+				    <div class="col-lg-offset col-lg" id="panel">
+				        <h1>CONTACTO</h1>
+
+				        <form>
+					    	<div class="group">
+					    	    <input type="text" required>
+					    	    <span class="highlight"></span>
+					    	    <span class="bar"></span>
+					    	    <label>Nombre</label>
+					    	</div>
+
+					    	<div class="group">
+					    	    <input type="text" required>
+					    	    <span class="highlight"></span>
+					    	    <span class="bar"></span>
+					    	    <label>Apellido</label>
+					    	</div>
+					        
+					        <div class="group">
+					            <input type="text" required>
+					            <span class="highlight"></span>
+					            <span class="bar"></span>
+					            <label>Teléfono</label>
+					        </div>
+
+					        <div class="group">
+					            <input type="mail" required>
+					            <span class="highlight"></span>
+					            <span class="bar"></span>
+					            <label>Correo Electrónico</label>
+					        </div>
+
+						    <div class="group">
+					            <input type="text" required>
+					            <span class="highlight"></span>
+					            <span class="bar"></span>
+					            <label>Empresa</label>
+					        </div>
+
+					        <div class="group">
+					            <input type="file">
+					            <span class="highlight"></span>
+					            <span class="bar"></span>
+					        </div>
+
+					        <div class="group">
+					            <input type="text" required>
+					            <span class="highlight"></span>
+					            <span class="bar"></span>
+					            <label>Consulta</label>
+					        </div>
+					        <div class="col-md-5">
+					        	capcha
+					        </div>
+					        <div class="group col-md-5">
+					            <center> <button type="submit" class="btn btn-submit">Mandar<span class="glyphicon glyphicon-send"></span></button></center>
+					        </div>
+					        <div class="col-md-2">
+					        	 <center> <button type="reset" class="btn btn-submit">Borrar<span class="glyphicon glyphicon-remove"></span></button></center>
+					        </div>
+						</form>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<br><br><br>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3396.892607916391!2d-60.727409796707626!3d-31.63679065093494!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9c72692211078557!2sFapersa+ICSA!5e0!3m2!1ses-419!2sar!4v1522154361339" width="100%" height="75%" frameborder="0" style="border:0" allowfullscreen></iframe>
+					<br><br>
+					<p class="st-address" style="text-align: center"><i class="fa fa-map-marker"></i> <strong>Lamadrid 3065 (3000), Santa Fe, Argentina</strong></p>
+					<br>
+					<p class="st-phone" style="text-align: center"><i class="fa fa-mobile"></i> <strong>+54 (0342)4810810</strong></p>
+					<p class="st-phone" style="text-align: center"><i class="fa fa-mobile"></i> <strong>+54 (0342)4995936</strong></p>
+					<br>
+					<p class="st-email" style="text-align: center"><i class="fa fa-envelope-o"></i> <strong>fapersa@fapersaicsa.com.ar</strong></p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- /CONTACT -->
+
+	<!-- FOOTER -->
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-4">	
+					<div class="foot" style="text-align: center">
+						<h1>FAPERSA</h1>
+						<h6>I.C.S.A</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- /FOOTER -->
+
+
+	<!-- Scroll-up -->
+	<div class="scroll-up">
+		<ul><li><a href="#header"><i class="fa fa-angle-up"></i></a></li></ul>
+	</div>
+
+	
+	<!-- JS -->
+	<script type="text/javascript" src="js/jquery.min.js"></script><!-- jQuery -->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script><!-- Bootstrap -->
+	<script type="text/javascript" src="js/jquery.parallax.js"></script><!-- Parallax -->
+	<script type="text/javascript" src="js/smoothscroll.js"></script><!-- Smooth Scroll -->
+	<script type="text/javascript" src="js/masonry.pkgd.min.js"></script><!-- masonry -->
+	<script type="text/javascript" src="js/jquery.fitvids.js"></script><!-- fitvids -->
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script><!-- Owl-Carousel -->
+	<script type="text/javascript" src="js/jquery.counterup.min.js"></script><!-- CounterUp -->
+	<script type="text/javascript" src="js/waypoints.min.js"></script><!-- CounterUp -->
+	<script type="text/javascript" src="js/jquery.isotope.min.js"></script><!-- isotope -->
+	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script><!-- magnific-popup -->
+	<script type="text/javascript" src="js/scripts.js"></script><!-- Scripts -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<!-- the jScrollPane script -->
+	<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="js/jquery.contentcarousel.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+	<script type="text/javascript">
+		$('#ca-container').contentcarousel();
+	</script>
+	<script type="text/javascript">
+		$(window).load(function() {
+		    $("#flexisel").flexisel();
+
+		    $("#flexisel").flexisel({
+		        visibleItems: 5,
+		        itemsToScroll: 1,
+		        animationSpeed: 100,
+		        infinite: true,
+		        navigationTargetSelector: null,
+		        autoPlay: {
+		            enable: false,
+		            interval: 5000,
+		            pauseOnHover: true
+		        },
+		        responsiveBreakpoints: { 
+		            portrait: { 
+		                changePoint:480,
+		                visibleItems: 2,
+		                itemsToScroll: 1
+		            }, 
+		            landscape: { 
+		                changePoint:640,
+		                visibleItems: 2,
+		                itemsToScroll: 2
+		            },
+		            tablet: { 
+		                changePoint:768,
+		                visibleItems: 3,
+		                itemsToScroll: 3
+		            }
+		        },
+		        loaded: function(object) {
+		            console.log('Slider loaded...');
+		        },
+		        before: function(object){
+		            console.log('Before transition...');
+		        },
+		        after: function(object) {
+		            console.log('After transition...');
+		        },
+		        resize: function(object){
+		            console.log('After resize...');
+		        }
+		    });
+		});
+		</script>
+</body>
+</html>

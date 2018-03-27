@@ -1,0 +1,162 @@
+Return-Path: <luismazzu@hotmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id SZXbGXI6h1hecQAATLP0zA
+	for <jpruata@fapersa.com>; Tue, 24 Jan 2017 08:28:50 -0300
+Return-path: <luismazzu@hotmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Tue, 24 Jan 2017 08:28:50 -0300
+Received: from col004-omc4s11.hotmail.com ([65.55.34.213]:64582)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-SHA384:256)
+	(Exim 4.87)
+	(envelope-from <luismazzu@hotmail.com>)
+	id 1cVzHM-0007kv-8V
+	for jpruata@fapersa.com; Tue, 24 Jan 2017 08:28:50 -0300
+Received: from NAM02-SN1-obe.outbound.protection.outlook.com ([65.55.34.200]) by COL004-OMC4S11.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Tue, 24 Jan 2017 03:28:07 -0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=b0qEmx81H1lisf2NRRLdmFg02xask9XlDgf8MiKbtyQ=;
+ b=Jrk7/sAb2DfoUN28kAJYfbD4DtIMsKIr/yNjtSwva5tN7vAr9sBVS6UmNFcaL/ctHNmD7w8wnH0WkoGUXPyZQ5mbA45VzCq/AaPhdJy9E5Iatx46Q5zL2HUc6zgfnOkQA5Qs3h2hUGr8lUS4X4R89QbZTGRG/+qQUYFbImK7upnbe8jcXtIkG4aUCy7f8ZcrBamhpIue/Htz9ssSHylF+Wk98Ktv6cRn//rwRjZDBrelxAd2A94Yoq/VyVBQCC36Mo7wOTzV9RLgwD4ibimPashiOKcABl6HpZWB3/QNBTbsKhZVvnAbcKmxH3veq1Gq9wXc7rgcuTI5l/ykJ7b8Ug==
+Received: from CY1NAM02FT051.eop-nam02.prod.protection.outlook.com
+ (10.152.74.53) by CY1NAM02HT020.eop-nam02.prod.protection.outlook.com
+ (10.152.74.220) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.803.8; Tue, 24 Jan
+ 2017 11:28:06 +0000
+Received: from CY1PR17MB0425.namprd17.prod.outlook.com (10.152.74.53) by
+ CY1NAM02FT051.mail.protection.outlook.com (10.152.74.148) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.803.8 via Frontend Transport; Tue, 24 Jan 2017 11:28:06 +0000
+Received: from CY1PR17MB0425.namprd17.prod.outlook.com ([10.163.253.19]) by
+ CY1PR17MB0425.namprd17.prod.outlook.com ([10.163.253.19]) with mapi id
+ 15.01.0860.021; Tue, 24 Jan 2017 11:28:06 +0000
+From: Luis Mazzuferi <luismazzu@hotmail.com>
+To: Juan Pablo Ruata <jpruata@fapersa.com>
+Subject: entrega llaves
+Thread-Topic: entrega llaves
+Thread-Index: AQHSdjSW9N4iAWJxVUS8m7Rgj0BCYA==
+Date: Tue, 24 Jan 2017 11:28:05 +0000
+Message-ID: <CY1PR17MB0425BAAD2A43B683F6E4A930B5750@CY1PR17MB0425.namprd17.prod.outlook.com>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: fapersa.com; dkim=none (message not signed)
+ header.d=none;fapersa.com; dmarc=none action=none header.from=hotmail.com;
+x-incomingtopheadermarker: OriginalChecksum:A9CB9FA02E78C5FC3251A4D7643814B617146295BCC91C136E09FFB18BBA3755;UpperCasedChecksum:11C33EA035B313B9D406CB73355EF0154957F31DD7AAF41E879A934CF7AE2F81;SizeAsReceived:7441;Count:37
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [QT3IY4qelCH8XomCvJRHnoESq809dN4J]
+x-incomingheadercount: 37
+x-eopattributedmessage: 0
+x-microsoft-exchange-diagnostics: 1;CY1NAM02HT020;7:zQnE2Qo4GKaTk5XbaeApVm/mdArwaFsiRhsMeaagEYIftQtxor5Yw4EdB7w/kd0DacfGTiLUeoDAQGKsdYrftSyddIANsJgwLPJdfjstzTCMC3pUPvtkjl5i9yq568FJh9dBbsk8CJVPqd7+FJLrqshnkoHv2EjADITKfyEaAxXt6e9deAPcVnzD+vwefWtezSIiYz3/AzuzORhdV8mZ9hEs/tY6hBA2h56gQsNbOJdVGX4mMW2tK6KFQBgZEVLAOOKOizfl85HrD2y3Zt3dwQCBwP9maTv2dyzc8KjuGrh6KqY5GW4125ZiM/nF6JoeTv7KY/wQXsqG6/AUJ397LJM3SLBBz0R+H8ssxQ4ArPr8CCQCk+vSVmHc0kW8Zvh1ODIJABlE+QnmsFBtcJYMSrmGoDQ83zP8hLY7xGqTK6O3T+p7PXmVRcAPOX8Qb/kOo0Vra3p51TvZoT9uSNftag==
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(10019020)(98900005);DIR:OUT;SFP:1102;SCL:1;SRVR:CY1NAM02HT020;H:CY1PR17MB0425.namprd17.prod.outlook.com;FPR:;SPF:None;LANG:es;
+x-ms-office365-filtering-correlation-id: fe6f159f-737e-4ea2-ed0f-08d4444c110e
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(1601124038)(5061506344)(1603103113)(1603101340)(1601125047)(1701031023);SRVR:CY1NAM02HT020;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(444111334)(444112120)(432015012)(82015046);SRVR:CY1NAM02HT020;BCL:0;PCL:0;RULEID:;SRVR:CY1NAM02HT020;
+x-forefront-prvs: 0197AFBD92
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/alternative;
+	boundary="_000_CY1PR17MB0425BAAD2A43B683F6E4A930B5750CY1PR17MB0425namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: hotmail.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 24 Jan 2017 11:28:05.9095
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CY1NAM02HT020
+X-OriginalArrivalTime: 24 Jan 2017 11:28:07.0980 (UTC) FILETIME=[EFBEC6C0:01D27634]
+X-Spam-Status: No, score=-5.2
+X-Spam-Score: -51
+X-Spam-Bar: -----
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Hola Juanpi, entiendo que el galpón ya lo desocuparon, no
+   es necesario que alguien vaya a sauce para entregarme las llaves, te sugiero
+    hagas un escrito recibiendo las llaves y las retiro de Fapersa. Respecto
+   del último mes de alquiler te propongo me hagas un cheque a 30/60 días que
+    a mi me sirve. [...] 
+ 
+ Content analysis details:   (-5.2 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -3.2 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (luismazzu[at]hotmail.com)
+ -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+                             [65.55.34.213 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+X-Spam-Flag: NO
+
+--_000_CY1PR17MB0425BAAD2A43B683F6E4A930B5750CY1PR17MB0425namp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Hola Juanpi, entiendo que el galp=F3n ya lo desocuparon, no es necesario qu=
+e alguien vaya a sauce para entregarme las llaves, te sugiero hagas un escr=
+ito recibiendo las llaves y las retiro de Fapersa.
+
+Respecto del =FAltimo mes de alquiler te propongo me hagas un cheque a 30/6=
+0 d=EDas que a mi me sirve.
+
+Aguardo tu respuesta, abzo
+
+
+Luis Ra=FAl Mazzuferi
+luismazzu@hotmail.com<mailto:luismazzu@hotmail.com>
+
+--_000_CY1PR17MB0425BAAD2A43B683F6E4A930B5750CY1PR17MB0425namp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt;color:#2672EC;font=
+-family:Arial,Helvetica,sans-serif;" dir=3D"ltr">
+<strong id=3D"OWAStrongID">
+<p>Hola Juanpi, entiendo que el galp=F3n ya lo desocuparon, no es necesario=
+ que alguien vaya a sauce para entregarme las llaves, te sugiero hagas un e=
+scrito recibiendo las llaves y las retiro de Fapersa.</p>
+<p>Respecto del =FAltimo mes de alquiler te propongo me hagas un cheque a 3=
+0/60 d=EDas que a mi me sirve.</p>
+<p>Aguardo tu respuesta, abzo</p>
+</strong>
+<p><br>
+</p>
+<div id=3D"Signature">
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt; color:#2672EC; fo=
+nt-family:Arial,Helvetica,sans-serif">
+<div><font color=3D"#2672EC" style=3D""><b><font face=3D"Arial" size=3D"2" =
+style=3D"font-size:10pt">Luis Ra=FAl Mazzuferi</font><font face=3D"Arial" s=
+tyle=3D""><br>
+</font></b></font><font color=3D"#2672EC" style=3D""><b><font face=3D"Arial=
+" size=3D"2" style=3D"font-size:10pt"><a href=3D"mailto:luismazzu@hotmail.c=
+om" id=3D"LPNoLP">luismazzu@hotmail.com</a></font><font face=3D"Arial" styl=
+e=3D""><br>
+</font></b></font></div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+--_000_CY1PR17MB0425BAAD2A43B683F6E4A930B5750CY1PR17MB0425namp_--

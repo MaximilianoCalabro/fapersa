@@ -1,0 +1,477 @@
+Return-Path: <rferrero@redsurcos.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id GbVbBHEfJFmQbgAATLP0zA
+	for <jpruata@fapersa.com>; Tue, 23 May 2017 08:39:29 -0300
+Return-path: <rferrero@redsurcos.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Tue, 23 May 2017 08:39:29 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:56994 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <rferrero@redsurcos.com>)
+	id 1dD89w-0001VF-4Y
+	for jpruata@fapersa.com; Tue, 23 May 2017 08:39:28 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id C69DF7F21B
+	for <jpruata@fapersa.com>; Tue, 23 May 2017 08:39:27 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id MB5PFuQ_n7vJ for <jpruata@fapersa.com>;
+	Tue, 23 May 2017 08:39:27 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 086977F232; Tue, 23 May 2017 08:39:27 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id BC6137F21B
+	for <jpruata@fapersa.com>; Tue, 23 May 2017 08:39:25 -0300 (ART)
+Received-SPF: pass (redsurcos.com: Sender is authorized to use 'rferrero@redsurcos.com' in 'mfrom' identity (mechanism 'include:aspmx.googlemail.com' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="rferrero@redsurcos.com"; helo=mail-oi0-f45.google.com; client-ip=209.85.218.45
+Received: from mail-oi0-f45.google.com (mail-oi0-f45.google.com [209.85.218.45])
+	by fw.fapersa.com (Postfix) with ESMTPS id 0F50F60040
+	for <jpruata@fapersa.com>; Tue, 23 May 2017 08:39:22 -0300 (ART)
+Received: by mail-oi0-f45.google.com with SMTP id h4so197104751oib.3
+        for <jpruata@fapersa.com>; Tue, 23 May 2017 04:39:22 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=redsurcos-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=/HiewvEOt1c85kd/TNof+atUSh6qtTPMYWOxCiwWlz0=;
+        b=KO80qfgSvDqnEkVbqsyeoQ0I4QEuxOHzHnQieIct6yo0I5l6XGD2/pHUm5uWP6DZHb
+         c+Snva+Z09fjlsU4W0fSQFTnSw/eQ3eCp5y+FiVOFtgPnhjywlRfwTCVG1Uz9RmV1Nlw
+         vIansXJ/oqDvpRF3q1kgN0RY13UVVo2Ju3agzy13t1bkeP9nH3ulLIQUqdC/Ve2iAarD
+         d48Msn1ydWJLy1qhsnPViuUyeDybUDu/3gPHqhmExGOeFEpVznLDQteTOepuzw5q0+m1
+         t98UOthoUinQ2oJDq6KGOg5kYRzcSbqFAd6jFAoQQ5tohXIlzJSsGisjP1Y1vjyV+bWA
+         jDxQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=/HiewvEOt1c85kd/TNof+atUSh6qtTPMYWOxCiwWlz0=;
+        b=bMWBzrVyJCVgaUNQbk8f4StTrZVN2y78wxDUogGnyewJoAyeZlbV90pO0A+FIetpgv
+         REtMRe84jcYBdFC2rj3FXww50P5lav/FfF7gvXQ8X4Tkvh53+KEiVXv68W0jehJG5aJv
+         XkCx8n53C9Q5le9LJReLor/vlU0UWer1c+Nyz0b2fJ4W3i3exc0aajWhiHE2IuabLw0S
+         fhtLySTxaQaDpJVjtkJlpZ9fJDxtW2Zm88u0v2N0gW4HOc0VJMEeTg/zOPMXikSBqGCI
+         NCsGjO2CGbjw1y0jpK1qGyVUxAlDuV+f/M00jTgcoytRzAx4PPmO8Lr291jTUEM5I3t9
+         Djog==
+X-Gm-Message-State: AODbwcAcm4c9ffGVURo6EGhLXCGf5mkUlHMxFxtQNT48SfBydPOkmkD8
+	EuNqTevngIlcOjsdfhq0g3CRQfsFenPx
+X-Received: by 10.157.54.72 with SMTP id w66mr1278171otb.246.1495539560692;
+ Tue, 23 May 2017 04:39:20 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.182.181.41 with HTTP; Tue, 23 May 2017 04:39:20 -0700 (PDT)
+In-Reply-To: <CAMXZJOYhH8LLi6zzX-U_N=--5--aXehx8XvJnHOV3pikKJVSdA@mail.gmail.com>
+References: <DM5PR06MB2395485C47B574A86E963792B6E50@DM5PR06MB2395.namprd06.prod.outlook.com>
+ <CAMXZJObUR=_HPKysaQAmigWAVJjN+ymSOT4Wypew+R3s_HB4gg@mail.gmail.com> <CAMXZJOYhH8LLi6zzX-U_N=--5--aXehx8XvJnHOV3pikKJVSdA@mail.gmail.com>
+From: Rodrigo Ferrero <rferrero@redsurcos.com>
+Date: Tue, 23 May 2017 08:39:20 -0300
+Message-ID: <CAMXZJOYHs7UBmY_Os7oO5PuF-=qhipr6bAgHMqYBTR5xpff7cw@mail.gmail.com>
+Subject: Fwd: La turquina
+To: Juan Pablo Ruata <juampiruata@hotmail.com>, "jpruata@fapersa.com" <jpruata@fapersa.com>
+Content-Type: multipart/alternative; boundary="94eb2c000b904350c405502f70b9"
+
+--94eb2c000b904350c405502f70b9
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hola TATENGON,viste algo de esto?
+
+
+---------- Mensaje reenviado ----------
+De: Rodrigo Ferrero <rferrero@redsurcos.com>
+Fecha: 19 de mayo de 2017, 11:36
+Asunto: Re: La turquina
+Para: Juan Pablo Ruata <juampiruata@hotmail.com>
+
+
+Hola TATENGON!!!! tas contento con el empate???? jajajajaja
+Ahi te paso los precios,que tengas un buen dia
+
+ESKOBA FULL II SURCOS X 20LT........u$s 3,70
+DEDALO ELITE X 20 LT........................u$s 5,70
+
+APOFIS ELITE X 20 LT  (cletodin 24 % c/aceite incl)........................=
+.
+u$s13,20
+ORCUSS ELITE X 20 LT  (haloxifop 25 % c/aceite
+incluido).......................u$s 17,90
+
+POWEROIL X 20 LT (aceite metilado de soja).......u$s 2,75
+
+
+
+****Agronacion: 5% dto hasta 360 dias, QUE TULLLL JAJAJ!!!!!!
+
+***GALICIA RURA : hasta 90 dias s/interes.
+
+
+El 19 de mayo de 2017, 9:45, Rodrigo Ferrero <rferrero@redsurcos.com>
+escribi=C3=B3:
+
+> dale papa,ya te armo y te mando
+>
+>
+> El 19 de mayo de 2017, 9:11, Juan Pablo Ruata <juampiruata@hotmail.com>
+> escribi=C3=B3:
+>
+>>
+>> Rodrigo bien dia.
+>>
+>> Te consulto por precios de Glifosato, 24D, algun graminicida y
+>> coadyuvante.
+>>
+>> Abrazos
+>>
+>>
+>
+>
+> --
+> *Rodrigo Ferrero *
+> *Ventas Mostrador Santa Fe *
+>
+> Av. Freyre 2363 (CP 3000)
+> Santa Fe
+> Tel. (0342) 455 2366
+> Cel. (0342) 156 121129
+> www.redsurcos.com
+>
+> AVISO LEGAL:
+>
+> El contenido del presente mensaje es privado, estrictamente confidencial =
+y
+> exclusivo para su destinatario pudiendo contener informaci=C3=B3n protegi=
+da por
+> normas legales y de secreto profesional. Bajo ninguna circunstancia, su
+> contenido puede ser transmitido, divulgado o revelado a terceros en forma
+> alguna. En consecuencia, de haber recibido por error solicitamos contacta=
+r
+> al remitente y eliminar este mensaje. La distribuci=C3=B3n o copia de est=
+e
+> mensaje est=C3=A1 estrictamente prohibida. Esta comunicaci=C3=B3n es s=C3=
+=B3lo para
+> prop=C3=B3sitos de informaci=C3=B3n y no debe ser considerada como propue=
+sta,
+> aceptaci=C3=B3n ni como una declaraci=C3=B3n de voluntad oficial de la em=
+presa
+> remitente del presente. La transmisi=C3=B3n de e-mails no garantiza que e=
+l
+> correo electr=C3=B3nico sea seguro o libre de error. Por consiguiente, no
+> manifestamos que esta informaci=C3=B3n sea completa o precisa. Toda infor=
+maci=C3=B3n
+> est=C3=A1 sujeta a alterarse sin previo aviso. -
+>
+
+
+
+--=20
+*Rodrigo Ferrero *
+*Ventas Mostrador Santa Fe *
+
+Av. Freyre 2363 (CP 3000)
+Santa Fe
+Tel. (0342) 455 2366
+Cel. (0342) 156 121129
+www.redsurcos.com
+
+AVISO LEGAL:
+
+El contenido del presente mensaje es privado, estrictamente confidencial y
+exclusivo para su destinatario pudiendo contener informaci=C3=B3n protegida=
+ por
+normas legales y de secreto profesional. Bajo ninguna circunstancia, su
+contenido puede ser transmitido, divulgado o revelado a terceros en forma
+alguna. En consecuencia, de haber recibido por error solicitamos contactar
+al remitente y eliminar este mensaje. La distribuci=C3=B3n o copia de este
+mensaje est=C3=A1 estrictamente prohibida. Esta comunicaci=C3=B3n es s=C3=
+=B3lo para
+prop=C3=B3sitos de informaci=C3=B3n y no debe ser considerada como propuest=
+a,
+aceptaci=C3=B3n ni como una declaraci=C3=B3n de voluntad oficial de la empr=
+esa
+remitente del presente. La transmisi=C3=B3n de e-mails no garantiza que el
+correo electr=C3=B3nico sea seguro o libre de error. Por consiguiente, no
+manifestamos que esta informaci=C3=B3n sea completa o precisa. Toda informa=
+ci=C3=B3n
+est=C3=A1 sujeta a alterarse sin previo aviso. -
+
+
+
+--=20
+*Rodrigo Ferrero *
+*Ventas Mostrador Santa Fe *
+
+Av. Freyre 2363 (CP 3000)
+Santa Fe
+Tel. (0342) 455 2366
+Cel. (0342) 156 121129
+www.redsurcos.com
+
+AVISO LEGAL:
+
+El contenido del presente mensaje es privado, estrictamente confidencial y
+exclusivo para su destinatario pudiendo contener informaci=C3=B3n protegida=
+ por
+normas legales y de secreto profesional. Bajo ninguna circunstancia, su
+contenido puede ser transmitido, divulgado o revelado a terceros en forma
+alguna. En consecuencia, de haber recibido por error solicitamos contactar
+al remitente y eliminar este mensaje. La distribuci=C3=B3n o copia de este
+mensaje est=C3=A1 estrictamente prohibida. Esta comunicaci=C3=B3n es s=C3=
+=B3lo para
+prop=C3=B3sitos de informaci=C3=B3n y no debe ser considerada como propuest=
+a,
+aceptaci=C3=B3n ni como una declaraci=C3=B3n de voluntad oficial de la empr=
+esa
+remitente del presente. La transmisi=C3=B3n de e-mails no garantiza que el
+correo electr=C3=B3nico sea seguro o libre de error. Por consiguiente, no
+manifestamos que esta informaci=C3=B3n sea completa o precisa. Toda informa=
+ci=C3=B3n
+est=C3=A1 sujeta a alterarse sin previo aviso. -
+
+--94eb2c000b904350c405502f70b9
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-size:small">Hol=
+a TATENGON,viste algo de esto?</div><div class=3D"gmail_default" style=3D"f=
+ont-size:small"><br></div><div class=3D"gmail_default" style=3D"font-size:s=
+mall"><br></div><div class=3D"gmail_quote">---------- Mensaje reenviado ---=
+-------<br>De: <b class=3D"gmail_sendername">Rodrigo Ferrero</b> <span dir=
+=3D"ltr">&lt;<a href=3D"mailto:rferrero@redsurcos.com">rferrero@redsurcos.c=
+om</a>&gt;</span><br>Fecha: 19 de mayo de 2017, 11:36<br>Asunto: Re: La tur=
+quina<br>Para: Juan Pablo Ruata &lt;<a href=3D"mailto:juampiruata@hotmail.c=
+om">juampiruata@hotmail.com</a>&gt;<br><br><br><div dir=3D"ltr"><div>Hola T=
+ATENGON!!!! tas contento con el empate???? jajajajaja</div><div>Ahi te paso=
+ los precios,que tengas un buen dia</div><div><br></div><div>ESKOBA FULL II=
+ SURCOS X 20LT........u$s 3,70<br></div><div>DEDALO ELITE X 20 LT..........=
+..............u$s 5,70<br></div><div><br></div><div>APOFIS ELITE X 20 LT =
+=C2=A0(cletodin 24 % c/aceite incl).........................<wbr>u$s13,20<b=
+r></div><div>ORCUSS ELITE X 20 LT =C2=A0(haloxifop 25 % c/aceite incluido).=
+....................<wbr>..u$s 17,90<br></div><div><br></div><div>POWEROIL =
+X 20 LT (aceite metilado de soja).......u$s 2,75<br></div><div><br></div><d=
+iv><br></div><div><br></div><div>****<font size=3D"4">Agronacion: 5% dto ha=
+sta 360 dias, QUE TULLLL JAJAJ!!!!!!</font></div><div><font size=3D"4"><br>=
+</font></div><div><font size=3D"4">***GALICIA RURA : hasta 90 dias s/intere=
+s.</font></div><div><br></div></div><div class=3D"HOEnZb"><div class=3D"h5"=
+><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">El 19 de mayo de=
+ 2017, 9:45, Rodrigo Ferrero <span dir=3D"ltr">&lt;<a href=3D"mailto:rferre=
+ro@redsurcos.com" target=3D"_blank">rferrero@redsurcos.com</a>&gt;</span> e=
+scribi=C3=B3:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8=
+ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr"><div style=
+=3D"font-size:small">dale papa,ya te armo y te mando</div><div style=3D"fon=
+t-size:small"><br></div></div><div class=3D"gmail_extra"><div><div class=3D=
+"m_1829858813841466370h5"><br><div class=3D"gmail_quote">El 19 de mayo de 2=
+017, 9:11, Juan Pablo Ruata <span dir=3D"ltr">&lt;<a href=3D"mailto:juampir=
+uata@hotmail.com" target=3D"_blank">juampiruata@hotmail.com</a>&gt;</span> =
+escribi=C3=B3:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .=
+8ex;border-left:1px #ccc solid;padding-left:1ex"><br>
+Rodrigo bien dia.<br>
+<br>
+Te consulto por precios de Glifosato, 24D, algun graminicida y coadyuvante.=
+<br>
+<br>
+Abrazos<br>
+<br>
+</blockquote></div><br><br clear=3D"all"><div><br></div></div></div>-- <br>=
+<div class=3D"m_1829858813841466370m_-571832629757662921gmail_signature" da=
+ta-smartmail=3D"gmail_signature"><table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"395"><tbody><tr><td style=3D"font-family:Arial,Helve=
+tica,sans-serif;font-size:12px;color:rgb(0,51,0);font-weight:normal" bgcolo=
+r=3D"#ffffff" valign=3D"top" width=3D"144"><b>Rodrigo Ferrero<span></span> =
+    </b></td>
+  </tr>
+  <tr>
+    <td style=3D"font-family:Arial,Helvetica,sans-serif;font-size:12px;colo=
+r:rgb(0,51,0);font-weight:normal" bgcolor=3D"#ffffff" valign=3D"top"><b><sp=
+an></span>Ventas Mostrador Santa Fe </b></td>
+  </tr>
+  <tr>
+    <td style=3D"font-family:Verdana,Arial,Helvetica,sans-serif;font-size:1=
+1px;color:rgb(102,102,102);font-weight:normal" bgcolor=3D"#ffffff" height=
+=3D"3" valign=3D"top"><br></td>
+  </tr>
+  <tr>
+    <td style=3D"font-family:Verdana,Arial,Helvetica,sans-serif;font-size:1=
+1px;color:rgb(0,51,0);font-weight:normal" bgcolor=3D"#ffffff" height=3D"3" =
+valign=3D"top">Av. Freyre 2363 (CP 3000) <br>
+      Santa Fe<br>
+      Tel.  (0342)
+      455 2366<br>Cel.  (0342) 156 121129<br>
+    <a href=3D"http://www.redsurcos.com/" target=3D"_blank">www.redsurcos.c=
+om</a></td>
+  </tr>
+  <tr>
+    <td style=3D"font-family:Verdana,Arial,Helvetica,sans-serif;font-size:1=
+1px;color:rgb(0,51,0);font-weight:normal" bgcolor=3D"#ffffff" height=3D"3" =
+valign=3D"top">=C2=A0</td>
+  </tr>
+</tbody></table>
+<table width=3D"150">
+  <tbody><tr>
+    <td><img src=3D"https://2.bp.blogspot.com/_drgXskCHFuI/SgL0S_cywOI/AAAA=
+AAAAAHg/ZW-c_4sjIbg/S220/Surcos.jpg" height=3D"56" width=3D"144"></td>
+  </tr>
+</tbody></table>
+<span>
+<span style=3D"font-size:8pt;color:gray;font-family:Arial">
+   AVISO LEGAL:</span>
+   <p style=3D"text-align:justify">
+   <span style=3D"font-size:8pt;color:gray;font-family:Arial">
+   El contenido del presente mensaje es privado, estrictamente confidencial=
+ y exclusivo para
+   su destinatario pudiendo contener informaci=C3=B3n protegida por normas =
+legales y
+   de secreto profesional. Bajo ninguna circunstancia, su contenido puede s=
+er
+   transmitido, divulgado o revelado a terceros en forma alguna. En
+   consecuencia, de haber recibido por error solicitamos contactar al remit=
+ente
+   y eliminar este mensaje. La distribuci=C3=B3n o copia de este mensaje es=
+t=C3=A1
+   estrictamente prohibida. Esta comunicaci=C3=B3n es s=C3=B3lo para prop=
+=C3=B3sitos de
+   informaci=C3=B3n y no debe ser considerada como propuesta, aceptaci=C3=
+=B3n ni como una
+   declaraci=C3=B3n de voluntad oficial de la empresa remitente del present=
+e. La
+   transmisi=C3=B3n de e-mails no garantiza que el correo electr=C3=B3nico =
+sea seguro o libre de error.
+   Por consiguiente, no
+   manifestamos que esta informaci=C3=B3n sea completa o precisa. Toda info=
+rmaci=C3=B3n
+   est=C3=A1 sujeta a alterarse sin previo aviso. -</span></p></span></div>
+</div>
+</blockquote></div><br><br clear=3D"all"><div><br></div>-- <br><div class=
+=3D"m_1829858813841466370gmail_signature" data-smartmail=3D"gmail_signature=
+"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"395"><tb=
+ody><tr><td style=3D"font-family:Arial,Helvetica,sans-serif;font-size:12px;=
+color:rgb(0,51,0);font-weight:normal" bgcolor=3D"#ffffff" valign=3D"top" wi=
+dth=3D"144"><b>Rodrigo Ferrero<span></span>     </b></td>
+  </tr>
+  <tr>
+    <td style=3D"font-family:Arial,Helvetica,sans-serif;font-size:12px;colo=
+r:rgb(0,51,0);font-weight:normal" bgcolor=3D"#ffffff" valign=3D"top"><b><sp=
+an></span>Ventas Mostrador Santa Fe </b></td>
+  </tr>
+  <tr>
+    <td style=3D"font-family:Verdana,Arial,Helvetica,sans-serif;font-size:1=
+1px;color:rgb(102,102,102);font-weight:normal" bgcolor=3D"#ffffff" height=
+=3D"3" valign=3D"top"><br></td>
+  </tr>
+  <tr>
+    <td style=3D"font-family:Verdana,Arial,Helvetica,sans-serif;font-size:1=
+1px;color:rgb(0,51,0);font-weight:normal" bgcolor=3D"#ffffff" height=3D"3" =
+valign=3D"top">Av. Freyre 2363 (CP 3000) <br>
+      Santa Fe<br>
+      Tel.  (0342)
+      455 2366<br>Cel.  (0342) 156 121129<br>
+    <a href=3D"http://www.redsurcos.com/" target=3D"_blank">www.redsurcos.c=
+om</a></td>
+  </tr>
+  <tr>
+    <td style=3D"font-family:Verdana,Arial,Helvetica,sans-serif;font-size:1=
+1px;color:rgb(0,51,0);font-weight:normal" bgcolor=3D"#ffffff" height=3D"3" =
+valign=3D"top">=C2=A0</td>
+  </tr>
+</tbody></table>
+<table width=3D"150">
+  <tbody><tr>
+    <td><img src=3D"https://2.bp.blogspot.com/_drgXskCHFuI/SgL0S_cywOI/AAAA=
+AAAAAHg/ZW-c_4sjIbg/S220/Surcos.jpg" height=3D"56" width=3D"144"></td>
+  </tr>
+</tbody></table>
+<span>
+<span style=3D"font-size:8pt;color:gray;font-family:Arial">
+   AVISO LEGAL:</span>
+   <p style=3D"text-align:justify">
+   <span style=3D"font-size:8pt;color:gray;font-family:Arial">
+   El contenido del presente mensaje es privado, estrictamente confidencial=
+ y exclusivo para
+   su destinatario pudiendo contener informaci=C3=B3n protegida por normas =
+legales y
+   de secreto profesional. Bajo ninguna circunstancia, su contenido puede s=
+er
+   transmitido, divulgado o revelado a terceros en forma alguna. En
+   consecuencia, de haber recibido por error solicitamos contactar al remit=
+ente
+   y eliminar este mensaje. La distribuci=C3=B3n o copia de este mensaje es=
+t=C3=A1
+   estrictamente prohibida. Esta comunicaci=C3=B3n es s=C3=B3lo para prop=
+=C3=B3sitos de
+   informaci=C3=B3n y no debe ser considerada como propuesta, aceptaci=C3=
+=B3n ni como una
+   declaraci=C3=B3n de voluntad oficial de la empresa remitente del present=
+e. La
+   transmisi=C3=B3n de e-mails no garantiza que el correo electr=C3=B3nico =
+sea seguro o libre de error.
+   Por consiguiente, no
+   manifestamos que esta informaci=C3=B3n sea completa o precisa. Toda info=
+rmaci=C3=B3n
+   est=C3=A1 sujeta a alterarse sin previo aviso. -</span></p></span></div>
+</div>
+</div></div></div><br><br clear=3D"all"><div><br></div>-- <br><div class=3D=
+"gmail_signature" data-smartmail=3D"gmail_signature"><table border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"395"><tbody><tr><td style=3D"fon=
+t-family:Arial,Helvetica,sans-serif;font-size:12px;color:rgb(0,51,0);font-w=
+eight:normal" bgcolor=3D"#ffffff" valign=3D"top" width=3D"144"><b>Rodrigo F=
+errero<span></span>     </b></td>
+  </tr>
+  <tr>
+    <td style=3D"font-family:Arial,Helvetica,sans-serif;font-size:12px;colo=
+r:rgb(0,51,0);font-weight:normal" bgcolor=3D"#ffffff" valign=3D"top"><b><sp=
+an></span>Ventas Mostrador Santa Fe </b></td>
+  </tr>
+  <tr>
+    <td style=3D"font-family:Verdana,Arial,Helvetica,sans-serif;font-size:1=
+1px;color:rgb(102,102,102);font-weight:normal" bgcolor=3D"#ffffff" height=
+=3D"3" valign=3D"top"><br></td>
+  </tr>
+  <tr>
+    <td style=3D"font-family:Verdana,Arial,Helvetica,sans-serif;font-size:1=
+1px;color:rgb(0,51,0);font-weight:normal" bgcolor=3D"#ffffff" height=3D"3" =
+valign=3D"top">Av. Freyre 2363 (CP 3000) <br>
+      Santa Fe<br>
+      Tel.  (0342)
+      455 2366<br>Cel.  (0342) 156 121129<br>
+    <a href=3D"http://www.redsurcos.com/" target=3D"_blank">www.redsurcos.c=
+om</a></td>
+  </tr>
+  <tr>
+    <td style=3D"font-family:Verdana,Arial,Helvetica,sans-serif;font-size:1=
+1px;color:rgb(0,51,0);font-weight:normal" bgcolor=3D"#ffffff" height=3D"3" =
+valign=3D"top">=C2=A0</td>
+  </tr>
+</tbody></table>
+<table width=3D"150">
+  <tbody><tr>
+    <td><img src=3D"https://2.bp.blogspot.com/_drgXskCHFuI/SgL0S_cywOI/AAAA=
+AAAAAHg/ZW-c_4sjIbg/S220/Surcos.jpg" height=3D"56" width=3D"144"></td>
+  </tr>
+</tbody></table>
+<span>
+<span style=3D"font-size:8pt;color:gray;font-family:Arial">
+   AVISO LEGAL:</span>
+   <p style=3D"text-align:justify">
+   <span style=3D"font-size:8pt;color:gray;font-family:Arial">
+   El contenido del presente mensaje es privado, estrictamente confidencial=
+ y exclusivo para
+   su destinatario pudiendo contener informaci=C3=B3n protegida por normas =
+legales y
+   de secreto profesional. Bajo ninguna circunstancia, su contenido puede s=
+er
+   transmitido, divulgado o revelado a terceros en forma alguna. En
+   consecuencia, de haber recibido por error solicitamos contactar al remit=
+ente
+   y eliminar este mensaje. La distribuci=C3=B3n o copia de este mensaje es=
+t=C3=A1
+   estrictamente prohibida. Esta comunicaci=C3=B3n es s=C3=B3lo para prop=
+=C3=B3sitos de
+   informaci=C3=B3n y no debe ser considerada como propuesta, aceptaci=C3=
+=B3n ni como una
+   declaraci=C3=B3n de voluntad oficial de la empresa remitente del present=
+e. La
+   transmisi=C3=B3n de e-mails no garantiza que el correo electr=C3=B3nico =
+sea seguro o libre de error.
+   Por consiguiente, no
+   manifestamos que esta informaci=C3=B3n sea completa o precisa. Toda info=
+rmaci=C3=B3n
+   est=C3=A1 sujeta a alterarse sin previo aviso. -</span></p></span></div>
+</div>
+
+--94eb2c000b904350c405502f70b9--

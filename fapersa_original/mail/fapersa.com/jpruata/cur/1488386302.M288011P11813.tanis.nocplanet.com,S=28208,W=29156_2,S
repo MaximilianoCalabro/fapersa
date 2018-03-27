@@ -1,0 +1,948 @@
+Return-Path: <cmoretti@cmgsoft.com.ar>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id W02MCv74tlglLgAATLP0zA
+	for <jpruata@fapersa.com>; Wed, 01 Mar 2017 13:38:22 -0300
+Return-path: <cmoretti@cmgsoft.com.ar>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Wed, 01 Mar 2017 13:38:22 -0300
+Received: from smht-101-26.dattaweb.com ([200.58.101.26]:58753)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256)
+	(Exim 4.88)
+	(envelope-from <cmoretti@cmgsoft.com.ar>)
+	id 1cj7GU-0002zt-5z
+	for jpruata@fapersa.com; Wed, 01 Mar 2017 13:38:22 -0300
+Received: from taipei.dattaweb.com (taipei.linux.backend [172.17.114.19])
+	by smarthost01.dattaweb.com (Postfix) with ESMTPS id 6EA9820007DA0;
+	Wed,  1 Mar 2017 13:37:28 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=cmgsoft.com.ar; s=mail; h=Content-Type:Cc:To:Subject:Message-ID:Date:From:
+	References:In-Reply-To:MIME-Version:Sender:Reply-To:Content-Transfer-Encoding
+	:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+	Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=Q9TUWMAhMy9aWMPI6rMueaoN5jF03s0/pgRbP21A4Js=; b=MEB24ssX3EtdWa2GbW1VaJGhyC
+	ZlPLRFuD35rNOv61rGbj5NoBh3hgCzz3/vBvYFG775n6yG8vxvPxOvvDoZss4vhvTRjytBtsBb8yL
+	lCQ+xpm5V2SJsz1DUKeUWCLafPw74bvjTWLnXuoTeN+lNGaWBZLgrI5TniLoITZtMZ4g=;
+Received: from [209.85.214.52] (helo=mail-it0-f52.google.com)
+	by taipei.dattaweb.com with esmtpsa (TLSv1:AES128-SHA:128)
+	(Exim 4.87_1)
+	(envelope-from <cmoretti@cmgsoft.com.ar>)
+	id 1cj7Fg-000478-9k; Wed, 01 Mar 2017 13:37:28 -0300
+Received: by mail-it0-f52.google.com with SMTP id 203so101657766ith.0;
+        Wed, 01 Mar 2017 08:37:20 -0800 (PST)
+X-Gm-Message-State: AMke39nhwZOJ3MNbNInj7M70Pmak9ViuQRCxnCGdmjRBQRE/+awfKXkJcdJRX+JOCFUdoWDVBmvjJq1CfgHnwQ==
+X-Received: by 10.36.28.147 with SMTP id c141mr5453576itc.102.1488386237691;
+ Wed, 01 Mar 2017 08:37:17 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.50.228.49 with HTTP; Wed, 1 Mar 2017 08:37:17 -0800 (PST)
+In-Reply-To: <58aef0e1.8f69240a.e70b.7accMFETCHER_ADDED@google.com>
+References: <CAFZZ_Q5J7jjPFSnb9q+WeySJnSyqVy=H04UyOr944_1BW49X5w@mail.gmail.com>
+ <58aef0e1.8f69240a.e70b.7accMFETCHER_ADDED@google.com>
+From: Carlos Moretti <cmoretti@cmgsoft.com.ar>
+Date: Wed, 1 Mar 2017 13:37:17 -0300
+X-Gmail-Original-Message-ID: <CAFZZ_Q4uQxErsmkgWObDgFtzw_JYeXdjNxA_mPCd4mRP0fWDZg@mail.gmail.com>
+Message-ID: <CAFZZ_Q4uQxErsmkgWObDgFtzw_JYeXdjNxA_mPCd4mRP0fWDZg@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Sistema_de_producci=C3=B2n?=
+To: Paulina Calcagno <pcalcagno@fapersa.com>
+Cc: FAPERSA <jpruata@fapersa.com>
+Content-Type: multipart/alternative; boundary=001a1144ca22fcc67e0549adec63
+X-Spam-Score-Int: -28
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - taipei.dattaweb.com
+X-AntiAbuse: Original Domain - fapersa.com
+X-AntiAbuse: Originator/Caller UID/GID - [502 502] / [502 502]
+X-AntiAbuse: Sender Address Domain - cmgsoft.com.ar
+X-Spam-Status: No, score=-0.8
+X-Spam-Score: -7
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Hola Paulina, buenos dìas: Hoy volviò de vacaciones Leandro
+    y ya podemos fijar la fecha para la reuniòn que podrìa ser la semana que
+    viene en un dìa que Uds dispongan. Respecto a proveedores del exterior habìamos
+    intercambiado documentos y mails y en el ùltimo mail (06/09/16) vos ofrecìas
+    la posibilidad de "tomar una operaciòn de compra/importaciòn y otra de
+   venta/exportaciòn e ir detallando cada hito que tiene impacto patrimonial,
+    con el comprobante/documento/transaccion que esto genera y como se registra
+    o donde impacta hoy" y con eso como base definir el mòdulo que a Ustedes
+    mejor les sirva. [...] 
+ 
+ Content analysis details:   (-0.8 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: docs.google.com]
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+  1.2 KAM_LINEPADDING        Spam that tries to get past blank line filters
+X-Spam-Flag: NO
+
+--001a1144ca22fcc67e0549adec63
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hola Paulina, buenos d=C3=ACas:
+
+Hoy volvi=C3=B2 de vacaciones Leandro y ya podemos fijar la fecha para
+la reuni=C3=B2n que podr=C3=ACa ser la semana que viene en un d=C3=ACa que =
+Uds
+dispongan.
+
+Respecto a proveedores del exterior hab=C3=ACamos intercambiado
+documentos y mails y en el =C3=B9ltimo mail (06/09/16) vos ofrec=C3=ACas
+la posibilidad de "tomar una operaci=C3=B2n de compra/importaci=C3=B2n
+y otra de venta/exportaci=C3=B2n e ir detallando cada hito que tiene
+impacto patrimonial, con el comprobante/documento/transaccion
+que esto genera y como se registra o donde impacta hoy"
+y con eso como base definir el m=C3=B2dulo que a Ustedes mejor les sirva.
+
+Si vos est=C3=A0s en condiciones de hacer eso, creo que podr=C3=ACamos
+avanzar para definir el circuito completo.
+
+Aguardamos comentarios.
+
+Saludos cordiales
+
+Carlos M.Moretti
+
+MItre 1151 - 2000 Rosario (Santa Fe) Argentina
+Tel. 54 341 4243580 / 4215838 / Fax 4249600
+
+
+
+El 23 de febrero de 2017, 11:26, Paulina Calcagno <pcalcagno@fapersa.com>
+escribi=C3=B3:
+
+> Buen d=C3=ADa a todos!!
+>
+>
+>
+> Ya estoy nuevamente en carrera.
+>
+>
+>
+> Cuando ustedes lo consideren, nos reunimos por este tema.
+>
+>
+>
+> Tambi=C3=A9n es momento de retomar el tema de deudores y proveedores del
+> exterior, para darle un cierre integral al AS. ( si no lo consideran mal,
+> en esa reuni=C3=B3n y luego de ver lo de producci=C3=B3n, podemos tocar e=
+ste tema as=C3=AD
+> completamos todo).
+>
+>
+>
+> Propongan ustedes ( CMG) el d=C3=ADa y hora del encuentro. ( los martes J=
+uan
+> Pablo est=C3=A9 en el campo, tratemos de evitar este d=C3=ADa de ser posi=
+ble).
+>
+>
+>
+> Muchas gracias y aguardamos la propuesta.
+>
+>
+>
+> Saludos,
+>
+>
+>
+> Paulina
+>
+>
+> ------------------------------
+>
+> *De:* Carlos Moretti [mailto:cmoretti@cmgsoft.com.ar]
+> *Enviado el:* jueves, 23 de febrero de 2017 09:57 a.m.
+> *Para:* FAPERSA
+> *CC:* Paulina Calcagno
+> *Asunto:* Re: Sistema de producci=C3=B2n
+>
+>
+>
+> Hola Juan Pablo, buenos d=C3=ACas:
+>
+>
+>
+> Como est=C3=A0s ?
+>
+>
+>
+> De acuerdo con esto entonces........, cuando Paulina regrese
+>
+> combinaremos para conversar sobre el tema.
+>
+>
+>
+> Aguardamos nos informen como continuamos.
+>
+>
+>
+> Muchas gracias.
+>
+>
+>
+> Saludos cordiales
+>
+>
+>
+>
+> Carlos M.Moretti
+>
+> MItre 1151 - 2000 Rosario (Santa Fe) Argentina
+>
+> Tel. 54 341 4243580 / 4215838 / Fax 4249600
+>
+>
+>
+>
+>
+>
+>
+> El 20 de febrero de 2017, 20:21, FAPERSA <jpruata@fapersa.com> escribi=C3=
+=B3:
+>
+> Carlos buenas tardes,
+>
+> La verdad que nos interesas much=C3=ADsimo este tema.
+>
+> Paulina esta de vacaciones a su regreso nos ponemos en contacto para
+> organizar una reuni=C3=B3n.
+>
+>
+>
+> Muchas gracias.
+>
+>
+>
+> Juan Pablo
+>
+>
+>
+> El 20 feb. 2017, a las 15:49, Carlos Moretti <cmoretti@cmgsoft.com.ar>
+> escribi=C3=B3:
+>
+>
+>
+> Hola Paulina, buenas tardes:
+>
+>
+>
+> Como est=C3=A0s ?
+>
+>
+>
+> Me comunico para contarles respecto a un tema que estuvo sobre la mesa
+>
+> hace tiempo y sobre el cual nosotros hemos avanzado bastante por si sigue=
+n
+>
+> manteniendo inter=C3=A8s.
+>
+>
+>
+> Hace ya varios meses estamos desarrollando el nuevo sistema de producci=
+=C3=B2n
+>
+> con tecnolog=C3=ACa Web para dos Empresas agroindustriales y creemos que =
+ser=C3=ACa
+>
+> el momento ideal para que en caso de que Ustedes lo crean conveniente pod=
+er
+>
+> avanzar en ese sentido en FAPERSA ya que podr=C3=ACamos incorporar la
+> problematica
+>
+> de una empresa similar como la de Ustedes pero que tiene algunas
+> caracter=C3=ACsticas
+>
+> no tan id=C3=A8nticas a una agroindustria.
+>
+>
+>
+> Por cualquier comentario quedamos a disposici=C3=B2n.
+>
+>
+>
+> Muchas gracias
+>
+>
+>
+> Saludos cordiales
+>
+>
+>
+>
+>
+>
+>
+> Carlos M.Moretti
+>
+> MItre 1151 - 2000 Rosario (Santa Fe) Argentina
+>
+> Tel. 54 341 4243580 / 4215838 / Fax 4249600
+>
+>
+>
+>
+>
+>
+>
+>
+>
+
+--001a1144ca22fcc67e0549adec63
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hola Paulina, buenos d=C3=ACas:<div><br></div><div>Hoy vol=
+vi=C3=B2 de vacaciones Leandro y ya podemos fijar la fecha para=C2=A0</div>=
+<div>la reuni=C3=B2n que podr=C3=ACa ser la semana que viene en un d=C3=ACa=
+ que Uds=C2=A0</div><div>dispongan.</div><div><br></div><div>Respecto a pro=
+veedores del exterior hab=C3=ACamos intercambiado</div><div>documentos y ma=
+ils y en el =C3=B9ltimo mail (06/09/16) vos ofrec=C3=ACas=C2=A0</div><div>l=
+a posibilidad de &quot;tomar una operaci=C3=B2n de compra/importaci=C3=B2n=
+=C2=A0</div><div>y otra de venta/exportaci=C3=B2n e ir detallando cada hito=
+ que tiene</div><div>impacto patrimonial, con el comprobante/documento/tran=
+saccion</div><div>que esto genera y como se registra o donde impacta hoy&qu=
+ot;=C2=A0</div><div>y con eso como base definir el m=C3=B2dulo que a Ustede=
+s mejor les sirva.</div><div><br></div><div>Si vos est=C3=A0s en condicione=
+s de hacer eso, creo que podr=C3=ACamos=C2=A0</div><div>avanzar para defini=
+r el circuito completo.</div><div><br></div><div>Aguardamos comentarios.</d=
+iv><div><br></div><div>Saludos cordiales=C2=A0</div></div><div class=3D"gma=
+il_extra"><br clear=3D"all"><div><div class=3D"gmail_signature" data-smartm=
+ail=3D"gmail_signature"><div dir=3D"ltr"><div style=3D"text-align:left">Car=
+los M.Moretti</div><div style=3D"text-align:left"><img src=3D"https://docs.=
+google.com/uc?export=3Ddownload&amp;id=3D0BxR9YXH1_1YDc3BNNTNzQzVFaUU&amp;r=
+evid=3D0BxR9YXH1_1YDK0FoOUkxQjIyQ0JxTlRvazhCb0g3ZGRsTkNFPQ" style=3D"font-s=
+ize:12.8000001907349px"><br></div><div style=3D"text-align:left">MItre 1151=
+ - 2000 Rosario (Santa Fe) Argentina</div><div style=3D"text-align:left">Te=
+l. 54 341 4243580 / 4215838 / Fax 4249600</div><div style=3D"text-align:lef=
+t"><br></div><div><br></div></div></div></div>
+<br><div class=3D"gmail_quote">El 23 de febrero de 2017, 11:26, Paulina Cal=
+cagno <span dir=3D"ltr">&lt;<a href=3D"mailto:pcalcagno@fapersa.com" target=
+=3D"_blank">pcalcagno@fapersa.com</a>&gt;</span> escribi=C3=B3:<br><blockqu=
+ote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc s=
+olid;padding-left:1ex">
+
+
+
+
+
+<u></u>
+<u></u>
+
+
+
+
+
+<div lang=3D"ES" link=3D"blue" vlink=3D"blue">
+
+<div class=3D"m_8469363615655539872Section1">
+
+<p class=3D"MsoNormal"><font size=3D"2" color=3D"blue" face=3D"Calibri"><sp=
+an style=3D"font-size:11.0pt;font-family:Calibri;color:blue">Buen d=C3=ADa =
+a todos!!<u></u><u></u></span></font></p>
+
+<p class=3D"MsoNormal"><font size=3D"2" color=3D"blue" face=3D"Calibri"><sp=
+an style=3D"font-size:11.0pt;font-family:Calibri;color:blue"><u></u>=C2=A0<=
+u></u></span></font></p>
+
+<p class=3D"MsoNormal"><font size=3D"2" color=3D"blue" face=3D"Calibri"><sp=
+an style=3D"font-size:11.0pt;font-family:Calibri;color:blue">Ya estoy nueva=
+mente en carrera.<u></u><u></u></span></font></p>
+
+<p class=3D"MsoNormal"><font size=3D"2" color=3D"blue" face=3D"Calibri"><sp=
+an style=3D"font-size:11.0pt;font-family:Calibri;color:blue"><u></u>=C2=A0<=
+u></u></span></font></p>
+
+<p class=3D"MsoNormal"><font size=3D"2" color=3D"blue" face=3D"Calibri"><sp=
+an style=3D"font-size:11.0pt;font-family:Calibri;color:blue">Cuando ustedes=
+ lo consideren, nos
+reunimos por este tema.<u></u><u></u></span></font></p>
+
+<p class=3D"MsoNormal"><font size=3D"2" color=3D"blue" face=3D"Calibri"><sp=
+an style=3D"font-size:11.0pt;font-family:Calibri;color:blue"><u></u>=C2=A0<=
+u></u></span></font></p>
+
+<p class=3D"MsoNormal"><font size=3D"2" color=3D"blue" face=3D"Calibri"><sp=
+an style=3D"font-size:11.0pt;font-family:Calibri;color:blue">Tambi=C3=A9n e=
+s momento de retomar el tema de
+deudores y proveedores del exterior, para darle un cierre integral al AS. (=
+ si
+no lo consideran mal, en esa reuni=C3=B3n y luego de ver lo de producci=C3=
+=B3n, podemos
+tocar este tema as=C3=AD completamos todo).<u></u><u></u></span></font></p>
+
+<p class=3D"MsoNormal"><font size=3D"2" color=3D"blue" face=3D"Calibri"><sp=
+an style=3D"font-size:11.0pt;font-family:Calibri;color:blue"><u></u>=C2=A0<=
+u></u></span></font></p>
+
+<p class=3D"MsoNormal"><font size=3D"2" color=3D"blue" face=3D"Calibri"><sp=
+an style=3D"font-size:11.0pt;font-family:Calibri;color:blue">Propongan uste=
+des ( CMG) el d=C3=ADa y hora
+del encuentro. ( los martes Juan Pablo est=C3=A9 en el campo, tratemos de e=
+vitar
+este d=C3=ADa de ser posible).<u></u><u></u></span></font></p>
+
+<p class=3D"MsoNormal"><font size=3D"2" color=3D"blue" face=3D"Calibri"><sp=
+an style=3D"font-size:11.0pt;font-family:Calibri;color:blue"><u></u>=C2=A0<=
+u></u></span></font></p>
+
+<p class=3D"MsoNormal"><font size=3D"2" color=3D"blue" face=3D"Calibri"><sp=
+an style=3D"font-size:11.0pt;font-family:Calibri;color:blue">Muchas gracias=
+ y aguardamos la
+propuesta.<u></u><u></u></span></font></p>
+
+<p class=3D"MsoNormal"><font size=3D"2" color=3D"blue" face=3D"Calibri"><sp=
+an style=3D"font-size:11.0pt;font-family:Calibri;color:blue"><u></u>=C2=A0<=
+u></u></span></font></p>
+
+<p class=3D"MsoNormal"><font size=3D"2" color=3D"blue" face=3D"Calibri"><sp=
+an style=3D"font-size:11.0pt;font-family:Calibri;color:blue">Saludos,<u></u=
+><u></u></span></font></p>
+
+<p class=3D"MsoNormal"><font size=3D"2" color=3D"blue" face=3D"Calibri"><sp=
+an style=3D"font-size:11.0pt;font-family:Calibri;color:blue"><u></u>=C2=A0<=
+u></u></span></font></p>
+
+<p class=3D"MsoNormal"><font size=3D"2" color=3D"blue" face=3D"Calibri"><sp=
+an style=3D"font-size:11.0pt;font-family:Calibri;color:blue">Paulina<u></u>=
+<u></u></span></font></p>
+
+<p class=3D"MsoNormal"><font size=3D"2" color=3D"blue" face=3D"Calibri"><sp=
+an style=3D"font-size:11.0pt;font-family:Calibri;color:blue"><u></u>=C2=A0<=
+u></u></span></font></p>
+
+<div>
+
+<div class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><font=
+ size=3D"3" face=3D"Times New Roman"><span style=3D"font-size:12.0pt">
+
+<hr size=3D"2" width=3D"100%" align=3D"center">
+
+</span></font></div>
+
+<p class=3D"MsoNormal"><b><font size=3D"2" face=3D"Tahoma"><span style=3D"f=
+ont-size:10.0pt;font-family:Tahoma;font-weight:bold">De:</span></font></b><=
+font size=3D"2" face=3D"Tahoma"><span style=3D"font-size:10.0pt;font-family=
+:Tahoma"> <u></u>Carlos Moretti<u></u>
+[mailto:<a href=3D"mailto:cmoretti@cmgsoft.com.ar" target=3D"_blank">cmoret=
+ti@cmgsoft.com.<wbr>ar</a>] <br>
+<b><span style=3D"font-weight:bold">Enviado el:</span></b> jueves, 23 de fe=
+brero
+de 2017 09:57 a.m.<br>
+<b><span style=3D"font-weight:bold">Para:</span></b> FAPERSA<br>
+<b><span style=3D"font-weight:bold">CC:</span></b> <u></u>Paulina Calcagno<=
+u></u><br>
+<b><span style=3D"font-weight:bold">Asunto:</span></b> Re: Sistema de produ=
+cci=C3=B2n</span></font><u></u><u></u></p>
+
+</div><div><div class=3D"h5">
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">Hola Juan Pablo, buenos d=C3=ACas:<u></u><u></u></sp=
+an></font></p>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">Como est=C3=A0s ?<u></u><u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">De acuerdo con esto entonces........, cuando Paulina=
+ regrese<u></u><u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">combinaremos para conversar sobre el tema.<u></u><u>=
+</u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">Aguardamos nos informen como continuamos.<u></u><u><=
+/u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">Muchas gracias.<u></u><u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">Saludos cordiales=C2=A0<u></u><u></u></span></font><=
+/p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">=C2=A0 =C2=A0=C2=A0<u></u><u></u></span></font></p>
+
+</div>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><br clear=3D"all">
+<u></u><u></u></span></font></p>
+
+<div>
+
+<div data-smartmail=3D"gmail_signature">
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">Carlos M.Moretti<u></u><u></u></span></font></p>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><img width=3D"100" height=3D"26" id=3D"m_84693636156=
+55539872_x0000_i1025" src=3D"https://docs.google.com/uc?export=3Ddownload&a=
+mp;id=3D0BxR9YXH1_1YDc3BNNTNzQzVFaUU&amp;revid=3D0BxR9YXH1_1YDK0FoOUkxQjIyQ=
+0JxTlRvazhCb0g3ZGRsTkNFPQ" style=3D"font-size:12.8px"><u></u><u></u></span>=
+</font></p>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">MItre 1151 - 2000 Rosario (Santa Fe) Argentina<u></u=
+><u></u></span></font></p>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">Tel. 54 341 4243580 / 4215838 / Fax 4249600<u></u><u=
+></u></span></font></p>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">El 20 de febrero de 2017, 20:21, FAPERSA &lt;<a href=
+=3D"mailto:jpruata@fapersa.com" target=3D"_blank">jpruata@fapersa.com</a>&g=
+t;
+escribi=C3=B3:<u></u><u></u></span></font></p>
+
+<div style=3D"word-wrap:break-word">
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">Carlos buenas tardes,<u></u><u></u></span></font></p=
+>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">La verdad que nos interesas much=C3=ADsimo este tema=
+.<u></u><u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">Paulina esta de vacaciones a su regreso nos ponemos =
+en contacto para
+organizar una reuni=C3=B3n.<u></u><u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">Muchas gracias.<u></u><u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">Juan Pablo=C2=A0<u></u><u></u></span></font></p>
+
+<div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+<div>
+
+<blockquote style=3D"margin-top:5.0pt;margin-bottom:5.0pt" type=3D"cite">
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">El 20 feb. <u></u>2017, a<u></u>
+las 15:49, <u></u>Carlos Moretti<u></u>
+&lt;<a href=3D"mailto:cmoretti@cmgsoft.com.ar" target=3D"_blank">cmoretti@c=
+mgsoft.com.ar</a>&gt;
+escribi=C3=B3:<u></u><u></u></span></font></p>
+
+</div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+<div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">Hola Paulina, buenas tardes:<u></u><u></u></span></f=
+ont></p>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">Como est=C3=A0s ?<u></u><u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">Me comunico para contarles respecto a un tema que es=
+tuvo sobre la mesa<u></u><u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">hace tiempo y sobre el cual nosotros hemos avanzado =
+bastante por si
+siguen<u></u><u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">manteniendo inter=C3=A8s.<u></u><u></u></span></font=
+></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">Hace ya varios meses estamos desarrollando el nuevo =
+sistema de
+producci=C3=B2n<u></u><u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">con tecnolog=C3=ACa Web para dos Empresas agroindust=
+riales y creemos que
+ser=C3=ACa=C2=A0<u></u><u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">el momento ideal para que en caso de que Ustedes lo =
+crean conveniente
+poder<u></u><u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">avanzar en ese sentido en FAPERSA ya que podr=C3=ACa=
+mos incorporar la
+problematica<u></u><u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">de una empresa similar como <u></u>la de Ustedes<u><=
+/u> pero que tiene algunas
+caracter=C3=ACsticas=C2=A0<u></u><u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">no tan id=C3=A8nticas a una agroindustria.<u></u><u>=
+</u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">Por cualquier comentario quedamos a disposici=C3=B2n=
+.<u></u><u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">Muchas gracias=C2=A0<u></u><u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">Saludos cordiales=C2=A0<u></u><u></u></span></font><=
+/p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+</div>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">Carlos M.Moretti<u></u><u></u></span></font></p>
+
+</div>
+
+<div>
+
+<div>
+
+<div data-smartmail=3D"gmail_signature">
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><img border=3D"0" width=3D"100" height=3D"26" id=3D"=
+m_8469363615655539872_x0000_i1026" src=3D"https://docs.google.com/uc?export=
+=3Ddownload&amp;id=3D0BxR9YXH1_1YDc3BNNTNzQzVFaUU&amp;revid=3D0BxR9YXH1_1YD=
+K0FoOUkxQjIyQ0JxTlRvazhCb0g3ZGRsTkNFPQ" style=3D"font-size:12.8px"><u></u><=
+u></u></span></font></p>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">MItre 1151 - 2000 Rosario (Santa Fe) Argentina<u></u=
+><u></u></span></font></p>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt">Tel. 54 341 4243580 / 4215838 / Fax 4249600<u></u><u=
+></u></span></font></p>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+<div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</blockquote>
+
+</div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<p class=3D"MsoNormal"><font size=3D"3" face=3D"Times New Roman"><span styl=
+e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
+
+</div>
+
+</div></div></div>
+
+</div>
+
+
+</blockquote></div><br></div>
+
+--001a1144ca22fcc67e0549adec63--

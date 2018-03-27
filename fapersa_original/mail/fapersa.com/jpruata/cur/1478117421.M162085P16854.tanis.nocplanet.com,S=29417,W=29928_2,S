@@ -1,0 +1,511 @@
+Return-Path: <reportes-fapersa-bounces@listas.lunix.com.ar>
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id 0eq5CC1IGljWQQAATLP0zA
+	; Wed, 02 Nov 2016 17:10:21 -0300
+Return-path: <reportes-fapersa-bounces@listas.lunix.com.ar>
+Envelope-to: dottonel@fapersa.com,
+ fyori@fapersa.com,
+ jpruata@fapersa.com,
+ pcalcagno@fapersa.com,
+ rdopazo@fapersa.com
+Delivery-date: Wed, 02 Nov 2016 17:10:21 -0300
+Received: from cloud.lunix.com.ar ([207.198.115.213]:44654)
+	by tanis.nocplanet.com with esmtp (Exim 4.87)
+	(envelope-from <reportes-fapersa-bounces@listas.lunix.com.ar>)
+	id 1c21rM-0004MR-Od; Wed, 02 Nov 2016 17:10:21 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by cloud.lunix.com.ar (Postfix) with ESMTP id 1CDB8C0D76;
+	Wed,  2 Nov 2016 17:08:09 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at cloud.lunix.com.ar
+Received: from cloud.lunix.com.ar ([127.0.0.1])
+	by localhost (cloud.lunix.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id V3PCteFgyVvZ; Wed,  2 Nov 2016 17:08:04 -0300 (ART)
+Received: by cloud.lunix.com.ar (Postfix, from userid 114)
+	id 4C982C0D7B; Wed,  2 Nov 2016 17:08:04 -0300 (ART)
+Received: from cloud.lunix.com.ar (localhost [127.0.0.1])
+	by cloud.lunix.com.ar (Postfix) with ESMTP id 80886C0D75;
+	Wed,  2 Nov 2016 17:07:59 -0300 (ART)
+X-Original-To: reportes-fapersa@listas.lunix.com.ar
+Delivered-To: reportes-fapersa@listas.lunix.com.ar
+Received: from localhost (localhost [127.0.0.1])
+ by cloud.lunix.com.ar (Postfix) with ESMTP id 51D67C0D75
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Wed,  2 Nov 2016 17:07:58 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at cloud.lunix.com.ar
+Received: from cloud.lunix.com.ar ([127.0.0.1])
+ by localhost (cloud.lunix.com.ar [127.0.0.1]) (amavisd-new, port 10024)
+ with ESMTP id nrpE-eJxL-3h for <reportes-fapersa@listas.lunix.com.ar>;
+ Wed,  2 Nov 2016 17:07:53 -0300 (ART)
+Received: by cloud.lunix.com.ar (Postfix, from userid 114)
+ id A52C8C0D7B; Wed,  2 Nov 2016 17:07:53 -0300 (ART)
+Received: from tanis.nocplanet.com (tanis.nocplanet.com [108.170.37.10])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by cloud.lunix.com.ar (Postfix) with ESMTPS id BF0FAC0D75
+ for <reportes-fapersa@listas.lunix.com.ar>;
+ Wed,  2 Nov 2016 17:07:48 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=fapersa.com
+ ; s=default;
+ h=Content-Type:In-Reply-To:MIME-Version:Date:Message-ID:From:To:
+ References:Subject:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=sR10url1kON7dUEr/ZPgSOH5B8zf26DNAZGCbcZhD3M=; b=MdPwUxkbKASL1Q1JYXfqpP39tR
+ PNDGaYMypmQODqgjhaE4qeJKKpNiQuYYP+wqDpRUXRljdZluBr5pCuXXxrKCqkmdi6RaHZu8nCrxJ
+ jO4j0S0O+XQUig/5KdNTwNm79sbi2TrczhfunEqVVkEGzZJrUnNr9ZmIHuZrhzVWvulVywlQATgyO
+ 7CPdvZDBSsJ2Z/RMPCPW6g4knYnA3NxI4AUbYxcqHYSnkYHcUURrpmZp2KCEeUrLIRhdv0bvOqouJ
+ rCBYDJE+PRYJXUd9z+L0Oam7uSfw5q66Rp2gmIb8O7AEJcEfOy/xcAErd2d9MDGdJxuQHZfL9Sszq
+ zdiBzrbA==;
+Received: from [152.170.178.72] (port=47200 helo=[10.25.28.100])
+ by tanis.nocplanet.com with esmtpsa (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128)
+ (Exim 4.87) (envelope-from <fgrismado@fapersa.com>)
+ id 1c21p4-0004Jk-2i
+ for reportes-fapersa@listas.lunix.com.ar; Wed, 02 Nov 2016 17:07:46 -0300
+References: <08D3C675395B4111A49FE29A4E4CF774@lpozzo>
+To: Reportes-Lunix <reportes-fapersa@listas.lunix.com.ar>
+From: Franco Grismado <fgrismado@fapersa.com>
+X-Forwarded-Message-Id: <08D3C675395B4111A49FE29A4E4CF774@lpozzo>
+Message-ID: <edc1c7a3-689c-bc4d-7bb1-497fe94c02ed@fapersa.com>
+Date: Wed, 2 Nov 2016 17:07:44 -0300
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101
+ Thunderbird/45.4.0
+MIME-Version: 1.0
+In-Reply-To: <08D3C675395B4111A49FE29A4E4CF774@lpozzo>
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - tanis.nocplanet.com
+X-AntiAbuse: Original Domain - listas.lunix.com.ar
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - fapersa.com
+X-Get-Message-Sender-Via: tanis.nocplanet.com: authenticated_id:
+ fgrismado@fapersa.com
+X-Authenticated-Sender: tanis.nocplanet.com: fgrismado@fapersa.com
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+Subject: [Reportes-fapersa] =?utf-8?b?RndkOiBGYWN0dXJhY2nDs24gZWxlY3Ryw7Nu?=
+ =?utf-8?q?ica=3A_Notificaci=C3=B3n_de_problemas_en_el_servicio_de_autoriz?=
+ =?utf-8?q?aci=C3=B3n_de_AFIP?=
+X-BeenThere: reportes-fapersa@listas.lunix.com.ar
+X-Mailman-Version: 2.1.18
+Precedence: list
+List-Id: <reportes-fapersa.listas.lunix.com.ar>
+List-Unsubscribe: <http://listas.lunix.com.ar/cgi-bin/mailman/options/reportes-fapersa>, 
+ <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=unsubscribe>
+List-Post: <mailto:reportes-fapersa@listas.lunix.com.ar>
+List-Help: <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=help>
+List-Subscribe: <http://listas.lunix.com.ar/cgi-bin/mailman/listinfo/reportes-fapersa>, 
+ <mailto:reportes-fapersa-request@listas.lunix.com.ar?subject=subscribe>
+Reply-To: reportes-fapersa@listas.lunix.com.ar
+Content-Type: multipart/mixed; boundary="===============6978306229811483750=="
+Errors-To: reportes-fapersa-bounces@listas.lunix.com.ar
+Sender: "Reportes-fapersa" <reportes-fapersa-bounces@listas.lunix.com.ar>
+X-Spam-Status: No, score=-3.4
+X-Spam-Score: -33
+X-Spam-Bar: ---
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  FYI -------- Mensaje reenviado -------- Asunto: Facturación
+    electrónica: Notificación de problemas en el servicio de autorización de
+   AFIP Fecha: Tue, 1 Nov 2016 16:12:16 -0300 De: Leandro Pozzo <lpozzo@cmgsoft.com.ar>
+    [...] 
+ 
+ Content analysis details:   (-3.4 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -2.7 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+  0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
+                             domains are different
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+  0.0 T_DKIM_INVALID         DKIM-Signature header exists but is not valid
+  1.0 KAM_HTMLNOISE          Spam containing useless HTML padding
+X-Spam-Flag: NO
+
+This is a multi-part message in MIME format.
+--===============6978306229811483750==
+Content-Type: multipart/related;
+ boundary="------------17C9A46849965C1C622F0202"
+
+This is a multi-part message in MIME format.
+--------------17C9A46849965C1C622F0202
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: 8bit
+
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  </head>
+  <body bgcolor="#FFFFFF" text="#000000">
+    <p>FYI<br>
+    </p>
+    <div class="moz-forward-container"><br>
+      <br>
+      -------- Mensaje reenviado --------
+      <table class="moz-email-headers-table" border="0" cellpadding="0"
+        cellspacing="0">
+        <tbody>
+          <tr>
+            <th align="RIGHT" nowrap="nowrap" valign="BASELINE">Asunto:
+            </th>
+            <td>Facturación electrónica: Notificación de problemas en el
+              servicio de autorización de AFIP</td>
+          </tr>
+          <tr>
+            <th align="RIGHT" nowrap="nowrap" valign="BASELINE">Fecha: </th>
+            <td>Tue, 1 Nov 2016 16:12:16 -0300</td>
+          </tr>
+          <tr>
+            <th align="RIGHT" nowrap="nowrap" valign="BASELINE">De: </th>
+            <td>Leandro Pozzo <a class="moz-txt-link-rfc2396E" href="mailto:lpozzo@cmgsoft.com.ar">&lt;lpozzo@cmgsoft.com.ar&gt;</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      <meta http-equiv="Content-Type" content="text/html;
+        charset=windows-1252">
+      <meta content="MSHTML 6.00.2900.6400" name="GENERATOR">
+      <style></style>
+      <div><font face="Arial" size="2">
+          <div><font face="Arial" size="2">Hola, informamos que AFIP
+              presenta algunos inconvenientes operativos al momento de
+              autorizar facturas electrónicas por web service.</font></div>
+          <div> </div>
+          <div><font face="Arial" size="2">Esto puede generar demoras e
+              inconvenientes en la obtención de CAE e impresión de
+              comprobantes.</font></div>
+          <div><font face="Arial" size="2">Por cualquier duda nos
+              consultan.</font></div>
+          <div> </div>
+        </font>
+        <div><font face="Arial" size="2"><font face="Arial" size="2">Saludos</font></font></div>
+      </div>
+      <blockquote dir="ltr" style="PADDING-RIGHT: 0px; PADDING-LEFT:
+        5px; MARGIN-LEFT: 5px; BORDER-LEFT: #000000 2px solid;
+        MARGIN-RIGHT: 0px">
+        <div>
+          <div align="center">
+            <p> </p>
+            <table border="0" width="45%">
+              <tbody>
+                <tr>
+                  <td>
+                    <div align="center"><font face="Arial"><b>Ing.
+                          Leandro F. Pozzo</b></font></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center"><img
+                        src="cid:part1.49D40A49.68B82E1A@fapersa.com"
+                        border="0" height="26" width="100"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center"><font face="Arial, Helvetica,
+                        sans-serif" size="1"><a moz-do-not-send="true"
+                          href="http://www.cmgsoft.com.ar">www.cmgsoft.com.ar</a><br>
+                        Mitre 1151 - S2000COW Rosario, Argentina<br>
+                        Tel (0341) - 4 243580 - 4 215838 - Fax 4 249600</font></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </blockquote>
+      <br>
+      <br>
+      <hr style="border:none; color:#909090; background-color:#B0B0B0;
+        height: 1px; width: 99%;">
+      <table style="border-collapse:collapse;border:none;">
+        <tbody>
+          <tr>
+            <td style="border:none;padding:0px 15px 0px 8px"> <a
+                moz-do-not-send="true"
+                href="https://www.avast.com/antivirus"> <img
+                  moz-do-not-send="true"
+                  src="http://static.avast.com/emails/avast-mail-stamp.png"
+                  alt="Avast logo" border="0"> </a> </td>
+            <td>
+              <p style="color:#3d4d5a;
+font-family:&quot;Calibri&quot;,&quot;Verdana&quot;,&quot;Arial&quot;,&quot;Helvetica&quot;;
+                font-size:12pt;"> El software de antivirus Avast ha
+                analizado este correo electrónico en busca de virus. <br>
+                <a moz-do-not-send="true"
+                  href="https://www.avast.com/antivirus">www.avast.com</a>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+    </div>
+  </body>
+</html>
+
+--------------17C9A46849965C1C622F0202
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-ID: <part1.49D40A49.68B82E1A@fapersa.com>
+
+/9j/4AAQSkZJRgABAgEASABIAAD/4QefRXhpZgAATU0AKgAAAAgABwESAAMAAAABAAEAAAEa
+AAUAAAABAAAAYgEbAAUAAAABAAAAagEoAAMAAAABAAIAAAExAAIAAAAVAAAAcgEyAAIAAAAU
+AAAAh4dpAAQAAAABAAAAnAAAAMgAAABIAAAAAQAAAEgAAAABQWRvYmUgUGhvdG9zaG9wIDcu
+MCAAMjAwNjowOToyOSAyMjo1MDowMQAAAAOgAQADAAAAAf//AACgAgAEAAAAAQAAAGSgAwAE
+AAAAAQAAABoAAAAAAAAABgEDAAMAAAABAAYAAAEaAAUAAAABAAABFgEbAAUAAAABAAABHgEo
+AAMAAAABAAIAAAIBAAQAAAABAAABJgICAAQAAAABAAAGcQAAAAAAAABIAAAAAQAAAEgAAAAB
+/9j/4AAQSkZJRgABAgEASABIAAD/7QAMQWRvYmVfQ00AAv/uAA5BZG9iZQBkgAAAAAH/2wCE
+AAwICAgJCAwJCQwRCwoLERUPDAwPFRgTExUTExgRDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwM
+DAwMDAwMDAwMDAwBDQsLDQ4NEA4OEBQODg4UFA4ODg4UEQwMDAwMEREMDAwMDAwRDAwMDAwM
+DAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEIABoAZAMBIgACEQEDEQH/3QAEAAf/xAE/AAAB
+BQEBAQEBAQAAAAAAAAADAAECBAUGBwgJCgsBAAEFAQEBAQEBAAAAAAAAAAEAAgMEBQYHCAkK
+CxAAAQQBAwIEAgUHBggFAwwzAQACEQMEIRIxBUFRYRMicYEyBhSRobFCIyQVUsFiMzRygtFD
+ByWSU/Dh8WNzNRaisoMmRJNUZEXCo3Q2F9JV4mXys4TD03Xj80YnlKSFtJXE1OT0pbXF1eX1
+VmZ2hpamtsbW5vY3R1dnd4eXp7fH1+f3EQACAgECBAQDBAUGBwcGBTUBAAIRAyExEgRBUWFx
+IhMFMoGRFKGxQiPBUtHwMyRi4XKCkkNTFWNzNPElBhaisoMHJjXC0kSTVKMXZEVVNnRl4vKz
+hMPTdePzRpSkhbSVxNTk9KW1xdXl9VZmdoaWprbG1ub2JzdHV2d3h5ent8f/2gAMAwEAAhED
+EQA/APR+qdTr6fUCR6ltmldYMT5/1Vg2/W7Pxn7rsdjq+7Wkh0eRKX1wsfj5uNcQfScwtB7b
+gZhcz1DqDbWnuVf5fl8csYlIcXE5XN83lhllGMuERqtN30rAzsfPxK8vHdurtEjxB/Oa7+U1
+yyepfWC5lr6MBrXGvR9rtRPdrWoX1Eovr6IX2yG3WufUD+7DWz/ae1y5zJy7MLLyMe4FtjXu
+kHuCdzXf2mqPFggcs4n1CGwZeY5nIMGKY9ByD1H+X7zudP8ArfaMxmL1JjQy1wY25mkOP0fU
+b+6tbr/XsbomIL7WG61521UM0Lj8T9FjV5za6zOy6segF1lrw1oHiSjf45aup47um5lT3jFD
+HUPc3gWyHt3f8Yz/AKhDm8UIGJiK4rsLvh+fJkjMTPFwkVLz6PRdF+u/Uuo9Sx8a7pwpx8hx
+YLg5xA0J5LdjvooV3+Ma6nqORhfs/wBX0n2V1+m8lz3NJaz2bfzvzkT6rfXr6r5mL0vpWPYf
+t9jGVDH9NwLXtbNji/b6f5rvfvXGfVDc/wDxqZDXHcG5GYQD4gvVVvPU4f8AjMs+0Or6jgip
+oBH6NxLg4fRY5jwPpO9ifH/xlZH29lObgCihzg13uPqNDj7XOY9rdy47q7Gn/G16Efo3Z9BL
+OxkVvOn9ZE/xtk1/XGjYdu/HpJjSTvsb/BJT6N9ZfrjV0axuNRT9qynND3CYYxp+jvdq7c79
+1Y//AI4+bXXF3TC24mQC5zWlvj7mblx31szsvo31/bk5wfZhiyjIFcaPqDWNcGT7XbXMerP+
+MX699G63iYdHRXPNtTy+21zCyG7dvp+73O3OSU+kf84bP+bH7d9Aep6fqfZ938rZt3x/31Jc
+r9pu/wDGc9bcfU+z/S7/AM6kkp//0PTc3Bxc/Hdj5VYsqd2PY/vNP5rliU/UToldzbHera1p
+n03ulp/rQ1rl0aSmx+9wn2+Lh68LXzfduIe7wcXTi3YsYytjWMaGsaIa0aAAdgqHVegdM6tB
+y6/0jfo2sO14HhuWiko4cfF6L4v6vzMuT2+A+5w8H9b5XL6V9W+ldKcbMWom06erYdzgPBp/
+NV7Mw8TOx34uZSzIx7BD6rAHNP8AZcjJI5OPi/WXxf1t0Yvb4B7XDwf1Plee6Z9Qvqp0rPb1
+HBwRXksJNby+xwYTp+jZY9zG8q5i/Vb6v4fUndVxsJlWe9z3OyAXbibJ9U6u2+/ctVJMZHIt
++qn1et6p+17MJjuoB7bPtEu3b2wGP+lt9u1P1T6qfV7q+U3M6lhMychrQxtji6Q1pLmt9rm/
+nOWskkp8y/xndWz8HKZR1DomN1Do5DTj5Tw/c0xFtXr1Pb6Fi4nrXU+k9arw+kfVjoxwybNz
+wD6l1thGxjN/0vTZu/OXvmb/AES3+a+if5/+a/67/IWP9Xv6RZ/yV9H/ALzvp/8AXP5KSmt/
+zUt/5gf82t4+0fZPT39vW/nv8z1vYkuoSSU//9n/7QxCUGhvdG9zaG9wIDMuMAA4QklNBCUA
+AAAAABAAAAAAAAAAAAAAAAAAAAAAOEJJTQPtAAAAAAAQAEgAAAABAAIASAAAAAEAAjhCSU0E
+JgAAAAAADgAAAAAAAAAAAAA/gAAAOEJJTQQNAAAAAAAEAAAAeDhCSU0EGQAAAAAABAAAAB44
+QklNA/MAAAAAAAkAAAAAAAAAAAEAOEJJTQQKAAAAAAABAAA4QklNJxAAAAAAAAoAAQAAAAAA
+AAACOEJJTQP1AAAAAABIAC9mZgABAGxmZgAGAAAAAAABAC9mZgABAKGZmgAGAAAAAAABADIA
+AAABAFoAAAAGAAAAAAABADUAAAABAC0AAAAGAAAAAAABOEJJTQP4AAAAAABwAAD/////////
+////////////////////A+gAAAAA/////////////////////////////wPoAAAAAP//////
+//////////////////////8D6AAAAAD/////////////////////////////A+gAADhCSU0E
+CAAAAAAAEAAAAAEAAAJAAAACQAAAAAA4QklNBB4AAAAAAAQAAAAAOEJJTQQaAAAAAANPAAAA
+BgAAAAAAAAAAAAAAGgAAAGQAAAANAGMAbQBnACAAZgB1AGwAbABjAG8AbABvAHIAAAABAAAA
+AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAGQAAAAaAAAAAAAAAAAAAAAAAAAAAAEAAAAA
+AAAAAAAAAAAAAAAAAAAAEAAAAAEAAAAAAABudWxsAAAAAgAAAAZib3VuZHNPYmpjAAAAAQAA
+AAAAAFJjdDEAAAAEAAAAAFRvcCBsb25nAAAAAAAAAABMZWZ0bG9uZwAAAAAAAAAAQnRvbWxv
+bmcAAAAaAAAAAFJnaHRsb25nAAAAZAAAAAZzbGljZXNWbExzAAAAAU9iamMAAAABAAAAAAAF
+c2xpY2UAAAASAAAAB3NsaWNlSURsb25nAAAAAAAAAAdncm91cElEbG9uZwAAAAAAAAAGb3Jp
+Z2luZW51bQAAAAxFU2xpY2VPcmlnaW4AAAANYXV0b0dlbmVyYXRlZAAAAABUeXBlZW51bQAA
+AApFU2xpY2VUeXBlAAAAAEltZyAAAAAGYm91bmRzT2JqYwAAAAEAAAAAAABSY3QxAAAABAAA
+AABUb3AgbG9uZwAAAAAAAAAATGVmdGxvbmcAAAAAAAAAAEJ0b21sb25nAAAAGgAAAABSZ2h0
+bG9uZwAAAGQAAAADdXJsVEVYVAAAAAEAAAAAAABudWxsVEVYVAAAAAEAAAAAAABNc2dlVEVY
+VAAAAAEAAAAAAAZhbHRUYWdURVhUAAAAAQAAAAAADmNlbGxUZXh0SXNIVE1MYm9vbAEAAAAI
+Y2VsbFRleHRURVhUAAAAAQAAAAAACWhvcnpBbGlnbmVudW0AAAAPRVNsaWNlSG9yekFsaWdu
+AAAAB2RlZmF1bHQAAAAJdmVydEFsaWduZW51bQAAAA9FU2xpY2VWZXJ0QWxpZ24AAAAHZGVm
+YXVsdAAAAAtiZ0NvbG9yVHlwZWVudW0AAAARRVNsaWNlQkdDb2xvclR5cGUAAAAATm9uZQAA
+AAl0b3BPdXRzZXRsb25nAAAAAAAAAApsZWZ0T3V0c2V0bG9uZwAAAAAAAAAMYm90dG9tT3V0
+c2V0bG9uZwAAAAAAAAALcmlnaHRPdXRzZXRsb25nAAAAAAA4QklNBBEAAAAAAAEBADhCSU0E
+FAAAAAAABAAAAAI4QklNBAwAAAAABo0AAAABAAAAZAAAABoAAAEsAAAeeAAABnEAGAAB/9j/
+4AAQSkZJRgABAgEASABIAAD/7QAMQWRvYmVfQ00AAv/uAA5BZG9iZQBkgAAAAAH/2wCEAAwI
+CAgJCAwJCQwRCwoLERUPDAwPFRgTExUTExgRDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwM
+DAwMDAwMDAwBDQsLDQ4NEA4OEBQODg4UFA4ODg4UEQwMDAwMEREMDAwMDAwRDAwMDAwMDAwM
+DAwMDAwMDAwMDAwMDAwMDAwMDP/AABEIABoAZAMBIgACEQEDEQH/3QAEAAf/xAE/AAABBQEB
+AQEBAQAAAAAAAAADAAECBAUGBwgJCgsBAAEFAQEBAQEBAAAAAAAAAAEAAgMEBQYHCAkKCxAA
+AQQBAwIEAgUHBggFAwwzAQACEQMEIRIxBUFRYRMicYEyBhSRobFCIyQVUsFiMzRygtFDByWS
+U/Dh8WNzNRaisoMmRJNUZEXCo3Q2F9JV4mXys4TD03Xj80YnlKSFtJXE1OT0pbXF1eX1VmZ2
+hpamtsbW5vY3R1dnd4eXp7fH1+f3EQACAgECBAQDBAUGBwcGBTUBAAIRAyExEgRBUWFxIhMF
+MoGRFKGxQiPBUtHwMyRi4XKCkkNTFWNzNPElBhaisoMHJjXC0kSTVKMXZEVVNnRl4vKzhMPT
+dePzRpSkhbSVxNTk9KW1xdXl9VZmdoaWprbG1ub2JzdHV2d3h5ent8f/2gAMAwEAAhEDEQA/
+APR+qdTr6fUCR6ltmldYMT5/1Vg2/W7Pxn7rsdjq+7Wkh0eRKX1wsfj5uNcQfScwtB7bgZhc
+z1DqDbWnuVf5fl8csYlIcXE5XN83lhllGMuERqtN30rAzsfPxK8vHdurtEjxB/Oa7+U1yyep
+fWC5lr6MBrXGvR9rtRPdrWoX1Eovr6IX2yG3WufUD+7DWz/ae1y5zJy7MLLyMe4FtjXukHuC
+dzXf2mqPFggcs4n1CGwZeY5nIMGKY9ByD1H+X7zudP8ArfaMxmL1JjQy1wY25mkOP0fUb+6t
+br/XsbomIL7WG61521UM0Lj8T9FjV5za6zOy6segF1lrw1oHiSjf45aup47um5lT3jFDHUPc
+3gWyHt3f8Yz/AKhDm8UIGJiK4rsLvh+fJkjMTPFwkVLz6PRdF+u/Uuo9Sx8a7pwpx8hxYLg5
+xA0J5LdjvooV3+Ma6nqORhfs/wBX0n2V1+m8lz3NJaz2bfzvzkT6rfXr6r5mL0vpWPYft9jG
+VDH9NwLXtbNji/b6f5rvfvXGfVDc/wDxqZDXHcG5GYQD4gvVVvPU4f8AjMs+0Or6jgipoBH6
+NxLg4fRY5jwPpO9ifH/xlZH29lObgCihzg13uPqNDj7XOY9rdy47q7Gn/G16Efo3Z9BLOxkV
+vOn9ZE/xtk1/XGjYdu/HpJjSTvsb/BJT6N9ZfrjV0axuNRT9qynND3CYYxp+jvdq7c791Y//
+AI4+bXXF3TC24mQC5zWlvj7mblx31szsvo31/bk5wfZhiyjIFcaPqDWNcGT7XbXMerP+MX69
+9G63iYdHRXPNtTy+21zCyG7dvp+73O3OSU+kf84bP+bH7d9Aep6fqfZ938rZt3x/31Jcr9pu
+/wDGc9bcfU+z/S7/AM6kkp//0PTc3Bxc/Hdj5VYsqd2PY/vNP5rliU/UToldzbHera1pn03u
+lp/rQ1rl0aSmx+9wn2+Lh68LXzfduIe7wcXTi3YsYytjWMaGsaIa0aAAdgqHVegdM6tBy6/0
+jfo2sO14HhuWiko4cfF6L4v6vzMuT2+A+5w8H9b5XL6V9W+ldKcbMWom06erYdzgPBp/NV7M
+w8TOx34uZSzIx7BD6rAHNP8AZcjJI5OPi/WXxf1t0Yvb4B7XDwf1Plee6Z9Qvqp0rPb1HBwR
+XksJNby+xwYTp+jZY9zG8q5i/Vb6v4fUndVxsJlWe9z3OyAXbibJ9U6u2+/ctVJMZHIt+qn1
+et6p+17MJjuoB7bPtEu3b2wGP+lt9u1P1T6qfV7q+U3M6lhMychrQxtji6Q1pLmt9rm/nOWs
+kkp8y/xndWz8HKZR1DomN1Do5DTj5Tw/c0xFtXr1Pb6Fi4nrXU+k9arw+kfVjoxwybNzwD6l
+1thGxjN/0vTZu/OXvmb/AES3+a+if5/+a/67/IWP9Xv6RZ/yV9H/ALzvp/8AXP5KSmt/zUt/
+5gf82t4+0fZPT39vW/nv8z1vYkuoSSU//9kAOEJJTQQhAAAAAABVAAAAAQEAAAAPAEEAZABv
+AGIAZQAgAFAAaABvAHQAbwBzAGgAbwBwAAAAEwBBAGQAbwBiAGUAIABQAGgAbwB0AG8AcwBo
+AG8AcAAgADcALgAwAAAAAQA4QklNBAYAAAAAAAcABgAAAAEBAP/hEkhodHRwOi8vbnMuYWRv
+YmUuY29tL3hhcC8xLjAvADw/eHBhY2tldCBiZWdpbj0n77u/JyBpZD0nVzVNME1wQ2VoaUh6
+cmVTek5UY3prYzlkJz8+Cjw/YWRvYmUteGFwLWZpbHRlcnMgZXNjPSJDUiI/Pgo8eDp4YXBt
+ZXRhIHhtbG5zOng9J2Fkb2JlOm5zOm1ldGEvJyB4OnhhcHRrPSdYTVAgdG9vbGtpdCAyLjgu
+Mi0zMywgZnJhbWV3b3JrIDEuNSc+CjxyZGY6UkRGIHhtbG5zOnJkZj0naHR0cDovL3d3dy53
+My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIycgeG1sbnM6aVg9J2h0dHA6Ly9ucy5h
+ZG9iZS5jb20vaVgvMS4wLyc+CgogPHJkZjpEZXNjcmlwdGlvbiBhYm91dD0ndXVpZDpjYjk1
+MTIxYi01MDI1LTExZGItOWExNi1hNzExZGEzZWM4NjYnCiAgeG1sbnM6eGFwTU09J2h0dHA6
+Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8nPgogIDx4YXBNTTpEb2N1bWVudElEPmFkb2Jl
+OmRvY2lkOnBob3Rvc2hvcDpjYjk1MTIxNy01MDI1LTExZGItOWExNi1hNzExZGEzZWM4NjY8
+L3hhcE1NOkRvY3VtZW50SUQ+CiA8L3JkZjpEZXNjcmlwdGlvbj4KCjwvcmRmOlJERj4KPC94
+OnhhcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAog
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+IAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAK
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+IAo8P3hwYWNrZXQgZW5kPSd3Jz8+/+4ADkFkb2JlAGRAAAAAAf/bAIQAAgICAgICAgICAgMC
+AgIDBAMCAgMEBQQEBAQEBQYFBQUFBQUGBgcHCAcHBgkJCgoJCQwMDAwMDAwMDAwMDAwMDAED
+AwMFBAUJBgYJDQoJCg0PDg4ODg8PDAwMDAwPDwwMDAwMDA8MDAwMDAwMDAwMDAwMDAwMDAwM
+DAwMDAwMDAwM/8AAEQgAGgBkAwERAAIRAQMRAf/dAAQADf/EAaIAAAAHAQEBAQEAAAAAAAAA
+AAQFAwIGAQAHCAkKCwEAAgIDAQEBAQEAAAAAAAAAAQACAwQFBgcICQoLEAACAQMDAgQCBgcD
+BAIGAnMBAgMRBAAFIRIxQVEGE2EicYEUMpGhBxWxQiPBUtHhMxZi8CRygvElQzRTkqKyY3PC
+NUQnk6OzNhdUZHTD0uIIJoMJChgZhJRFRqS0VtNVKBry4/PE1OT0ZXWFlaW1xdXl9WZ2hpam
+tsbW5vY3R1dnd4eXp7fH1+f3OEhYaHiImKi4yNjo+Ck5SVlpeYmZqbnJ2en5KjpKWmp6ipqq
+usra6voRAAICAQIDBQUEBQYECAMDbQEAAhEDBCESMUEFURNhIgZxgZEyobHwFMHR4SNCFVJi
+cvEzJDRDghaSUyWiY7LCB3PSNeJEgxdUkwgJChgZJjZFGidkdFU38qOzwygp0+PzhJSktMTU
+5PRldYWVpbXF1eX1RlZmdoaWprbG1ub2R1dnd4eXp7fH1+f3OEhYaHiImKi4yNjo+DlJWWl5
+iZmpucnZ6fkqOkpaanqKmqq6ytrq+v/aAAwDAQACEQMRAD8A+1n5n/mbp/5caZbSvb/pPWtT
+Zo9I0hHCtIVHxO53oi1FT9AzZ9l9l5NfkMYmojme79pdL2525i7KwicxxSltGPf+oDqXyVqv
+/OXPnvyzeJcaz5N0290lWBuLW2lliuBHXfg71UtTpUAZ1f8AoOwzjUMsuLzAr7N3gv8Ak4mo
+xzvJgiY9wJ4vmdvsfa/kTztoP5i+U9G84+Wrn6zpOtQCWHls8bglZIpB2eNwVYeIzitXpMml
+yyxZBUon8H3F9L7P1+LXYIZ8RuMhY/SD5g7F8+fmV+f+sWGraloH5e2dpdyaSTFqGuXQMsQm
+U/HHHGpXlx6Ek9c6Tsn2bGfGMuckA8gOdd5Pm8Z2/wC2UtLllg0sRKUdpSPIHqABzrqb5vM/
+y/8A+cvdVi84aX5S/NDTrKGz1y6SysvM1gGhWCeVuMQuIWZxwZiF5KdidxSpzL7T9k4wxHLp
+5E8IsxPd5H9Dgdi+3s8ueODVxA4jQnGxRPLiBvbzHLufRH5+/nz5d/ITylH5g1XT7jzBq+pT
+fVvL/liyZUnu5QKuxd9o44xuzEHsACTTOHfTnyb+S/8Azm7+ZX5l/mP5R8q65+S8fl/yx5sv
+ZLKLzPDc3LpCwjkdTzeARyGqcaAjfFWOax/z8W1nRfzE83eRT+UQ1o6FqWp6To50zUGlu766
+tJXitx9X9GqrIVq9CxUdAcVY/wCTv+fmWoLr95pn5nflYmiWcMdwinSbuSS8ivIlJjt5be4R
+DV3HCtQVJqRSuKt+X/8An5R5iHnzT9C89flHB5Y8u3t9FbXbi9mGpWUNwwWOaSGaJA/EMGYC
+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
+kN/vKP8AyVH/AB0Ptf8AH1/xX/HFX1tir//Z
+--------------17C9A46849965C1C622F0202--
+
+--===============6978306229811483750==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+Content-Disposition: inline
+
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KUmVwb3J0ZXMt
+ZmFwZXJzYSBtYWlsaW5nIGxpc3QKUmVwb3J0ZXMtZmFwZXJzYUBsaXN0YXMubHVuaXguY29tLmFy
+Cmh0dHA6Ly9saXN0YXMubHVuaXguY29tLmFyL2NnaS1iaW4vbWFpbG1hbi9saXN0aW5mby9yZXBv
+cnRlcy1mYXBlcnNhCg==
+
+--===============6978306229811483750==--

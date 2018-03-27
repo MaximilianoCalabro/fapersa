@@ -1,0 +1,129 @@
+<?php
+session_start( );
+include("header.inc.php");
+
+if($_POST[sent]==1){
+
+if( md5($_POST[code]) != $_SESSION[key] ) {
+
+       $mensaje = "Usted ingreso un c&oacute;digo incorrecto, por favor int&eacute;ntelo de nuevo!";
+
+} else {
+
+		// PREPARE TEMPLATE INFO
+	$contents_user = "A continuaci&oacute;n se detallar&aacute; los datos de la consulta hecha desde <a href=\"" . SITE_URL . "\">Fapersa.com.ar</a>";
+		
+	$contents .= '<br><br>' . "\n";
+	$contents .= '<table width="580" border="0" cellpadding="0" cellspacing="2">' . "\n";
+	$contents .= '		<tr bgcolor="#C1DCFA">' . "\n";
+	$contents .= '			<td height="1" colspan="5" valign="top"></td>' . "\n";
+	$contents .= '		</tr>' . "\n";
+	$contents .= '		<tr>' . "\n";
+	$contents .= '			<td valign="top" width="20%" align="left"><b><span class="textonegro">Nombre</span></b></td>' . "\n";
+	$contents .= '			<td width="80%" align="left" valign="top">' .$_POST[nombre]. '</td><tr>' . "\n";
+	$contents .= '	<tr><td width="20%" align="left" valign="top"><b><span class="textonegro">Apellido</span></b></td>' . "\n";
+	$contents .= '			<td width="80%" align="left" valign="top">' .$_POST[apellido]. '</td><tr>' . "\n";
+	$contents .= '	<tr><td width="20%" align="left" valign="top"><b><span class="textonegro">Telefono</span></b></td>' . "\n";
+	$contents .= '			<td width="80%" align="left" valign="top">' .$_POST[telefono]. '</td><tr>' . "\n";
+	$contents .= '	<tr><td width="20%" align="left" valign="top"><b><span class="textonegro">Email</span></b></td>' . "\n";
+	$contents .= '			<td width="80%" align="left" valign="top">' .$_POST[email]. '</td><tr>' . "\n";
+	$contents .= '	<tr><td width="20%" align="left" valign="top"><b><span class="textonegro">Company</span></b></td>' . "\n";
+	$contents .= '			<td width="80%" align="left" valign="top">' .$_POST[company]. '</td><tr>' . "\n";
+	$contents .= '	<tr><td width="20%" align="left" valign="top"><b><span class="textonegro">Mensaje</span></b></td>' . "\n";
+	$contents .= '			<td width="80%" align="left" valign="top">' .$_POST[mensaje]. '</td><tr>' . "\n";
+	$contents .= '</table>' . "\n";
+		
+		$contents_user .= $contents;
+
+		// OPENS TEMPLATE
+		$template = file("inc/.ht_mail");
+		reset($template);
+		foreach($template as $line){
+			$line = str_replace("{-SITE_URL-}", SITE_URL, $line);
+			$line = str_replace("{-CONTENTS-}", $contents_user, $line);
+
+			$final_template .= $line;
+		}
+
+		// HEADERS
+		$subject = "Fapersa - Consulta";
+
+		$headers  = "From: Fapersa.com.ar <info@fapersa.com>\n";
+		$headers .= "X-Sender: <info@fapersa.com>\n";
+		$headers .= "X-Mailer: Fapersa.com.ar\n";
+		$headers .= "X-Priority: 1\n";
+		$headers .= "Return-Path: <info@fapersa.com>\n";
+		$headers .= "Content-Type: text/html; charset=iso-8859-1\r\n";
+
+		// email Admin				
+		//mail(SITE_EMAIL,$subject,$final_template,$headers);
+		mail("info@fapersa.com",$subject,$final_template,$headers);
+		
+		$mensaje = "Consulta enviada con exito!";
+		
+	}
+}	
+		?>
+        <div id="menu2"><div id="acceso">
+<h2 class="accesonav">Acceso Catalogo</h2>
+<div id="fbuscar" class="cuerpolateral"> 
+<form ACTION="login.php" METHOD="POST">
+<div id="campotexto"><input type="text" name="cliente" value="Cliente" onfocus="this.value = ''"></div> 
+<div id="campotexto"><input type="password" name="password" value="Password" onfocus="this.value = ''"></div>
+<div id="botonbuscar"><input type=image src="../images/boton.gif" width="105" height="27"><input name="sent" type="hidden" id="sent" value="1"></div>
+</form> 
+</div> 
+        </div>
+        </div>
+  </div>
+        <div id="contenido">
+        <div id="contactos">
+<div id="textogeneral" class="graltexto">
+  <h1>contacto</h1>
+<? if ($mensaje) { ?>
+		<div id="catalogo_header"><div id="no_result"><?=$mensaje?></div></div>
+<? } ?>		  
+  <div id="formulario" class="cuerpoingreso">
+<FORM ACTION="<?=$_SERVER['PHP_SELF']?>" METHOD="POST" name="fregistrar" onSubmit="return valida_registro(this);">
+<div id="campotexto2">
+  <div id="nombrecampo">Nombre<span class="asterisco">*</span></div><input type="text" name="nombre" class="fields_stylish" value="<?=$_POST[nombre]?>">
+</div> 
+<div id="campotexto2">
+  <div id="nombrecampo">Apellido<span class="asterisco">*</span></div><input type="text" name="apellido" class="fields_stylish" value="<?=$_POST[apellido]?>">
+</div>
+<div id="campotexto2">
+<div id="nombrecampo">Telefono<span class="asterisco">*</span></div><input type="text" name="telefono" class="fields_stylish" value="<?=$_POST[telefono]?>">
+</div>
+<div id="campotexto2">
+  <div id="nombrecampo">Email<span class="asterisco">*</span></div><input type="text" name="email" class="fields_stylish" value="<?=$_POST[email]?>">
+</div>
+<div id="campotexto2">
+  <div id="nombrecampo">Compa&ntilde;ia<span class="asterisco">*</span></div><input type="text" name="company" class="fields_stylish" value="<?=$_POST[company]?>">
+</div>
+<div id="campotexto2">
+  <div id="nombrecampo">Mensaje</div><textarea rows="10" cols="45" name="mensaje" class="fields_textarea"></textarea>
+</div>
+<div id="captcha_izq">
+  <div id="nombrecampo2">Codigo de seguridad</div>
+  <div id="nombrecampo2">Ingrese codigo de seguridad</div></div>
+  <div id="captcha_der">
+  <div id="nombrecampo3"><img src="../captcha/captcha.php" border="0" /></div>
+  <div id="nombrecampo3"><input type="text" name="code" class="fields_stylish" value="<?=$_POST[code]?>"></div>
+  </div>
+<div id="botonbuscar2"><input type="image" src="../images/send_es.gif" name="Image1" width="105" height="28" border="0" /> <input type="image" src="../images/erase_es.gif" name="Image1" width="105" height="28" border="0" /></div>
+<input name="sent" type="hidden" id="sent" value="1">
+</form>
+</div><div id="texto_chico2" class="texto_mediano2"><h1>DIRECCION:</h1>
+  <p>Lamadrid 3065<br />
+  (3000) Santa Fe, Argentina</p>
+  <h1>TELEFONOS:</h1>
+<p>+54 (0342) 4810810<br>
++54 (0342) 4995936</p>
+<h1>EMAIL: </h1>
+<p>fapersa@fapersaicsa.com.ar</p></div>
+</div>
+        </div>
+        </div>
+<?php
+include("footer.inc.php"); 
+?>

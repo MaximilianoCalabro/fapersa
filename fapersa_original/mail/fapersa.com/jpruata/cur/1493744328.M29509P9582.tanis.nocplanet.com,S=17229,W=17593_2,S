@@ -1,0 +1,364 @@
+Return-Path: <ricardobaragiola@gmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id 0RGfAci6CFluJQAATLP0zA
+	for <jpruata@fapersa.com>; Tue, 02 May 2017 13:58:48 -0300
+Return-path: <ricardobaragiola@gmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Tue, 02 May 2017 13:58:48 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:41959 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <ricardobaragiola@gmail.com>)
+	id 1d5b8P-0002aC-N8
+	for jpruata@fapersa.com; Tue, 02 May 2017 13:58:47 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id D561D7F20D
+	for <jpruata@fapersa.com>; Tue,  2 May 2017 13:58:45 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id HJmoqyfJBmYR for <jpruata@fapersa.com>;
+	Tue,  2 May 2017 13:58:45 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 5FD067F231; Tue,  2 May 2017 13:58:45 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 5CF697F20D
+	for <jpruata@fapersa.com>; Tue,  2 May 2017 13:58:44 -0300 (ART)
+Received-SPF: pass (gmail.com ... _spf.google.com: Sender is authorized to use 'ricardobaragiola@gmail.com' in 'mfrom' identity (mechanism 'include:_netblocks.google.com' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="ricardobaragiola@gmail.com"; helo=mail-qt0-f195.google.com; client-ip=209.85.216.195
+Received: from mail-qt0-f195.google.com (mail-qt0-f195.google.com [209.85.216.195])
+	by fw.fapersa.com (Postfix) with ESMTPS id 744F45FF8C
+	for <jpruata@fapersa.com>; Tue,  2 May 2017 13:58:42 -0300 (ART)
+Received: by mail-qt0-f195.google.com with SMTP id t52so21143545qtb.3
+        for <jpruata@fapersa.com>; Tue, 02 May 2017 09:58:42 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:subject:from:in-reply-to:date:cc
+         :content-transfer-encoding:message-id:references:to;
+        bh=sKxZ10q8O8wVL5/ASyplADcLqI/50yX2C8NQ8qSb6Vc=;
+        b=knG+r1110R2YplzCdTLDla427hPfDPC+/ptsfy/rK9h/xQkZCgzIySikBuNyG1Bj5t
+         fi4Ay46DbRwNYBNxvD3FtUjfLiEGI199pgS8dLfxzwLhB6yqzoXJjyRpEFl3Q3suAezr
+         H0hwdISlSlTWubl39neZtxxKcIjNZmlcb6tfui+mYnkt7vBArKaqmwv9un3Ae+LHia2d
+         9B/i4NNC4UmmWg1Yp7XusqHXF/vfiPxzdqPonolFE9l30aa1ib1npJeV0PRSfrW/0dIH
+         2KaVOySosx5LU7SVQ0skeEglU3tljpt5fgBAXNTOoG2nLncDRnhxS9fuy/CyToBVz2lC
+         PbyA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:subject:from:in-reply-to:date:cc
+         :content-transfer-encoding:message-id:references:to;
+        bh=sKxZ10q8O8wVL5/ASyplADcLqI/50yX2C8NQ8qSb6Vc=;
+        b=NtAuC3/jhuQ+3pgvAyxzQlN/l3GdhwW2WZT0E+UkMzORPa2qSolusPmIOq5OukaJ3Y
+         ORUuDasUDNNwPQ3OX3fFo6AU4PHRpAtn78t7yuCT1jWX/cW5L4Bcf7GwQk6z9OdH2Y4U
+         f2DLKlzzX1TJ/MNrdi7p3c23otPg/M5RfDgmHzEVmWUxZK1JuEeWmRbVtgVhLhyG92Gr
+         ydRSuIiDe+HcA/hMvojn7DrCtV5L8zNPjNvMy7GfJ9eCnIkTXv+ZbES+5mA1YqYW8Yf1
+         DXgSBlV31iOBeids4vDzEWXotzqFx99ahLZJJuL0Fs4EVtKL07A/SgZ1Xyw/dwVa6hMx
+         wc/A==
+X-Gm-Message-State: AN3rC/43tXvEfLPPPLgEhEBoj5pDcDYyscWaPlPDEhNm+BGjHyLcUEEk
+	JUiRoHSaIiF7NA==
+X-Received: by 10.200.2.145 with SMTP id p17mr29582076qtg.180.1493744320587;
+        Tue, 02 May 2017 09:58:40 -0700 (PDT)
+Received: from [10.210.71.146] ([186.158.138.22])
+        by smtp.gmail.com with ESMTPSA id u1sm787383qtu.24.2017.05.02.09.58.38
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 02 May 2017 09:58:40 -0700 (PDT)
+Content-Type: multipart/alternative;
+	boundary=Apple-Mail-2046D11C-CB5D-4F39-810F-3FDACA85BAE8
+Mime-Version: 1.0 (1.0)
+Subject: Re: RV: Propuesta Banco Bica - Santa Fe Rugby
+From: Ricardo Baragiola <ricardobaragiola@gmail.com>
+X-Mailer: iPhone Mail (14E304)
+In-Reply-To: <BY2PR19MB035828A5AF8EE7C67DFB70938A170@BY2PR19MB0358.namprd19.prod.outlook.com>
+Date: Tue, 2 May 2017 13:58:36 -0300
+Cc: =?utf-8?Q?Jos=C3=A9_Ignacio_David?= <josedavid@contadoresdavid.com.ar>,
+ =?utf-8?Q?Mart=C3=ADn?= <martin@marathona.com.ar>,
+ Cesar Maragno <cmaragno@frsf.utn.edu.ar>,
+ Carlos Gorla <cgorla@amiun.com.ar>, Juan Pablo Ruata <jpruata@fapersa.com>,
+ OVIDIO <orusso@amiun.com.ar>, Pedro Eduardo BENET <ingbenet@hotmail.com>,
+ Fito Benavides <ribenavides2000@hotmail.com>,
+ =?utf-8?Q?Fernando_Ariel_B=C3=81EZ?= <fernandoabaez@hotmail.com>,
+ Yeye Gorla <yeyegorla@hotmail.com>,
+ Juan Pablo POLETTI <jppoletti@arnet.com.ar>
+Content-Transfer-Encoding: 7bit
+Message-Id: <FD6D08B1-5551-47C8-97BF-7E4B64EDF9B4@gmail.com>
+References: <WC20170502133956.350252@bancobica.com.ar> <BY2PR19MB035828A5AF8EE7C67DFB70938A170@BY2PR19MB0358.namprd19.prod.outlook.com>
+To: Ricardo Melini <rmelini@hotmail.com.ar>
+
+
+--Apple-Mail-2046D11C-CB5D-4F39-810F-3FDACA85BAE8
+Content-Type: text/plain;
+	charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Gracias Ricardo lo vemos esta noche=20
+Mono te pido que lo pongan en el Tamargo del d=C3=ADa=20
+Saludos=20
+Enviado desde mi iPhone
+
+> El 2 may. 2017, a las 10:46, Ricardo Melini <rmelini@hotmail.com.ar> escri=
+bi=C3=B3:
+>=20
+> Hola Jos=C3=A9, buenas tardes
+> Como te comentaba telef=C3=B3nicamente, remitimos propuesta de productos, s=
+ervicios y publicidad para Santa Fe Rugby, solicitamos la eval=C3=BAen, poni=
+=C3=A9ndonos a disposici=C3=B3n para tratar los temas.
+> Favor hacer extensiva la misma a los dem=C3=A1s integrantes de la comisi=C3=
+=B3n directiva.
+> Saludos
+> Mariano
+>=20
+>=20
+>  Cpn Mariano Suligoy
+> Gerente
+> Suc. Puerto de Santa Fe
+> Banco Bica SA
+> 54-342-4570530/32/33/34
+> M=C3=B3vil: 54-342-154425784
+> msuligoy@bancobica.com.ar
+> www.bancobica.com.ar
+>=20
+>=20
+> Banco BICA
+> www.bancobica.com.ar
+> Banco de ra=C3=ADz Cooperativa, posicionado en Zona Centro del Litoral Arg=
+entino, atenci=C3=B3n personalizada y =C3=A1mplia trayectoria regional.
+> =20
+>=20
+>=20
+> ----Original Message-----
+> From: "Mariano Suligoy" <msuligoy@bancobica.com.ar>
+> To: josedavid@contadoresdavid.com.ar
+> Cc: "Hernan Catena" <hcatena@bancobica.com.ar>, "Pablo Neville" <pneville@=
+bancobica.com.ar>, cgorla@amiun.com.ar
+> Date: Wed, 26 Apr 2017 14:58:23 -0300
+> Subject: Propuesta Banco Bica - Santa Fe Rugby
+> =20
+>=20
+>=20
+> Banco Bica S.A. est=C3=A1 a favor de la preservaci=C3=B3n de los recursos n=
+aturales. No imprima este mensaje excepto que sea realmente necesario.=20
+> Este mensaje y sus anexos son confidenciales y para el uso exclusivo por p=
+arte del titular de la direcci=C3=B3n de correo electr=C3=B3nico a la que es=
+t=C3=A1 dirigido, por lo que su contenido no debe ser copiado, enviado, reve=
+lado o utilizado en cualquier forma no autorizada expresamente por el emisor=
+. En caso que Ud. no sea el destinatario especificado en este mensaje o pers=
+ona debidamente autorizada por el mismo, por favor informe tal situaci=C3=B3=
+n reenviando el mensaje y/ o sus anexos al remitente. El emisor no acepta re=
+sponsabilidad alguna por errores u omisiones de contenidos en este mensaje o=
+ sus anexos, ni garantiza la seguridad, exactitud de lo transmitido por este=
+ medio debido a que el mismo puede ser objeto de intercepci=C3=B3n, alteraci=
+=C3=B3n, demora, p=C3=A9rdida, contener virus inform=C3=A1ticos u otras anom=
+al=C3=ADas.
+>=20
+>=20
+>=20
+> <BB_Propuesta_CSFR_20170426.pdf>
+
+--Apple-Mail-2046D11C-CB5D-4F39-810F-3FDACA85BAE8
+Content-Type: text/html;
+	charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"content-type" content=3D"text/html; charset=3D=
+utf-8"></head><body dir=3D"auto"><div>Gracias Ricardo lo vemos esta noche&nb=
+sp;<br>Mono te pido que lo pongan en el Tamargo del d=C3=ADa&nbsp;</div><div=
+ id=3D"AppleMailSignature">Saludos&nbsp;<br>Enviado desde mi iPhone</div><di=
+v><br>El 2 may. 2017, a las 10:46, Ricardo Melini &lt;<a href=3D"mailto:rmel=
+ini@hotmail.com.ar">rmelini@hotmail.com.ar</a>&gt; escribi=C3=B3:<br><br></d=
+iv><blockquote type=3D"cite"><div>
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-1=
+">
+
+
+
+<div id=3D"divtagdefaultwrapper" style=3D"color: rgb(0, 0, 0); font-family: C=
+alibri,Arial,Helvetica,sans-serif; font-size: 12pt;" dir=3D"ltr">
+<p></p>
+<div>Hola Jos=C3=A9, buenas tardes
+<div style=3D"color: rgb(0, 0, 0); font-family: Tahoma; font-size: 13px; fon=
+t-style: normal; font-weight: 400;">
+Como te comentaba telef=C3=B3nicamente,&nbsp;remitimos propuesta de producto=
+s, servicios y publicidad para Santa Fe Rugby, solicitamos la eval=C3=BAen, p=
+oni=C3=A9ndonos a disposici=C3=B3n para tratar los temas.</div>
+<div style=3D"color: rgb(0, 0, 0); font-family: Tahoma; font-size: 13px; fon=
+t-style: normal; font-weight: 400;">
+Favor hacer extensiva la misma a los dem=C3=A1s integrantes de la comisi=C3=B3=
+n directiva.</div>
+<div style=3D"color: rgb(0, 0, 0); font-family: Tahoma; font-size: 13px; fon=
+t-style: normal; font-weight: 400;">
+Saludos</div>
+<div style=3D"color: rgb(0, 0, 0); font-family: Tahoma; font-size: 13px; fon=
+t-style: normal; font-weight: 400;">
+Mariano</div>
+<div style=3D"color: rgb(0, 0, 0); font-family: Tahoma; font-size: 13px; fon=
+t-style: normal; font-weight: 400;">
+<br>
+</div>
+<div style=3D"color: rgb(0, 0, 0); font-family: Tahoma; font-size: 13px; fon=
+t-style: normal; font-weight: 400;">
+<br>
+</div>
+<div style=3D"color: rgb(0, 0, 0); font-family: Tahoma; font-size: 13px; fon=
+t-style: normal; font-weight: 400;">
+&nbsp;<span style=3D"color: rgb(105, 105, 105);">Cpn Mariano Suligoy</span>
+<div style=3D"color: rgb(0, 0, 0); font-family: tahoma; font-size: 13px; fon=
+t-style: normal; font-weight: 400;">
+<span style=3D"color: rgb(105, 105, 105);">Gerente</span></div>
+<div style=3D"color: rgb(0, 0, 0); font-family: tahoma; font-size: 13px; fon=
+t-style: normal; font-weight: 400;">
+<span style=3D"color: rgb(105, 105, 105);">Suc. Puerto de Santa Fe</span></d=
+iv>
+<div style=3D"color: rgb(0, 0, 0); font-family: tahoma; font-size: 13px; fon=
+t-style: normal; font-weight: 400;">
+<span style=3D"color: rgb(105, 105, 105);">Banco Bica SA</span></div>
+<div style=3D"color: rgb(0, 0, 0); font-family: tahoma; font-size: 13px; fon=
+t-style: normal; font-weight: 400;">
+<span style=3D"color: rgb(105, 105, 105);">54-342-4570530/32/33/34</span></d=
+iv>
+<div style=3D"color: rgb(0, 0, 0); font-family: tahoma; font-size: 13px; fon=
+t-style: normal; font-weight: 400;">
+<span style=3D"color: rgb(105, 105, 105);">M=C3=B3vil: 54-342-154425784</spa=
+n></div>
+<div style=3D"color: rgb(0, 0, 0); font-family: tahoma; font-size: 13px; fon=
+t-style: normal; font-weight: 400;">
+<a href=3D"mailto:msuligoy@bancobica.com.ar"><span style=3D"color: rgb(105, 1=
+05, 105);">msuligoy@bancobica.com.ar</span></a></div>
+</div>
+</div>
+<p></p>
+<p><a class=3D"OWAAutoLink" id=3D"LPlnk929693" href=3D"http://www.bancobica.=
+com.ar" previewremoved=3D"true">www.bancobica.com.ar</a></p>
+<p></p>
+<div id=3D"LPBorder_GT_14937328683700.6148048503676206" style=3D"width: 100%=
+; text-indent: 0px; overflow: auto; margin-bottom: 20px; display: inline-blo=
+ck;">
+<table id=3D"LPContainer_14937328683320.18276378558264677" role=3D"presentat=
+ion" style=3D"width: 90%; overflow: auto; padding-top: 20px; padding-bottom:=
+ 20px; margin-top: 20px; border-top-color: rgb(200, 200, 200); border-bottom=
+-color: rgb(200, 200, 200); border-top-width: 1px; border-bottom-width: 1px;=
+ border-top-style: dotted; border-bottom-style: dotted; position: relative; b=
+ackground-color: rgb(255, 255, 255);" cellspacing=3D"0">
+<tbody>
+<tr valign=3D"top" style=3D"border-spacing: 0px;">
+<td id=3D"ImageCell_14937328683400.8851509817274746" style=3D"width: 250px; p=
+adding-right: 20px; display: table-cell; position: relative;" colspan=3D"1">=
+
+<div id=3D"LPImageContainer_14937328683420.033908816947156306" style=3D"marg=
+in: auto; width: 250px; height: 144px; display: table; position: relative; b=
+ackground-color: rgb(255, 255, 255);">
+<a id=3D"LPImageAnchor_14937328683470.7313998940962132" style=3D"text-align:=
+ center; display: table-cell;" href=3D"http://www.bancobica.com.ar/" target=3D=
+"_blank"><img width=3D"250" height=3D"144" id=3D"LPThumbnailImageID_14937328=
+683470.6258573345955586" style=3D"border-width: 0px; width: 250px; height: 1=
+44px; vertical-align: bottom; display: inline-block; max-height: 250px; max-=
+width: 250px;" src=3D"http://www.bancobica.com.ar/img/sliders/RedMob.gif"></=
+a></div>
+</td>
+<td id=3D"TextCell_14937328683510.6460012911979347" style=3D"padding: 0px; v=
+ertical-align: top; display: table-cell; position: relative;" colspan=3D"2">=
+
+<div id=3D"LPRemovePreviewContainer_14937328683510.4469040980914991" style=3D=
+"float: right;">
+</div>
+<div id=3D"LPTitle_14937328683510.9792839476164126" style=3D"top: 0px; color=
+: rgb(0, 120, 215); line-height: 21px; font-family: &quot;wf_segoe-ui_light&=
+quot;, &quot;Segoe UI Light&quot;, &quot;Segoe WP Light&quot;, &quot;Segoe U=
+I&quot;, &quot;Segoe WP&quot;, Tahoma, Arial, sans-serif; font-size: 21px; f=
+ont-weight: 400;">
+<a id=3D"LPUrlAnchor_14937328683570.5757220946239219" style=3D"text-decorati=
+on: none;" href=3D"http://www.bancobica.com.ar/" target=3D"_blank">Banco BIC=
+A</a></div>
+<div id=3D"LPMetadata_14937328683580.2446543285183449" style=3D"margin: 10px=
+ 0px 16px; color: rgb(102, 102, 102); line-height: 14px; font-family: &quot;=
+wf_segoe-ui_normal&quot;, &quot;Segoe UI&quot;, &quot;Segoe WP&quot;, Tahoma=
+, Arial, sans-serif; font-size: 14px; font-weight: 400;">
+<a href=3D"http://www.bancobica.com.ar">www.bancobica.com.ar</a></div>
+<div id=3D"LPDescription_14937328683640.16117836428347615" style=3D"color: r=
+gb(102, 102, 102); line-height: 20px; overflow: hidden; font-family: &quot;w=
+f_segoe-ui_normal&quot;, &quot;Segoe UI&quot;, &quot;Segoe WP&quot;, Tahoma,=
+ Arial, sans-serif; font-size: 14px; font-weight: 400; display: block; max-h=
+eight: 100px;">
+Banco de ra=C3=ADz Cooperativa, posicionado en Zona Centro del Litoral Argen=
+tino, atenci=C3=B3n personalizada y =C3=A1mplia trayectoria regional.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p></p>
+<br>
+<p><br>
+</p>
+<p>----Original Message-----<br>
+From: "Mariano Suligoy" &lt;<a href=3D"mailto:msuligoy@bancobica.com.ar">msu=
+ligoy@bancobica.com.ar</a>&gt;<br>
+To: <a href=3D"mailto:josedavid@contadoresdavid.com.ar">josedavid@contadores=
+david.com.ar</a><br>
+Cc:&nbsp;"Hernan Catena" &lt;<a href=3D"mailto:hcatena@bancobica.com.ar">hca=
+tena@bancobica.com.ar</a>&gt;, "Pablo Neville" &lt;<a href=3D"mailto:pnevill=
+e@bancobica.com.ar">pneville@bancobica.com.ar</a>&gt;, <a href=3D"mailto:cgo=
+rla@amiun.com.ar">cgorla@amiun.com.ar</a><br>
+Date: Wed, 26 Apr 2017 14:58:23 -0300<br>
+Subject: Propuesta Banco Bica - Santa Fe Rugby<br>
+&nbsp; </p>
+<div style=3D"color: rgb(0, 0, 0);">
+<div>
+<div style=3D"color: rgb(0, 0, 0); font-family: Tahoma; font-size: 16px; fon=
+t-style: normal; font-weight: 400;">
+<blockquote style=3D"padding-right: 0px; padding-left: 5px; margin-right: 0p=
+x; margin-left: 5px; border-left-color: rgb(0, 0, 0); border-left-width: 2px=
+; border-left-style: solid;">
+<div style=3D"color: rgb(0, 0, 0); font-family: Tahoma; font-size: 13px; fon=
+t-style: normal; font-weight: 400;">
+<img unselectable=3D"on" src=3D"http://www.bancobica.com.ar/img/PieMailBanco=
+.jpg">
+<table width=3D"100%" border=3D"0" cellspacing=3D"5" cellpadding=3D"5">
+<tbody>
+<tr>
+<td style=3D"text-align: justify; color: rgb(51, 51, 51); font-family: Arial=
+,Helvetica,sans-serif; font-size: 9px;">
+<div><strong>Banco Bica S.A. est=C3=A1 a favor de la preservaci=C3=B3n de lo=
+s recursos naturales. No imprima este mensaje excepto que sea realmente nece=
+sario.
+</strong><br>
+Este mensaje y sus anexos son confidenciales y para el uso exclusivo por par=
+te del titular de la direcci=C3=B3n de correo electr=C3=B3nico a la que est=C3=
+=A1 dirigido, por lo que su contenido no debe ser copiado, enviado, revelado=
+ o utilizado en cualquier forma no autorizada
+ expresamente por el emisor. En caso que Ud. no sea el destinatario especifi=
+cado en este mensaje o persona debidamente autorizada por el mismo, por favo=
+r informe tal situaci=C3=B3n reenviando el mensaje y/ o sus anexos al remite=
+nte. El emisor no acepta responsabilidad
+ alguna por errores u omisiones de contenidos en este mensaje o sus anexos, n=
+i garantiza la seguridad, exactitud de lo transmitido por este medio debido a=
+ que el mismo puede ser objeto de intercepci=C3=B3n, alteraci=C3=B3n, demora=
+, p=C3=A9rdida, contener virus inform=C3=A1ticos
+ u otras anomal=C3=ADas.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</blockquote>
+</div>
+<br>
+<br>
+<table width=3D"100%" border=3D"0" cellspacing=3D"5" cellpadding=3D"5">
+<tbody>
+<tr>
+<td style=3D"text-align: justify; color: rgb(51, 51, 51); font-family: Arial=
+,Helvetica,sans-serif; font-size: 9px;">
+<p><br>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+</div></blockquote><blockquote type=3D"cite"><div>&lt;BB_Propuesta_CSFR_2017=
+0426.pdf&gt;</div></blockquote></body></html>=
+
+--Apple-Mail-2046D11C-CB5D-4F39-810F-3FDACA85BAE8--

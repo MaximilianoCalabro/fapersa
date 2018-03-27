@@ -1,0 +1,256 @@
+Return-Path: <bounces+2179171-a0fb-jpruata=fapersa.com@sendgrid.net>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id gfzBIKTgKFmxJAAATLP0zA
+	for <jpruata@fapersa.com>; Fri, 26 May 2017 23:12:52 -0300
+Return-path: <bounces+2179171-a0fb-jpruata=fapersa.com@sendgrid.net>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Fri, 26 May 2017 23:12:52 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:46328 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <bounces+2179171-a0fb-jpruata=fapersa.com@sendgrid.net>)
+	id 1dERDn-0002cu-Tn
+	for jpruata@fapersa.com; Fri, 26 May 2017 23:12:52 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id D09D37F213
+	for <jpruata@fapersa.com>; Fri, 26 May 2017 23:12:51 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id y7JkSSaLjChB for <jpruata@fapersa.com>;
+	Fri, 26 May 2017 23:12:51 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 395A27F232; Fri, 26 May 2017 23:12:51 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 8A9C47F213
+	for <jpruata@fapersa.com>; Fri, 26 May 2017 23:12:49 -0300 (ART)
+Received-SPF: pass (sendgrid.net: 208.117.55.133 is authorized to use 'bounces+2179171-a0fb-jpruata=fapersa.com@sendgrid.net' in 'mfrom' identity (mechanism 'ip4:208.117.48.0/20' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="bounces+2179171-a0fb-jpruata=fapersa.com@sendgrid.net"; helo=o1.b.az.sendgrid.net; client-ip=208.117.55.133
+Received: from o1.b.az.sendgrid.net (o1.b.az.sendgrid.net [208.117.55.133])
+	by fw.fapersa.com (Postfix) with ESMTPS id 00C245FD9C
+	for <jpruata@fapersa.com>; Fri, 26 May 2017 23:12:46 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=sendgrid.me; 
+	h=from:to:subject:mime-version:content-type:content-transfer-encoding; 
+	s=smtpapi; bh=8Rgorb8cqPFN40+c+Kh6MHECtwo=; b=Vn4usYnAR+ZvlzMtAe
+	czekBH5VyIdsQIG8LS3r0XMt41Kb1qwV9QtNrpkmo9Nn06eQhjgjLydokqGunizY
+	z6HN23ZaF6iW4sN9HJpHgHIfgHUiyqIIAdOutlEaCIQw7IcrrwEf/GYgtDHZoAz4
+	SkBbjWtlcaCosZTSle8u7gSNk=
+Received: by filter0315p1las1.sendgrid.net with SMTP id filter0315p1las1-1053-5928E09B-D
+        2017-05-27 02:12:43.23005626 +0000 UTC
+Received: from bd.uar.com.ar (unknown [23.101.185.75])
+	by ismtpd0004p1sjc2.sendgrid.net (SG) with ESMTP id gIF218yuTx6B00FnSYzqCA
+	Sat, 27 May 2017 02:12:43.158 +0000 (UTC)
+From: "noreply UAR - ssl" <noreply@uar.com.ar>
+To:  <gcristaldo@enress.gov.ar>,  <dario.schmidt.ar@gmail.com>,  <ggalassi@cablevision.com.ar>,  <marianocordini@hotmail.com>,  <jpruata@fapersa.com>,  <ivanregenhardt@gmail.com>, Disciplina <secretaria1@usr.org.ar>,  <oscarbaruffato@gmail.com>,  <jorgei_gonazalez@yahoo.com.ar>,  <crece@rectorado.unl.edu.ar>, rodrigo <rodrigo.o.reyes@gmail.com>,  <martinreferee@hotmail.com>,  <est.donraul@coopmail.com.ar>,  <alvarovelezcasas@gmail.com>, Delia <secretaria@usr.org.ar>, Carlos Alberto <chatociaccio@hotmail.com.ar>, guillermo <guillemorello@hotmail.com>, Eduardo martin <Chinqua_@hotmail.com>, Gabriel <brauliocristaldo@hotmail.com>, fabian <arq.dis@hotmail.com>, Walter Eduardo <walterhrycuk@hotmail.comwalter>, Diego Javier <diegodelpazo@hotmail.com>, FERNANDO <ferlauria@hotmail.com>, Mariano <marianoefernandez@hotmail.com>, Carlos alejandro <carlos.alejandro.medina@hotmail.com>, Horacio <mhoraciomartinez@gmail.com>, Dario Carlos <botta170@hotmail.com>, Gustavo <gustavovilla2083@gm
+ ail.com>, Javier Ignacio <javiersfe@hotmail.com>, =?UTF-8?B?RmFiacOhbg==?= <fmprats@yahoo.com.ar>, Esteban =?UTF-8?B?TWF0w61hcw==?= <estebangdf@gmail.com>, =?UTF-8?B?Sm9zw6kgTWFudWVs?= <jmruiz@insumas.com.ar>, Leonardo <leonardo.delrio@gmail.com>, =?UTF-8?B?SGVybsOhbiBKb3PDqSA=?= <hjbruno@gmail.com>, Chirola <scrumgarmendia@gmail.com>, Mariano <sfrc.secretaria@gmail.com>, =?UTF-8?B?QW5kcsOpcw==?= <asorisio@gmail.com>, Jorge Ignacio <jorgeignacio_gonzalez@yahoo.com.ar>, Gonzalez <fede1gonzalez@yahoo.com.ar>, Exequiel <Exeadro@yahoo.com.ar>, Emilio <emiliotraverso@hotmail.com>, Fernando Diego <fdefeo@hotmail.com>, Luciano <l_molinas@hotmail.com>, Martin Nicolas <mn.galiano@hotmail.com>, Alfredo <alfredofun@colegioinmaculada.edu.ar>, Administrador <sebastian.guzman@paians.com>
+X-Mailer: CakePHP Email
+Date: Fri, 26 May 2017 23:12:42 -0300
+Message-ID: <5928e09a5c70425ba25723f801ce7e74@bd.uar.com.ar>
+Subject: Equipo Santafesina SANTA FE R.C.  del club SANTA FE R.C. de la union
+ Santafesina confirmado
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="f4ac7f20249e305aeac845ed85c41333"
+Content-Transfer-Encoding: 8bit
+X-SG-EID: VfNqVyrjLjKdIIXcj4qJiEnEUuu5wqrVHRmdo0fkVZSeyACVzljU3lGlCBr2Rh3QAkjYcUgTXmv4vP
+ q8QGGjv8JpShl8m7wSnYPDbmB5dTRf5w3WIqDLQwKcrR67DfiRCs3L/ajfrzMcz1UgTfmLqri964N2
+ 1dHQq7SNkAg9zxV5k8E+LI+ADkQJbNCg8eKcT7w7Z/gwoPlDGgV5Qod09++UTZL/j+VnVeg0RLxa/+
+ 4=
+
+--f4ac7f20249e305aeac845ed85c41333
+Content-Type: multipart/alternative; boundary="alt-f4ac7f20249e305aeac845ed85c41333"
+
+--alt-f4ac7f20249e305aeac845ed85c41333
+Content-Type: text/plain; charset=UTF-8
+content-transfer-encoding: quoted-printable
+
+  =0D
+=0D
+Equipo Santafesina SANTA FE R.C.  del club SANTA FE R.C. de la union Santaf=
+esina confirmado=0D
+Se informa que se ha confirmado el equipo Santafesina SANTA FE R.C.  del cl=
+ub SANTA FE R.C. de la union Santafesina=0D
+=0D
+=0D
+=0D
+Listado de jugadores convocados:<br><br>=0D
+  40922453 Garcia Bautista 1998-02-16<br>=0D
+  41656569 Fertonani Tomas Aquiles 1999-03-07<br>=0D
+  42271513 Derito Tomas 1999-11-30<br>=0D
+  41792380 Ruiz Tomas 1999-04-25<br>=0D
+  41216526 Alzugaray I=C3=B1aki 1998-05-18<br>=0D
+  42127242 Garbelino Tomas 1999-09-04<br>=0D
+  41656327 Gorla Augusto Martin 1999-01-11<br>=0D
+  41287726 Marioni Rossler Antonio 1999-01-14<br>=0D
+  41403765 Gorla Facundo 1998-09-28<br>=0D
+  41634370 Gimenez Melo Ramiro Agustin 1999-08-03<br>=0D
+  41403795 Martinez Alejo 1998-10-02<br>=0D
+  41849482 Bagilet  Agustin 1999-08-18<br>=0D
+  42032933 Fabiano Ignacio Aidilio 1999-07-17<br>=0D
+  42127836 Guzzonato Giuliano 1999-10-05<br>=0D
+  42032957 Barraguirre Manuel 1999-07-28<br>=0D
+  42271615 Habash Nabil Ali 1999-12-21<br>=0D
+  41941728 Prono Aimaretti Pedro Ignacio 1998-08-06<br>=0D
+  41792799 Gamboa Jano Manuel 1999-04-24<br>=0D
+  40924782 Ferraro Martin Julian 1998-03-16<br>=0D
+  41656879 Schmidt Mateo 1999-02-03<br>=0D
+  41941021 Canal Martin Cesar 1999-10-13<br>=0D
+  41403819 Lucca Juan Ignacio 1998-10-18<br>=0D
+  42271602 Fernandez Santiago Manuel 1999-12-20<br>=0D
+<br><br>=0D
+=0D
+Puede ver el detalle del equipo siguiendo <a href=3D"https://u2179171.ct.se=
+ndgrid.net/wf/click?upn=3DQKLWUNKk2HtIWn7sBl-2BXJDAS4KKBHLF4FRWfsB-2FHZut5W=
+DRUYK3Xu-2BfAyGWVXX16_-2BhQsPu9Q2VEUqe1WPYN4pT-2BIvMtng7VbwqiKNwfIv6IUFrrNE=
+gdkZSAo27OBIqAO1RK0-2FXlVUttTbV3TrTviYfqSdOYyfzrJLeqjNbKt87E9xQ1-2FqF1vga3L=
+dhVWWD4Sfp7ATZ0AQTx66qVBWDDzYEYnxEO2nsemGAFoiWgFHrMad3wT-2FqK1k4srZBIdF8doQ=
+ubVmlm6LeEJE6zhmyaPmw-3D-3D">este link </a>=0D
+=0D
+This email was sent using the CakePHP Framework, https://u2179171.ct.sendgr=
+id.net/wf/click?upn=3DKEh4BJ8WvB6RNKBzhRiUbf6ynK1N40vE42VN-2BZyzw3Q-3D_-2Bh=
+QsPu9Q2VEUqe1WPYN4pT-2BIvMtng7VbwqiKNwfIv6IUFrrNEgdkZSAo27OBIqAOEqoNJ8luexp=
+lwHFRSMGmfy9CBKJNH6cGb14KK0-2FcXYukyD440pFoN2Q1RLpK7z8-2BPLeyvhzmXl7WHBlUNf=
+m9SkmDjmnBE9KSlhaOsOswm2SKkZV1RpZf7k-2BAFTfUiHjyHoCgpnLQ6sVuZ-2B10-2BDCuzA-=
+3D-3D
+
+--alt-f4ac7f20249e305aeac845ed85c41333
+Content-Type: text/html; charset=UTF-8
+content-transfer-encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html style=3D"height: 100%;font-size: 10px;-webkit-tap-highlight-color: rg=
+ba(0,0,0,0);font-family: sans-serif;display: block;">=0D
+<head>=0D
+	<meta charset=3D"utf-8">=0D
+	<meta content=3D"IE=3Dedge">=0D
+	<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1=
+">=0D
+	<title>Uni=C3=B3n Argentina de Rugby</title>=0D
+=0D
+	<link href=3D"https://fonts.googleapis.com/css?family=3DRoboto:400,300,100=
+,500,700,900" rel=3D"stylesheet" type=3D"text/css">=0D
+=0D
+</head>=0D
+=0D
+<body style=3D"background-color: white;font-family: 'Roboto',Helvetica Neue=
+,Helvetica,Arial,sans-serif;font-size: 13px;line-height: 1.5384616;color: #=
+333;margin: 0 !important;display: block; max-width: 1200px;">=0D
+=0D
+	<div class=3D"page-header" style=3D"display: block;background-image: url(h=
+ttp://wap06-html.azurewebsites.net/mail/fondoheadmail.jpg);background-size:=
+ cover; background-position: top left;background-repeat: no-repeat;backgrou=
+nd-size: cover;margin: 0;padding: 0;border-bottom-width: 0;border-bottom: 1=
+px solid #ddd;">=0D
+		<div class=3D"page-header-content" style=3D"display: block;position: rela=
+tive;background-color: inherit;padding: 0 20px;">=0D
+			<div class=3D"page-title" style=3D"padding: 10px 36px 10px 0;display: bl=
+ock;position: relative;">=0D
+				<div class=3D"logo-mail" style=3D"display: block;width: auto;height: au=
+to;text-align: left;">=0D
+					<img class=3D"logo-mail" src=3D"http://wap06-html.azurewebsites.net/ma=
+il/logomail.png" style=3D"vertical-align: middle;border: 0;width: auto;heig=
+ht: 55px;text-align: left;">=0D
+				</div>=0D
+			</div>=0D
+		</div>=0D
+	</div>=0D
+=0D
+	<div class=3D"page-container" style=3D"padding-top: 0;position: relative;p=
+adding: 20px 20px;padding-bottom: 40px;">=0D
+		<div class=3D"page-content">=0D
+			<div class=3D"content-wrapper" style=3D"width: 100%;">=0D
+          =0D
+<h3  style=3D"display: block;letter-spacing: -0.015em;font-family: inherit;=
+line-height: 1.5;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webk=
+it-margin-start: 0px;-webkit-margin-end: 0px;margin: 2rem !important;font-s=
+ize: 25px;font-weight: 900;color: #404040;text-align: center;">Equipo Santa=
+fesina SANTA FE R.C.  del club SANTA FE R.C. de la union Santafesina confir=
+mado</h3>=0D
+<p  style=3D"display: block;-webkit-margin-before: 1em;-webkit-margin-after=
+: 1em;-webkit-margin-start: 0px;-webkit-margin-end: 0px;margin: 0 2rem 2rem=
+ 2rem;font-size: 15px;text-align: center;color: #404040;">=0D
+  Se informa que se ha confirmado el equipo Santafesina SANTA FE R.C.  del =
+club SANTA FE R.C. de la union Santafesina=0D
+=0D
+=0D
+=0D
+Listado de jugadores convocados:<br><br>=0D
+  40922453 Garcia Bautista 1998-02-16<br>=0D
+  41656569 Fertonani Tomas Aquiles 1999-03-07<br>=0D
+  42271513 Derito Tomas 1999-11-30<br>=0D
+  41792380 Ruiz Tomas 1999-04-25<br>=0D
+  41216526 Alzugaray I=C3=B1aki 1998-05-18<br>=0D
+  42127242 Garbelino Tomas 1999-09-04<br>=0D
+  41656327 Gorla Augusto Martin 1999-01-11<br>=0D
+  41287726 Marioni Rossler Antonio 1999-01-14<br>=0D
+  41403765 Gorla Facundo 1998-09-28<br>=0D
+  41634370 Gimenez Melo Ramiro Agustin 1999-08-03<br>=0D
+  41403795 Martinez Alejo 1998-10-02<br>=0D
+  41849482 Bagilet  Agustin 1999-08-18<br>=0D
+  42032933 Fabiano Ignacio Aidilio 1999-07-17<br>=0D
+  42127836 Guzzonato Giuliano 1999-10-05<br>=0D
+  42032957 Barraguirre Manuel 1999-07-28<br>=0D
+  42271615 Habash Nabil Ali 1999-12-21<br>=0D
+  41941728 Prono Aimaretti Pedro Ignacio 1998-08-06<br>=0D
+  41792799 Gamboa Jano Manuel 1999-04-24<br>=0D
+  40924782 Ferraro Martin Julian 1998-03-16<br>=0D
+  41656879 Schmidt Mateo 1999-02-03<br>=0D
+  41941021 Canal Martin Cesar 1999-10-13<br>=0D
+  41403819 Lucca Juan Ignacio 1998-10-18<br>=0D
+  42271602 Fernandez Santiago Manuel 1999-12-20<br>=0D
+<br><br>=0D
+=0D
+Puede ver el detalle del equipo siguiendo <a href=3D"https://u2179171.ct.se=
+ndgrid.net/wf/click?upn=3DQKLWUNKk2HtIWn7sBl-2BXJDAS4KKBHLF4FRWfsB-2FHZut5W=
+DRUYK3Xu-2BfAyGWVXX16_-2BhQsPu9Q2VEUqe1WPYN4pT-2BIvMtng7VbwqiKNwfIv6IUFrrNE=
+gdkZSAo27OBIqAOXpSq089bEBHjFr5EVIZWuunkD7zmgVZwGShTtENxyCJZzP3ebuRtaTYpODEX=
+ltv66b1vclgZpNAhsw5E0blQx-2Fsb05BikS8SY278Z7ZIHFiUH-2FQH8NCrjarAWAPOicRxxn7=
+4BTwo6lAsg7N1OmhcSg-3D-3D">este link </a>=0D
+</p>=0D
+<!--<div >=0D
+  <a href=3D"#" target=3D"_blank" >=0D
+    <button type=3D"button" >=0D
+      Responder solicitud=0D
+    </button>=0D
+  </a>=0D
+</div>-->=0D
+			</div>=0D
+		</div>=0D
+	</div>=0D
+=0D
+	<div class=3D"page-footer" style=3D"display: block;height: 70px;background=
+-color: #0053a1;background-size: cover;margin-bottom: 0rem !important;">=0D
+		<div class=3D"footerline" style=3D"display: block;height: 5px;width: 100%=
+;background-image: url(http://wap06-html.azurewebsites.net/mail/lineafooter=
+mail.jpg);background-position: top left;background-repeat: no-repeat;backgr=
+ound-size: cover;"></div>=0D
+		<p class=3D"copyright-mail" style=3D"display: block;-webkit-margin-before=
+: 1em;-webkit-margin-after: 1em;-webkit-margin-start: 0px;-webkit-margin-en=
+d: 0px;margin: 20px 5px 20px 5px;color: white;">&copy; 2017. <a href=3D"htt=
+ps://u2179171.ct.sendgrid.net/wf/click?upn=3DTJ0inPdAwN0TdxVMlH8LgfEe4osiEi=
+p9gUTpmtNlicQ-3D_-2BhQsPu9Q2VEUqe1WPYN4pT-2BIvMtng7VbwqiKNwfIv6IUFrrNEgdkZS=
+Ao27OBIqAOq-2FGXzLtiGQ79dVbvzZSKllIMAgdfOaJZkzkJBSDtrqz4ZPk8836doZIJ7q-2Fxj=
+ybpyv48bGzG4-2F2iva68EaryDLV-2FuHrDGNslLpIiiiaYYPq7QJKwTn6cdAe7PvQ9GSsZ0ocs=
+PZCjVhbbFUO-2FpU86Vg-3D-3D" target=3D"_blank" style=3D"color:#66b3ff;">UAR<=
+/a></p>=0D
+	</div>=0D
+=0D
+
+<img src=3D"https://u2179171.ct.sendgrid.net/wf/open?upn=3D-2BhQsPu9Q2VEUqe=
+1WPYN4pT-2BIvMtng7VbwqiKNwfIv6IUFrrNEgdkZSAo27OBIqAOzBopHZQ-2FgWPLx9-2BPvax=
+Z8ojC3rwshr0DJxIuivAud-2B9oDWdDBE5yEvb4bc0DaJXtgiDt4QWXoC-2BxUu465ipgbdp8LA=
+cFZ5hyPeJJk3jdCo97-2BQUUOivpGDO3bZvR4vS7rhqdjRu6V-2BC-2FAC5GSmAvbpjm6kdsvA9=
+0C9hda3MGc-2F0-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"=
+height:1px !important;width:1px !important;border-width:0 !important;margin=
+-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;marg=
+in-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;p=
+adding-right:0 !important;padding-left:0 !important;"/>
+</body>=0D
+</html>
+
+
+--alt-f4ac7f20249e305aeac845ed85c41333--
+
+
+--f4ac7f20249e305aeac845ed85c41333--
+
+
+

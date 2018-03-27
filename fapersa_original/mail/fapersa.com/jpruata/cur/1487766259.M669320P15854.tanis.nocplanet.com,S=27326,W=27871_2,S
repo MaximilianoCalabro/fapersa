@@ -1,0 +1,545 @@
+Return-Path: <jcalmeida2012@yahoo.com.ar>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id hSiWJ/OCrVjuPQAATLP0zA
+	for <jpruata@fapersa.com>; Wed, 22 Feb 2017 09:24:19 -0300
+Return-path: <jcalmeida2012@yahoo.com.ar>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Wed, 22 Feb 2017 09:24:19 -0300
+Received: from nm9-vm0.bullet.mail.bf1.yahoo.com ([98.139.213.154]:35966)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128)
+	(Exim 4.88)
+	(envelope-from <jcalmeida2012@yahoo.com.ar>)
+	id 1cgVxn-0003uM-Jn
+	for jpruata@fapersa.com; Wed, 22 Feb 2017 09:24:19 -0300
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com.ar; s=s2048; t=1487766174; bh=Iahb3hvl2Na8eBM019vWI0P0bJmiL7pBKTJWiZCgzNc=; h=Subject:References:To:From:Date:In-Reply-To:From:Subject; b=RrPsTFE8Os+Dw/Fo3l9mOVEaUuyicNwfLTHDlkyKy3kqDUNLcN2RcfO4XL3wWGPwn17XzkaC9VQWfT/W8TaUcXKgPd5RXWSCajEzAGe4H4qxViCKXQI+MdB4Pb1+zuGpKKeGGiBREjgT5zatRH3kEuo+RAMjWFAzGy5PTdIO2oF6Y3vE1+IPq9EAC0EDyTt5oA6vOT5/3m2OCFjC/myTdxwLs22jIrmaKEHp9GdsfHQMnplZb/Cn/W5JeXi+N5seBKckRlEqdHy5PjtX+aTMeCpfJAUm88n9T5qYnW+KvHF4T4ENPJxeyaHmHA56jvL/DnEkLZSBc1D9LckvlAbTVg==
+Received: from [66.196.81.172] by nm9.bullet.mail.bf1.yahoo.com with NNFMP; 22 Feb 2017 12:22:54 -0000
+Received: from [68.142.230.72] by tm18.bullet.mail.bf1.yahoo.com with NNFMP; 22 Feb 2017 12:22:54 -0000
+Received: from [127.0.0.1] by smtp229.mail.bf1.yahoo.com with NNFMP; 22 Feb 2017 12:22:54 -0000
+X-Yahoo-Newman-Id: 836746.55188.bm@smtp229.mail.bf1.yahoo.com
+X-Yahoo-Newman-Property: ymail-3
+X-YMail-OSG: HiAbG4UVM1nKJFr8.3V3.s3lzWRqS8NMg8oeC7JOBZYVeMy
+ 7_8InIt5cKSbrWri6Dxzkwu3NnnjYkkWbd_OOrT4OTqzyEXC6x5irpIqueau
+ pRqKAXLK4p7SJBS8LlIETG3zzEj1eyOfSsrjn_Sd.wxx5g0rGuJZ1cHJbqJZ
+ 3WkZ6GAJff2Waesgv0iNt1r8E6yAlquwycQwjY2tLSAs25DUip0XonbO_lU9
+ E.Nq.BrYNeh5Ci4Kkgi4e1e1K_wb7zATYtSnGp_1bhmFY81cY.xCdUkV5jHB
+ sUS3OpRk_g_BFQI9yv60io9vFGCqcNbtYeEs5mvfelO5m5u1uc1dCyNG8Rsp
+ IKazQhLX2vjCzIRgCeecLz61c1TvCErRsXmHyt4usNT.Exs9ztgvBuaAw.T.
+ oOTepPVZDas9OJoErOvPQtQ_HydbHYTYQBNothQLtoHcxw_nFhYpNJxfSuyz
+ IF2YQTyNJtBpfN5z7I3VhbWQNucH_TUQHt0_GYU1_Esct8N.yBeUZ2VXznmT
+ 7xzJaDNfU4T.k5f7SzcpsVXjuoXUKtUKrZh_gNcn_CYg4mRa2WAc8cIccPEQ
+ -
+X-Yahoo-SMTP: cD76zimswBDRlQDWPDBA3NUg7iMqUiaxq.w-
+Subject: =?UTF-8?Q?La_Tuquina_SA:_con_aplicaci=c3=b3n_a_partir_1-3-2017?=
+References: <ed260d8b-cbc3-4209-27b8-98b0b9bae38e@yahoo.com.ar>
+To: RUATA JUAN PABLO <jpruata@fapersa.com>,
+ Andres Carbone <acarboni@fapersa.com>,
+ Claudia Yalascis <cyalascis@fapersa.com>,
+ Paulina Calcagno <pcalcagno@fapersa.com>
+From: Juan Carlos Almeida <jcalmeida2012@yahoo.com.ar>
+X-Forwarded-Message-Id: <ed260d8b-cbc3-4209-27b8-98b0b9bae38e@yahoo.com.ar>
+Message-ID: <3cc5ac46-a118-646a-1b42-b5fb88252b6e@yahoo.com.ar>
+Disposition-Notification-To: Juan Carlos Almeida <jcalmeida2012@yahoo.com.ar>
+Date: Wed, 22 Feb 2017 09:22:52 -0300
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:45.0) Gecko/20100101
+ Thunderbird/45.7.1
+MIME-Version: 1.0
+In-Reply-To: <ed260d8b-cbc3-4209-27b8-98b0b9bae38e@yahoo.com.ar>
+Content-Type: multipart/alternative;
+ boundary="------------0CAB348A5FBD0A3645DC0E6A"
+X-Spam-Status: No, score=-1.7
+X-Spam-Score: -16
+X-Spam-Bar: -
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  A modo de resumen y teniendo una mirada del que la lee es
+   un productor, lo que se viene es: *_Hacienda, carnes: Nuevo Comprobante electrónico
+    y Registro Fiscal de Operadores de la Cadena de Producción y Comercialización
+    de Haciendas y Carnes Bovinas y Bubalinas _* [...] 
+ 
+ Content analysis details:   (-1.7 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: afip.gov.ar]
+  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends in
+                             digit (jcalmeida2012[at]yahoo.com.ar)
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (jcalmeida2012[at]yahoo.com.ar)
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+X-Spam-Flag: NO
+
+This is a multi-part message in MIME format.
+--------------0CAB348A5FBD0A3645DC0E6A
+Content-Type: text/plain; charset=windows-1252; format=flowed
+Content-Transfer-Encoding: 8bit
+
+A modo de resumen y teniendo una mirada del que la lee es un productor, 
+lo que se viene es:
+
+*_Hacienda, carnes: Nuevo Comprobante electrónico y Registro Fiscal de 
+Operadores de la Cadena de Producción y Comercialización de Haciendas y 
+Carnes Bovinas y Bubalinas
+_*
+
+La Administración Federal de Ingresos Públicos dictó las Resoluciones 
+Generales 3.964 y 3873 introduciendo una serie de modificaciones acerca 
+de la modalidad de facturación de las operaciones con haciendas y carnes 
+y creo el "Registro Fiscal de Operadores de la Cadena de Producción y 
+Comercialización de Haciendas y Carnes Bovinas y Bubalinas" ("RFOCB") 
+incluyendo los regímenes de percepción, pagos a cuenta y retención con 
+aplicación para las operaciones que se efectúen a partir del 1º de Marzo 
+de 2017
+
+
+*Régimen de comprobantes electrónicos*
+
+Mediante la RG 3.964 (BO 23-12-2016) la AFIP ha establecido la 
+obligación de emitir comprobantes electrónicos para respaldar las 
+operaciones de compraventa de hacienda y/o venta en consignación de 
+carne bovina y/o bubalina, así como de los ajustes físicos o de precios 
+que los responsables efectúen.
+
+De acuerdo con los considerandos de la norma, su finalidad sería 
+transparentar la cadena de comercialización de haciendas y carnes 
+bovinas/bubalinas, estableciéndose que la emisión de las liquidaciones 
+de compra primarias de compra-venta de hacienda y carnes a través de 
+consignatarios y la compra directa de hacienda, se realizará a través de 
+un _comprobante__electrónico específico para la actividad_.
+
+_Tipos de comprobantes_: El tipo de comprobante electrónico a utilizar 
+en cada caso dependerá de la operación de la que se trate, según se 
+resume a continuación.
+
+1) *Cuenta de Venta y Líquido Producto - Sector Pecuario*: Los 
+comisionistas y consignatarios de hacienda y/o carne deberán emitir la 
+"Cuenta de Venta y Líquido Producto - Sector Pecuario" para liquidar el 
+producido por la venta de hacienda y/o carne en las cuales intervengan.
+
+2*) Liquidación de Compra - Sector Pecuario*: Los comisionistas y /o 
+consignatarios de hacienda deberán emitir al sujeto comprador la 
+"Liquidación de Compra - Sector Pecuario" para respaldar las 
+adquisiciones de hacienda en las operaciones en las que intervengan.
+
+3) *Liquidación de Compra Directa -Sector Pecuario*-: Los compradores de 
+hacienda destinada a faena, emitirán al vendedor de la hacienda la 
+"Liquidación de Compra Directa".
+
+4*) Liquidación de Venta Directa -Sector Pecuario*-: Los vendedores de 
+hacienda bovina y bubalina deberán emitir este documento cuando se 
+verifiquen alguna de las siguientes condiciones:
+
+- /Cuando el vendedor y comprador sean inscriptos en IVA y el destino no 
+sea para faena.
+/
+/- Cuando el vendedor sea responsable inscripto en el impuesto IVA y el 
+comprador sea un responsable no inscripto (situación casi inexistente), 
+o exento en el gravamen, o adherido al Monotributo, cualquiera sea el 
+destino de la hacienda.
+/
+Cada uno de estos comprobantes tiene un Código asignado en la misma 
+Resolución.
+
+_Sujetos obligados_: Son sujetos obligados los siguientes: Productores, 
+criadores y cabañeros, "Feed Lots", invernadores, establecimientos 
+faenadores y/o frigoríficos, consignatarios y/o comisionistas, 
+consignatarios directos y de carnes de hacienda bovina/bubalina, y los 
+matarifes -abastecedores y carniceros- y toda otra modalidad de usuarios 
+de faena.
+
+Resulta importante señalar que los comprobantes emitidos por sujetos 
+consignatarios de hacienda y/o comisionistas, consignatarios directos 
+y/o consignatarios de carne que no se encuentren incluidos en el 
+"Registro Fiscal de Operadores de la Cadena de Producción y 
+Comercialización de Haciendas y Carnes Bovinas y Bubalinas" (RFOCB), no 
+se considerarán válidos como respaldo documental de la operación.
+
+Para consultar inclusión en el Registro ingresar 
+en*https://servicios1.afip.gov.ar/genericos/rg3873/consulta.aspx
+*
+_Emisión de comprobantes electrónicos_: La solicitud de emisión de 
+comprobantes será otorgada por cada punto de venta declarado. Dicho 
+punto de venta deberá ser distinto a los declarados para otros regímenes 
+o sistemas de facturación, y de resultar necesario podrá utilizarse más 
+de uno. Además, los puntos de venta utilizados por cualquiera de los 
+servicios habilitados para la generación de los comprobantes 
+electrónicos deberán ser distintos entre sí.
+
+Los sujetos obligados deberán solicitar a la AFIP el Código de 
+autorización Electrónico (CAE) a través de alguna de las siguientes 
+opciones:
+
+- Intercambio de información del servicio "web", cuyas especificaciones 
+técnicas se encuentran publicadas en el sitio institucional del 
+Organismo Fiscal.
+
+- Servicio "Comprobantes en línea" seleccionando "Hacienda y Carne - 
+Liquidación Electrónica", accediendo con clave fiscal de Nivel 3.
+
+La AFIP autorizará la solicitud para la emisión de los comprobantes, 
+otorgando el CAE por cada comprobante solicitado y autorizado. Además se 
+dispone que estos comprobantes no tendrán efectos fiscales frente a 
+terceros hasta que la AFIP otorgue dicho CAE.
+
+En caso de inoperatividad de los sistemas que limiten o impidan la 
+emisión electrónica, la misma será efectuada dentro de las 24 horas 
+inmediatas siguientes al restablecimiento del sistema, no previéndose la 
+emisión manual en su reemplazo.
+
+Por último, se dispone que los incumplimientos a este régimen serán 
+sancionados conforme a las disposiciones de la ley 11.683, y que son de 
+aplicación supletoria en los aspectos no contemplados la RG 1.415 
+(régimen general de facturación y registración) y la RG 2.485 (régimen 
+especial para la emisión y almacenamiento electrónico de comprobantes.)
+
+*Registro Fiscal de Operadores de la Cadena de Producción y 
+Comercialización de Haciendas y Carnes Bovinas y Bubalinas (RFOCB) *
+
+La Resolución General 3.873 creó el "RFOCB", y en particular a los 
+regímenes de percepción, pagos a cuenta y retención
+
+
+_Sujetos alcanzados:_ Podrán inscribirse los que desarrollen cualquiera 
+de las siguientes actividades relacionada con hacienda bovina/bubalina: 
+Productores, criadores y cabañeros, "Feed Lots", invernadores, 
+establecimientos faenadores y/o frigoríficos, consignatarios y/o 
+comisionistas, consignatarios directos y de carnes de hacienda 
+bovina/bubalina, mercados concentradores, ferias o predios feriales 
+donde se comercialice hacienda, los matarifes -abastecedores y 
+carniceros- y toda otra modalidad de usuarios de faena , 
+comercializadores de subproductos comestibles y no comestibles de origen 
+bovino/bubalino y los adquirentes de cueros en estado crudo
+
+
+La solicitud de inscripción se efectuara mediante transferencia 
+electrónica de datos a través del servicio Registro Fiscal de Operadores 
+de la Cadena de Producción y Comercialización de Haciendas y Carnes 
+Bovinas y Bubalinas del sitio web de la Afip
+
+
+La permanencia en el Registro estará condicionada a que el contribuyente 
+mantenga /una correcta conducta fiscal/; cuando se constate la 
+configuración de alguna de las causales sobre incorrecta conducta fiscal 
+el contribuyente será suspendido y posteriormente excluidosi no se 
+subsanan los incumplimientos verificados o se constante queno se cuente 
+con numero de inscripción ante el RENSPA vigente
+
+
+_Régimen de Retenciones_*: *Están obligados a actuar como agentes de 
+retención los compradores de hacienda bovina o bubalina en pie con 
+destino a faena, en forma directa o como consignatarios / comisionistas, 
+en las operaciones realizadas con sujetos no incluidos en el RFOCB, o 
+aún las efectuadas con aquellos que estando incluidos en el mismo no 
+hayan declarado CBU respectiva.
+
+Es importante destacar que los vendedores no incluidos en el RFOCB, y 
+también aquellos incluidos en el mismo sin CBU informada, sufrirán la 
+retención del 100% del IVA liquidado.
+
+Los compradores y los consignatarios / comisionistas, deberán verificar 
+la inclusión de los vendedores en el RFOCB en el sitio web de AFIP. A 
+aquellos que no les corresponda retención alguna, les deberán depositar 
+el IVA liquidado en la CBU informada.
+
+
+--------------0CAB348A5FBD0A3645DC0E6A
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: 8bit
+
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  </head>
+  <body bgcolor="#FFFFFF" text="#000000">
+    A modo de resumen y teniendo una mirada del que la lee es un
+    productor, lo que se viene es:
+    <div class="moz-forward-container">
+      <p>
+        <meta http-equiv="Content-Type" content="text/html;
+          charset=windows-1252">
+      </p>
+      <p>
+        <meta name="ProgId" content="Word.Document">
+        <meta name="Generator" content="Microsoft Word 11">
+        <meta name="Originator" content="Microsoft Word 11">
+        <link rel="File-List"
+href="file:///C:%5CUsers%5CLA101%7E1%5CAppData%5CLocal%5CTemp%5Cmsohtml1%5C01%5Cclip_filelist.xml">
+        <!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+        <style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.ilad
+	{mso-style-name:il_ad;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:1.0cm 1.0cm 1.0cm 1.0cm;
+	mso-header-margin:35.45pt;
+	mso-footer-margin:35.45pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tabla normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--> </p>
+      <p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><u>Hacienda,
+            carnes: Nuevo Comprobante electrónico y <span class="ilad">Registro</span>
+            Fiscal de Operadores de la Cadena de Producción y
+            Comercialización de Haciendas y Carnes Bovinas y Bubalinas<o:p><span
+                style="text-decoration:none"> <br>
+              </span></o:p></u></b></p>
+      <p class="MsoNormal"><o:p> </o:p></p>
+      <p class="MsoNormal"><span style="color:black">La Administraci</span>ón
+        Federal de Ingresos Públicos dictó las Resoluciones Generales
+        3.964 y 3873 introduciendo una serie de modificaciones acerca de
+        la modalidad de facturación de las operaciones con haciendas y
+        carnes y creo el "<span class="ilad">Registro</span> Fiscal de
+        Operadores de la Cadena de Producción y Comercialización de
+        Haciendas y Carnes Bovinas y Bubalinas" ("RFOCB") incluyendo los
+        regímenes de percepción, pagos a cuenta y retención con
+        aplicación para las operaciones que se efectúen a partir del 1º
+        de Marzo de 2017</p>
+      <p class="MsoNormal"><br>
+        <b>Régimen de comprobantes electrónicos</b><br>
+        <br>
+        Mediante la RG 3.964 (BO 23-12-2016) la AFIP ha establecido la
+        obligación de emitir comprobantes electrónicos para respaldar
+        las operaciones de compraventa de hacienda y/o venta en
+        consignación de carne bovina y/o bubalina, así como de los
+        ajustes físicos o de precios que los responsables efectúen.<br>
+        <br>
+        De acuerdo con los considerandos de la norma, su finalidad sería
+        transparentar la cadena de comercialización de haciendas y
+        carnes bovinas/bubalinas, estableciéndose que la emisión de las
+        liquidaciones de compra primarias de compra-venta de hacienda y
+        carnes a través de consignatarios y la compra directa de
+        hacienda, se realizará a través de un <span class="ilad"><u>comprobante</u></span><u>
+          electrónico específico para la actividad</u>.<br>
+        <br>
+        <u>Tipos de comprobantes</u>: El tipo de comprobante electrónico
+        a utilizar en cada caso dependerá de la operación de la que se
+        trate, según se resume a continuación.<br>
+        <br>
+        1) <b style="mso-bidi-font-weight:normal">Cuenta de Venta y
+          Líquido Producto - Sector Pecuario</b>: Los comisionistas y
+        consignatarios de hacienda y/o carne deberán emitir la "Cuenta
+        de Venta y Líquido Producto - Sector Pecuario" para <span
+          class="ilad">liquidar</span> el producido por la venta de
+        hacienda y/o carne en las cuales intervengan. <br>
+        <br>
+        2<b style="mso-bidi-font-weight:normal">) Liquidación de Compra
+          - Sector Pecuario</b>: Los comisionistas y /o consignatarios
+        de hacienda deberán emitir al sujeto comprador la "Liquidación
+        de Compra - Sector Pecuario" para respaldar las adquisiciones de
+        hacienda en las operaciones en las que intervengan. <br>
+        <br>
+        3) <b style="mso-bidi-font-weight:normal">Liquidación de Compra
+          Directa -Sector Pecuario</b>-: Los compradores de hacienda
+        destinada a faena, emitirán al vendedor de la hacienda la
+        "Liquidación de Compra Directa". <br>
+        <br>
+        4<b style="mso-bidi-font-weight:normal">) Liquidación de Venta
+          Directa -Sector Pecuario</b>-: Los vendedores de hacienda
+        bovina y bubalina deberán emitir este documento cuando se
+        verifiquen alguna de las siguientes condiciones:<br>
+        <br>
+        - <i style="mso-bidi-font-style:normal">Cuando el vendedor y
+          comprador sean inscriptos en IVA y el destino no sea para
+          faena.<br>
+        </i><br>
+        <i style="mso-bidi-font-style:normal">- Cuando el vendedor sea
+          responsable inscripto en el impuesto IVA y el comprador sea un
+          responsable no inscripto (situación casi inexistente), o
+          exento en el gravamen, o adherido al Monotributo, cualquiera
+          sea el destino de la hacienda.<br>
+        </i><br>
+        Cada uno de estos comprobantes tiene un Código asignado en la
+        misma Resolución.<br>
+        <br>
+        <u>Sujetos obligados</u>: Son sujetos obligados los siguientes:
+        Productores, criadores y cabañeros, "Feed Lots", invernadores,
+        establecimientos faenadores y/o frigoríficos, consignatarios y/o
+        comisionistas, consignatarios directos y de carnes de hacienda
+        bovina/bubalina, y los matarifes -abastecedores y carniceros- y
+        toda otra modalidad de usuarios de faena.<br>
+        <br>
+        Resulta importante señalar que los comprobantes emitidos por
+        sujetos consignatarios de hacienda y/o comisionistas,
+        consignatarios directos y/o consignatarios de carne que no se
+        encuentren incluidos en el "Registro Fiscal de Operadores de la
+        Cadena de Producción y Comercialización de Haciendas y Carnes
+        Bovinas y Bubalinas" (RFOCB), no se considerarán válidos como
+        respaldo documental de la operación.</p>
+      <p class="MsoNormal">Para consultar inclusión en el Registro
+        ingresar en<b style="mso-bidi-font-weight:normal"> <a
+            moz-do-not-send="true" class="moz-txt-link-freetext"
+            href="https://servicios1.afip.gov.ar/genericos/rg3873/consulta.aspx">https://servicios1.afip.gov.ar/genericos/rg3873/consulta.aspx</a><br>
+        </b><br>
+        <u>Emisión de comprobantes electrónicos</u>: La <span
+          class="ilad">solicitud</span> de emisión de comprobantes será
+        otorgada por cada <span class="ilad">punto de venta</span>
+        declarado. Dicho punto de venta deberá ser distinto a los
+        declarados para otros regímenes o sistemas de facturación, y de
+        resultar necesario podrá utilizarse más de uno. Además, los <span
+          class="ilad">puntos de venta</span> utilizados por cualquiera
+        de los servicios habilitados para la generación de los
+        comprobantes electrónicos deberán ser distintos entre sí.<br>
+        <br>
+        Los sujetos obligados deberán <span class="ilad">solicitar</span>
+        a la AFIP el Código de autorización Electrónico (CAE) a través
+        de alguna de las siguientes opciones: <br>
+        <br>
+        - Intercambio de información del servicio "web", cuyas <span
+          class="ilad">especificaciones</span> técnicas se encuentran
+        publicadas en <span class="ilad">el sitio</span> institucional
+        del Organismo Fiscal.<br>
+        <br>
+        - Servicio "Comprobantes en línea" seleccionando "Hacienda y
+        Carne - Liquidación Electrónica", accediendo con clave fiscal de
+        Nivel 3. <br>
+        <br>
+        La AFIP autorizará la solicitud para la emisión de los
+        comprobantes, otorgando el CAE por cada comprobante solicitado y
+        autorizado. Además se dispone que estos comprobantes no tendrán
+        efectos fiscales frente a terceros hasta que la AFIP otorgue
+        dicho CAE.<br>
+        <br>
+        En caso de inoperatividad de los sistemas que limiten o impidan
+        la emisión electrónica, la misma será efectuada dentro de las 24
+        horas inmediatas siguientes al restablecimiento del sistema, no
+        previéndose la emisión manual en su reemplazo.<br>
+        <br>
+        Por último, se dispone que los incumplimientos a este régimen
+        serán sancionados conforme a las disposiciones de la ley 11.683,
+        y que son de aplicación supletoria en los aspectos no
+        contemplados la RG 1.415 (régimen general de facturación y
+        registración) y la RG 2.485 (régimen especial para la emisión y
+        almacenamiento electrónico de comprobantes.)<br>
+        <br>
+        <b>Registro Fiscal de Operadores de la Cadena de Producción y
+          Comercialización de Haciendas y Carnes Bovinas y Bubalinas
+          (RFOCB) </b><br>
+        <br>
+        La Resolución General <span style="mso-spacerun:yes"> </span>3.873
+        creó el "RFOCB", y en particular a los regímenes de percepción,
+        pagos a cuenta y retención </p>
+      <p class="MsoNormal"><br>
+        <u>Sujetos alcanzados:</u> <span style="mso-spacerun:yes"> </span>Podrán
+        inscribirse los que desarrollen cualquiera de las siguientes
+        actividades relacionada con hacienda bovina/bubalina:
+        Productores, criadores y cabañeros, "Feed Lots", invernadores,
+        establecimientos faenadores y/o frigoríficos, consignatarios y/o
+        comisionistas, consignatarios directos y de carnes de hacienda
+        bovina/bubalina, mercados concentradores, ferias o predios
+        feriales donde se comercialice hacienda, los matarifes
+        -abastecedores y carniceros- y toda otra modalidad de usuarios
+        de faena , comercializadores de subproductos comestibles y no
+        comestibles de origen bovino/bubalino y los adquirentes de
+        cueros en estado crudo</p>
+      <p class="MsoNormal"><br>
+        La solicitud de inscripción se efectuara mediante transferencia
+        electrónica de datos a través del servicio <span
+          style="mso-bidi-font-weight:bold">Registro Fiscal de
+          Operadores de la Cadena de Producción y Comercialización de
+          Haciendas y Carnes Bovinas y Bubalinas del sitio web de la
+          Afip </span></p>
+      <p class="MsoNormal"><br>
+        La permanencia en el Registro estará condicionada a que el
+        contribuyente mantenga <i style="mso-bidi-font-style:normal">una
+          correcta conducta fiscal</i>; cuando se constate la
+        configuración de alguna de las causales sobre incorrecta
+        conducta fiscal <span style="mso-spacerun:yes"> </span>el
+        contribuyente será suspendido y posteriormente excluido<span
+          style="mso-spacerun:yes">  </span>si no se subsanan los
+        incumplimientos verificados o se constante que<span
+          style="mso-spacerun:yes">  </span>no se cuente con numero de
+        inscripción ante el RENSPA vigente </p>
+      <p class="MsoNormal"><o:p> </o:p></p>
+      <p class="MsoNormal"><br>
+        <u>Régimen de <span style="mso-bidi-font-weight:bold">Retenciones</span></u><b>:
+        </b>Están obligados a actuar como agentes de retención los
+        compradores de hacienda bovina o bubalina en pie con destino a
+        faena, en forma directa o como consignatarios / comisionistas,
+        en las operaciones realizadas con sujetos no incluidos en el
+        RFOCB, o aún las efectuadas con aquellos que estando incluidos
+        en el mismo no hayan declarado CBU respectiva.<br>
+        <br>
+        Es importante destacar que los vendedores no incluidos en el
+        RFOCB, y también aquellos incluidos en el mismo sin CBU
+        informada, sufrirán la retención del 100% del IVA liquidado. <br>
+        <br>
+        Los compradores y los consignatarios / comisionistas, deberán
+        verificar la inclusión de los vendedores en el RFOCB en el sitio
+        web de AFIP. A aquellos que no les corresponda retención alguna,
+        les deberán depositar el IVA liquidado en la CBU informada.<br
+          style="mso-special-character:line-break">
+        <!--[if !supportLineBreakNewLine]--><br
+          style="mso-special-character:line-break">
+        <!--[endif]--></p>
+    </div>
+  </body>
+</html>
+
+--------------0CAB348A5FBD0A3645DC0E6A--

@@ -1,0 +1,125 @@
+Return-Path: <matiborioli@gmail.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id mc58A6H1FFmRPQAATLP0zA
+	for <jpruata@fapersa.com>; Thu, 11 May 2017 20:37:05 -0300
+Return-path: <matiborioli@gmail.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Thu, 11 May 2017 20:37:05 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:60200 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <matiborioli@gmail.com>)
+	id 1d8xdo-0004PS-D5
+	for jpruata@fapersa.com; Thu, 11 May 2017 20:37:04 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id A67627F20A
+	for <jpruata@fapersa.com>; Thu, 11 May 2017 20:37:04 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id SS8kUFDQ0_7i for <jpruata@fapersa.com>;
+	Thu, 11 May 2017 20:37:04 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 3B7D27F232; Thu, 11 May 2017 20:37:04 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id E66577F20A
+	for <jpruata@fapersa.com>; Thu, 11 May 2017 20:37:02 -0300 (ART)
+Received-SPF: pass (gmail.com ... _spf.google.com: Sender is authorized to use 'matiborioli@gmail.com' in 'mfrom' identity (mechanism 'include:_netblocks.google.com' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="matiborioli@gmail.com"; helo=mail-yw0-f179.google.com; client-ip=209.85.161.179
+Received: from mail-yw0-f179.google.com (mail-yw0-f179.google.com [209.85.161.179])
+	by fw.fapersa.com (Postfix) with ESMTPS id 7B1C85FE0D
+	for <jpruata@fapersa.com>; Thu, 11 May 2017 20:37:00 -0300 (ART)
+Received: by mail-yw0-f179.google.com with SMTP id l135so3864884ywb.2
+        for <jpruata@fapersa.com>; Thu, 11 May 2017 16:37:00 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=5+hnPixG8ZeVwtdLvv3/pCKGNCvM1fKH80au9snD+Z4=;
+        b=fP45nNrMLITyweu1sJLsJxD05kVVvPZJBn+EiAQUQMWhm+p07RmdeeSaQtruskyGjx
+         vns9HUsUWt2bFvejUOUsB+09N1NVupDXrCzKjxryv1QUhSSW8mGpG4InpnZW+CjRSWg6
+         VvKVacKrpdlIg/+8Mrqx9K6PZdUqNx5zeibMmlM+77VZKuNROfwjFvdcM3hD4P+D4VnM
+         dZpdCVKK+ZYxKTRQkxtXl8moMf+zFOFWrEPVR8IrR+d0FrbRDStbA1EwRHVDtgkT1x6Z
+         jvEkAb4Rqspb3r5B8JVKJz4o2F69vyjFQG5SaVabw3M4sCr1N0bA/OKdMu4cHoulA0zO
+         hEdw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=5+hnPixG8ZeVwtdLvv3/pCKGNCvM1fKH80au9snD+Z4=;
+        b=FnOk9lDAkJlzz+bcigDUksuC0iaXVzHYaTGFCVtFFIBvhiwJFJzoGIwl8JHF06Ji0h
+         TlNKKYcxl7rxejZPNzUqHvkAJuSAT+5ntLol3HgfXuttJqqmG1T9QJcuIJR58TKtufIA
+         qbquN8Tb6hJSTeAJDQdkvurUrW8TkLLDqsVmWIbOpTbwacyUezysvZ0/H+7gV1qpiECa
+         M9vI12vMwmUlBgxZFgt7zTPejlQdIyjiKuo9+vpFjNH0gOQDcYFzYPasJzzFQZ6RtlBL
+         BriCYf63HgIKsCWfzIEhBEI/6f6WtK+JqwZxBo82JDhcBq1QHxXgtGnZlvppv8jd6zff
+         Urbg==
+X-Gm-Message-State: AODbwcBloqigoJbqblY6ocjOTgFGvbqMA9wmBvUZlYwPS9bN2lQJseQv
+	3Mz0EB4R4yL9UD4fWQhnRJL4ZTf8rA==
+X-Received: by 10.13.197.132 with SMTP id h126mr911588ywd.20.1494545818854;
+ Thu, 11 May 2017 16:36:58 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.13.236.17 with HTTP; Thu, 11 May 2017 16:36:58 -0700 (PDT)
+From: Matias Borioli <matiborioli@gmail.com>
+Date: Thu, 11 May 2017 20:36:58 -0300
+Message-ID: <CAOh_CxPMHDVH8XiF_L6YJYdWCh4vty9t0Adc9m_YXKTOoUWsdQ@mail.gmail.com>
+Subject: Listado de manager
+To: jpruata@fapersa.com, vivi alberich <viviana.alberich@gmail.com>, 
+	sebacavallero@yahoo.com, felipe jose diaz <felipejosediaz@hotmail.com>, 
+	Gustavo Boffi <gustavoboffi@gmail.com>, 
+	"p_castillo73@hotmail.com" <p_castillo73@hotmail.com>
+Content-Type: multipart/alternative; boundary="001a114e6d88a22e2f054f48108e"
+
+--001a114e6d88a22e2f054f48108e
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+ Juan como estas, te paso los contactos de mis manager para hacer contacto
+y confeccionar los listados de alojamiento. Esto lo deber=C3=ADamos tener
+cerrado entre lunes y martes.
+
+M9-Viviana Alverich-3513854604
+vivialberich@hotmail.com
+
+M10-Sebastian Caballero-3515149220-sebacaballero@yahoo.com
+
+M11-Felipe Diaz-3515600860
+felipejosediaz@hotmail.com
+
+M12-Gustavo Boffi-3515079285-gustaviboffi@gmail.com
+
+M13 Pablo Castillo- 3513450991-p_castillo73@hotmail.com
+
+
+Saludos
+
+--001a114e6d88a22e2f054f48108e
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br clear=3D"all"><div><div class=3D"gmail_signature"><div=
+ dir=3D"ltr"><font color=3D"#1f497d" face=3D"Calibri, sans-serif"><span sty=
+le=3D"font-size:11pt">=C2=A0Juan como estas, te paso los contactos de mis m=
+anager para hacer contacto y confeccionar los listados de alojamiento. Esto=
+ lo </span><span style=3D"font-size:14.6667px">deber=C3=ADamos</span><span =
+style=3D"font-size:11pt">=C2=A0tener cerrado entre lunes y martes.</span></=
+font></div><div dir=3D"ltr"><font color=3D"#1f497d" face=3D"Calibri, sans-s=
+erif"><span style=3D"font-size:11pt"><br></span></font></div><div><font col=
+or=3D"#1f497d" face=3D"Calibri, sans-serif"><span style=3D"font-size:14.666=
+7px">M9-Viviana Alverich-3513854604</span></font></div><table border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" width=3D"223" style=3D"border-collapse:=
+collapse;width:167pt"><tbody><tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" class=3D"gmail-xl64" width=3D"223" style=3D"height:15pt=
+;width:167pt"><span style=3D"color:rgb(49,132,155)"><a href=3D"mailto:vivia=
+lberich@hotmail.com">vivialberich@hotmail.com</a><br><br>M10-Sebastian <a h=
+ref=3D"mailto:Caballero-3515149220-sebacaballero@yahoo.com">Caballero-35151=
+49220-sebacaballero@yahoo.com</a><br><br>M11-Felipe Diaz-3515600860</span><=
+table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"223" style=
+=3D"border-collapse:collapse;width:167pt"><tbody><tr height=3D"20" style=3D=
+"height:15pt">
+  <td height=3D"20" class=3D"gmail-xl65" width=3D"223" style=3D"height:15pt=
+;width:167pt"><a href=3D"mailto:felipejosediaz@hotmail.com">felipejosediaz@=
+hotmail.com</a><br><br>M12-Gustavo <a href=3D"mailto:Boffi-3515079285-gusta=
+viboffi@gmail.com">Boffi-3515079285-gustaviboffi@gmail.com</a><br><br>M13 P=
+ablo Castillo- <a href=3D"mailto:3513450991-p_castillo73@hotmail.com">35134=
+50991-p_castillo73@hotmail.com</a><br><br><br>Saludos</td></tr></tbody></ta=
+ble></td></tr></tbody></table></div></div>
+</div>
+
+--001a114e6d88a22e2f054f48108e--

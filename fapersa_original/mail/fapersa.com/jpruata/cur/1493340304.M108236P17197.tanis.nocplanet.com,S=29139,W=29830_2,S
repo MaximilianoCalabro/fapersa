@@ -1,0 +1,691 @@
+Return-Path: <bo-b3zdg65bffhtfdauq9qhcbzssc9skz@b.e.disneyinteractive.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id UQEmBpCQAlktQwAATLP0zA
+	for <jpruata@fapersa.com>; Thu, 27 Apr 2017 21:45:04 -0300
+Return-path: <bo-b3zdg65bffhtfdauq9qhcbzssc9skz@b.e.disneyinteractive.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Thu, 27 Apr 2017 21:45:04 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:47904 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <bo-b3zdg65bffhtfdauq9qhcbzssc9skz@b.e.disneyinteractive.com>)
+	id 1d3u1v-0004li-FG
+	for jpruata@fapersa.com; Thu, 27 Apr 2017 21:45:03 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 5228E7F21D
+	for <jpruata@fapersa.com>; Thu, 27 Apr 2017 21:45:03 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id mYn3Gv3BuTx8 for <jpruata@fapersa.com>;
+	Thu, 27 Apr 2017 21:45:02 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id C32DF7F22E; Thu, 27 Apr 2017 21:45:02 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 4AA847F21D
+	for <jpruata@fapersa.com>; Thu, 27 Apr 2017 21:45:01 -0300 (ART)
+Received-SPF: pass (b.e.disneyinteractive.com: 8.36.64.165 is authorized to use 'bo-b3zdg65bffhtfdauq9qhcbzssc9skz@b.e.disneyinteractive.com' in 'mfrom' identity (mechanism 'ip4:8.36.64.165' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="bo-b3zdg65bffhtfdauq9qhcbzssc9skz@b.e.disneyinteractive.com"; helo=mta985.e.disneyinteractive.com; client-ip=8.36.64.165
+Received: from mta985.e.disneyinteractive.com (mta985.e.disneyinteractive.com [8.36.64.165])
+	by fw.fapersa.com (Postfix) with ESMTPS id 8AE8A5FEDF
+	for <jpruata@fapersa.com>; Thu, 27 Apr 2017 21:44:58 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=e.disneyinteractive.com; s=20140703191450; t=1493340295;
+	x=1509151495; bh=eN/w9uKybTEwESv7/1fLCIXf32zU6cFvB+Qx8y0Ma4c=;
+	h=From:Reply-To;
+	b=pqgIW6VFKH3MfZ/dlGTlvVkhNu0cuXE6UPFGQ/1D6H+6XBNV/l3mlEKX/ZKhvIBp7
+	 H0ZA6LnYfurEEhh/6n71cdE0IwH5WhnluxDEylmyoAc+5RdG7K4lgKvcyLwkkjliVL
+	 nRnlfNObM7bW4GpUbeHsdESWVpAeV44UPz2j+zidl91zWQUgmRWYSPcpDcNGYWx4xw
+	 yz5EM/brHHzqI8bN3lPtCANtu/fsFBIM6h1J7ZwKVuw0+O4dEj7phCV5nLopLfrdkU
+	 +MhCYtx+13U/IzkvW7xcPrPm6Tk09vuwefhd0qw9XZFw85L6lX3dcatJ+iBZ/LpboF
+	 i/psyqCeVTZQQ==
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws;
+  s=200505; d=e.disneyinteractive.com;
+  b=Kr9g6+8xX0jzx8QJHGVFvjWYVM9Sjrsm7sm0UwWCLw4hZhq0Aa4072SQ1Xs7nw8x0TlCjaR2vGNLozkz0CZa6BW+nPtdT+0KkJEXh5nzhqC9WISMSF1JtxdUr7b3DcEj0TdkTYY7cbKJnYxOhHzndqTQwZ1EIYJtMObCm3urtNw=;
+ h=Date:Message-ID:List-Unsubscribe:From:To:Subject:MIME-Version:Reply-To:Content-type;
+Date: Fri, 28 Apr 2017 00:44:55 -0000
+Message-ID: <b3zdg65bffhtfdauq9qhcbzssc9skz.33723697.981@mta985.e.disneyinteractive.com>
+List-Unsubscribe: <mailto:rm-0b3zdg65bffhtfdauq9qhcbzssc9skz@e.disneyinteractive.com>
+From: "Disney Interactive" <apps@e.disneyinteractive.com>
+To: jpruata@fapersa.com
+Subject: Star Wars: Puzzle Droids - Now Available
+MIME-Version: 1.0
+Reply-To: "Disney Interactive" <support-b3zdg65bffhtfdauq9qhcbzssc9skz@e.disneyinteractive.com>
+Content-type: multipart/alternative; boundary="=b3zdg65bffhtfdauq9qhcbzssc9skz"
+
+
+--=b3zdg65bffhtfdauq9qhcbzssc9skz
+Content-Type: text/plain; charset="iso-8859-1"
+Content-transfer-encoding: 8bit
+
+Explore the galaxy with your favorite droids to experience the Star
+Wars(TM) saga like never before in a brand new match-3 adventure.
+
+Download now:
+http://e.disneyinteractive.com/a/tBZAo0PB8zxOiB9bQcAACApUxLu/ctatext
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+You are receiving this promotional email because you requested to
+receive information from a member of The Walt Disney Family of
+Companies. 
+
+This e-mail was sent to: jpruata@fapersa.com
+
+Please do not reply to this e-mail as this address is not monitored.
+
+Add me to Disney Interactive's Do Not Email list
+This e-mail contains an advertisement from:
+Disney Interactive | 1200 Grand Central Ave | Glendale, CA 91201. 
+
+To unsubscribe from all types of future commercial e-mail from Disney
+Interactive regarding its products or services, please copy and
+paste the full link into your browser:
+http://e.disneyinteractive.com/a/tBZAo0PB8zxOiB9bQcAACApUxLu/optout?ENCODED_EMAIL=_ZYo-z70YBM1egdKBS-VVw
+
+
+
+(c) Disney. STAR WARS (c) & TM Lucasfilm Ltd. All rights reserved.
+
+--=b3zdg65bffhtfdauq9qhcbzssc9skz
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0"/>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8" />
+<title>Disney</title>
+<style type=3D"text/css">
+body {
+	margin: 0 !important;
+	padding: 0 !important;
+	-webkit-text-size-adjust: 100% !important;
+	-ms-text-size-adjust: 100% !important;
+	-webkit-font-smoothing: antialiased !important;
+}
+img {
+	border: 0 !important;
+	outline: none !important;
+}
+p {
+	Margin: 0px !important;
+	Padding: 0px !important;
+}
+table {
+	border-collapse: collapse;
+	mso-table-lspace: 0px;
+	mso-table-rspace: 0px;
+}
+td, a, span {
+	border-collapse: collapse;
+	mso-line-height-rule: exactly;
+}
+.ExternalClass * {
+	line-height: 100%;
+}
+.em_defaultlink a {
+	color: inherit !important;
+	text-decoration: none !important;
+}
+span.MsoHyperlink {
+	mso-style-priority: 99;
+	color: inherit;
+}
+span.MsoHyperlinkFollowed {
+	mso-style-priority: 99;
+	color: inherit;
+}
+.number a {
+	text-decoration: none;
+	color: #ffffff;
+}
+ @media only screen and (min-width:481px) and (max-width:598px) {
+.wrapper {
+	width: 100% !important;
+}
+.main_table {
+	width: 480px !important;
+}
+.center {
+	text-align: center !important;
+}
+.center1 {
+	text-align: center !important;
+	padding-left: 32px !important;
+	padding-right: 32px !important;
+}
+.aside {
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+}
+.top_space {
+	padding-top: 15px !important
+}
+.hide {
+	display: none !important;
+}
+.full_img {
+	width: 100% !important;
+	height: auto !important;
+}
+.side {
+	width: 10px !important;
+}
+.dimensions_71683461 {
+	width: 420px !important;
+	height: 237px !important;
+	max-height: 237px !important;
+}
+.full_img1 {
+	width: 30px !important;
+	height: 237px !important;
+}
+.full_img2 {
+	width: 30px !important;
+	height: 237px !important;
+}
+.em_bg {
+	background-image: url(http://f.e.disneyinteractive.com/i/32/2093945762/201=
+7047bg_480.jpg) !important;
+	height: 309px !important;
+	background-repeat: no-repeat !important;
+	background-position: center top !important;
+}
+.em_height {
+	height: 248px !important;
+}
+}
+@media only screen and (min-width:375px) and (max-width:480px) {
+.wrapper {
+	width: 100% !important;
+}
+.main_table {
+	width: 374px !important;
+}
+.center {
+	text-align: center !important;
+}
+.center1 {
+	text-align: center !important;
+	padding-left: 32px !important;
+	padding-right: 32px !important;
+}
+.aside {
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+}
+.top_space {
+	padding-top: 15px !important
+}
+.hide {
+	display: none !important;
+}
+.full_img {
+	width: 100% !important;
+	height: auto !important;
+}
+.side {
+	width: 10px !important;
+}
+.dimensions_71683461 {
+	width: 329px !important;
+	height: 185px !important;
+	max-height: 185px !important;
+}
+.full_img1 {
+	width: 23px !important;
+	height: 185px !important;
+}
+.full_img2 {
+	width: 23px !important;
+	height: 185px !important;
+}
+.em_bg {
+	background-image: url(http://f.e.disneyinteractive.com/i/32/2093945762/201=
+7047bg_374_new.jpg) !important;
+	height: 242px !important;
+	background-repeat: no-repeat !important;
+	background-position: center top !important;
+}
+.em_height {
+	height: 192px !important;
+}
+}
+ @media only screen and (max-width:374px) {
+.wrapper {
+	width: 100% !important;
+}
+.main_table {
+	width: 320px !important;
+}
+.center {
+	text-align: center !important;
+}
+.center1 {
+	text-align: center !important;
+	padding-left: 32px !important;
+	padding-right: 32px !important;
+}
+.aside {
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+}
+.top_space {
+	padding-top: 15px !important
+}
+.hide {
+	display: none !important;
+}
+.full_img {
+	width: 100% !important;
+	height: auto !important;
+}
+.side {
+	width: 10px !important;
+}
+.dimensions_71683461 {
+	width: 280px !important;
+	height: 158px !important;
+	max-height: 158px !important;
+}
+.full_img1 {
+	width: 20px !important;
+	height: 158px !important;
+}
+.full_img2 {
+	width: 20px !important;
+	height: 158px !important;
+}
+.em_bg {
+	background-image: url(http://f.e.disneyinteractive.com/i/32/2093945762/201=
+7047bg_320.jpg) !important;
+	height: 206px !important;
+	background-repeat: no-repeat !important;
+	background-position: center top !important;
+}
+.em_height {
+	height: 165px !important;
+}
+}
+</style>
+</head>
+<body marginwidth=3D"0" marginheight=3D"0"  style=3D"margin-top: 0; margin-=
+bottom: 0; padding-top: 0; padding-bottom: 0; width: 100% !important; -webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-font-smoothi=
+ng: antialiased;" offset=3D"0" topmargin=3D"0" leftmargin=3D"0" bgcolor=3D"=
+#0c1e35"><img src=3D"http://e.disneyinteractive.com/a/hBZAo0PB8zxOiB9bQcAAC=
+ApUxLu/spacer.gif" width=3D"1" height=3D"1" style=3D"display:none !importan=
+t; max-height:1px !important; max-width:1px !important; border:0 !important=
+; background-color:transparent !important; padding:0 !important; outline:0 =
+!important; min-height:1px !important; min-width:1px !important; height:1px=
+ !important; width:1px !important;" alt=3D"">
+<div style=3D"display: none; max-height: 0px; overflow: hidden; font-size:0=
+px; line-height:0px;">Explore the galaxy with your favorite droids to exper=
+ience the Star Wars saga like never before in a brand new match-3 adventure=
+.</div>
+
+<!-- 100% Table -->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" alig=
+n=3D"center" bgcolor=3D"#0c1e35">
+  <tr>
+    <td align=3D"center" valign=3D"top"><table width=3D"600" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" align=3D"center" class=3D"main_table" st=
+yle=3D"table-layout:fixed;">
+        <tr>
+          <td align=3D"center" valign=3D"top"><table width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center">
+              <!-- Pre-header Section -->
+              <tr class=3D"hide">
+                <td><table width=3D"100%" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0" align=3D"center">
+                    <tr class=3D"hide">=20
+                      <!--social links-->
+                      <td valign=3D"top"><table width=3D"320" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" align=3D"right" class=3D"wrapper">
+                          <tr>
+                            <td><table width=3D"320" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0" align=3D"center">
+                                <tr>
+                                  <td height=3D"18" align=3D"right" valign=
+=3D"middle" style=3D"font-family: Arial, sans-serif; font-size:10px; color:=
+ #ffffff;" ><a href=3D"http://e.disneyinteractive.com/a/hBZAo0PB8zxOiB9bQcA=
+ACApUxLu/facebook" target=3D"_blank" style=3D"text-decoration:none;color:#f=
+fffff;">Like Us</a> <img src=3D"http://f.e.disneyinteractive.com/i/32/20939=
+45762/facebook.png" alt=3D"facebook" width=3D"12" height=3D"12" border=3D"0=
+" />&nbsp;|&nbsp;<a href=3D"http://e.disneyinteractive.com/a/hBZAo0PB8zxOiB=
+9bQcAACApUxLu/twitter"  target=3D"_blank" style=3D"text-decoration:none;col=
+or:#ffffff;">Follow Us</a> <img src=3D"http://f.e.disneyinteractive.com/i/3=
+2/2093945762/twitter.png" alt=3D"twitter" width=3D"12" height=3D"12" border=
+=3D"0" />&nbsp;|&nbsp;<a href=3D"http://e.disneyinteractive.com/a/hBZAo0PB8=
+zxOiB9bQcAACApUxLu/youtube"  target=3D"_blank" style=3D"text-decoration:non=
+e;color:#ffffff;">Subscribe</a>&nbsp;<img src=3D"http://f.e.disneyinteracti=
+ve.com/i/32/2093945762/youtube.png" alt=3D"YouTube" width=3D"12" height=3D"=
+12" border=3D"0" />&nbsp;<span class=3D"hide">|</span>&nbsp;<a href=3D"http=
+://e.disneyinteractive.com/a/hBZAo0PB8zxOiB9bQcAACApUxLu/viewonline"  targe=
+t=3D"_blank" style=3D"text-decoration:none;color:#ffffff;">View Online</a><=
+/td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                        </table></td>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                      <!--//social links -->=20
+                    </tr>
+                  </table></td>
+              </tr>
+              <!-- //Pre-header Section -->
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+              <tr >
+                <td height=3D"10" style=3D"line-height:0px; font-style:0px;=
+">&nbsp;</td>
+              </tr>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+              <!-- Logo Section -->
+              <tr>
+                <td valign=3D"top" class=3D"aside"><table width=3D"600" bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" class=3D"wra=
+pper">
+                    <tr>
+                      <td><table width=3D"169" border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0" align=3D"left" class=3D"wrapper">
+                          <tr>
+                            <td><table width=3D"169" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0" align=3D"center">
+                                <tr>
+                                  <td><a href=3D"#" target=3D"_blank" style=
+=3D"text-decoration:none;"><img src=3D"http://f.e.disneyinteractive.com/i/3=
+2/2093945762/disney_logo_transparent.png" alt=3D"Disney" width=3D"169" heig=
+ht=3D"82" style=3D"display:block; border:none; font-family:Arial, sans-seri=
+f; font-size:28px; line-height:60px; color:#ffffff; font-weight:bold;" /></=
+a></td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                        </table>
+                        <table width=3D"400" border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"0" align=3D"center" class=3D"wrapper">
+                          <tr>
+                            <td><table width=3D"100%" border=3D"0" cellspac=
+ing=3D"0" cellpadding=3D"0">
+                                <tr>
+                                  <td class=3D"hide" height=3D"30"></td>
+                                </tr>
+                                <tr>
+                                  <td align=3D"center" style=3D"font-family=
+: Arial, sans-serif; font-size:18px; color:#ffffff; line-height:20px;">Roll=
+ into Star Wars: Puzzle Droids&trade;</td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <!-- //Logo Section -->
+              <tr >
+                <td height=3D"10" style=3D"line-height:0px; font-style:0px;=
+">&nbsp;</td>
+              </tr>
+              <tr>
+               <td align=3D"center" valign=3D"top" background=3D"http://f.e=
+.disneyinteractive.com/i/32/2093945762/2017047background.jpg" style=3D"back=
+ground-repeat:no-repeat; background-position:center top; background-size:co=
+ver;"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" align=3D"center">
+  <tr>
+                <td valign=3D"top" style=3D"line-height:0px;"><a href=3D"ht=
+tp://e.disneyinteractive.com/a/hBZAo0PB8zxOiB9bQcAACApUxLu/cta" target=3D"_=
+blank" style=3D"text-decoration:none;"><img class=3D"full_img" src=3D"http:=
+//f.e.disneyinteractive.com/i/32/2093945762/2017047img_banner.jpg" alt=3D"S=
+TAR WARS PUZZLE DROIDS Tap Into Epic Droid Memories | PLAY NOW" width=3D"60=
+0" style=3D"display:block; font-family: Arial, sans-serif; font-size:16px; =
+line-height:30px; color:#ffffff;" border=3D"0" /></a></td>
+              </tr>
+              <tr>
+                <td valign=3D"top" align=3D"center"><table align=3D"center"=
+ width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+                    <tr>
+                      <td valign=3D"top" align=3D"left" width=3D"37" class=
+=3D"full_img1" style=3D"line-height:0px;"><img class=3D"full_img1" src=3D"h=
+ttp://f.e.disneyinteractive.com/i/32/2093945762/2017047img_line1.jpg" width=
+=3D"100%"  alt=3D"" border=3D"0" style=3D"display:block;" /></td>
+                      <td valign=3D"top" align=3D"center"  ><!-- Start Real=
+Time Email Embed - Patents Pending -->
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                        <style type=3D"text/css">
+.dimensions_71683461{width: 526px;height: 296px;max-height: 296px}
+@media (min-device-width:1280px){[class=3Dvid_48016]{width:inherit!importan=
+t;height:inherit!important;max-height:inherit!important}[class=3Dimage_4801=
+6]{width:0!important;height:0 !important;padding:0!important;overflow:hidde=
+n}}
+</style>
+                        <link href=3D"https://em.realtime.email/service/cli=
+p?kind=3Dcss&ID=3D71683461&type=3D1&videoemail_id=3D48016&esp_uid=3Djpruata=
+@fapersa.com&dim0=3Djpruata@fapersa.com&dim1=3D_ZYo-z70YBM1egdKBS-VVw" rel=
+=3D"stylesheet" property=3D"stylesheet" type=3D"text/css">
+                        <div class=3D"dimensions_71683461 lc-video" style=
+=3D"overflow: hidden">
+                          <div class=3D"image_48016" style=3D"width: inheri=
+t;text-align: center;"><a href=3D"http://e.disneyinteractive.com/a/hBZAo0PB=
+8zxOiB9bQcAACApUxLu/videoios?EMAIL=3Djpruata@fapersa.com&EMAIL=3Djpruata@fa=
+persa.com&ENCODED_EMAIL=3D_ZYo-z70YBM1egdKBS-VVw" style=3D"display:block;wi=
+dth: inherit;height: inherit;max-height: inherit;"><img src=3D"https://em.r=
+ealtime.email/service/track?kind=3Dclip_impression&ID=3D71683461&ios=3Dtrue=
+&type=3D1&videoemail_id=3D48016&esp_uid=3Djpruata@fapersa.com&dim0=3Djpruat=
+a@fapersa.com&dim1=3D_ZYo-z70YBM1egdKBS-VVw"  alt=3D"SW Puzzle Droids" styl=
+e=3D"display:block;width: inherit;height: inherit;max-height: inherit;borde=
+r:0"></a>
+                            <div style=3D"width: 0px;max-height: 0px;height=
+: 0px;overflow: hidden;text-align:center;"><a href=3D"http://e.disneyintera=
+ctive.com/a/hBZAo0PB8zxOiB9bQcAACApUxLu/traileryt" target=3D"_blank" rel=3D=
+"nofollow"> </a></div>
+                          </div>
+                          <div class=3D"vid_48016" style=3D"mso-hide: all;w=
+idth: 0px;max-height: 0px;height: 0px;overflow: hidden;text-align: center;">
+                            <video autoplay=3D"autoplay" clipID =3D "716834=
+61" poster=3D"https://em.realtime.email/service/clip?kind=3Dposter&ID=3D716=
+83461&type=3D1&videoemail_id=3D48016&esp_uid=3Djpruata@fapersa.com&dim0=3Dj=
+pruata@fapersa.com&dim1=3D_ZYo-z70YBM1egdKBS-VVw" controls=3D"controls" src=
+=3D"https://em.realtime.email/service/clip?kind=3Dvideo&ID=3D71683461&type=
+=3D1&videoemail_id=3D48016&esp_uid=3Djpruata@fapersa.com&dim0=3Djpruata@fap=
+ersa.com&dim1=3D_ZYo-z70YBM1egdKBS-VVw" style=3D"mso-hide: all;display:bloc=
+k;width: inherit;height: inherit;max-height: inherit;"><!--[if !mso]><!--><=
+a href=3D"http://e.disneyinteractive.com/a/hBZAo0PB8zxOiB9bQcAACApUxLu/vide=
+o?EMAIL=3Djpruata@fapersa.com&EMAIL=3Djpruata@fapersa.com&ENCODED_EMAIL=3D_=
+ZYo-z70YBM1egdKBS-VVw" alt=3D"Redirect" style=3D"mso-hide: all;display:bloc=
+k;width: inherit;height: inherit;max-height: inherit;"><img src=3D"https://=
+em.realtime.email/service/clip?kind=3Danimation&ID=3D71683461&type=3D1&vide=
+oemail_id=3D48016&esp_uid=3Djpruata@fapersa.com&dim0=3Djpruata@fapersa.com&=
+dim1=3D_ZYo-z70YBM1egdKBS-VVw" border=3D"0" alt=3D"SW Puzzle Droids" style=
+=3D"mso-hide: all;display:block;width: inherit;height: inherit;max-height: =
+inherit;"/></a><!--<![endif]--></video>
+                            <!--[if !mso]><!--><img src=3D"https://em.realt=
+ime.email/service/track?kind=3Dclip_impression&ID=3D71683461&type=3D1&video=
+email_id=3D48016&esp_uid=3Djpruata@fapersa.com&dim0=3Djpruata@fapersa.com&d=
+im1=3D_ZYo-z70YBM1egdKBS-VVw"  alt=3D"SW Puzzle Droids" border=3D"0" style=
+=3D"display:block;width: inherit;height: inherit;max-height: inherit;"><!--=
+<![endif]--></div>
+                        </div>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                        <!-- End RealTime Email Embed - Patents Pending -->=
+</td>
+                      <td valign=3D"top" align=3D"right" width=3D"37" class=
+=3D"full_img2" style=3D"line-height:0px;"><img class=3D"full_img2" src=3D"h=
+ttp://f.e.disneyinteractive.com/i/32/2093945762/2017047img_line2.jpg" width=
+=3D"100%"  alt=3D"" border=3D"0" style=3D"display:block;" /></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td class=3D"em_bg" background=3D"http://f.e.disneyinteract=
+ive.com/i/32/2093945762/2017047bg_main.jpg" bgcolor=3D"#32411c" width=3D"60=
+0" style=3D"background-repeat:no-repeat; background-position:center top;" h=
+eight=3D"387" valign=3D"top"><!--[if gte mso 9]>
+  <v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"true" stroke=3D=
+"false" style=3D"width:600px;height:387px;">
+    <v:fill type=3D"tile" src=3D"http://f.e.disneyinteractive.com/i/32/2093=
+945762/2017047bg_main.jpg" color=3D"#32411c" />
+    <v:textbox inset=3D"0,0,0,0">
+  <![endif]-->
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                  <table width=3D"100%" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0" align=3D"center">
+                    <tr>
+                      <td width=3D"62" class=3D"side">&nbsp;</td>
+                      <td align=3D"center" valign=3D"top"><table width=3D"1=
+00%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center">
+                          <tr>
+                            <td height=3D"329" class=3D"em_height">&nbsp;</=
+td>
+                          </tr>
+                          <tr>
+                            <td align=3D"center" valign=3D"top"><table widt=
+h=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center=
+">
+                                <tr>
+                                  <td align=3D"center" valign=3D"top"><a hr=
+ef=3D"http://e.disneyinteractive.com/a/hBZAo0PB8zxOiB9bQcAACApUxLu/app" tar=
+get=3D"_blank" style=3D"text-decoration:none;"><img class=3D"full_img" src=
+=3D"http://f.e.disneyinteractive.com/i/32/2093945762/2017047img_1.png" widt=
+h=3D"149" height=3D"45" alt=3D"Download on the App Store" border=3D"0" styl=
+e=3D"display:block; font-family:Arial, sans-serif; font-size:14px; line-hei=
+ght:17px; color:#ffffff;" /></a></td>
+                                  <td width=3D"19" class=3D"side">&nbsp;</t=
+d>
+                                  <td align=3D"center" valign=3D"top"><a hr=
+ef=3D"http://e.disneyinteractive.com/a/hBZAo0PB8zxOiB9bQcAACApUxLu/play" ta=
+rget=3D"_blank" style=3D"text-decoration:none;"><img class=3D"full_img" src=
+=3D"http://f.e.disneyinteractive.com/i/32/2093945762/2017047img_2.png" widt=
+h=3D"151" height=3D"46" alt=3D"GET IT ON Google Play" border=3D"0" style=3D=
+"display:block; font-family:Arial, sans-serif; font-size:14px; line-height:=
+17px; color:#ffffff;" /></a></td>
+                                  <td width=3D"17" class=3D"side">&nbsp;</t=
+d>
+                                  <td align=3D"center" valign=3D"top"><a hr=
+ef=3D"http://e.disneyinteractive.com/a/hBZAo0PB8zxOiB9bQcAACApUxLu/amazon" =
+target=3D"_blank" style=3D"text-decoration:none;"><img class=3D"full_img" s=
+rc=3D"http://f.e.disneyinteractive.com/i/32/2093945762/2017047img_3.png" wi=
+dth=3D"136" height=3D"47" alt=3D"Available at amazon" border=3D"0" style=3D=
+"display:block; font-family:Arial, sans-serif; font-size:14px; line-height:=
+17px; color:#ffffff;" /></a></td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                          <tr>
+                            <td height=3D"2" style=3D"line-height:1px; font=
+-size:1px;">&nbsp;</td>
+                          </tr>
+                        </table></td>
+                      <td width=3D"66" class=3D"side">&nbsp;</td>
+                    </tr>
+                  </table>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                  <!--[if gte mso 9]>
+    </v:textbox>
+  </v:rect>
+  <![endif]--></td>
+              </tr>
+</table>
+</td>
+              </tr>
+=20=20=20=20=20=20=20=20=20=20=20=20=20
+              <tr>
+                <td height=3D"20" style=3D"line-height:1px; font-size:1px;"=
+>&nbsp;</td>
+              </tr>
+              <!-- Footer Section -->
+              <tr>
+                <td valign=3D"top"><table width=3D"100%" border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0" align=3D"center">
+                    <tr>
+                      <td width=3D"15" class=3D"side"></td>
+                      <td align=3D"left" valign=3D"top" style=3D"font-famil=
+y:Arial, sans-serif; color:#ffffff; font-size:11px; line-height:15px;"> Cli=
+cking on the Facebook, Twitter, and YouTube and other third party links wil=
+l take you away from our Disney site where different <a href=3D"http://e.di=
+sneyinteractive.com/a/hBZAo0PB8zxOiB9bQcAACApUxLu/terms" style=3D"font-fami=
+ly:Arial, sans-serif; color:#ffffff; font-size:11px; line-height:15px;">ter=
+ms of use</a> and <a href=3D"http://e.disneyinteractive.com/a/hBZAo0PB8zxOi=
+B9bQcAACApUxLu/privacy" style=3D"font-family:Arial, sans-serif; color:#ffff=
+ff; font-size:11px; line-height:15px;">privacy policy</a> apply. <br />
+                        <br />
+                        Apple and the Apple logo are trademarks of Apple In=
+c., registered in the US and other countries. App Store is a service mark o=
+f Apple Inc. <br />
+                        <br />
+                        Android, Google Play, and the Google Play logo are =
+trademarks of Google Inc. <br />
+                        <br />
+                        Amazon and all related logos are trademarks of <a h=
+ref=3D"" style=3D"text-decoration :none;color:#ffffff;" target=3D"_blank">A=
+mazon.com</a>, Inc. or its affiliates.<br />
+                        <br />
+                        All other trademarks are the property of their resp=
+ective owners. <br />
+                        <br />
+                        In addition to standard messaging rates, purchasing=
+ and downloading Disney games results in a charge to the applicable mobile =
+phone bill or iTunes account. If you are under 18, get your parent&rsquo;s =
+permission first. <br />
+                        <br />
+                        You are receiving this promotional email because yo=
+u requested to receive information from a member of The Walt Disney Family =
+of Companies. <br />
+                        <br />
+                        This e-mail was sent to: <a href=3D"" style=3D"text=
+-decoration :none;color:#ffffff;" target=3D"_blank">jpruata@fapersa.com</a>=
+<br />
+                        <br />
+                        Please do not reply to this e&#45;mail as this addr=
+ess is not monitored.<br />
+                        <br />
+                        <strong>Add me to Disney Interactive&rsquo;s Do Not=
+ Email list</strong><br />
+                        This e&#45;mail contains an advertisement from:<br =
+/>
+                        Disney Interactive | 1&zwnj;200 Gr&zwnj;and Ce&zwnj=
+;ntral A&zwnj;ve | Glen&zwnj;dale, C&zwnj;A 912&zwnj;01.<br />
+                        <br />
+                        <a href=3D"http://e.disneyinteractive.com/a/hBZAo0P=
+B8zxOiB9bQcAACApUxLu/optout?ENCODED_EMAIL=3D_ZYo-z70YBM1egdKBS-VVw" target=
+=3D"_blank" style=3D"color:#ffffff;">Unsubscribe</a> from all types of futu=
+re commercial e-mail from Disney Interactive regarding its products or serv=
+ices. <br />
+                        <br />
+                        &copy; Disney. All Rights Reserved. <i>STAR WARS</i=
+> &copy; & &trade; Lucasfilm Ltd. All rights reserved.</td>
+                      <td width=3D"15" class=3D"side"></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <!-- //Footer Section -->
+              <tr>
+                <td height=3D"20" style=3D"line-height:1px; font-size:1px;"=
+>&nbsp;</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+
+<!-- //100% Table -->=20
+<!-- Start RealTime Email Embed - Patents Pending -->=20
+<img src=3D"https://em.realtime.email/service/rte?kind=3Dduration&account_i=
+d=3D7238&campaign_id=3D1889190080&dim0=3Djpruata@fapersa.com" style=3D"widt=
+h:0px; height:0px;" />=20
+<!-- End RealTime Email Embed - Patents Pending -->
+<div class=3D"hide" style=3D"white-space:nowrap;font:20px courier;color:#FF=
+FFFF;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp=
+; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp;</div>
+</div>
+</body>
+</html>
+
+
+--=b3zdg65bffhtfdauq9qhcbzssc9skz--
+

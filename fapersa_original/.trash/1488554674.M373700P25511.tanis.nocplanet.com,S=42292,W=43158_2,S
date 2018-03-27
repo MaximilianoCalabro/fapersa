@@ -1,0 +1,866 @@
+Return-Path: <estudiodelorenzo@hotmail.com>
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id 4VCgFbKKuVinYwAATLP0zA
+	; Fri, 03 Mar 2017 12:24:34 -0300
+Return-path: <estudiodelorenzo@hotmail.com>
+Envelope-to: acarboni@fapersa.com,
+ comext@fapersa.com,
+ rdopazo@fapersa.com
+Delivery-date: Fri, 03 Mar 2017 12:24:34 -0300
+Received: from bay004-omc1s28.hotmail.com ([65.54.190.39]:63286)
+	by tanis.nocplanet.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-SHA384:256)
+	(Exim 4.88)
+	(envelope-from <estudiodelorenzo@hotmail.com>)
+	id 1cjp4A-00015Z-G2; Fri, 03 Mar 2017 12:24:34 -0300
+Received: from NAM02-CY1-obe.outbound.protection.outlook.com ([65.54.190.59]) by BAY004-OMC1S28.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.23008);
+	 Fri, 3 Mar 2017 07:23:02 -0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=IKg5rbc0RHh3p3xD09YAiIFBs4yMTxV44lqVvUNEDEE=;
+ b=EvTAuwVLWQwoyb9DtQhipREyQ3fQfvZpGKRKp2iboj3ezlSgPfnOzciI8F709vcM/hJ4h4MMd0atLnbTFRL1H8LL729gZvJd8WpUJRoJ2tXqoh8bzlqNr4lwgdisw2xGnBecyHAOdBz6LEYhDp1KpjEzt32Zhw4RXEHCIfs4xkp9hFr8uKc68gkXWPGp9pAZMtBIVpDJHynEy6lUlwvIcZfim8GzoqaKX6eRo043zZjtwiAkr/tFa1+qg8VySA1K8tbHALHaDFLnUgf9c9lUMY5wZnKC4Pa/dl/NJWL8FsN321e4Q0128ytY2dKMZsii6VDTVSk/1tiG9jeSVtk95A==
+Received: from CY1NAM02FT013.eop-nam02.prod.protection.outlook.com
+ (10.152.74.57) by CY1NAM02HT009.eop-nam02.prod.protection.outlook.com
+ (10.152.75.7) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.1.933.11; Fri, 3 Mar
+ 2017 15:23:01 +0000
+Received: from MWHPR20MB1647.namprd20.prod.outlook.com (10.152.74.57) by
+ CY1NAM02FT013.mail.protection.outlook.com (10.152.75.162) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.933.11 via Frontend Transport; Fri, 3 Mar 2017 15:23:01 +0000
+Received: from MWHPR20MB1647.namprd20.prod.outlook.com ([10.171.150.17]) by
+ MWHPR20MB1647.namprd20.prod.outlook.com ([10.171.150.17]) with mapi id
+ 15.01.0947.015; Fri, 3 Mar 2017 15:23:01 +0000
+From: Estudio De Lorenzo <estudiodelorenzo@hotmail.com>
+To: Roberto Dopazo <rdopazo@fapersa.com>
+CC: =?iso-8859-1?Q?Andr=E9s_Carboni?= <acarboni@fapersa.com>, Silvina Miretti
+	<comext@fapersa.com>
+Subject: Re: Transito Mantevideo a Santa Fe
+Thread-Topic: Transito Mantevideo a Santa Fe
+Thread-Index: AQHSk1jAD6OrkqUw3Ee96aFT+fkKS6GBjnSAgAFV0pyAACS8oIAAK1LPgAAHGfA=
+Date: Fri, 3 Mar 2017 15:23:01 +0000
+Message-ID: <MWHPR20MB16478E3D61FE587A0DDC5E51D42B0@MWHPR20MB1647.namprd20.prod.outlook.com>
+References: <EE906414A9CF4242A1F397679950AEDE@faprd>,<e26ff76fc63b595e1ce4316192229248@mail.gmail.com>
+ <CY4PR20MB1638E86C9C2B11EDC41088ABD42B0@CY4PR20MB1638.namprd20.prod.outlook.com>
+ <7ee327ec2e20e7fef8314b8f199fa482@mail.gmail.com>,<FB46314F55EF49CDBE494DD29A8CBDE9@faprd>
+In-Reply-To: <FB46314F55EF49CDBE494DD29A8CBDE9@faprd>
+Accept-Language: es-AR, en-US
+Content-Language: es-AR
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator:
+authentication-results: fapersa.com; dkim=none (message not signed)
+ header.d=none;fapersa.com; dmarc=none action=none header.from=hotmail.com;
+x-incomingtopheadermarker: OriginalChecksum:D52ABBDD5FD531FF50A2C7C23E30AB75C199E70163B3082ED5C4D62188575AAA;UpperCasedChecksum:C124482E23E12926D60DBC935ABE0438F4BE00852CE800332C2825411008B513;SizeAsReceived:8068;Count:40
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [TTKGOprxs6q225BRAuYXRVEzZKmmXbbm]
+x-incomingheadercount: 40
+x-eopattributedmessage: 0
+x-microsoft-exchange-diagnostics: 1;CY1NAM02HT009;5:sOMVxaWPmWM5pIHBb6SiN34vwMrY/QjMM+/XvLBdaDRnEFFFz3Hr7pkKCTS8cclUaoM/LjCNaTCuGxMnZs/67oh5qn/sI3IgHQMx99o2q002A0kCNphKFomZFN+zEU41OmcLHoNDqMXZ+nkcHjDcCHb4zbsa/PdpJo4VKzVXwSk=;24:uD9xAwMAWcqucBRqp1ju/BhkQKX+XaP75+yi+7hqNHETBNI1NKqsvECWKfADzJ8IbBFOhSRKXhWr9VZJtRh5TC6HzpEwT+EAD8oakdgEkeE=;7:BOQJ6L5j+VbzWyX6Gr1ChYegSNFDEpnWRZkfjQqiEDl/i1v1eye3GPXYiH8iZceNtUMWcFTNYEuMFi+Nk0QI5FFNxMVc0ET55scY4DEc3JxQqhrmdBNI+k8BCvP8J7mHkY65bL1ANTnnqgpACr58wFSfHlZhCtUbQUiR0sLomYkahJzMuziDXA8DtAB4NoLUAmqqZYD3e9z8m+qIbeQfzcCP0pgc+DXd2m1ehKZv+L0gVc8e1x8xr+4vM9HneVJrLyUxySUMVZMEbOtl0F6lnm6oLb32SLotKcpEFfTCa6qicCmixWvx1jUHcG42x0ts
+x-forefront-antispam-report: EFV:NLI;SFV:NSPM;SFS:(10019020)(98900014);DIR:OUT;SFP:1102;SCL:1;SRVR:CY1NAM02HT009;H:MWHPR20MB1647.namprd20.prod.outlook.com;FPR:;SPF:None;LANG:es;
+x-ms-office365-filtering-correlation-id: 334c27a2-8bc5-43a2-bd83-08d462492e72
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(22001)(201702061074)(5061506573)(5061507331)(1603103135)(1603101448)(1601125254)(1701031045);SRVR:CY1NAM02HT009;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(432015087)(444000031);SRVR:CY1NAM02HT009;BCL:0;PCL:0;RULEID:;SRVR:CY1NAM02HT009;
+x-forefront-prvs: 0235CBE7D0
+spamdiagnosticoutput: 1:99
+spamdiagnosticmetadata: NSPM
+Content-Type: multipart/related;
+	boundary="_006_MWHPR20MB16478E3D61FE587A0DDC5E51D42B0MWHPR20MB1647namp_";
+	type="multipart/alternative"
+MIME-Version: 1.0
+X-OriginatorOrg: hotmail.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 03 Mar 2017 15:23:01.4796
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CY1NAM02HT009
+X-OriginalArrivalTime: 03 Mar 2017 15:23:03.0012 (UTC) FILETIME=[0CBC7A40:01D29432]
+X-Spam-Status: No, score=-2.0
+X-Spam-Score: -19
+X-Spam-Bar: --
+X-Ham-Report: Spam detection software, running on the system "tanis.nocplanet.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content preview:  Andrés Te paso aproximados a pagar de la cuatro carga que
+   supuestamente llegarían el lunes a primera hora HT176009 U$S 12160 HT166186
+    U$S 23910 FJLB161214-LXY U$S 14815 EI168000495 U$S 15225 podrá haber algún
+    incremento por la diferencia de IIBB ( no va a ser mucha la diferencia)ya
+    que ahora las jurisdicciones liquidan distinto y solo podre ver cuando lo
+    haga en el maría después del arribo del camión [...] 
+ 
+ Content analysis details:   (-2.0 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             (estudiodelorenzo[at]hotmail.com)
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: gruporas.com]
+ -0.0 RP_MATCHES_RCVD        Envelope sender domain matches handover relay domain
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+X-Spam-Flag: NO
+
+--_006_MWHPR20MB16478E3D61FE587A0DDC5E51D42B0MWHPR20MB1647namp_
+Content-Type: multipart/alternative;
+	boundary="_000_MWHPR20MB16478E3D61FE587A0DDC5E51D42B0MWHPR20MB1647namp_"
+
+--_000_MWHPR20MB16478E3D61FE587A0DDC5E51D42B0MWHPR20MB1647namp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Andr=E9s
+
+Te paso aproximados a pagar de la cuatro carga que supuestamente llegar=EDa=
+n el lunes a primera hora
+
+HT176009  U$S 12160
+HT166186  U$S 23910
+FJLB161214-LXY  U$S 14815
+EI168000495 U$S 15225
+podr=E1 haber alg=FAn incremento por la diferencia de IIBB ( no va a ser mu=
+cha la diferencia)ya que ahora las jurisdicciones liquidan distinto y solo =
+podre ver cuando lo haga en el mar=EDa despu=E9s del arribo del cami=F3n
+
+FAVOR DE INDICAR QUE DEBO HACER EL LUNES AL ARRIBO DE LAS MISMAS Y LOS BANC=
+OS A DECLARAR EN CADA CASO
+slds.
+
+
+________________________________
+De: Roberto Dopazo <rdopazo@fapersa.com>
+Enviado: viernes, 03 de marzo de 2017 11:52 a.m.
+Para: Agustin Cocciolo; Estudio De Lorenzo
+Cc: Gonzalo Martinez
+Asunto: Re: Transito Mantevideo a Santa Fe
+
+Hola Agust=EDn,
+Necesito me pases los datos del cami=F3n, datos del chofer y rastreo sateli=
+tal, para solicitar el seguro.
+Esto lo necesitamos URGENTE.
+Saludos.
+[cid:5961015D17D0430EBA71DD3C9159C5F7@faprd]
+Roberto Dopazo
+Departamento de Compras
+Tel: +54 342 4810810
+Lamadrid 3065
+CP 3000 Santa Fe, Argentina.
+rdopazo@fapersa.com
+----- Original Message -----
+From: Agustin Cocciolo<mailto:acocciolo@pluscargocordoba.com.ar>
+To: Estudio De Lorenzo<mailto:estudiodelorenzo@hotmail.com> ; Roberto Dopaz=
+o<mailto:rdopazo@fapersa.com>
+Cc: Gonzalo Martinez<mailto:gmartinez@pluscargocordoba.com.ar>
+Sent: Friday, March 03, 2017 9:15 AM
+Subject: RE: Transito Mantevideo a Santa Fe
+
+Hola Raul
+antes del mediod=EDa las tiene
+
+
+
+
+Agustin Cocciolo
+ Customer Service
+ San Jer=F3nimo 177  - Piso 6 Of. A
+ (5000) C=F3rdoba - Argentina
+  Phone: + 54 351 4234670/77
+  Cel:  +54 351 154-022063
+acocciolo@pluscargocordoba.com.ar<mailto:acocciolo@pluscargocordoba.com.ar>
+ Nuevo Nextel: 674*1379
+
+  Web: www.gruporas.com<http://www.gruporas.com>
+
+
+[cid:024601ca2ac7$24d9c330$0300a8c0@cathy]
+
+De: Estudio De Lorenzo [mailto:estudiodelorenzo@hotmail.com<mailto:estudiod=
+elorenzo@hotmail.com>]
+Enviado el: viernes, 03 de marzo de 2017 7:09
+Para: Agustin Cocciolo; Roberto Dopazo
+CC: Gonzalo Martinez
+Asunto: Re: Transito Mantevideo a Santa Fe
+
+
+Buen d=EDa, Gonzalo
+
+Necesitamos las certificaciones de flete para poder realizar los c=E1lculos=
+ de impuestos. y de esa manera la empresa tener la previsi=F3n de fondos pa=
+ra las cargas que llegaran el lunes a Santa Fe, tratando de evitar demoras =
+en las nacionalizaciones en aduana
+
+quedo a la espera de lo requerido
+
+slds.
+
+Ra=FAl De Lorenzo
+
+________________________________
+De: Agustin Cocciolo <acocciolo@pluscargocordoba.com.ar<mailto:acocciolo@pl=
+uscargocordoba.com.ar>>
+Enviado: jueves, 02 de marzo de 2017 10:40 a.m.
+Para: Roberto Dopazo
+Cc: Estudio De Lorenzo; Gonzalo Martinez
+Asunto: RE: Transito Mantevideo a Santa Fe
+
+Buen dia
+estamos viendo de poder cargar ma=F1ana,.
+por los feriados tenemos todo atrasado
+
+Gonzalo env=EDa las certificaciones, en breve confirmamos si cargamos ma=F1=
+ana
+
+
+
+
+Agustin Cocciolo
+ Customer Service
+ San Jer=F3nimo 177  - Piso 6 Of. A
+ (5000) C=F3rdoba - Argentina
+  Phone: + 54 351 4234670/77
+  Cel:  +54 351 154-022063
+acocciolo@pluscargocordoba.com.ar<mailto:acocciolo@pluscargocordoba.com.ar>
+ Nuevo Nextel: 674*1379
+
+  Web: www.gruporas.com<http://www.gruporas.com/>
+
+
+[cid:024601ca2ac7$24d9c330$0300a8c0@cathy]
+
+De: Roberto Dopazo [mailto:rdopazo@fapersa.com<mailto:rdopazo@fapersa.com>]
+Enviado el: jueves, 02 de marzo de 2017 10:29
+Para: Agustin Cocciolo
+CC: Estudio De Lorenzo
+Asunto: Transito Mantevideo a Santa Fe
+
+Estimado Agust=EDn..
+Esta todo organizado para realizar ma=F1ana el tr=E1nsito de Montevideo a S=
+anta Fe de las 4 cargas..?
+Espero tu respuesta y que me vayas adelantando los documentos y datos del c=
+ami=F3n y chofer.
+Saludos.
+[cid:4E8FDFF921524E89831827C12CD012BE@faprd]
+
+Roberto Dopazo
+
+Departamento de Compras
+
+Tel: +54 342 4810810
+
+Lamadrid 3065
+
+CP 3000 Santa Fe, Argentina.
+
+rdopazo@fapersa.com<mailto:rdopazo@fapersa.com>
+
+
+
+--_000_MWHPR20MB16478E3D61FE587A0DDC5E51D42B0MWHPR20MB1647namp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"><!-- P {margin-top:0;margi=
+n-bottom:0;} --></style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"divtagdefaultwrapper" style=3D"font-size:12pt;color:#000000;font=
+-family:Calibri,Arial,Helvetica,sans-serif;" dir=3D"ltr">
+<p>Andr=E9s</p>
+Te paso aproximados a pagar de la cuatro carga que supuestamente llegar=EDa=
+n el&nbsp;lunes a primera hora
+<div><br>
+</div>
+<div>HT176009 &nbsp;U$S 12160</div>
+<div>HT166186 &nbsp;U$S 23910</div>
+<div>FJLB161214-LXY &nbsp;U$S 14815</div>
+<div>EI168000495 U$S 15225</div>
+<div>podr=E1 haber alg=FAn incremento por la diferencia de IIBB ( no va a s=
+er mucha la diferencia)ya que ahora las jurisdicciones liquidan distinto y =
+solo podre ver cuando lo haga en el mar=EDa despu=E9s del arribo del cami=
+=F3n</div>
+<div><br>
+</div>
+<div>FAVOR DE INDICAR QUE DEBO HACER EL LUNES AL ARRIBO DE LAS MISMAS Y <b>=
+LOS BANCOS A DECLARAR EN CADA CASO</b></div>
+<div>slds.</div>
+<div><br>
+<br>
+<div style=3D"color: rgb(0, 0, 0);">
+<hr tabindex=3D"-1" style=3D"display:inline-block; width:98%">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" co=
+lor=3D"#000000" style=3D"font-size:11pt"><b>De:</b> Roberto Dopazo &lt;rdop=
+azo@fapersa.com&gt;<br>
+<b>Enviado:</b> viernes, 03 de marzo de 2017 11:52 a.m.<br>
+<b>Para:</b> Agustin Cocciolo; Estudio De Lorenzo<br>
+<b>Cc:</b> Gonzalo Martinez<br>
+<b>Asunto:</b> Re: Transito Mantevideo a Santa Fe</font>
+<div>&nbsp;</div>
+</div>
+<div>
+<div><font size=3D"2" face=3D"Arial">Hola Agust=EDn,</font></div>
+<div><font size=3D"2" face=3D"Arial">Necesito me pases los datos del cami=
+=F3n, datos del chofer y rastreo satelital,&nbsp;para solicitar el seguro.<=
+/font></div>
+<div><font size=3D"2" face=3D"Arial">Esto lo necesitamos URGENTE.</font></d=
+iv>
+<div><font size=3D"2" face=3D"Arial">Saludos.</font></div>
+<div><img naturalheight=3D"34" naturalwidth=3D"109" aria-expanded=3D"false"=
+ tabindex=3D"0" style=3D"-webkit-user-select: none;" src=3D"cid:5961015D17D=
+0430EBA71DD3C9159C5F7@faprd">
+<table border=3D"0">
+<tbody>
+<tr>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Roberto Dopazo</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Departamento de Compras</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Tel: &#43;54 342 4810810</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>Lamadrid 3065</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:10pt">
+<td>CP 3000 Santa Fe, Argentina.</td>
+</tr>
+<tr style=3D"font-family:arial; font-size:8pt">
+<td>rdopazo@fapersa.com</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote dir=3D"ltr" style=3D"border-left:#000000 2px solid; padding-lef=
+t:5px; padding-right:0px; margin-left:5px; margin-right:0px">
+<div style=3D"font:10pt arial">----- Original Message ----- </div>
+<div style=3D"font:10pt arial; background:#e4e4e4"><b>From:</b> <a title=3D=
+"acocciolo@pluscargocordoba.com.ar" href=3D"mailto:acocciolo@pluscargocordo=
+ba.com.ar">
+Agustin Cocciolo</a> </div>
+<div style=3D"font:10pt arial"><b>To:</b> <a title=3D"estudiodelorenzo@hotm=
+ail.com" href=3D"mailto:estudiodelorenzo@hotmail.com">
+Estudio De Lorenzo</a> ; <a title=3D"rdopazo@fapersa.com" href=3D"mailto:rd=
+opazo@fapersa.com">
+Roberto Dopazo</a> </div>
+<div style=3D"font:10pt arial"><b>Cc:</b> <a title=3D"gmartinez@pluscargoco=
+rdoba.com.ar" href=3D"mailto:gmartinez@pluscargocordoba.com.ar">
+Gonzalo Martinez</a> </div>
+<div style=3D"font:10pt arial"><b>Sent:</b> Friday, March 03, 2017 9:15 AM<=
+/div>
+<div style=3D"font:10pt arial"><b>Subject:</b> RE: Transito Mantevideo a Sa=
+nta Fe</div>
+<div><br>
+</div>
+<div class=3D"Section1">
+<p class=3D"MsoNormal"><span style=3D"font-family:'Calibri','sans-serif'; c=
+olor:#1f497d; font-size:11pt">Hola Raul</span></p>
+<p class=3D"MsoNormal"><span style=3D"font-family:'Calibri','sans-serif'; c=
+olor:#1f497d; font-size:11pt">antes del mediod=EDa las tiene</span></p>
+<p class=3D"MsoNormal"><span style=3D"font-family:'Calibri','sans-serif'; c=
+olor:#1f497d; font-size:11pt"></span>&nbsp;</p>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-family:'Calibri','sans-serif'; c=
+olor:red; font-size:11pt"></span>&nbsp;</p>
+<p class=3D"MsoNormal"><span style=3D"font-family:'Microsoft Sans Serif','s=
+ans-serif'; color:#1f497d; font-size:11pt"></span><span style=3D"font-famil=
+y:'Calibri','sans-serif'; color:#1f497d; font-size:11pt"></span>&nbsp;</p>
+<p class=3D"MsoNormal"><span style=3D"font-family:'Calibri','sans-serif'; c=
+olor:#1f497d; font-size:11pt"></span>&nbsp;</p>
+<div style=3D"">
+<table cellspacing=3D"0" cellpadding=3D"0" align=3D"left" vspace=3D"0" hspa=
+ce=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" align=3D"left" style=3D"padding-bottom:0cm; padding-left=
+:2.25pt; padding-right:2.25pt; padding-top:0cm">
+<p class=3D"MsoNormal" style=3D""><b><span style=3D"font-family:'Tahoma','s=
+ans-serif'; color:#1f497d; font-size:10pt">Agustin Cocciolo
+</span></b></p>
+<p class=3D"MsoNormal" style=3D""><b><span style=3D"font-family:'Calibri','=
+sans-serif'; color:black; font-size:11pt">&nbsp;</span></b><span style=3D"f=
+ont-family:'Century Gothic','sans-serif'; color:black; font-size:9pt">Custo=
+mer Service</span><b><span style=3D"font-family:'Calibri','sans-serif'; col=
+or:black; font-size:11pt"></span></b></p>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Century Gothi=
+c','sans-serif'; color:black; font-size:9pt">&nbsp;San Jer=F3nimo 177&nbsp;=
+ - Piso 6 Of. A</span><span style=3D"font-family:'Calibri','sans-serif'; co=
+lor:black; font-size:9pt"></span></p>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Century Gothi=
+c','sans-serif'; color:black; font-size:9pt">&nbsp;(5000) C=F3rdoba - Argen=
+tina</span></p>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Century Gothi=
+c','sans-serif'; color:black; font-size:9pt">&nbsp; Phone: &#43; 54 351 423=
+4670/77
+</span></p>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Century Gothi=
+c','sans-serif'; color:black; font-size:9pt">&nbsp;
+</span><span style=3D"font-family:'Century Gothic','sans-serif'; color:#1f4=
+97d; font-size:9pt">Cel:&nbsp; &#43;54 351
+</span><span style=3D"font-family:'Century Gothic','sans-serif'; color:#1f4=
+97d; font-size:10pt">154-022063</span></p>
+<p class=3D"MsoNormal" style=3D""><span lang=3D"EN-US" style=3D"font-family=
+:'Century Gothic','sans-serif'; color:#1f497d; font-size:10pt"><a href=3D"m=
+ailto:acocciolo@pluscargocordoba.com.ar">acocciolo@pluscargocordoba.com.ar<=
+/a></span></p>
+<p class=3D"MsoNormal" style=3D""><span lang=3D"EN-US" style=3D"font-family=
+:'Calibri','sans-serif'; color:#1f497d; font-size:11pt">&nbsp;</span><b><sp=
+an lang=3D"EN-US" style=3D"font-family:'Century Gothic','sans-serif'; color=
+:red; font-size:9pt">Nuevo
+</span></b><b><span lang=3D"EN-GB" style=3D"font-family:'Century Gothic','s=
+ans-serif'; color:red; font-size:9pt">Nextel: 674*1379</span></b><b><span l=
+ang=3D"EN-US" style=3D"font-family:'Century Gothic','sans-serif'; color:red=
+; font-size:9pt"></span></b></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class=3D"MsoNormal"><span lang=3D"EN-GB" style=3D"font-family:'Century G=
+othic','sans-serif'; color:black; font-size:9pt">&nbsp; Web:
+</span><span style=3D"font-family:'Century Gothic','sans-serif'; color:blac=
+k; font-size:9pt"><a title=3D"blocked::http://www.gruporas.com/" href=3D"ht=
+tp://www.gruporas.com"><span lang=3D"EN-GB" style=3D"color:black">www.grupo=
+ras.com</span></a></span><span style=3D"font-family:'Calibri','sans-serif';=
+ color:#1f497d; font-size:11pt"></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-family:'Calibri','sans-serif'; c=
+olor:#1f497d; font-size:11pt"></span>&nbsp;</p>
+<p class=3D"MsoNormal"><span style=3D"font-family:'Calibri','sans-serif'; c=
+olor:#1f497d; font-size:11pt"></span>&nbsp;</p>
+<p class=3D"MsoNormal"><span style=3D"font-family:'Calibri','sans-serif'; c=
+olor:#1f497d; font-size:11pt"><img naturalheight=3D"67" naturalwidth=3D"263=
+" id=3D"_x0000_i1028" border=3D"0" alt=3D"cid:024601ca2ac7$24d9c330$0300a8c=
+0@cathy" width=3D"263" height=3D"67" aria-expanded=3D"false" tabindex=3D"0"=
+ style=3D"-webkit-user-select: none;" src=3D"cid:EDB8CF2A84E34C6AB5091C77AC=
+49AA43@faprd"></span></p>
+</div>
+<p class=3D"MsoNormal"><span style=3D"font-family:'Calibri','sans-serif'; c=
+olor:#1f497d; font-size:11pt"></span>&nbsp;</p>
+<div>
+<div style=3D"border-bottom:medium none; border-left:medium none; padding-b=
+ottom:0cm; padding-left:0cm; padding-right:0cm; border-top:#b5c4df 1pt soli=
+d; border-right:medium none; padding-top:3pt">
+<p class=3D"MsoNormal"><b><span style=3D"font-family:'Tahoma','sans-serif';=
+ font-size:10pt">De:</span></b><span style=3D"font-family:'Tahoma','sans-se=
+rif'; font-size:10pt"> Estudio De Lorenzo [mailto:<a href=3D"mailto:estudio=
+delorenzo@hotmail.com">estudiodelorenzo@hotmail.com</a>]
+<br>
+<b>Enviado el:</b> viernes, 03 de marzo de 2017 7:09<br>
+<b>Para:</b> Agustin Cocciolo; Roberto Dopazo<br>
+<b>CC:</b> Gonzalo Martinez<br>
+<b>Asunto:</b> Re: Transito Mantevideo a Santa Fe</span></p>
+</div>
+</div>
+<p class=3D"MsoNormal">&nbsp;</p>
+<div id=3D"divtagdefaultwrapper">
+<p><span style=3D"font-family:'Calibri','sans-serif'; color:black">Buen d=
+=EDa, Gonzalo</span></p>
+<p><span style=3D"font-family:'Calibri','sans-serif'; color:black">Necesita=
+mos las certificaciones de flete para poder realizar los&nbsp;c=E1lculos de=
+ impuestos. y de esa manera&nbsp;la empresa tener la previsi=F3n de fondos =
+para las cargas que llegaran el lunes a Santa Fe,
+ tratando de evitar demoras en las nacionalizaciones en aduana</span></p>
+<p><span style=3D"font-family:'Calibri','sans-serif'; color:black">quedo a =
+la espera de lo requerido</span></p>
+<p><span style=3D"font-family:'Calibri','sans-serif'; color:black">slds.</s=
+pan></p>
+<p><span style=3D"font-family:'Calibri','sans-serif'; color:black">Ra=FAl D=
+e Lorenzo</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:12pt"><span style=3D"font-fam=
+ily:'Calibri','sans-serif'; color:black"></span>&nbsp;</p>
+<div>
+<div class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span=
+ style=3D"font-family:'Calibri','sans-serif'; color:black">
+<hr align=3D"center" size=3D"2" width=3D"98%">
+</span></div>
+<div id=3D"divRplyFwdMsg">
+<p class=3D"MsoNormal"><b><span style=3D"font-family:'Calibri','sans-serif'=
+; color:black; font-size:11pt">De:</span></b><span style=3D"font-family:'Ca=
+libri','sans-serif'; color:black; font-size:11pt"> Agustin Cocciolo &lt;<a =
+href=3D"mailto:acocciolo@pluscargocordoba.com.ar">acocciolo@pluscargocordob=
+a.com.ar</a>&gt;<br>
+<b>Enviado:</b> jueves, 02 de marzo de 2017 10:40 a.m.<br>
+<b>Para:</b> Roberto Dopazo<br>
+<b>Cc:</b> Estudio De Lorenzo; Gonzalo Martinez<br>
+<b>Asunto:</b> RE: Transito Mantevideo a Santa Fe</span><span style=3D"font=
+-family:'Calibri','sans-serif'; color:black">
+</span></p>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-family:'Calibri','sans-serif'; c=
+olor:black"></span>&nbsp;</p>
+</div>
+</div>
+<div>
+<div>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Calibri','san=
+s-serif'; color:#1f497d; font-size:11pt">Buen dia</span><span style=3D"colo=
+r:black"></span></p>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Calibri','san=
+s-serif'; color:#1f497d; font-size:11pt">estamos viendo de poder cargar ma=
+=F1ana,.</span><span style=3D"color:black"></span></p>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Calibri','san=
+s-serif'; color:#1f497d; font-size:11pt">por los feriados tenemos todo atra=
+sado</span><span style=3D"color:black"></span></p>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Calibri','san=
+s-serif'; color:#1f497d; font-size:11pt"></span><span style=3D"color:black"=
+></span>&nbsp;</p>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Calibri','san=
+s-serif'; color:#1f497d; font-size:11pt">Gonzalo env=EDa las certificacione=
+s, en breve confirmamos si cargamos ma=F1ana
+</span><span style=3D"color:black"></span></p>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Calibri','san=
+s-serif'; color:#1f497d; font-size:11pt"></span><span style=3D"color:black"=
+></span>&nbsp;</p>
+<div>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Calibri','san=
+s-serif'; color:red; font-size:11pt"></span><span style=3D"color:black"></s=
+pan>&nbsp;</p>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Microsoft San=
+s Serif','sans-serif'; color:#1f497d; font-size:11pt"></span><span style=3D=
+"color:black"></span>&nbsp;</p>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Calibri','san=
+s-serif'; color:#1f497d; font-size:11pt"></span><span style=3D"color:black"=
+></span>&nbsp;</p>
+<div>
+<table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" align=3D"left">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding-bottom:0cm; padding-left:2.25pt; paddin=
+g-right:2.25pt; padding-top:0cm">
+<p class=3D"MsoNormal" style=3D""><b><span style=3D"font-family:'Tahoma','s=
+ans-serif'; color:#1f497d; font-size:10pt">Agustin Cocciolo
+</span></b></p>
+<p class=3D"MsoNormal" style=3D""><b><span style=3D"font-family:'Calibri','=
+sans-serif'; color:black; font-size:11pt">&nbsp;</span></b><span style=3D"f=
+ont-family:'Century Gothic','sans-serif'; color:black; font-size:9pt">Custo=
+mer Service</span></p>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Century Gothi=
+c','sans-serif'; color:black; font-size:9pt">&nbsp;San Jer=F3nimo 177&nbsp;=
+ - Piso 6 Of. A</span></p>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Century Gothi=
+c','sans-serif'; color:black; font-size:9pt">&nbsp;(5000) C=F3rdoba - Argen=
+tina</span></p>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Century Gothi=
+c','sans-serif'; color:black; font-size:9pt">&nbsp; Phone: &#43; 54 351 423=
+4670/77
+</span></p>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Century Gothi=
+c','sans-serif'; color:black; font-size:9pt">&nbsp;
+</span><span style=3D"font-family:'Century Gothic','sans-serif'; color:#1f4=
+97d; font-size:9pt">Cel:&nbsp; &#43;54 351
+</span><span style=3D"font-family:'Century Gothic','sans-serif'; color:#1f4=
+97d; font-size:10pt">154-022063</span></p>
+<p class=3D"MsoNormal" style=3D""><span lang=3D"EN-US" style=3D"font-family=
+:'Century Gothic','sans-serif'; color:#1f497d; font-size:10pt"><a href=3D"m=
+ailto:acocciolo@pluscargocordoba.com.ar">acocciolo@pluscargocordoba.com.ar<=
+/a></span></p>
+<p class=3D"MsoNormal" style=3D""><span lang=3D"EN-US" style=3D"font-family=
+:'Calibri','sans-serif'; color:#1f497d; font-size:11pt">&nbsp;</span><b><sp=
+an lang=3D"EN-US" style=3D"font-family:'Century Gothic','sans-serif'; color=
+:red; font-size:9pt">Nuevo
+</span></b><b><span lang=3D"EN-GB" style=3D"font-family:'Century Gothic','s=
+ans-serif'; color:red; font-size:9pt">Nextel: 674*1379</span></b></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class=3D"MsoNormal" style=3D""><span lang=3D"EN-GB" style=3D"font-family=
+:'Century Gothic','sans-serif'; color:black; font-size:9pt">&nbsp; Web:
+</span><span style=3D"font-family:'Century Gothic','sans-serif'; color:blac=
+k; font-size:9pt"><a title=3D"blocked::http://www.gruporas.com/" href=3D"ht=
+tp://www.gruporas.com/"><span lang=3D"EN-GB" style=3D"color:black">www.grup=
+oras.com</span></a></span><span style=3D"color:black"></span></p>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Calibri','san=
+s-serif'; color:#1f497d; font-size:11pt"></span><span style=3D"color:black"=
+></span>&nbsp;</p>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Calibri','san=
+s-serif'; color:#1f497d; font-size:11pt"></span><span style=3D"color:black"=
+></span>&nbsp;</p>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Calibri','san=
+s-serif'; color:#1f497d; font-size:11pt"><img naturalheight=3D"67" naturalw=
+idth=3D"263" id=3D"Imagen_x005f_x005f_x005f_x0020_1" border=3D"0" alt=3D"ci=
+d:024601ca2ac7$24d9c330$0300a8c0@cathy" width=3D"263" height=3D"67" aria-ex=
+panded=3D"false" tabindex=3D"0" style=3D"-webkit-user-select: none;" src=3D=
+"cid:EDB8CF2A84E34C6AB5091C77AC49AA43@faprd"></span><span style=3D"color:bl=
+ack"></span></p>
+</div>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Calibri','san=
+s-serif'; color:#1f497d; font-size:11pt"></span><span style=3D"color:black"=
+></span>&nbsp;</p>
+<div>
+<div style=3D"border-bottom:medium none; border-left:medium none; padding-b=
+ottom:0cm; padding-left:0cm; padding-right:0cm; border-top:#b5c4df 1pt soli=
+d; border-right:medium none; padding-top:3pt">
+<p class=3D"MsoNormal" style=3D""><b><span style=3D"font-family:'Tahoma','s=
+ans-serif'; color:black; font-size:10pt">De:</span></b><span style=3D"font-=
+family:'Tahoma','sans-serif'; color:black; font-size:10pt"> Roberto Dopazo =
+[mailto:<a href=3D"mailto:rdopazo@fapersa.com">rdopazo@fapersa.com</a>]
+<br>
+<b>Enviado el:</b> jueves, 02 de marzo de 2017 10:29<br>
+<b>Para:</b> Agustin Cocciolo<br>
+<b>CC:</b> Estudio De Lorenzo<br>
+<b>Asunto:</b> Transito Mantevideo a Santa Fe</span><span style=3D"color:bl=
+ack"></span></p>
+</div>
+</div>
+<p class=3D"MsoNormal" style=3D""><span style=3D"color:black"></span>&nbsp;=
+</p>
+<div>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Arial','sans-=
+serif'; color:black; font-size:10pt">Estimado Agust=EDn..</span><span style=
+=3D"color:black"></span></p>
+</div>
+<div>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Arial','sans-=
+serif'; color:black; font-size:10pt">Esta todo organizado para realizar ma=
+=F1ana el tr=E1nsito de Montevideo a Santa Fe de las 4 cargas..?</span><spa=
+n style=3D"color:black"></span></p>
+</div>
+<div>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Arial','sans-=
+serif'; color:black; font-size:10pt">Espero tu respuesta y que me vayas ade=
+lantando los documentos y datos del cami=F3n y chofer.</span><span style=3D=
+"color:black"></span></p>
+</div>
+<div>
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Arial','sans-=
+serif'; color:black; font-size:10pt">Saludos.</span><span style=3D"color:bl=
+ack"></span></p>
+</div>
+<div>
+<table class=3D"MsoNormalTable" border=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td style=3D"padding-bottom:0.75pt; padding-left:0.75pt; padding-right:0.75=
+pt; padding-top:0.75pt">
+<p class=3D"MsoNormal" style=3D""><img naturalheight=3D"34" naturalwidth=3D=
+"109" id=3D"_x0000_i1027" border=3D"0" width=3D"109" height=3D"34" aria-exp=
+anded=3D"false" tabindex=3D"0" style=3D"-webkit-user-select: none;" src=3D"=
+cid:4E8FDFF921524E89831827C12CD012BE@faprd"></p>
+</td>
+</tr>
+<tr>
+<td style=3D"padding-bottom:0.75pt; padding-left:0.75pt; padding-right:0.75=
+pt; padding-top:0.75pt">
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Arial','sans-=
+serif'; font-size:10pt">Roberto Dopazo</span></p>
+</td>
+</tr>
+<tr>
+<td style=3D"padding-bottom:0.75pt; padding-left:0.75pt; padding-right:0.75=
+pt; padding-top:0.75pt">
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Arial','sans-=
+serif'; font-size:10pt">Departamento de Compras</span></p>
+</td>
+</tr>
+<tr>
+<td style=3D"padding-bottom:0.75pt; padding-left:0.75pt; padding-right:0.75=
+pt; padding-top:0.75pt">
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Arial','sans-=
+serif'; font-size:10pt">Tel: &#43;54 342 4810810</span></p>
+</td>
+</tr>
+<tr>
+<td style=3D"padding-bottom:0.75pt; padding-left:0.75pt; padding-right:0.75=
+pt; padding-top:0.75pt">
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Arial','sans-=
+serif'; font-size:10pt">Lamadrid 3065</span></p>
+</td>
+</tr>
+<tr>
+<td style=3D"padding-bottom:0.75pt; padding-left:0.75pt; padding-right:0.75=
+pt; padding-top:0.75pt">
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Arial','sans-=
+serif'; font-size:10pt">CP 3000 Santa Fe, Argentina.</span></p>
+</td>
+</tr>
+<tr>
+<td style=3D"padding-bottom:0.75pt; padding-left:0.75pt; padding-right:0.75=
+pt; padding-top:0.75pt">
+<p class=3D"MsoNormal" style=3D""><span style=3D"font-family:'Arial','sans-=
+serif'; font-size:8pt"><a href=3D"mailto:rdopazo@fapersa.com">rdopazo@faper=
+sa.com</a></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class=3D"MsoNormal" style=3D""><span style=3D"color:black"></span>&nbsp;=
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+--_000_MWHPR20MB16478E3D61FE587A0DDC5E51D42B0MWHPR20MB1647namp_--
+
+--_006_MWHPR20MB16478E3D61FE587A0DDC5E51D42B0MWHPR20MB1647namp_
+Content-Type: image/jpeg; name="fapersa.jpg"
+Content-Description: fapersa.jpg
+Content-Disposition: inline; filename="fapersa.jpg"; size=1729;
+	creation-date="Fri, 03 Mar 2017 14:50:34 GMT";
+	modification-date="Fri, 03 Mar 2017 14:50:34 GMT"
+Content-ID: <5961015D17D0430EBA71DD3C9159C5F7@faprd>
+Content-Transfer-Encoding: base64
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAiAG0DASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+q9z
+f2dmQLq7ggLdBLIFz+ZqxXzzqdlpWvfGDWLfxJqbWlkjuBKZVTG3AVQWBAFaU4c7d+hlVqciVlue
+9warp11KIre/tZpDyEjmVifwBq3XmUSaP4E0cXngzRLvXbi+Pyz26tOoRTggyKpAGQeBznr0qvpf
+xbv28S2eka54cl043TrGCxZXUscKdrKMjPFP2Tesdg9tFaS3PVaK8iuvi9rA16/0yw8NC9e0mkT9
+0zsxVW27iApx2/Otfwh8WLLXpbu31W2XS5raJpi7SZQqv3uoBBGeneh0ZpXsCr027Jno1FeTXnxh
+vraQajH4blk8PSTeVDdsxVpMcEjjGeDge3WruvfFkaVrelW9pp32uyv7eG4EgY+ZtdiMBcctgdPW
+j2M+we3p9z0yivKbz4ra1pumW89/4XeC7vJjHa2zs6swXGWIK55LKAAOefbOhofjXxnrOqw2b+DZ
+LGJjmS4uhJGiL3PKjJ9AOv60OjNK4KtBu36Ho1FcD4n8d63pepta6P4S1LUIowRJcG2lVC3+zheR
+79PT1p/gL4i/8Jhe3mn3Wn/Yr22XfsDlty5weCAQQSPzpeyly83QftYc3LfU7uiiiszQK8GstA07
+xJ8bNbsNUhM1tumfaHK8gjHIIPevearpYWcVy1zHaQJcNndKsYDHPXJ61pTqcl7dTOpTU7X6Hhfx
+Jt08Na9oujRSX9p4cht9yx20hLZaRjIVLHluR1PGRXOKliPHPhyXTjqzWs01u6Pqm3zG/fEZXaSN
+vH55r6ant4LqPy7iGOVP7sihh+RqJtMsHkikextmeIBY2MSkoB0AOOMVrHEWVrGMsNd3ueA+HfFN
+l4R+KHiC+vYLmZJpLm3RLZQzbjMCOCRx8pqXxF8PNRl8O6t4unt5YLu4u2ulsAMtDAzMTu9xuBx2
+AOfbp/h34Yum8feIdeu7RPsP2i4igaVclpPOB3KD6bSM+p+teuVVStyS93yJp0eeD5vOx8xaQ3hn
+UNJtrLU9X8Qrcbgn2SFBLGWzxsGffpjOa3Nb0xNH+JvgzT4zMUgWzVfPAD489jhscZ5r3ZNL0+O4
+FwlharMDkSLCoYH64zT5bCznuUuJbSCSdMbZXjBZccjBxkVLxGt7FfV9LXPOPivN4OumsrLXr26i
+vYdzx/Y1DuinGQwPGDgY78V5lpj21l4z0mPwXf6nM0syCQTIEyd3IIU8rjOcjgZr6Pl0fTJ5Wll0
+60kkY5Z3gUkn3OKlttPsrMk2tpbwE9TFGFz+QpQrKMeUqdBylzf8OfOE9+tx4y1WLxPda+J2uWSK
+LTyC27cQFwxHGMYArf8Ag7EsHxK1iFVnVY7SZQs+PMAE0Y+bHG71969ye0tpJ1ne3iaZOVkZAWX6
+Gmw2FnbzvPBaQRTPndIkYVmycnJAyeabrpxcbCWHakpXLFFFFcx0hRRRQAUUUUAIAFGAAB7UtFFA
+BRRRQAUUUUAFFFFABRRRQB//2Q==
+
+--_006_MWHPR20MB16478E3D61FE587A0DDC5E51D42B0MWHPR20MB1647namp_
+Content-Type: image/jpeg; name="image001.jpg"
+Content-Description: image001.jpg
+Content-Disposition: inline; filename="image001.jpg"; size=2930;
+	creation-date="Fri, 03 Mar 2017 14:50:34 GMT";
+	modification-date="Fri, 03 Mar 2017 14:50:34 GMT"
+Content-ID: <EDB8CF2A84E34C6AB5091C77AC49AA43@faprd>
+Content-Transfer-Encoding: base64
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIf
+IiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7
+Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCABDAQcDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD2Siii
+gAoornNb8Wx2Fz9g0+E3t8TjYuSEPvjqfagDo6K4tk8dvE12ZoYto3CABc49MYP863/Dmqyazo8V
+5KoWQkq4XpkUAatFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUU
+UAFFFFADqKKKAG0UVBfXcdhYzXcx+SFCx9/agDD8T6zcQNFpWmfNqF3wu3/lmvr7f5NW/D/h220S
+24/eXT/62Y9SfQegrP8ACFjJctN4gvRm5vCfLB/gT2/z0FdQeKAKOs36aZpFzduQPLQ7R6seAPzq
+n4Rs3s/Dlskgw8gMrf8AAjn+WKy7tj4s19bKI50ywbdO46Sv/dH+fWo9RtrrUfGUmnxanc2US2wk
+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
+AUUUUAFFFFABRRRQAUUUUAOooooA/9k=
+
+--_006_MWHPR20MB16478E3D61FE587A0DDC5E51D42B0MWHPR20MB1647namp_
+Content-Type: image/jpeg; name="image002.jpg"
+Content-Description: image002.jpg
+Content-Disposition: inline; filename="image002.jpg"; size=1729;
+	creation-date="Fri, 03 Mar 2017 14:50:34 GMT";
+	modification-date="Fri, 03 Mar 2017 14:50:34 GMT"
+Content-ID: <4E8FDFF921524E89831827C12CD012BE@faprd>
+Content-Transfer-Encoding: base64
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAiAG0DASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+q9z
+f2dmQLq7ggLdBLIFz+ZqxXzzqdlpWvfGDWLfxJqbWlkjuBKZVTG3AVQWBAFaU4c7d+hlVqciVlue
+9warp11KIre/tZpDyEjmVifwBq3XmUSaP4E0cXngzRLvXbi+Pyz26tOoRTggyKpAGQeBznr0qvpf
+xbv28S2eka54cl043TrGCxZXUscKdrKMjPFP2Tesdg9tFaS3PVaK8iuvi9rA16/0yw8NC9e0mkT9
+0zsxVW27iApx2/Otfwh8WLLXpbu31W2XS5raJpi7SZQqv3uoBBGeneh0ZpXsCr027Jno1FeTXnxh
+vraQajH4blk8PSTeVDdsxVpMcEjjGeDge3WruvfFkaVrelW9pp32uyv7eG4EgY+ZtdiMBcctgdPW
+j2M+we3p9z0yivKbz4ra1pumW89/4XeC7vJjHa2zs6swXGWIK55LKAAOefbOhofjXxnrOqw2b+DZ
+LGJjmS4uhJGiL3PKjJ9AOv60OjNK4KtBu36Ho1FcD4n8d63pepta6P4S1LUIowRJcG2lVC3+zheR
+79PT1p/gL4i/8Jhe3mn3Wn/Yr22XfsDlty5weCAQQSPzpeyly83QftYc3LfU7uiiiszQK8GstA07
+xJ8bNbsNUhM1tumfaHK8gjHIIPevearpYWcVy1zHaQJcNndKsYDHPXJ61pTqcl7dTOpTU7X6Hhfx
+Jt08Na9oujRSX9p4cht9yx20hLZaRjIVLHluR1PGRXOKliPHPhyXTjqzWs01u6Pqm3zG/fEZXaSN
+vH55r6ant4LqPy7iGOVP7sihh+RqJtMsHkikextmeIBY2MSkoB0AOOMVrHEWVrGMsNd3ueA+HfFN
+l4R+KHiC+vYLmZJpLm3RLZQzbjMCOCRx8pqXxF8PNRl8O6t4unt5YLu4u2ulsAMtDAzMTu9xuBx2
+AOfbp/h34Yum8feIdeu7RPsP2i4igaVclpPOB3KD6bSM+p+teuVVStyS93yJp0eeD5vOx8xaQ3hn
+UNJtrLU9X8Qrcbgn2SFBLGWzxsGffpjOa3Nb0xNH+JvgzT4zMUgWzVfPAD489jhscZ5r3ZNL0+O4
+FwlharMDkSLCoYH64zT5bCznuUuJbSCSdMbZXjBZccjBxkVLxGt7FfV9LXPOPivN4OumsrLXr26i
+vYdzx/Y1DuinGQwPGDgY78V5lpj21l4z0mPwXf6nM0syCQTIEyd3IIU8rjOcjgZr6Pl0fTJ5Wll0
+60kkY5Z3gUkn3OKlttPsrMk2tpbwE9TFGFz+QpQrKMeUqdBylzf8OfOE9+tx4y1WLxPda+J2uWSK
+LTyC27cQFwxHGMYArf8Ag7EsHxK1iFVnVY7SZQs+PMAE0Y+bHG71969ye0tpJ1ne3iaZOVkZAWX6
+Gmw2FnbzvPBaQRTPndIkYVmycnJAyeabrpxcbCWHakpXLFFFFcx0hRRRQAUUUUAIAFGAAB7UtFFA
+BRRRQAUUUUAFFFFABRRRQB//2Q==
+
+--_006_MWHPR20MB16478E3D61FE587A0DDC5E51D42B0MWHPR20MB1647namp_--

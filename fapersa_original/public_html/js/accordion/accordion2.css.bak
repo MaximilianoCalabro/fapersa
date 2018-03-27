@@ -1,0 +1,65 @@
+.nav li { list-style-type: none; }
+
+.nav {
+	color:#06649C; 
+  font-size:12pt;
+	background-color: #F7F7F7;
+	line-height: 15px;
+	/*border: 1px solid #6AB9CF;*/
+	border-collapse: collapse;
+	margin:0px;
+	padding:0px;
+	text-indent:0px;
+	width:261px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.nav a.head {
+	margin-bottom: 2px;
+	font-weight: bold;
+	color:#06649C;
+	background : #FFFFFF url(../../images/fondo_menu.jpg); 
+	padding : 5px 10px 7px 10px;
+	height:20px;
+	cursor: pointer;
+	display: block;
+	text-decoration: none;
+	text-indent: 3px;
+	line-height: 25px;
+}
+
+.nav ul {
+margin : 0px 10px 0px 0px; 
+padding: 0px 0px 0px 30px; 
+}
+
+.nav li {
+	list-style:none outside none;
+	display:inline;
+	margin-bottom: 5px;	
+}
+
+.nav li li span {
+	display: block;
+	text-indent: 3px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #666;
+	line-height: 10px;
+	font-size:10pt;
+}
+
+.nav li li a {
+	color:#000000;
+	display:block;
+	text-indent:5px;
+	text-decoration: none;
+	line-height: 20px;
+	font-size:10pt;
+}
+
+.nav li li a:hover {
+	background-color: #E5E5E5;
+	color: #000000;
+	font-size:10pt;
+}

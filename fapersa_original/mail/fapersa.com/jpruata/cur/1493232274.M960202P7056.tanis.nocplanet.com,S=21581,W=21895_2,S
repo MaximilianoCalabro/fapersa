@@ -1,0 +1,314 @@
+Return-Path: <MD-NO--10144-124-AR-PR--jpruata=fapersa.com@bounces.mdrctr.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id ESchOZLqAFmQGwAATLP0zA
+	for <jpruata@fapersa.com>; Wed, 26 Apr 2017 15:44:34 -0300
+Return-path: <MD-NO--10144-124-AR-PR--jpruata=fapersa.com@bounces.mdrctr.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Wed, 26 Apr 2017 15:44:34 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:34178 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <MD-NO--10144-124-AR-PR--jpruata=fapersa.com@bounces.mdrctr.com>)
+	id 1d3RvW-0005sE-2R
+	for jpruata@fapersa.com; Wed, 26 Apr 2017 15:44:34 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 84ED67F20E
+	for <jpruata@fapersa.com>; Wed, 26 Apr 2017 15:44:33 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 6qrRKj29xLQU for <jpruata@fapersa.com>;
+	Wed, 26 Apr 2017 15:44:31 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 0042A7F229; Wed, 26 Apr 2017 15:44:30 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 565037F20E
+	for <jpruata@fapersa.com>; Wed, 26 Apr 2017 15:44:27 -0300 (ART)
+Received-SPF: pass (bounces.mdrctr.com: Sender is authorized to use 'MD-NO--10144-124-AR-PR--jpruata=fapersa.com@bounces.mdrctr.com' in 'mfrom' identity (mechanism 'include:_pmta2.antevenio.com' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="MD-NO--10144-124-AR-PR--jpruata=fapersa.com@bounces.mdrctr.com"; helo=mta130.117.mdrctr.com; client-ip=62.97.130.117
+Received: from mta130.117.mdrctr.com (mta130.117.mdrctr.com [62.97.130.117])
+	by fw.fapersa.com (Postfix) with ESMTPS id 717085FDA0
+	for <jpruata@fapersa.com>; Wed, 26 Apr 2017 15:44:23 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=md2; d=tizado.com;
+ h=From:Reply-To:To:Date:List-Id:List-Unsubscribe:Subject:MIME-Version:Content-Type:Message-ID; i=jscaraville@tizado.com;
+ bh=dSOi+hkED1gSrfTk0pRJ/zDGLJw=;
+ b=Jt/wsWWN3/mSVw0SO89E7x7Uqvh1HsoPFmwUG3/8cB4AtHBx1Bgl9j0jiPr+Svxn+KLA6neqSioq
+   ldlw4ne5SsD4KbjtlOjEX9y08Mn5R59VG+5bWGOXYCyiU2rp4MZRSxnukJBvyHxH5tT4m2yqQESL
+   eq/u0+lNFEfARLPDMBM=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=md2; d=tizado.com;
+ b=Sn/ZS+e237MzHyJVztCPJO/VetVgSJxXfgpvJfBn8ulg5Tvfq2HAW5lpEua02C5tyJDiyEACA+Oj
+   9NVbtlGcfILPp+Pj87gPjbR0Wg6jwVn6FtrmqPi2oEO7+eM0eAKUtyJEruaqu3dBGVHv01L38rza
+   4uByi3YaAfQjcSjxlkQ=;
+Received: from pmta-senderdaemon.antevenio.local (172.16.18.16) by mta141.220.mdrctr.com id h03l8k292r81 for <jpruata@fapersa.com>; Wed, 26 Apr 2017 20:44:09 +0200 (envelope-from <MD-NO--10144-124-AR-PR--jpruata=fapersa.com@bounces.mdrctr.com>)
+From: "Tizado Propiedades" <jscaraville@tizado.com>
+Reply-To: "Tizado Tigre" <jscaraville@tizado.com>
+To:  <jpruata@fapersa.com>
+Precedence: bulk
+X-rpcampaign: mdMDNO10144124ARPR
+X-rpcampaignok: mdmdMD-NO--10144-124-AR-PR
+X-reputation: 5
+Date: Wed, 26 Apr 2017 20:44:09 +0200
+Feedback-ID: 10144:124:gmailmdrctr
+List-Id: 10144-1.mdrctr.com
+List-Unsubscribe: <mailto:unsubscribe-md10144-124-1-42049-e1b2f3aa32783282a493d5559590259c@bounces.mdrctr.com>, <http://track.mdirector.com/track/unsubscribe/empId/10144/subId/124/listId/1/conId/42049/conEmail/jpruata@fapersa.com/type/8/motivo/list-unsubscribe/signature/e1b2f3aa32783282a493d5559590259c>
+X-LU: <mailto:unsubscribe-md10144-124-1-42049-e1b2f3aa32783282a493d5559590259c@bounces.mdrctr.com>, <http://track.mdirector.com/track/unsubscribe/empId/10144/subId/124/listId/1/conId/42049/conEmail/jpruata@fapersa.com/type/8/motivo/list-unsubscribe/signature/e1b2f3aa32783282a493d5559590259c>
+Subject: =?UTF-8?Q?Paga=20tu=20lote=20en=205=20a=C3=B1?= =?UTF-8?Q?os=20en=20Puertos=20Escobar?=
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="boundaryTagForMixed"
+Message-ID: <0.0.5.269.1D2BEBD171E4652.15F6C3@mta141.220.mdrctr.com>
+
+--boundaryTagForMixed
+Content-Type: multipart/alternative; boundary="boundaryTagForAlternative"
+
+--boundaryTagForAlternative
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Publicidad
+Si no ve correctamente el contenido de este e-mail, puede visualizarlo vía web.
+//track.mdrctr.com/track/display/empId/10144/subId/124/listId/1/conId/42049/signature/e1b2f3aa32783282a493d5559590259c/conEmail/jpruata@fapersa.com/conMovil/-/contactInfo/Y29uSWQ9NDIwNDl%2BfmVtYWlsPWpwcnVhdGFAZmFwZXJzYS5jb21%2Bfm1vdmlsPS1%2BfnN1YklkPTEyNH5%2BbGlzdElkPTF%2BfnNuYXBJZD01NjM5N35%2BbWRQYXJ0cz0xfn5tZEVtYWlsTUQ1PTcyZDZkNWI0NDRkYWRlYzRjM2ZiZjdhOGEzNGU5NDBmfn5jb25fbWQ1PWRjZDgzOTM3MGEzYmIxMjA2ZGY4NDk4ZjEwMjM3NmYy
+
+**********************************************************************
+
+
+
+ NUEVO LANZAMIENTO EN PUERTOS
+
+COMPRÁ PRIMERO: ¡ RESERVÁ TU LUGAR AHORA!
+
+ NUEVO LANZAMIENTO EN PUERTOS
+
+ ¡QUIERO RESERVAR!
+
+ ━━━━━━━━━━━━━━━━━━━━━
+
+ CONOCE PUERTOS
+
+ NUEVO LANZAMIENTO EN PUERTOS
+
+ NUEVO LANZAMIENTO EN PUERTOS
+
+References:
+
+ http://track.mdrctr.com/track/link/key/10144-124-237-1-42049/signature/e1b2f3aa32783282a493d5559590259c/contactInfo/Y29uSWQ9NDIwNDl%2BfmVtYWlsPWpwcnVhdGFAZmFwZXJzYS5jb21%2Bfm1vdmlsPS1%2BfnN1YklkPTEyNH5%2BbGlzdElkPTF%2BfnNuYXBJZD01NjM5N35%2BbWRQYXJ0cz0xfn5tZEVtYWlsTUQ1PTcyZDZkNWI0NDRkYWRlYzRjM2ZiZjdhOGEzNGU5NDBmfn5jb25fbWQ1PWRjZDgzOTM3MGEzYmIxMjA2ZGY4NDk4ZjEwMjM3NmYy/userid/72d6d5b444dadec4c3fbf7a8a34e940f
+ //track.mdrctr.com/track/link/key/10144-124-240-1-42049/signature/e1b2f3aa32783282a493d5559590259c/contactInfo/Y29uSWQ9NDIwNDl%2BfmVtYWlsPWpwcnVhdGFAZmFwZXJzYS5jb21%2Bfm1vdmlsPS1%2BfnN1YklkPTEyNH5%2BbGlzdElkPTF%2BfnNuYXBJZD01NjM5N35%2BbWRQYXJ0cz0xfn5tZEVtYWlsTUQ1PTcyZDZkNWI0NDRkYWRlYzRjM2ZiZjdhOGEzNGU5NDBmfn5jb25fbWQ1PWRjZDgzOTM3MGEzYmIxMjA2ZGY4NDk4ZjEwMjM3NmYy/userid/72d6d5b444dadec4c3fbf7a8a34e940f
+ //track.mdrctr.com/track/link/key/10144-124-239-1-42049/signature/e1b2f3aa32783282a493d5559590259c/contactInfo/Y29uSWQ9NDIwNDl%2BfmVtYWlsPWpwcnVhdGFAZmFwZXJzYS5jb21%2Bfm1vdmlsPS1%2BfnN1YklkPTEyNH5%2BbGlzdElkPTF%2BfnNuYXBJZD01NjM5N35%2BbWRQYXJ0cz0xfn5tZEVtYWlsTUQ1PTcyZDZkNWI0NDRkYWRlYzRjM2ZiZjdhOGEzNGU5NDBmfn5jb25fbWQ1PWRjZDgzOTM3MGEzYmIxMjA2ZGY4NDk4ZjEwMjM3NmYy/userid/72d6d5b444dadec4c3fbf7a8a34e940f
+ 
+**********************************************************************
+
+Puede proceder a:
+ * darse de baja:
+//track.mdrctr.com/track/pre-unsubscribe/category/EMAIL/empId/10144/subId/124/listId/1/conId/42049/signature/e1b2f3aa32783282a493d5559590259c/conEmail/jpruata@fapersa.com/conMovil/-
+
+
+--boundaryTagForAlternative
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+ <title>Nuevo lanzamiento en Puertos</title>
+ <style type="text/css">.ReadMsgBody { width: 100%; background-color: #ffffff; }
+.ExternalClass { width: 100%; background-color: #ffffff; }
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; }
+html { width: 100%; }
+body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; margin: 0; padding: 0; }
+table { border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto; }
+table table table { table-layout: auto; }
+img { display: block !important; over-flow: hidden !important; }
+table td { border-collapse: collapse; }
+.yshortcuts a { border-bottom: none !important; }
+a { color: #c86e6e; text-decoration: none; }
+
+/*Responsive*/
+@media only screen and (max-width: 640px) {
+body { width: auto !important; }
+table[class="table-inner"] { width: 90% !important; }
+table[class="table2-2"] { width: 47% !important; text-align: center !important; }
+table[class="table-full"] { width: 100% !important; text-align: center !important; }
+/* Image */
+img[class="img1"] { width: 100% !important; height: auto !important; }
+/* ETC */
+td[class="hide"] { max-height: 0px !important; height: 0px !important; }
+td[class="contact-button"] { border-top: 0px !important; }
+}
+ @media only screen and (max-width: 479px) {
+body { width: auto !important; }
+table[class="table-inner"] { width: 100% !important; }
+table[class="table2-2"] { width: 100% !important; text-align: center !important; }
+table[class="table-full"] { width: 100% !important; text-align: center !important; }
+/* image */
+img[class="img1"] { width: 100% !important; height: auto !important; }
+/* ETC */
+td[class="hide"] { max-height: 0px !important; height: 0px !important; }
+td[class="contact-button"] { border-top: 0px !important; }
+}
+ </style>
+</head>
+<body leftmargin="0" marginheight="0" marginwidth="0" offset="0" style="margin-top: 0; margin-bottom: 0; padding-top: 0; padding-bottom: 0; width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;" topmargin="0"><img src="http://track.mdrctr.com/track/open/key/10144-124-1-42049/signature/e1b2f3aa32783282a493d5559590259c/userid/72d6d5b444dadec4c3fbf7a8a34e940f" style="display:none;" border=0 width=1 height=1 alt=""><table border="0" style="max-width:570px;" cellspacing="4" cellpadding="0"
+	align="center">
+	<tr>
+		<td><font face="Verdana" color="#8c8c8c" size="1">Publicidad</font></td>
+	</tr>
+</table>
+<table border="0" style="max-width:570px;" cellspacing="4" cellpadding="0"
+	align="center">
+	<tr>
+		<td width="100%"><font face="Verdana" color="#8c8c8c" size="1">Si no
+		ve correctamente el contenido de este e-mail, puede <a
+			style="color: #FF8549;" target="_blank"
+			href="http://track.mdrctr.com/track/display/empId/10144/subId/124/listId/1/conId/42049/signature/e1b2f3aa32783282a493d5559590259c/conEmail/jpruata@fapersa.com/conMovil/-/contactInfo/Y29uSWQ9NDIwNDl%2BfmVtYWlsPWpwcnVhdGFAZmFwZXJzYS5jb21%2Bfm1vdmlsPS1%2BfnN1YklkPTEyNH5%2BbGlzdElkPTF%2BfnNuYXBJZD01NjM5N35%2BbWRQYXJ0cz0xfn5tZEVtYWlsTUQ1PTcyZDZkNWI0NDRkYWRlYzRjM2ZiZjdhOGEzNGU5NDBmfn5jb25fbWQ1PWRjZDgzOTM3MGEzYmIxMjA2ZGY4NDk4ZjEwMjM3NmYy">visualizarlo v&iacute;a web</a>.</font></td>
+	</tr>
+</table>
+<div class="parentOfBg">&nbsp;</div>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" data-bg="Header" data-bgcolor="Header" data-module="header" mc:hideable="" mc:repeatable="layout" mc:variant="header" style="background-position:top; background-size:cover; max-width:600px; width:100%">
+ <tbody>
+ <tr>
+ <td align="center">
+ <table align="center" border="0" cellpadding="0" cellspacing="0" class="table-inner" style="width:600px">
+ <tbody>
+ <tr>
+ <td height="25">&nbsp;</td>
+ </tr>
+ <tr>
+ <td align="center" data-color="SubHeadline" data-link-color="SubHeadline Link" data-link-style="text-decoration:none; color:#083b68;" data-size="SubHeadline" mc:edit="header subheadline" style="font-family: 'Oswald', Arial, sans-serif; color:#083b68; font-size:34px;line-height: 28px;">NUEVO LANZAMIENTO EN PUERTOS</td>
+ </tr>
+ <tr>
+ <td height="25">&nbsp;</td>
+ </tr>
+ <tr>
+ <td align="center" data-color="SubHeadline" data-link-color="SubHeadline Link" data-link-style="text-decoration:none; color:#083b68;" data-size="SubHeadline" mc:edit="header subheadline" style="font-family: 'Oswald', Arial, sans-serif; color:#083b68; font-size:28px;line-height: 28px;">COMPR&Aacute; PRIMERO: &iexcl; RESERV&Aacute; TU LUGAR AHORA!</td>
+ </tr>
+ <!--sub headline-->
+ <tr>
+ <td height="25">&nbsp;</td>
+ </tr>
+ <!--Headline-->
+ <tr>
+ <td align="center" data-color="Headline" data-link-color="Headline Link" data-link-style="text-decoration:none;" data-size="Headline" mc:edit="header headline" style="text-decoration: none; color:#003c7e;font-family: 'Century Gothic', Arial, sans-serif; font-size:30px; font-weight: bold;letter-spacing: 4px;"><a data-linkid="link_5900e803170fa" href="http://track.mdrctr.com/track/link/key/10144-124-237-1-42049/signature/e1b2f3aa32783282a493d5559590259c/contactInfo/Y29uSWQ9NDIwNDl%2BfmVtYWlsPWpwcnVhdGFAZmFwZXJzYS5jb21%2Bfm1vdmlsPS1%2BfnN1YklkPTEyNH5%2BbGlzdElkPTF%2BfnNuYXBJZD01NjM5N35%2BbWRQYXJ0cz0xfn5tZEVtYWlsTUQ1PTcyZDZkNWI0NDRkYWRlYzRjM2ZiZjdhOGEzNGU5NDBmfn5jb25fbWQ1PWRjZDgzOTM3MGEzYmIxMjA2ZGY4NDk4ZjEwMjM3NmYy/userid/72d6d5b444dadec4c3fbf7a8a34e940f" style="text-decoration:
+none; color:#000000;" target="_blank"><img alt="NUEVO LANZAMIENTO EN PUERTOS" leftmargin="0" marginheight="0" marginwidth="0" offset="0" src="http://static.mdirector.com/files/campanias/10144/1/2/4/CAM/mapa.jpg" style="-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; margin-bottom:0; margin-top:0; padding-bottom:0; padding-top:0; width:100%" title="NUEVO LANZAMIENTO EN PUERTOS" topmargin="0" /> </a></td>
+ </tr>
+ <!--end Headline-->
+ </tbody>
+ </table>
+ </td>
+ </tr>
+ <tr>
+ <td height="50">&nbsp;</td>
+ </tr>
+ <!--button-->
+ <tr>
+ <td align="center" height="50" style="background-size: auto; background-position: center bottom; background-repeat: repeat-x;">
+ <table align="center" bgcolor="#ed1b24" border="0" cellpadding="0" cellspacing="0" class="table-inner" data-bgcolor="Heade CTA Button" style="border-radius:10px">
+ <tbody>
+ <tr>
+ <td align="center" data-color="CTA Button" data-link-color="CTA Button Link" data-link-style="text-decoration:none; color:#ffffff;" data-size="CTA Button" height="50" mc:edit="headerbutton" style="font-family: 'Open Sans', Arial, sans-serif; font-size: 20px;color:#ffffff;font-weight: bold;padding-left:60px;padding-right:60px;"><a data-color="CTA Button" data-linkid="link_5900e84d9fa90"
+href="http://track.mdrctr.com/track/link/key/10144-124-240-1-42049/signature/e1b2f3aa32783282a493d5559590259c/contactInfo/Y29uSWQ9NDIwNDl%2BfmVtYWlsPWpwcnVhdGFAZmFwZXJzYS5jb21%2Bfm1vdmlsPS1%2BfnN1YklkPTEyNH5%2BbGlzdElkPTF%2BfnNuYXBJZD01NjM5N35%2BbWRQYXJ0cz0xfn5tZEVtYWlsTUQ1PTcyZDZkNWI0NDRkYWRlYzRjM2ZiZjdhOGEzNGU5NDBmfn5jb25fbWQ1PWRjZDgzOTM3MGEzYmIxMjA2ZGY4NDk4ZjEwMjM3NmYy/userid/72d6d5b444dadec4c3fbf7a8a34e940f" style="text-decoration: none; color:#ffffff; font-weight: bold;" target="_blank">&iexcl;QUIERO RESERVAR!</a></td>
+ </tr>
+ </tbody>
+ </table>
+ </td>
+ </tr>
+ <!--end button-->
+ <tr>
+ <td height="25">&nbsp;</td>
+ </tr>
+ <tr>
+ <td>
+ <hr color="#083b68" size="2" width="150" /></td>
+ </tr>
+ <tr>
+ <td height="25">&nbsp;</td>
+ </tr>
+ <tr>
+ <td align="center" data-color="SubHeadline" data-link-color="SubHeadline Link" data-link-style="text-decoration:none; color:#083b68;" data-size="SubHeadline" mc:edit="header subheadline" style="font-family: 'Oswald', Arial, sans-serif; color:#083b68; font-size:28px;line-height: 28px;">CONOCE PUERTOS</td>
+ </tr>
+ <tr>
+ <td height="25">&nbsp;</td>
+ </tr>
+ <tr>
+ <td align="center" data-color="Headline" data-link-color="Headline Link" data-link-style="text-decoration:none;" data-size="Headline" mc:edit="header headline" style="text-decoration: none; color:#003c7e;font-family: 'Century Gothic', Arial, sans-serif; font-size:30px; font-weight: bold;letter-spacing: 4px;"><a data-linkid="link_5900e803173a8" height="315" href="http://track.mdrctr.com/track/link/key/10144-124-239-1-42049/signature/e1b2f3aa32783282a493d5559590259c/contactInfo/Y29uSWQ9NDIwNDl%2BfmVtYWlsPWpwcnVhdGFAZmFwZXJzYS5jb21%2Bfm1vdmlsPS1%2BfnN1YklkPTEyNH5%2BbGlzdElkPTF%2BfnNuYXBJZD01NjM5N35%2BbWRQYXJ0cz0xfn5tZEVtYWlsTUQ1PTcyZDZkNWI0NDRkYWRlYzRjM2ZiZjdhOGEzNGU5NDBmfn5jb25fbWQ1PWRjZDgzOTM3MGEzYmIxMjA2ZGY4NDk4ZjEwMjM3NmYy/userid/72d6d5b444dadec4c3fbf7a8a34e940f"
+style="text-decoration: none; color:#000000;" target="_blank" width="560"><img alt="NUEVO LANZAMIENTO EN PUERTOS" leftmargin="0" marginheight="0" marginwidth="0" offset="0" src="http://static.mdirector.com/files/campanias/10144/1/2/4/CAM/video.jpg" style="margin-bottom:0; margin-top:0; padding-bottom:0; padding-top:0" title="NUEVO LANZAMIENTO EN PUERTOS" topmargin="0" /> </a></td>
+ </tr>
+ <tr>
+ <td height="25">&nbsp;</td>
+ </tr>
+ <tr>
+ <td align="center" data-color="Headline" data-link-color="Headline Link" data-link-style="text-decoration:none;" data-size="Headline" mc:edit="header headline" style="text-decoration: none; color:#003c7e;font-family: 'Century Gothic', Arial, sans-serif; font-size:30px; font-weight: bold;letter-spacing: 4px;"><img alt="NUEVO LANZAMIENTO EN PUERTOS" leftmargin="0" marginheight="0" marginwidth="0" offset="0" src="http://static.mdirector.com/files/campanias/10144/1/2/4/CAM/pie.jpg" style="margin-bottom:0;
+margin-top:0; padding-bottom:0; padding-top:0" title="NUEVO LANZAMIENTO EN PUERTOS" topmargin="0" /></td>
+ </tr>
+ </tbody>
+</table>
+<center>
+<table width="600" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td width="92" rowspan="3" align="center" valign="top"><img src="http://www.tizado.com/html/Firmas-D/nda/images/foto-jessica.jpg" width="74" height="85" alt=""/></td>
+      
+      <td width="162" rowspan="3" valign="top" style="padding-left:5px">
+        <table width="162" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+<td height="10" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>          </tr>
+          <tr>
+            <td><img src="http://www.tizado.com/html/Firmas-D/nda/images/logo_tz_firmas_ptos.jpg" width="149" height="59" alt=""/></td>
+          </tr>
+      </table></td>
+      
+<td height="10" colspan="3" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+    </tr>
+    <tr>
+<td height="54" style="border-left:solid 0.3em rgba(226,9,15,1.00);">&nbsp;</td>
+      <td rowspan="2" align="left" valign="top" style="font-family:arial,helvetica,sans-serif; font-size: 12px; line-height:14px;"><span style="font-size: 1.2em; line-height:14px; font-weight: bold; font-family:arial,helvetica,sans-serif; text-transform:uppercase;">Jessica Janet Scaraville</span> - Asesora de Ventas<br />
+        <span style="font-family:arial,helvetica,sans-serif; font-size: 1.1em; line-height:14px;line-height:14px; font-weight: bold; color:rgba(226,10,18,1.00)">4871 0200 | 15 5450 1968</span> | jessicas@tizado.com<br />
+        Panamericana Ramal Escobar km44<br />
+        <span style="font-family:arial,helvetica,sans-serif; font-size:0.8em; color:rgba(122,122,122,1.00)">CMCPSI N&#176;5604 / Martillero Alejandro Casarero</span></td>
+      <td rowspan="2" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td><a href="http://track.mdrctr.com/track/link/key/10144-124-247-1-42049/signature/e1b2f3aa32783282a493d5559590259c/contactInfo/Y29uSWQ9NDIwNDl%2BfmVtYWlsPWpwcnVhdGFAZmFwZXJzYS5jb21%2Bfm1vdmlsPS1%2BfnN1YklkPTEyNH5%2BbGlzdElkPTF%2BfnNuYXBJZD01NjM5N35%2BbWRQYXJ0cz0xfn5tZEVtYWlsTUQ1PTcyZDZkNWI0NDRkYWRlYzRjM2ZiZjdhOGEzNGU5NDBmfn5jb25fbWQ1PWRjZDgzOTM3MGEzYmIxMjA2ZGY4NDk4ZjEwMjM3NmYy/userid/72d6d5b444dadec4c3fbf7a8a34e940f" data-linkid="link_5900e89716344"><img width="18" height="19" alt="" src="http://www.tizado.com/html/Firmas-D/nda/images/tz-mobile.jpg" /></a></td>
+          </tr>
+          <tr>
+            <td><a href="http://track.mdrctr.com/track/link/key/10144-124-248-1-42049/signature/e1b2f3aa32783282a493d5559590259c/contactInfo/Y29uSWQ9NDIwNDl%2BfmVtYWlsPWpwcnVhdGFAZmFwZXJzYS5jb21%2Bfm1vdmlsPS1%2BfnN1YklkPTEyNH5%2BbGlzdElkPTF%2BfnNuYXBJZD01NjM5N35%2BbWRQYXJ0cz0xfn5tZEVtYWlsTUQ1PTcyZDZkNWI0NDRkYWRlYzRjM2ZiZjdhOGEzNGU5NDBmfn5jb25fbWQ1PWRjZDgzOTM3MGEzYmIxMjA2ZGY4NDk4ZjEwMjM3NmYy/userid/72d6d5b444dadec4c3fbf7a8a34e940f" data-linkid="link_5900e8971645e"><img width="18" height="16" alt="" src="http://www.tizado.com/html/Firmas-D/nda/images/facebook.jpg" /></a></td>
+          </tr>
+          <tr>
+            <td><a href="http://track.mdrctr.com/track/link/key/10144-124-249-1-42049/signature/e1b2f3aa32783282a493d5559590259c/contactInfo/Y29uSWQ9NDIwNDl%2BfmVtYWlsPWpwcnVhdGFAZmFwZXJzYS5jb21%2Bfm1vdmlsPS1%2BfnN1YklkPTEyNH5%2BbGlzdElkPTF%2BfnNuYXBJZD01NjM5N35%2BbWRQYXJ0cz0xfn5tZEVtYWlsTUQ1PTcyZDZkNWI0NDRkYWRlYzRjM2ZiZjdhOGEzNGU5NDBmfn5jb25fbWQ1PWRjZDgzOTM3MGEzYmIxMjA2ZGY4NDk4ZjEwMjM3NmYy/userid/72d6d5b444dadec4c3fbf7a8a34e940f" data-linkid="link_5900e897165fc"><img width="18" height="19" alt="" src="http://www.tizado.com/html/Firmas-D/nda/images/twitter.jpg" /></a></td>
+          </tr>
+        </tbody>
+      </table></td>
+    </tr>
+    <tr>
+      <td width="10">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+    
+    
+    
+    <tr>
+        <td style="max-width:6px;" bgcolor="#ffffff"></td>
+        <td style="max-width:538px;" bgcolor="#ffffff" valign="top" align="justify">
+            <font size="1" color="#8c8c8c" face="Verdana">
+            Para dejar de recibir estas comunicaciones haga clic en
+            <a style="color: #FF8549;" href='http://track.mdrctr.com/track/pre-unsubscribe/category/EMAIL/empId/10144/subId/124/listId/1/conId/42049/signature/e1b2f3aa32783282a493d5559590259c/conEmail/jpruata@fapersa.com/conMovil/-'>baja</a>.
+            </font>
+        </td>
+        <td style="max-width:6px;" bgcolor="#ffffff"></td>
+    </tr>
+    
+    <tr>
+        <td style="max-width:6px;" height="6">
+            <img src="http://static.2013.mdirector.com/images/email/footer/esq_inf_izq.gif" alt="">
+        </td>
+        <td style="max-width:538px;" bgcolor="#ffffff"></td>
+        <td style="max-width:6px;" height="6">
+            <img src="http://static.2013.mdirector.com/images/email/footer/esq_inf_dcha.gif" alt="">
+        </td>
+    </tr>
+</table>
+</center>
+</body>
+</html>
+
+--boundaryTagForAlternative--
+
+--boundaryTagForMixed--

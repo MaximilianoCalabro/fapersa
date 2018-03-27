@@ -1,0 +1,445 @@
+Return-Path: <josedavid@contadoresdavid.com.ar>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id MQiiKkJD/lgUJQAATLP0zA
+	for <jpruata@fapersa.com>; Mon, 24 Apr 2017 15:26:10 -0300
+Return-path: <josedavid@contadoresdavid.com.ar>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Mon, 24 Apr 2017 15:26:10 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:39211 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <josedavid@contadoresdavid.com.ar>)
+	id 1d2igb-00037J-V5
+	for jpruata@fapersa.com; Mon, 24 Apr 2017 15:26:10 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 04EE67F20E
+	for <jpruata@fapersa.com>; Mon, 24 Apr 2017 15:26:10 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id k8hlosU-rndl for <jpruata@fapersa.com>;
+	Mon, 24 Apr 2017 15:26:07 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 7AFF27F233; Mon, 24 Apr 2017 15:26:07 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 894467F20E
+	for <jpruata@fapersa.com>; Mon, 24 Apr 2017 15:26:03 -0300 (ART)
+Received-SPF: pass (contadoresdavid.com.ar: 200.80.43.205 is authorized to use 'josedavid@contadoresdavid.com.ar' in 'mfrom' identity (mechanism 'a' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="josedavid@contadoresdavid.com.ar"; helo=ca5.toservers.com; client-ip=200.80.43.205
+Received: from ca5.toservers.com (ca5.toservers.com [200.80.43.205])
+	by fw.fapersa.com (Postfix) with ESMTPS id 42FB95FDA0
+	for <jpruata@fapersa.com>; Mon, 24 Apr 2017 15:26:02 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=contadoresdavid.com.ar; s=default; h=Content-Type:MIME-Version:Date:Subject
+	:In-Reply-To:References:Cc:To:From:Message-ID:Sender:Reply-To:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:
+	List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+	 bh=k9Wu+FMBTQCMw725oK5ZUq6proWpfUB/kI1OFKvydeU=; b=cKIyvzk+wNlMAcF6BkKrVdy+0
+	tsGXBj5TkI2D7tIZix93b/LvRVtSpE38YIGd8Ru51YyZQOsvG6M37PnbMPVQiPoDcmfScbxDWpcDD
+	2w5y9Er62OoxwJ49ulwkezxSWEekDL8SYz+UcPkYiPsCXs8fUWmXho7o13XFIWfKugb5l0o+20m3A
+	eFYMIQh6mMWTUjN9X4As+TY8weYATRLZYdYFU9gGHNlNy950JWdLnR+zc7tkjt1TW3RWzdtBIN73b
+	VVFkW3h6t2+WyjM4ATIupJ7q4Wzypkwyyz4Eb3UX5bhbDxXVkH1FXZSiLKQRXWwESV4F834sAurGt
+	MCw6q07Aw==;
+Received: from host245.186-125-126.telecom.net.ar ([186.125.126.245]:49383 helo=CuiseNote)
+	by ca5.toservers.com with esmtpsa (TLSv1.2:AES128-SHA256:128)
+	(Exim 4.89)
+	(envelope-from <josedavid@contadoresdavid.com.ar>)
+	id 1d2igL-000lkr-9A; Mon, 24 Apr 2017 15:25:53 -0300
+Message-ID: <CBF8CCCA74694997A37873907EE4693F@CuiseNote>
+From: =?iso-8859-1?Q?Jos=E9_Ignacio_David?= <josedavid@contadoresdavid.com.ar>
+To: "Ricardo Melini" <rmelini@hotmail.com.ar>,
+	"Fernando Baez" <fernandoabaez@hotmail.com>,
+	"RUSSO OVIDIO" <orusso@amiun.com.ar>,
+	"Ricardo Baragiola" <ricardobaragiola@gmail.com>,
+	"Pedro Eduardo BENET" <ingbenet@hotmail.com>,
+	"Fito Benavides" <ribenavides2000@hotmail.com>
+Cc: "Carlos Gorla" <cgorla@amiun.com.ar>,
+	=?iso-8859-1?Q?Mart=EDn_Gal=E1n?= <martin@marathona.com.ar>,
+	"Juan Pablo Ruata" <jpruata@fapersa.com>,
+	"Juan Pablo POLETTI" <jppoletti@arnet.com.ar>,
+	"Yeye Gorla" <yeyegorla@hotmail.com>,
+	"Cesar Maragno" <cmaragno@frsf.utn.edu.ar>
+References: <B6759D83F8A4432CB6A387C072A06F05@CuiseNote>,<95948EA41F834C1B86389A6FC254519A@POSTVENTA> <SN1PR19MB03668AFF544D0493268470118A1F0@SN1PR19MB0366.namprd19.prod.outlook.com>
+In-Reply-To: <SN1PR19MB03668AFF544D0493268470118A1F0@SN1PR19MB0366.namprd19.prod.outlook.com>
+Subject: Re: INSERT SFRC ACTUALIZADO 2016
+Date: Mon, 24 Apr 2017 15:35:44 -0300
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_00BC_01D2BD10.6FED3A30"
+X-Priority: 3
+X-MSMail-Priority: Normal
+Importance: Normal
+X-Mailer: Microsoft Windows Live Mail 14.0.8117.416
+X-MimeOLE: Produced By Microsoft MimeOLE V14.0.8117.416
+X-Antivirus: avast! (VPS 170421-0, 21/04/2017), Outbound message
+X-Antivirus-Status: Clean
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - ca5.toservers.com
+X-AntiAbuse: Original Domain - fapersa.com
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - contadoresdavid.com.ar
+X-Get-Message-Sender-Via: ca5.toservers.com: authenticated_id: josedavid@contadoresdavid.com.ar
+X-Authenticated-Sender: ca5.toservers.com: josedavid@contadoresdavid.com.ar
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+
+Éste es un mensaje de varias partes en formato MIME.
+------=_NextPart_000_00BC_01D2BD10.6FED3A30
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Ricardo, las siguientes adhesiones se pagaron entre marzo y abril por d=E9b=
+ito autom=E1tico (me pidieron que se los sume a la cuota social):
+- Rodriguez Guillermo
+- Rodriguez Juani
+- Rodriguez Mart=EDn
+- Patrizi Enrique
+
+Gracias
+
+Saludos
+
+
+From: Ricardo Melini 
+Sent: Sunday, April 23, 2017 11:05 PM
+To: Jos=E9 Ignacio David ; Fernando Baez ; RUSSO OVIDIO ; Ricardo Baragiola=
+ ; Pedro Eduardo BENET ; Fito Benavides 
+Cc: Carlos Gorla ; Mart=EDn Gal=E1n ; Juan Pablo Ruata ; Juan Pablo POLETTI=
+ ; Yeye Gorla ; Cesar Maragno 
+Subject: INSERT SFRC ACTUALIZADO 2016
+
+
+
+
+
+Para continuar con la parte final de la cobranza. 
+
+
+Saludos
+
+
+
+
+---------------------------------------------------------------------------=
+-----
+
+De: RUSSO OVIDIO <orusso@amiun.com.ar>
+Enviado: lunes, 20 de marzo de 2017 04:01 p.m.
+Para: Jos=E9 Ignacio David; Fernando Baez
+Cc: Carlos Gorla; RICARDO MELINI; Mart=EDn Gal=E1n
+Asunto: Re: Aviso de pago generado - Fecha: 20.03.2017 
+
+otro que pagaba por transferencia era mc donald. $ 5600. Pag=F3?
+
+-----Mensaje original----- 
+From: Jos=E9 Ignacio David
+Sent: Monday, March 20, 2017 12:27 PM
+To: Fernando Baez
+Cc: Ovidio Russo ; Carlos Gorla ; RICARDO MELINI ; Mart=EDn Gal=E1n
+Subject: Fw: Aviso de pago generado - Fecha: 20.03.2017
+
+Hola a  todos,
+Me lleg=F3 este mail del casino. Son $ 12.000 que pagaron. Supongo que son =
+del
+insert, por el monto, pero no estoy seguro.
+
+Saludos
+
+--------------------------------------------------
+From: <pagos@casinostafe.com.ar>
+Sent: Monday, March 20, 2017 11:04 AM
+To: <josedavid@contadoresdavid.com.ar>
+Subject: Aviso de pago generado - Fecha: 20.03.2017
+
+>
+
+---
+El software de antivirus Avast ha analizado este correo electr=F3nico en bu=
+sca 
+de virus.
+http://www.avast.com Avast | Download Free Antivirus for PC, Mac & Android
+      www.avast.com
+      Protect your devices with the best free antivirus on the market. Down=
+load Avast antivirus and anti-spyware protection for your PC, Mac and Andro=
+id. 
+
+
+
+
+---
+El software de antivirus Avast ha analizado este correo electr=F3nico en bu=
+sca de virus.
+https://www.avast.com/antivirus  Avast | Download Free Antivirus for PC, Ma=
+c & Android
+      www.avast.com
+      Protect your devices with the best free antivirus on the market. Down=
+load Avast antivirus and anti-spyware protection for your PC, Mac and Andro=
+id. 
+
+
+
+
+
+---
+El software de antivirus Avast ha analizado este correo electr=F3nico en bu=
+sca de virus.
+http://www.avast.com
+
+------=_NextPart_000_00BC_01D2BD10.6FED3A30
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content=3Dtext/html;charset=3Diso-8859-1 http-equiv=3DContent-Type>
+<STYLE style=3D"DISPLAY: none" type=3Dtext/css><!-- P {margin-top:0;margin-=
+bottom:0;} --></STYLE>
+
+<META name=3DGENERATOR content=3D"MSHTML 10.00.9200.17116"></HEAD>
+<BODY id=3DMailContainerBody 
+style=3D"PADDING-TOP: 15px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px" dir=3D=
+ltr 
+leftMargin=3D0 topMargin=3D0 CanvasTabStop=3D"true" name=3D"Compose message=
+ area">
+<DIV><FONT color=3D#000080 face=3DCalibri>Ricardo,&nbsp;</FONT><FONT color=
+=3D#000080 
+face=3DCalibri>las siguientes adhesiones se pagaron entre marzo y abril por=
+ d=E9bito 
+autom=E1tico (me pidieron que se los sume a la cuota social):</FONT></DIV>
+<DIV><FONT color=3D#000080 face=3DCalibri>- Rodriguez Guillermo</FONT></DIV=
+>
+<DIV><FONT color=3D#000080 face=3DCalibri>- Rodriguez Juani</FONT></DIV>
+<DIV><FONT color=3D#000080 face=3DCalibri>- Rodriguez Mart=EDn</FONT></DIV>=
+
+<DIV><FONT color=3D#000080 face=3DCalibri>- Patrizi Enrique</FONT></DIV>
+<DIV><FONT color=3D#000080 face=3DCalibri></FONT>&nbsp;</DIV>
+<DIV><FONT color=3D#000080 face=3DCalibri>Gracias</FONT></DIV>
+<DIV><FONT color=3D#000080 face=3DCalibri></FONT>&nbsp;</DIV>
+<DIV><FONT color=3D#000080 face=3DCalibri>Saludos</FONT></DIV>
+<DIV style=3D"FONT: 10pt Tahoma">
+<DIV><BR></DIV>
+<DIV style=3D"BACKGROUND: #f5f5f5">
+<DIV style=3D"font-color: black"><B>From:</B> <A 
+title=3D"mailto:rmelini@hotmail.com.ar&#10;CTRL + clic para seguir el v=EDn=
+culo" 
+href=3D"mailto:rmelini@hotmail.com.ar">Ricardo Melini</A> </DIV>
+<DIV><B>Sent:</B> Sunday, April 23, 2017 11:05 PM</DIV>
+<DIV><B>To:</B> <A title=3Djosedavid@contadoresdavid.com.ar 
+href=3D"mailto:josedavid@contadoresdavid.com.ar">Jos=E9 Ignacio David</A> ;=
+ <A 
+title=3Dfernandoabaez@hotmail.com href=3D"mailto:fernandoabaez@hotmail.com"=
+>Fernando 
+Baez</A> ; <A title=3Dorusso@amiun.com.ar href=3D"mailto:orusso@amiun.com.a=
+r">RUSSO 
+OVIDIO</A> ; <A title=3Dricardobaragiola@gmail.com 
+href=3D"mailto:ricardobaragiola@gmail.com">Ricardo Baragiola</A> ; <A 
+title=3D"mailto:ingbenet@hotmail.com&#10;CTRL + clic para seguir el v=EDncu=
+lo" 
+href=3D"mailto:ingbenet@hotmail.com">Pedro Eduardo BENET</A> ; <A 
+title=3Dribenavides2000@hotmail.com href=3D"mailto:ribenavides2000@hotmail.=
+com">Fito 
+Benavides</A> </DIV>
+<DIV><B>Cc:</B> <A title=3Dcgorla@amiun.com.ar 
+href=3D"mailto:cgorla@amiun.com.ar">Carlos Gorla</A> ; <A 
+title=3D"mailto:martin@marathona.com.ar&#10;CTRL + clic para seguir el v=ED=
+nculo" 
+href=3D"mailto:martin@marathona.com.ar">Mart=EDn Gal=E1n</A> ; <A 
+title=3Djpruata@fapersa.com href=3D"mailto:jpruata@fapersa.com">Juan Pablo =
+Ruata</A> 
+; <A title=3Djppoletti@arnet.com.ar href=3D"mailto:jppoletti@arnet.com.ar">=
+Juan 
+Pablo POLETTI</A> ; <A title=3Dyeyegorla@hotmail.com 
+href=3D"mailto:yeyegorla@hotmail.com">Yeye Gorla</A> ; <A 
+title=3D"mailto:cmaragno@frsf.utn.edu.ar&#10;CTRL + clic para seguir el v=
+=EDnculo" 
+href=3D"mailto:cmaragno@frsf.utn.edu.ar">Cesar Maragno</A> </DIV>
+<DIV><B>Subject:</B> INSERT SFRC ACTUALIZADO 2016</DIV></DIV></DIV>
+<DIV><BR></DIV>
+<DIV id=3Ddivtagdefaultwrapper 
+style=3D"FONT-SIZE: 12pt; FONT-FAMILY: Calibri,Arial,Helvetica,sans-serif; =
+COLOR: #000000" 
+dir=3Dltr>
+<P><BR></P>Para continuar con la parte final de la cobranza. 
+<DIV><BR></DIV>
+<DIV>Saludos</DIV>
+<DIV><BR><BR>
+<DIV style=3D"COLOR: rgb(0,0,0)">
+<DIV>
+<HR tabIndex=3D-1 style=3D"DISPLAY: inline-block; WIDTH: 98%">
+
+<DIV id=3Dx_divRplyFwdMsg dir=3Dltr><FONT style=3D"FONT-SIZE: 11pt" color=
+=3D#000000 
+face=3D"Calibri, sans-serif"><B>De:</B> RUSSO OVIDIO &lt;<A 
+href=3D"mailto:orusso@amiun.com.ar">orusso@amiun.com.ar</A>&gt;<BR><B>Envia=
+do:</B> 
+lunes, 20 de marzo de 2017 04:01 p.m.<BR><B>Para:</B> Jos=E9 Ignacio David;=
+ 
+Fernando Baez<BR><B>Cc:</B> Carlos Gorla; RICARDO MELINI; Mart=EDn 
+Gal=E1n<BR><B>Asunto:</B> Re: Aviso de pago generado - Fecha: 20.03.2017</F=
+ONT> 
+<DIV>&nbsp;</DIV></DIV></DIV><FONT size=3D2><SPAN style=3D"FONT-SIZE: 10pt"=
+>
+<DIV class=3DPlainText>otro que pagaba por transferencia era mc donald. $ 5=
+600. 
+Pag=F3?<BR><BR>-----Mensaje original----- <BR>From: Jos=E9 Ignacio David<BR=
+>Sent: 
+Monday, March 20, 2017 12:27 PM<BR>To: Fernando Baez<BR>Cc: Ovidio Russo ; =
+
+Carlos Gorla ; RICARDO MELINI ; Mart=EDn Gal=E1n<BR>Subject: Fw: Aviso de p=
+ago 
+generado - Fecha: 20.03.2017<BR><BR>Hola a&nbsp; todos,<BR>Me lleg=F3 este =
+mail 
+del casino. Son $ 12.000 que pagaron. Supongo que son del<BR>insert, por el=
+ 
+monto, pero no estoy 
+seguro.<BR><BR>Saludos<BR><BR>---------------------------------------------=
+-----<BR>From: 
+&lt;<A 
+href=3D"mailto:pagos@casinostafe.com.ar">pagos@casinostafe.com.ar</A>&gt;<B=
+R>Sent: 
+Monday, March 20, 2017 11:04 AM<BR>To: &lt;<A 
+href=3D"mailto:josedavid@contadoresdavid.com.ar">josedavid@contadoresdavid.=
+com.ar</A>&gt;<BR>Subject: 
+Aviso de pago generado - Fecha: 20.03.2017<BR><BR>&gt;<BR><BR>---<BR>El sof=
+tware 
+de antivirus Avast ha analizado este correo electr=F3nico en busca <BR>de 
+virus.<BR><A id=3DLPlnk114061 href=3D"http://www.avast.com" 
+previewremoved=3D"true">http://www.avast.com</A> 
+<DIV id=3DLPBorder_GT_14929992546780.16147145793247009 
+style=3D"OVERFLOW: auto; MARGIN-BOTTOM: 20px; WIDTH: 100%; TEXT-INDENT: 0px=
+">
+<TABLE role=3Dpresentation id=3DLPContainer_14929992546660.2648396356668172=
+3 
+style=3D"OVERFLOW: auto; BORDER-TOP: rgb(200,200,200) 1px dotted; BORDER-BO=
+TTOM: rgb(200,200,200) 1px dotted; POSITION: relative; PADDING-BOTTOM: 20px=
+; PADDING-TOP: 20px; MARGIN-TOP: 20px; WIDTH: 90%; BACKGROUND-COLOR: rgb(25=
+5,255,255)" 
+cellSpacing=3D0>
+  <TBODY>
+  <TR style=3D"BORDER-SPACING: 0px" vAlign=3Dtop>
+    <TD id=3DTextCell_14929992546730.3627494906401796 
+    style=3D"VERTICAL-ALIGN: top; POSITION: relative; PADDING-BOTTOM: 0px; =
+PADDING-TOP: 0px; PADDING-LEFT: 0px; DISPLAY: table-cell; PADDING-RIGHT: 0p=
+x" 
+    colSpan=3D2>
+      <DIV id=3DLPRemovePreviewContainer_14929992546730.5215473773278594></=
+DIV>
+      <DIV id=3DLPTitle_14929992546740.1405307011814727 
+      style=3D"FONT-SIZE: 21px; FONT-FAMILY: wf_segoe-ui_light, 'Segoe UI L=
+ight', 'Segoe WP Light', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif;=
+ FONT-WEIGHT: normal; COLOR: rgb(0,120,215); LINE-HEIGHT: 21px; TOP: 0px"><=
+A 
+      id=3DLPUrlAnchor_14929992546750.5474806802845134 
+      style=3D"TEXT-DECORATION: none" href=3D"http://www.avast.com/" 
+      target=3D_blank>Avast | Download Free Antivirus for PC, Mac &amp; 
+      Android</A></DIV>
+      <DIV id=3DLPMetadata_14929992546750.43459044848822725 
+      style=3D"FONT-SIZE: 14px; FONT-FAMILY: wf_segoe-ui_normal, 'Segoe UI'=
+, 'Segoe WP', Tahoma, Arial, sans-serif; FONT-WEIGHT: normal; COLOR: rgb(10=
+2,102,102); MARGIN: 10px 0px 16px; LINE-HEIGHT: 14px"><A 
+      href=3D"http://www.avast.com">www.avast.com</A></DIV>
+      <DIV id=3DLPDescription_14929992546760.8427759342980703 
+      style=3D"OVERFLOW: hidden; FONT-SIZE: 14px; FONT-FAMILY: wf_segoe-ui_=
+normal, 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; FONT-WEIGHT: nor=
+mal; COLOR: rgb(102,102,102); DISPLAY: block; LINE-HEIGHT: 20px; MAX-HEIGHT=
+: 100px">Protect 
+      your devices with the best free antivirus on the market. Download Ava=
+st 
+      antivirus and anti-spyware protection for your PC, Mac and 
+    Android.</DIV></TD></TR></TBODY></TABLE></DIV><BR><BR><BR><BR>---<BR>El=
+ software 
+de antivirus Avast ha analizado este correo electr=F3nico en busca de virus=
+=2E<BR><A 
+id=3DLPlnk970586 href=3D"https://www.avast.com/antivirus" 
+previewremoved=3D"true">https://www.avast.com/antivirus</A> 
+<DIV id=3DLPBorder_GT_14929992563580.4857166002333446 
+style=3D"OVERFLOW: auto; MARGIN-BOTTOM: 20px; WIDTH: 100%; TEXT-INDENT: 0px=
+">
+<TABLE role=3Dpresentation id=3DLPContainer_14929992563520.0881819473653200=
+3 
+style=3D"OVERFLOW: auto; BORDER-TOP: rgb(200,200,200) 1px dotted; BORDER-BO=
+TTOM: rgb(200,200,200) 1px dotted; POSITION: relative; PADDING-BOTTOM: 20px=
+; PADDING-TOP: 20px; MARGIN-TOP: 20px; WIDTH: 90%; BACKGROUND-COLOR: rgb(25=
+5,255,255)" 
+cellSpacing=3D0>
+  <TBODY>
+  <TR style=3D"BORDER-SPACING: 0px" vAlign=3Dtop>
+    <TD id=3DImageCell_14929992563530.1808264576061851 
+    style=3D"POSITION: relative; DISPLAY: table-cell; PADDING-RIGHT: 20px; =
+WIDTH: 250px">
+      <DIV id=3DLPImageContainer_14929992563540.6850486602216679 
+      style=3D"HEIGHT: 186px; POSITION: relative; MARGIN: auto; DISPLAY: ta=
+ble; WIDTH: 186px; BACKGROUND-COLOR: rgb(255,255,255)"><A 
+      id=3DLPImageAnchor_14929992563540.06233472209864721 
+      style=3D"TEXT-ALIGN: center; DISPLAY: table-cell" 
+      href=3D"https://www.avast.com/antivirus" target=3D_blank><IMG 
+      aria-label=3D"Imagen de vista previa con v=EDnculo seleccionado. Puls=
+e dos veces para abrir el v=EDnculo." 
+      id=3DLPThumbnailImageID_14929992563540.8952993706595322 
+      style=3D"BORDER-LEFT-WIDTH: 0px; MAX-WIDTH: 250px; HEIGHT: 186px; BOR=
+DER-RIGHT-WIDTH: 0px; VERTICAL-ALIGN: bottom; BORDER-BOTTOM-WIDTH: 0px; DIS=
+PLAY: inline-block; BORDER-TOP-WIDTH: 0px; MAX-HEIGHT: 250px; WIDTH: 186px"=
+ 
+      src=3D"https://static2.avast.com/11/web/min/i/mkt/share/avast-logo.pn=
+g" 
+      width=3D186 height=3D186></A></DIV></TD>
+    <TD id=3DTextCell_14929992563550.676051240347995 
+    style=3D"VERTICAL-ALIGN: top; POSITION: relative; PADDING-BOTTOM: 0px; =
+PADDING-TOP: 0px; PADDING-LEFT: 0px; DISPLAY: table-cell; PADDING-RIGHT: 0p=
+x" 
+    colSpan=3D2>
+      <DIV id=3DLPRemovePreviewContainer_14929992563550.6181829895725086></=
+DIV>
+      <DIV id=3DLPTitle_14929992563550.9879118444543089 
+      style=3D"FONT-SIZE: 21px; FONT-FAMILY: wf_segoe-ui_light, 'Segoe UI L=
+ight', 'Segoe WP Light', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif;=
+ FONT-WEIGHT: normal; COLOR: rgb(0,120,215); LINE-HEIGHT: 21px; TOP: 0px"><=
+A 
+      id=3DLPUrlAnchor_14929992563560.16381683843856498 
+      style=3D"TEXT-DECORATION: none" href=3D"https://www.avast.com/antivir=
+us" 
+      target=3D_blank>Avast | Download Free Antivirus for PC, Mac &amp; 
+      Android</A></DIV>
+      <DIV id=3DLPMetadata_14929992563560.2626590835598479 
+      style=3D"FONT-SIZE: 14px; FONT-FAMILY: wf_segoe-ui_normal, 'Segoe UI'=
+, 'Segoe WP', Tahoma, Arial, sans-serif; FONT-WEIGHT: normal; COLOR: rgb(10=
+2,102,102); MARGIN: 10px 0px 16px; LINE-HEIGHT: 14px">www.avast.com</DIV>
+      <DIV id=3DLPDescription_14929992563570.12902855187191875 
+      style=3D"OVERFLOW: hidden; FONT-SIZE: 14px; FONT-FAMILY: wf_segoe-ui_=
+normal, 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; FONT-WEIGHT: nor=
+mal; COLOR: rgb(102,102,102); DISPLAY: block; LINE-HEIGHT: 20px; MAX-HEIGHT=
+: 100px">Protect 
+      your devices with the best free antivirus on the market. Download Ava=
+st 
+      antivirus and anti-spyware protection for your PC, Mac and 
+    Android.</DIV></TD></TR></TBODY></TABLE></DIV><BR><BR><BR></DIV></SPAN>=
+</FONT></DIV></DIV></DIV>
+<br /><br />
+<hr style=3D'border:none; color:#909090; background-color:#B0B0B0; height: =
+1px; width: 99%;' />
+<table style=3D'border-collapse:collapse;border:none;'>
+	<tr>
+		<td style=3D'border:none;padding:0px 15px 0px 8px'>
+			<a href=3D"http://www.avast.com/">
+				<img border=3D0 src=3D"http://static.avast.com/emails/avast-mail-stamp.=
+png" alt=3D"Avast logo" />
+			</a>
+		</td>
+		<td>
+			<p style=3D'color:#3d4d5a; font-family:"Calibri","Verdana","Arial","Helv=
+etica"; font-size:12pt;'>
+				El software de antivirus Avast ha analizado este correo electr=F3nico e=
+n busca de virus.
+				<br><a href=3D"http://www.avast.com/">www.avast.com</a>
+			</p>
+		</td>
+	</tr>
+</table>
+<br />
+</BODY></HTML>
+
+------=_NextPart_000_00BC_01D2BD10.6FED3A30--
+

@@ -1,0 +1,218 @@
+Return-Path: <bounces+2699078-f437-jpruata=fapersa.com@sendgrid.net>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id udPMEMvZIlm9YAAATLP0zA
+	for <jpruata@fapersa.com>; Mon, 22 May 2017 09:30:03 -0300
+Return-path: <bounces+2699078-f437-jpruata=fapersa.com@sendgrid.net>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Mon, 22 May 2017 09:30:03 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:44522 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <bounces+2699078-f437-jpruata=fapersa.com@sendgrid.net>)
+	id 1dCmTJ-0000TD-4l
+	for jpruata@fapersa.com; Mon, 22 May 2017 09:30:02 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 949207F211
+	for <jpruata@fapersa.com>; Mon, 22 May 2017 09:30:00 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 4HmG9SlIe45e for <jpruata@fapersa.com>;
+	Mon, 22 May 2017 09:30:00 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 145AB7F232; Mon, 22 May 2017 09:30:00 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id AC09E7F211
+	for <jpruata@fapersa.com>; Mon, 22 May 2017 09:29:58 -0300 (ART)
+Received-SPF: pass (sendgrid.net: 167.89.100.24 is authorized to use 'bounces+2699078-f437-jpruata=fapersa.com@sendgrid.net' in 'mfrom' identity (mechanism 'ip4:167.89.0.0/17' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="bounces+2699078-f437-jpruata=fapersa.com@sendgrid.net"; helo=o1.24le.shared.sendgrid.net; client-ip=167.89.100.24
+Received: from o1.24le.shared.sendgrid.net (o1.24le.shared.sendgrid.net [167.89.100.24])
+	by fw.fapersa.com (Postfix) with ESMTPS id 678C15FE81
+	for <jpruata@fapersa.com>; Mon, 22 May 2017 09:29:56 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=sendgrid.net; 
+	h=from:to:subject:mime-version:content-type:content-transfer-encoding; 
+	s=smtpapi; bh=cW5/rVrBv4Y6SRX1g0JS1GZayhI=; b=BdFQ8YlUyqnlCgy7xQ
+	Ysxhe+tCJWLibt7/LyoiWk8JBfy10Wayym+GzI/SvWlHOq1h259d4lYFQOE0BsJT
+	9ZE2MoE5LC30mmUhVDFQmGq3zjYBp5+2MdDSSxuhUN5Uz2NA9qLyuIN8ZOEoZVjB
+	iSkGvPwg0XhRvO4g15aqBAUi4=
+Received: by filter0368p1las1.sendgrid.net with SMTP id filter0368p1las1-27206-5922D9C1-18
+        2017-05-22 12:29:53.751112194 +0000 UTC
+Received: from bd.uar.com.ar (unknown [23.101.185.75])
+	by ismtpd0003p1sjc2.sendgrid.net (SG) with ESMTP id 8cDIrAZLQ-CRtnC3nFKLQQ
+	Mon, 22 May 2017 12:29:53.662 +0000 (UTC)
+From: "noreply UAR - ssl" <noreply@uar.com.ar>
+To:  <gcristaldo@enress.gov.ar>,  <rodrigo.o.reyes@gmail.com>,  <dario.schmidt.ar@gmail.com>,  <ggalassi@cablevision.com.ar>,  <marianocordini@hotmail.com>,  <jpruata@fapersa.com>,  <ivanregenhardt@gmail.com>, Disciplina <secretaria1@usr.org.ar>,  <oscarbaruffato@gmail.com>,  <jorgei_gonazalez@yahoo.com.ar>,  <crece@rectorado.unl.edu.ar>,  <martinreferee@hotmail.com>,  <est.donraul@coopmail.com.ar>,  <alvarovelezcasas@gmail.com>, Delia <secretaria@usr.org.ar>, Daniel <danielgallardo2004@yahoo.com.ar>, Daniel <uer.gerencia@gmail.com>, mario <marioromero955@yahoo.com.ar>, Carlos Alberto <chatociaccio@hotmail.com.ar>, Ernesto Andres <ezicart@gmail.com>, guillermo <guillemorello@hotmail.com>, Eduardo martin <Chinqua_@hotmail.com>, Gabriel <brauliocristaldo@hotmail.com>, fabian <arq.dis@hotmail.com>, Walter Eduardo <walterhrycuk@hotmail.comwalter>, alejandro pedro <aleneo33garay@gmail.com>, Cesar <adriantoplikar@yahoo.com.ar>, Diego Javier <diegodelpazo@hotmail.com>, maximiliano <
+ maxigallardo1@hotmail.com>, FERNANDO <ferlauria@hotmail.com>, Mariano <marianoefernandez@hotmail.com>, Carlos alejandro <carlos.alejandro.medina@hotmail.com>, Horacio <mhoraciomartinez@gmail.com>, Dario Carlos <botta170@hotmail.com>, Gustavo <gustavovilla2083@gmail.com>, Javier Ignacio <javiersfe@hotmail.com>, Cristina Araceli <uer.admi@gmail.com>, =?UTF-8?B?RmFiacOhbg==?= <fmprats@yahoo.com.ar>, Esteban =?UTF-8?B?TWF0w61hcw==?= <estebangdf@gmail.com>, =?UTF-8?B?Sm9zw6kgTWFudWVs?= <jmruiz@insumas.com.ar>, Leonardo <leonardo.delrio@gmail.com>, =?UTF-8?B?SGVybsOhbiBKb3PDqSA=?= <hjbruno@gmail.com>, guillermo horacio <guilleco05@hotmail.com>, Chirola <scrumgarmendia@gmail.com>, Diego Augusto <diego@oxigenospa.com>, Mariano <sfrc.secretaria@gmail.com>, =?UTF-8?B?QW5kcsOpcw==?= <asorisio@gmail.com>, Jorge Ignacio <jorgeignacio_gonzalez@yahoo.com.ar>, Gonzalez <fede1gonzalez@yahoo.com.ar>, Exequiel <Exeadro@yahoo.com.ar>, Emilio <emiliotraverso@hotmail.com>, Fernando Diego <fdefeo@
+ hotmail.com>, Luciano <l_molinas@hotmail.com>, Martin Nicolas <mn.galiano@hotmail.com>, Alfredo <alfredofun@colegioinmaculada.edu.ar>, Administrador <sebastian.guzman@paians.com>
+X-Mailer: CakePHP Email
+Date: Mon, 22 May 2017 09:29:52 -0300
+Message-ID: <5922d9c0522040da8bde017401ce7e74@bd.uar.com.ar>
+Subject: Partido 3079 cerrado
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="af382149f4d0405317a6c0ce15f2d79c"
+Content-Transfer-Encoding: 8bit
+X-SG-EID: VfNqVyrjLjKdIIXcj4qJiEnEUuu5wqrVHRmdo0fkVZRfPiqUj7UMbwmX0VwQFGSphGaKg1fvGS5Ror
+ HZkk9AeRc20ocOO7wel5bhuxMGz8X9RRV8S3R4kE7DnuWwOMt0r6TMMzIhx73mkLuCNkVIzuGjmnaT
+ MkwoTP2xMb7vFvfg4BSac+88UzyKkbFjIHACybcEsasjGwBXS/+ATgaDWqzB/Ob1iO0jqzS0lh1NTA
+ 8=
+
+--af382149f4d0405317a6c0ce15f2d79c
+Content-Type: multipart/alternative; boundary="alt-af382149f4d0405317a6c0ce15f2d79c"
+
+--alt-af382149f4d0405317a6c0ce15f2d79c
+Content-Type: text/plain; charset=UTF-8
+content-transfer-encoding: quoted-printable
+
+  =0D
+=0D
+Partido 3079 cerrado=0D
+=0D
+Se informa que se ha cerrrado el partido 3079.=0D
+=0D
+  Torneo: "Dos Orillas" Juvenil 2017 - M15 / M16  Instancia: 2=C2=AA Fecha =
+ Local: Santafesina SANTA FE R.C.   Visitante: Entrerriana CLUB TILCARA =0D
+Para ver el detalle haga <a href=3D"https://u2699078.ct.sendgrid.net/wf/cli=
+ck?upn=3Dh9eXz29JjMJYP0Adc5I8Y1ooMzLvmquNQiWMV4uuVtB7WkiJ2ZFe3Sol3mchtmp-2B=
+_-2BhQsPu9Q2VEUqe1WPYN4pT-2BIvMtng7VbwqiKNwfIv6LntbdTZ4szEWleZbVTqzLXGQrBRJ=
+eSzSpmnAvcfAbvvciZpLtcODLR4xwFJjfOP5-2BZBRWlZ1M0DbTwhLea0WTvmAtDWemDC9joMzE=
+U8ZMIaWC1eM7iWiUBTI4T31fNOS3NYvOe-2BjH7ComT8Db3V7aCVruEg1L-2BApDpVqCOcIjoFO=
+YV8RBKCrs2VtQvicZTqac-3D">click aqu=C3=AD</a>.=0D
+This email was sent using the CakePHP Framework, https://u2699078.ct.sendgr=
+id.net/wf/click?upn=3D9mmcQHSOvLeiJqxBSawrH6wmpQX7RbYgjRKg5w4CSi0-3D_-2BhQs=
+Pu9Q2VEUqe1WPYN4pT-2BIvMtng7VbwqiKNwfIv6LntbdTZ4szEWleZbVTqzLXgeoHFzKsp8UJF=
+d3KWJTeAVAZYgFZppeCJ3omIaaFkNpSeouX3usJa4jEmS8Qk4WAkBUs15gHP2eauh-2BIUTxd3r=
+co0-2FEGYoRuBnYUDmlArfVVvDwsCpV7RTO3gKr8oA-2Fss-2FLcprfFVzWvelGmPnIIPnnUP-2=
+BHklkX9-2BUM-2F4mqoN40-3D
+
+--alt-af382149f4d0405317a6c0ce15f2d79c
+Content-Type: text/html; charset=UTF-8
+content-transfer-encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html style=3D"height: 100%;font-size: 10px;-webkit-tap-highlight-color: rg=
+ba(0,0,0,0);font-family: sans-serif;display: block;">=0D
+<head>=0D
+	<meta charset=3D"utf-8">=0D
+	<meta content=3D"IE=3Dedge">=0D
+	<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1=
+">=0D
+	<title>Uni=C3=B3n Argentina de Rugby</title>=0D
+=0D
+	<link href=3D"https://fonts.googleapis.com/css?family=3DRoboto:400,300,100=
+,500,700,900" rel=3D"stylesheet" type=3D"text/css">=0D
+=0D
+</head>=0D
+=0D
+<body style=3D"background-color: white;font-family: 'Roboto',Helvetica Neue=
+,Helvetica,Arial,sans-serif;font-size: 13px;line-height: 1.5384616;color: #=
+333;margin: 0 !important;display: block; max-width: 1200px;">=0D
+=0D
+	<div class=3D"page-header" style=3D"display: block;background-image: url(h=
+ttp://wap06-html.azurewebsites.net/mail/fondoheadmail.jpg);background-size:=
+ cover; background-position: top left;background-repeat: no-repeat;backgrou=
+nd-size: cover;margin: 0;padding: 0;border-bottom-width: 0;border-bottom: 1=
+px solid #ddd;">=0D
+		<div class=3D"page-header-content" style=3D"display: block;position: rela=
+tive;background-color: inherit;padding: 0 20px;">=0D
+			<div class=3D"page-title" style=3D"padding: 10px 36px 10px 0;display: bl=
+ock;position: relative;">=0D
+				<div class=3D"logo-mail" style=3D"display: block;width: auto;height: au=
+to;text-align: left;">=0D
+					<img class=3D"logo-mail" src=3D"http://wap06-html.azurewebsites.net/ma=
+il/logomail.png" style=3D"vertical-align: middle;border: 0;width: auto;heig=
+ht: 55px;text-align: left;">=0D
+				</div>=0D
+			</div>=0D
+		</div>=0D
+	</div>=0D
+=0D
+	<div class=3D"page-container" style=3D"padding-top: 0;position: relative;p=
+adding: 20px 20px;padding-bottom: 40px;">=0D
+		<div class=3D"page-content">=0D
+			<div class=3D"content-wrapper" style=3D"width: 100%;">=0D
+          =0D
+<h3  style=3D"display: block;letter-spacing: -0.015em;font-family: inherit;=
+line-height: 1.5;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webk=
+it-margin-start: 0px;-webkit-margin-end: 0px;margin: 2rem !important;font-s=
+ize: 25px;font-weight: 900;color: #404040;text-align: center;">Partido 3079=
+ cerrado</h3>=0D
+<p  style=3D"display: block;-webkit-margin-before: 1em;-webkit-margin-after=
+: 1em;-webkit-margin-start: 0px;-webkit-margin-end: 0px;margin: 0 2rem 2rem=
+ 2rem;font-size: 15px;text-align: center;color: #404040;">=0D
+  Se informa que se ha cerrrado el partido <strong>3079</strong><br><br>=0D
+  Torneo: <strong>"Dos Orillas" Juvenil 2017 - M15 / M16</strong><br>=0D
+  Instancia: <strong>2=C2=AA Fecha</strong><br>=0D
+  Local: <strong>Santafesina SANTA FE R.C. </strong><br>=0D
+  Visitante: <strong>Entrerriana CLUB TILCARA </strong><br>=0D
+  <br>=0D
+  Para ver el detalle haga click en el siguiente bot=C3=B3n=0D
+</p>=0D
+<div  style=3D"display: block;text-align: center;">=0D
+  <a href=3D"https://u2699078.ct.sendgrid.net/wf/click?upn=3Dh9eXz29JjMJYP0=
+Adc5I8Y1ooMzLvmquNQiWMV4uuVtB7WkiJ2ZFe3Sol3mchtmp-2B_-2BhQsPu9Q2VEUqe1WPYN4=
+pT-2BIvMtng7VbwqiKNwfIv6LntbdTZ4szEWleZbVTqzLXGCKM-2BPFmuEJhzbXcbuFsma2FHCp=
+ZarSKX-2B2yqy3-2B905JUHtwUEZWfKQWMZTwmGZhEr3Q8umnDrPJWZqSJDcVivwD3OD5e-2FG6=
+zwQB0LZrEzsSkFEtaix1q-2F5E-2FpeAEgq7VNSlmCycWMj-2Bj7PbRl6gSyqU3EcqoVlEr9PWx=
+VnJLS4-3D" target=3D"_blank"  style=3D"text-decoration:none;color:#ffffff;"=
+>=0D
+    <button type=3D"button"  style=3D"outline: 0;font-family: inherit;line-=
+height: inherit;-webkit-appearance: button;cursor: pointer;text-transform: =
+none;overflow: visible;font: inherit;align-items: flex-start;text-rendering=
+: auto;letter-spacing: normal;word-spacing: normal;text-indent: 0px;text-sh=
+adow: none;display: inline-block;-webkit-writing-mode: horizontal-tb;text-a=
+lign: center;margin: 0;border: transparent;border-radius: 5px;padding: 5px =
+20px;font-size: 16px;color: #ffffff;background-color: #2196f3;margin-top: 0=
+;">=0D
+      Ver partido=0D
+    </button>=0D
+  </a>=0D
+</div>=0D
+<p>=0D
+  Link para ver partido: <a href=3D"https://u2699078.ct.sendgrid.net/wf/cli=
+ck?upn=3Dh9eXz29JjMJYP0Adc5I8Y1ooMzLvmquNQiWMV4uuVtB7WkiJ2ZFe3Sol3mchtmp-2B=
+_-2BhQsPu9Q2VEUqe1WPYN4pT-2BIvMtng7VbwqiKNwfIv6LntbdTZ4szEWleZbVTqzLX1fg3cU=
+kh8EaS5Hphvwx4CzP1TELeDnvcyLk3JwTNeN3DgQI2wH4BPTORQLDz6uzKLA6wzvVUYGghyQo6k=
+K1chXavAeQ2s8h3089VQxBd436dsKCv2qx3ubnhaxuB6pvz6vFO7AG-2BWlyKIR9HkrKDr9mFuf=
+aLPAGiDJMXWC8V1rw-3D" target=3D"_blank">https://bd.uar.com.ar/Matches/view/=
+3079</a>=0D
+</p>			</div>=0D
+		</div>=0D
+	</div>=0D
+=0D
+	<div class=3D"page-footer" style=3D"display: block;height: 70px;background=
+-color: #0053a1;background-size: cover;margin-bottom: 0rem !important;">=0D
+		<div class=3D"footerline" style=3D"display: block;height: 5px;width: 100%=
+;background-image: url(http://wap06-html.azurewebsites.net/mail/lineafooter=
+mail.jpg);background-position: top left;background-repeat: no-repeat;backgr=
+ound-size: cover;"></div>=0D
+		<p class=3D"copyright-mail" style=3D"display: block;-webkit-margin-before=
+: 1em;-webkit-margin-after: 1em;-webkit-margin-start: 0px;-webkit-margin-en=
+d: 0px;margin: 20px 5px 20px 5px;color: white;">&copy; 2017. <a href=3D"htt=
+ps://u2699078.ct.sendgrid.net/wf/click?upn=3DeIBEPTb1YhJ2QSXBlo-2BCXd8SZKaI=
+EwzTCmD0xXv8eO4-3D_-2BhQsPu9Q2VEUqe1WPYN4pT-2BIvMtng7VbwqiKNwfIv6LntbdTZ4sz=
+EWleZbVTqzLXU6MoP3gJNyXuOu98YB-2F9laE2Le0PGfZW4R7PMlzVppnr0JnWMnHXGmkuwwoZw=
+nP68Zb5g-2Bz2klbBG-2Bcbyk4bc020e6eU25GWj6GTYxhYrTb46jPORmIRZ1IxzqrwIR3q1Wa7=
+kN2DYs81E1IiZC79Od5ebDeF9uceQWu8ipZClqk-3D" target=3D"_blank" style=3D"colo=
+r:#66b3ff;">UAR</a></p>=0D
+	</div>=0D
+=0D
+
+<img src=3D"https://u2699078.ct.sendgrid.net/wf/open?upn=3D-2BhQsPu9Q2VEUqe=
+1WPYN4pT-2BIvMtng7VbwqiKNwfIv6LntbdTZ4szEWleZbVTqzLXfqN9GVv1uohaqHPG0CEDwzy=
+C-2BeD5uBAltJXQ9n-2Bzn0ppkaxo9Dj06e8bQAAurodDcQAFMujpXF96E8OT8LTWmnjOE04eUx=
+Uli-2Byedyygnktwqy7LYQthEcNjZxGBwy4bA4ypwRlDEqLKwuOHf6ZoGf3JqObUTCnpKANQ-2B=
+MTyGow-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1=
+px !important;width:1px !important;border-width:0 !important;margin-top:0 !=
+important;margin-bottom:0 !important;margin-right:0 !important;margin-left:=
+0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-r=
+ight:0 !important;padding-left:0 !important;"/>
+</body>=0D
+</html>
+
+
+--alt-af382149f4d0405317a6c0ce15f2d79c--
+
+
+--af382149f4d0405317a6c0ce15f2d79c--
+
+
+

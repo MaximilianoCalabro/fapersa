@@ -1,0 +1,179 @@
+Return-Path: <rferrero@redsurcos.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id UWEyK/a5EVnpMwAATLP0zA
+	for <jpruata@fapersa.com>; Tue, 09 May 2017 09:45:42 -0300
+Return-path: <rferrero@redsurcos.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Tue, 09 May 2017 09:45:42 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:59508 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <rferrero@redsurcos.com>)
+	id 1d84WM-0004RF-49
+	for jpruata@fapersa.com; Tue, 09 May 2017 09:45:42 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id 9CC987F213
+	for <jpruata@fapersa.com>; Tue,  9 May 2017 09:45:41 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id YbypwqgXx1yZ for <jpruata@fapersa.com>;
+	Tue,  9 May 2017 09:45:41 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 2CFEE7F231; Tue,  9 May 2017 09:45:41 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id 58C247F213
+	for <jpruata@fapersa.com>; Tue,  9 May 2017 09:45:40 -0300 (ART)
+Received-SPF: pass (redsurcos.com: Sender is authorized to use 'rferrero@redsurcos.com' in 'mfrom' identity (mechanism 'include:aspmx.googlemail.com' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="rferrero@redsurcos.com"; helo=mail-oi0-f44.google.com; client-ip=209.85.218.44
+Received: from mail-oi0-f44.google.com (mail-oi0-f44.google.com [209.85.218.44])
+	by fw.fapersa.com (Postfix) with ESMTPS id A82685FD33
+	for <jpruata@fapersa.com>; Tue,  9 May 2017 09:45:37 -0300 (ART)
+Received: by mail-oi0-f44.google.com with SMTP id b204so85279182oii.1
+        for <jpruata@fapersa.com>; Tue, 09 May 2017 05:45:37 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=redsurcos-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=IXXrAHxR3ski4SXWgjqwfVICYaupmIGgyYGtVcE4wUY=;
+        b=NEmb7WUDOJRYRqqNtxHiNxDGwerGxZe4K1M5xf6NMgcPKwO15ix6FiZzxq2rM1KGx+
+         yoFNGx1pHjE+ynYedOJXQ5Ly3UHnewMBOTPEve1BjKwxto+phDGRLk5JldzmKSINiQHs
+         4uK2ttdLVw4h/WdHGzSQ+jE4INvmBJDgy9X9GmEO+S1+8lFQ25Z3wnzCDrk2KCrZVah+
+         QDeSS+40yBSXGHZH0RmF2EYF/uUOmkCpXYZTWnwhRv4v3yU5pyUmu3Lm+dvTDT4Q6k+g
+         CY+gKi/Gp1KM9XGYwbL0VoUOKsFYVT0Lzkh8Q1WmO4sRE/Jr+sCovGLyGC4ZDvlpa7fM
+         03Dg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=IXXrAHxR3ski4SXWgjqwfVICYaupmIGgyYGtVcE4wUY=;
+        b=aVvcomEg9+bOAOdA5SXvse2bMI8un+C/iZNhk4XO+kHguFkBm/lx0yOV6OyTKQy9u3
+         0NxYe2eiVZUgfPqc536KhBaHcxX4XQ5Hrg8TZ/CbGeYtWtEkmUOM6GSyTTDiYpsA6Od7
+         qn0JeXOzjMZcXobPxaE5WRb7/W6uW60GrwTvG2v0Y+4ZboiiGkyGiUQiXvv2opnSeyz1
+         xQc26IHLxN7rFwoSNLL6M5ObqfM7Cp7LE3Oyyuh0Zxv1luOqzYMyFn+7VYtI2ImSkzO+
+         nSoT6LUrdGJupab857ZPsPbfzdf2JfeE8v3OV+phTJFMhEUAqfjbv0qme+vTNPv1sWGj
+         GXdg==
+X-Gm-Message-State: AN3rC/5PmXV2j5lb/YHu6Go30X4u4n5d7OpTWfqf4hFFmT6Q4Higph4p
+	geGuVksOr4UZ+EIMbpNn/tY2IpPo1Pu6
+X-Received: by 10.202.55.84 with SMTP id e81mr8889239oia.113.1494333935633;
+ Tue, 09 May 2017 05:45:35 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.182.181.41 with HTTP; Tue, 9 May 2017 05:45:35 -0700 (PDT)
+From: Rodrigo Ferrero <rferrero@redsurcos.com>
+Date: Tue, 9 May 2017 09:45:35 -0300
+Message-ID: <CAMXZJOYBqnCETa46s2wb-3ZUsc_nXYfCaU=Z_y52kPrjTBZvVQ@mail.gmail.com>
+Subject: Hola Tatengon!!!
+To: Juan Pablo Ruata <juampiruata@hotmail.com>, "jpruata@fapersa.com" <jpruata@fapersa.com>
+Content-Type: multipart/alternative; boundary=001a113ce07468f131054f16bbb8
+
+--001a113ce07468f131054f16bbb8
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hola Juampi querido,necesito que pases a cancelar el saldo,abrazos
+
+
+--=20
+*Rodrigo Ferrero *
+*Ventas Mostrador Santa Fe *
+
+Av. Freyre 2363 (CP 3000)
+Santa Fe
+Tel. (0342) 455 2366
+Cel. (0342) 156 121129
+www.redsurcos.com
+
+AVISO LEGAL:
+
+El contenido del presente mensaje es privado, estrictamente confidencial y
+exclusivo para su destinatario pudiendo contener informaci=C3=B3n protegida=
+ por
+normas legales y de secreto profesional. Bajo ninguna circunstancia, su
+contenido puede ser transmitido, divulgado o revelado a terceros en forma
+alguna. En consecuencia, de haber recibido por error solicitamos contactar
+al remitente y eliminar este mensaje. La distribuci=C3=B3n o copia de este
+mensaje est=C3=A1 estrictamente prohibida. Esta comunicaci=C3=B3n es s=C3=
+=B3lo para
+prop=C3=B3sitos de informaci=C3=B3n y no debe ser considerada como propuest=
+a,
+aceptaci=C3=B3n ni como una declaraci=C3=B3n de voluntad oficial de la empr=
+esa
+remitente del presente. La transmisi=C3=B3n de e-mails no garantiza que el
+correo electr=C3=B3nico sea seguro o libre de error. Por consiguiente, no
+manifestamos que esta informaci=C3=B3n sea completa o precisa. Toda informa=
+ci=C3=B3n
+est=C3=A1 sujeta a alterarse sin previo aviso. -
+
+--001a113ce07468f131054f16bbb8
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-size:small">Hol=
+a Juampi querido,necesito que pases a cancelar el saldo,abrazos</div><div><=
+br></div><div><br></div>-- <br><div class=3D"gmail_signature" data-smartmai=
+l=3D"gmail_signature"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" width=3D"395"><tbody><tr><td style=3D"font-family:Arial,Helvetica,sans-s=
+erif;font-size:12px;color:rgb(0,51,0);font-weight:normal" bgcolor=3D"#fffff=
+f" valign=3D"top" width=3D"144"><b>Rodrigo Ferrero<span></span>     </b></t=
+d>
+  </tr>
+  <tr>
+    <td style=3D"font-family:Arial,Helvetica,sans-serif;font-size:12px;colo=
+r:rgb(0,51,0);font-weight:normal" bgcolor=3D"#ffffff" valign=3D"top"><b><sp=
+an></span>Ventas Mostrador Santa Fe </b></td>
+  </tr>
+  <tr>
+    <td style=3D"font-family:Verdana,Arial,Helvetica,sans-serif;font-size:1=
+1px;color:rgb(102,102,102);font-weight:normal" bgcolor=3D"#ffffff" height=
+=3D"3" valign=3D"top"><br></td>
+  </tr>
+  <tr>
+    <td style=3D"font-family:Verdana,Arial,Helvetica,sans-serif;font-size:1=
+1px;color:rgb(0,51,0);font-weight:normal" bgcolor=3D"#ffffff" height=3D"3" =
+valign=3D"top">Av. Freyre 2363 (CP 3000) <br>
+      Santa Fe<br>
+      Tel.  (0342)
+      455 2366<br>Cel.  (0342) 156 121129<br>
+    <a href=3D"http://www.redsurcos.com/" target=3D"_blank">www.redsurcos.c=
+om</a></td>
+  </tr>
+  <tr>
+    <td style=3D"font-family:Verdana,Arial,Helvetica,sans-serif;font-size:1=
+1px;color:rgb(0,51,0);font-weight:normal" bgcolor=3D"#ffffff" height=3D"3" =
+valign=3D"top">=C2=A0</td>
+  </tr>
+</tbody></table>
+<table width=3D"150">
+  <tbody><tr>
+    <td><img src=3D"https://2.bp.blogspot.com/_drgXskCHFuI/SgL0S_cywOI/AAAA=
+AAAAAHg/ZW-c_4sjIbg/S220/Surcos.jpg" height=3D"56" width=3D"144"></td>
+  </tr>
+</tbody></table>
+<span>
+<span style=3D"font-size:8pt;color:gray;font-family:Arial">
+   AVISO LEGAL:</span>
+   <p style=3D"text-align:justify">
+   <span style=3D"font-size:8pt;color:gray;font-family:Arial">
+   El contenido del presente mensaje es privado, estrictamente confidencial=
+ y exclusivo para
+   su destinatario pudiendo contener informaci=C3=B3n protegida por normas =
+legales y
+   de secreto profesional. Bajo ninguna circunstancia, su contenido puede s=
+er
+   transmitido, divulgado o revelado a terceros en forma alguna. En
+   consecuencia, de haber recibido por error solicitamos contactar al remit=
+ente
+   y eliminar este mensaje. La distribuci=C3=B3n o copia de este mensaje es=
+t=C3=A1
+   estrictamente prohibida. Esta comunicaci=C3=B3n es s=C3=B3lo para prop=
+=C3=B3sitos de
+   informaci=C3=B3n y no debe ser considerada como propuesta, aceptaci=C3=
+=B3n ni como una
+   declaraci=C3=B3n de voluntad oficial de la empresa remitente del present=
+e. La
+   transmisi=C3=B3n de e-mails no garantiza que el correo electr=C3=B3nico =
+sea seguro o libre de error.
+   Por consiguiente, no
+   manifestamos que esta informaci=C3=B3n sea completa o precisa. Toda info=
+rmaci=C3=B3n
+   est=C3=A1 sujeta a alterarse sin previo aviso. -</span></p></span></div>
+</div>
+
+--001a113ce07468f131054f16bbb8--

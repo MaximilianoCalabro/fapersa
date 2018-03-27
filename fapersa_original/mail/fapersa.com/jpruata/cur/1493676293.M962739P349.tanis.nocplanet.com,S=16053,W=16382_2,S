@@ -1,0 +1,329 @@
+Return-Path: <bo-b3zkbmwbfemwe7auq9bq5byyq7txxj@b.em.waltdisneyrecords.com>
+Delivered-To: jpruata@fapersa.com
+Received: from tanis.nocplanet.com
+	by tanis.nocplanet.com (Dovecot) with LMTP id ceIUOQWxB1ldAQAATLP0zA
+	for <jpruata@fapersa.com>; Mon, 01 May 2017 19:04:53 -0300
+Return-path: <bo-b3zkbmwbfemwe7auq9bq5byyq7txxj@b.em.waltdisneyrecords.com>
+Envelope-to: jpruata@fapersa.com
+Delivery-date: Mon, 01 May 2017 19:04:53 -0300
+Received: from mx1.fapersa.com ([181.14.247.181]:33471 helo=fapersa.com)
+	by tanis.nocplanet.com with esmtp (Exim 4.89)
+	(envelope-from <bo-b3zkbmwbfemwe7auq9bq5byyq7txxj@b.em.waltdisneyrecords.com>)
+	id 1d5JR7-0000Rs-8h
+	for jpruata@fapersa.com; Mon, 01 May 2017 19:04:53 -0300
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fapersa.com (Postfix) with ESMTP id C7C797F219
+	for <jpruata@fapersa.com>; Mon,  1 May 2017 19:04:52 -0300 (ART)
+X-Virus-Scanned: Debian amavisd-new at fapersa.com
+Received: from mail.fapersa.com ([127.0.0.1])
+	by localhost (mail.fapersa.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id W5lPEnOfewbX for <jpruata@fapersa.com>;
+	Mon,  1 May 2017 19:04:49 -0300 (ART)
+Received: by mail.fapersa.com (Postfix, from userid 111)
+	id 5B0347F231; Mon,  1 May 2017 19:04:49 -0300 (ART)
+Received: from fw.fapersa.com (mx1.fapersa.com [192.168.100.254])
+	by mail.fapersa.com (Postfix) with ESMTP id C0CE37F219
+	for <jpruata@fapersa.com>; Mon,  1 May 2017 19:04:45 -0300 (ART)
+Received-SPF: pass (b.em.waltdisneyrecords.com: 66.77.119.230 is authorized to use 'bo-b3zkbmwbfemwe7auq9bq5byyq7txxj@b.em.waltdisneyrecords.com' in 'mfrom' identity (mechanism 'ip4:66.77.119.230' matched)) receiver=mx1.fapersa.com; identity=mailfrom; envelope-from="bo-b3zkbmwbfemwe7auq9bq5byyq7txxj@b.em.waltdisneyrecords.com"; helo=mta885.em.waltdisneypictures.com; client-ip=66.77.119.230
+Received: from mta885.em.waltdisneypictures.com (mta885.em.waltdisneypictures.com [66.77.119.230])
+	by fw.fapersa.com (Postfix) with ESMTPS id 03D805FE38
+	for <jpruata@fapersa.com>; Mon,  1 May 2017 19:04:42 -0300 (ART)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=em.waltdisneyrecords.com; s=20131129194401; t=1493676279;
+	x=1509573879; bh=3ddUv8sH7sMdHLNWO7dRHSzdfdkmfVzNfiGC6LEsBGM=;
+	h=From:Reply-To;
+	b=vOBEY6QgKHCwrb8fyQFA6QPRzSxNPZrLSGulRdudj1m9dxH0N4+O8oMR8q3SCGG/X
+	 UZYWMSlu0B7eDUyUqf/dAHIdMstqMzkpKWnAQ7XEVm4Zx1Mywx5yXpOP1wDqUBOl5K
+	 tPRFEps/AReOSPY3Dj1xYRkz4CtJ6MY4m7+fMVI3KO96a4TcVyJ6VOnRFoMfuTW866
+	 Um5oqkfD8WSCAojZ9wS1wfi8p0OeJxqcOFebLmhtxcSgRqXz3YRFXIY167KZ4L3BYR
+	 5cPCeN58BtE8tWLvcBINYWFC28bWhEzuFWnDLLjaDRkyIh6h4tJHe2peBMMl5B8Ni7
+	 2/U+r3wReLPPg==
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws;
+  s=200505; d=em.waltdisneyrecords.com;
+  b=X343zv8ZwuIXk7o8r8rzPfd/WAFpNu7pbctgDV7t+gEEf3B5yu4AaCFDoNqVbeM6TqZHNZQAZLky0VhDZBlGS6e1XjBYIdy/OFCjIAFrhinbn2NsBagCUyrLvMFzUmjHYtP5dYZl2Pt9KtzTRYmYpCeEgMTBJA/EH51aJ/bQ1Ug=;
+ h=Date:Message-ID:List-Unsubscribe:From:To:Subject:MIME-Version:Reply-To:Content-type;
+Date: Mon, 1 May 2017 22:04:39 -0000
+Message-ID: <b3zkbmwbfemwe7auq9bq5byyq7txxj.27519788.6983@mta885.em.waltdisneyrecords.com>
+List-Unsubscribe: <mailto:rm-0b3zkbmwbfemwe7auq9bq5byyq7txxj@em.waltdisneyrecords.com>
+From: "Walt Disney Records" <waltdisneyrecords@em.waltdisneyrecords.com>
+To: jpruata@fapersa.com
+Subject: =?UTF-8?B?UHJlLW9yZGVyIHRoZSBEaXNuZXkgRGVzY2VuZGFudHMgMiBzb3U=?=
+ =?UTF-8?B?bmR0cmFjayDwn5iI?=
+MIME-Version: 1.0
+Reply-To: "no-reply@em.waltdisneyrecords.com" <support-b3zkbmwbfemwe7auq9bq5byyq7txxj@em.waltdisneyrecords.com>
+Content-type: multipart/alternative; boundary="=b3zkbmwbfemwe7auq9bq5byyq7txxj"
+
+
+--=b3zkbmwbfemwe7auq9bq5byyq7txxj
+Content-Type: text/plain; charset="utf-8"
+Content-transfer-encoding: 8bit
+
+Pre-order the Descendants 2 Soundtrack Now!
+
+Available on:
+iTunes(R): http://em.waltdisneyrecords.com/a/tBZB5PGB82eecB9bTJ5ABo$sshW/itunes-0
+Amazon: http://em.waltdisneyrecords.com/a/tBZB5PGB82eecB9bTJ5ABo$sshW/amazon-0
+
+Stream "Ways To Be Wicked": http://em.waltdisneyrecords.com/a/tBZB5PGB82eecB9bTJ5ABo$sshW/stream-0
+
+Follow us on:
+Facebook: http://em.waltdisneyrecords.com/a/tBZB5PGB82eecB9bTJ5ABo$sshW/facebook-0
+Twitter: http://em.waltdisneyrecords.com/a/tBZB5PGB82eecB9bTJ5ABo$sshW/twitter-0
+Instagram: http://em.waltdisneyrecords.com/a/tBZB5PGB82eecB9bTJ5ABo$sshW/instagram-0
+
+View this message online:
+http://em.waltdisneyrecords.com/a/tBZB5PGB82eecB9bTJ5ABo$sshW/viewonline-0?t_sparams=8keMZI5uXBsKw2kIkGMv5Edi8JB8-HX6GgNwkJDkGm12CbIoWD$ThPtCbEl69PL8NLQ-C6seatScw5bp2$mDYX3wqlPhNcyHeKdp$34C36RTG7VwoSZSfGyTdenw2NWUQ09kIBsvNMjrnrymtf$vPFO3PZ8kGCnajPPihiFdLBSKg6x3EnXBc4r$1bweAvD3s2BrlrllClgcHwD7rnMPUaC-SA$usg4p$6G1X3EW
+
+====================================
+
+Clicking on the iTunes(R), Amazon, Facebook, Twitter, Instagram and
+other 3rd party links will take you away from our Disney site where
+different terms of use and privacy policy apply.
+
+Apple, the Apple logo, iPhone(R), iPad(R), iPod touch(R), and iTunes(R)
+are trademarks of Apple Inc., registered in the U.S. and other
+countries. App Store is a service mark of Apple Inc.
+
+Amazon, Kindle, Kindle Fire, and the Amazon Kindle logo are trademarks
+of Amazon.com, Inc. or its affiliates.
+
+This e-mail was sent to: jpruata@fapersa.com
+
+Please do not reply to this e-mail as this address is not monitored.
+
+Add me to Walt Disney Record's Do Not Email list
+This e-mail contains an advertisement from:
+Walt Disney Records | 500 Buena Vista Street | Burbank, CA 91521
+
+To unsubscribe from all types of future commercial e-mail from Walt
+Disney Records regarding its products or services, click here:
+http://em.waltdisneyrecords.com/a/tBZB5PGB82eecB9bTJ5ABo$sshW/optout-0?CLIENTID=511&CHANNEL_EMAIL=xmJylKLTIR66C_aAui7DUg&ENCODED_EMAIL=Jf9Eu-oNH3p4KF0yCaUo5giLbZh_IRcFbOjbeqOvNOQ
+
+(C)Disney. All Rights Reserved.
+
+
+--=b3zkbmwbfemwe7auq9bq5byyq7txxj
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+=20
+</head>
+<body bgcolor=3D"#36194b"><img src=3D"http://em.waltdisneyrecords.com/a/hBZ=
+B5PGB82eecB9bTJ5ABo$sshW/spacer-0.gif" width=3D"1" height=3D"1" style=3D"di=
+splay:none !important; max-height:1px !important; max-width:1px !important;=
+ border:0 !important; background-color:transparent !important; padding:0 !i=
+mportant; outline:0 !important; min-height:1px !important; min-width:1px !i=
+mportant; height:1px !important; width:1px !important;" alt=3D"">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" bg=
+color=3D"#36194b" width=3D"100%">
+<tbody><tr>
+<td align=3D"center" bgcolor=3D"#36194b" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" wi=
+dth=3D"600">
+  <tbody><tr>
+<td><img src=3D"http://f.em.waltdisneypictures.com/i/9/2094655621/20140116_=
+DABC_ME_1x2.gif" style=3D"display:block;" border=3D"0" height=3D"17" width=
+=3D"180"></td>
+<td align=3D"right" valign=3D"middle" width=3D"171"><font style=3D"color:#f=
+fffff; font-family:Arial, Helvetica, sans-serif; font-size:12px;"><strong><=
+a href=3D"http://em.waltdisneyrecords.com/a/hBZB5PGB82eecB9bTJ5ABo$sshW/vie=
+wonline-0?t_params=3D8keMZI5uXBsKw2kIkGMv5Edi8JB8-HX6GgNwkJDkGm12CbIoWD$ThP=
+tCbEl69PL8NLQ-C6seatScw5bp2$mDYX3wqlPhNcyHeKdp$34C36RTG7VwoSZSfGyTdenw2NWUQ=
+09kIBsvNMjrnrymtf$vPFO3PZ8kGCnajPPihiFdLBSKg6x3EnXBc4r$1bweAvD3s2BrlrllClgc=
+HwD7rnMPUaC-SA$usg4p$6G1X3EW" target=3D"_blank" style=3D"text-decoration:no=
+ne; color:#ffffff;">View Online</a></strong></font></td>
+=20=20=20
+
+</tr>
+</tbody></table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" wi=
+dth=3D"600">
+<tbody><tr>
+<td align=3D"left" valign=3D"bottom"><a href=3D"http://em.waltdisneyrecords=
+.com/a/hBZB5PGB82eecB9bTJ5ABo$sshW/itunes-0" target=3D"_blank"><img src=3D"=
+http://f.em.waltdisneypictures.com/i/9/2094655621/logowht.png" alt=3D"" sty=
+le=3D"display:block;" border=3D"0" height=3D"89" width=3D"165"></a></td>
+<td align=3D"left" valign=3D"middle" width=3D"435"><table border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" width=3D"435">
+  <tbody><tr>
+    <td align=3D"right" valign=3D"top" width=3D"435"><table border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"435"><tbody><tr><td align=3D"rig=
+ht" valign=3D"top" width=3D"435"><font style=3D"color: rgb(255, 255, 255); =
+font-family: Arial, Helvetica, sans-serif; font-size: 19px;">Pre-order the =
+Descendants 2<br>Soundtrack Now!<br><br></font></td></tr></tbody></table></=
+td></tr></tbody></table></td></tr></tbody></table>
+
+
+<table id=3D"Table_01" width=3D"600" height=3D"1167" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0"><tbody>
+	<tr>
+		<td colspan=3D"3"><a href=3D"http://em.waltdisneyrecords.com/a/hBZB5PGB82=
+eecB9bTJ5ABo$sshW/itunes-0" target=3D"_blank"><img src=3D"http://f.em.waltd=
+isneyrecords.com/i/41/2094655388/Descendants_2_Soundtrack2_01.jpg" width=3D=
+"600" height=3D"600" alt=3D"Descendants 2 Soundtrack - Pre-order Now!" styl=
+e=3D"display:block"></a></td>
+	</tr>
+	<tr>
+		<td><a href=3D"http://em.waltdisneyrecords.com/a/hBZB5PGB82eecB9bTJ5ABo$s=
+shW/itunes-0" target=3D"_blank"><img src=3D"http://f.em.waltdisneyrecords.c=
+om/i/41/2094655388/Descendants_2_Soundtrack2_02.jpg" width=3D"236" height=
+=3D"97" alt=3D"iTunes" style=3D"display:block"></a></td>
+		<td><a href=3D"http://em.waltdisneyrecords.com/a/hBZB5PGB82eecB9bTJ5ABo$s=
+shW/amazon-0" target=3D"_blank"><img src=3D"http://f.em.waltdisneyrecords.c=
+om/i/41/2094655388/Descendants_2_Soundtrack2_03.jpg" width=3D"131" height=
+=3D"97" alt=3D"Amazon" style=3D"display:block"></a></td>
+		<td><a href=3D"http://em.waltdisneyrecords.com/a/hBZB5PGB82eecB9bTJ5ABo$s=
+shW/stream-0" target=3D"_blank"><img src=3D"http://f.em.waltdisneyrecords.c=
+om/i/41/2094655388/Descendants_2_Soundtrack2_04.jpg" width=3D"233" height=
+=3D"97" alt=3D"Streaming - Spotify, Apple Music and more." style=3D"display=
+:block"></a></td>
+	</tr>
+	<tr>
+		<td colspan=3D"3">
+			<a href=3D"http://em.waltdisneyrecords.com/a/hBZB5PGB82eecB9bTJ5ABo$sshW=
+/video-0" target=3D"_blank"><img src=3D"http://f.em.waltdisneyrecords.com/i=
+/41/2094655388/20142542_liveclicker_email_custom.gif" width=3D"600" height=
+=3D"338" alt=3D"" style=3D"display:block"></a></td>
+	</tr>
+	<tr>
+		<td colspan=3D"3"><a href=3D"http://em.waltdisneyrecords.com/a/hBZB5PGB82=
+eecB9bTJ5ABo$sshW/itunes-0" target=3D"_blank"><img src=3D"http://f.em.waltd=
+isneyrecords.com/i/41/2094655388/Descendants_2_Soundtrack2_06.jpg" width=3D=
+"600" height=3D"51" alt=3D"" style=3D"display:block"></a></td>
+	</tr>
+	<tr>
+		<td><a href=3D"http://em.waltdisneyrecords.com/a/hBZB5PGB82eecB9bTJ5ABo$s=
+shW/facebook-0" target=3D"_blank"><img src=3D"http://f.em.waltdisneyrecords=
+.com/i/41/2094655388/Descendants_2_Soundtrack2_07.jpg" width=3D"236" height=
+=3D"81" alt=3D"Facebook" style=3D"display:block"></a></td>
+		<td><a href=3D"http://em.waltdisneyrecords.com/a/hBZB5PGB82eecB9bTJ5ABo$s=
+shW/twitter-0" target=3D"_blank"><img src=3D"http://f.em.waltdisneyrecords.=
+com/i/41/2094655388/Descendants_2_Soundtrack2_08.jpg" width=3D"131" height=
+=3D"81" alt=3D"Twitter" style=3D"display:block"></a></td>
+		<td><a href=3D"http://em.waltdisneyrecords.com/a/hBZB5PGB82eecB9bTJ5ABo$s=
+shW/instagram-0" target=3D"_blank"><img src=3D"http://f.em.waltdisneyrecord=
+s.com/i/41/2094655388/Descendants_2_Soundtrack2_09.jpg" width=3D"233" heigh=
+t=3D"81" alt=3D"Instagram" style=3D"display:block"></a></td>
+	</tr>
+    </tbody>
+</table>
+
+
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"left" class=3D"responsive-table">
+                                        <tbody><tr>
+                                            <td style=3D"padding: 20px 0 0 =
+0;">
+                                                <table cellpadding=3D"0" ce=
+llspacing=3D"0" border=3D"0" width=3D"600">
+                                                    <tbody>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20
+
+
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20
+                                                </tbody></table>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+
+
+
+
+
+
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" alig=
+n=3D"left" class=3D"responsive-table">
+                                        <tbody><tr>
+                                            <td style=3D"padding: 20px 0 0 =
+0;">
+                                                <table cellpadding=3D"0" ce=
+llspacing=3D"0" border=3D"0" width=3D"600">
+                                                    <tbody>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20
+
+
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20
+                                                </tbody></table>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+
+
+
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" wi=
+dth=3D"600">
+  <tbody><tr>
+<td align=3D"left" valign=3D"top" width=3D"575">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" wi=
+dth=3D"575">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" width=3D"575">
+<font style=3D"color:#ffffff; font-family:Arial, Helvetica, sans-serif; fon=
+t-size:11px;">=20=20
+ Clicking on the iTunes&reg;, Amazon, Facebook, Twitter, Instagram and othe=
+r 3rd party links will take you away from our Disney site where different t=
+erms of use and privacy policy apply.<br><br>
+ Apple, the Apple logo, iPhone&reg;, iPad&reg;, iPod touch&reg;, and iTunes=
+&reg; are trademarks of Apple Inc., registered in the U.S. and other countr=
+ies. App Store is a service mark of Apple Inc.=20
+ <br><br>
+ Amazon, Kindle, Kindle Fire, and the Amazon Kindle logo are trademarks of =
+Amazon.com, Inc. or its affiliates.
+<br><br>
+This e-mail was sent to: jpruata@fapersa.com
+<br><br>
+Please do not reply to this e-mail as this address is not monitored.
+<br><br>
+<b>Add me to Walt Disney Records' Do Not E-mail list </b> <br>
+This e-mail contains an advertisement from:<br>
+Walt Disney records | 500 Buena Vista Street | Burbank, CA 91521 <br><br>
+
+ <a href=3D"http://em.waltdisneyrecords.com/a/hBZB5PGB82eecB9bTJ5ABo$sshW/o=
+ptout-0?CLIENTID=3D511&CHANNEL_EMAIL=3DxmJylKLTIR66C_aAui7DUg&ENCODED_EMAIL=
+=3DJf9Eu-oNH3p4KF0yCaUo5giLbZh_IRcFbOjbeqOvNOQ" style=3D"color:#ffffff;"><s=
+trong><u>Unsubscribe</u></strong></a> from all types of future commercial e=
+mail from Walt Disney Records regarding its products and services.<br><br>
+
+  &copy;Disney. All Rights Reserved.<br><br>
+</font>
+</td>
+</tr>
+</tbody></table></td>
+
+<td align=3D"left" width=3D"25"><img src=3D"http://f.em.waltdisneypictures.=
+com/i/9/2094655621/20140116_DABC_ME_1x2.gif" style=3D"display:block;" borde=
+r=3D"0" height=3D"5" width=3D"25"></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<img src=3D"http://pxl.disney-ympxl.com/log.gif?cid=3Dcebfa26a2f&mid=3D1705=
+10101&uuid=3Djpruata@fapersa.com" style=3D"display:none"/>
+</body>
+</html>
+
+
+--=b3zkbmwbfemwe7auq9bq5byyq7txxj--
+
