@@ -601,7 +601,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
          * Google Map
          /* ---------------------------------------------- */
 
-        if($("#map").length == 0 || typeof google == 'undefined') return;
+        if($("#googlemaps").length == 0 || typeof google == 'undefined') return;
 
         // When the window has finished loading create our google map below
         google.maps.event.addDomListener(window, 'load', init);
@@ -616,6 +616,8 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
                 // How zoomed in you want the map to start at (always required)
                 zoom: 11,
                 scrollwheel: false,
+                clickableIcons: false,
+                draggable:false,
                 // The latitude and longitude to center the map (always required)
                 center: cntr, // New York
 

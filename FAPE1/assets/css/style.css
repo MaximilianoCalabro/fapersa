@@ -1474,11 +1474,11 @@ General Styles - Owlcarousel
 
 #contactform { 
   position: relative; 
-  z-index: 1; /* The z-index should be higher than Google Maps */
+  z-index: 2; /* The z-index should be higher than Google Maps */
   width: 300px;
   margin: 60px auto 0;
   padding: 10px;
-  background: black;
+  background: rgba(0,0,0,0.5);
   height: auto;
   opacity: .45; /* Set the opacity for a slightly transparent Google Form */ 
   color: white;
@@ -1711,16 +1711,16 @@ Google map
 ------------------------------------------------------------- */
 #map-section {
   position: relative;
-  height: 450px;
-  width: 100%;
-}
-
-#map {
   height: 100%;
   width: 100%;
 }
 
-#map img {
+#googlemaps {
+  height: 100%;
+  width: 100%;
+}
+
+#googlemaps img {
   max-width: none;
 }
 
